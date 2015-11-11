@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Calendar on Asterisk, and other worldly endeavours</title>
+    <link>http://blog.leifmadsen.com/tags/calendar/</link>
+    <description>Recent content in Calendar on Asterisk, and other worldly endeavours</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 21 Dec 2010 15:26:43 +0000</lastBuildDate>
+    <atom:link href="http://blog.leifmadsen.com/tags/calendar/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Video of &#39;5 Things You Didn&#39;t Know Asterisk Could Do&#39; Presentation Now Available</title>
+      <link>http://blog.leifmadsen.com/blog/2010/12/21/video-of-5-things-you-didnt-know-asterisk-could-do-presentation-now-available/</link>
+      <pubDate>Tue, 21 Dec 2010 15:26:43 +0000</pubDate>
+      
+      <guid>http://blog.leifmadsen.com/blog/2010/12/21/video-of-5-things-you-didnt-know-asterisk-could-do-presentation-now-available/</guid>
+      <description>&lt;p&gt;Check out the &lt;a href=&#34;http://www.astricon.net&#34;&gt;AstriCon&lt;/a&gt; website for my presentation that was recorded this year. I did three presentations this year (5 Things You Didn&amp;rsquo;t Know Asterisk Could Do, Distributed Call Centres, and the Asterisk Project Update with &lt;a href=&#34;http://www.russellbryant.net&#34;&gt;Russell Bryant&lt;/a&gt;) but unfortunately the only one I see so far is the 5 Things presentation (which is a very good presentation! :))&lt;/p&gt;
+
+&lt;p&gt;The link to the presentations are here: &lt;a href=&#34;http://www.astricon.net/videoPresentations.aspx#Digium7&#34;&gt;http://www.astricon.net/videoPresentations.aspx#Digium7&lt;/a&gt; with mine being at the top of the list.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Scheduling automated calls between two participants with res_calendar</title>
+      <link>http://blog.leifmadsen.com/blog/2010/09/29/scheduling-automated-calls-between-two-participants-with-res_calendar/</link>
+      <pubDate>Wed, 29 Sep 2010 14:25:50 +0000</pubDate>
+      
+      <guid>http://blog.leifmadsen.com/blog/2010/09/29/scheduling-automated-calls-between-two-participants-with-res_calendar/</guid>
+      <description>&lt;p&gt;Here is a little dialplan snippet I wrote this morning for the next edition of the Asterisk book. While I&amp;rsquo;m not going to delve into all the aspects of setting up res_calendar like we do in the book, I thought for those of you who might already have this working might enjoy it.&lt;/p&gt;
+
+&lt;p&gt;(The calendaring modules are available in Asterisk 1.8, which is currently in release candidate status. Check out &lt;a href=&#34;http://www.asterisk.org/downloads&#34;&gt;http://www.asterisk.org/downloads&lt;/a&gt; for the current version.)&lt;/p&gt;
+
+&lt;p&gt;I started with this little bit of dialplan that gets triggered when a call is answered from the calendaring module:&lt;/p&gt;
+
+&lt;p&gt;﻿﻿﻿&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;[AutomatedMeetingSetup]
+exten =&amp;gt; start,1,Verbose(2,Triggering meeting setup for two participants)
+   same =&amp;gt; n,Set(DeviceToDial=${FILTER(0-9A-Za-z,${CALENDAR_EVENT(location)})})
+   same =&amp;gt; n,Dial(SIP/${DeviceToDial},30)
+   same =&amp;gt; n,Hangup()
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;The location field in my calendar event (which in this case is labeled as Destination in my Google Calendar) contains the string 0000FFFF0002 which is the device identifier in my example.&lt;/p&gt;
+
+&lt;p&gt;Once you get that working, the cool magic happens below. In the following example, a call is placed from the calendaring module when a meeting needs to take place between two participants. The first part of the dialplan allows the first person called to accept or reject the meeting, and if accepted, to record a message for the other party. Once that recording is saved, the dialplan will go ahead and trigger a call to the other meeting participant.&lt;/p&gt;
+
+&lt;p&gt;When that meeting participant answers the call, a Macro() is employed to allow them to listen to the recorded message left by the first party, (i.e. &amp;ldquo;Hey Jim, this is Leif. We have a meeting scheduled right now.&amp;rdquo;). That person is then presented the same option to accept or reject the call by pressing 1 or 2.&lt;/p&gt;
+
+&lt;p&gt;Of course the dialplan could even by further expanded to play back messages when the calls were rejected, the option for the called party to leave a return message of why they are rejecting the call, and maybe even the ability to post-pone the call for a few minutes. All it takes is some clever dialplan!&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;[AutomatedMeetingSetup]
+exten =&amp;gt; start,1,Verbose(2,Triggering meeting setup for two participants)
+same =&amp;gt; n,Read(CheckMeetingAcceptance,to-confirm-wakeup&amp;amp;press-1&amp;amp;otherwise&amp;amp;press-2,,1)
+same =&amp;gt; n,GotoIf($[&amp;quot;${CheckMeetingAcceptance}&amp;quot; != &amp;quot;1&amp;quot;]?hangup,1)
+
+same =&amp;gt; n,Playback(silence/1&amp;amp;pls-rcrd-name-at-tone&amp;amp;and-prs-pound-whn-finished)
+same =&amp;gt; n,Set(__RandomNumber=${RAND()})
+same =&amp;gt; n,Record(/tmp/meeting-invite-${RandomNumber}.ulaw)
+
+same =&amp;gt; n,Set(DeviceToDial=${FILTER(0-9A-Za-z,${CALENDAR_EVENT(location)})})
+same =&amp;gt; n,Dial(SIP/${DeviceToDial},30,M(CheckConfirm))
+same =&amp;gt; n,Hangup()
+
+exten =&amp;gt; hangup,1,Verbose(2,Call was rejected)
+same =&amp;gt; n,Playback(vm-goodbye)
+same =&amp;gt; n,Hangup()
+
+[macro-CheckConfirm]
+exten =&amp;gt; s,1,Verbose(2,Allowing called party to accept or reject)
+same =&amp;gt; n,Playback(/tmp/meeting-invite-${RandomNumber})
+same =&amp;gt; n,Read(CheckMeetingAcceptance,to-confirm-wakeup&amp;amp;press-1&amp;amp;otherwise&amp;amp;press-2,,1)
+same =&amp;gt; n,GotoIf($[&amp;quot;${CheckMeetingAcceptance}&amp;quot; != &amp;quot;1&amp;quot;]?hangup,1)
+
+exten =&amp;gt; hangup,1,Verbose(2,Call was rejected by called party)
+same =&amp;gt; n,Playback(vm-goodbye)
+same =&amp;gt; n,Hangup()
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Complextype on Asterisk, and other worldly endeavours</title>
+    <link>http://blog.leifmadsen.com/tags/complextype/</link>
+    <description>Recent content in Complextype on Asterisk, and other worldly endeavours</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 04 Aug 2009 17:57:11 +0000</lastBuildDate>
+    <atom:link href="http://blog.leifmadsen.com/tags/complextype/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Consuming SOAP complexType webservice with PHP</title>
+      <link>http://blog.leifmadsen.com/blog/2009/08/04/consuming-soap-complextype-webservice-with-php/</link>
+      <pubDate>Tue, 04 Aug 2009 17:57:11 +0000</pubDate>
+      
+      <guid>http://blog.leifmadsen.com/blog/2009/08/04/consuming-soap-complextype-webservice-with-php/</guid>
+      <description>&lt;p&gt;I recently had a client request that I communicate with a webservice via SOAP in order to do some credit card authorization for an Asterisk project they were implementing. After a couple of days of reading several posts I found via Google (which funny enough weren&amp;rsquo;t exactly what I was looking for, but gave me JUST enough information to finally start putting it all together), I had something that worked.&lt;/p&gt;
+
+&lt;p&gt;In order to potentially save someone the hassle of having to figure out how to consume a complexType in SOAP via PHP (and not using NuSoap as many of the posts pointed out), I&amp;rsquo;m writing this down. As with many of my posts, there is probably just enough information here that will be useful for me in the future should I need to do this again. If this helps someone else out, then great!&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;Note:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;I am not a programmer. What I&amp;rsquo;m showing may be entirely the WRONG approach to solving this issue, but it solves it for me. Feel free to provide better examples by commenting on this article. In addition, there is the potential I may be using the wrong terminology. Please feel free to correct me, and I will then update the article to reflect anything deemed to be incorrect._&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;First, you need to install the php-soap module for your PHP installation. This could require you to recompile PHP with SOAP support, or if you&amp;rsquo;re using a package based distro (like me), you may just need to do something like:&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;# yum install php-soap&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;In order to give you just enough of a reference point to figure out what I&amp;rsquo;m trying to do here, the following snippet of XML code is from the webservice I&amp;rsquo;m trying to consume. It is the complextype which I need to perform request against, and defines how the object should be passed. I&amp;rsquo;ll then show the result. This is &lt;em&gt;not&lt;/em&gt; the entire WSDL.&lt;/p&gt;
+
+&lt;p&gt;First we&amp;rsquo;re looking at the element named &amp;lsquo;Purchase&amp;rsquo;. This element contains a complexType object named &lt;em&gt;oPurchaseRequest&lt;/em&gt; and receives a request of the type &lt;em&gt;PurchaseRequestType&lt;/em&gt;.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-xml&#34;&gt;&amp;lt;s:element name=&amp;quot;Purchase&amp;quot;&amp;gt;
+ &amp;lt;s:complexType&amp;gt;
+   &amp;lt;s:sequence&amp;gt;
+     &amp;lt;s:element minOccurs=&amp;quot;0&amp;quot; maxOccurs=&amp;quot;1&amp;quot; name=&amp;quot;oPurchaseRequest&amp;quot; type=&amp;quot;tns:PurchaseRequestType&amp;quot;/&amp;gt;
+   &amp;lt;/s:sequence&amp;gt;
+ &amp;lt;/s:complexType&amp;gt;
+&amp;lt;/s:element&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;The structure of the PurchaseRequestType is as follows. This is how we need to structure our complexType.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-xml&#34;&gt;&amp;lt;s:complexType name=&amp;quot;PurchaseRequestType&amp;quot;&amp;gt;
+ &amp;lt;s:sequence&amp;gt;
+   &amp;lt;s:element minOccurs=&amp;quot;0&amp;quot; maxOccurs=&amp;quot;1&amp;quot; name=&amp;quot;MembershipNumber&amp;quot; type=&amp;quot;s:string&amp;quot;/&amp;gt;
+   &amp;lt;s:element minOccurs=&amp;quot;0&amp;quot; maxOccurs=&amp;quot;1&amp;quot; name=&amp;quot;SessionID&amp;quot; type=&amp;quot;s:string&amp;quot;/&amp;gt;
+   &amp;lt;s:element minOccurs=&amp;quot;0&amp;quot; maxOccurs=&amp;quot;1&amp;quot; name=&amp;quot;Password&amp;quot; type=&amp;quot;s:string&amp;quot;/&amp;gt;
+   &amp;lt;s:element minOccurs=&amp;quot;0&amp;quot; maxOccurs=&amp;quot;1&amp;quot; name=&amp;quot;Gender&amp;quot; type=&amp;quot;s:string&amp;quot;/&amp;gt;
+   &amp;lt;s:element minOccurs=&amp;quot;1&amp;quot; maxOccurs=&amp;quot;1&amp;quot; name=&amp;quot;RatePlanID&amp;quot; type=&amp;quot;s:int&amp;quot;/&amp;gt;
+   &amp;lt;s:element minOccurs=&amp;quot;0&amp;quot; maxOccurs=&amp;quot;1&amp;quot; name=&amp;quot;CCNumber&amp;quot; type=&amp;quot;s:string&amp;quot;/&amp;gt;
+   &amp;lt;s:element minOccurs=&amp;quot;1&amp;quot; maxOccurs=&amp;quot;1&amp;quot; name=&amp;quot;CCExpireMonth&amp;quot; type=&amp;quot;s:int&amp;quot;/&amp;gt;
+   &amp;lt;s:element minOccurs=&amp;quot;1&amp;quot; maxOccurs=&amp;quot;1&amp;quot; name=&amp;quot;CCExpireYear&amp;quot; type=&amp;quot;s:int&amp;quot;/&amp;gt;
+   &amp;lt;s:element minOccurs=&amp;quot;1&amp;quot; maxOccurs=&amp;quot;1&amp;quot; name=&amp;quot;CCCode&amp;quot; type=&amp;quot;s:int&amp;quot;/&amp;gt;
+   &amp;lt;s:element minOccurs=&amp;quot;1&amp;quot; maxOccurs=&amp;quot;1&amp;quot; name=&amp;quot;Zip&amp;quot; type=&amp;quot;s:int&amp;quot;/&amp;gt;
+  &amp;lt;/s:sequence&amp;gt;
+ &amp;lt;/s:complexType&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;The magic really happens in the following code. It is how I built the object in order to be consumed by the webservice. It works by first creating a new standard class, and then creating another standard class inside the oPurchaseRequest object (which is the name of the complexType that the Purchase element is expecting). Then you build the oPurchaseRequest by adding the elements outlined by the PurchaseRequestType complexType, and assigning values to them.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-php&#34;&gt;$search_query = new StdClass();
+$search_query-&amp;gt;oPurchaseRequest = new StdClass();
+$search_query-&amp;gt;oPurchaseRequest-&amp;gt;MembershipNumber = $MembershipNumber;
+$search_query-&amp;gt;oPurchaseRequest-&amp;gt;SessionID = $SessionID;
+$search_query-&amp;gt;oPurchaseRequest-&amp;gt;Password = $Password;
+$search_query-&amp;gt;oPurchaseRequest-&amp;gt;Gender = $Gender;
+$search_query-&amp;gt;oPurchaseRequest-&amp;gt;RatePlanID = $RatePlanID;
+$search_query-&amp;gt;oPurchaseRequest-&amp;gt;CCNumber = $CCNumber;
+$search_query-&amp;gt;oPurchaseRequest-&amp;gt;CCExpireMonth = $CCExpireMonth;
+$search_query-&amp;gt;oPurchaseRequest-&amp;gt;CCExpireYear = $CCExpireYear;
+$search_query-&amp;gt;oPurchaseRequest-&amp;gt;CCCode = $CCCode;
+$search_query-&amp;gt;oPurchaseRequest-&amp;gt;Zip = $Zip;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;The entire snippet of code is available below.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-php&#34;&gt;// We can take in our arguments from the console if we&#39;re using PHP CLI
+$MembershipNumber = $argv[1];
+$SessionID = $argv[2];
+$Password = $argv[3];
+$Gender = $argv[4];
+$RatePlanID = $argv[5];
+$CCNumber = $argv[6];
+$CCExpireMonth = $argv[7];
+$CCExpireYear = $argv[8];
+$CCCode = $argv[9];
+$Zip = $argv[10];
+
+// Create the object we&#39;ll pass back over the SOAP interface. This is the MAGIC!
+$search_query = new StdClass();
+$search_query-&amp;gt;oPurchaseRequest = new StdClass();
+$search_query-&amp;gt;oPurchaseRequest-&amp;gt;MembershipNumber = $MembershipNumber;
+$search_query-&amp;gt;oPurchaseRequest-&amp;gt;SessionID = $SessionID;
+$search_query-&amp;gt;oPurchaseRequest-&amp;gt;Password = $Password;
+$search_query-&amp;gt;oPurchaseRequest-&amp;gt;Gender = $Gender;
+$search_query-&amp;gt;oPurchaseRequest-&amp;gt;RatePlanID = $RatePlanID;
+$search_query-&amp;gt;oPurchaseRequest-&amp;gt;CCNumber = $CCNumber;
+$search_query-&amp;gt;oPurchaseRequest-&amp;gt;CCExpireMonth = $CCExpireMonth;
+$search_query-&amp;gt;oPurchaseRequest-&amp;gt;CCExpireYear = $CCExpireYear;
+$search_query-&amp;gt;oPurchaseRequest-&amp;gt;CCCode = $CCCode;
+$search_query-&amp;gt;oPurchaseRequest-&amp;gt;Zip = $Zip;
+
+// setup some SOAP options
+echo &amp;quot;Setting up SOAP options\n&amp;quot;;
+$soap_options = array(
+        &#39;trace&#39;       =&amp;gt; 1,     // traces let us look at the actual SOAP messages later
+        &#39;exceptions&#39;  =&amp;gt; 1 );
+
+
+// configure our WSDL location
+echo &amp;quot;Configuring WSDL\n&amp;quot;;
+$wsdl = &amp;quot;https://locationofservices.tld/asterisk.asmx?WSDL&amp;quot;;
+
+
+// Make sure the PHP-Soap module is installed
+echo &amp;quot;Checking SoapClient exists\n&amp;quot;;
+if (!class_exists(&#39;SoapClient&#39;))
+{
+        die (&amp;quot;You haven&#39;t installed the PHP-Soap module.&amp;quot;);
+}
+
+// we use the WSDL file to create a connection to the web service
+echo &amp;quot;Creating webservice connection to $wsdl\n&amp;quot;;
+$webservice = new SoapClient($wsdl,$soap_options);
+
+echo &amp;quot;Attempting Purchase\n&amp;quot;;
+try {
+        $result = $webservice-&amp;gt;Purchase($search_query);
+
+        // save our results to some variables
+        $TransactionID = $result-&amp;gt;PurchaseResult-&amp;gt;TransactionID;
+        $ResponseCode = $result-&amp;gt;PurchaseResult-&amp;gt;ResponseCode;
+        $ResponseDetail = $result-&amp;gt;PurchaseResult-&amp;gt;ResponseDetail;
+        $AddMinutes = $result-&amp;gt;PurchaseResult-&amp;gt;AddMinutes;
+
+        // perform some logic, output the data to Asterisk, or whatever you want to do with it.
+
+} catch (SOAPFault $f) {
+        // handle the fault here
+}
+
+echo &amp;quot;Script complete\n\n&amp;quot;;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;You&amp;rsquo;ll notice that our results are passed back in the &amp;lsquo;try&amp;rsquo; statement. We assign the values passed back to some variables we could use. The layout of the result is similar to the request. It is laid out as follows in the WSDL.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-php&#34;&gt;&amp;lt;s:element name=&amp;quot;PurchaseResponse&amp;quot;&amp;gt;
+ &amp;lt;s:complexType&amp;gt;
+  &amp;lt;s:sequence&amp;gt;
+   &amp;lt;s:element minOccurs=&amp;quot;0&amp;quot; maxOccurs=&amp;quot;1&amp;quot; name=&amp;quot;PurchaseResult&amp;quot; type=&amp;quot;tns:PurchaseResponseType&amp;quot;/&amp;gt;
+  &amp;lt;/s:sequence&amp;gt;
+ &amp;lt;/s:complexType&amp;gt;
+&amp;lt;/s:element&amp;gt;
+
+&amp;lt;s:complexType name=&amp;quot;PurchaseResponseType&amp;quot;&amp;gt;
+ &amp;lt;s:sequence&amp;gt;
+  &amp;lt;s:element minOccurs=&amp;quot;0&amp;quot; maxOccurs=&amp;quot;1&amp;quot; name=&amp;quot;TransactionID&amp;quot; type=&amp;quot;s:string&amp;quot;/&amp;gt;
+  &amp;lt;s:element minOccurs=&amp;quot;1&amp;quot; maxOccurs=&amp;quot;1&amp;quot; name=&amp;quot;ResponseCode&amp;quot; type=&amp;quot;tns:ResponseCodes&amp;quot;/&amp;gt;
+  &amp;lt;s:element minOccurs=&amp;quot;0&amp;quot; maxOccurs=&amp;quot;1&amp;quot; name=&amp;quot;ResponseDetail&amp;quot; type=&amp;quot;s:string&amp;quot;/&amp;gt;
+  &amp;lt;s:element minOccurs=&amp;quot;1&amp;quot; maxOccurs=&amp;quot;1&amp;quot; name=&amp;quot;AddMinutes&amp;quot; type=&amp;quot;s:int&amp;quot;/&amp;gt;
+ &amp;lt;/s:sequence&amp;gt;
+&amp;lt;/s:complexType&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Hope that helps!&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

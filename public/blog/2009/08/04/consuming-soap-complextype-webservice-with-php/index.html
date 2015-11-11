@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
+<head>
+  <link href="http://gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+  <title>Consuming SOAP complexType webservice with PHP &middot; Leif Madsen</title>
+
+  
+  <link rel="stylesheet" href="http://blog.leifmadsen.com/css/poole.css">
+  <link rel="stylesheet" href="http://blog.leifmadsen.com/css/hyde.css">
+  <link rel="stylesheet" href="http://blog.leifmadsen.com/css/poole-overrides.css">
+  <link rel="stylesheet" href="http://blog.leifmadsen.com/css/hyde-overrides.css">
+  <link rel="stylesheet" href="http://blog.leifmadsen.com/css/hyde-x.css">
+  <link rel="stylesheet" href="http://blog.leifmadsen.com/css/highlight/solarized_dark.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700|Abril+Fatface">
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+
+  
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="http://blog.leifmadsen.com/touch-icon-144-precomposed.png">
+  <link href="http://blog.leifmadsen.com/favicon.png" rel="icon">
+
+  
+  
+  
+  
+
+  <meta name="description" content="Leif Madsen Blog Entry">
+  <meta name="keywords" content="blog,asterisk,leif,madsen,canada">
+  
+</head>
+<body class="theme-base-0b">
+<div class="sidebar">
+  <div class="container sidebar-sticky">
+    <div class="sidebar-about">
+      
+        <img src="https://www.gravatar.com/avatar/77a1196d149eecdb3b35fb5db56d494e?s=200"
+             alt="gravatar" title="Leif Madsen">
+      
+      <h1>Leif Madsen</h1>
+      <p class="lead">Asterisk, and other worldly endeavours</p>
+    </div>
+
+    <ul class="sidebar-nav">
+      <li class="sidebar-nav-item"><a href="http://blog.leifmadsen.com/">Blog</a></li>
+      
+    </ul>
+
+    <ul class="sidebar-nav">
+      <li class="sidebar-nav-item">
+      <a href="http://github.com/leifmadsen"><i class="fa fa-github-square fa-3x"></i></a>
+      
+      
+      <a href="http://linkedin.com/in/leifmadsen"><i class="fa fa-linkedin-square fa-3x"></i></a>
+      
+      
+      <a href="http://twitter.com/leifmadsen"><i class="fa fa-twitter-square fa-3x"></i></a>
+      
+      <a href="" type="application/rss+xml"><i class="fa fa-rss-square fa-3x"></i></a>
+      </li>
+    </ul>
+
+    
+
+    <p>Copyright &copy; 2015 <a href="http://blog.leifmadsen.com/license/">License</a><br/>
+       Powered by <a href="http://gohugo.io">Hugo</a> and <a href="https://github.com/zyro/hyde-x">Hyde-X</a></p>
+  </div>
+</div>
+
+
+<div class="content container">
+  <div class="post">
+    <h1>Consuming SOAP complexType webservice with PHP</h1>
+    <p>I recently had a client request that I communicate with a webservice via SOAP in order to do some credit card authorization for an Asterisk project they were implementing. After a couple of days of reading several posts I found via Google (which funny enough weren&rsquo;t exactly what I was looking for, but gave me JUST enough information to finally start putting it all together), I had something that worked.</p>
+
+<p>In order to potentially save someone the hassle of having to figure out how to consume a complexType in SOAP via PHP (and not using NuSoap as many of the posts pointed out), I&rsquo;m writing this down. As with many of my posts, there is probably just enough information here that will be useful for me in the future should I need to do this again. If this helps someone else out, then great!</p>
+
+<blockquote>
+<p><strong>Note:</strong></p>
+
+<p>I am not a programmer. What I&rsquo;m showing may be entirely the WRONG approach to solving this issue, but it solves it for me. Feel free to provide better examples by commenting on this article. In addition, there is the potential I may be using the wrong terminology. Please feel free to correct me, and I will then update the article to reflect anything deemed to be incorrect._</p>
+</blockquote>
+
+<p>First, you need to install the php-soap module for your PHP installation. This could require you to recompile PHP with SOAP support, or if you&rsquo;re using a package based distro (like me), you may just need to do something like:</p>
+
+<p><code># yum install php-soap</code></p>
+
+<p>In order to give you just enough of a reference point to figure out what I&rsquo;m trying to do here, the following snippet of XML code is from the webservice I&rsquo;m trying to consume. It is the complextype which I need to perform request against, and defines how the object should be passed. I&rsquo;ll then show the result. This is <em>not</em> the entire WSDL.</p>
+
+<p>First we&rsquo;re looking at the element named &lsquo;Purchase&rsquo;. This element contains a complexType object named <em>oPurchaseRequest</em> and receives a request of the type <em>PurchaseRequestType</em>.</p>
+
+<pre><code class="language-xml">&lt;s:element name=&quot;Purchase&quot;&gt;
+ &lt;s:complexType&gt;
+   &lt;s:sequence&gt;
+     &lt;s:element minOccurs=&quot;0&quot; maxOccurs=&quot;1&quot; name=&quot;oPurchaseRequest&quot; type=&quot;tns:PurchaseRequestType&quot;/&gt;
+   &lt;/s:sequence&gt;
+ &lt;/s:complexType&gt;
+&lt;/s:element&gt;
+</code></pre>
+
+<p>The structure of the PurchaseRequestType is as follows. This is how we need to structure our complexType.</p>
+
+<pre><code class="language-xml">&lt;s:complexType name=&quot;PurchaseRequestType&quot;&gt;
+ &lt;s:sequence&gt;
+   &lt;s:element minOccurs=&quot;0&quot; maxOccurs=&quot;1&quot; name=&quot;MembershipNumber&quot; type=&quot;s:string&quot;/&gt;
+   &lt;s:element minOccurs=&quot;0&quot; maxOccurs=&quot;1&quot; name=&quot;SessionID&quot; type=&quot;s:string&quot;/&gt;
+   &lt;s:element minOccurs=&quot;0&quot; maxOccurs=&quot;1&quot; name=&quot;Password&quot; type=&quot;s:string&quot;/&gt;
+   &lt;s:element minOccurs=&quot;0&quot; maxOccurs=&quot;1&quot; name=&quot;Gender&quot; type=&quot;s:string&quot;/&gt;
+   &lt;s:element minOccurs=&quot;1&quot; maxOccurs=&quot;1&quot; name=&quot;RatePlanID&quot; type=&quot;s:int&quot;/&gt;
+   &lt;s:element minOccurs=&quot;0&quot; maxOccurs=&quot;1&quot; name=&quot;CCNumber&quot; type=&quot;s:string&quot;/&gt;
+   &lt;s:element minOccurs=&quot;1&quot; maxOccurs=&quot;1&quot; name=&quot;CCExpireMonth&quot; type=&quot;s:int&quot;/&gt;
+   &lt;s:element minOccurs=&quot;1&quot; maxOccurs=&quot;1&quot; name=&quot;CCExpireYear&quot; type=&quot;s:int&quot;/&gt;
+   &lt;s:element minOccurs=&quot;1&quot; maxOccurs=&quot;1&quot; name=&quot;CCCode&quot; type=&quot;s:int&quot;/&gt;
+   &lt;s:element minOccurs=&quot;1&quot; maxOccurs=&quot;1&quot; name=&quot;Zip&quot; type=&quot;s:int&quot;/&gt;
+  &lt;/s:sequence&gt;
+ &lt;/s:complexType&gt;
+</code></pre>
+
+<p>The magic really happens in the following code. It is how I built the object in order to be consumed by the webservice. It works by first creating a new standard class, and then creating another standard class inside the oPurchaseRequest object (which is the name of the complexType that the Purchase element is expecting). Then you build the oPurchaseRequest by adding the elements outlined by the PurchaseRequestType complexType, and assigning values to them.</p>
+
+<pre><code class="language-php">$search_query = new StdClass();
+$search_query-&gt;oPurchaseRequest = new StdClass();
+$search_query-&gt;oPurchaseRequest-&gt;MembershipNumber = $MembershipNumber;
+$search_query-&gt;oPurchaseRequest-&gt;SessionID = $SessionID;
+$search_query-&gt;oPurchaseRequest-&gt;Password = $Password;
+$search_query-&gt;oPurchaseRequest-&gt;Gender = $Gender;
+$search_query-&gt;oPurchaseRequest-&gt;RatePlanID = $RatePlanID;
+$search_query-&gt;oPurchaseRequest-&gt;CCNumber = $CCNumber;
+$search_query-&gt;oPurchaseRequest-&gt;CCExpireMonth = $CCExpireMonth;
+$search_query-&gt;oPurchaseRequest-&gt;CCExpireYear = $CCExpireYear;
+$search_query-&gt;oPurchaseRequest-&gt;CCCode = $CCCode;
+$search_query-&gt;oPurchaseRequest-&gt;Zip = $Zip;
+</code></pre>
+
+<p>The entire snippet of code is available below.</p>
+
+<pre><code class="language-php">// We can take in our arguments from the console if we're using PHP CLI
+$MembershipNumber = $argv[1];
+$SessionID = $argv[2];
+$Password = $argv[3];
+$Gender = $argv[4];
+$RatePlanID = $argv[5];
+$CCNumber = $argv[6];
+$CCExpireMonth = $argv[7];
+$CCExpireYear = $argv[8];
+$CCCode = $argv[9];
+$Zip = $argv[10];
+
+// Create the object we'll pass back over the SOAP interface. This is the MAGIC!
+$search_query = new StdClass();
+$search_query-&gt;oPurchaseRequest = new StdClass();
+$search_query-&gt;oPurchaseRequest-&gt;MembershipNumber = $MembershipNumber;
+$search_query-&gt;oPurchaseRequest-&gt;SessionID = $SessionID;
+$search_query-&gt;oPurchaseRequest-&gt;Password = $Password;
+$search_query-&gt;oPurchaseRequest-&gt;Gender = $Gender;
+$search_query-&gt;oPurchaseRequest-&gt;RatePlanID = $RatePlanID;
+$search_query-&gt;oPurchaseRequest-&gt;CCNumber = $CCNumber;
+$search_query-&gt;oPurchaseRequest-&gt;CCExpireMonth = $CCExpireMonth;
+$search_query-&gt;oPurchaseRequest-&gt;CCExpireYear = $CCExpireYear;
+$search_query-&gt;oPurchaseRequest-&gt;CCCode = $CCCode;
+$search_query-&gt;oPurchaseRequest-&gt;Zip = $Zip;
+
+// setup some SOAP options
+echo &quot;Setting up SOAP options\n&quot;;
+$soap_options = array(
+        'trace'       =&gt; 1,     // traces let us look at the actual SOAP messages later
+        'exceptions'  =&gt; 1 );
+
+
+// configure our WSDL location
+echo &quot;Configuring WSDL\n&quot;;
+$wsdl = &quot;https://locationofservices.tld/asterisk.asmx?WSDL&quot;;
+
+
+// Make sure the PHP-Soap module is installed
+echo &quot;Checking SoapClient exists\n&quot;;
+if (!class_exists('SoapClient'))
+{
+        die (&quot;You haven't installed the PHP-Soap module.&quot;);
+}
+
+// we use the WSDL file to create a connection to the web service
+echo &quot;Creating webservice connection to $wsdl\n&quot;;
+$webservice = new SoapClient($wsdl,$soap_options);
+
+echo &quot;Attempting Purchase\n&quot;;
+try {
+        $result = $webservice-&gt;Purchase($search_query);
+
+        // save our results to some variables
+        $TransactionID = $result-&gt;PurchaseResult-&gt;TransactionID;
+        $ResponseCode = $result-&gt;PurchaseResult-&gt;ResponseCode;
+        $ResponseDetail = $result-&gt;PurchaseResult-&gt;ResponseDetail;
+        $AddMinutes = $result-&gt;PurchaseResult-&gt;AddMinutes;
+
+        // perform some logic, output the data to Asterisk, or whatever you want to do with it.
+
+} catch (SOAPFault $f) {
+        // handle the fault here
+}
+
+echo &quot;Script complete\n\n&quot;;
+</code></pre>
+
+<p>You&rsquo;ll notice that our results are passed back in the &lsquo;try&rsquo; statement. We assign the values passed back to some variables we could use. The layout of the result is similar to the request. It is laid out as follows in the WSDL.</p>
+
+<pre><code class="language-php">&lt;s:element name=&quot;PurchaseResponse&quot;&gt;
+ &lt;s:complexType&gt;
+  &lt;s:sequence&gt;
+   &lt;s:element minOccurs=&quot;0&quot; maxOccurs=&quot;1&quot; name=&quot;PurchaseResult&quot; type=&quot;tns:PurchaseResponseType&quot;/&gt;
+  &lt;/s:sequence&gt;
+ &lt;/s:complexType&gt;
+&lt;/s:element&gt;
+
+&lt;s:complexType name=&quot;PurchaseResponseType&quot;&gt;
+ &lt;s:sequence&gt;
+  &lt;s:element minOccurs=&quot;0&quot; maxOccurs=&quot;1&quot; name=&quot;TransactionID&quot; type=&quot;s:string&quot;/&gt;
+  &lt;s:element minOccurs=&quot;1&quot; maxOccurs=&quot;1&quot; name=&quot;ResponseCode&quot; type=&quot;tns:ResponseCodes&quot;/&gt;
+  &lt;s:element minOccurs=&quot;0&quot; maxOccurs=&quot;1&quot; name=&quot;ResponseDetail&quot; type=&quot;s:string&quot;/&gt;
+  &lt;s:element minOccurs=&quot;1&quot; maxOccurs=&quot;1&quot; name=&quot;AddMinutes&quot; type=&quot;s:int&quot;/&gt;
+ &lt;/s:sequence&gt;
+&lt;/s:complexType&gt;
+</code></pre>
+
+<p>Hope that helps!</p>
+
+  </div>
+</div>
+<script src="http://blog.leifmadsen.com/js/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+</body>
+</html>
