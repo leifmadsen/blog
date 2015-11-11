@@ -2,19 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Curl on Asterisk, and other worldly endeavours</title>
-    <link>http://blog.leifmadsen.com/tags/curl/</link>
+    <link>http://leifmadsen.github.io/hugo_gh_blog/tags/curl/</link>
     <description>Recent content in Curl on Asterisk, and other worldly endeavours</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 27 Feb 2011 21:57:41 +0000</lastBuildDate>
-    <atom:link href="http://blog.leifmadsen.com/tags/curl/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://leifmadsen.github.io/hugo_gh_blog/tags/curl/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Using #exec to set externaddr in sip.conf</title>
-      <link>http://blog.leifmadsen.com/blog/2011/02/27/using-</link>
+      <link>http://leifmadsen.github.io/hugo_gh_blog/blog/2011/02/27/using-</link>
       <pubDate>Sun, 27 Feb 2011 21:57:41 +0000</pubDate>
       
-      <guid>http://blog.leifmadsen.com/blog/2011/02/27/using-</guid>
+      <guid>http://leifmadsen.github.io/hugo_gh_blog/blog/2011/02/27/using-</guid>
       <description>&lt;p&gt;Today I was working on a system, and knowing that the system is going to get moved, and that often one of the things forgotten is to update the &lt;strong&gt;externaddr=&lt;/strong&gt; option in &lt;em&gt;sip.conf&lt;/em&gt; (when Asterisk is sitting behind NAT), I decided to put together a little script that returns the external IP address of the system. Using this script along with an &lt;strong&gt;#exec&lt;/strong&gt; in the &lt;em&gt;sip.conf&lt;/em&gt; file will make it so the address gets updated when the system is moved to the new physical location. I used the &lt;em&gt;php5-curl&lt;/em&gt; package on Ubuntu. I used the example from this page for cURL: &lt;a href=&#34;http://www.php.net/manual/en/curl.examples-basic.php&#34;&gt;http://www.php.net/manual/en/curl.examples-basic.php&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;Here is the PHP script:&lt;/p&gt;
@@ -42,10 +42,10 @@ echo &amp;quot;externaddr=&amp;quot;.$output.&amp;quot;\n&amp;quot;;
     
     <item>
       <title>Video of &#39;5 Things You Didn&#39;t Know Asterisk Could Do&#39; Presentation Now Available</title>
-      <link>http://blog.leifmadsen.com/blog/2010/12/21/video-of-5-things-you-didnt-know-asterisk-could-do-presentation-now-available/</link>
+      <link>http://leifmadsen.github.io/hugo_gh_blog/blog/2010/12/21/video-of-5-things-you-didnt-know-asterisk-could-do-presentation-now-available/</link>
       <pubDate>Tue, 21 Dec 2010 15:26:43 +0000</pubDate>
       
-      <guid>http://blog.leifmadsen.com/blog/2010/12/21/video-of-5-things-you-didnt-know-asterisk-could-do-presentation-now-available/</guid>
+      <guid>http://leifmadsen.github.io/hugo_gh_blog/blog/2010/12/21/video-of-5-things-you-didnt-know-asterisk-could-do-presentation-now-available/</guid>
       <description>&lt;p&gt;Check out the &lt;a href=&#34;http://www.astricon.net&#34;&gt;AstriCon&lt;/a&gt; website for my presentation that was recorded this year. I did three presentations this year (5 Things You Didn&amp;rsquo;t Know Asterisk Could Do, Distributed Call Centres, and the Asterisk Project Update with &lt;a href=&#34;http://www.russellbryant.net&#34;&gt;Russell Bryant&lt;/a&gt;) but unfortunately the only one I see so far is the 5 Things presentation (which is a very good presentation! :))&lt;/p&gt;
 
 &lt;p&gt;The link to the presentations are here: &lt;a href=&#34;http://www.astricon.net/videoPresentations.aspx#Digium7&#34;&gt;http://www.astricon.net/videoPresentations.aspx#Digium7&lt;/a&gt; with mine being at the top of the list.&lt;/p&gt;
@@ -54,10 +54,10 @@ echo &amp;quot;externaddr=&amp;quot;.$output.&amp;quot;\n&amp;quot;;
     
     <item>
       <title>HowTo: Read a value from a file, and say it back</title>
-      <link>http://blog.leifmadsen.com/blog/2009/07/17/howto-read-a-value-from-a-file-and-say-it-back/</link>
+      <link>http://leifmadsen.github.io/hugo_gh_blog/blog/2009/07/17/howto-read-a-value-from-a-file-and-say-it-back/</link>
       <pubDate>Fri, 17 Jul 2009 17:21:15 +0000</pubDate>
       
-      <guid>http://blog.leifmadsen.com/blog/2009/07/17/howto-read-a-value-from-a-file-and-say-it-back/</guid>
+      <guid>http://leifmadsen.github.io/hugo_gh_blog/blog/2009/07/17/howto-read-a-value-from-a-file-and-say-it-back/</guid>
       <description>
 
 &lt;h3 id=&#34;preamble:0d635cd39416ed1b6422f4dcd67cbe23&#34;&gt;Preamble&lt;/h3&gt;

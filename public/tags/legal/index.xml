@@ -2,19 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Legal on Asterisk, and other worldly endeavours</title>
-    <link>http://blog.leifmadsen.com/tags/legal/</link>
+    <link>http://leifmadsen.github.io/hugo_gh_blog/tags/legal/</link>
     <description>Recent content in Legal on Asterisk, and other worldly endeavours</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 09 Dec 2009 23:01:04 +0000</lastBuildDate>
-    <atom:link href="http://blog.leifmadsen.com/tags/legal/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://leifmadsen.github.io/hugo_gh_blog/tags/legal/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Why NDAs are Useless</title>
-      <link>http://blog.leifmadsen.com/blog/2009/12/09/why-ndas-are-useless/</link>
+      <link>http://leifmadsen.github.io/hugo_gh_blog/blog/2009/12/09/why-ndas-are-useless/</link>
       <pubDate>Wed, 09 Dec 2009 23:01:04 +0000</pubDate>
       
-      <guid>http://blog.leifmadsen.com/blog/2009/12/09/why-ndas-are-useless/</guid>
+      <guid>http://leifmadsen.github.io/hugo_gh_blog/blog/2009/12/09/why-ndas-are-useless/</guid>
       <description>&lt;p&gt;Here is a post I came across from my twitter feed discussing why NDAs are essentially useless and unenforceable in the digital age. Many good points are made, and for the most part I agree with them. I&amp;rsquo;m not quite so vehemently opposed to them as the author is as I know they aren&amp;rsquo;t enforceable. The reason I sign them is a good faith gesture to my clients. I think we both know they aren&amp;rsquo;t useful, but it gives the client a nice litmus test to determine whether I&amp;rsquo;m just looking to steal ideas, or at least to say, &amp;ldquo;Hey, it&amp;rsquo;d be great if you didn&amp;rsquo;t twitter or blog about anything you learn while looking at our system.&amp;rdquo; &amp;ndash; at least not directly of course, you can&amp;rsquo;t ask me to forget something I may have learned while working on a project for you :)&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&#34;http://www.contrast.ie/blog/five-reasons-to-drop-ndas/&#34;&gt;http://www.contrast.ie/blog/five-reasons-to-drop-ndas/&lt;/a&gt;&lt;/p&gt;

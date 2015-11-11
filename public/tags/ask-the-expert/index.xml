@@ -2,19 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Ask The Expert on Asterisk, and other worldly endeavours</title>
-    <link>http://blog.leifmadsen.com/tags/ask-the-expert/</link>
+    <link>http://leifmadsen.github.io/hugo_gh_blog/tags/ask-the-expert/</link>
     <description>Recent content in Ask The Expert on Asterisk, and other worldly endeavours</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Tue, 08 Sep 2009 13:12:20 +0000</lastBuildDate>
-    <atom:link href="http://blog.leifmadsen.com/tags/ask-the-expert/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://leifmadsen.github.io/hugo_gh_blog/tags/ask-the-expert/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Ask the Expert!</title>
-      <link>http://blog.leifmadsen.com/blog/2009/09/08/ask-the-expert/</link>
+      <link>http://leifmadsen.github.io/hugo_gh_blog/blog/2009/09/08/ask-the-expert/</link>
       <pubDate>Tue, 08 Sep 2009 13:12:20 +0000</pubDate>
       
-      <guid>http://blog.leifmadsen.com/blog/2009/09/08/ask-the-expert/</guid>
+      <guid>http://leifmadsen.github.io/hugo_gh_blog/blog/2009/09/08/ask-the-expert/</guid>
       <description>&lt;p&gt;_UPDATE (October 7, 2009):&lt;/p&gt;
 
 &lt;p&gt;This post didn&amp;rsquo;t quite generate the type of questions I was hoping for, and because of that I&amp;rsquo;m not able to generate a knowledgeable and informed response that would be overtly useful. However, I will leave this topic open for the next little while in the hopes some more questions can be generated. It is entirely possible I haven&amp;rsquo;t been specific enough in my request for the type of questions I&amp;rsquo;d like to answer, so here goes.&lt;/p&gt;

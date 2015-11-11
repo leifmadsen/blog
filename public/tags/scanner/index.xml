@@ -2,19 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Scanner on Asterisk, and other worldly endeavours</title>
-    <link>http://blog.leifmadsen.com/tags/scanner/</link>
+    <link>http://leifmadsen.github.io/hugo_gh_blog/tags/scanner/</link>
     <description>Recent content in Scanner on Asterisk, and other worldly endeavours</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Tue, 13 Apr 2010 00:28:38 +0000</lastBuildDate>
-    <atom:link href="http://blog.leifmadsen.com/tags/scanner/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://leifmadsen.github.io/hugo_gh_blog/tags/scanner/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Recent SIP Attacks from Amazon EC2</title>
-      <link>http://blog.leifmadsen.com/blog/2010/04/13/recent-sip-attacks-from-amazon-ec2/</link>
+      <link>http://leifmadsen.github.io/hugo_gh_blog/blog/2010/04/13/recent-sip-attacks-from-amazon-ec2/</link>
       <pubDate>Tue, 13 Apr 2010 00:28:38 +0000</pubDate>
       
-      <guid>http://blog.leifmadsen.com/blog/2010/04/13/recent-sip-attacks-from-amazon-ec2/</guid>
+      <guid>http://leifmadsen.github.io/hugo_gh_blog/blog/2010/04/13/recent-sip-attacks-from-amazon-ec2/</guid>
       <description>&lt;p&gt;Recently (over the weekend and continuing into today) there have been several attacks from Amazon EC2 hosts running scanners looking for open SIP accounts. I&amp;rsquo;ve gathered a couple of links that I think are useful in knowing more about the attacks, along with methods of stopping the attacks. The Joshua Stein blog has a very clever way of stopping the attacks that impressed me.&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&#34;http://jcs.org/notaweblog/2010/04/11/properly_stopping_a_sip_flood&#34;&gt;http://jcs.org/notaweblog/2010/04/11/properly_stopping_a_sip_flood&lt;/a&gt;&lt;/p&gt;

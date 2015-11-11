@@ -2,19 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Suzanne Bowen on Asterisk, and other worldly endeavours</title>
-    <link>http://blog.leifmadsen.com/tags/suzanne-bowen/</link>
+    <link>http://leifmadsen.github.io/hugo_gh_blog/tags/suzanne-bowen/</link>
     <description>Recent content in Suzanne Bowen on Asterisk, and other worldly endeavours</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sat, 21 Nov 2009 15:04:26 +0000</lastBuildDate>
-    <atom:link href="http://blog.leifmadsen.com/tags/suzanne-bowen/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://leifmadsen.github.io/hugo_gh_blog/tags/suzanne-bowen/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Jim van Meggelen, Open Source Telephony Renaissance Man</title>
-      <link>http://blog.leifmadsen.com/blog/2009/11/21/jim-van-meggelen-open-source-telephony-renaissance-man/</link>
+      <link>http://leifmadsen.github.io/hugo_gh_blog/blog/2009/11/21/jim-van-meggelen-open-source-telephony-renaissance-man/</link>
       <pubDate>Sat, 21 Nov 2009 15:04:26 +0000</pubDate>
       
-      <guid>http://blog.leifmadsen.com/blog/2009/11/21/jim-van-meggelen-open-source-telephony-renaissance-man/</guid>
+      <guid>http://leifmadsen.github.io/hugo_gh_blog/blog/2009/11/21/jim-van-meggelen-open-source-telephony-renaissance-man/</guid>
       <description>&lt;p&gt;In case you missed it, Suzanne Bowen of DIDX recently interviewed co-author of Asterisk: The Future of Telephony and good friend of mine, Jim van Meggelen. If you&amp;rsquo;ve never had a chance to see Jim speak at a conference, do yourself a favour and try to attend one of his sessions. He is extremely entertaining and informative, and is always a joy to speak to.&lt;/p&gt;
 
 &lt;p&gt;Jim also talks about the much anticipated 3rd edition of Asterisk: The Future of Telephony.&lt;/p&gt;

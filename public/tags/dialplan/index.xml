@@ -2,19 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Dialplan on Asterisk, and other worldly endeavours</title>
-    <link>http://blog.leifmadsen.com/tags/dialplan/</link>
+    <link>http://leifmadsen.github.io/hugo_gh_blog/tags/dialplan/</link>
     <description>Recent content in Dialplan on Asterisk, and other worldly endeavours</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Mon, 16 Jan 2012 13:28:10 +0000</lastBuildDate>
-    <atom:link href="http://blog.leifmadsen.com/tags/dialplan/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://leifmadsen.github.io/hugo_gh_blog/tags/dialplan/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Converting multiple exten =&gt; lines to using same =&gt; in Asterisk dialplan</title>
-      <link>http://blog.leifmadsen.com/blog/2012/01/16/converting-multiple-exten--lines-to-using-same--in-asterisk-dialplan/</link>
+      <link>http://leifmadsen.github.io/hugo_gh_blog/blog/2012/01/16/converting-multiple-exten--lines-to-using-same--in-asterisk-dialplan/</link>
       <pubDate>Mon, 16 Jan 2012 13:28:10 +0000</pubDate>
       
-      <guid>http://blog.leifmadsen.com/blog/2012/01/16/converting-multiple-exten--lines-to-using-same--in-asterisk-dialplan/</guid>
+      <guid>http://leifmadsen.github.io/hugo_gh_blog/blog/2012/01/16/converting-multiple-exten--lines-to-using-same--in-asterisk-dialplan/</guid>
       <description>&lt;p&gt;Last week I wanted to start changing some 1.4 based Asterisk dialplan to a 1.8 based Asterisk system, and in that process wanted to convert lines like:&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;exten =&amp;gt; _NXXNXXXXXX,1,NoOp()
@@ -39,10 +39,10 @@ exten =&amp;gt; _NXXNXXXXXX,3,Dial(SIP/foo/${EXTEN})
     
     <item>
       <title>Cooking With Asterisk (Video)</title>
-      <link>http://blog.leifmadsen.com/blog/2011/12/23/cooking-with-asterisk-video/</link>
+      <link>http://leifmadsen.github.io/hugo_gh_blog/blog/2011/12/23/cooking-with-asterisk-video/</link>
       <pubDate>Fri, 23 Dec 2011 16:17:57 +0000</pubDate>
       
-      <guid>http://blog.leifmadsen.com/blog/2011/12/23/cooking-with-asterisk-video/</guid>
+      <guid>http://leifmadsen.github.io/hugo_gh_blog/blog/2011/12/23/cooking-with-asterisk-video/</guid>
       <description>&lt;p&gt;And I found the Cooking With Asterisk presentation as well! Apologies for the low quality on the video (as this one has a lot more text than the Distributed Call Centre video), but you can follow along with the presentation on your screen as available on my website at:&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&#34;http://leifmadsen.com/sites/default/files/AstriCon%202011%20-%20Cooking%20With%20Asterisk.pdf&#34;&gt;http://leifmadsen.com/sites/default/files/AstriCon%202011%20-%20Cooking%20With%20Asterisk.pdf&lt;/a&gt;&lt;/p&gt;
@@ -55,10 +55,10 @@ exten =&amp;gt; _NXXNXXXXXX,3,Dial(SIP/foo/${EXTEN})
     
     <item>
       <title>Using Dialplan Functions: AES_DECRYPT() and AES_ENCRYPT()</title>
-      <link>http://blog.leifmadsen.com/blog/2011/09/09/using-dialplan-functions-aes_decrypt-and-aes_encrypt/</link>
+      <link>http://leifmadsen.github.io/hugo_gh_blog/blog/2011/09/09/using-dialplan-functions-aes_decrypt-and-aes_encrypt/</link>
       <pubDate>Fri, 09 Sep 2011 13:28:47 +0000</pubDate>
       
-      <guid>http://blog.leifmadsen.com/blog/2011/09/09/using-dialplan-functions-aes_decrypt-and-aes_encrypt/</guid>
+      <guid>http://leifmadsen.github.io/hugo_gh_blog/blog/2011/09/09/using-dialplan-functions-aes_decrypt-and-aes_encrypt/</guid>
       <description>&lt;p&gt;I  recently asked on twitter how many people would be interested in a set of blog posts that focused on how to use the various dialplan functions in Asterisk, and I got quite a positive response. I posted that shortly before getting married, and now that I&amp;rsquo;m back into the groove of things, I&amp;rsquo;m going to take a shot at posting a bunch of content focused around Asterisk dialplan functions. If you don&amp;rsquo;t know what Asterisk dialplan functions are, head on over to the online version of &lt;a href=&#34;http://ofps.oreilly.com/titles/9780596517342/index.html&#34;&gt;Asterisk: The Definitive Guide (3rd edition)&lt;/a&gt; (or &lt;a href=&#34;http://www.amazon.com/Asterisk-Definitive-Guide-Guides/dp/0596517343/ref=sr_1_1?ie=UTF8&amp;amp;qid=1315572209&amp;amp;sr=8-1&#34;&gt;buy&lt;/a&gt; it) and read the section on &lt;a href=&#34;http://ofps.oreilly.com/titles/9780596517342/asterisk-DP-Deeper.html#asterisk-CHP-6-SECT-2&#34;&gt;dialplan functions&lt;/a&gt;. If you&amp;rsquo;re still starting out with Asterisk, I highly suggest you start with the &lt;a href=&#34;http://ofps.oreilly.com/titles/9780596517342/asterisk-DP-Basics.html&#34;&gt;dialplan basics&lt;/a&gt; chapter.&lt;/p&gt;
 
 &lt;p&gt;Today we&amp;rsquo;ll look at the first 2 dialplan functions in my list: &lt;code&gt;AES_DECRYPT()&lt;/code&gt; and &lt;code&gt;AES_ENCRYPT()&lt;/code&gt;&lt;/p&gt;
@@ -131,10 +131,10 @@ exten =&amp;gt; _NXXNXXXXXX,3,Dial(SIP/foo/${EXTEN})
     
     <item>
       <title>Set() and Goto() on same line</title>
-      <link>http://blog.leifmadsen.com/blog/2011/08/13/set-and-goto-on-same-line/</link>
+      <link>http://leifmadsen.github.io/hugo_gh_blog/blog/2011/08/13/set-and-goto-on-same-line/</link>
       <pubDate>Sat, 13 Aug 2011 02:14:55 +0000</pubDate>
       
-      <guid>http://blog.leifmadsen.com/blog/2011/08/13/set-and-goto-on-same-line/</guid>
+      <guid>http://leifmadsen.github.io/hugo_gh_blog/blog/2011/08/13/set-and-goto-on-same-line/</guid>
       <description>&lt;p&gt;(Thanks to Jared Smith for answering my question in IRC which is the inspiration for this post.)&lt;/p&gt;
 
 &lt;p&gt;Typically when I write dialplan, primarily in the case where I&amp;rsquo;m using a pattern match, I&amp;rsquo;ll save the dialed extension to a channel variable using &lt;code&gt;Set()&lt;/code&gt;, then do a &lt;code&gt;Goto()&lt;/code&gt; where the call logic is handled. The &lt;code&gt;Set()&lt;/code&gt; is so that I don&amp;rsquo;t lose the value of &lt;code&gt;${EXTEN}&lt;/code&gt; throughout the dialplan process, especially if I&amp;rsquo;m using other mechanics such as &lt;code&gt;GoSub()&lt;/code&gt; and others.&lt;/p&gt;
@@ -184,10 +184,10 @@ exten =&amp;gt; i,1,Congestion()
     
     <item>
       <title>Asterisk: The Definitive Guide, First Draft Complete!</title>
-      <link>http://blog.leifmadsen.com/blog/2011/01/12/asterisk-the-definitive-guide-first-draft-complete/</link>
+      <link>http://leifmadsen.github.io/hugo_gh_blog/blog/2011/01/12/asterisk-the-definitive-guide-first-draft-complete/</link>
       <pubDate>Wed, 12 Jan 2011 01:30:09 +0000</pubDate>
       
-      <guid>http://blog.leifmadsen.com/blog/2011/01/12/asterisk-the-definitive-guide-first-draft-complete/</guid>
+      <guid>http://leifmadsen.github.io/hugo_gh_blog/blog/2011/01/12/asterisk-the-definitive-guide-first-draft-complete/</guid>
       <description>&lt;p&gt;Today we marked the finishing of Asterisk: The Definitive Guide (3rd Edition) by sending the first draft off to the O&amp;rsquo;Reilly production team. We finished nearly on schedule (within a few days, which is remarkable considering we added 150 more pages than originally intentioned) and have our favourite copy editor Rachel Head (formerly Wheeler) who did the first edition of Asterisk: The Future of Telephony who we emphatically enjoyed working with. We&amp;rsquo;re looking forward to it again.&lt;/p&gt;
 
 &lt;p&gt;With the draft done now, and the copy sent off to production to do their magic, I&amp;rsquo;m not quite sure what I&amp;rsquo;m going to do with my mornings! Perhaps I&amp;rsquo;ll start blogging about some dialplan stuff, or coming up with some sort of project to build. We&amp;rsquo;ll see! Any suggestions about things to document on my blog are of course welcome.&lt;/p&gt;
@@ -200,10 +200,10 @@ exten =&amp;gt; i,1,Congestion()
     
     <item>
       <title>Scheduling automated calls between two participants with res_calendar</title>
-      <link>http://blog.leifmadsen.com/blog/2010/09/29/scheduling-automated-calls-between-two-participants-with-res_calendar/</link>
+      <link>http://leifmadsen.github.io/hugo_gh_blog/blog/2010/09/29/scheduling-automated-calls-between-two-participants-with-res_calendar/</link>
       <pubDate>Wed, 29 Sep 2010 14:25:50 +0000</pubDate>
       
-      <guid>http://blog.leifmadsen.com/blog/2010/09/29/scheduling-automated-calls-between-two-participants-with-res_calendar/</guid>
+      <guid>http://leifmadsen.github.io/hugo_gh_blog/blog/2010/09/29/scheduling-automated-calls-between-two-participants-with-res_calendar/</guid>
       <description>&lt;p&gt;Here is a little dialplan snippet I wrote this morning for the next edition of the Asterisk book. While I&amp;rsquo;m not going to delve into all the aspects of setting up res_calendar like we do in the book, I thought for those of you who might already have this working might enjoy it.&lt;/p&gt;
 
 &lt;p&gt;(The calendaring modules are available in Asterisk 1.8, which is currently in release candidate status. Check out &lt;a href=&#34;http://www.asterisk.org/downloads&#34;&gt;http://www.asterisk.org/downloads&lt;/a&gt; for the current version.)&lt;/p&gt;
@@ -259,10 +259,10 @@ same =&amp;gt; n,Hangup()
     
     <item>
       <title>Musings about ENUMplus and ISNs</title>
-      <link>http://blog.leifmadsen.com/blog/2010/02/19/musings-about-enumplus-and-isns/</link>
+      <link>http://leifmadsen.github.io/hugo_gh_blog/blog/2010/02/19/musings-about-enumplus-and-isns/</link>
       <pubDate>Fri, 19 Feb 2010 15:38:07 +0000</pubDate>
       
-      <guid>http://blog.leifmadsen.com/blog/2010/02/19/musings-about-enumplus-and-isns/</guid>
+      <guid>http://leifmadsen.github.io/hugo_gh_blog/blog/2010/02/19/musings-about-enumplus-and-isns/</guid>
       <description>
 
 &lt;p&gt;Recently I&amp;rsquo;ve been playing around with a couple of technologies that I haven&amp;rsquo;t used in quite a while; ENUM and ISN. First, a little information on what these technologies are about.&lt;/p&gt;
@@ -291,9 +291,9 @@ same =&amp;gt; n,Hangup()
 
 &lt;p&gt;I think the wikipedia entry about ENUM does more justice about what it is than what I could do, so lets quote a resource :)&lt;/p&gt;
 
-&lt;p&gt;&amp;ldquo;&lt;strong&gt;Telephone number mapping&lt;/strong&gt; is the process of unifying the &lt;a href=&#34;http://blog.leifmadsen.com/wiki/Telephone&#34;&gt;telephone&lt;/a&gt; number system of the &lt;a href=&#34;http://blog.leifmadsen.com/wiki/Public_switched_telephone_network&#34;&gt;public switched telephone network&lt;/a&gt; with the &lt;a href=&#34;http://blog.leifmadsen.com/wiki/Internet&#34;&gt;Internet&lt;/a&gt; addressing and identification &lt;a href=&#34;http://blog.leifmadsen.com/wiki/Name_space&#34;&gt;name spaces&lt;/a&gt;. Telephone numbers are systematically organized in the &lt;a href=&#34;http://blog.leifmadsen.com/wiki/E.164&#34;&gt;E.164&lt;/a&gt; standard, while the Internet uses the &lt;a href=&#34;http://blog.leifmadsen.com/wiki/Domain_Name_System&#34;&gt;Domain Name System&lt;/a&gt; for linking &lt;a href=&#34;http://blog.leifmadsen.com/wiki/Domain_name&#34;&gt;domain names&lt;/a&gt; to &lt;a href=&#34;http://blog.leifmadsen.com/wiki/IP_address&#34;&gt;IP addresses&lt;/a&gt; and other resource information. Telephone number mapping systems provide facilities to determine applicable Internet communications servers responsible for servicing a given telephone number by simple lookups in the Domain Name System.&lt;/p&gt;
+&lt;p&gt;&amp;ldquo;&lt;strong&gt;Telephone number mapping&lt;/strong&gt; is the process of unifying the &lt;a href=&#34;http://leifmadsen.github.io/hugo_gh_blog/wiki/Telephone&#34;&gt;telephone&lt;/a&gt; number system of the &lt;a href=&#34;http://leifmadsen.github.io/hugo_gh_blog/wiki/Public_switched_telephone_network&#34;&gt;public switched telephone network&lt;/a&gt; with the &lt;a href=&#34;http://leifmadsen.github.io/hugo_gh_blog/wiki/Internet&#34;&gt;Internet&lt;/a&gt; addressing and identification &lt;a href=&#34;http://leifmadsen.github.io/hugo_gh_blog/wiki/Name_space&#34;&gt;name spaces&lt;/a&gt;. Telephone numbers are systematically organized in the &lt;a href=&#34;http://leifmadsen.github.io/hugo_gh_blog/wiki/E.164&#34;&gt;E.164&lt;/a&gt; standard, while the Internet uses the &lt;a href=&#34;http://leifmadsen.github.io/hugo_gh_blog/wiki/Domain_Name_System&#34;&gt;Domain Name System&lt;/a&gt; for linking &lt;a href=&#34;http://leifmadsen.github.io/hugo_gh_blog/wiki/Domain_name&#34;&gt;domain names&lt;/a&gt; to &lt;a href=&#34;http://leifmadsen.github.io/hugo_gh_blog/wiki/IP_address&#34;&gt;IP addresses&lt;/a&gt; and other resource information. Telephone number mapping systems provide facilities to determine applicable Internet communications servers responsible for servicing a given telephone number by simple lookups in the Domain Name System.&lt;/p&gt;
 
-&lt;p&gt;The most prominent facility for telephone number mapping is the E.164 NUmber Mapping (ENUM) standard. It uses special &lt;a href=&#34;http://blog.leifmadsen.com/wiki/DNS_record&#34;&gt;DNS record&lt;/a&gt; types to translate a telephone number into a &lt;a href=&#34;http://blog.leifmadsen.com/wiki/Uniform_Resource_Identifier&#34;&gt;Uniform Resource Identifier&lt;/a&gt; or IP address that can be used in Internet communications.&amp;rdquo; &amp;ndash; wikipedia entry at &lt;a href=&#34;http://en.wikipedia.org/wiki/Telephone_Number_Mapping&#34;&gt;http://en.wikipedia.org/wiki/Telephone_Number_Mapping&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;The most prominent facility for telephone number mapping is the E.164 NUmber Mapping (ENUM) standard. It uses special &lt;a href=&#34;http://leifmadsen.github.io/hugo_gh_blog/wiki/DNS_record&#34;&gt;DNS record&lt;/a&gt; types to translate a telephone number into a &lt;a href=&#34;http://leifmadsen.github.io/hugo_gh_blog/wiki/Uniform_Resource_Identifier&#34;&gt;Uniform Resource Identifier&lt;/a&gt; or IP address that can be used in Internet communications.&amp;rdquo; &amp;ndash; wikipedia entry at &lt;a href=&#34;http://en.wikipedia.org/wiki/Telephone_Number_Mapping&#34;&gt;http://en.wikipedia.org/wiki/Telephone_Number_Mapping&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;And cURL is a technology that allows you place a request via a website, and have information returned. It is most typically used by programmers to get information from a website without having to parse through the entire site.&lt;/p&gt;
 
@@ -338,10 +338,10 @@ exten =&amp;gt; no_result,n,Hangup()
     
     <item>
       <title>Ask the Expert!</title>
-      <link>http://blog.leifmadsen.com/blog/2009/09/08/ask-the-expert/</link>
+      <link>http://leifmadsen.github.io/hugo_gh_blog/blog/2009/09/08/ask-the-expert/</link>
       <pubDate>Tue, 08 Sep 2009 13:12:20 +0000</pubDate>
       
-      <guid>http://blog.leifmadsen.com/blog/2009/09/08/ask-the-expert/</guid>
+      <guid>http://leifmadsen.github.io/hugo_gh_blog/blog/2009/09/08/ask-the-expert/</guid>
       <description>&lt;p&gt;_UPDATE (October 7, 2009):&lt;/p&gt;
 
 &lt;p&gt;This post didn&amp;rsquo;t quite generate the type of questions I was hoping for, and because of that I&amp;rsquo;m not able to generate a knowledgeable and informed response that would be overtly useful. However, I will leave this topic open for the next little while in the hopes some more questions can be generated. It is entirely possible I haven&amp;rsquo;t been specific enough in my request for the type of questions I&amp;rsquo;d like to answer, so here goes.&lt;/p&gt;
@@ -361,10 +361,10 @@ _&lt;/p&gt;
     
     <item>
       <title>New articles coming soon!</title>
-      <link>http://blog.leifmadsen.com/blog/2009/06/17/new-articles-coming-soon/</link>
+      <link>http://leifmadsen.github.io/hugo_gh_blog/blog/2009/06/17/new-articles-coming-soon/</link>
       <pubDate>Wed, 17 Jun 2009 01:24:07 +0000</pubDate>
       
-      <guid>http://blog.leifmadsen.com/blog/2009/06/17/new-articles-coming-soon/</guid>
+      <guid>http://leifmadsen.github.io/hugo_gh_blog/blog/2009/06/17/new-articles-coming-soon/</guid>
       <description>&lt;p&gt;I have vowed to try and write at least ONE article per week on my blog, even if it is quite short. I&amp;rsquo;m not sure I will be able to get to write an article this week due to some pressing consulting issues, but I&amp;rsquo;m still gonna try. If anything, I&amp;rsquo;m going to cheat and say this is my post for &lt;em&gt;this&lt;/em&gt; week. How about I make a rule that says I can only cheat once per month? :)&lt;/p&gt;
 
 &lt;p&gt;I wanted to let you know I have a couple of articles lined up for later this week and next week. They will deal with Asterisk Queue()&amp;rsquo;s as that is the area I have been spending the most time lately. They include:&lt;/p&gt;

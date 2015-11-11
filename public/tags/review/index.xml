@@ -2,19 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Review on Asterisk, and other worldly endeavours</title>
-    <link>http://blog.leifmadsen.com/tags/review/</link>
+    <link>http://leifmadsen.github.io/hugo_gh_blog/tags/review/</link>
     <description>Recent content in Review on Asterisk, and other worldly endeavours</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Thu, 06 Jan 2011 15:22:55 +0000</lastBuildDate>
-    <atom:link href="http://blog.leifmadsen.com/tags/review/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://leifmadsen.github.io/hugo_gh_blog/tags/review/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Asterisk: The Definitive Guide -- Call For Reviewers!</title>
-      <link>http://blog.leifmadsen.com/blog/2011/01/06/asterisk-the-definitive-guide----call-for-reviewers/</link>
+      <link>http://leifmadsen.github.io/hugo_gh_blog/blog/2011/01/06/asterisk-the-definitive-guide----call-for-reviewers/</link>
       <pubDate>Thu, 06 Jan 2011 15:22:55 +0000</pubDate>
       
-      <guid>http://blog.leifmadsen.com/blog/2011/01/06/asterisk-the-definitive-guide----call-for-reviewers/</guid>
+      <guid>http://leifmadsen.github.io/hugo_gh_blog/blog/2011/01/06/asterisk-the-definitive-guide----call-for-reviewers/</guid>
       <description>&lt;p&gt;Here is the text I posted to the asterisk-doc mailing list this morning. You can sign up for asterisk-doc at &lt;a href=&#34;http://lists.digium.com&#34;&gt;http://lists.digium.com&lt;/a&gt; and get involved! We&amp;rsquo;d love to make this the best book on Asterisk ever, and your input can make that true! Our goal is to build a book for, and by, the Asterisk community.&lt;/p&gt;
 
 &lt;p&gt;&amp;ldquo;_Hey all! _&lt;/p&gt;
@@ -46,10 +46,10 @@
     
     <item>
       <title>Update for Asterisk: The Definitive Guide (3rd Edition)</title>
-      <link>http://blog.leifmadsen.com/blog/2010/12/21/update-for-asterisk-the-definitive-guide-3rd-edition/</link>
+      <link>http://leifmadsen.github.io/hugo_gh_blog/blog/2010/12/21/update-for-asterisk-the-definitive-guide-3rd-edition/</link>
       <pubDate>Tue, 21 Dec 2010 15:54:09 +0000</pubDate>
       
-      <guid>http://blog.leifmadsen.com/blog/2010/12/21/update-for-asterisk-the-definitive-guide-3rd-edition/</guid>
+      <guid>http://leifmadsen.github.io/hugo_gh_blog/blog/2010/12/21/update-for-asterisk-the-definitive-guide-3rd-edition/</guid>
       <description>&lt;p&gt;It&amp;rsquo;s been a while since I&amp;rsquo;ve done an update on my blog, but that&amp;rsquo;s just because we&amp;rsquo;ve been so busy at work on the next edition of the O&amp;rsquo;Reilly published Asterisk book! Asterisk: The Definitive Guide is the next update to the Asterisk: The Future Of Telephony books and is thus the 3rd edition. We&amp;rsquo;ve changed the name for two reasons: 1) This is pretty much a complete re-write of the book based on Asterisk 1.8 and 2) Asterisk is no longer the FUTURE of telephony; it&amp;rsquo;s the present. Asterisk has made it to the mainstream!&lt;/p&gt;
 
 &lt;p&gt;Since the first and second editions of Asterisk: The Future of Telephony, our humble project Asterisk has come a very long way. In the first two books we were trying to convince people of this miraculous little software and that it would one day be huge. We were right. Asterisk is known in many circles and is taking the telecommunications world by storm. To try and keep up with the plethora of new features and functionality added to Asterisk over the last few years, it required us to go back and start the book from near scratch.&lt;/p&gt;

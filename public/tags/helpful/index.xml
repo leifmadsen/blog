@@ -2,19 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Helpful on Asterisk, and other worldly endeavours</title>
-    <link>http://blog.leifmadsen.com/tags/helpful/</link>
+    <link>http://leifmadsen.github.io/hugo_gh_blog/tags/helpful/</link>
     <description>Recent content in Helpful on Asterisk, and other worldly endeavours</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Tue, 10 Aug 2010 14:03:13 +0000</lastBuildDate>
-    <atom:link href="http://blog.leifmadsen.com/tags/helpful/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://leifmadsen.github.io/hugo_gh_blog/tags/helpful/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>MindMeister: Online mind mapping</title>
-      <link>http://blog.leifmadsen.com/blog/2010/08/10/mindmeister-online-mind-mapping/</link>
+      <link>http://leifmadsen.github.io/hugo_gh_blog/blog/2010/08/10/mindmeister-online-mind-mapping/</link>
       <pubDate>Tue, 10 Aug 2010 14:03:13 +0000</pubDate>
       
-      <guid>http://blog.leifmadsen.com/blog/2010/08/10/mindmeister-online-mind-mapping/</guid>
+      <guid>http://leifmadsen.github.io/hugo_gh_blog/blog/2010/08/10/mindmeister-online-mind-mapping/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;http://www.russellbryant.net/&#34;&gt;Russell Bryant&lt;/a&gt; just sent me a link to a neat site that allows you to do online collaborative mind mapping: &lt;a href=&#34;http://www.mindmeister.com/&#34;&gt;MindMeister&lt;/a&gt;. If you&amp;rsquo;re not aware of what mind mapping software does, it is a method to quickly and easily allow you to brainstorm ideas without getting in the way too much. It works by starting from a central node and breaking out in lines from there where you start with an idea or thought, then break that thought down further with additional lines from that node.&lt;/p&gt;
 
 &lt;p&gt;While working on the next edition of the &lt;a href=&#34;http://www.asteriskdocs.org&#34;&gt;Asterisk book&lt;/a&gt;, we spent a significant amount of time using &lt;a href=&#34;http://freemind.sourceforge.net/wiki/index.php/Main_Page&#34;&gt;FreeMind&lt;/a&gt; to brainstorm ideas of what we wanted in the book, then develop a detailed outline to the book which included the chapters, and what each of those chapters would contain. This way we can reference the mindmap while working on the book, and later review all our thoughts to make sure we covered all our original ideas. We continue to refine the mindmap on an almost daily basis while we come up with additional ideas and layout tweaks while working on particular chapters.&lt;/p&gt;

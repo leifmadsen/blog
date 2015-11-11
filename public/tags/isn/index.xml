@@ -2,19 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Isn on Asterisk, and other worldly endeavours</title>
-    <link>http://blog.leifmadsen.com/tags/isn/</link>
+    <link>http://leifmadsen.github.io/hugo_gh_blog/tags/isn/</link>
     <description>Recent content in Isn on Asterisk, and other worldly endeavours</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 19 Feb 2010 15:38:07 +0000</lastBuildDate>
-    <atom:link href="http://blog.leifmadsen.com/tags/isn/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://leifmadsen.github.io/hugo_gh_blog/tags/isn/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Musings about ENUMplus and ISNs</title>
-      <link>http://blog.leifmadsen.com/blog/2010/02/19/musings-about-enumplus-and-isns/</link>
+      <link>http://leifmadsen.github.io/hugo_gh_blog/blog/2010/02/19/musings-about-enumplus-and-isns/</link>
       <pubDate>Fri, 19 Feb 2010 15:38:07 +0000</pubDate>
       
-      <guid>http://blog.leifmadsen.com/blog/2010/02/19/musings-about-enumplus-and-isns/</guid>
+      <guid>http://leifmadsen.github.io/hugo_gh_blog/blog/2010/02/19/musings-about-enumplus-and-isns/</guid>
       <description>
 
 &lt;p&gt;Recently I&amp;rsquo;ve been playing around with a couple of technologies that I haven&amp;rsquo;t used in quite a while; ENUM and ISN. First, a little information on what these technologies are about.&lt;/p&gt;
@@ -43,9 +43,9 @@
 
 &lt;p&gt;I think the wikipedia entry about ENUM does more justice about what it is than what I could do, so lets quote a resource :)&lt;/p&gt;
 
-&lt;p&gt;&amp;ldquo;&lt;strong&gt;Telephone number mapping&lt;/strong&gt; is the process of unifying the &lt;a href=&#34;http://blog.leifmadsen.com/wiki/Telephone&#34;&gt;telephone&lt;/a&gt; number system of the &lt;a href=&#34;http://blog.leifmadsen.com/wiki/Public_switched_telephone_network&#34;&gt;public switched telephone network&lt;/a&gt; with the &lt;a href=&#34;http://blog.leifmadsen.com/wiki/Internet&#34;&gt;Internet&lt;/a&gt; addressing and identification &lt;a href=&#34;http://blog.leifmadsen.com/wiki/Name_space&#34;&gt;name spaces&lt;/a&gt;. Telephone numbers are systematically organized in the &lt;a href=&#34;http://blog.leifmadsen.com/wiki/E.164&#34;&gt;E.164&lt;/a&gt; standard, while the Internet uses the &lt;a href=&#34;http://blog.leifmadsen.com/wiki/Domain_Name_System&#34;&gt;Domain Name System&lt;/a&gt; for linking &lt;a href=&#34;http://blog.leifmadsen.com/wiki/Domain_name&#34;&gt;domain names&lt;/a&gt; to &lt;a href=&#34;http://blog.leifmadsen.com/wiki/IP_address&#34;&gt;IP addresses&lt;/a&gt; and other resource information. Telephone number mapping systems provide facilities to determine applicable Internet communications servers responsible for servicing a given telephone number by simple lookups in the Domain Name System.&lt;/p&gt;
+&lt;p&gt;&amp;ldquo;&lt;strong&gt;Telephone number mapping&lt;/strong&gt; is the process of unifying the &lt;a href=&#34;http://leifmadsen.github.io/hugo_gh_blog/wiki/Telephone&#34;&gt;telephone&lt;/a&gt; number system of the &lt;a href=&#34;http://leifmadsen.github.io/hugo_gh_blog/wiki/Public_switched_telephone_network&#34;&gt;public switched telephone network&lt;/a&gt; with the &lt;a href=&#34;http://leifmadsen.github.io/hugo_gh_blog/wiki/Internet&#34;&gt;Internet&lt;/a&gt; addressing and identification &lt;a href=&#34;http://leifmadsen.github.io/hugo_gh_blog/wiki/Name_space&#34;&gt;name spaces&lt;/a&gt;. Telephone numbers are systematically organized in the &lt;a href=&#34;http://leifmadsen.github.io/hugo_gh_blog/wiki/E.164&#34;&gt;E.164&lt;/a&gt; standard, while the Internet uses the &lt;a href=&#34;http://leifmadsen.github.io/hugo_gh_blog/wiki/Domain_Name_System&#34;&gt;Domain Name System&lt;/a&gt; for linking &lt;a href=&#34;http://leifmadsen.github.io/hugo_gh_blog/wiki/Domain_name&#34;&gt;domain names&lt;/a&gt; to &lt;a href=&#34;http://leifmadsen.github.io/hugo_gh_blog/wiki/IP_address&#34;&gt;IP addresses&lt;/a&gt; and other resource information. Telephone number mapping systems provide facilities to determine applicable Internet communications servers responsible for servicing a given telephone number by simple lookups in the Domain Name System.&lt;/p&gt;
 
-&lt;p&gt;The most prominent facility for telephone number mapping is the E.164 NUmber Mapping (ENUM) standard. It uses special &lt;a href=&#34;http://blog.leifmadsen.com/wiki/DNS_record&#34;&gt;DNS record&lt;/a&gt; types to translate a telephone number into a &lt;a href=&#34;http://blog.leifmadsen.com/wiki/Uniform_Resource_Identifier&#34;&gt;Uniform Resource Identifier&lt;/a&gt; or IP address that can be used in Internet communications.&amp;rdquo; &amp;ndash; wikipedia entry at &lt;a href=&#34;http://en.wikipedia.org/wiki/Telephone_Number_Mapping&#34;&gt;http://en.wikipedia.org/wiki/Telephone_Number_Mapping&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;The most prominent facility for telephone number mapping is the E.164 NUmber Mapping (ENUM) standard. It uses special &lt;a href=&#34;http://leifmadsen.github.io/hugo_gh_blog/wiki/DNS_record&#34;&gt;DNS record&lt;/a&gt; types to translate a telephone number into a &lt;a href=&#34;http://leifmadsen.github.io/hugo_gh_blog/wiki/Uniform_Resource_Identifier&#34;&gt;Uniform Resource Identifier&lt;/a&gt; or IP address that can be used in Internet communications.&amp;rdquo; &amp;ndash; wikipedia entry at &lt;a href=&#34;http://en.wikipedia.org/wiki/Telephone_Number_Mapping&#34;&gt;http://en.wikipedia.org/wiki/Telephone_Number_Mapping&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;And cURL is a technology that allows you place a request via a website, and have information returned. It is most typically used by programmers to get information from a website without having to parse through the entire site.&lt;/p&gt;
 

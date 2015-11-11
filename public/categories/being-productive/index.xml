@@ -2,19 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Being Productive on Asterisk, and other worldly endeavours</title>
-    <link>http://blog.leifmadsen.com/categories/being-productive/</link>
+    <link>http://leifmadsen.github.io/hugo_gh_blog/categories/being-productive/</link>
     <description>Recent content in Being Productive on Asterisk, and other worldly endeavours</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 09 Sep 2015 21:20:40 +0000</lastBuildDate>
-    <atom:link href="http://blog.leifmadsen.com/categories/being-productive/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://leifmadsen.github.io/hugo_gh_blog/categories/being-productive/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Configuring powerline to show working Git branch</title>
-      <link>http://blog.leifmadsen.com/blog/2015/09/09/configuring-powerline-to-show-working-git-branch/</link>
+      <link>http://leifmadsen.github.io/hugo_gh_blog/blog/2015/09/09/configuring-powerline-to-show-working-git-branch/</link>
       <pubDate>Wed, 09 Sep 2015 21:20:40 +0000</pubDate>
       
-      <guid>http://blog.leifmadsen.com/blog/2015/09/09/configuring-powerline-to-show-working-git-branch/</guid>
+      <guid>http://leifmadsen.github.io/hugo_gh_blog/blog/2015/09/09/configuring-powerline-to-show-working-git-branch/</guid>
       <description>&lt;p&gt;So the documentation for &lt;a href=&#34;http://powerline.readthedocs.org/en/latest/index.html&#34;&gt;Powerline&lt;/a&gt; kind of sucks. I followed &lt;a href=&#34;http://fedoramagazine.org/add-power-terminal-powerline&#34;&gt;this&lt;/a&gt; pretty good article on getting started with it. First thing I noticed however is that the &lt;code&gt;if&lt;/code&gt; statement on the article doesn&amp;rsquo;t work if you don&amp;rsquo;t have powerline installed (which kind of defeats the purpose of having the &lt;code&gt;if&lt;/code&gt; statement there at all).&lt;/p&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;# if powerline is installed, then use it
@@ -61,10 +61,10 @@ fi
     
     <item>
       <title>Assign unique hostname to dhcp client with dnsmasq</title>
-      <link>http://blog.leifmadsen.com/blog/2012/07/23/assign-unique-hostname-to-dhcp-client-with-dnsmasq/</link>
+      <link>http://leifmadsen.github.io/hugo_gh_blog/blog/2012/07/23/assign-unique-hostname-to-dhcp-client-with-dnsmasq/</link>
       <pubDate>Mon, 23 Jul 2012 19:14:45 +0000</pubDate>
       
-      <guid>http://blog.leifmadsen.com/blog/2012/07/23/assign-unique-hostname-to-dhcp-client-with-dnsmasq/</guid>
+      <guid>http://leifmadsen.github.io/hugo_gh_blog/blog/2012/07/23/assign-unique-hostname-to-dhcp-client-with-dnsmasq/</guid>
       <description>&lt;p&gt;Today I&amp;rsquo;ve been getting our lab environment setup with vagrant to auto-provision our lab servers with chef server in order to allow the development team to quickly and easily turn up and tear down web application servers.&lt;/p&gt;
 
 &lt;p&gt;Because when the server gets spun up with vagrant, it registers itself as a new node to the chef server using its hostname. Since using localhost for every node pretty much makes the chef server useless for more than 1 virtual machine at a time, I needed to figure out how to get dnsmasq to assign a unique hostname based on the IP address being provided by dnsmasq to the dhcp client.&lt;/p&gt;
@@ -91,10 +91,10 @@ fi
     
     <item>
       <title>Relaying SMTP via Gmail (or Google Apps) Using Postfix</title>
-      <link>http://blog.leifmadsen.com/blog/2011/11/22/relaying-smtp-via-gmail-or-google-apps-using-postfix/</link>
+      <link>http://leifmadsen.github.io/hugo_gh_blog/blog/2011/11/22/relaying-smtp-via-gmail-or-google-apps-using-postfix/</link>
       <pubDate>Tue, 22 Nov 2011 22:17:18 +0000</pubDate>
       
-      <guid>http://blog.leifmadsen.com/blog/2011/11/22/relaying-smtp-via-gmail-or-google-apps-using-postfix/</guid>
+      <guid>http://leifmadsen.github.io/hugo_gh_blog/blog/2011/11/22/relaying-smtp-via-gmail-or-google-apps-using-postfix/</guid>
       <description>&lt;p&gt;Today I had the need to start relaying mail through my Google Apps account since &lt;del&gt;Super-Evil-Bastard-ITSP&lt;/del&gt;Rogers blocks sending email (it&amp;rsquo;s probably a good thing, however it&amp;rsquo;s quite annoying when running some services from home).&lt;/p&gt;
 
 &lt;p&gt;Found this article while Googling, and it worked great first try. I like when things are this easy.&lt;/p&gt;
@@ -105,10 +105,10 @@ fi
     
     <item>
       <title>Return just PID of script with &#39;ps&#39; and &#39;awk&#39;</title>
-      <link>http://blog.leifmadsen.com/blog/2011/09/15/return-just-pid-of-script-with-ps-and-awk/</link>
+      <link>http://leifmadsen.github.io/hugo_gh_blog/blog/2011/09/15/return-just-pid-of-script-with-ps-and-awk/</link>
       <pubDate>Thu, 15 Sep 2011 12:34:35 +0000</pubDate>
       
-      <guid>http://blog.leifmadsen.com/blog/2011/09/15/return-just-pid-of-script-with-ps-and-awk/</guid>
+      <guid>http://leifmadsen.github.io/hugo_gh_blog/blog/2011/09/15/return-just-pid-of-script-with-ps-and-awk/</guid>
       <description>&lt;p&gt;Today I ran into an issue where I am running a python script that I needed to get the process ID (PID) of, but that the process was being output with a space between &amp;lsquo;python&amp;rsquo; and the actual script name (in this case, jiraircbot.py).&lt;/p&gt;
 
 &lt;p&gt;I&amp;rsquo;m sure it&amp;rsquo;s totally overkill and there is a much easier way I didn&amp;rsquo;t find to do this, but after some scouring of The Google, I found something that works! (The purpose of this was to kill off a rogue script process each night so I could restart it.)&lt;/p&gt;
@@ -134,10 +134,10 @@ root     18219  0.0  0.0   3328   804 pts/0    S+   08:29   0:00 grep python
     
     <item>
       <title>Asterisk: The Definitive Guide, First Draft Complete!</title>
-      <link>http://blog.leifmadsen.com/blog/2011/01/12/asterisk-the-definitive-guide-first-draft-complete/</link>
+      <link>http://leifmadsen.github.io/hugo_gh_blog/blog/2011/01/12/asterisk-the-definitive-guide-first-draft-complete/</link>
       <pubDate>Wed, 12 Jan 2011 01:30:09 +0000</pubDate>
       
-      <guid>http://blog.leifmadsen.com/blog/2011/01/12/asterisk-the-definitive-guide-first-draft-complete/</guid>
+      <guid>http://leifmadsen.github.io/hugo_gh_blog/blog/2011/01/12/asterisk-the-definitive-guide-first-draft-complete/</guid>
       <description>&lt;p&gt;Today we marked the finishing of Asterisk: The Definitive Guide (3rd Edition) by sending the first draft off to the O&amp;rsquo;Reilly production team. We finished nearly on schedule (within a few days, which is remarkable considering we added 150 more pages than originally intentioned) and have our favourite copy editor Rachel Head (formerly Wheeler) who did the first edition of Asterisk: The Future of Telephony who we emphatically enjoyed working with. We&amp;rsquo;re looking forward to it again.&lt;/p&gt;
 
 &lt;p&gt;With the draft done now, and the copy sent off to production to do their magic, I&amp;rsquo;m not quite sure what I&amp;rsquo;m going to do with my mornings! Perhaps I&amp;rsquo;ll start blogging about some dialplan stuff, or coming up with some sort of project to build. We&amp;rsquo;ll see! Any suggestions about things to document on my blog are of course welcome.&lt;/p&gt;
@@ -150,10 +150,10 @@ root     18219  0.0  0.0   3328   804 pts/0    S+   08:29   0:00 grep python
     
     <item>
       <title>Interesting article about *not* tracking holidays at Netflix</title>
-      <link>http://blog.leifmadsen.com/blog/2010/08/25/interesting-article-about-not-tracking-holidays-at-netflix/</link>
+      <link>http://leifmadsen.github.io/hugo_gh_blog/blog/2010/08/25/interesting-article-about-not-tracking-holidays-at-netflix/</link>
       <pubDate>Wed, 25 Aug 2010 20:07:17 +0000</pubDate>
       
-      <guid>http://blog.leifmadsen.com/blog/2010/08/25/interesting-article-about-not-tracking-holidays-at-netflix/</guid>
+      <guid>http://leifmadsen.github.io/hugo_gh_blog/blog/2010/08/25/interesting-article-about-not-tracking-holidays-at-netflix/</guid>
       <description>&lt;p&gt;The following is an interesting article about not tracking workers time spent at work, or on vacation, but rather tracking their productivity. As a consultant who doesn&amp;rsquo;t have a fixed set of hours in the day that I work, I tend to judge my productivity by the number of hours I get to bill each week (i.e. how productive was I working for customers, rather than playing Flight Simulator :)).&lt;/p&gt;
 
 &lt;p&gt;I haven&amp;rsquo;t tracked actual holidays for years now (since I started consulting full time out of school in 2003), and I&amp;rsquo;m not sure I ever had a job long enough prior to school that I received any sorts of benefits of holidays. Perhaps it&amp;rsquo;s just natural for me because of that, but this article reminds me of two things:&lt;/p&gt;
@@ -172,10 +172,10 @@ root     18219  0.0  0.0   3328   804 pts/0    S+   08:29   0:00 grep python
     
     <item>
       <title>MindMeister: Online mind mapping</title>
-      <link>http://blog.leifmadsen.com/blog/2010/08/10/mindmeister-online-mind-mapping/</link>
+      <link>http://leifmadsen.github.io/hugo_gh_blog/blog/2010/08/10/mindmeister-online-mind-mapping/</link>
       <pubDate>Tue, 10 Aug 2010 14:03:13 +0000</pubDate>
       
-      <guid>http://blog.leifmadsen.com/blog/2010/08/10/mindmeister-online-mind-mapping/</guid>
+      <guid>http://leifmadsen.github.io/hugo_gh_blog/blog/2010/08/10/mindmeister-online-mind-mapping/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;http://www.russellbryant.net/&#34;&gt;Russell Bryant&lt;/a&gt; just sent me a link to a neat site that allows you to do online collaborative mind mapping: &lt;a href=&#34;http://www.mindmeister.com/&#34;&gt;MindMeister&lt;/a&gt;. If you&amp;rsquo;re not aware of what mind mapping software does, it is a method to quickly and easily allow you to brainstorm ideas without getting in the way too much. It works by starting from a central node and breaking out in lines from there where you start with an idea or thought, then break that thought down further with additional lines from that node.&lt;/p&gt;
 
 &lt;p&gt;While working on the next edition of the &lt;a href=&#34;http://www.asteriskdocs.org&#34;&gt;Asterisk book&lt;/a&gt;, we spent a significant amount of time using &lt;a href=&#34;http://freemind.sourceforge.net/wiki/index.php/Main_Page&#34;&gt;FreeMind&lt;/a&gt; to brainstorm ideas of what we wanted in the book, then develop a detailed outline to the book which included the chapters, and what each of those chapters would contain. This way we can reference the mindmap while working on the book, and later review all our thoughts to make sure we covered all our original ideas. We continue to refine the mindmap on an almost daily basis while we come up with additional ideas and layout tweaks while working on particular chapters.&lt;/p&gt;

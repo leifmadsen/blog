@@ -2,19 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Queue on Asterisk, and other worldly endeavours</title>
-    <link>http://blog.leifmadsen.com/tags/queue/</link>
+    <link>http://leifmadsen.github.io/hugo_gh_blog/tags/queue/</link>
     <description>Recent content in Queue on Asterisk, and other worldly endeavours</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Tue, 08 Sep 2009 13:12:20 +0000</lastBuildDate>
-    <atom:link href="http://blog.leifmadsen.com/tags/queue/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://leifmadsen.github.io/hugo_gh_blog/tags/queue/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Ask the Expert!</title>
-      <link>http://blog.leifmadsen.com/blog/2009/09/08/ask-the-expert/</link>
+      <link>http://leifmadsen.github.io/hugo_gh_blog/blog/2009/09/08/ask-the-expert/</link>
       <pubDate>Tue, 08 Sep 2009 13:12:20 +0000</pubDate>
       
-      <guid>http://blog.leifmadsen.com/blog/2009/09/08/ask-the-expert/</guid>
+      <guid>http://leifmadsen.github.io/hugo_gh_blog/blog/2009/09/08/ask-the-expert/</guid>
       <description>&lt;p&gt;_UPDATE (October 7, 2009):&lt;/p&gt;
 
 &lt;p&gt;This post didn&amp;rsquo;t quite generate the type of questions I was hoping for, and because of that I&amp;rsquo;m not able to generate a knowledgeable and informed response that would be overtly useful. However, I will leave this topic open for the next little while in the hopes some more questions can be generated. It is entirely possible I haven&amp;rsquo;t been specific enough in my request for the type of questions I&amp;rsquo;d like to answer, so here goes.&lt;/p&gt;
@@ -34,10 +34,10 @@ _&lt;/p&gt;
     
     <item>
       <title>New articles coming soon!</title>
-      <link>http://blog.leifmadsen.com/blog/2009/06/17/new-articles-coming-soon/</link>
+      <link>http://leifmadsen.github.io/hugo_gh_blog/blog/2009/06/17/new-articles-coming-soon/</link>
       <pubDate>Wed, 17 Jun 2009 01:24:07 +0000</pubDate>
       
-      <guid>http://blog.leifmadsen.com/blog/2009/06/17/new-articles-coming-soon/</guid>
+      <guid>http://leifmadsen.github.io/hugo_gh_blog/blog/2009/06/17/new-articles-coming-soon/</guid>
       <description>&lt;p&gt;I have vowed to try and write at least ONE article per week on my blog, even if it is quite short. I&amp;rsquo;m not sure I will be able to get to write an article this week due to some pressing consulting issues, but I&amp;rsquo;m still gonna try. If anything, I&amp;rsquo;m going to cheat and say this is my post for &lt;em&gt;this&lt;/em&gt; week. How about I make a rule that says I can only cheat once per month? :)&lt;/p&gt;
 
 &lt;p&gt;I wanted to let you know I have a couple of articles lined up for later this week and next week. They will deal with Asterisk Queue()&amp;rsquo;s as that is the area I have been spending the most time lately. They include:&lt;/p&gt;

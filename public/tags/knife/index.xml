@@ -2,19 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Knife on Asterisk, and other worldly endeavours</title>
-    <link>http://blog.leifmadsen.com/tags/knife/</link>
+    <link>http://leifmadsen.github.io/hugo_gh_blog/tags/knife/</link>
     <description>Recent content in Knife on Asterisk, and other worldly endeavours</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 22 Aug 2012 18:49:43 +0000</lastBuildDate>
-    <atom:link href="http://blog.leifmadsen.com/tags/knife/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://leifmadsen.github.io/hugo_gh_blog/tags/knife/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Selecting Chef Servers With Environment Variables</title>
-      <link>http://blog.leifmadsen.com/blog/2012/08/22/selecting-chef-servers-with-environment-variables/</link>
+      <link>http://leifmadsen.github.io/hugo_gh_blog/blog/2012/08/22/selecting-chef-servers-with-environment-variables/</link>
       <pubDate>Wed, 22 Aug 2012 18:49:43 +0000</pubDate>
       
-      <guid>http://blog.leifmadsen.com/blog/2012/08/22/selecting-chef-servers-with-environment-variables/</guid>
+      <guid>http://leifmadsen.github.io/hugo_gh_blog/blog/2012/08/22/selecting-chef-servers-with-environment-variables/</guid>
       <description>&lt;p&gt;Today I got playing around with dynamically selecting different chef servers in preparation for migrating some of &lt;a href=&#34;http://coredial.com&#34;&gt;our&lt;/a&gt; nodes away from our chef-dev server to our chef-live server (which I&amp;rsquo;m currently in the process of building and populating with data). I had been talking in the #chef IRC channel a few weeks back about making things dynamic, or at least easily switchable, when using multiple chef servers for different groups of servers in an environment.&lt;/p&gt;
 
 &lt;p&gt;What I want to do, is be able to set an environment variable at my console in order to switch between chef servers. Previously I had been doing this with different files in my ~/.chef/ directory and changing symlinks between the files. This method works, but is kind of annoying. So with the help of some of the folks in #chef, and with &lt;a href=&#34;https://gist.github.com/3176332&#34;&gt;this gist&lt;/a&gt; of a sample file that someone is using for their hosted chef environment, I was able to build my own knife.rb and commit it to our chef.git repository.&lt;/p&gt;

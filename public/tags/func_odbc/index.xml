@@ -2,19 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Func_odbc on Asterisk, and other worldly endeavours</title>
-    <link>http://blog.leifmadsen.com/tags/func_odbc/</link>
+    <link>http://leifmadsen.github.io/hugo_gh_blog/tags/func_odbc/</link>
     <description>Recent content in Func_odbc on Asterisk, and other worldly endeavours</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 17 Jul 2009 17:21:15 +0000</lastBuildDate>
-    <atom:link href="http://blog.leifmadsen.com/tags/func_odbc/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://leifmadsen.github.io/hugo_gh_blog/tags/func_odbc/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>HowTo: Read a value from a file, and say it back</title>
-      <link>http://blog.leifmadsen.com/blog/2009/07/17/howto-read-a-value-from-a-file-and-say-it-back/</link>
+      <link>http://leifmadsen.github.io/hugo_gh_blog/blog/2009/07/17/howto-read-a-value-from-a-file-and-say-it-back/</link>
       <pubDate>Fri, 17 Jul 2009 17:21:15 +0000</pubDate>
       
-      <guid>http://blog.leifmadsen.com/blog/2009/07/17/howto-read-a-value-from-a-file-and-say-it-back/</guid>
+      <guid>http://leifmadsen.github.io/hugo_gh_blog/blog/2009/07/17/howto-read-a-value-from-a-file-and-say-it-back/</guid>
       <description>
 
 &lt;h3 id=&#34;preamble:0d635cd39416ed1b6422f4dcd67cbe23&#34;&gt;Preamble&lt;/h3&gt;

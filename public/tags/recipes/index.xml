@@ -2,19 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Recipes on Asterisk, and other worldly endeavours</title>
-    <link>http://blog.leifmadsen.com/tags/recipes/</link>
+    <link>http://leifmadsen.github.io/hugo_gh_blog/tags/recipes/</link>
     <description>Recent content in Recipes on Asterisk, and other worldly endeavours</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 25 Mar 2011 13:40:31 +0000</lastBuildDate>
-    <atom:link href="http://blog.leifmadsen.com/tags/recipes/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://leifmadsen.github.io/hugo_gh_blog/tags/recipes/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Asterisk Cookbook Is Done!</title>
-      <link>http://blog.leifmadsen.com/blog/2011/03/25/asterisk-cookbook-is-done/</link>
+      <link>http://leifmadsen.github.io/hugo_gh_blog/blog/2011/03/25/asterisk-cookbook-is-done/</link>
       <pubDate>Fri, 25 Mar 2011 13:40:31 +0000</pubDate>
       
-      <guid>http://blog.leifmadsen.com/blog/2011/03/25/asterisk-cookbook-is-done/</guid>
+      <guid>http://leifmadsen.github.io/hugo_gh_blog/blog/2011/03/25/asterisk-cookbook-is-done/</guid>
       <description>&lt;p&gt;Just a quick update that the Asterisk Cookbook is complete! We&amp;rsquo;ll be releasing it under a Creative Commons license (just like Asterisk: The Definitive Guide) again. It&amp;rsquo;ll be a 24 recipe e-book right now, with it growing over time and eventually becoming a full print edition once the size warrants it. Of course if you purchase now you help spur on additional incentive to continue making it larger. I&amp;rsquo;ve been told that you also continue to receive updates automatically as the book grows and corrections are made (which sounds pretty cool!).&lt;/p&gt;
 
 &lt;p&gt;More information about the book is here: &lt;a href=&#34;http://oreilly.com/catalog/0636920018551&#34;&gt;http://oreilly.com/catalog/0636920018551&lt;/a&gt;&lt;/p&gt;
@@ -23,10 +23,10 @@
     
     <item>
       <title>Debugging the Asterisk Dialplan with Verbose()</title>
-      <link>http://blog.leifmadsen.com/blog/2011/03/04/debugging-the-asterisk-dialplan-with-verbose/</link>
+      <link>http://leifmadsen.github.io/hugo_gh_blog/blog/2011/03/04/debugging-the-asterisk-dialplan-with-verbose/</link>
       <pubDate>Fri, 04 Mar 2011 14:16:16 +0000</pubDate>
       
-      <guid>http://blog.leifmadsen.com/blog/2011/03/04/debugging-the-asterisk-dialplan-with-verbose/</guid>
+      <guid>http://leifmadsen.github.io/hugo_gh_blog/blog/2011/03/04/debugging-the-asterisk-dialplan-with-verbose/</guid>
       <description>&lt;p&gt;In case you missed it, &lt;a href=&#34;http://www.russellbryant.net&#34;&gt;Russell Bryant&lt;/a&gt; wrote a blog post on &lt;a href=&#34;http://www.russellbryant.net/blog/2011/03/04/debugging-the-asterisk-dialplan-with-verbose/&#34;&gt;debugging the Asterisk dialplan with the Verbose() application&lt;/a&gt;. This is one of the recipes that will be features in the upcoming &lt;a href=&#34;http://oreilly.com/catalog/0636920018551/&#34;&gt;Asterisk Cookbook&lt;/a&gt; that we&amp;rsquo;re writing, and hoping to have done by the end of March!&lt;/p&gt;
 
 &lt;p&gt;(In case you&amp;rsquo;ve missed all the cool stuff lately, the Asterisk Cookbook will also be released under the same Creative Commons license as the previous Asterisk books. We&amp;rsquo;re also making use of the &lt;a href=&#34;http://ofps.oreilly.com&#34;&gt;Open Feedback Publishing System (OFPS)&lt;/a&gt; again. You can help review the text and test the recipes at &lt;a href=&#34;http://ofps.oreilly.com/titles/9781449303822/&#34;&gt;http://ofps.oreilly.com/titles/9781449303822/&lt;/a&gt;.)&lt;/p&gt;

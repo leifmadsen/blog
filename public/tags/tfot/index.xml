@@ -2,19 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tfot on Asterisk, and other worldly endeavours</title>
-    <link>http://blog.leifmadsen.com/tags/tfot/</link>
+    <link>http://leifmadsen.github.io/hugo_gh_blog/tags/tfot/</link>
     <description>Recent content in Tfot on Asterisk, and other worldly endeavours</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 19 Feb 2010 14:39:35 +0000</lastBuildDate>
-    <atom:link href="http://blog.leifmadsen.com/tags/tfot/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://leifmadsen.github.io/hugo_gh_blog/tags/tfot/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Update on TFoT v3 Progress</title>
-      <link>http://blog.leifmadsen.com/blog/2010/02/19/update-on-tfot-v3-progress/</link>
+      <link>http://leifmadsen.github.io/hugo_gh_blog/blog/2010/02/19/update-on-tfot-v3-progress/</link>
       <pubDate>Fri, 19 Feb 2010 14:39:35 +0000</pubDate>
       
-      <guid>http://blog.leifmadsen.com/blog/2010/02/19/update-on-tfot-v3-progress/</guid>
+      <guid>http://leifmadsen.github.io/hugo_gh_blog/blog/2010/02/19/update-on-tfot-v3-progress/</guid>
       <description>&lt;p&gt;Just another quick update on the progress of the 3rd edition of the Asterisk book. It&amp;rsquo;s been a bit slow coming, but Jim and I have renewed vigor and vigilance to be productive and get things done. Since the last update, there was a period of time where nothing got done unfortunately. We did get a lot done in the week off I took to focus on the book (I think we ended up writing about 2-3 new chapters, and updated a lot of the old ones), but then of course work got in the way.&lt;/p&gt;
 
 &lt;p&gt;This has really been the problem the whole time, or else we&amp;rsquo;d be working on the 4th edition at this point. So instead of dreaming about having more time to work on the book, and for that time to be allocated all chaotic and patchy, we&amp;rsquo;ve come up with a new method. Each morning we&amp;rsquo;re getting together for an hour between 8am and 9am where the amount of distractions is low, and the amount of energy is high. This way, we can get in a good 5 hours each week on the book, plus any additional time either of us is able to work on it separately.&lt;/p&gt;
@@ -27,10 +27,10 @@
     
     <item>
       <title>Update: Asterisk TFoT v3 Progressing Nicely</title>
-      <link>http://blog.leifmadsen.com/blog/2009/11/27/update-asterisk-tfot-v3-progressing-nicely/</link>
+      <link>http://leifmadsen.github.io/hugo_gh_blog/blog/2009/11/27/update-asterisk-tfot-v3-progressing-nicely/</link>
       <pubDate>Fri, 27 Nov 2009 13:27:22 +0000</pubDate>
       
-      <guid>http://blog.leifmadsen.com/blog/2009/11/27/update-asterisk-tfot-v3-progressing-nicely/</guid>
+      <guid>http://leifmadsen.github.io/hugo_gh_blog/blog/2009/11/27/update-asterisk-tfot-v3-progressing-nicely/</guid>
       <description>&lt;p&gt;Jim and I have been working feverishly for the past few days, and the only thing that can cure it is more cowbell! Or probably more accurately, more writing!&lt;/p&gt;
 
 &lt;p&gt;We&amp;rsquo;ve been making some good progress on rewriting a couple of chapters so far, and tweaking a few other ones. We&amp;rsquo;re in the process of finishing up the first drafts of the new installation chapter and the initial configuration chapter, and I&amp;rsquo;ve started work on a chapter about queues. I hope to have about 50% of the queue chapter done by the end of today.&lt;/p&gt;
@@ -45,10 +45,10 @@
     
     <item>
       <title>Starting work on Asterisk: TFoT 3rd edition</title>
-      <link>http://blog.leifmadsen.com/blog/2009/11/23/starting-work-on-asterisk-tfot-3rd-edition/</link>
+      <link>http://leifmadsen.github.io/hugo_gh_blog/blog/2009/11/23/starting-work-on-asterisk-tfot-3rd-edition/</link>
       <pubDate>Mon, 23 Nov 2009 14:03:35 +0000</pubDate>
       
-      <guid>http://blog.leifmadsen.com/blog/2009/11/23/starting-work-on-asterisk-tfot-3rd-edition/</guid>
+      <guid>http://leifmadsen.github.io/hugo_gh_blog/blog/2009/11/23/starting-work-on-asterisk-tfot-3rd-edition/</guid>
       <description>&lt;p&gt;As many of you know, I&amp;rsquo;m a co-author of &lt;a href=&#34;http://www.oreilly.com/catalog/asterisk&#34;&gt;Asterisk: The Future of Telephony&lt;/a&gt;. While my girlfriend is away in Mexico for a week with the girls, I&amp;rsquo;m going to try and focus a bunch of attention on getting A:TFoT 3rd edition started (which is much overdue).&lt;/p&gt;
 
 &lt;p&gt;If you have any ideas for topics you would like covered in the new edition, or something that wasn&amp;rsquo;t covered as heavily as you wanted in the 1st and 2nd editions, feel free to let me know, and your ideas will be considered! I hope to get the installation chapter written today, and as things progress, we&amp;rsquo;ll get them posted up on the web (likely somewhere on &lt;a href=&#34;http://www.asteriskdocs.org&#34;&gt;http://www.asteriskdocs.org&lt;/a&gt;) for review by the community.&lt;/p&gt;
@@ -61,10 +61,10 @@
     
     <item>
       <title>New articles coming soon!</title>
-      <link>http://blog.leifmadsen.com/blog/2009/06/17/new-articles-coming-soon/</link>
+      <link>http://leifmadsen.github.io/hugo_gh_blog/blog/2009/06/17/new-articles-coming-soon/</link>
       <pubDate>Wed, 17 Jun 2009 01:24:07 +0000</pubDate>
       
-      <guid>http://blog.leifmadsen.com/blog/2009/06/17/new-articles-coming-soon/</guid>
+      <guid>http://leifmadsen.github.io/hugo_gh_blog/blog/2009/06/17/new-articles-coming-soon/</guid>
       <description>&lt;p&gt;I have vowed to try and write at least ONE article per week on my blog, even if it is quite short. I&amp;rsquo;m not sure I will be able to get to write an article this week due to some pressing consulting issues, but I&amp;rsquo;m still gonna try. If anything, I&amp;rsquo;m going to cheat and say this is my post for &lt;em&gt;this&lt;/em&gt; week. How about I make a rule that says I can only cheat once per month? :)&lt;/p&gt;
 
 &lt;p&gt;I wanted to let you know I have a couple of articles lined up for later this week and next week. They will deal with Asterisk Queue()&amp;rsquo;s as that is the area I have been spending the most time lately. They include:&lt;/p&gt;

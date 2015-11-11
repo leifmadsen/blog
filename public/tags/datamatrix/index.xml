@@ -2,19 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Datamatrix on Asterisk, and other worldly endeavours</title>
-    <link>http://blog.leifmadsen.com/tags/datamatrix/</link>
+    <link>http://leifmadsen.github.io/hugo_gh_blog/tags/datamatrix/</link>
     <description>Recent content in Datamatrix on Asterisk, and other worldly endeavours</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Thu, 27 Aug 2009 14:02:24 +0000</lastBuildDate>
-    <atom:link href="http://blog.leifmadsen.com/tags/datamatrix/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://leifmadsen.github.io/hugo_gh_blog/tags/datamatrix/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Creating vCards with QR Codes</title>
-      <link>http://blog.leifmadsen.com/blog/2009/08/27/creating-vcards-with-qr-codes/</link>
+      <link>http://leifmadsen.github.io/hugo_gh_blog/blog/2009/08/27/creating-vcards-with-qr-codes/</link>
       <pubDate>Thu, 27 Aug 2009 14:02:24 +0000</pubDate>
       
-      <guid>http://blog.leifmadsen.com/blog/2009/08/27/creating-vcards-with-qr-codes/</guid>
+      <guid>http://leifmadsen.github.io/hugo_gh_blog/blog/2009/08/27/creating-vcards-with-qr-codes/</guid>
       <description>&lt;p&gt;Recently I&amp;rsquo;ve been noticing a lot more use of QR codes around the internet. A QR code is those 2D matrices that look like a bar code, but aren&amp;rsquo;t just the ordinary vertical lines that you would see on your box of cereal. These are a box that contain pixels that have been coded to contain information about pretty much anything. I&amp;rsquo;ve been seeing some people using them for contact information, web links, and pretty much anything you can think of to distribute information.&lt;/p&gt;
 
 &lt;p&gt;I also recently saw a show on Discovery where in Japan people will post these large images on a wall somewhere hoping people will scan them with their cell phones, thereby visiting a site of a product, or perhaps giving information about an upcoming show.&lt;/p&gt;

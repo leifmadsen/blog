@@ -2,19 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Asterisk Book on Asterisk, and other worldly endeavours</title>
-    <link>http://blog.leifmadsen.com/tags/asterisk-book/</link>
+    <link>http://leifmadsen.github.io/hugo_gh_blog/tags/asterisk-book/</link>
     <description>Recent content in Asterisk Book on Asterisk, and other worldly endeavours</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Thu, 06 Jan 2011 15:22:55 +0000</lastBuildDate>
-    <atom:link href="http://blog.leifmadsen.com/tags/asterisk-book/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://leifmadsen.github.io/hugo_gh_blog/tags/asterisk-book/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Asterisk: The Definitive Guide -- Call For Reviewers!</title>
-      <link>http://blog.leifmadsen.com/blog/2011/01/06/asterisk-the-definitive-guide----call-for-reviewers/</link>
+      <link>http://leifmadsen.github.io/hugo_gh_blog/blog/2011/01/06/asterisk-the-definitive-guide----call-for-reviewers/</link>
       <pubDate>Thu, 06 Jan 2011 15:22:55 +0000</pubDate>
       
-      <guid>http://blog.leifmadsen.com/blog/2011/01/06/asterisk-the-definitive-guide----call-for-reviewers/</guid>
+      <guid>http://leifmadsen.github.io/hugo_gh_blog/blog/2011/01/06/asterisk-the-definitive-guide----call-for-reviewers/</guid>
       <description>&lt;p&gt;Here is the text I posted to the asterisk-doc mailing list this morning. You can sign up for asterisk-doc at &lt;a href=&#34;http://lists.digium.com&#34;&gt;http://lists.digium.com&lt;/a&gt; and get involved! We&amp;rsquo;d love to make this the best book on Asterisk ever, and your input can make that true! Our goal is to build a book for, and by, the Asterisk community.&lt;/p&gt;
 
 &lt;p&gt;&amp;ldquo;_Hey all! _&lt;/p&gt;
@@ -46,10 +46,10 @@
     
     <item>
       <title>Update on TFoT v3 Progress</title>
-      <link>http://blog.leifmadsen.com/blog/2010/02/19/update-on-tfot-v3-progress/</link>
+      <link>http://leifmadsen.github.io/hugo_gh_blog/blog/2010/02/19/update-on-tfot-v3-progress/</link>
       <pubDate>Fri, 19 Feb 2010 14:39:35 +0000</pubDate>
       
-      <guid>http://blog.leifmadsen.com/blog/2010/02/19/update-on-tfot-v3-progress/</guid>
+      <guid>http://leifmadsen.github.io/hugo_gh_blog/blog/2010/02/19/update-on-tfot-v3-progress/</guid>
       <description>&lt;p&gt;Just another quick update on the progress of the 3rd edition of the Asterisk book. It&amp;rsquo;s been a bit slow coming, but Jim and I have renewed vigor and vigilance to be productive and get things done. Since the last update, there was a period of time where nothing got done unfortunately. We did get a lot done in the week off I took to focus on the book (I think we ended up writing about 2-3 new chapters, and updated a lot of the old ones), but then of course work got in the way.&lt;/p&gt;
 
 &lt;p&gt;This has really been the problem the whole time, or else we&amp;rsquo;d be working on the 4th edition at this point. So instead of dreaming about having more time to work on the book, and for that time to be allocated all chaotic and patchy, we&amp;rsquo;ve come up with a new method. Each morning we&amp;rsquo;re getting together for an hour between 8am and 9am where the amount of distractions is low, and the amount of energy is high. This way, we can get in a good 5 hours each week on the book, plus any additional time either of us is able to work on it separately.&lt;/p&gt;
@@ -62,10 +62,10 @@
     
     <item>
       <title>New articles coming soon!</title>
-      <link>http://blog.leifmadsen.com/blog/2009/06/17/new-articles-coming-soon/</link>
+      <link>http://leifmadsen.github.io/hugo_gh_blog/blog/2009/06/17/new-articles-coming-soon/</link>
       <pubDate>Wed, 17 Jun 2009 01:24:07 +0000</pubDate>
       
-      <guid>http://blog.leifmadsen.com/blog/2009/06/17/new-articles-coming-soon/</guid>
+      <guid>http://leifmadsen.github.io/hugo_gh_blog/blog/2009/06/17/new-articles-coming-soon/</guid>
       <description>&lt;p&gt;I have vowed to try and write at least ONE article per week on my blog, even if it is quite short. I&amp;rsquo;m not sure I will be able to get to write an article this week due to some pressing consulting issues, but I&amp;rsquo;m still gonna try. If anything, I&amp;rsquo;m going to cheat and say this is my post for &lt;em&gt;this&lt;/em&gt; week. How about I make a rule that says I can only cheat once per month? :)&lt;/p&gt;
 
 &lt;p&gt;I wanted to let you know I have a couple of articles lined up for later this week and next week. They will deal with Asterisk Queue()&amp;rsquo;s as that is the area I have been spending the most time lately. They include:&lt;/p&gt;

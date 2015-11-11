@@ -2,19 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Agents on Asterisk, and other worldly endeavours</title>
-    <link>http://blog.leifmadsen.com/tags/agents/</link>
+    <link>http://leifmadsen.github.io/hugo_gh_blog/tags/agents/</link>
     <description>Recent content in Agents on Asterisk, and other worldly endeavours</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 17 Jun 2009 01:24:07 +0000</lastBuildDate>
-    <atom:link href="http://blog.leifmadsen.com/tags/agents/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://leifmadsen.github.io/hugo_gh_blog/tags/agents/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>New articles coming soon!</title>
-      <link>http://blog.leifmadsen.com/blog/2009/06/17/new-articles-coming-soon/</link>
+      <link>http://leifmadsen.github.io/hugo_gh_blog/blog/2009/06/17/new-articles-coming-soon/</link>
       <pubDate>Wed, 17 Jun 2009 01:24:07 +0000</pubDate>
       
-      <guid>http://blog.leifmadsen.com/blog/2009/06/17/new-articles-coming-soon/</guid>
+      <guid>http://leifmadsen.github.io/hugo_gh_blog/blog/2009/06/17/new-articles-coming-soon/</guid>
       <description>&lt;p&gt;I have vowed to try and write at least ONE article per week on my blog, even if it is quite short. I&amp;rsquo;m not sure I will be able to get to write an article this week due to some pressing consulting issues, but I&amp;rsquo;m still gonna try. If anything, I&amp;rsquo;m going to cheat and say this is my post for &lt;em&gt;this&lt;/em&gt; week. How about I make a rule that says I can only cheat once per month? :)&lt;/p&gt;
 
 &lt;p&gt;I wanted to let you know I have a couple of articles lined up for later this week and next week. They will deal with Asterisk Queue()&amp;rsquo;s as that is the area I have been spending the most time lately. They include:&lt;/p&gt;

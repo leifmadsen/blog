@@ -2,19 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Powerline on Asterisk, and other worldly endeavours</title>
-    <link>http://blog.leifmadsen.com/tags/powerline/</link>
+    <link>http://leifmadsen.github.io/hugo_gh_blog/tags/powerline/</link>
     <description>Recent content in Powerline on Asterisk, and other worldly endeavours</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 09 Sep 2015 21:20:40 +0000</lastBuildDate>
-    <atom:link href="http://blog.leifmadsen.com/tags/powerline/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://leifmadsen.github.io/hugo_gh_blog/tags/powerline/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Configuring powerline to show working Git branch</title>
-      <link>http://blog.leifmadsen.com/blog/2015/09/09/configuring-powerline-to-show-working-git-branch/</link>
+      <link>http://leifmadsen.github.io/hugo_gh_blog/blog/2015/09/09/configuring-powerline-to-show-working-git-branch/</link>
       <pubDate>Wed, 09 Sep 2015 21:20:40 +0000</pubDate>
       
-      <guid>http://blog.leifmadsen.com/blog/2015/09/09/configuring-powerline-to-show-working-git-branch/</guid>
+      <guid>http://leifmadsen.github.io/hugo_gh_blog/blog/2015/09/09/configuring-powerline-to-show-working-git-branch/</guid>
       <description>&lt;p&gt;So the documentation for &lt;a href=&#34;http://powerline.readthedocs.org/en/latest/index.html&#34;&gt;Powerline&lt;/a&gt; kind of sucks. I followed &lt;a href=&#34;http://fedoramagazine.org/add-power-terminal-powerline&#34;&gt;this&lt;/a&gt; pretty good article on getting started with it. First thing I noticed however is that the &lt;code&gt;if&lt;/code&gt; statement on the article doesn&amp;rsquo;t work if you don&amp;rsquo;t have powerline installed (which kind of defeats the purpose of having the &lt;code&gt;if&lt;/code&gt; statement there at all).&lt;/p&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;# if powerline is installed, then use it

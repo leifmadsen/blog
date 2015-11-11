@@ -2,19 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Res_calendar on Asterisk, and other worldly endeavours</title>
-    <link>http://blog.leifmadsen.com/tags/res_calendar/</link>
+    <link>http://leifmadsen.github.io/hugo_gh_blog/tags/res_calendar/</link>
     <description>Recent content in Res_calendar on Asterisk, and other worldly endeavours</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 29 Sep 2010 14:25:50 +0000</lastBuildDate>
-    <atom:link href="http://blog.leifmadsen.com/tags/res_calendar/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://leifmadsen.github.io/hugo_gh_blog/tags/res_calendar/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Scheduling automated calls between two participants with res_calendar</title>
-      <link>http://blog.leifmadsen.com/blog/2010/09/29/scheduling-automated-calls-between-two-participants-with-res_calendar/</link>
+      <link>http://leifmadsen.github.io/hugo_gh_blog/blog/2010/09/29/scheduling-automated-calls-between-two-participants-with-res_calendar/</link>
       <pubDate>Wed, 29 Sep 2010 14:25:50 +0000</pubDate>
       
-      <guid>http://blog.leifmadsen.com/blog/2010/09/29/scheduling-automated-calls-between-two-participants-with-res_calendar/</guid>
+      <guid>http://leifmadsen.github.io/hugo_gh_blog/blog/2010/09/29/scheduling-automated-calls-between-two-participants-with-res_calendar/</guid>
       <description>&lt;p&gt;Here is a little dialplan snippet I wrote this morning for the next edition of the Asterisk book. While I&amp;rsquo;m not going to delve into all the aspects of setting up res_calendar like we do in the book, I thought for those of you who might already have this working might enjoy it.&lt;/p&gt;
 
 &lt;p&gt;(The calendaring modules are available in Asterisk 1.8, which is currently in release candidate status. Check out &lt;a href=&#34;http://www.asterisk.org/downloads&#34;&gt;http://www.asterisk.org/downloads&lt;/a&gt; for the current version.)&lt;/p&gt;

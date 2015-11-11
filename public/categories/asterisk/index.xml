@@ -2,19 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Asterisk on Asterisk, and other worldly endeavours</title>
-    <link>http://blog.leifmadsen.com/categories/asterisk/</link>
+    <link>http://leifmadsen.github.io/hugo_gh_blog/categories/asterisk/</link>
     <description>Recent content in Asterisk on Asterisk, and other worldly endeavours</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Tue, 10 Nov 2015 19:41:55 -0500</lastBuildDate>
-    <atom:link href="http://blog.leifmadsen.com/categories/asterisk/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://leifmadsen.github.io/hugo_gh_blog/categories/asterisk/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Asterisk Docker Container: Phase 1</title>
-      <link>http://blog.leifmadsen.com/blog/2015/11/10/asterisk-docker-container-phase-1/</link>
+      <link>http://leifmadsen.github.io/hugo_gh_blog/blog/2015/11/10/asterisk-docker-container-phase-1/</link>
       <pubDate>Tue, 10 Nov 2015 19:41:55 -0500</pubDate>
       
-      <guid>http://blog.leifmadsen.com/blog/2015/11/10/asterisk-docker-container-phase-1/</guid>
+      <guid>http://leifmadsen.github.io/hugo_gh_blog/blog/2015/11/10/asterisk-docker-container-phase-1/</guid>
       <description>&lt;p&gt;At AstriCon 2015 this year, there was a lot (and I mean a lot) of discussion around microservices (Docker),
 and what items are required over the next year by the development community in order to make Asterisk better
 suited to running in that environment.&lt;/p&gt;
@@ -43,10 +43,10 @@ do it.&lt;/p&gt;
     
     <item>
       <title>Docker container results in x509: failed to load system roots and no roots provided</title>
-      <link>http://blog.leifmadsen.com/blog/2015/10/30/docker-container-results-in-x509-failed-to-load-system-roots-and-no-roots-provided/</link>
+      <link>http://leifmadsen.github.io/hugo_gh_blog/blog/2015/10/30/docker-container-results-in-x509-failed-to-load-system-roots-and-no-roots-provided/</link>
       <pubDate>Fri, 30 Oct 2015 20:30:27 +0000</pubDate>
       
-      <guid>http://blog.leifmadsen.com/blog/2015/10/30/docker-container-results-in-x509-failed-to-load-system-roots-and-no-roots-provided/</guid>
+      <guid>http://leifmadsen.github.io/hugo_gh_blog/blog/2015/10/30/docker-container-results-in-x509-failed-to-load-system-roots-and-no-roots-provided/</guid>
       <description>&lt;p&gt;We have a small system running in AWS as a CentOS 7 image. It has a few containers that we&amp;rsquo;re using to host a few Golang API proxies. We migrated a customers API proxy that was running on the local VM into a container, and spun it up. Upon testing, we ran into the following error:&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;x509: failed to load system roots and no roots provided
@@ -71,10 +71,10 @@ do it.&lt;/p&gt;
     
     <item>
       <title>Digium D40 and D70 Phone Unboxing</title>
-      <link>http://blog.leifmadsen.com/blog/2012/10/11/digium-d40-and-d70-phone-unboxing/</link>
+      <link>http://leifmadsen.github.io/hugo_gh_blog/blog/2012/10/11/digium-d40-and-d70-phone-unboxing/</link>
       <pubDate>Thu, 11 Oct 2012 20:43:35 +0000</pubDate>
       
-      <guid>http://blog.leifmadsen.com/blog/2012/10/11/digium-d40-and-d70-phone-unboxing/</guid>
+      <guid>http://leifmadsen.github.io/hugo_gh_blog/blog/2012/10/11/digium-d40-and-d70-phone-unboxing/</guid>
       <description>
 
 &lt;p&gt;Today I received a couple of &lt;a href=&#34;http://www1.digium.com/en/products/phones&#34;&gt;phones&lt;/a&gt; from Digium; the D40 and D70. I&amp;rsquo;ll be using these phones for testing and documentation in the 4th edition of &lt;a href=&#34;http://shop.oreilly.com/product/9780596517342.do&#34;&gt;Asterisk: The Definitive Guide&lt;/a&gt; (which &lt;a href=&#34;http://www.coretel.ca/&#34;&gt;Jim Van Meggelen&lt;/a&gt;, &lt;a href=&#34;http://russellbryant.net&#34;&gt;Russell Bryant&lt;/a&gt; and &lt;a href=&#34;http://leifmadsen.com&#34;&gt;myself&lt;/a&gt; are working on right now).&lt;/p&gt;
@@ -145,10 +145,10 @@ Side cut outs for cables that I didn&amp;rsquo;t even notice the first time thro
     
     <item>
       <title>Converting multiple exten =&gt; lines to using same =&gt; in Asterisk dialplan</title>
-      <link>http://blog.leifmadsen.com/blog/2012/01/16/converting-multiple-exten--lines-to-using-same--in-asterisk-dialplan/</link>
+      <link>http://leifmadsen.github.io/hugo_gh_blog/blog/2012/01/16/converting-multiple-exten--lines-to-using-same--in-asterisk-dialplan/</link>
       <pubDate>Mon, 16 Jan 2012 13:28:10 +0000</pubDate>
       
-      <guid>http://blog.leifmadsen.com/blog/2012/01/16/converting-multiple-exten--lines-to-using-same--in-asterisk-dialplan/</guid>
+      <guid>http://leifmadsen.github.io/hugo_gh_blog/blog/2012/01/16/converting-multiple-exten--lines-to-using-same--in-asterisk-dialplan/</guid>
       <description>&lt;p&gt;Last week I wanted to start changing some 1.4 based Asterisk dialplan to a 1.8 based Asterisk system, and in that process wanted to convert lines like:&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;exten =&amp;gt; _NXXNXXXXXX,1,NoOp()
@@ -173,10 +173,10 @@ exten =&amp;gt; _NXXNXXXXXX,3,Dial(SIP/foo/${EXTEN})
     
     <item>
       <title>Now working with CoreDial</title>
-      <link>http://blog.leifmadsen.com/blog/2012/01/04/now-working-with-coredial/</link>
+      <link>http://leifmadsen.github.io/hugo_gh_blog/blog/2012/01/04/now-working-with-coredial/</link>
       <pubDate>Wed, 04 Jan 2012 20:22:08 +0000</pubDate>
       
-      <guid>http://blog.leifmadsen.com/blog/2012/01/04/now-working-with-coredial/</guid>
+      <guid>http://leifmadsen.github.io/hugo_gh_blog/blog/2012/01/04/now-working-with-coredial/</guid>
       <description>&lt;p&gt;&lt;img src=&#34;https://si0.twimg.com/profile_images/1509716558/twitter-coredial-square-avatar_reasonably_small.png&#34; alt=&#34;&#34; /&gt; As of January 3rd, I&amp;rsquo;m now working with the CoreDial team full time. I&amp;rsquo;ve worked with them as a consultant on their infrastructure over the last few years but now will be spending significantly more time working with the engineering team :)&lt;/p&gt;
 
 &lt;p&gt;From the announcement,&lt;/p&gt;
@@ -191,10 +191,10 @@ exten =&amp;gt; _NXXNXXXXXX,3,Dial(SIP/foo/${EXTEN})
     
     <item>
       <title>Cooking With Asterisk (Video)</title>
-      <link>http://blog.leifmadsen.com/blog/2011/12/23/cooking-with-asterisk-video/</link>
+      <link>http://leifmadsen.github.io/hugo_gh_blog/blog/2011/12/23/cooking-with-asterisk-video/</link>
       <pubDate>Fri, 23 Dec 2011 16:17:57 +0000</pubDate>
       
-      <guid>http://blog.leifmadsen.com/blog/2011/12/23/cooking-with-asterisk-video/</guid>
+      <guid>http://leifmadsen.github.io/hugo_gh_blog/blog/2011/12/23/cooking-with-asterisk-video/</guid>
       <description>&lt;p&gt;And I found the Cooking With Asterisk presentation as well! Apologies for the low quality on the video (as this one has a lot more text than the Distributed Call Centre video), but you can follow along with the presentation on your screen as available on my website at:&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&#34;http://leifmadsen.com/sites/default/files/AstriCon%202011%20-%20Cooking%20With%20Asterisk.pdf&#34;&gt;http://leifmadsen.com/sites/default/files/AstriCon%202011%20-%20Cooking%20With%20Asterisk.pdf&lt;/a&gt;&lt;/p&gt;
@@ -207,10 +207,10 @@ exten =&amp;gt; _NXXNXXXXXX,3,Dial(SIP/foo/${EXTEN})
     
     <item>
       <title>Asterisk Powered Distributed Call Centres (Video)</title>
-      <link>http://blog.leifmadsen.com/blog/2011/12/23/asterisk-powered-distributed-call-centres-video/</link>
+      <link>http://leifmadsen.github.io/hugo_gh_blog/blog/2011/12/23/asterisk-powered-distributed-call-centres-video/</link>
       <pubDate>Fri, 23 Dec 2011 15:31:22 +0000</pubDate>
       
-      <guid>http://blog.leifmadsen.com/blog/2011/12/23/asterisk-powered-distributed-call-centres-video/</guid>
+      <guid>http://leifmadsen.github.io/hugo_gh_blog/blog/2011/12/23/asterisk-powered-distributed-call-centres-video/</guid>
       <description>&lt;p&gt;Looks like TMC has posted my presentation from AstriCon 2011! You can see the presentation in its entirety over here:&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&#34;http://www.tmcnet.com/tmc/videos/default.aspx?vid=5821&amp;amp;title=Asterisk-Powered+Distributed+Call+Centers&#34;&gt;http://www.tmcnet.com/tmc/videos/default.aspx?vid=5821&amp;amp;title=Asterisk-Powered+Distributed+Call+Centers&lt;/a&gt;&lt;/p&gt;
@@ -223,10 +223,10 @@ exten =&amp;gt; _NXXNXXXXXX,3,Dial(SIP/foo/${EXTEN})
     
     <item>
       <title>#AstriCon 2011 Quote of the Conference (@abalashov)</title>
-      <link>http://blog.leifmadsen.com/blog/2011/10/30/</link>
+      <link>http://leifmadsen.github.io/hugo_gh_blog/blog/2011/10/30/</link>
       <pubDate>Sun, 30 Oct 2011 15:46:23 +0000</pubDate>
       
-      <guid>http://blog.leifmadsen.com/blog/2011/10/30/</guid>
+      <guid>http://leifmadsen.github.io/hugo_gh_blog/blog/2011/10/30/</guid>
       <description>&lt;p&gt;I think the best quote I heard the entire time came from @abalashov (Alex Balashov) during the AstriDevCon when we were talking about Asterisk documentation, and how we might better organize it within the source.&lt;/p&gt;
 
 &lt;p&gt;We were discussing perhaps moving some of the existing configuration file examples to a manpage, and Alex piped up to say, &lt;strong&gt;&amp;ldquo;Manpages are a vestige of our glorious, prehensile, curly-tailed past.&amp;rdquo;&lt;/strong&gt;&lt;/p&gt;
@@ -237,10 +237,10 @@ exten =&amp;gt; _NXXNXXXXXX,3,Dial(SIP/foo/${EXTEN})
     
     <item>
       <title>#AstriCon 2011: Cooking With Asterisk</title>
-      <link>http://blog.leifmadsen.com/blog/2011/10/28/</link>
+      <link>http://leifmadsen.github.io/hugo_gh_blog/blog/2011/10/28/</link>
       <pubDate>Fri, 28 Oct 2011 13:19:36 +0000</pubDate>
       
-      <guid>http://blog.leifmadsen.com/blog/2011/10/28/</guid>
+      <guid>http://leifmadsen.github.io/hugo_gh_blog/blog/2011/10/28/</guid>
       <description>&lt;p&gt;My other presentation at AstriCon 2011 was Cooking With Asterisk, an overview of some dialplan snippets (pulled from the Asterisk Cookbook).&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&#34;http://leifmadsen.com/sites/default/files/AstriCon 2011 - Cooking With Asterisk.pdf&#34;&gt;http://leifmadsen.com/sites/default/files/AstriCon 2011 - Cooking With Asterisk.pdf&lt;/a&gt;&lt;/p&gt;
@@ -249,10 +249,10 @@ exten =&amp;gt; _NXXNXXXXXX,3,Dial(SIP/foo/${EXTEN})
     
     <item>
       <title>#AstriCon 2011: Building a Distributed Call Centre</title>
-      <link>http://blog.leifmadsen.com/blog/2011/10/26/</link>
+      <link>http://leifmadsen.github.io/hugo_gh_blog/blog/2011/10/26/</link>
       <pubDate>Wed, 26 Oct 2011 19:15:41 +0000</pubDate>
       
-      <guid>http://blog.leifmadsen.com/blog/2011/10/26/</guid>
+      <guid>http://leifmadsen.github.io/hugo_gh_blog/blog/2011/10/26/</guid>
       <description>&lt;p&gt;The presentation and configuration files from my presentation at AstriCon 2011 today is available at:&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&#34;http://leifmadsen.com/sites/default/files/AstriCon 2011 - Building a distributed call centre.zip&#34;&gt;http://leifmadsen.com/sites/default/files/AstriCon 2011 - Building a distributed call centre.zip
@@ -262,10 +262,10 @@ exten =&amp;gt; _NXXNXXXXXX,3,Dial(SIP/foo/${EXTEN})
     
     <item>
       <title>AstriCon presentation today at 11:40am</title>
-      <link>http://blog.leifmadsen.com/blog/2011/10/26/astricon-presentation-today-at-1140am/</link>
+      <link>http://leifmadsen.github.io/hugo_gh_blog/blog/2011/10/26/astricon-presentation-today-at-1140am/</link>
       <pubDate>Wed, 26 Oct 2011 16:36:49 +0000</pubDate>
       
-      <guid>http://blog.leifmadsen.com/blog/2011/10/26/astricon-presentation-today-at-1140am/</guid>
+      <guid>http://leifmadsen.github.io/hugo_gh_blog/blog/2011/10/26/astricon-presentation-today-at-1140am/</guid>
       <description>&lt;p&gt;I&amp;rsquo;ll be speaking at AstriCon today (and tomorrow) about building a distributed call centre. The presentation will be 35 minutes long and will contain a set of slides that moves you from an existing traditional PBX system up through a distributed model (which happens to use a call centre as the example system).&lt;/p&gt;
 
 &lt;p&gt;A PDF of the presentation along with the configuration files from the demo will be available on my website after the presentation. I&amp;rsquo;ll post links to the files on my blog here shortly after the presentation finishes.&lt;/p&gt;
@@ -276,10 +276,10 @@ exten =&amp;gt; _NXXNXXXXXX,3,Dial(SIP/foo/${EXTEN})
     
     <item>
       <title>Using Dialplan Functions: AES_DECRYPT() and AES_ENCRYPT()</title>
-      <link>http://blog.leifmadsen.com/blog/2011/09/09/using-dialplan-functions-aes_decrypt-and-aes_encrypt/</link>
+      <link>http://leifmadsen.github.io/hugo_gh_blog/blog/2011/09/09/using-dialplan-functions-aes_decrypt-and-aes_encrypt/</link>
       <pubDate>Fri, 09 Sep 2011 13:28:47 +0000</pubDate>
       
-      <guid>http://blog.leifmadsen.com/blog/2011/09/09/using-dialplan-functions-aes_decrypt-and-aes_encrypt/</guid>
+      <guid>http://leifmadsen.github.io/hugo_gh_blog/blog/2011/09/09/using-dialplan-functions-aes_decrypt-and-aes_encrypt/</guid>
       <description>&lt;p&gt;I  recently asked on twitter how many people would be interested in a set of blog posts that focused on how to use the various dialplan functions in Asterisk, and I got quite a positive response. I posted that shortly before getting married, and now that I&amp;rsquo;m back into the groove of things, I&amp;rsquo;m going to take a shot at posting a bunch of content focused around Asterisk dialplan functions. If you don&amp;rsquo;t know what Asterisk dialplan functions are, head on over to the online version of &lt;a href=&#34;http://ofps.oreilly.com/titles/9780596517342/index.html&#34;&gt;Asterisk: The Definitive Guide (3rd edition)&lt;/a&gt; (or &lt;a href=&#34;http://www.amazon.com/Asterisk-Definitive-Guide-Guides/dp/0596517343/ref=sr_1_1?ie=UTF8&amp;amp;qid=1315572209&amp;amp;sr=8-1&#34;&gt;buy&lt;/a&gt; it) and read the section on &lt;a href=&#34;http://ofps.oreilly.com/titles/9780596517342/asterisk-DP-Deeper.html#asterisk-CHP-6-SECT-2&#34;&gt;dialplan functions&lt;/a&gt;. If you&amp;rsquo;re still starting out with Asterisk, I highly suggest you start with the &lt;a href=&#34;http://ofps.oreilly.com/titles/9780596517342/asterisk-DP-Basics.html&#34;&gt;dialplan basics&lt;/a&gt; chapter.&lt;/p&gt;
 
 &lt;p&gt;Today we&amp;rsquo;ll look at the first 2 dialplan functions in my list: &lt;code&gt;AES_DECRYPT()&lt;/code&gt; and &lt;code&gt;AES_ENCRYPT()&lt;/code&gt;&lt;/p&gt;
@@ -352,10 +352,10 @@ exten =&amp;gt; _NXXNXXXXXX,3,Dial(SIP/foo/${EXTEN})
     
     <item>
       <title>Asterisk 10 == Asterisk 1.^H^H10</title>
-      <link>http://blog.leifmadsen.com/blog/2011/08/29/asterisk-10--asterisk-1.hh10/</link>
+      <link>http://leifmadsen.github.io/hugo_gh_blog/blog/2011/08/29/asterisk-10--asterisk-1.hh10/</link>
       <pubDate>Mon, 29 Aug 2011 20:27:03 +0000</pubDate>
       
-      <guid>http://blog.leifmadsen.com/blog/2011/08/29/asterisk-10--asterisk-1.hh10/</guid>
+      <guid>http://leifmadsen.github.io/hugo_gh_blog/blog/2011/08/29/asterisk-10--asterisk-1.hh10/</guid>
       <description>&lt;p&gt;In case you missed it, the next version of Asterisk is now in beta, and at the same time, has undergone a minor version numbering scheme. As it is unlikely that Asterisk will ever have a 2.0 release since for years now, that has generally meant Asterisk would undergo a major underlying change in both how it was programmed and the user experience (and since it would be a major disruption to the Asterisk community), it was deemed unnecessary to utilize the 1. preamble in front of the version numbers.&lt;/p&gt;
 
 &lt;p&gt;Asterisk versioning has used the following as branch numbers over the years:&lt;/p&gt;
@@ -442,10 +442,10 @@ exten =&amp;gt; _NXXNXXXXXX,3,Dial(SIP/foo/${EXTEN})
     
     <item>
       <title>Set() and Goto() on same line</title>
-      <link>http://blog.leifmadsen.com/blog/2011/08/13/set-and-goto-on-same-line/</link>
+      <link>http://leifmadsen.github.io/hugo_gh_blog/blog/2011/08/13/set-and-goto-on-same-line/</link>
       <pubDate>Sat, 13 Aug 2011 02:14:55 +0000</pubDate>
       
-      <guid>http://blog.leifmadsen.com/blog/2011/08/13/set-and-goto-on-same-line/</guid>
+      <guid>http://leifmadsen.github.io/hugo_gh_blog/blog/2011/08/13/set-and-goto-on-same-line/</guid>
       <description>&lt;p&gt;(Thanks to Jared Smith for answering my question in IRC which is the inspiration for this post.)&lt;/p&gt;
 
 &lt;p&gt;Typically when I write dialplan, primarily in the case where I&amp;rsquo;m using a pattern match, I&amp;rsquo;ll save the dialed extension to a channel variable using &lt;code&gt;Set()&lt;/code&gt;, then do a &lt;code&gt;Goto()&lt;/code&gt; where the call logic is handled. The &lt;code&gt;Set()&lt;/code&gt; is so that I don&amp;rsquo;t lose the value of &lt;code&gt;${EXTEN}&lt;/code&gt; throughout the dialplan process, especially if I&amp;rsquo;m using other mechanics such as &lt;code&gt;GoSub()&lt;/code&gt; and others.&lt;/p&gt;
@@ -495,10 +495,10 @@ exten =&amp;gt; i,1,Congestion()
     
     <item>
       <title>Connecting two conferences on initial join (with cleanup)</title>
-      <link>http://blog.leifmadsen.com/blog/2011/08/11/connecting-two-conferences-on-initial-join-with-cleanup/</link>
+      <link>http://leifmadsen.github.io/hugo_gh_blog/blog/2011/08/11/connecting-two-conferences-on-initial-join-with-cleanup/</link>
       <pubDate>Thu, 11 Aug 2011 15:48:54 +0000</pubDate>
       
-      <guid>http://blog.leifmadsen.com/blog/2011/08/11/connecting-two-conferences-on-initial-join-with-cleanup/</guid>
+      <guid>http://leifmadsen.github.io/hugo_gh_blog/blog/2011/08/11/connecting-two-conferences-on-initial-join-with-cleanup/</guid>
       <description>&lt;blockquote&gt;
 &lt;p&gt;Update 2011/12/15:  Updated the code to deal with a couple of people joining at about the same time by using GROUP() and GROUP_COUNT(). Additionally updated the &amp;lsquo;h&amp;rsquo; extension which was missing some code&lt;/p&gt;
 &lt;/blockquote&gt;

@@ -2,19 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Vm on Asterisk, and other worldly endeavours</title>
-    <link>http://blog.leifmadsen.com/tags/vm/</link>
+    <link>http://leifmadsen.github.io/hugo_gh_blog/tags/vm/</link>
     <description>Recent content in Vm on Asterisk, and other worldly endeavours</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 09 Feb 2011 01:18:22 +0000</lastBuildDate>
-    <atom:link href="http://blog.leifmadsen.com/tags/vm/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://leifmadsen.github.io/hugo_gh_blog/tags/vm/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Initial impressions of qemu-kvm (virtualization server)</title>
-      <link>http://blog.leifmadsen.com/blog/2011/02/09/initial-impressions-of-qemu-kvm-virtualization-server/</link>
+      <link>http://leifmadsen.github.io/hugo_gh_blog/blog/2011/02/09/initial-impressions-of-qemu-kvm-virtualization-server/</link>
       <pubDate>Wed, 09 Feb 2011 01:18:22 +0000</pubDate>
       
-      <guid>http://blog.leifmadsen.com/blog/2011/02/09/initial-impressions-of-qemu-kvm-virtualization-server/</guid>
+      <guid>http://leifmadsen.github.io/hugo_gh_blog/blog/2011/02/09/initial-impressions-of-qemu-kvm-virtualization-server/</guid>
       <description>&lt;p&gt;The qemu-kvm (&lt;a href=&#34;http://www.linux-kvm.org/page/Main_Page&#34;&gt;http://www.linux-kvm.org/page/Main_Page&lt;/a&gt;) package on Ubuntu 10.10 allows you to create virtual machines much like VMware, Xen, etc.&lt;/p&gt;
 
 &lt;p&gt;My initial impressions are generally pretty positive. I like that it lets you install multiple operating systems (including MS Windows, which I haven&amp;rsquo;t tried yet), and doesn&amp;rsquo;t use a web interface like VMware Server 2 (which I&amp;rsquo;ve found to be terribly crash prone, requiring a restart of the web interface at the least, and sometime the entire server needs to be restarted, often abruptly with the kill application). My favourite part is the libvirt-manager that lets you manage the system and install virtual machines remotely over SSH using VNC (or at least something similar to it).&lt;/p&gt;

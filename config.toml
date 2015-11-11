@@ -1,4 +1,4 @@
-baseurl = "http://blog.leifmadsen.com/"
+baseurl = "http://leifmadsen.github.io/hugo_gh_blog"
 title = "Asterisk, and other worldly endeavours"
 canonifyurls = true
 publishdir = "public"

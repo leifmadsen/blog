@@ -2,19 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Book on Asterisk, and other worldly endeavours</title>
-    <link>http://blog.leifmadsen.com/tags/book/</link>
+    <link>http://leifmadsen.github.io/hugo_gh_blog/tags/book/</link>
     <description>Recent content in Book on Asterisk, and other worldly endeavours</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Thu, 16 May 2013 13:31:46 +0000</lastBuildDate>
-    <atom:link href="http://blog.leifmadsen.com/tags/book/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://leifmadsen.github.io/hugo_gh_blog/tags/book/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Asterisk: The Definitive Guide 4th Edition goes to print</title>
-      <link>http://blog.leifmadsen.com/blog/2013/05/16/asterisk-the-definitive-guide-4th-edition-goes-to-print/</link>
+      <link>http://leifmadsen.github.io/hugo_gh_blog/blog/2013/05/16/asterisk-the-definitive-guide-4th-edition-goes-to-print/</link>
       <pubDate>Thu, 16 May 2013 13:31:46 +0000</pubDate>
       
-      <guid>http://blog.leifmadsen.com/blog/2013/05/16/asterisk-the-definitive-guide-4th-edition-goes-to-print/</guid>
+      <guid>http://leifmadsen.github.io/hugo_gh_blog/blog/2013/05/16/asterisk-the-definitive-guide-4th-edition-goes-to-print/</guid>
       <description>&lt;p&gt;Howdy folks,&lt;/p&gt;
 
 &lt;p&gt;Sorry for the lack of updates lately. I&amp;rsquo;ve recently (December 2012) started at Thinking Phone Networks as the Lead UC Systems Engineer, and we&amp;rsquo;ve been incredibly busy there. In addition, the authors and I had been working on the final touches to the 4th edition of Asterisk: The Definitive Guide, which documents Asterisk 11 LTS.&lt;/p&gt;
@@ -29,10 +29,10 @@
     
     <item>
       <title>Request for Reviews for Asterisk: The Definitive Guide</title>
-      <link>http://blog.leifmadsen.com/blog/2011/04/26/request-for-reviews-for-asterisk-the-definitive-guide/</link>
+      <link>http://leifmadsen.github.io/hugo_gh_blog/blog/2011/04/26/request-for-reviews-for-asterisk-the-definitive-guide/</link>
       <pubDate>Tue, 26 Apr 2011 17:34:43 +0000</pubDate>
       
-      <guid>http://blog.leifmadsen.com/blog/2011/04/26/request-for-reviews-for-asterisk-the-definitive-guide/</guid>
+      <guid>http://leifmadsen.github.io/hugo_gh_blog/blog/2011/04/26/request-for-reviews-for-asterisk-the-definitive-guide/</guid>
       <description>&lt;p&gt;Recently Jim Van Meggelen, Russell Bryant and myself released the 3rd edition of the Asterisk book published by O&amp;rsquo;Reilly Media titled &amp;lsquo;&lt;a href=&#34;http://oreilly.com/catalog/9780596517342&#34;&gt;Asterisk: The Definitive Guide&lt;/a&gt;&amp;rsquo;.&lt;/p&gt;
 
 &lt;p&gt;We have released this book under a &lt;a href=&#34;http://creativecommons.org/licenses/by-nc-nd/3.0/&#34;&gt;Creative Commons&lt;/a&gt; license in the spirit of Open Source software. It is available in its entirety at &lt;a href=&#34;http://ofps.oreilly.com/titles/9780596517342/&#34;&gt;http://ofps.oreilly.com/titles/9780596517342/&lt;/a&gt; and for purchase through Amazon at &lt;a href=&#34;http://www.amazon.com/Asterisk-Definitive-Guide-Leif-Madsen/dp/0596517343/ref=sr_1_1?ie=UTF8&amp;amp;s=books&amp;amp;qid=1303765969&amp;amp;sr=8-1&#34;&gt;http://www.amazon.com/Asterisk-Definitive-Guide-Leif-Madsen/dp/0596517343/ref=sr_1_1?ie=UTF8&amp;amp;s=books&amp;amp;qid=1303765969&amp;amp;sr=8-1&lt;/a&gt;&lt;/p&gt;
@@ -48,10 +48,10 @@ Leif Madsen.&lt;/p&gt;
     
     <item>
       <title>Asterisk: The Definitive Guide, First Draft Complete!</title>
-      <link>http://blog.leifmadsen.com/blog/2011/01/12/asterisk-the-definitive-guide-first-draft-complete/</link>
+      <link>http://leifmadsen.github.io/hugo_gh_blog/blog/2011/01/12/asterisk-the-definitive-guide-first-draft-complete/</link>
       <pubDate>Wed, 12 Jan 2011 01:30:09 +0000</pubDate>
       
-      <guid>http://blog.leifmadsen.com/blog/2011/01/12/asterisk-the-definitive-guide-first-draft-complete/</guid>
+      <guid>http://leifmadsen.github.io/hugo_gh_blog/blog/2011/01/12/asterisk-the-definitive-guide-first-draft-complete/</guid>
       <description>&lt;p&gt;Today we marked the finishing of Asterisk: The Definitive Guide (3rd Edition) by sending the first draft off to the O&amp;rsquo;Reilly production team. We finished nearly on schedule (within a few days, which is remarkable considering we added 150 more pages than originally intentioned) and have our favourite copy editor Rachel Head (formerly Wheeler) who did the first edition of Asterisk: The Future of Telephony who we emphatically enjoyed working with. We&amp;rsquo;re looking forward to it again.&lt;/p&gt;
 
 &lt;p&gt;With the draft done now, and the copy sent off to production to do their magic, I&amp;rsquo;m not quite sure what I&amp;rsquo;m going to do with my mornings! Perhaps I&amp;rsquo;ll start blogging about some dialplan stuff, or coming up with some sort of project to build. We&amp;rsquo;ll see! Any suggestions about things to document on my blog are of course welcome.&lt;/p&gt;
@@ -64,10 +64,10 @@ Leif Madsen.&lt;/p&gt;
     
     <item>
       <title>Asterisk: The Definitive Guide -- Call For Reviewers!</title>
-      <link>http://blog.leifmadsen.com/blog/2011/01/06/asterisk-the-definitive-guide----call-for-reviewers/</link>
+      <link>http://leifmadsen.github.io/hugo_gh_blog/blog/2011/01/06/asterisk-the-definitive-guide----call-for-reviewers/</link>
       <pubDate>Thu, 06 Jan 2011 15:22:55 +0000</pubDate>
       
-      <guid>http://blog.leifmadsen.com/blog/2011/01/06/asterisk-the-definitive-guide----call-for-reviewers/</guid>
+      <guid>http://leifmadsen.github.io/hugo_gh_blog/blog/2011/01/06/asterisk-the-definitive-guide----call-for-reviewers/</guid>
       <description>&lt;p&gt;Here is the text I posted to the asterisk-doc mailing list this morning. You can sign up for asterisk-doc at &lt;a href=&#34;http://lists.digium.com&#34;&gt;http://lists.digium.com&lt;/a&gt; and get involved! We&amp;rsquo;d love to make this the best book on Asterisk ever, and your input can make that true! Our goal is to build a book for, and by, the Asterisk community.&lt;/p&gt;
 
 &lt;p&gt;&amp;ldquo;_Hey all! _&lt;/p&gt;
@@ -99,10 +99,10 @@ Leif Madsen.&lt;/p&gt;
     
     <item>
       <title>Update for Asterisk: The Definitive Guide (3rd Edition)</title>
-      <link>http://blog.leifmadsen.com/blog/2010/12/21/update-for-asterisk-the-definitive-guide-3rd-edition/</link>
+      <link>http://leifmadsen.github.io/hugo_gh_blog/blog/2010/12/21/update-for-asterisk-the-definitive-guide-3rd-edition/</link>
       <pubDate>Tue, 21 Dec 2010 15:54:09 +0000</pubDate>
       
-      <guid>http://blog.leifmadsen.com/blog/2010/12/21/update-for-asterisk-the-definitive-guide-3rd-edition/</guid>
+      <guid>http://leifmadsen.github.io/hugo_gh_blog/blog/2010/12/21/update-for-asterisk-the-definitive-guide-3rd-edition/</guid>
       <description>&lt;p&gt;It&amp;rsquo;s been a while since I&amp;rsquo;ve done an update on my blog, but that&amp;rsquo;s just because we&amp;rsquo;ve been so busy at work on the next edition of the O&amp;rsquo;Reilly published Asterisk book! Asterisk: The Definitive Guide is the next update to the Asterisk: The Future Of Telephony books and is thus the 3rd edition. We&amp;rsquo;ve changed the name for two reasons: 1) This is pretty much a complete re-write of the book based on Asterisk 1.8 and 2) Asterisk is no longer the FUTURE of telephony; it&amp;rsquo;s the present. Asterisk has made it to the mainstream!&lt;/p&gt;
 
 &lt;p&gt;Since the first and second editions of Asterisk: The Future of Telephony, our humble project Asterisk has come a very long way. In the first two books we were trying to convince people of this miraculous little software and that it would one day be huge. We were right. Asterisk is known in many circles and is taking the telecommunications world by storm. To try and keep up with the plethora of new features and functionality added to Asterisk over the last few years, it required us to go back and start the book from near scratch.&lt;/p&gt;
@@ -128,10 +128,10 @@ Leif Madsen, Jim van Meggelen, and Russell Bryant&lt;/p&gt;
     
     <item>
       <title>Update: Asterisk TFoT v3 Progressing Nicely</title>
-      <link>http://blog.leifmadsen.com/blog/2009/11/27/update-asterisk-tfot-v3-progressing-nicely/</link>
+      <link>http://leifmadsen.github.io/hugo_gh_blog/blog/2009/11/27/update-asterisk-tfot-v3-progressing-nicely/</link>
       <pubDate>Fri, 27 Nov 2009 13:27:22 +0000</pubDate>
       
-      <guid>http://blog.leifmadsen.com/blog/2009/11/27/update-asterisk-tfot-v3-progressing-nicely/</guid>
+      <guid>http://leifmadsen.github.io/hugo_gh_blog/blog/2009/11/27/update-asterisk-tfot-v3-progressing-nicely/</guid>
       <description>&lt;p&gt;Jim and I have been working feverishly for the past few days, and the only thing that can cure it is more cowbell! Or probably more accurately, more writing!&lt;/p&gt;
 
 &lt;p&gt;We&amp;rsquo;ve been making some good progress on rewriting a couple of chapters so far, and tweaking a few other ones. We&amp;rsquo;re in the process of finishing up the first drafts of the new installation chapter and the initial configuration chapter, and I&amp;rsquo;ve started work on a chapter about queues. I hope to have about 50% of the queue chapter done by the end of today.&lt;/p&gt;
@@ -146,10 +146,10 @@ Leif Madsen, Jim van Meggelen, and Russell Bryant&lt;/p&gt;
     
     <item>
       <title>Starting work on Asterisk: TFoT 3rd edition</title>
-      <link>http://blog.leifmadsen.com/blog/2009/11/23/starting-work-on-asterisk-tfot-3rd-edition/</link>
+      <link>http://leifmadsen.github.io/hugo_gh_blog/blog/2009/11/23/starting-work-on-asterisk-tfot-3rd-edition/</link>
       <pubDate>Mon, 23 Nov 2009 14:03:35 +0000</pubDate>
       
-      <guid>http://blog.leifmadsen.com/blog/2009/11/23/starting-work-on-asterisk-tfot-3rd-edition/</guid>
+      <guid>http://leifmadsen.github.io/hugo_gh_blog/blog/2009/11/23/starting-work-on-asterisk-tfot-3rd-edition/</guid>
       <description>&lt;p&gt;As many of you know, I&amp;rsquo;m a co-author of &lt;a href=&#34;http://www.oreilly.com/catalog/asterisk&#34;&gt;Asterisk: The Future of Telephony&lt;/a&gt;. While my girlfriend is away in Mexico for a week with the girls, I&amp;rsquo;m going to try and focus a bunch of attention on getting A:TFoT 3rd edition started (which is much overdue).&lt;/p&gt;
 
 &lt;p&gt;If you have any ideas for topics you would like covered in the new edition, or something that wasn&amp;rsquo;t covered as heavily as you wanted in the 1st and 2nd editions, feel free to let me know, and your ideas will be considered! I hope to get the installation chapter written today, and as things progress, we&amp;rsquo;ll get them posted up on the web (likely somewhere on &lt;a href=&#34;http://www.asteriskdocs.org&#34;&gt;http://www.asteriskdocs.org&lt;/a&gt;) for review by the community.&lt;/p&gt;
@@ -162,10 +162,10 @@ Leif Madsen, Jim van Meggelen, and Russell Bryant&lt;/p&gt;
     
     <item>
       <title>Suzanne Bowen Interviews Leif Madsen, Asterisk Rockstar</title>
-      <link>http://blog.leifmadsen.com/blog/2009/07/30/suzanne-bowen-interviews-leif-madsen-asterisk-rockstar/</link>
+      <link>http://leifmadsen.github.io/hugo_gh_blog/blog/2009/07/30/suzanne-bowen-interviews-leif-madsen-asterisk-rockstar/</link>
       <pubDate>Thu, 30 Jul 2009 22:11:17 +0000</pubDate>
       
-      <guid>http://blog.leifmadsen.com/blog/2009/07/30/suzanne-bowen-interviews-leif-madsen-asterisk-rockstar/</guid>
+      <guid>http://leifmadsen.github.io/hugo_gh_blog/blog/2009/07/30/suzanne-bowen-interviews-leif-madsen-asterisk-rockstar/</guid>
       <description>&lt;p&gt;Today I had the privilege to be interviewed by &lt;a href=&#34;http://www.twitter.com/suzannebowen&#34;&gt;Suzanne Bowen&lt;/a&gt; of &lt;a href=&#34;http://www.didx.net&#34;&gt;DIDX&lt;/a&gt;.&lt;/p&gt;
 
 &lt;p&gt;You can find the interview at &lt;a href=&#34;http://www.didx.net/podcast/?p=episode&amp;amp;name=2009-07-30_leifmadsenjul312009.mp3&#34;&gt;http://www.didx.net/podcast/?p=episode&amp;amp;name=2009-07-30_leifmadsenjul312009.mp3&lt;/a&gt;&lt;/p&gt;

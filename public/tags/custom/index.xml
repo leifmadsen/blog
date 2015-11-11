@@ -2,19 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Custom on Asterisk, and other worldly endeavours</title>
-    <link>http://blog.leifmadsen.com/tags/custom/</link>
+    <link>http://leifmadsen.github.io/hugo_gh_blog/tags/custom/</link>
     <description>Recent content in Custom on Asterisk, and other worldly endeavours</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Thu, 22 Dec 2011 14:39:07 +0000</lastBuildDate>
-    <atom:link href="http://blog.leifmadsen.com/tags/custom/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://leifmadsen.github.io/hugo_gh_blog/tags/custom/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>.bashrc trick for git repo and branch information</title>
-      <link>http://blog.leifmadsen.com/blog/2011/12/22/.bashrc-trick-for-git-repo-and-branch-information/</link>
+      <link>http://leifmadsen.github.io/hugo_gh_blog/blog/2011/12/22/.bashrc-trick-for-git-repo-and-branch-information/</link>
       <pubDate>Thu, 22 Dec 2011 14:39:07 +0000</pubDate>
       
-      <guid>http://blog.leifmadsen.com/blog/2011/12/22/.bashrc-trick-for-git-repo-and-branch-information/</guid>
+      <guid>http://leifmadsen.github.io/hugo_gh_blog/blog/2011/12/22/.bashrc-trick-for-git-repo-and-branch-information/</guid>
       <description>&lt;p&gt;The other day I was talking to my friend &lt;a href=&#34;http://russellbryant.net&#34;&gt;Russell Bryant&lt;/a&gt; who pointed me to some .bashrc magic that would show me which branch I was currently working with inside a git repo on my system. I found it incredibly handy and have modified the ANSI colour coding slightly.&lt;/p&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;export PS1=&#39;[\u@\h \[33[0;36m\]\W$(__git_ps1 &amp;quot;\[33[0m\]\[33[0;33m\](%s)&amp;quot;)\[33[0m\]]\$ &#39;

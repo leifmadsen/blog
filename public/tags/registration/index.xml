@@ -2,19 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Registration on Asterisk, and other worldly endeavours</title>
-    <link>http://blog.leifmadsen.com/tags/registration/</link>
+    <link>http://leifmadsen.github.io/hugo_gh_blog/tags/registration/</link>
     <description>Recent content in Registration on Asterisk, and other worldly endeavours</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 29 Jul 2009 16:34:49 +0000</lastBuildDate>
-    <atom:link href="http://blog.leifmadsen.com/tags/registration/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://leifmadsen.github.io/hugo_gh_blog/tags/registration/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Load testing SIP registrations with SIPp</title>
-      <link>http://blog.leifmadsen.com/blog/2009/07/29/load-testing-sip-registrations-with-sipp/</link>
+      <link>http://leifmadsen.github.io/hugo_gh_blog/blog/2009/07/29/load-testing-sip-registrations-with-sipp/</link>
       <pubDate>Wed, 29 Jul 2009 16:34:49 +0000</pubDate>
       
-      <guid>http://blog.leifmadsen.com/blog/2009/07/29/load-testing-sip-registrations-with-sipp/</guid>
+      <guid>http://leifmadsen.github.io/hugo_gh_blog/blog/2009/07/29/load-testing-sip-registrations-with-sipp/</guid>
       <description>&lt;p&gt;Today I had a need to go and load a bunch of registrations into Asterisk for a bug I was working on. Since I&amp;rsquo;ve had this need a couple of times now, and I keep going and having to redevelop it, I think I&amp;rsquo;ll just write about it here, and then when I need it again, I can just look it up. Maybe this will be useful for someone else as well.&lt;/p&gt;
 
 &lt;p&gt;First of all, this is all based on the post I found on the SipX wiki. You can read the page I based this all off of &lt;a href=&#34;http://sipx-wiki.calivia.com/index.php/Using_SIPp_to_run_performance_tests&#34;&gt;here&lt;/a&gt;. Lots of good info there. All I&amp;rsquo;m really adding of value is the PHP scripts I used to generate the peers in the database, and the register_client.csv file.&lt;/p&gt;

@@ -2,19 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Ssh Add on Asterisk, and other worldly endeavours</title>
-    <link>http://blog.leifmadsen.com/tags/ssh-add/</link>
+    <link>http://leifmadsen.github.io/hugo_gh_blog/tags/ssh-add/</link>
     <description>Recent content in Ssh Add on Asterisk, and other worldly endeavours</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Thu, 19 Jul 2012 15:03:05 +0000</lastBuildDate>
-    <atom:link href="http://blog.leifmadsen.com/tags/ssh-add/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://leifmadsen.github.io/hugo_gh_blog/tags/ssh-add/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>bash creating files named &#39;1&#39; everywhere!</title>
-      <link>http://blog.leifmadsen.com/blog/2012/07/19/bash-creating-files-named-1-everywhere/</link>
+      <link>http://leifmadsen.github.io/hugo_gh_blog/blog/2012/07/19/bash-creating-files-named-1-everywhere/</link>
       <pubDate>Thu, 19 Jul 2012 15:03:05 +0000</pubDate>
       
-      <guid>http://blog.leifmadsen.com/blog/2012/07/19/bash-creating-files-named-1-everywhere/</guid>
+      <guid>http://leifmadsen.github.io/hugo_gh_blog/blog/2012/07/19/bash-creating-files-named-1-everywhere/</guid>
       <description>&lt;p&gt;So I ran into something kind of stupid today :)  Adding a little note for anyone who might run into a similar instance.&lt;/p&gt;
 
 &lt;p&gt;I have some &lt;code&gt;ssh-add&lt;/code&gt; stuff that gets run in my &lt;code&gt;.bashrc&lt;/code&gt; file, but when I was outputting it, I was doing:&lt;/p&gt;

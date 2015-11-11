@@ -2,19 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Conferences on Asterisk, and other worldly endeavours</title>
-    <link>http://blog.leifmadsen.com/tags/conferences/</link>
+    <link>http://leifmadsen.github.io/hugo_gh_blog/tags/conferences/</link>
     <description>Recent content in Conferences on Asterisk, and other worldly endeavours</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 27 Oct 2010 12:08:06 +0000</lastBuildDate>
-    <atom:link href="http://blog.leifmadsen.com/tags/conferences/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://leifmadsen.github.io/hugo_gh_blog/tags/conferences/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>AstriCon 2010 and my talks!</title>
-      <link>http://blog.leifmadsen.com/blog/2010/10/27/astricon-2010-and-my-talks/</link>
+      <link>http://leifmadsen.github.io/hugo_gh_blog/blog/2010/10/27/astricon-2010-and-my-talks/</link>
       <pubDate>Wed, 27 Oct 2010 12:08:06 +0000</pubDate>
       
-      <guid>http://blog.leifmadsen.com/blog/2010/10/27/astricon-2010-and-my-talks/</guid>
+      <guid>http://leifmadsen.github.io/hugo_gh_blog/blog/2010/10/27/astricon-2010-and-my-talks/</guid>
       <description>&lt;p&gt;&lt;em&gt;NOTE: My presentations are available on my website at &lt;a href=&#34;http://leifmadsen.com&#34;&gt;http://leifmadsen.com&lt;/a&gt; under the Presentations tab.&lt;/em&gt;&lt;/p&gt;
 
 &lt;p&gt;Hey all! I&amp;rsquo;m at AstriCon 2010 in Maryland and it&amp;rsquo;s going great so far! Russell Bryant and I spoke with several keen users and developers last night in the Code Zone at a fairly late hour, which shows just how dedicated Asterisk users are. There was pretty much no one else around and we had a room of about 20-30 people just having a great discussion about Asterisk development. Hopefully more of that over the next few days!&lt;/p&gt;
@@ -33,10 +33,10 @@
     
     <item>
       <title>Speaking at AstriCon 2010! Come see my talk! :)</title>
-      <link>http://blog.leifmadsen.com/blog/2010/08/03/speaking-at-astricon-2010-come-see-my-talk-/</link>
+      <link>http://leifmadsen.github.io/hugo_gh_blog/blog/2010/08/03/speaking-at-astricon-2010-come-see-my-talk-/</link>
       <pubDate>Tue, 03 Aug 2010 19:12:28 +0000</pubDate>
       
-      <guid>http://blog.leifmadsen.com/blog/2010/08/03/speaking-at-astricon-2010-come-see-my-talk-/</guid>
+      <guid>http://leifmadsen.github.io/hugo_gh_blog/blog/2010/08/03/speaking-at-astricon-2010-come-see-my-talk-/</guid>
       <description>&lt;p&gt;Hey everyone!&lt;/p&gt;
 
 &lt;p&gt;Sorry for the lack of updates recently. We&amp;rsquo;ve been hard at work on the next version of the Asterisk book, which is shaping up to be the best book ever written on Asterisk. The scope and detail we&amp;rsquo;re working towards is ambitious, but will be very much worth it. Of course the book will be focused on the upcoming Asterisk 1.8 releases (which was recently &lt;a href=&#34;http://www.russellbryant.net/blog/2010/07/23/asterisk-1-8-0-beta1-now-available/&#34;&gt;branched&lt;/a&gt; and betas are now available for testing!).&lt;/p&gt;

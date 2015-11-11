@@ -2,19 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Installation on Asterisk, and other worldly endeavours</title>
-    <link>http://blog.leifmadsen.com/tags/installation/</link>
+    <link>http://leifmadsen.github.io/hugo_gh_blog/tags/installation/</link>
     <description>Recent content in Installation on Asterisk, and other worldly endeavours</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Thu, 06 Jan 2011 15:22:55 +0000</lastBuildDate>
-    <atom:link href="http://blog.leifmadsen.com/tags/installation/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://leifmadsen.github.io/hugo_gh_blog/tags/installation/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Asterisk: The Definitive Guide -- Call For Reviewers!</title>
-      <link>http://blog.leifmadsen.com/blog/2011/01/06/asterisk-the-definitive-guide----call-for-reviewers/</link>
+      <link>http://leifmadsen.github.io/hugo_gh_blog/blog/2011/01/06/asterisk-the-definitive-guide----call-for-reviewers/</link>
       <pubDate>Thu, 06 Jan 2011 15:22:55 +0000</pubDate>
       
-      <guid>http://blog.leifmadsen.com/blog/2011/01/06/asterisk-the-definitive-guide----call-for-reviewers/</guid>
+      <guid>http://leifmadsen.github.io/hugo_gh_blog/blog/2011/01/06/asterisk-the-definitive-guide----call-for-reviewers/</guid>
       <description>&lt;p&gt;Here is the text I posted to the asterisk-doc mailing list this morning. You can sign up for asterisk-doc at &lt;a href=&#34;http://lists.digium.com&#34;&gt;http://lists.digium.com&lt;/a&gt; and get involved! We&amp;rsquo;d love to make this the best book on Asterisk ever, and your input can make that true! Our goal is to build a book for, and by, the Asterisk community.&lt;/p&gt;
 
 &lt;p&gt;&amp;ldquo;_Hey all! _&lt;/p&gt;
