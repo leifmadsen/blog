@@ -6,36 +6,8 @@
     <description>Recent content in Asterisk on Asterisk, and other worldly endeavours</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 30 Oct 2015 20:30:27 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 16 May 2013 13:31:46 +0000</lastBuildDate>
     <atom:link href="http://leifmadsen.github.io/hugo_gh_blog/tags/asterisk/index.xml" rel="self" type="application/rss+xml" />
-    
-    <item>
-      <title>Docker container results in x509: failed to load system roots and no roots provided</title>
-      <link>http://leifmadsen.github.io/hugo_gh_blog/blog/2015/10/30/docker-container-results-in-x509-failed-to-load-system-roots-and-no-roots-provided/</link>
-      <pubDate>Fri, 30 Oct 2015 20:30:27 +0000</pubDate>
-      
-      <guid>http://leifmadsen.github.io/hugo_gh_blog/blog/2015/10/30/docker-container-results-in-x509-failed-to-load-system-roots-and-no-roots-provided/</guid>
-      <description>&lt;p&gt;We have a small system running in AWS as a CentOS 7 image. It has a few containers that we&amp;rsquo;re using to host a few Golang API proxies. We migrated a customers API proxy that was running on the local VM into a container, and spun it up. Upon testing, we ran into the following error:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;x509: failed to load system roots and no roots provided
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;We get that failure when trying to connect to an HTTPS endpoint (remote API that we&amp;rsquo;re proxying to Asterisk).&lt;/p&gt;
-
-&lt;p&gt;Figured it had to do with the fact we were using a scratch disk to build the container image, and that there were no certs loaded. Did some Googling and found some people with similar problems, but their solutions didn&amp;rsquo;t work for us on our CentOS 7 host system.&lt;/p&gt;
-
-&lt;p&gt;Then I thought maybe there was some issue with following a symlink as the source since we were loading in the &lt;code&gt;ca-bundle.crt&lt;/code&gt; file as a volume. I didn&amp;rsquo;t test enough to determine if that was the issue (it probably wasn&amp;rsquo;t), but this post gave me a hint:&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://github.com/docker/docker/issues/5157#issuecomment-69325677&#34;&gt;https://github.com/docker/docker/issues/5157#issuecomment-69325677&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;So we did the following:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;docker run -d -p 8085:8085 -v /etc/pki/ca-trust/extracted/pem/tls-ca-bundle.pem:/etc/ssl/certs/ca-certificates.crt [etc...]
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;After linking that file and mounting it in the container, all was well. I suspect it&amp;rsquo;s the path to the &lt;code&gt;ca-certificates.crt&lt;/code&gt; that was the real trick.&lt;/p&gt;
-</description>
-    </item>
     
     <item>
       <title>Asterisk: The Definitive Guide 4th Edition goes to print</title>
@@ -431,6 +403,18 @@ Leif Madsen.&lt;/p&gt;
       <description>&lt;p&gt;Just a quick update that the Asterisk Cookbook is complete! We&amp;rsquo;ll be releasing it under a Creative Commons license (just like Asterisk: The Definitive Guide) again. It&amp;rsquo;ll be a 24 recipe e-book right now, with it growing over time and eventually becoming a full print edition once the size warrants it. Of course if you purchase now you help spur on additional incentive to continue making it larger. I&amp;rsquo;ve been told that you also continue to receive updates automatically as the book grows and corrections are made (which sounds pretty cool!).&lt;/p&gt;
 
 &lt;p&gt;More information about the book is here: &lt;a href=&#34;http://oreilly.com/catalog/0636920018551&#34;&gt;http://oreilly.com/catalog/0636920018551&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Debugging the Asterisk Dialplan with Verbose()</title>
+      <link>http://leifmadsen.github.io/hugo_gh_blog/blog/2011/03/04/debugging-the-asterisk-dialplan-with-verbose/</link>
+      <pubDate>Fri, 04 Mar 2011 14:16:16 +0000</pubDate>
+      
+      <guid>http://leifmadsen.github.io/hugo_gh_blog/blog/2011/03/04/debugging-the-asterisk-dialplan-with-verbose/</guid>
+      <description>&lt;p&gt;In case you missed it, &lt;a href=&#34;http://www.russellbryant.net&#34;&gt;Russell Bryant&lt;/a&gt; wrote a blog post on &lt;a href=&#34;http://www.russellbryant.net/blog/2011/03/04/debugging-the-asterisk-dialplan-with-verbose/&#34;&gt;debugging the Asterisk dialplan with the Verbose() application&lt;/a&gt;. This is one of the recipes that will be features in the upcoming &lt;a href=&#34;http://oreilly.com/catalog/0636920018551/&#34;&gt;Asterisk Cookbook&lt;/a&gt; that we&amp;rsquo;re writing, and hoping to have done by the end of March!&lt;/p&gt;
+
+&lt;p&gt;(In case you&amp;rsquo;ve missed all the cool stuff lately, the Asterisk Cookbook will also be released under the same Creative Commons license as the previous Asterisk books. We&amp;rsquo;re also making use of the &lt;a href=&#34;http://ofps.oreilly.com&#34;&gt;Open Feedback Publishing System (OFPS)&lt;/a&gt; again. You can help review the text and test the recipes at &lt;a href=&#34;http://ofps.oreilly.com/titles/9781449303822/&#34;&gt;http://ofps.oreilly.com/titles/9781449303822/&lt;/a&gt;.)&lt;/p&gt;
 </description>
     </item>
     
