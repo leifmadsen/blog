@@ -1,26 +1,15 @@
----
-author: leifmadsen
-comments: true
-date: 2015-10-30 20:30:27+00:00
-excerpt: How to resolve x509 failed to load system roots in a Docker container when
-  connecting to an HTTPS fronted API.
-layout: post
-slug: docker-container-results-in-x509-failed-to-load-system-roots-and-no-roots-provided
-title: 'Docker container results in x509: failed to load system roots and no roots
++++
+author = "leifmadsen"
+date = "2015-10-30 20:30:27+00:00"
+excerpt = "How to resolve x509 failed to load system roots in a Docker container when
+  connecting to an HTTPS fronted API.""
+slug = "docker-container-results-in-x509-failed-to-load-system-roots-and-no-roots-provided"
+title = 'Docker container results in x509: failed to load system roots and no roots
   provided'
-wordpress_id: 538
-categories:
-- Asterisk
-- DevOps
-- Docker
-tags:
-- api
-- Asterisk
-- containers
-- docker
-- https
-- proxy
----
+categories = ["Asterisk","DevOps","Docker"]
+keywords = ["api", "Asterisk","containers","docker","https","proxy"]
+
++++
 
 We have a small system running in AWS as a CentOS 7 image. It has a few containers that we're using to host a few Golang API proxies. We migrated a customers API proxy that was running on the local VM into a container, and spun it up. Upon testing, we ran into the following error:
 
