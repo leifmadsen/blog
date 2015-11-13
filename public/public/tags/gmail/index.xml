@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Gmail on Asterisk, and other worldly endeavours</title>
+    <link>http://blog.leifmadsen.com/tags/gmail/</link>
+    <description>Recent content in Gmail on Asterisk, and other worldly endeavours</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 22 Nov 2011 22:17:18 +0000</lastBuildDate>
+    <atom:link href="http://blog.leifmadsen.com/tags/gmail/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Relaying SMTP via Gmail (or Google Apps) Using Postfix</title>
+      <link>http://blog.leifmadsen.com/blog/2011/11/22/relaying-smtp-via-gmail-or-google-apps-using-postfix/</link>
+      <pubDate>Tue, 22 Nov 2011 22:17:18 +0000</pubDate>
+      
+      <guid>http://blog.leifmadsen.com/blog/2011/11/22/relaying-smtp-via-gmail-or-google-apps-using-postfix/</guid>
+      <description>&lt;p&gt;Today I had the need to start relaying mail through my Google Apps account since &lt;del&gt;Super-Evil-Bastard-ITSP&lt;/del&gt;Rogers blocks sending email (it&amp;rsquo;s probably a good thing, however it&amp;rsquo;s quite annoying when running some services from home).&lt;/p&gt;
+
+&lt;p&gt;Found this article while Googling, and it worked great first try. I like when things are this easy.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://www.zulius.com/how-to/set-up-postfix-with-a-remote-smtp-relay-host/&#34;&gt;http://www.zulius.com/how-to/set-up-postfix-with-a-remote-smtp-relay-host/&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Asterisk IMAP and Gmail</title>
+      <link>http://blog.leifmadsen.com/blog/2010/09/20/asterisk-imap-and-gmail/</link>
+      <pubDate>Mon, 20 Sep 2010 15:37:44 +0000</pubDate>
+      
+      <guid>http://blog.leifmadsen.com/blog/2010/09/20/asterisk-imap-and-gmail/</guid>
+      <description>&lt;p&gt;Today I was working on the next edition of the Asterisk book and wanted to see if I could get Asterisk IMAP voicemail support to work with Gmail. I had tried doing this a few times in the past without success, but since I had spent some time documenting and testing against Dovecot last week for another client and gotten everything working, I figured I had a good base to start trying to connect to the Gmail IMAP servers.&lt;/p&gt;
+
+&lt;p&gt;At first I was having problems with getting Asterisk to connect to the server as it would keep timing out when trying to connect to the Gmail IMAP servers on port 993. I looked at the instructions for connecting and double checked, and I thought I had everything right. I also made sure my IMAP library was compiled with OpenSSL support since Gmail requires you to connect via SSL.&lt;/p&gt;
+
+&lt;p&gt;After reading a few emails and doing more testing, I finally stumbled upon the missing link! Find below the snippet of voicemail.conf configuration that finally allowed me to connect to the Gmail IMAP system with Asterisk IMAP voicemail support.&lt;/p&gt;
+
+&lt;p&gt;Note: Be aware that there is a mixture of commas and pipes in the line where we&amp;rsquo;ve setup mailbox 100. This is not a typo!&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;; voicemail.conf
+imapserver=imap.gmail.com
+imapport=993
+imapflags=ssl
+
+pollmailboxes=yes
+pollfreq=30
+
+[default]
+100 =&amp;gt; 100,Leif Madsen,,,attach=no|imapuser=leif.madsen@MYDOMAIN_GOOGLE_APPS.com|imappassword=my_secret_password
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;I was using this with Google Apps for one of the domains we bought for working on the book, so the login is the full email address. The password is what you use for logging into the Gmail interface. Also, you need to make sure you&amp;rsquo;ve enabled IMAP support in the web interface before trying this or else your connection won&amp;rsquo;t work.&lt;/p&gt;
+
+&lt;p&gt;More information including step-by-step instructions on compiling IMAP support into Asterisk and configuration examples for Dovecot and Gmail will be in the upcoming book, but I was so excited to get this working today that I thought I&amp;rsquo;d share the secret sauce at least so you don&amp;rsquo;t have to wait for the whole recipe.&lt;/p&gt;
+
+&lt;p&gt;Connecting to Gmail was not as quick as connecting to Dovecot on a remote server I was working with. I imagine this is due to the high load Google has to deal with, so while it works, there may be some minor delays when retrieving and leaving voice messages, but nothing that caused it to be unusable.&lt;/p&gt;
+
+&lt;p&gt;Note: The KEY to making it work was the &lt;code&gt;imapflags=ssl&lt;/code&gt; part. Without that you won&amp;rsquo;t get connected and will have problems with timeouts and such going on with Asterisk. Once I enabled the &lt;code&gt;ssl&lt;/code&gt; flag I was golden.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

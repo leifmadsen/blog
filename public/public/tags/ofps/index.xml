@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Ofps on Asterisk, and other worldly endeavours</title>
+    <link>http://blog.leifmadsen.com/tags/ofps/</link>
+    <description>Recent content in Ofps on Asterisk, and other worldly endeavours</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 04 Mar 2011 14:16:16 +0000</lastBuildDate>
+    <atom:link href="http://blog.leifmadsen.com/tags/ofps/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Debugging the Asterisk Dialplan with Verbose()</title>
+      <link>http://blog.leifmadsen.com/blog/2011/03/04/debugging-the-asterisk-dialplan-with-verbose/</link>
+      <pubDate>Fri, 04 Mar 2011 14:16:16 +0000</pubDate>
+      
+      <guid>http://blog.leifmadsen.com/blog/2011/03/04/debugging-the-asterisk-dialplan-with-verbose/</guid>
+      <description>&lt;p&gt;In case you missed it, &lt;a href=&#34;http://www.russellbryant.net&#34;&gt;Russell Bryant&lt;/a&gt; wrote a blog post on &lt;a href=&#34;http://www.russellbryant.net/blog/2011/03/04/debugging-the-asterisk-dialplan-with-verbose/&#34;&gt;debugging the Asterisk dialplan with the Verbose() application&lt;/a&gt;. This is one of the recipes that will be features in the upcoming &lt;a href=&#34;http://oreilly.com/catalog/0636920018551/&#34;&gt;Asterisk Cookbook&lt;/a&gt; that we&amp;rsquo;re writing, and hoping to have done by the end of March!&lt;/p&gt;
+
+&lt;p&gt;(In case you&amp;rsquo;ve missed all the cool stuff lately, the Asterisk Cookbook will also be released under the same Creative Commons license as the previous Asterisk books. We&amp;rsquo;re also making use of the &lt;a href=&#34;http://ofps.oreilly.com&#34;&gt;Open Feedback Publishing System (OFPS)&lt;/a&gt; again. You can help review the text and test the recipes at &lt;a href=&#34;http://ofps.oreilly.com/titles/9781449303822/&#34;&gt;http://ofps.oreilly.com/titles/9781449303822/&lt;/a&gt;.)&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Asterisk Cookbook Is On! (We Think :))</title>
+      <link>http://blog.leifmadsen.com/blog/2011/01/27/asterisk-cookbook-is-on-we-think-/</link>
+      <pubDate>Thu, 27 Jan 2011 14:33:00 +0000</pubDate>
+      
+      <guid>http://blog.leifmadsen.com/blog/2011/01/27/asterisk-cookbook-is-on-we-think-/</guid>
+      <description>&lt;p&gt;After finishing the first draft of &lt;a href=&#34;http://oreilly.com/catalog/9780596517342&#34;&gt;Asterisk: The Definitive Guide (3rd Edition)&lt;/a&gt;, I&amp;rsquo;ve been a bit antsy with wanting to do some more writing. After about a week of a break (i.e. sleeping in past 7am for the first time in nearly a year), &lt;a href=&#34;http://www.russellbryant.net/blog/&#34;&gt;Russell Bryant&lt;/a&gt; and I have decided to team up on delivering the long awaited Asterisk Cookbook.&lt;/p&gt;
+
+&lt;p&gt;To start off with, we&amp;rsquo;ll be writing a short, 80-100 page eBook that will be distributed by O&amp;rsquo;Reilly in all the formats they support (&lt;a href=&#34;http://oreilly.com/ebooks/&#34;&gt;http://oreilly.com/ebooks/&lt;/a&gt;). The book is scheduled to have about 25 recipes, and should be written in the next 30-40 days, which would mean it should be available shortly after&lt;a href=&#34;http://oreilly.com/catalog/9780596517342&#34;&gt; Asterisk: The Definitive Guide&lt;/a&gt; is released (which means you can bundle them together! :)).&lt;/p&gt;
+
+&lt;p&gt;We just finished the outline this morning and sent it off to our editor Mike Loukides. Unless O&amp;rsquo;Reilly is already booked up (pun intended?) for the next few months with production and other books, we should be starting work on this as early as next week. If all goes well after we&amp;rsquo;re done the eBook, we&amp;rsquo;ll continue expanding it with the goal of eventually releasing it as a print edition.&lt;/p&gt;
+
+&lt;p&gt;As a side note, we&amp;rsquo;re still accepting reviews from people for Asterisk: The Definitive Guide. We have to return all edits and changes to O&amp;rsquo;Reilly no later than February 14th, so that means you still have a couple of weeks to get some reviews and testing done! If you could make sure you have your reviews done before February 11, 2011 that would help us out tremendously as we&amp;rsquo;ll be working on getting all the edits we need done in an email to O&amp;rsquo;Reilly by Monday, February 14th. You can help out at &lt;a href=&#34;http://ofps.oreilly.com/titles/9780596517342/&#34;&gt;http://ofps.oreilly.com/titles/9780596517342/&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Thanks to everyone who has contributed thus far!&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Asterisk: The Definitive Guide, First Draft Complete!</title>
+      <link>http://blog.leifmadsen.com/blog/2011/01/12/asterisk-the-definitive-guide-first-draft-complete/</link>
+      <pubDate>Wed, 12 Jan 2011 01:30:09 +0000</pubDate>
+      
+      <guid>http://blog.leifmadsen.com/blog/2011/01/12/asterisk-the-definitive-guide-first-draft-complete/</guid>
+      <description>&lt;p&gt;Today we marked the finishing of Asterisk: The Definitive Guide (3rd Edition) by sending the first draft off to the O&amp;rsquo;Reilly production team. We finished nearly on schedule (within a few days, which is remarkable considering we added 150 more pages than originally intentioned) and have our favourite copy editor Rachel Head (formerly Wheeler) who did the first edition of Asterisk: The Future of Telephony who we emphatically enjoyed working with. We&amp;rsquo;re looking forward to it again.&lt;/p&gt;
+
+&lt;p&gt;With the draft done now, and the copy sent off to production to do their magic, I&amp;rsquo;m not quite sure what I&amp;rsquo;m going to do with my mornings! Perhaps I&amp;rsquo;ll start blogging about some dialplan stuff, or coming up with some sort of project to build. We&amp;rsquo;ll see! Any suggestions about things to document on my blog are of course welcome.&lt;/p&gt;
+
+&lt;p&gt;Don&amp;rsquo;t stop posting your comments and suggestions to the OFPS site though! (&lt;a href=&#34;http://ofps.oreilly.com&#34;&gt;http://ofps.oreilly.com&lt;/a&gt;) When the O&amp;rsquo;Reilly production team is done with the book in a few weeks, we&amp;rsquo;re going to have time to do additional modifications and editing, so your comments will get addressed then. It&amp;rsquo;s looking like the estimated shipping date of books for March is realistic at this point.&lt;/p&gt;
+
+&lt;p&gt;Thanks for all the support the community has shown us this far. This is going to be by far the best book on Asterisk to date.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Update for Asterisk: The Definitive Guide (3rd Edition)</title>
+      <link>http://blog.leifmadsen.com/blog/2010/12/21/update-for-asterisk-the-definitive-guide-3rd-edition/</link>
+      <pubDate>Tue, 21 Dec 2010 15:54:09 +0000</pubDate>
+      
+      <guid>http://blog.leifmadsen.com/blog/2010/12/21/update-for-asterisk-the-definitive-guide-3rd-edition/</guid>
+      <description>&lt;p&gt;It&amp;rsquo;s been a while since I&amp;rsquo;ve done an update on my blog, but that&amp;rsquo;s just because we&amp;rsquo;ve been so busy at work on the next edition of the O&amp;rsquo;Reilly published Asterisk book! Asterisk: The Definitive Guide is the next update to the Asterisk: The Future Of Telephony books and is thus the 3rd edition. We&amp;rsquo;ve changed the name for two reasons: 1) This is pretty much a complete re-write of the book based on Asterisk 1.8 and 2) Asterisk is no longer the FUTURE of telephony; it&amp;rsquo;s the present. Asterisk has made it to the mainstream!&lt;/p&gt;
+
+&lt;p&gt;Since the first and second editions of Asterisk: The Future of Telephony, our humble project Asterisk has come a very long way. In the first two books we were trying to convince people of this miraculous little software and that it would one day be huge. We were right. Asterisk is known in many circles and is taking the telecommunications world by storm. To try and keep up with the plethora of new features and functionality added to Asterisk over the last few years, it required us to go back and start the book from near scratch.&lt;/p&gt;
+
+&lt;p&gt;We&amp;rsquo;ve learned a lot about best practices and what to do and what not to do with Asterisk over the last few years, so we&amp;rsquo;ve started incorporating dialplan style into the book. We&amp;rsquo;ve tried to make things a lot more consistent in terms of what you&amp;rsquo;ll see in the dialplan examples, and they&amp;rsquo;ll be a lot more fleshed out. Some of the dialplan comes from projects we&amp;rsquo;ve worked on previously, or at the very least uses the fundamental skills we learned while working on those projects, so the dialplan examples you see should be a lot closer to production ready.&lt;/p&gt;
+
+&lt;p&gt;The 2nd edition of the Asterisk book ran around 500+ pages, with about 200 pages being appendices. We&amp;rsquo;ve decided to do away with the appendices in the printed book since so much of that work is being maintained by the Asterisk project directly now. With the new XML documentation being directly embedded in the Asterisk source, it&amp;rsquo;s possible for a website to exist which simply pulls and updates most of the information we had in the appendices and display the latest version online. This is where the new Asterisk Wiki comes into play (available at &lt;a href=&#34;http://wiki.asterisk.org&#34;&gt;http://wiki.asterisk.org&lt;/a&gt;).&lt;/p&gt;
+
+&lt;p&gt;While we lost about 200 pages of appendices, that doesn&amp;rsquo;t mean the book is any lighter on content. We&amp;rsquo;ve been building PDFs of the book on a pretty consistent bases, and we&amp;rsquo;re currently up to over 600+ pages of content. That means the book is nearly twice as heavy on content as previous editions (and we&amp;rsquo;re not even done yet, and the production team hasn&amp;rsquo;t gotten their hands on it. I can honestly say I expect the book to be over 650 pages by the time it is all said and done).&lt;/p&gt;
+
+&lt;p&gt;My vote was simply to call the new book &amp;lsquo;Asterisk&amp;rsquo; without the &amp;lsquo;The Definitive Guide&amp;rsquo; moniker, but I lost that battle, so I pushed hard and said, &amp;ldquo;if the book doesn&amp;rsquo;t live up to that name, we&amp;rsquo;re going to get castrated&amp;rdquo; &amp;ndash; and I think we&amp;rsquo;ve done that. The areas we cover and the depth of that coverage I don&amp;rsquo;t think has ever been brought together in a single book. And there are definitely tidbits of information that have never been documented, because we only found them through code review (thanks Russell! :)).&lt;/p&gt;
+
+&lt;p&gt;The book will be released under a Creative Commons license just like the last two editions, so nothing has changed there. What has changed is the way in which we&amp;rsquo;re having the book reviewed. We&amp;rsquo;re using the new Open Feedback Publishing System (OFPS) by O&amp;rsquo;Reilly to do a public review of the book. You can help us review the book as we write it by visiting &lt;a href=&#34;http://ofps.oreilly.com&#34;&gt;http://ofps.oreilly.com&lt;/a&gt;. The first link is our book (Asterisk: The Definitive Guide) and you can also see some of the other books that are using it (we were the first to use the new edition of this software, and since then other authors have come on board, which is really quite cool to see). We try and update the book at least once a week, so keep checking back to see if your comments have been addressed, or simply check out the new content available.&lt;/p&gt;
+
+&lt;p&gt;Our goal is to get the first draft of the book completed by January 1st, and we&amp;rsquo;re doing pretty well with that goal being attainable. Beyond that, we&amp;rsquo;ll have about a week or two for reviewing the content, fixing any errata or suggestions from the community, and general editing review. Once that is done, the book will be sent off to production for review where they will update our graphics and do page layouts. After that, the book will be sent to the printers and will start to be distributed! People should start to see books arriving sometime in March 2011.&lt;/p&gt;
+
+&lt;p&gt;(For all of those who already pre-purchased books, thank you! If you&amp;rsquo;re interested in pre-ordering the book and making sure you&amp;rsquo;re one of the first to get a printed copy, see &lt;a href=&#34;http://oreilly.com/catalog/9780596517342/&#34;&gt;http://oreilly.com/catalog/9780596517342/&lt;/a&gt;)&lt;/p&gt;
+
+&lt;p&gt;Thanks!
+Leif Madsen, Jim van Meggelen, and Russell Bryant&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

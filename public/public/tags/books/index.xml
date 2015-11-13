@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Books on Asterisk, and other worldly endeavours</title>
+    <link>http://blog.leifmadsen.com/tags/books/</link>
+    <description>Recent content in Books on Asterisk, and other worldly endeavours</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 25 Mar 2011 13:40:31 +0000</lastBuildDate>
+    <atom:link href="http://blog.leifmadsen.com/tags/books/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Asterisk Cookbook Is Done!</title>
+      <link>http://blog.leifmadsen.com/blog/2011/03/25/asterisk-cookbook-is-done/</link>
+      <pubDate>Fri, 25 Mar 2011 13:40:31 +0000</pubDate>
+      
+      <guid>http://blog.leifmadsen.com/blog/2011/03/25/asterisk-cookbook-is-done/</guid>
+      <description>&lt;p&gt;Just a quick update that the Asterisk Cookbook is complete! We&amp;rsquo;ll be releasing it under a Creative Commons license (just like Asterisk: The Definitive Guide) again. It&amp;rsquo;ll be a 24 recipe e-book right now, with it growing over time and eventually becoming a full print edition once the size warrants it. Of course if you purchase now you help spur on additional incentive to continue making it larger. I&amp;rsquo;ve been told that you also continue to receive updates automatically as the book grows and corrections are made (which sounds pretty cool!).&lt;/p&gt;
+
+&lt;p&gt;More information about the book is here: &lt;a href=&#34;http://oreilly.com/catalog/0636920018551&#34;&gt;http://oreilly.com/catalog/0636920018551&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Asterisk Cookbook Is On! (We Think :))</title>
+      <link>http://blog.leifmadsen.com/blog/2011/01/27/asterisk-cookbook-is-on-we-think-/</link>
+      <pubDate>Thu, 27 Jan 2011 14:33:00 +0000</pubDate>
+      
+      <guid>http://blog.leifmadsen.com/blog/2011/01/27/asterisk-cookbook-is-on-we-think-/</guid>
+      <description>&lt;p&gt;After finishing the first draft of &lt;a href=&#34;http://oreilly.com/catalog/9780596517342&#34;&gt;Asterisk: The Definitive Guide (3rd Edition)&lt;/a&gt;, I&amp;rsquo;ve been a bit antsy with wanting to do some more writing. After about a week of a break (i.e. sleeping in past 7am for the first time in nearly a year), &lt;a href=&#34;http://www.russellbryant.net/blog/&#34;&gt;Russell Bryant&lt;/a&gt; and I have decided to team up on delivering the long awaited Asterisk Cookbook.&lt;/p&gt;
+
+&lt;p&gt;To start off with, we&amp;rsquo;ll be writing a short, 80-100 page eBook that will be distributed by O&amp;rsquo;Reilly in all the formats they support (&lt;a href=&#34;http://oreilly.com/ebooks/&#34;&gt;http://oreilly.com/ebooks/&lt;/a&gt;). The book is scheduled to have about 25 recipes, and should be written in the next 30-40 days, which would mean it should be available shortly after&lt;a href=&#34;http://oreilly.com/catalog/9780596517342&#34;&gt; Asterisk: The Definitive Guide&lt;/a&gt; is released (which means you can bundle them together! :)).&lt;/p&gt;
+
+&lt;p&gt;We just finished the outline this morning and sent it off to our editor Mike Loukides. Unless O&amp;rsquo;Reilly is already booked up (pun intended?) for the next few months with production and other books, we should be starting work on this as early as next week. If all goes well after we&amp;rsquo;re done the eBook, we&amp;rsquo;ll continue expanding it with the goal of eventually releasing it as a print edition.&lt;/p&gt;
+
+&lt;p&gt;As a side note, we&amp;rsquo;re still accepting reviews from people for Asterisk: The Definitive Guide. We have to return all edits and changes to O&amp;rsquo;Reilly no later than February 14th, so that means you still have a couple of weeks to get some reviews and testing done! If you could make sure you have your reviews done before February 11, 2011 that would help us out tremendously as we&amp;rsquo;ll be working on getting all the edits we need done in an email to O&amp;rsquo;Reilly by Monday, February 14th. You can help out at &lt;a href=&#34;http://ofps.oreilly.com/titles/9780596517342/&#34;&gt;http://ofps.oreilly.com/titles/9780596517342/&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Thanks to everyone who has contributed thus far!&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
