@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Load Testing on Asterisk, and other worldly endeavours</title>
+    <link>http://blog.leifmadsen.com/tags/load-testing/</link>
+    <description>Recent content in Load Testing on Asterisk, and other worldly endeavours</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 29 Jul 2009 16:34:49 +0000</lastBuildDate>
+    <atom:link href="http://blog.leifmadsen.com/tags/load-testing/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Load testing SIP registrations with SIPp</title>
+      <link>http://blog.leifmadsen.com/blog/2009/07/29/load-testing-sip-registrations-with-sipp/</link>
+      <pubDate>Wed, 29 Jul 2009 16:34:49 +0000</pubDate>
+      
+      <guid>http://blog.leifmadsen.com/blog/2009/07/29/load-testing-sip-registrations-with-sipp/</guid>
+      <description>&lt;p&gt;Today I had a need to go and load a bunch of registrations into Asterisk for a bug I was working on. Since I&amp;rsquo;ve had this need a couple of times now, and I keep going and having to redevelop it, I think I&amp;rsquo;ll just write about it here, and then when I need it again, I can just look it up. Maybe this will be useful for someone else as well.&lt;/p&gt;
+
+&lt;p&gt;First of all, this is all based on the post I found on the SipX wiki. You can read the page I based this all off of &lt;a href=&#34;http://sipx-wiki.calivia.com/index.php/Using_SIPp_to_run_performance_tests&#34;&gt;here&lt;/a&gt;. Lots of good info there. All I&amp;rsquo;m really adding of value is the PHP scripts I used to generate the peers in the database, and the register_client.csv file.&lt;/p&gt;
+
+&lt;p&gt;First, lets load a bunch of peers into Asterisk. I&amp;rsquo;m loading peers numbered 101 &amp;ndash;&amp;gt; 199.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-php&#34;&gt;&amp;lt;?php
+
+if (!$link = mysql_connect(&#39;localhost&#39;,&#39;asterisk&#39;,&#39;asterisk&#39;)) {
+	echo &amp;quot;Could not connect\n&amp;quot;;
+	die(mysql_error());
+}
+
+if (!mysql_select_db(&#39;asterisk&#39;,$link)) {
+	echo &amp;quot;Could not get into database\n&amp;quot;;
+	die(mysql_error());
+}
+
+for($counter = 100; $counter &amp;lt;= 199; $counter++) {
+	$sql = &amp;quot;INSERT INTO sipfriends (type,name,username,secret,context,canreinvite,nat,host,mailbox,dtmfmode,disallow,allow) VALUES (&#39;friend&#39;,&#39;$counter&#39;,&#39;$counter&#39;,&#39;welcome&#39;,&#39;start&#39;,&#39;no&#39;,&#39;yes&#39;,&#39;dynamic&#39;,&#39;$counter@default&#39;,&#39;rfc2833&#39;,&#39;all&#39;,&#39;ulaw&#39;)&amp;quot;;
+	echo $sql.&amp;quot;\n&amp;quot;;
+	$result = mysql_query($sql,$link);
+	if (!$result) {
+		echo &amp;quot;DB error &amp;quot; . mysql_error();
+		exit;
+	}
+}
+
+mysql_close($link);
+
+?&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Next, we need to generate the register_client.csv file in order to tell SIPp which peers to authenticate, and how.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-php&#34;&gt;&amp;lt;?php
+
+$myFile = &amp;quot;register_client.csv&amp;quot;;
+$fh = fopen($myFile, w);
+
+for ($counter = 100; $counter &amp;lt;= 199; $counter++) {
+	$data = &amp;quot;$counter;example.com;[authentication username=$counter password=welcome];\n&amp;quot;;
+	fwrite($fh, $data);
+}
+
+fclose($fh);
+
+?&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;And finally, here is the line used to send a bunch of registrations to Asterisk. If you want to do a load test, you may need to adjust the numbers so it does a better job of &amp;ldquo;blasting&amp;rdquo; the end point you want to test.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;sipp -sf register_client.xml -inf register_client.csv -r 10 -trace_err -trace_stat -nd -fd 1 -i  
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;If you have any questions, just ask, and I&amp;rsquo;ll try to comment here. This post is potentially light on specifics since these are notes for my future reference.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

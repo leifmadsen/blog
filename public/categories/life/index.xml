@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Life on Asterisk, and other worldly endeavours</title>
+    <link>http://blog.leifmadsen.com/categories/life/</link>
+    <description>Recent content in Life on Asterisk, and other worldly endeavours</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 25 Jul 2014 02:49:12 +0000</lastBuildDate>
+    <atom:link href="http://blog.leifmadsen.com/categories/life/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Rumors of my death have been greatly exaggerated</title>
+      <link>http://blog.leifmadsen.com/blog/2014/07/25/rumors-of-my-death-have-been-greatly-exaggerated/</link>
+      <pubDate>Fri, 25 Jul 2014 02:49:12 +0000</pubDate>
+      
+      <guid>http://blog.leifmadsen.com/blog/2014/07/25/rumors-of-my-death-have-been-greatly-exaggerated/</guid>
+      <description>&lt;p&gt;It&amp;rsquo;s been way too long since I&amp;rsquo;ve blogged. And this post isn&amp;rsquo;t going to be all the impressive unfortunately. However, I recently have been running a BBS and some friends and I have been playing LORD.&lt;/p&gt;
+
+&lt;p&gt;We&amp;rsquo;ve been playing this for the last few months, and I think I&amp;rsquo;m going to run a tournament. Perhaps with some sort of buy in like $10 or something, winner takes all.&lt;/p&gt;
+
+&lt;p&gt;Going to build it out in such a way that first person to beat the dragon 3 times will win the game, and at that point that person will win the pot.&lt;/p&gt;
+
+&lt;p&gt;Additionally, I&amp;rsquo;ve been reading a lot about the Go language and trying to get myself up to speed on that. Very interesting programming language. Essentially C but for concurrency (multiple processors).&lt;/p&gt;
+
+&lt;p&gt;I&amp;rsquo;m hoping to start blogging in the near future, but my current work has just kept me too busy and I haven&amp;rsquo;t really had anything all that worth of blogging about. I hope to start changing that around soon and get back to blogging on a semi-regular basis with things I&amp;rsquo;ve learned in the world of telecommunications and cloud platforms / virtualization.&lt;/p&gt;
+
+&lt;p&gt;Additionally, I don&amp;rsquo;t have any confirmation yet, but I&amp;rsquo;m pretty sure I&amp;rsquo;ll be attending AstriCon in Las Vegas this year. I&amp;rsquo;m going to figure it out either way, so hopefully i can meet up with some of you this year! The last few years I&amp;rsquo;ve just kind of mostly kept to myself and hung out with those I&amp;rsquo;ve met previously. I&amp;rsquo;m going to make a better attempt at reaching out to those I haven&amp;rsquo;t met before, so if you see me, come say hi please!&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Commodore 64 Turns 30 This Year</title>
+      <link>http://blog.leifmadsen.com/blog/2012/01/09/commodore-64-turns-30-this-year/</link>
+      <pubDate>Mon, 09 Jan 2012 13:05:51 +0000</pubDate>
+      
+      <guid>http://blog.leifmadsen.com/blog/2012/01/09/commodore-64-turns-30-this-year/</guid>
+      <description>&lt;p&gt;Having found an article about the Commodore 64 turning 30 this year, I reflected back in a comment on that page about what it is like to be only 1 year older than the Commodore 64, a computer which spiked my interest in technology away from a games system to something much more. The original article is available at &lt;a href=&#34;http://www.linuxjournal.com/content/commodor-64-30-year&#34;&gt;http://www.linuxjournal.com/content/commodor-64-30-year&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&amp;ldquo;I just turned 31 a couple of days ago on January 7th, and when I was in grade 2 (about 8-9 years old I guess) I started getting interested in the Commodore 64s we had at our school that were plentiful, but rarely used. I remember the first thing the teacher taught me; $p$g&lt;/p&gt;
+
+&lt;p&gt;The Commodore 64 replaced my interest with Nintendo (which I still have) to a greater interest that shaped me and caused me to grow technologically.  This grew into the Packard Bell &lt;sup&gt;486&lt;/sup&gt;&amp;frasl;&lt;sub&gt;25&lt;/sub&gt; my parents bought where I played flight simulator (after my Dad purchased more RAM for the computer at $100 a MB), and ran a BBS (the first month I played around with the 2400 baud modem calling Las Vegas BBS numbers that a friends father gave me; I lived in Sarnia, ON, Canada which is north-east of Detroit), and eventually ran my own BBS. Running a BBS gave me the sense of community that I possess and the love of telecommunications that is my career to this day.&lt;/p&gt;
+
+&lt;p&gt;So thank you Commodore for your C64 which has allowed me to carve out my career and greatly influenced who I am; and not just professionally.&amp;rdquo;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Now working with CoreDial</title>
+      <link>http://blog.leifmadsen.com/blog/2012/01/04/now-working-with-coredial/</link>
+      <pubDate>Wed, 04 Jan 2012 20:22:08 +0000</pubDate>
+      
+      <guid>http://blog.leifmadsen.com/blog/2012/01/04/now-working-with-coredial/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;https://si0.twimg.com/profile_images/1509716558/twitter-coredial-square-avatar_reasonably_small.png&#34; alt=&#34;&#34; /&gt; As of January 3rd, I&amp;rsquo;m now working with the CoreDial team full time. I&amp;rsquo;ve worked with them as a consultant on their infrastructure over the last few years but now will be spending significantly more time working with the engineering team :)&lt;/p&gt;
+
+&lt;p&gt;From the announcement,&lt;/p&gt;
+
+&lt;p&gt;“_CoreDial is pleased to announce the addition of Leif Madsen to the CoreDial team,” said Alan Rihm, CEO at CoreDial. “Leif is a well known Asterisk consultant who specializes in distributed telephony deployments and database integration. In addition, Leif is co-author of several O’Reilly published books on Asterisk, including Asterisk: The Definitive Guide (3rd edition). We’re pleased to be adding Leif to our team, and look forward to the exciting opportunity to work together._”&lt;/p&gt;
+
+&lt;p&gt;The entire announcement can be found at &lt;a href=&#34;http://coredial.com/asterisk-consultant-leif-madsen-joins-coredial-team/&#34;&gt;http://coredial.com/asterisk-consultant-leif-madsen-joins-coredial-team/&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;I&amp;rsquo;m really excited to be working with these guys, and to see what we&amp;rsquo;ll develop over the coming months! I&amp;rsquo;ll keep you informed here on my blog, and will continue to post Asterisk tidbits and snippets as I go.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>AstriCon 2010 and my talks!</title>
+      <link>http://blog.leifmadsen.com/blog/2010/10/27/astricon-2010-and-my-talks/</link>
+      <pubDate>Wed, 27 Oct 2010 12:08:06 +0000</pubDate>
+      
+      <guid>http://blog.leifmadsen.com/blog/2010/10/27/astricon-2010-and-my-talks/</guid>
+      <description>&lt;p&gt;&lt;em&gt;NOTE: My presentations are available on my website at &lt;a href=&#34;http://leifmadsen.com&#34;&gt;http://leifmadsen.com&lt;/a&gt; under the Presentations tab.&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;Hey all! I&amp;rsquo;m at AstriCon 2010 in Maryland and it&amp;rsquo;s going great so far! Russell Bryant and I spoke with several keen users and developers last night in the Code Zone at a fairly late hour, which shows just how dedicated Asterisk users are. There was pretty much no one else around and we had a room of about 20-30 people just having a great discussion about Asterisk development. Hopefully more of that over the next few days!&lt;/p&gt;
+
+&lt;p&gt;Today is the big keynote by some of the software development team, and while I can&amp;rsquo;t tell you what is going to be said, I can promise you it&amp;rsquo;s going to be big news. A lot of work has been going on over the last few months which has resulted in the biggest announcement yet at AstriCon about the future of telephony. There will be lots of blinky lights as well, which is always cool in a keynote!&lt;/p&gt;
+
+&lt;p&gt;Beyond the keynote this morning will be a lot of very high quality talks. I haven&amp;rsquo;t yet planned out my list of talks that I&amp;rsquo;m going to see, but you should definitely mark my two talks on your list of things to see :) I&amp;rsquo;ll be speaking at 1:45pm today, October 27th in the Asterisk Essentials track with my updated &amp;ldquo;5 Things You Didn&amp;rsquo;t Know Asterisk Could Do&amp;rdquo; presentation. It&amp;rsquo;ll be in National Harbor #5.&lt;/p&gt;
+
+&lt;p&gt;Tomorrow on October 28th I&amp;rsquo;ll be filling in for Jim van Meggelen at 10:00am doing my &amp;ldquo;Building A Distributed Queue System&amp;rdquo; talk which will focus on the basics of Asterisk system design starting from a traditional PBX and taking it through the iterations of a distributed system with multiple physical boxes handling queues and phones distributed across multiple sites and locations. For those who missed it last year come check it out this year, and get there early because each time I do this talk the room is packed. It&amp;rsquo;s part of the Platform Solutions track which is in National Harbor #7.&lt;/p&gt;
+
+&lt;p&gt;See you around at AstriCon!&lt;/p&gt;
+
+&lt;p&gt;PS: I&amp;rsquo;m trying to reach my 500th follower during AstriCon, so you should follow me on twitter :)  (@leifmadsen)&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Interesting article about *not* tracking holidays at Netflix</title>
+      <link>http://blog.leifmadsen.com/blog/2010/08/25/interesting-article-about-not-tracking-holidays-at-netflix/</link>
+      <pubDate>Wed, 25 Aug 2010 20:07:17 +0000</pubDate>
+      
+      <guid>http://blog.leifmadsen.com/blog/2010/08/25/interesting-article-about-not-tracking-holidays-at-netflix/</guid>
+      <description>&lt;p&gt;The following is an interesting article about not tracking workers time spent at work, or on vacation, but rather tracking their productivity. As a consultant who doesn&amp;rsquo;t have a fixed set of hours in the day that I work, I tend to judge my productivity by the number of hours I get to bill each week (i.e. how productive was I working for customers, rather than playing Flight Simulator :)).&lt;/p&gt;
+
+&lt;p&gt;I haven&amp;rsquo;t tracked actual holidays for years now (since I started consulting full time out of school in 2003), and I&amp;rsquo;m not sure I ever had a job long enough prior to school that I received any sorts of benefits of holidays. Perhaps it&amp;rsquo;s just natural for me because of that, but this article reminds me of two things:&lt;/p&gt;
+
+&lt;p&gt;1) I should actually take some holidays when I need to recharge, and not feel like I &lt;em&gt;need&lt;/em&gt; to be on-call 24/7/365&lt;/p&gt;
+
+&lt;p&gt;2) That other companies are really starting a paradigm shift about how they treat their employees work hours&lt;/p&gt;
+
+&lt;p&gt;It seems companies are starting to get it, and not bother with tracking the employees hours at work, which isn&amp;rsquo;t a very good indication of the amount of work they are getting done. A better method is likely to work in sprints and to allocate a certain number of tasks with priorities and estimated number of hours associated with each of those tasks. At the end of each sprint you determine what was good, what was bad, and what things didn&amp;rsquo;t get done (certain issues taking longer than expected, other issues going faster than expected, other issues with higher priority coming up, etc).&lt;/p&gt;
+
+&lt;p&gt;By tracking the productivity, the company isn&amp;rsquo;t at risk of everyone taking a salary and then screwing off for several months at a time. The accountability for productivity can keep that in check. The methods used for tracking productivity though are probably the most important part of implementing a non-policy on holidays such as this.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://www.telegraph.co.uk/finance/newsbysector/mediatechnologyandtelecoms/7945719/Netflix-lets-its-staff-take-as-much-holiday-as-they-want-whenever-they-want-and-it-works.html&#34;&gt;http://www.telegraph.co.uk/finance/newsbysector/mediatechnologyandtelecoms/7945719/Netflix-lets-its-staff-take-as-much-holiday-as-they-want-whenever-they-want-and-it-works.html&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Long-term &#39;shopping list&#39; helps couple furnish Caledon townhouse</title>
+      <link>http://blog.leifmadsen.com/blog/2010/04/15/long-term-shopping-list-helps-couple-furnish-caledon-townhouse/</link>
+      <pubDate>Thu, 15 Apr 2010 21:30:21 +0000</pubDate>
+      
+      <guid>http://blog.leifmadsen.com/blog/2010/04/15/long-term-shopping-list-helps-couple-furnish-caledon-townhouse/</guid>
+      <description>
+
+&lt;p&gt;Recently, &lt;a href=&#34;http://www.twitter.com/jenspeedy&#34;&gt;@jenspeedy&lt;/a&gt; of &lt;a href=&#34;http://www.yourhome.ca&#34;&gt;http://www.yourhome.ca&lt;/a&gt; interviewed my fiancée and I about our recently purchased townhouse in Caledon after our designer &lt;a href=&#34;http://www.twitter.com/melissadavis&#34;&gt;@melissadavis&lt;/a&gt; of &lt;a href=&#34;http://www.melissadavis.ca&#34;&gt;http://www.melissadavis.ca&lt;/a&gt; and &lt;a href=&#34;http://www.designerfriend.ca&#34;&gt;http://www.designerfriend.ca&lt;/a&gt; recommended she speak to us. Danielle (my fiancée) and I had a pretty good idea about the items we wanted for our new townhouse build, but were looking for a designer to make sure we didn&amp;rsquo;t get too far off track, and to steer us into the direction we ultimately wanted to achieve, while not breaking the bank (i.e. we didn&amp;rsquo;t need someone to hand hold us, or to do the actual implementation; we just needed someone to do some floor plans and give us some ideas on furniture based on our tastes).&lt;/p&gt;
+
+&lt;p&gt;The article describes the process we took about keeping prices within a reasonable range while at the same time getting almost everything we wanted out of our home, knowing it&amp;rsquo;d be a medium-term house for us until we eventually scale up to something a bit larger in the future (like when we have kids, etc&amp;hellip;). Our thoughts are we&amp;rsquo;ll be there anywhere from 5-7 years, so obviously we want to make sure there are some items that help us enjoy our home while we live there, while giving good resale value in the future, but not installing frivolous items that aren&amp;rsquo;t necessarily worth it for a home we won&amp;rsquo;t be in for 20+ years.&lt;/p&gt;
+
+&lt;p&gt;Check out the article because it&amp;rsquo;s awesome ;)   &lt;a href=&#34;http://yourhome.ca/homes/realestate/buyingahome/article/795438--long-term-shopping-list-helps-couple-furnish-caledon-townhouse&#34;&gt;http://yourhome.ca/homes/realestate/buyingahome/article/795438&amp;ndash;long-term-shopping-list-helps-couple-furnish-caledon-townhouse&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Our article is part of a larger set of articles too, so check those out as well:  &lt;a href=&#34;http://ow.ly/1z1us&#34;&gt;http://ow.ly/1z1us&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;PS: Check out this table we bought on the weekend based on style recommendations by Melissa Davis! She gave us a &amp;lsquo;shopping list&amp;rsquo; of items so we can get a feel for things that all go together. When we saw this table, I saw it and liked it quite a bit. I saw the price, and thought &amp;ldquo;wow, that&amp;rsquo;s a pretty good price!&amp;rdquo;. As we walked around the store looking for sofas, I kept coming back to it, and we both liked it so much we decided to buy it! Just remember not to be stuck on exactly what is on the list, because the purpose is to give you a feel for the type of pieces that would go together, but be sure to give it some of your own character!&lt;/em&gt;&lt;/p&gt;
+
+&lt;h4 id=&#34;what-was-on-the-list:561a75bc85aadb9dd12dff853ffb9b31&#34;&gt;What was on the list&lt;/h4&gt;
+
+&lt;p&gt;[caption id=&amp;ldquo;&amp;rdquo; align=&amp;ldquo;aligncenter&amp;rdquo; width=&amp;ldquo;380&amp;rdquo; caption=&amp;ldquo;What was on the list&amp;rdquo;]&lt;img src=&#34;http://www.stylegarage.com/products1/dining/plank/image.jpg&#34; alt=&#34;What was on the list&#34; /&gt;[/caption]&lt;/p&gt;
+
+&lt;h4 id=&#34;what-we-got:561a75bc85aadb9dd12dff853ffb9b31&#34;&gt;What we got&lt;/h4&gt;
+
+&lt;p&gt;[caption id=&amp;ldquo;&amp;rdquo; align=&amp;ldquo;aligncenter&amp;rdquo; width=&amp;ldquo;432&amp;rdquo; caption=&amp;ldquo;The table we purchased&amp;rdquo;]&lt;img src=&#34;http://sphotos.ak.fbcdn.net/hphotos-ak-snc3/hs385.snc3/23536_385681645761_512680761_3766020_7105510_n.jpg&#34; alt=&#34;Table we purchased&#34; /&gt;[/caption]&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
