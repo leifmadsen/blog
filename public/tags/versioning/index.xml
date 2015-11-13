@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Versioning on Asterisk, and other worldly endeavours</title>
+    <link>http://blog.leifmadsen.com/tags/versioning/</link>
+    <description>Recent content in Versioning on Asterisk, and other worldly endeavours</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 29 Aug 2011 20:27:03 +0000</lastBuildDate>
+    <atom:link href="http://blog.leifmadsen.com/tags/versioning/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Asterisk 10 == Asterisk 1.^H^H10</title>
+      <link>http://blog.leifmadsen.com/blog/2011/08/29/asterisk-10--asterisk-1.hh10/</link>
+      <pubDate>Mon, 29 Aug 2011 20:27:03 +0000</pubDate>
+      
+      <guid>http://blog.leifmadsen.com/blog/2011/08/29/asterisk-10--asterisk-1.hh10/</guid>
+      <description>&lt;p&gt;In case you missed it, the next version of Asterisk is now in beta, and at the same time, has undergone a minor version numbering scheme. As it is unlikely that Asterisk will ever have a 2.0 release since for years now, that has generally meant Asterisk would undergo a major underlying change in both how it was programmed and the user experience (and since it would be a major disruption to the Asterisk community), it was deemed unnecessary to utilize the 1. preamble in front of the version numbers.&lt;/p&gt;
+
+&lt;p&gt;Asterisk versioning has used the following as branch numbers over the years:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;1.0&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;1.2&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;1.4&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;1.6.0&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;1.6.1&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;1.6.2&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;1.8&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;The next version to have followed Asterisk 1.8 would have been Asterisk 1.10. Since it has been determined the prefix of &lt;em&gt;1.&lt;/em&gt; is now superfluous, it was simply dropped. So instead of the version following 1.8 being:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;1.8&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;1.10&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;We now have&amp;hellip;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;1.8&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;10&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;This should hopefully lead to a slightly less confusing numbering scheme going forward as there will no longer be the skipped odd numbers. Kevin Fleming at Digium explains the reasons for dropping the leading &amp;lsquo;one dot&amp;rsquo; in his blog post at &lt;a href=&#34;http://blogs.digium.com/2011/07/21/the-evolution-of-asterisk-or-how-we-arrived-at-asterisk-10/&#34;&gt;http://blogs.digium.com/2011/07/21/the-evolution-of-asterisk-or-how-we-arrived-at-asterisk-10/&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;As Asterisk moves forward, this is how versions will look:&lt;/p&gt;
+
+&lt;p&gt;Asterisk branch versions (which signify major version increases) will increment singularly:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;10&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;11&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;12&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Within each of those branches minor versions will be released for the time the branch is supported. (Information about the support level of Asterisk branches is available at &lt;a href=&#34;https://wiki.asterisk.org/wiki/display/AST/Asterisk+Versions&#34;&gt;https://wiki.asterisk.org/wiki/display/AST/Asterisk+Versions&lt;/a&gt;.) These would be the bug fixes that an Asterisk implementer/administrator would deploy. Some examples include:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;10.0.0&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;10.1.0&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;10.2.0&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;10.3.0&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;10.4.0&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;You&amp;rsquo;ll have noticed the implicit declaration of the &amp;lsquo;dot zero&amp;rsquo; on the end of the version. In the past when a security release or regression is resolved for a tag, an additional version number is added to the end. Lets take Asterisk 10.2.0 as an example of a version that was to receive a change to the tag after initial release, perhaps for a security update. Instead of requiring administrators to update to a tag of Asterisk that has changes in addition to the security changes, a new tag with only the changes required to satisfy the resolution of the security issue are added.&lt;/p&gt;
+
+&lt;p&gt;(The mechanics of which are essentially to copy the existing tag to a new tag number, merge the changes, then repackage the new tag. The equivalent of copying the contents of one directory to another new directory, and making a single change.)&lt;/p&gt;
+
+&lt;p&gt;So for a security issue being resolved in Asterisk 10.2.0, there would be a release of Asterisk 10.2.1. If additional changes were made to the base tag of 10.2.0, then you would see:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;10.2.0&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;10.2.1&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;10.2.2&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Only spot testing should be required for upgrades between 10.2.0 -&amp;gt; 10.2.1 -&amp;gt; 10.2.2. Of course more thorough testing between something like 10.2.0 and 10.3.0 would be required by the administrator.&lt;/p&gt;
+
+&lt;p&gt;Hopefully this helps alleviate any remaining confusion.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>About the new Asterisk versioning method</title>
+      <link>http://blog.leifmadsen.com/blog/2009/06/06/about-the-new-asterisk-versioning-method/</link>
+      <pubDate>Sat, 06 Jun 2009 15:42:11 +0000</pubDate>
+      
+      <guid>http://blog.leifmadsen.com/blog/2009/06/06/about-the-new-asterisk-versioning-method/</guid>
+      <description>
+
+&lt;p&gt;Recently I have been seeing more and more questions about how Asterisk is being released now, and what the 1.6.x versions really mean. I&amp;rsquo;ll try and clear up some of your questions and make it more clear as to how Asterisk versions work. First, lets talk about the Asterisk 1.2 and 1.4 branches.&lt;/p&gt;
+
+&lt;h4 id=&#34;previous-release-methodology:308c603a029c7f870e99ba0db909201d&#34;&gt;Previous release methodology&lt;/h4&gt;
+
+&lt;p&gt;When we just had Asterisk 1.2 and 1.4, all new development was carried out in trunk (it still is) and only bug fixes went into the 1.2 and 1.4 branches. Currently, the 1.2 branch has been marked as EOL (End of Life), and is currently only receiving security updates. Bug fixes are reserved for the 1.4 branch. This means that until 1.6 came along, all new development was done in trunk, without the ability for people to get access to new features and functionality until the 1.6 branch was created. It&amp;rsquo;s not to say the new functionality wasn&amp;rsquo;t available, but with all the changes that can happen in trunk, running a production server based on it would require a very Asterisk savvy (and C code savvy) administrator.&lt;/p&gt;
+
+&lt;p&gt;Before we talk about 1.6, lets make sure we understand what trunk, branches, and tags mean.&lt;/p&gt;
+
+&lt;h4 id=&#34;branches-and-tags-and-trunk-oh-my:308c603a029c7f870e99ba0db909201d&#34;&gt;Branches, and Tags, and Trunk; oh my!&lt;/h4&gt;
+
+&lt;p&gt;Asterisk development is basically a linear process. All changes happen one after the other, and new features are always put on the end. This is referred to as &lt;em&gt;trunk&lt;/em&gt;. All the latest changes to core Asterisk code, new features, and major changes take place here. This is why running trunk in production is not recommended, because the developers essentially have free reign as to what goes in here.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Note: with the advent of &lt;a href=&#34;http://www.review-board.org/&#34;&gt;review board&lt;/a&gt;, the larger commits that go into trunk are of much higher quality, as large changes are not put into trunk without any sort of peer review. The review board application allows these larger changes (such as new features, major core restructuring changes, etc.) to be reviewed by other developers to find common coding issues that would otherwise have had to be found in the wild.&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;Like a tree, the &lt;em&gt;branches&lt;/em&gt; grow from the trunk. These branches are referred to as 1.2, 1.4, etc. A branch is a snapshot of the trunk at the time of creation, and from there, has its own timeline. When a bug is found, fixed, and resolved, the resulting commit is then placed into trunk, and any branches that it effects. When a new feature is created, it is only put into trunk, thereby leaving the branches in a relatively known state that is safe for production use.&lt;/p&gt;
+
+&lt;p&gt;From a branch, we create snapshots in time called &lt;em&gt;tags&lt;/em&gt;. These tags are the version numbers and tar ball files you can download from the &lt;a href=&#34;http://www.asterisk.org&#34;&gt;Asterisk.org&lt;/a&gt; website. These tags are numbered releases that never change, such as 1.4.18, 1.4.22, etc. In image 1.1, you can see a visual representation of the Asterisk branching and tagging process where the x-axis represents time.&lt;/p&gt;
+
+&lt;p&gt;[caption id=&amp;ldquo;attachment_17&amp;rdquo; align=&amp;ldquo;aligncenter&amp;rdquo; width=&amp;ldquo;449&amp;rdquo; caption=&amp;ldquo;Image 1.1 - Visual representation of Asterisk release branching and tagging.&amp;rdquo;]&lt;img src=&#34;http://leifmadsen.files.wordpress.com/2009/06/asterisk_release_tree.jpg&#34; alt=&#34;Image 1.1&#34; /&gt;[/caption]&lt;/p&gt;
+
+&lt;h4 id=&#34;understanding-the-asterisk-1-6-release-process:308c603a029c7f870e99ba0db909201d&#34;&gt;Understanding the Asterisk 1.6 release process&lt;/h4&gt;
+
+&lt;p&gt;With the advent of Asterisk 1.6, the release process has differed slightly, in that there are multiple 1.6 branches supported at any given time. The reason for this is because the time frame between the creation of the 1.0 &amp;amp; 1.2 branches, and the 1.2 &amp;amp; 1.4 branches was so great (approximately 1 year in the former, and 2 years in the latter!) that new features would sit in trunk, and many changes would take place over that period of time. Due to the rapid development of Asterisk, these changes were grandiose and thus the user experience between these releases were such that major changes had taken place. Backwards compatibility was difficult to maintain, and simply, who wants to wait 3 years to get the next great feature?&lt;/p&gt;
+
+&lt;p&gt;So with Asterisk 1.6, a new release process that allows branches to be created in a more regular fashion (approximately 6-8 months) was developed. Whenever a branch is created, we now update the 3rd most significant digit, which represents a new branch with new features, and the 4th most significant digit is now the tag number in that release. So for example, we have the branch Asterisk 1.6.0, which is a branch created from trunk at a period in time, and within that branch, bug fixes are performed, but no new features are added. The tags from this branch will be version numbers such as 1.6.0.0, 1.6.0.1, 1.6.0.2, etc. Then some period in time, a new branch will be created from trunk such as 1.6.1 (note that the 3rd significant number has increased by one). Within this branch will be new features and changes — that different of the 1.6.0 branch. Within the 1.6.1 branch, we&amp;rsquo;ll have tags just like all our other branches, such as: 1.6.1.0, 1.6.1.1, 1.6.1.2, etc.&lt;/p&gt;
+
+&lt;p&gt;This process continues throughout the lifetime of the 1.6 series of Asterisk. The trunk continues to have development, new features merged and potential core changes to make Asterisk more efficient (which would otherwise be deemed too invasive for a release branch) are committed. The regular release nature of this process allows less drastic changes between major versions (and note that the difference between a 1.6.0 and a 1.6.1 &lt;em&gt;is&lt;/em&gt; considered a major version upgrade, similar in nature to an upgrade between 1.2 and 1.4, but not quite so drastic), and access to new features on a more regular basis. Because these are considered a major change between versions, it is in your interest to read the UPGRADE-1.6.txt files in your Asterisk source, and to test thoroughly before deploying in a production environment.&lt;/p&gt;
+
+&lt;p&gt;It should be noted that at any given time, there will be at least 3 branches of the 1.6 nature maintained. That means bug fixes and maintenance will be performed on your preferred branch for an extended period of time. For example, because there can be code refactoring, and core changes between 1.6.x versions (where x is the major version number), you may wish to maintain your production system on the 1.6.0 branch while your development system is running the 1.6.1 series. This way you don&amp;rsquo;t have to worry about moving your 1.6.0 system immediately to a 1.6.1 based branch as soon as it is created. Image 1.2 shows a visual representation of the 1.6 release process, which should look similar to the release process between 1.2 and 1.4. The x-axis still represents time, but in this case, time is not over quite so long a period.&lt;/p&gt;
+
+&lt;p&gt;[caption id=&amp;ldquo;attachment_18&amp;rdquo; align=&amp;ldquo;aligncenter&amp;rdquo; width=&amp;ldquo;449&amp;rdquo; caption=&amp;ldquo;Image 1.2 - Visual representation of the Asterisk 1.6 release process&amp;rdquo;]&lt;img src=&#34;http://leifmadsen.files.wordpress.com/2009/06/asterisk_1-6_release_tree.jpg&#34; alt=&#34;Image 1.1 - Visual representation of the Asterisk 1.6 release process&#34; /&gt;[/caption]&lt;/p&gt;
+
+&lt;h4 id=&#34;so-which-version-do-i-use:308c603a029c7f870e99ba0db909201d&#34;&gt;So which version do I use?&lt;/h4&gt;
+
+&lt;p&gt;It always comes down to the question of, &amp;ldquo;so which version do I use?&amp;rdquo; and this can be a tricky one to answer. It probably boils down to what features you need to utilize. By checking the CHANGES file in your Asterisk source tree, you can see what changes have happened between each of the various branches (i.e. the differences between 1.6.0 and 1.6.1). While writing this article, I was asked by someone on IRC the question, &amp;ldquo;What version do you recommend?&amp;rdquo;, and the answer I gave was, &amp;ldquo;I recommend the version that has the features you require, and that passes the testing you have done prior to rolling it out&amp;rdquo;. He followed up with, &amp;ldquo;But they all have the feature I require!&amp;rdquo;, to which I responded, &amp;ldquo;Do some forward planning, and try to determine that the version you pick has the features you may possibly require in the future so that you don&amp;rsquo;t have to re-architect your system sooner than you want&amp;rdquo;. This can save you a lot of time and effort. Do some testing, and play with all the various branches on a development server. See what dialplan applications and functions exist, and how they work. Try to determine what kinds of things you need your phone system to do, and make sure the version you pick can do it. You can also make use of the various mailing lists and IRC chat rooms (asterisk-users mailing list, and #asterisk IRC channel) to ask specific questions if you&amp;rsquo;re not able to find an answer.&lt;/p&gt;
+
+&lt;p&gt;Hopefully this has made the release process a bit more clear. If you have any questions or comments, please feel free to leave a comment, and I&amp;rsquo;ll try to address all your issues as best I can.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

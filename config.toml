@@ -1,0 +1,38 @@
+baseurl = "http://blog.leifmadsen.com"
+title = "Asterisk, and other worldly endeavours"
+canonifyurls = true
+publishdir = "public"
+layoutdir = "layouts"
+contentdir = "content"
+languageCode = "en-us"
+disqusShortname = "leifmadsen"
+MetaDataFormat = "toml"
+theme = "hyde-x"
+paginate = 10
+
+[author]
+    name = "Leif Madsen"
+
+[permalinks]
+    post = "/blog/:year/:month/:day/:title/"
+
+[params]
+    truncate = true
+    defaultDescription = "Leif Madsen Blog Entry"
+    defaultKeywords = "blog,asterisk,leif,madsen,canada"
+
+    theme = "theme-base-0b"
+
+    highlight = "solarized_dark"
+
+    tagline = "Asterisk, and other worldly endeavours"
+
+    home = "Blog"
+
+    gravatarHash = "77a1196d149eecdb3b35fb5db56d494e"
+
+    github = "http://github.com/leifmadsen"
+    twitter = "http://twitter.com/leifmadsen"
+    linkedin = "http://linkedin.com/in/leifmadsen"
+
+    rss = true

@@ -1,0 +1,318 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Technology on Asterisk, and other worldly endeavours</title>
+    <link>http://blog.leifmadsen.com/categories/technology/</link>
+    <description>Recent content in Technology on Asterisk, and other worldly endeavours</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 24 Nov 2012 22:06:03 +0000</lastBuildDate>
+    <atom:link href="http://blog.leifmadsen.com/categories/technology/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Brother printer doesn&#39;t print in Fedora 17</title>
+      <link>http://blog.leifmadsen.com/blog/2012/11/24/brother-printer-doesnt-print-in-fedora-17/</link>
+      <pubDate>Sat, 24 Nov 2012 22:06:03 +0000</pubDate>
+      
+      <guid>http://blog.leifmadsen.com/blog/2012/11/24/brother-printer-doesnt-print-in-fedora-17/</guid>
+      <description>&lt;p&gt;&lt;strong&gt;Tip: If your Brother printer won&amp;rsquo;t print after installing the drivers, install glibc.i686&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Today ran into an issue with my new Brother MFC-7460DN (which is a really nice laser printer with auto-feed scanner, Scan-to-FTP which creates a PDF file, and other things). I had just recently done a clean install of Fedora 17, and I could install the RPMs (which are i386 files on my x86_64 based system), add the printer to CUPS and all sorts of things that looked fine.&lt;/p&gt;
+
+&lt;p&gt;However when I went to print, it wouldn&amp;rsquo;t error out, but the printer wouldn&amp;rsquo;t actually print. I tried changing a file per &lt;a href=&#34;https://bbs.archlinux.org/viewtopic.php?pid=940524#p940524&#34;&gt;https://bbs.archlinux.org/viewtopic.php?pid=940524#p940524&lt;/a&gt; but it didn&amp;rsquo;t help.&lt;/p&gt;
+
+&lt;p&gt;Then I found this post &lt;a href=&#34;http://forums.fedoraforum.org/showthread.php?t=280753&#34;&gt;http://forums.fedoraforum.org/showthread.php?t=280753&lt;/a&gt; which reminded me to install glibc.i686. Wish the Brother drives would just make that a dependency in the RPM.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>CentOS 5.8 On AWS EC2 With Xen Kernel (PVGRUB)</title>
+      <link>http://blog.leifmadsen.com/blog/2012/08/22/centos-5.8-on-aws-ec2-with-xen-kernel-pvgrub/</link>
+      <pubDate>Wed, 22 Aug 2012 14:10:46 +0000</pubDate>
+      
+      <guid>http://blog.leifmadsen.com/blog/2012/08/22/centos-5.8-on-aws-ec2-with-xen-kernel-pvgrub/</guid>
+      <description>&lt;p&gt;At &lt;a href=&#34;http://coredial.com&#34;&gt;CoreDial&lt;/a&gt; we&amp;rsquo;ve been using a lot of AWS EC2 lately for building sandbox infrastructure for testing. Part of the infrastructure is a voice platform utilizing Asterisk 1.4 and 1.8, and those voice platforms are using Zaptel and DAHDI respectively for use with MeetMe(). This hasn&amp;rsquo;t been an issue previously as our testing has either been on bare metal, or in other virtual machine systems where installation of a base image and standard kernel are not an issue.&lt;/p&gt;
+
+&lt;p&gt;However, with the introduction of a lot of EC2 instances in our testing process, we ran into issues with building our own DAHDI RPMs since there aren&amp;rsquo;t any EC2 kernel development packages outside of OpenSuSE (which we don&amp;rsquo;t use). After spending a day of trying to hack around it, Kevin found a &lt;a href=&#34;http://ec2-downloads.s3.amazonaws.com/user_specified_kernels.pdf&#34;&gt;PDF&lt;/a&gt; from Amazon that states AWS now supports the ability to load your own kernels via PVGRUB. Great! If I can do that, then I can just continue using the same RPMs I&amp;rsquo;d be building anyways (albeit the xen based kernel, but that&amp;rsquo;s easy to do in the spec file).&lt;/p&gt;
+
+&lt;p&gt;Unfortunately this was not nearly as trivial and simple as it appeared at first. The first problem was that I had to figure out the correct magic kernel AKI that needed to be loaded, and the PDF wasn&amp;rsquo;t incredibly clear about which one to use. (There is two different styles of the AKI, one called &amp;ldquo;hd0&amp;rdquo; and another called &amp;ldquo;hd00&amp;rdquo; which I&amp;rsquo;ll get into shortly.) After searching Google and looking through several forum posts and other blogs (linked at the end), I finally found a combination that seems to work for our imported CentOS 5.8 base image. Below is a list of the steps I executed after loading up an image from our base AMI:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;yum install grub kernel-xen kernel-xen-devel&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;grub-install /dev/sda&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;cd /boot/&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;mkinitrd -f -v --allow-missing --builtin uhci-hcd --builtin ohci-hcd --builtin ehci-hcd --preload xennet --preload xenblk --preload dm-mod --preload linear --force-lvm-probe /boot/initrd-2.6.18-308.13.1.el5xen.img 2.6.18-308.13.1.el5xen&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;touch /boot/grub/menu.lst&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;cat /boot/grub/menu.lst&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;default 0
+timeout 1
+
+title EC2
+     root (hd0)
+     kernel /boot/vmlinuz-2.6.18-308.11.1.el5xen root=/dev/sda1
+     initrd /boot/initrd-2.6.18-308.11.1.el5xen.img
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Once the changes were made to the image, I took a snapshot of the running instances volume. I then created an image from the snapshot. When creating the image, I selected a new kernel ID. The kernel ID&amp;rsquo;s for the various zones and architectures are listed in the &lt;a href=&#34;http://ec2-downloads.s3.amazonaws.com/user_specified_kernels.pdf&#34;&gt;PDF&lt;/a&gt;. As our base image was CentOS 5.8 i386 in the us-east-1 zone, I had to select between either aki‐4c7d9525 or aki‐407d9529. The paragraph above seems to indicate there is a difference based on what type of machine you&amp;rsquo;re using, and references S3 or EBS based images. We are using EBS based images, so I tried the first one, which in the end failed miserably. After reading through the &lt;a href=&#34;http://www.ioncannon.net/system-administration/1205/installing-cent-os-5-5-on-ec2-with-the-cent-os-5-5-kernel/&#34;&gt;IonCannon&lt;/a&gt; blog post it became clear that the &lt;em&gt;hd0&lt;/em&gt; and &lt;em&gt;hd00&lt;/em&gt; AKIs are really differences in whether you have a single partition, or multiple partitions with a separate /boot/ partition.&lt;/p&gt;
+
+&lt;p&gt;With that bit of knowledge, and knowing that we only had a single partition that contained our /boot/ directory, I knew to use &lt;strong&gt;aki-407d9529&lt;/strong&gt; (hd0). Another forum post also pointed out that I needed to enable some modules for the xen kernel or the system wouldn&amp;rsquo;t boot (and I verified that by stepping through each of the steps listed above to make sure it was required). With those two major items checked off, I am now able to build an AMI that will load with a stock CentOS Xen kernel image, making it trivial to build RPMs against now.&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;Note&lt;/strong&gt;:
+If you do happen to use separate partitions, make sure you use the &lt;strong&gt;hd00&lt;/strong&gt; AKI. In the &lt;strong&gt;menu.lst&lt;/strong&gt; you need to make sure to use &lt;em&gt;root (hd0,0)&lt;/em&gt; instead of just (hd0). Additionally, your &lt;em&gt;menu.lst&lt;/em&gt; file needs to live at &lt;em&gt;/boot/boot/grub/menu.lst&lt;/em&gt; since AWS is going to look in the &lt;em&gt;/boot/grub/menu.lst&lt;/em&gt; location on the &lt;em&gt;/boot/&lt;/em&gt; partition. On a single partition the file can just live at &lt;em&gt;/boot/grub/menu.lst&lt;/em&gt;.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;strong&gt;References&lt;/strong&gt;
+* &lt;a href=&#34;https://forums.aws.amazon.com/message.jspa?messageID=202366&#34;&gt;https://forums.aws.amazon.com/message.jspa?messageID=202366&lt;/a&gt; &amp;lt;&amp;ndash; provided the mkinitfs command required to get everything to work on boot
+* &lt;a href=&#34;https://forums.aws.amazon.com/message.jspa?messageID=253943&#34;&gt;https://forums.aws.amazon.com/message.jspa?messageID=253943&lt;/a&gt;
+* &lt;a href=&#34;http://technotes.twosmallcoins.com/?tag=bootgrubmenulst&#34;&gt;http://technotes.twosmallcoins.com/?tag=bootgrubmenulst&lt;/a&gt;
+* &lt;a href=&#34;http://www.ioncannon.net/system-administration/1205/installing-cent-os-5-5-on-ec2-with-the-cent-os-5-5-kernel/&#34;&gt;http://www.ioncannon.net/system-administration/1205/installing-cent-os-5-5-on-ec2-with-the-cent-os-5-5-kernel/&lt;/a&gt; &amp;lt;&amp;ndash; this was the best link, but was also the most verbose and overly complicated for what I needed, but it had a couple of tips in there that ended up helping a lot. The explanation of the difference between the hd0 and hd00 AKIs was they key to my success.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>.bashrc trick for git repo and branch information</title>
+      <link>http://blog.leifmadsen.com/blog/2011/12/22/.bashrc-trick-for-git-repo-and-branch-information/</link>
+      <pubDate>Thu, 22 Dec 2011 14:39:07 +0000</pubDate>
+      
+      <guid>http://blog.leifmadsen.com/blog/2011/12/22/.bashrc-trick-for-git-repo-and-branch-information/</guid>
+      <description>&lt;p&gt;The other day I was talking to my friend &lt;a href=&#34;http://russellbryant.net&#34;&gt;Russell Bryant&lt;/a&gt; who pointed me to some .bashrc magic that would show me which branch I was currently working with inside a git repo on my system. I found it incredibly handy and have modified the ANSI colour coding slightly.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;export PS1=&#39;[\u@\h \[33[0;36m\]\W$(__git_ps1 &amp;quot;\[33[0m\]\[33[0;33m\](%s)&amp;quot;)\[33[0m\]]\$ &#39;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;On Fedora Russell mentioned that you need the &lt;code&gt;bash-completion&lt;/code&gt; installed. We&amp;rsquo;re unsure if you need anything on other distributions.&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Edit: January 6, 2012_
+As I&amp;rsquo;m using my laptop today, I modified the .bashrc file on Ubuntu 10.04, and here is the PS1 code I came up with. It&amp;rsquo;s nearly the same, but I&amp;rsquo;m using bold today instead of the unbolded colours of lore.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;PS1=&#39;${debian_chroot:+($debian_chroot)}\[\033[28;01m\]\u@\h\[\033[00m\]:\[\033[1;36m\]\W$(__git_ps1 &amp;quot;\[\033[00m\]\[\033[1;33m\](%s)&amp;quot;)\[\033[00m\]\$ &#39;
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Relaying SMTP via Gmail (or Google Apps) Using Postfix</title>
+      <link>http://blog.leifmadsen.com/blog/2011/11/22/relaying-smtp-via-gmail-or-google-apps-using-postfix/</link>
+      <pubDate>Tue, 22 Nov 2011 22:17:18 +0000</pubDate>
+      
+      <guid>http://blog.leifmadsen.com/blog/2011/11/22/relaying-smtp-via-gmail-or-google-apps-using-postfix/</guid>
+      <description>&lt;p&gt;Today I had the need to start relaying mail through my Google Apps account since &lt;del&gt;Super-Evil-Bastard-ITSP&lt;/del&gt;Rogers blocks sending email (it&amp;rsquo;s probably a good thing, however it&amp;rsquo;s quite annoying when running some services from home).&lt;/p&gt;
+
+&lt;p&gt;Found this article while Googling, and it worked great first try. I like when things are this easy.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://www.zulius.com/how-to/set-up-postfix-with-a-remote-smtp-relay-host/&#34;&gt;http://www.zulius.com/how-to/set-up-postfix-with-a-remote-smtp-relay-host/&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Initial impressions of qemu-kvm (virtualization server)</title>
+      <link>http://blog.leifmadsen.com/blog/2011/02/09/initial-impressions-of-qemu-kvm-virtualization-server/</link>
+      <pubDate>Wed, 09 Feb 2011 01:18:22 +0000</pubDate>
+      
+      <guid>http://blog.leifmadsen.com/blog/2011/02/09/initial-impressions-of-qemu-kvm-virtualization-server/</guid>
+      <description>&lt;p&gt;The qemu-kvm (&lt;a href=&#34;http://www.linux-kvm.org/page/Main_Page&#34;&gt;http://www.linux-kvm.org/page/Main_Page&lt;/a&gt;) package on Ubuntu 10.10 allows you to create virtual machines much like VMware, Xen, etc.&lt;/p&gt;
+
+&lt;p&gt;My initial impressions are generally pretty positive. I like that it lets you install multiple operating systems (including MS Windows, which I haven&amp;rsquo;t tried yet), and doesn&amp;rsquo;t use a web interface like VMware Server 2 (which I&amp;rsquo;ve found to be terribly crash prone, requiring a restart of the web interface at the least, and sometime the entire server needs to be restarted, often abruptly with the kill application). My favourite part is the libvirt-manager that lets you manage the system and install virtual machines remotely over SSH using VNC (or at least something similar to it).&lt;/p&gt;
+
+&lt;p&gt;The one problem I had initially was installing CentOS 5.5. It was terribly slow, and when I started the virtual machine, I coudn&amp;rsquo;t get it past GRUB. I thought perhaps it was just a problem with running CentOS VMs on an Ubuntu host machine, but then I had the same problem with an Ubuntu installation (which took at least 3-4 times as long to install as CentOS for some reason).&lt;/p&gt;
+
+&lt;p&gt;I got looking around and found people with similar issues as me, but they all basically just outlined reinstalling GRUB via a rescue disk. I tried this which got me just a little bit further, but still no GRUB menu, or system booting.&lt;/p&gt;
+
+&lt;p&gt;Then I found a post indicating that restarting the KVM service caused things to work, which I tried doing, but nothing changed. So as a last ditch effort I tried rebooting the service, which I didn&amp;rsquo;t expect to actually fix anything, but oddly enough worked. The existing VMs I installed started up fine, and the new installation I tried went significantly faster.&lt;/p&gt;
+
+&lt;p&gt;I haven&amp;rsquo;t had much of a chance to try more than what I&amp;rsquo;ve described, but thus far I like KVM a lot more than VMware. Hopefully I keep enjoying it as I go forward now that I&amp;rsquo;ve gotten VMs to boot :)&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Asterisk Cookbook Is On! (We Think :))</title>
+      <link>http://blog.leifmadsen.com/blog/2011/01/27/asterisk-cookbook-is-on-we-think-/</link>
+      <pubDate>Thu, 27 Jan 2011 14:33:00 +0000</pubDate>
+      
+      <guid>http://blog.leifmadsen.com/blog/2011/01/27/asterisk-cookbook-is-on-we-think-/</guid>
+      <description>&lt;p&gt;After finishing the first draft of &lt;a href=&#34;http://oreilly.com/catalog/9780596517342&#34;&gt;Asterisk: The Definitive Guide (3rd Edition)&lt;/a&gt;, I&amp;rsquo;ve been a bit antsy with wanting to do some more writing. After about a week of a break (i.e. sleeping in past 7am for the first time in nearly a year), &lt;a href=&#34;http://www.russellbryant.net/blog/&#34;&gt;Russell Bryant&lt;/a&gt; and I have decided to team up on delivering the long awaited Asterisk Cookbook.&lt;/p&gt;
+
+&lt;p&gt;To start off with, we&amp;rsquo;ll be writing a short, 80-100 page eBook that will be distributed by O&amp;rsquo;Reilly in all the formats they support (&lt;a href=&#34;http://oreilly.com/ebooks/&#34;&gt;http://oreilly.com/ebooks/&lt;/a&gt;). The book is scheduled to have about 25 recipes, and should be written in the next 30-40 days, which would mean it should be available shortly after&lt;a href=&#34;http://oreilly.com/catalog/9780596517342&#34;&gt; Asterisk: The Definitive Guide&lt;/a&gt; is released (which means you can bundle them together! :)).&lt;/p&gt;
+
+&lt;p&gt;We just finished the outline this morning and sent it off to our editor Mike Loukides. Unless O&amp;rsquo;Reilly is already booked up (pun intended?) for the next few months with production and other books, we should be starting work on this as early as next week. If all goes well after we&amp;rsquo;re done the eBook, we&amp;rsquo;ll continue expanding it with the goal of eventually releasing it as a print edition.&lt;/p&gt;
+
+&lt;p&gt;As a side note, we&amp;rsquo;re still accepting reviews from people for Asterisk: The Definitive Guide. We have to return all edits and changes to O&amp;rsquo;Reilly no later than February 14th, so that means you still have a couple of weeks to get some reviews and testing done! If you could make sure you have your reviews done before February 11, 2011 that would help us out tremendously as we&amp;rsquo;ll be working on getting all the edits we need done in an email to O&amp;rsquo;Reilly by Monday, February 14th. You can help out at &lt;a href=&#34;http://ofps.oreilly.com/titles/9780596517342/&#34;&gt;http://ofps.oreilly.com/titles/9780596517342/&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Thanks to everyone who has contributed thus far!&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>New headset thanks to e4voip.com!</title>
+      <link>http://blog.leifmadsen.com/blog/2010/02/22/new-headset-thanks-to-e4voip.com/</link>
+      <pubDate>Mon, 22 Feb 2010 19:04:21 +0000</pubDate>
+      
+      <guid>http://blog.leifmadsen.com/blog/2010/02/22/new-headset-thanks-to-e4voip.com/</guid>
+      <description>&lt;p&gt;Just got my new Plantronics headset from &lt;a href=&#34;http://www.e4voip.com&#34;&gt;http://www.e4voip.com&lt;/a&gt; (or rather, the hardware store at &lt;a href=&#34;http://www.8774e4voip.com/&#34;&gt;http://www.8774e4voip.com/&lt;/a&gt;) and am extremely satisfied with the service. We had an issue with Purolator not wanting to deliver to the building and then not bothering to call me to let me know the address was incorrect. By the time I noticed and got the address corrected, they just decided to send back the package.&lt;/p&gt;
+
+&lt;p&gt;So after letting the guys at e4VoIP know what happened, they just drop shipped a headset via FedEx overnight and I had it by lunch the next day! Amazing service and great prices. I&amp;rsquo;m in Canada, so I know how much of a pain in the ass shipping across the border is, and usually there is a bunch of duty fees across the border, but this time around the headset didn&amp;rsquo;t cost me a thing.&lt;/p&gt;
+
+&lt;p&gt;I plan on getting a G.722 capable phone next because now that I have this headset attached to my Polycom, I&amp;rsquo;m kind of looking forward to high quality calls during the weekly VoIP Users Conference call! (&lt;a href=&#34;http://www.vuc.me&#34;&gt;http://www.vuc.me&lt;/a&gt;)&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Interview from Wind Mobile launch</title>
+      <link>http://blog.leifmadsen.com/blog/2010/02/09/interview-from-wind-mobile-launch/</link>
+      <pubDate>Tue, 09 Feb 2010 22:10:44 +0000</pubDate>
+      
+      <guid>http://blog.leifmadsen.com/blog/2010/02/09/interview-from-wind-mobile-launch/</guid>
+      <description>&lt;p&gt;I was interviewed at the Wind Mobile launch a couple of months ago, and was interviewed by an online publication. I didn&amp;rsquo;t remember which online publication it was, so had forgotten all about it until I noticed someone had posted a link to it in the on-asterisk mailing list. Enjoy!&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Wind Mobile launches with contract-free, unlimited plans&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Globalive&amp;rsquo;s Wind Mobile brand is officially live in Toronto and will soon be opening its doors in Calgary and other Canadian cities. The company&amp;rsquo;s pricing plans target some of the most disliked aspects of existing cell phone companies&amp;rsquo; practices.
+12/17/2009 5:00:00 AM By: Brian Jackson&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://www.itbusiness.ca/it/client/en/home/News.asp?id=55769&amp;amp;PageMem=1&#34;&gt;http://www.itbusiness.ca/it/client/en/home/News.asp?id=55769&amp;amp;PageMem=1&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;For a link directly to the video with me in it, check it out here: &lt;a href=&#34;http://www.itbusiness.ca/it/client/en/home/SingleVideo.asp?bcpid=1909906767&amp;amp;bctid=57891029001&#34;&gt;http://www.itbusiness.ca/it/client/en/home/SingleVideo.asp?bcpid=1909906767&amp;amp;bctid=57891029001&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Why NDAs are Useless</title>
+      <link>http://blog.leifmadsen.com/blog/2009/12/09/why-ndas-are-useless/</link>
+      <pubDate>Wed, 09 Dec 2009 23:01:04 +0000</pubDate>
+      
+      <guid>http://blog.leifmadsen.com/blog/2009/12/09/why-ndas-are-useless/</guid>
+      <description>&lt;p&gt;Here is a post I came across from my twitter feed discussing why NDAs are essentially useless and unenforceable in the digital age. Many good points are made, and for the most part I agree with them. I&amp;rsquo;m not quite so vehemently opposed to them as the author is as I know they aren&amp;rsquo;t enforceable. The reason I sign them is a good faith gesture to my clients. I think we both know they aren&amp;rsquo;t useful, but it gives the client a nice litmus test to determine whether I&amp;rsquo;m just looking to steal ideas, or at least to say, &amp;ldquo;Hey, it&amp;rsquo;d be great if you didn&amp;rsquo;t twitter or blog about anything you learn while looking at our system.&amp;rdquo; &amp;ndash; at least not directly of course, you can&amp;rsquo;t ask me to forget something I may have learned while working on a project for you :)&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://www.contrast.ie/blog/five-reasons-to-drop-ndas/&#34;&gt;http://www.contrast.ie/blog/five-reasons-to-drop-ndas/&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Cisco VPN Client on Ubuntu Karmic 9.10</title>
+      <link>http://blog.leifmadsen.com/blog/2009/11/27/cisco-vpn-client-on-ubuntu-karmic-9.10/</link>
+      <pubDate>Fri, 27 Nov 2009 13:19:44 +0000</pubDate>
+      
+      <guid>http://blog.leifmadsen.com/blog/2009/11/27/cisco-vpn-client-on-ubuntu-karmic-9.10/</guid>
+      <description>&lt;p&gt;I have a client who I need to connect to via a Cisco VPN, and since I use Ubuntu as my primary OS on my MacBook Pro, I&amp;rsquo;ve often needed to find some information about how to get the client working.&lt;/p&gt;
+
+&lt;p&gt;I had previously found some information about patching on Ubuntu 9.04 and it worked great, but since updating to 9.10 I had the same compile time issues I had before, which makes sense since the kernel is different now.&lt;/p&gt;
+
+&lt;p&gt;I found this site: &lt;a href=&#34;http://joepcremers.nl/wordpress/?p=1699&#34;&gt;http://joepcremers.nl/wordpress/?p=1699&lt;/a&gt; which had some good instructions for getting it going, but there almost appeared to be a patch missing, at least for my platform. The patch I needed was found on this site here: &lt;a href=&#34;http://www.painfullscratch.nl/code/vpn/&#34;&gt;http://www.painfullscratch.nl/code/vpn/&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;All the patches for the VPN client appear to have come from the tuxx-home.at forums: &lt;a href=&#34;http://forum.tuxx-home.at/viewforum.php?f=15&#34;&gt;http://forum.tuxx-home.at/viewforum.php?f=15&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Hopefully that gets you all the information you need to get your Cisco VPN client working on Ubuntu Karmic 9.10!&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Update: June 15, 2010&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;So I&amp;rsquo;ve been having some problems trying to get the Cisco VPN client working past a certain kernel version update (I think it&amp;rsquo;s something like 2.6.19-something). I&amp;rsquo;m currently running 2.6.31-22-generic x86_64. I spent a bit of time trying to figure out why I couldn&amp;rsquo;t get past that older kernel (and to avoid rebooting). On some kernels it would lock up the system entirely, on other kernels the CPN client just wouldn&amp;rsquo;t connect.&lt;/p&gt;
+
+&lt;p&gt;After some web searching, I came across this blog post dated September 2009: &lt;a href=&#34;http://ilapstech.blogspot.com/2009/09/cisco-vpn-client-on-karmic-koala.html&#34;&gt;http://ilapstech.blogspot.com/2009/09/cisco-vpn-client-on-karmic-koala.html&lt;/a&gt;. It seems to have the patch I needed to get around a compile time option that is described on that blog post. The error I was getting when compiling was:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;CC [M]  /usr/src/vpnclient/interceptor.o
+/usr/src/vpnclient/interceptor.c: In function ‘add_netdev’:
+/usr/src/vpnclient/interceptor.c:284: error: assignment of read-only location ‘*dev-&amp;gt;netdev_ops’
+/usr/src/vpnclient/interceptor.c: In function ‘remove_netdev’:
+/usr/src/vpnclient/interceptor.c:311: error: assignment of read-only location ‘*dev-&amp;gt;netdev_ops’
+make[2]: *** [/usr/src/vpnclient/interceptor.o] Error 1
+make[1]: *** [_module_/usr/src/vpnclient] Error 2
+make[1]: Leaving directory `/usr/src/linux-headers-2.6.31-22-generic&#39;
+make: *** [default] Error 2
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;After the patch provided on that blog post I was still getting an error like so:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;Making module
+make -C /lib/modules/2.6.31-22-generic/build SUBDIRS=/usr/src/vpnclient-4.8.02.0030 modules
+make[1]: Entering directory `/usr/src/linux-headers-2.6.31-22-generic&#39;
+scripts/Makefile.build:49: *** CFLAGS was changed in &amp;quot;/usr/src/vpnclient-4.8.02.0030/Makefile&amp;quot;. Fix it to use EXTRA_CFLAGS.  Stop.
+make[1]: *** [_module_/usr/src/vpnclient-4.8.02.0030] Error 2
+make[1]: Leaving directory `/usr/src/linux-headers-2.6.31-22-generic&#39;
+make: *** [default] Error 2
+Failed to make module &amp;quot;cisco_ipsec.ko&amp;quot;.
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Oh I&amp;rsquo;ve seen that error before. I used a patch from a site I mentioned earlier: &lt;a href=&#34;http://www.painfullscratch.nl/code/vpn/&#34;&gt;http://www.painfullscratch.nl/code/vpn/&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Note that I&amp;rsquo;ve not actually checked to see if I only needed the latter patch, but with a combination of patch with the first site I mentioned in this update followed by the above mentioned sites patch, I was able to get onto my VPN connection for the client I require this for. Hope it helps!&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Creating vCards with QR Codes</title>
+      <link>http://blog.leifmadsen.com/blog/2009/08/27/creating-vcards-with-qr-codes/</link>
+      <pubDate>Thu, 27 Aug 2009 14:02:24 +0000</pubDate>
+      
+      <guid>http://blog.leifmadsen.com/blog/2009/08/27/creating-vcards-with-qr-codes/</guid>
+      <description>&lt;p&gt;Recently I&amp;rsquo;ve been noticing a lot more use of QR codes around the internet. A QR code is those 2D matrices that look like a bar code, but aren&amp;rsquo;t just the ordinary vertical lines that you would see on your box of cereal. These are a box that contain pixels that have been coded to contain information about pretty much anything. I&amp;rsquo;ve been seeing some people using them for contact information, web links, and pretty much anything you can think of to distribute information.&lt;/p&gt;
+
+&lt;p&gt;I also recently saw a show on Discovery where in Japan people will post these large images on a wall somewhere hoping people will scan them with their cell phones, thereby visiting a site of a product, or perhaps giving information about an upcoming show.&lt;/p&gt;
+
+&lt;p&gt;These codes can then be scanned by an application on your cell phone which then displays the data for you. On my Nokia E71, if I scan in a QR code which is in the format of a vCard, then my phone will recognize that, and let me save the contact information to my phone book. How cool is that!&lt;/p&gt;
+
+&lt;p&gt;I figured it&amp;rsquo;d be neat to build a vCard (which is a standard format that can be used by cell phones to distribute contact information so you can easily add it to your phone book), so I went looking on the internet for some free QR code generators, specifically for vCards. I was somewhat disappointed because all the vCard generators seemed to be missing a field for a SIP URI, which I wanted to add. So I ended up using Wikipedia to find the standard vCard format, and then noticed I just needed to add the X-SIP field to my vCard information, and voila, I had the field I wanted!&lt;/p&gt;
+
+&lt;p&gt;If you want to generate a vCard as well, you can use the &lt;a href=&#34;http://www.invx.com&#34;&gt;http://www.invx.com&lt;/a&gt; website. I found it the most forgiving, and generated the best QR codes. Additionally, it generates a semacode at the same time if you&amp;rsquo;re looking for that kind of thing :)&lt;/p&gt;
+
+&lt;p&gt;Here is the result of my internet scouring for QR code data generators. If you wanna try it out, feel free to scan with your cell phone and add my contact details to your cell phone! If you don&amp;rsquo;t have a bar code scanner for your cell phone, then there are several that you can find on the Internet. I tried one from &lt;a href=&#34;http://www.i-nigma.com&#34;&gt;http://www.i-nigma.com&lt;/a&gt; which seemed to work pretty well. I have one that comes with my cell phone anyways, which I actually liked quite a bit, so I&amp;rsquo;m just using that, but thought I&amp;rsquo;d try something else just for fun. You can also install it from you cell phone by visiting &lt;a href=&#34;http://www.i-nigma.mobi&#34;&gt;http://www.i-nigma.mobi&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;NOTE: At some point you can only encode so much information into the graphic because the cell phone seems to get confused. For example, the image I&amp;rsquo;m generating below seems to be pretty much at the limit that my cell phone will easily pick up. It seems to be the more data you encode, the less likely your cell is to pick it up on the first try.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://leifmadsen.com/sites/default/files/qr-code-vcard3.0.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Update (2011/04/11): This is the most popular post I&amp;rsquo;ve ever written it seems, and it blows the other posts out of the water in terms of constant views. It seems that QR Codes are very popular now and will continue to do so. Blackberry users have a QR Code for adding accounts to the BBM, most products now contain a small QR Code which matches the barcode, and we&amp;rsquo;re seeing QR codes on business cards, and in random spots for advertising which get people to a webpage. The latest edition to the web is Kimtag which is a QR code that takes you to a webpage that contains all a persons contact information and social media links. Here is mine:&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://kimtag.com/leifmadsen&#34;&gt;&lt;img src=&#34;http://ix.kimtag.com/leifmadsen_qrs.png&#34; alt=&#34;QR Code for leifmadsen at Kimtag&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Update (2011/04/12): Been doing more research as to how to get contacts into my Blackberry, and it seems the best way is to really just create a QRCode that goes to an external site and then provides the vCard that way. Below is a graphic I generated at &lt;a href=&#34;http://qrcode.offermobi.com/qrgen/vcard/&#34;&gt;http://qrcode.offermobi.com/qrgen/vcard/&lt;/a&gt; which seems to work quite well. The advantage is you can use the QRcode scanner in the BBM application. (I tried it on a recent version of BBM using the &amp;lsquo;Scan a Group Barcode&amp;rsquo; option.) Enjoy!&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://qrcode.offermobi.com/images/barcodes/vcard/1/164-1302631602.gif&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Suzanne Bowen Interviews Leif Madsen, Asterisk Rockstar</title>
+      <link>http://blog.leifmadsen.com/blog/2009/07/30/suzanne-bowen-interviews-leif-madsen-asterisk-rockstar/</link>
+      <pubDate>Thu, 30 Jul 2009 22:11:17 +0000</pubDate>
+      
+      <guid>http://blog.leifmadsen.com/blog/2009/07/30/suzanne-bowen-interviews-leif-madsen-asterisk-rockstar/</guid>
+      <description>&lt;p&gt;Today I had the privilege to be interviewed by &lt;a href=&#34;http://www.twitter.com/suzannebowen&#34;&gt;Suzanne Bowen&lt;/a&gt; of &lt;a href=&#34;http://www.didx.net&#34;&gt;DIDX&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;You can find the interview at &lt;a href=&#34;http://www.didx.net/podcast/?p=episode&amp;amp;name=2009-07-30_leifmadsenjul312009.mp3&#34;&gt;http://www.didx.net/podcast/?p=episode&amp;amp;name=2009-07-30_leifmadsenjul312009.mp3&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Hope you enjoy!&lt;/p&gt;
+
+&lt;p&gt;Here is a description of the interview:&lt;/p&gt;
+
+&lt;p&gt;&amp;ldquo;Truth is that I &amp;ldquo;met&amp;rdquo; the authors of the book &amp;ldquo;&lt;a href=&#34;http://www.asteriskdocs.org&#34;&gt;Asterisk, the Future of Telephony&lt;/a&gt;&amp;rdquo; when I was an English teacher and had volunteered over email to help edit the documentation. It was a joy to interview Leif Madsen. The Asterisk rockstar* shares with us the history of how he became interested in voice, telephony, Asterisk and open source.&lt;/p&gt;
+
+&lt;p&gt;We discussed the &amp;ldquo;cliques or special interest groups&amp;rdquo; in telecommunications, in fact three.
+1. Old style, keep it closed, don&amp;rsquo;t share, beat the competition, sell it at an inflated price, and it&amp;rsquo;s all about the money.
+2. It should all be free and if you are not offering it free, you&amp;rsquo;re not one of us.
+3. With a happy medium area of those who realize that people do need a paycheck to take care of their lives. At the same time, be willing to give back in an open source manner. Like a compromise!&lt;/p&gt;
+
+&lt;p&gt;Advice for entrepreneurs&amp;hellip; Leif says he&amp;rsquo;s more a technical guy but he definitely did not want to work for someone else and being in your own business assures that. You must create content that is of value to other people. For him, it worked with his documentation projects such as the &lt;a href=&#34;http://www.oreilly.com&#34;&gt;O&amp;rsquo;Reilly&lt;/a&gt; book and he&amp;rsquo;s now a successful Asterisk consultant and author.&lt;/p&gt;
+
+&lt;p&gt;Websites he uses most? news.google.com and &lt;a href=&#34;http://www.twitter.com/leifmadsen&#34;&gt;Twitter!&lt;/a&gt; Also Asterisk IRC channel.&lt;/p&gt;
+
+&lt;p&gt;Who inspires Leif Madsen? James Shaw, his friend since age 17 when Leif took Jim&amp;rsquo;s place working on at a computer store. Second one is Jim Van Meggelen. Leif describes him as a guy who can make you laugh and enjoy life, not a workoholic, and a good example for public speaking.&lt;/p&gt;
+
+&lt;p&gt;What do people ask him most often about the O&amp;rsquo;Reilly book? When are you going to write a new version? And that&amp;rsquo;s tough because Asterisk is progressing fast with changes by the second.&lt;/p&gt;
+
+&lt;p&gt;Leif will be at &lt;a href=&#34;http://www.astricon.net&#34;&gt;Astricon&lt;/a&gt; Oct 13-15, 2009 in Glendale. He will be &lt;a href=&#34;http://www.astricon.net/confDescriptions.aspx?t=CC#CC-01&#34;&gt;speaking&lt;/a&gt; 10 AM on Oct. 14, 2009. He usually attends &lt;a href=&#34;http://www.it360.ca&#34;&gt;IT360&lt;/a&gt; in Toronto every year. You can learn from him, contact him, do business with him at &lt;a href=&#34;http://www.leifmadsen.com&#34;&gt;http://www.leifmadsen.com&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;You can listen to other podcast interviews on DIDX podcasts at &lt;a href=&#34;http://www.didx.net/podcast&#34;&gt;http://www.didx.net/podcast&lt;/a&gt;.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;After polling 11 people how I should define Leif, 10 said, they voted rockstar.&amp;rdquo;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
