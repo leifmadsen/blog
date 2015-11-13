@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Devops on Asterisk, and other worldly endeavours</title>
+    <link>http://blog.leifmadsen.com/tags/devops/</link>
+    <description>Recent content in Devops on Asterisk, and other worldly endeavours</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 22 Aug 2012 18:49:43 +0000</lastBuildDate>
+    <atom:link href="http://blog.leifmadsen.com/tags/devops/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Selecting Chef Servers With Environment Variables</title>
+      <link>http://blog.leifmadsen.com/blog/2012/08/22/selecting-chef-servers-with-environment-variables/</link>
+      <pubDate>Wed, 22 Aug 2012 18:49:43 +0000</pubDate>
+      
+      <guid>http://blog.leifmadsen.com/blog/2012/08/22/selecting-chef-servers-with-environment-variables/</guid>
+      <description>&lt;p&gt;Today I got playing around with dynamically selecting different chef servers in preparation for migrating some of &lt;a href=&#34;http://coredial.com&#34;&gt;our&lt;/a&gt; nodes away from our chef-dev server to our chef-live server (which I&amp;rsquo;m currently in the process of building and populating with data). I had been talking in the #chef IRC channel a few weeks back about making things dynamic, or at least easily switchable, when using multiple chef servers for different groups of servers in an environment.&lt;/p&gt;
+
+&lt;p&gt;What I want to do, is be able to set an environment variable at my console in order to switch between chef servers. Previously I had been doing this with different files in my ~/.chef/ directory and changing symlinks between the files. This method works, but is kind of annoying. So with the help of some of the folks in #chef, and with &lt;a href=&#34;https://gist.github.com/3176332&#34;&gt;this gist&lt;/a&gt; of a sample file that someone is using for their hosted chef environment, I was able to build my own knife.rb and commit it to our chef.git repository.&lt;/p&gt;
+
+&lt;p&gt;In our &lt;strong&gt;chef.git&lt;/strong&gt; repository, I created a directory &lt;strong&gt;.chef&lt;/strong&gt; and placed a &lt;strong&gt;knife.rb&lt;/strong&gt; file in it:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;$ cd ~/src/chef-repo
+$ mkdir .chef
+$ touch .chef/knife.rb
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;I then filled &lt;strong&gt;knife.rb&lt;/strong&gt; with the following contents:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-ruby&#34;&gt;current_dir = File.dirname(__FILE__)
+
+sys_user = ENV[&amp;quot;USER&amp;quot;]
+
+log_level                :info
+log_location             STDOUT
+node_name                sys_user
+client_key               &amp;quot;#{ENV[&amp;quot;HOME&amp;quot;]}/.chef/#{ENV[&amp;quot;KNIFE_ENV&amp;quot;]}/#{ENV[&amp;quot;USER&amp;quot;]}.pem&amp;quot;
+validation_client_name   &amp;quot;chef-validator&amp;quot;
+validation_key           &amp;quot;#{ENV[&amp;quot;HOME&amp;quot;]}/.chef/#{ENV[&amp;quot;KNIFE_ENV&amp;quot;]}/validator.pem&amp;quot;
+chef_server_url          &amp;quot;http://chef-#{ENV[&amp;quot;KNIFE_ENV&amp;quot;]}.shifteight.org:4000&amp;quot;
+cache_type               &#39;BasicFile&#39;
+cache_options( :path =&amp;gt; &amp;quot;#{ENV[&#39;HOME&#39;]}/.chef/checksums&amp;quot; )
+cookbook_path            [ &amp;quot;#{current_dir}/../cookbooks&amp;quot;, &amp;quot;#{current_dir}/../site-cookbooks&amp;quot; ]
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;The main key is the KNIFE_ENV environment variable which I set using: &lt;code&gt;export KNIFE_ENV=dev&lt;/code&gt; or &lt;code&gt;export KNIFE_ENV=live&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;After setting the environment variable, which server I&amp;rsquo;m using is selected for me. Additionally, I copied my validation.pem and client.pem files into corresponding directories in my ~/.chef/ directory: &lt;code&gt;$ mkdir ~/.chef/{live,dev}&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;With all that done, I can now easily switch between our different servers in order to start the migration of our nodes. (I might create another blog post about that in the future if I get a chance.)&lt;/p&gt;
+
+&lt;p&gt;&amp;ldquo;BUT HOW DO I KNOW WHICH ENVIRONMENT I&amp;rsquo;M WORKING WITH?!?!?!&amp;rdquo;, you say? Oh fancy this little PS1 and function I added to my ~/.bashrc file:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;if [ &amp;quot;$KNIFE_ENV&amp;quot; == &amp;quot;&amp;quot; ]; then
+ export KNIFE_ENV=&amp;quot;dev&amp;quot;
+fi
+
+function which_env {
+  if [ &amp;quot;$KNIFE_ENV&amp;quot; == &amp;quot;live&amp;quot; ]; then
+    echo &amp;quot;31&amp;quot;
+  else
+    echo &amp;quot;32&amp;quot;
+  fi
+}
+
+export PS1=&#39;[\u@\h \[\033[0;36m\]\W$(__git_ps1 &amp;quot;\[\033[0m\]\[\033[0;33m\](%s) \[\033[0;`which_env`m\]~$KNIFE_ENV~&amp;quot;)\[\033[0m\]]\$ &#39;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Is nice :)&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Assign unique hostname to dhcp client with dnsmasq</title>
+      <link>http://blog.leifmadsen.com/blog/2012/07/23/assign-unique-hostname-to-dhcp-client-with-dnsmasq/</link>
+      <pubDate>Mon, 23 Jul 2012 19:14:45 +0000</pubDate>
+      
+      <guid>http://blog.leifmadsen.com/blog/2012/07/23/assign-unique-hostname-to-dhcp-client-with-dnsmasq/</guid>
+      <description>&lt;p&gt;Today I&amp;rsquo;ve been getting our lab environment setup with vagrant to auto-provision our lab servers with chef server in order to allow the development team to quickly and easily turn up and tear down web application servers.&lt;/p&gt;
+
+&lt;p&gt;Because when the server gets spun up with vagrant, it registers itself as a new node to the chef server using its hostname. Since using localhost for every node pretty much makes the chef server useless for more than 1 virtual machine at a time, I needed to figure out how to get dnsmasq to assign a unique hostname based on the IP address being provided by dnsmasq to the dhcp client.&lt;/p&gt;
+
+&lt;p&gt;I had seen a similar thing done with Amazon EC2 instances that when they turn up, they gets a hostname that looks similar to the private IP address it has been assigned. For example, if the private IP address assigned to the server was 192.168.12.14 it would get a hostname like &lt;em&gt;ip-192-168-12-14&lt;/em&gt;. I wanted to do a similar thing with our server.&lt;/p&gt;
+
+&lt;p&gt;After a little bit of Googling and reading the dnsmasq configuration file, it donned on me how simple this really was. You simply need to define the hostnames that the dnsmasq server could assign to a server, list those in the &lt;em&gt;/etc/hosts&lt;/em&gt; file on the dnsmasq server, and then define the hostname you wanted to provide to the server. I didn&amp;rsquo;t want to use the MAC address of the servers (a la &lt;em&gt;dhcp-host&lt;/em&gt; option) since the MAC address will be dynamic each time I spin up a virtual machine.&lt;/p&gt;
+
+&lt;p&gt;So in my &lt;em&gt;dnsmasq.conf&lt;/em&gt; file I might have something defined like&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;dhcp-range=90.100.1.120,90.100.1.124,24h
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;So in my &lt;em&gt;/etc/hosts&lt;/em&gt; file I&amp;rsquo;d just place the following to assign those unique hostnames:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;90.100.1.120    ip-90-100-1-120
+90.100.1.121    ip-90-100-1-121
+90.100.1.122    ip-90-100-1-122
+90.100.1.123    ip-90-100-1-123
+90.100.1.124    ip-90-100-1-124
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Integration Testing Using Jenkins (Part 1)</title>
+      <link>http://blog.leifmadsen.com/blog/2012/06/26/integration-testing-using-jenkins-part-1/</link>
+      <pubDate>Tue, 26 Jun 2012 12:51:30 +0000</pubDate>
+      
+      <guid>http://blog.leifmadsen.com/blog/2012/06/26/integration-testing-using-jenkins-part-1/</guid>
+      <description>&lt;p&gt;So for the last week or so, I&amp;rsquo;ve been tasked at &lt;a href=&#34;http://www.coredial.com&#34;&gt;CoreDial&lt;/a&gt; with adding our own set of integration testing now that we&amp;rsquo;re moving to a more formal deployment method using &lt;a href=&#34;http://wiki.opscode.com/display/chef/Home&#34;&gt;chef&lt;/a&gt;. After much pestering of questions to &lt;a href=&#34;https://github.com/thehar&#34;&gt;thehar&lt;/a&gt; of &lt;a href=&#34;https://www.mylookout.com/&#34;&gt;Lookout Mobile Security&lt;/a&gt; and with help of Google, #chef and jhansche in #jenkins I&amp;rsquo;ve finally got a nice clean proof of concept that we can evaluate and likely deploy.&lt;/p&gt;
+
+&lt;p&gt;I&amp;rsquo;ll come back later with another article on my installation issues with jenkins and the solutions that I solved (nothing too terribly complicated), but what I wanted to blog about was the two types of tests that I&amp;rsquo;ve been focusing on and was able to finally solve.&lt;/p&gt;
+
+&lt;p&gt;First, I wanted to simply get a working test going in &lt;a href=&#34;http://jenkins-ci.org/&#34;&gt;jenkins&lt;/a&gt; since I&amp;rsquo;d never used it before and needed a minimum viable product to look at. Based on a recommendation from thehar a couple weeks ago, I looked at &lt;a href=&#34;http://acrmp.github.com/foodcritic/&#34;&gt;foodcritic&lt;/a&gt;, got that working, and with their instructions, was able to get that integrated for my first automated test in jenkins.&lt;/p&gt;
+
+&lt;p&gt;The main problem I had was really getting an environment path variable set so that I could execute a ruby shell (&lt;code&gt;#!/usr/bin/env rvm-shell 1.9.3&lt;/code&gt;, in the foodcritic instructions). After some searching, I came across a hint (sorry, I&amp;rsquo;ve misplaced the link) that stated I needed to add &lt;code&gt;source /etc/profile&lt;/code&gt; to the bottom of my /etc/default/jenkins file, which worked marvellously to get the command I was trying to run to go. (Note that I installed on Ubuntu 12.04 for this test.)&lt;/p&gt;
+
+&lt;p&gt;(Prior to that, I installed &lt;a href=&#34;https://rvm.io/rvm/install/&#34;&gt;rvm&lt;/a&gt; and then ran the multi-user instructions to get ruby 1.9.3 installed. I also installed foodcritic via &lt;code&gt;gem install foodcritic&lt;/code&gt; which depends on ruby 1.9.2+.)&lt;/p&gt;
+
+&lt;p&gt;Having created my first job, I filled in the Git information to connect to my git server. I ran into a few issues there, and needed to create a new .ssh directory in /var/lib/jenkins/.ssh/ (/var/lib/jenkins is the $HOME directory of jenkins). I then placed the appropriate authentication keys in the directory, but was still having issues with connecting to the server. It ended up being that I needed to add a &lt;code&gt;config&lt;/code&gt; file to the .ssh directory with the following contents:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;Host coredial-git
+  HostName gitserver.hostname.com
+  User git
+  IdentityFile /var/lib/jenkins/.ssh/id_rsa.key
+  StrictHostKeyChecking no
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;After adding this, then I could set the repository URL to &lt;code&gt;git@coredial-git:chef-repo.git&lt;/code&gt; and the branch specifier to something like &lt;code&gt;*/feature/ENG-*&lt;/code&gt; in order to test all our engineering testing branches. I then setup &lt;strong&gt;Poll SCM&lt;/strong&gt; with polling schedule &lt;code&gt;*/5 * * * *&lt;/code&gt; (I set to */1 at first for testing, and will likely increase this further, or add a post-commit hook to git.)&lt;/p&gt;
+
+&lt;p&gt;The actual command I&amp;rsquo;m running in the Execute Shell section looks like this:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-ruby&#34;&gt;#!/usr/bin/env rvm-shell 1.9.3
+foodcritic -f any site-cookbooks/my_awesome_cookbook
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Then I saved the test, made some changes, and during the poll was able to trigger off both expected failed and expected passing tests. Very cool indeed!&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Now working with CoreDial</title>
+      <link>http://blog.leifmadsen.com/blog/2012/01/04/now-working-with-coredial/</link>
+      <pubDate>Wed, 04 Jan 2012 20:22:08 +0000</pubDate>
+      
+      <guid>http://blog.leifmadsen.com/blog/2012/01/04/now-working-with-coredial/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;https://si0.twimg.com/profile_images/1509716558/twitter-coredial-square-avatar_reasonably_small.png&#34; alt=&#34;&#34; /&gt; As of January 3rd, I&amp;rsquo;m now working with the CoreDial team full time. I&amp;rsquo;ve worked with them as a consultant on their infrastructure over the last few years but now will be spending significantly more time working with the engineering team :)&lt;/p&gt;
+
+&lt;p&gt;From the announcement,&lt;/p&gt;
+
+&lt;p&gt;“_CoreDial is pleased to announce the addition of Leif Madsen to the CoreDial team,” said Alan Rihm, CEO at CoreDial. “Leif is a well known Asterisk consultant who specializes in distributed telephony deployments and database integration. In addition, Leif is co-author of several O’Reilly published books on Asterisk, including Asterisk: The Definitive Guide (3rd edition). We’re pleased to be adding Leif to our team, and look forward to the exciting opportunity to work together._”&lt;/p&gt;
+
+&lt;p&gt;The entire announcement can be found at &lt;a href=&#34;http://coredial.com/asterisk-consultant-leif-madsen-joins-coredial-team/&#34;&gt;http://coredial.com/asterisk-consultant-leif-madsen-joins-coredial-team/&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;I&amp;rsquo;m really excited to be working with these guys, and to see what we&amp;rsquo;ll develop over the coming months! I&amp;rsquo;ll keep you informed here on my blog, and will continue to post Asterisk tidbits and snippets as I go.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

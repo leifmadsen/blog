@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Htb on Asterisk, and other worldly endeavours</title>
+    <link>http://blog.leifmadsen.com/tags/htb/</link>
+    <description>Recent content in Htb on Asterisk, and other worldly endeavours</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 02 Nov 2011 16:08:40 +0000</lastBuildDate>
+    <atom:link href="http://blog.leifmadsen.com/tags/htb/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Controlling outbound bitrate using tc</title>
+      <link>http://blog.leifmadsen.com/blog/2011/11/02/controlling-outbound-bitrate-using-tc/</link>
+      <pubDate>Wed, 02 Nov 2011 16:08:40 +0000</pubDate>
+      
+      <guid>http://blog.leifmadsen.com/blog/2011/11/02/controlling-outbound-bitrate-using-tc/</guid>
+      <description>&lt;p&gt;Today I was using the VMware vCenter Converter application to build a VM from a physical machine so that I could replace Ubuntu 10.04.3 LTS with VMware ESXi (and move the functionality that the server is performing now to a VM instead of it being the base OS).&lt;/p&gt;
+
+&lt;p&gt;Because my server is colocated in a friends rack, and the bandwidth is shared, I needed to limit the rate at which the data was being sent from the colocated server to the virtual machine server. I needed to do this so he didn&amp;rsquo;t get pages, and so that my local connection would remain viable for VoIP communication.&lt;/p&gt;
+
+&lt;p&gt;After scouring Google, I found this page: &lt;a href=&#34;http://opalsoft.net/qos/DS.htm&#34;&gt;http://opalsoft.net/qos/DS.htm&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;I looked at the HTB queuing section, and came up with a simple rate limiter for my outbound data to a specific IP. The example he shows is more complex, but it gave me enough to make it work. Here is what I entered at the console:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;tc qdisc del dev eth0 root  # clear existing rules
+tc qdisc add dev eth0 root handle 1:0 htb
+tc class add dev eth0 parent 1:0 classid 1:1 htb rate 2048kbit
+tc class add dev eth0 parent 1:1 classid 1:2 htb rate 1228kbit ceil 2048kbit
+tc class add dev eth0 parent 1:2 classid 1:21 htb rate 1228kbit ceil 2048kbit
+tc qdisc add dev eth0 parent 1:21 handle 210: pfifo limit 10
+tc filter add dev eth0 parent 1:0 protocol ip prio 1 u32 match ip dst 172.16.0.228/32 flowid 1:21
+
+iptables -t mangle -A OUTPUT --dest 172.16.0.228 -p tcp -j MARK --set-mark 21
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;I&amp;rsquo;m sure I could have made that a bit more efficient on lines 4 and 5, but not knowing a ton about &lt;strong&gt;tc&lt;/strong&gt; and the fact it worked, made me happy enough :)&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,89 @@
+---
+author: leifmadsen
+comments: true
+date: 2011-01-03 18:21:21+00:00
+layout: post
+slug: 2010-in-review
+title: 2010 in review
+wordpress_id: 272
+categories:
+- Musings
+---
+
+The stats helper monkeys at WordPress.com mulled over how this blog did in 2010, and here's a high level summary of its overall blog health:
+
+![Healthy blog!](http://s0.wp.com/i/annual-recap/meter-healthy5.gif)
+
+The _Blog-Health-o-Meter™_ reads Wow.
+
+
+## Crunchy numbers
+
+
+
+
+
+
+![Featured image](http://s0.wp.com/i/annual-recap/abstract-stats-1.png)
+
+_A helper monkey made this abstract painting, inspired by your stats._
+
+
+
+
+About 3 million people visit the Taj Mahal every year.  This blog was viewed about **39,000** times in 2010.  If it were the Taj Mahal, it would take about 5 days for that many people to see it.
+
+
+
+In 2010, there were **21** new posts, growing the total archive of this blog to 50 posts.
+
+The busiest day of the year was September 29th with **449** views. The most popular post that day was [Asterisk IMAP and Gmail](http://leifmadsen.wordpress.com/2010/09/20/asterisk-imap-and-gmail/).
+
+
+## Where did they come from?
+
+
+The top referring sites in 2010 were **venturevoip.com**, **leifmadsen.com**, **johnlange.ca**, **voip-info.org**, and **google.com**.
+
+Some visitors came searching, mostly for **qr code vcard**, **cisco vpn client ubuntu 9.10**, **cisco vpn ubuntu 9.10**, **vcard qr code**, and **asterisk mixmonitor**.
+
+
+## Attractions in 2010
+
+
+These are the posts and pages that got the most views in 2010.
+
+
+1
+
+
+[Asterisk IMAP and Gmail](http://leifmadsen.wordpress.com/2010/09/20/asterisk-imap-and-gmail/) September 2010
+4 comments and 1 Like on WordPress.com,
+
+
+2
+
+
+[Creating vCards with QR Codes](http://leifmadsen.wordpress.com/2009/08/27/creating-vcards-with-qr-codes/) August 2009
+30 comments
+
+
+3
+
+
+[Cisco VPN Client on Ubuntu Karmic 9.10](http://leifmadsen.wordpress.com/2009/11/27/cisco-vpn-client-on-ubuntu-karmic-9-10/) November 2009
+11 comments
+
+
+4
+
+
+[Using a Nokia E71 with Asterisk (3G or WiFi)](http://leifmadsen.wordpress.com/2010/03/19/using-a-nokia-e71-with-asterisk-3g-or-wifi/) March 2010
+11 comments
+
+
+5
+
+
+[Consuming SOAP complexType webservice with PHP](http://leifmadsen.wordpress.com/2009/08/04/consuming-soap-complextype-webservice-with-php/) August 2009
+21 comments

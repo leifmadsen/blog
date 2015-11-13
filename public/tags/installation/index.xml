@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Installation on Asterisk, and other worldly endeavours</title>
+    <link>http://blog.leifmadsen.com/tags/installation/</link>
+    <description>Recent content in Installation on Asterisk, and other worldly endeavours</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 06 Jan 2011 15:22:55 +0000</lastBuildDate>
+    <atom:link href="http://blog.leifmadsen.com/tags/installation/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Asterisk: The Definitive Guide -- Call For Reviewers!</title>
+      <link>http://blog.leifmadsen.com/blog/2011/01/06/asterisk-the-definitive-guide----call-for-reviewers/</link>
+      <pubDate>Thu, 06 Jan 2011 15:22:55 +0000</pubDate>
+      
+      <guid>http://blog.leifmadsen.com/blog/2011/01/06/asterisk-the-definitive-guide----call-for-reviewers/</guid>
+      <description>&lt;p&gt;Here is the text I posted to the asterisk-doc mailing list this morning. You can sign up for asterisk-doc at &lt;a href=&#34;http://lists.digium.com&#34;&gt;http://lists.digium.com&lt;/a&gt; and get involved! We&amp;rsquo;d love to make this the best book on Asterisk ever, and your input can make that true! Our goal is to build a book for, and by, the Asterisk community.&lt;/p&gt;
+
+&lt;p&gt;&amp;ldquo;_Hey all! _&lt;/p&gt;
+
+&lt;p&gt;_We&amp;rsquo;re getting VERY close to having the first draft of the next Asterisk book,  Asterisk: The Definitive Guide ready to be sent off to production. We&amp;rsquo;re very  close to meeting our target dates, but our review timeline is very tight. Only  about 2 weeks! _&lt;/p&gt;
+
+&lt;p&gt;_Each morning we&amp;rsquo;re continuing to work on the book, taking in your comments,  reviewing chapters, testing dialplan and installation steps, and all that good  stuff. _&lt;/p&gt;
+
+&lt;p&gt;_However, we&amp;rsquo;ve been looking at this book since May 2010 and our eyes are  starting to get glazed :) We&amp;rsquo;d love for the community to have a look at the book  and offer some constructive criticism. _&lt;/p&gt;
+
+&lt;p&gt;_It&amp;rsquo;s far too late to take requests for things to cover. What we have is what  we&amp;rsquo;re going to get in for this edition. After we finish this book though we plan  on continuing to update it, so there will be a chance to take suggestions again  soon. _&lt;/p&gt;
+
+&lt;p&gt;_For now, head on over to &lt;a href=&#34;http://ofps.oreilly.com&#34;&gt;http://ofps.oreilly.com&lt;/a&gt; and check out the book (updated  this morning). There are a couple of bugs in the OFPS software which are causing  comments to not be available after chapter 8, but we&amp;rsquo;re hoping to have those  resolved by Friday. However, we do have this fancy mailing list that we can use. _&lt;/p&gt;
+
+&lt;p&gt;_Russell, Jim and myself will be monitoring this list for comments, and we&amp;rsquo;ll try  and get all of them satisfied before publication. If there is a particular area  we&amp;rsquo;re covering that you&amp;rsquo;re an expert in, we&amp;rsquo;d love to have you focus on that  chapter. You can email me back directly for more information on what we might be  looking for in that type of situation. _&lt;/p&gt;
+
+&lt;p&gt;_We do have editors to help with grammar and spelling, but pointing anything out  is certainly useful. The best use of your time though is testing the dialplan  snippets, the installation instructions for both Ubuntu and CentOS (we&amp;rsquo;re  covering two Linux distributions this time around, which increases the testing  load significantly), and making sure anything we&amp;rsquo;re explaining is concise,  relates to what we&amp;rsquo;re talking about, and makes sense. The goal is to build an  Asterisk system from scratch, so following through our dialplan via the chapters  to make sure it all continues to build on itself would be ideal. _&lt;/p&gt;
+
+&lt;p&gt;_Additionally, if you see any sections which say, &amp;ldquo;see chapter XXX for more  information&amp;rdquo; that are not links, please let us know, as those are meant to be  placeholders until the chapters existed and we could link back to them. Now that  all chapters are created, we should be linking to the appropriate locations. If  you&amp;rsquo;re reading a section and notice a good spot to reference another part of the  book (for example, lets say we&amp;rsquo;re talking about database functionality in one of  the other chapters, and there is an appropriate spot in the Database Integration  chapter to link to), then let us know! _&lt;/p&gt;
+
+&lt;p&gt;_Thanks for your interest! Books should be shipping sometime between March and  April. Pre-orders are available now at &lt;a href=&#34;http://oreilly.com/catalog/9780596517342&#34;&gt;http://oreilly.com/catalog/9780596517342&lt;/a&gt;.  And yes, we&amp;rsquo;ll be releasing under a Creative Commons license like the last two  books, so you&amp;rsquo;ll have access to the book at any time online. _&lt;/p&gt;
+
+&lt;p&gt;_This book has been pretty much written from the ground up, and is well over 600  pages of content. It&amp;rsquo;s been a lot of work, but we hope you like it! _&lt;/p&gt;
+
+&lt;p&gt;_Thanks! _
+&lt;em&gt;Russell, Jim and Leif.&lt;/em&gt;&amp;ldquo;&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
