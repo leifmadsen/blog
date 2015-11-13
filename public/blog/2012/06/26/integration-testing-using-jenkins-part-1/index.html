@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
+<head>
+  <link href="http://gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+  <title>Integration Testing Using Jenkins (Part 1) &middot; Leif Madsen</title>
+
+  
+  <link rel="stylesheet" href="http://blog.leifmadsen.com/css/poole.css">
+  <link rel="stylesheet" href="http://blog.leifmadsen.com/css/hyde.css">
+  <link rel="stylesheet" href="http://blog.leifmadsen.com/css/poole-overrides.css">
+  <link rel="stylesheet" href="http://blog.leifmadsen.com/css/hyde-overrides.css">
+  <link rel="stylesheet" href="http://blog.leifmadsen.com/css/hyde-x.css">
+  <link rel="stylesheet" href="http://blog.leifmadsen.com/css/highlight/solarized_dark.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700|Abril+Fatface">
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+
+  
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="http://blog.leifmadsen.com/touch-icon-144-precomposed.png">
+  <link href="http://blog.leifmadsen.com/favicon.png" rel="icon">
+
+  
+  
+  
+  
+
+  <meta name="description" content="Leif Madsen Blog Entry">
+  <meta name="keywords" content="blog,asterisk,leif,madsen,canada">
+  
+</head>
+<body class="theme-base-0b">
+<div class="sidebar">
+  <div class="container sidebar-sticky">
+    <div class="sidebar-about">
+      
+        <img src="https://www.gravatar.com/avatar/77a1196d149eecdb3b35fb5db56d494e?s=200"
+             alt="gravatar" title="Leif Madsen">
+      
+      <h1>Leif Madsen</h1>
+      <p class="lead">Asterisk, and other worldly endeavours</p>
+    </div>
+
+    <ul class="sidebar-nav">
+      <li class="sidebar-nav-item"><a href="http://blog.leifmadsen.com/">Blog</a></li>
+      
+    </ul>
+
+    <ul class="sidebar-nav">
+      <li class="sidebar-nav-item">
+      <a href="http://github.com/leifmadsen"><i class="fa fa-github-square fa-3x"></i></a>
+      
+      
+      <a href="http://linkedin.com/in/leifmadsen"><i class="fa fa-linkedin-square fa-3x"></i></a>
+      
+      
+      <a href="http://twitter.com/leifmadsen"><i class="fa fa-twitter-square fa-3x"></i></a>
+      
+      <a href="" type="application/rss+xml"><i class="fa fa-rss-square fa-3x"></i></a>
+      </li>
+    </ul>
+
+    
+
+    <p>Copyright &copy; 2015 <a href="http://blog.leifmadsen.com/license/">License</a><br/>
+       Powered by <a href="http://gohugo.io">Hugo</a> and <a href="https://github.com/zyro/hyde-x">Hyde-X</a></p>
+  </div>
+</div>
+
+
+<div class="content container">
+  <div class="post">
+    <h1>Integration Testing Using Jenkins (Part 1)</h1>
+    <p>So for the last week or so, I&rsquo;ve been tasked at <a href="http://www.coredial.com">CoreDial</a> with adding our own set of integration testing now that we&rsquo;re moving to a more formal deployment method using <a href="http://wiki.opscode.com/display/chef/Home">chef</a>. After much pestering of questions to <a href="https://github.com/thehar">thehar</a> of <a href="https://www.mylookout.com/">Lookout Mobile Security</a> and with help of Google, #chef and jhansche in #jenkins I&rsquo;ve finally got a nice clean proof of concept that we can evaluate and likely deploy.</p>
+
+<p>I&rsquo;ll come back later with another article on my installation issues with jenkins and the solutions that I solved (nothing too terribly complicated), but what I wanted to blog about was the two types of tests that I&rsquo;ve been focusing on and was able to finally solve.</p>
+
+<p>First, I wanted to simply get a working test going in <a href="http://jenkins-ci.org/">jenkins</a> since I&rsquo;d never used it before and needed a minimum viable product to look at. Based on a recommendation from thehar a couple weeks ago, I looked at <a href="http://acrmp.github.com/foodcritic/">foodcritic</a>, got that working, and with their instructions, was able to get that integrated for my first automated test in jenkins.</p>
+
+<p>The main problem I had was really getting an environment path variable set so that I could execute a ruby shell (<code>#!/usr/bin/env rvm-shell 1.9.3</code>, in the foodcritic instructions). After some searching, I came across a hint (sorry, I&rsquo;ve misplaced the link) that stated I needed to add <code>source /etc/profile</code> to the bottom of my /etc/default/jenkins file, which worked marvellously to get the command I was trying to run to go. (Note that I installed on Ubuntu 12.04 for this test.)</p>
+
+<p>(Prior to that, I installed <a href="https://rvm.io/rvm/install/">rvm</a> and then ran the multi-user instructions to get ruby 1.9.3 installed. I also installed foodcritic via <code>gem install foodcritic</code> which depends on ruby 1.9.2+.)</p>
+
+<p>Having created my first job, I filled in the Git information to connect to my git server. I ran into a few issues there, and needed to create a new .ssh directory in /var/lib/jenkins/.ssh/ (/var/lib/jenkins is the $HOME directory of jenkins). I then placed the appropriate authentication keys in the directory, but was still having issues with connecting to the server. It ended up being that I needed to add a <code>config</code> file to the .ssh directory with the following contents:</p>
+
+<pre><code class="language-bash">Host coredial-git
+  HostName gitserver.hostname.com
+  User git
+  IdentityFile /var/lib/jenkins/.ssh/id_rsa.key
+  StrictHostKeyChecking no
+</code></pre>
+
+<p>After adding this, then I could set the repository URL to <code>git@coredial-git:chef-repo.git</code> and the branch specifier to something like <code>*/feature/ENG-*</code> in order to test all our engineering testing branches. I then setup <strong>Poll SCM</strong> with polling schedule <code>*/5 * * * *</code> (I set to */1 at first for testing, and will likely increase this further, or add a post-commit hook to git.)</p>
+
+<p>The actual command I&rsquo;m running in the Execute Shell section looks like this:</p>
+
+<pre><code class="language-ruby">#!/usr/bin/env rvm-shell 1.9.3
+foodcritic -f any site-cookbooks/my_awesome_cookbook
+</code></pre>
+
+<p>Then I saved the test, made some changes, and during the poll was able to trigger off both expected failed and expected passing tests. Very cool indeed!</p>
+
+  </div>
+</div>
+<script src="http://blog.leifmadsen.com/js/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+</body>
+</html>

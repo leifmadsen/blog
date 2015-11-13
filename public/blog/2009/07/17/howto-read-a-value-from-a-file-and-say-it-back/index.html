@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
+<head>
+  <link href="http://gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+  <title>HowTo: Read a value from a file, and say it back &middot; Leif Madsen</title>
+
+  
+  <link rel="stylesheet" href="http://blog.leifmadsen.com/css/poole.css">
+  <link rel="stylesheet" href="http://blog.leifmadsen.com/css/hyde.css">
+  <link rel="stylesheet" href="http://blog.leifmadsen.com/css/poole-overrides.css">
+  <link rel="stylesheet" href="http://blog.leifmadsen.com/css/hyde-overrides.css">
+  <link rel="stylesheet" href="http://blog.leifmadsen.com/css/hyde-x.css">
+  <link rel="stylesheet" href="http://blog.leifmadsen.com/css/highlight/solarized_dark.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700|Abril+Fatface">
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+
+  
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="http://blog.leifmadsen.com/touch-icon-144-precomposed.png">
+  <link href="http://blog.leifmadsen.com/favicon.png" rel="icon">
+
+  
+  
+  
+  
+
+  <meta name="description" content="Leif Madsen Blog Entry">
+  <meta name="keywords" content="blog,asterisk,leif,madsen,canada">
+  
+</head>
+<body class="theme-base-0b">
+<div class="sidebar">
+  <div class="container sidebar-sticky">
+    <div class="sidebar-about">
+      
+        <img src="https://www.gravatar.com/avatar/77a1196d149eecdb3b35fb5db56d494e?s=200"
+             alt="gravatar" title="Leif Madsen">
+      
+      <h1>Leif Madsen</h1>
+      <p class="lead">Asterisk, and other worldly endeavours</p>
+    </div>
+
+    <ul class="sidebar-nav">
+      <li class="sidebar-nav-item"><a href="http://blog.leifmadsen.com/">Blog</a></li>
+      
+    </ul>
+
+    <ul class="sidebar-nav">
+      <li class="sidebar-nav-item">
+      <a href="http://github.com/leifmadsen"><i class="fa fa-github-square fa-3x"></i></a>
+      
+      
+      <a href="http://linkedin.com/in/leifmadsen"><i class="fa fa-linkedin-square fa-3x"></i></a>
+      
+      
+      <a href="http://twitter.com/leifmadsen"><i class="fa fa-twitter-square fa-3x"></i></a>
+      
+      <a href="" type="application/rss+xml"><i class="fa fa-rss-square fa-3x"></i></a>
+      </li>
+    </ul>
+
+    
+
+    <p>Copyright &copy; 2015 <a href="http://blog.leifmadsen.com/license/">License</a><br/>
+       Powered by <a href="http://gohugo.io">Hugo</a> and <a href="https://github.com/zyro/hyde-x">Hyde-X</a></p>
+  </div>
+</div>
+
+
+<div class="content container">
+  <div class="post">
+    <h1>HowTo: Read a value from a file, and say it back</h1>
+    
+
+<h3 id="preamble:0d635cd39416ed1b6422f4dcd67cbe23">Preamble</h3>
+
+<p>Today on the <a href="http://www.voipusersconference.org/">VoIP Users Conference</a> we discussed my request for recipe ideas in order to start developing some additional documentation. Specifically, I&rsquo;m looking for problems that are simple, common problems that can be solved in the dialplan, and which are good examples of the dialplan language (markup, script, yadda yadda).</p>
+
+<p>One of the suggestions was something posted to the Asterisk mailing list which was pretty straight forward: to read in the contents of a file, where the file contained a number which was the current temperature. This file was created by an external script, and the poster was looking for how to read in the contents of that file, and play back something that would say the number, followed by &ldquo;degrees&rdquo;.</p>
+
+<p>The discussion delved into some possible solutions, and delved into the problem with writing Asterisk recipes in general; that there are always several ways to skin the same cat. Below I will mention some of the examples that had come up on the conference call in the Discussion section, and will then show a dialplan (that works on Asterisk 1.4) that will solve the problem proposed in the Solution section.</p>
+
+<h3 id="problem:0d635cd39416ed1b6422f4dcd67cbe23">Problem</h3>
+
+<p>To read the contents of a file, where the contents will contain a number, that needs to be read back to the caller, followed by the word &ldquo;degrees&rdquo;.</p>
+
+<h3 id="solution:0d635cd39416ed1b6422f4dcd67cbe23">Solution</h3>
+
+<pre><code>[subSayCurrentTemperature]
+exten =&gt; start,1,Verbose(2,Saying the current temperature back to channel ${CHANNEL})
+
+; first, lets verify the the file exists for reading in data
+exten =&gt; start,n,Set(PATH_TO_FILE=/tmp/current_temp.txt)
+exten =&gt; start,n,Set(FILE_STATUS=${STAT(e,${PATH_TO_FILE})})
+exten =&gt; start,n,GotoIf($[&quot;${FILE_STATUS}&quot; = &quot;&quot; | &quot;${FILE_STATUS}&quot; = &quot;0&quot;]?no_file,1)
+
+; next lets read in the value from the file since it exists
+exten =&gt; start,n,Set(MAX_FILE_CHARACTERS=256)
+exten =&gt; start,n,ReadFile(TEMPERATURE=${PATH_TO_FILE},${MAX_FILE_CHARACTERS})
+exten =&gt; start,n,GotoIf($[${ISNULL(${TEMPERATURE})}]?no_file,1)                               ; verify we got a value
+
+; say the temperature
+exten =&gt; start,n,Playback(silence/1)
+exten =&gt; start,n,SayNumber(${TEMPERATURE})
+exten =&gt; start,n,Playback(en/degrees&amp;en;/fahrenheit)
+exten =&gt; start,n,Return()
+
+exten =&gt; no_file,1,Verbose(2,File does not exist)
+exten =&gt; no_file,n,Playback(silence/1)
+exten =&gt; no_file,n,Playback(en/feature-not-avail-line)
+exten =&gt; no_file,n,Return()
+</code></pre>
+
+<p>And then you can setup some sort of test number that will call the subroutine (I&rsquo;m using <code>GoSub()</code>).</p>
+
+<pre><code>[incoming]
+exten =&gt; 555,1,Verbose(2,Checking temperature)
+exten =&gt; 555,n,GoSub(subSayCurrentTemperature,start,1)
+exten =&gt; 555,n,Hangup()
+</code></pre>
+
+<h3 id="discussion:0d635cd39416ed1b6422f4dcd67cbe23">Discussion</h3>
+
+<p>The solution above is really the &ldquo;right&rdquo; way to do it in Asterisk. But with Asterisk, there always seems to be many &ldquo;right&rdquo; ways to solve the same solution. Because the problem was to read in the contents of a file and to say the contents back, then the solution I provided certainly solves that problem directly in dialplan without any external scripts, or dropping to the console.</p>
+
+<p>There were several other solutions that could have been provided for this solution since there was an external PHP script that was generating the file and its contents. That script could have done any of the following:</p>
+
+<ul>
+<li>Execute a shell command, and write the contents to the Asterisk database: <code>asterisk -rx &quot;database put temperature current 60&quot;</code></li>
+<li>Write the contents to a relational database such as MySQL and use func_odbc:  <code>Set(TEMPERATURE=${ODBC_TEMP()})</code></li>
+<li>Setup a webpage and parse it with curl: <code>Set(TEMPERATURE=${CURL(http://website.tld/temperature.php)})</code></li>
+<li>On Asterisk 1.6, there is the SHELL() function: <code>Set(TEMPERATURE=${SHELL(cat /tmp/current_temperature.txt)})</code></li>
+</ul>
+
+<p>I particularly like the curl solution since it allows the script to lookup the temperature when the CURL() function calls it, which means it can be real time and not delayed like writing to a text file can be.</p>
+
+<p>So like with all things Asterisk, there are always many inventive ways to solve the same solution.</p>
+
+  </div>
+</div>
+<script src="http://blog.leifmadsen.com/js/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+</body>
+</html>
