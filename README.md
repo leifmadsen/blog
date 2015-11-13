@@ -1,2 +1,4 @@
-# hugo_gh_blog
-Source for Hugo based blog site
+# blog.leifmadsen.com
+Source for [Hugo](https://gohugo.io/) based blog site, posted at http://blog.leifmadsen.com
+
+If you feel like submitting a blog post, feel free to do it via pull request.
