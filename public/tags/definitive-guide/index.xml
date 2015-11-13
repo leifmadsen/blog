@@ -2,19 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Definitive Guide on Asterisk, and other worldly endeavours</title>
-    <link>http://leifmadsen.github.io/hugo_gh_blog/tags/definitive-guide/</link>
+    <link>http://blog.leifmadsen.com/tags/definitive-guide/</link>
     <description>Recent content in Definitive Guide on Asterisk, and other worldly endeavours</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Thu, 16 May 2013 13:31:46 +0000</lastBuildDate>
-    <atom:link href="http://leifmadsen.github.io/hugo_gh_blog/tags/definitive-guide/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://blog.leifmadsen.com/tags/definitive-guide/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Asterisk: The Definitive Guide 4th Edition goes to print</title>
-      <link>http://leifmadsen.github.io/hugo_gh_blog/blog/2013/05/16/asterisk-the-definitive-guide-4th-edition-goes-to-print/</link>
+      <link>http://blog.leifmadsen.com/blog/2013/05/16/asterisk-the-definitive-guide-4th-edition-goes-to-print/</link>
       <pubDate>Thu, 16 May 2013 13:31:46 +0000</pubDate>
       
-      <guid>http://leifmadsen.github.io/hugo_gh_blog/blog/2013/05/16/asterisk-the-definitive-guide-4th-edition-goes-to-print/</guid>
+      <guid>http://blog.leifmadsen.com/blog/2013/05/16/asterisk-the-definitive-guide-4th-edition-goes-to-print/</guid>
       <description>&lt;p&gt;Howdy folks,&lt;/p&gt;
 
 &lt;p&gt;Sorry for the lack of updates lately. I&amp;rsquo;ve recently (December 2012) started at Thinking Phone Networks as the Lead UC Systems Engineer, and we&amp;rsquo;ve been incredibly busy there. In addition, the authors and I had been working on the final touches to the 4th edition of Asterisk: The Definitive Guide, which documents Asterisk 11 LTS.&lt;/p&gt;

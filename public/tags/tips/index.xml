@@ -2,19 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tips on Asterisk, and other worldly endeavours</title>
-    <link>http://leifmadsen.github.io/hugo_gh_blog/tags/tips/</link>
+    <link>http://blog.leifmadsen.com/tags/tips/</link>
     <description>Recent content in Tips on Asterisk, and other worldly endeavours</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sat, 13 Aug 2011 02:14:55 +0000</lastBuildDate>
-    <atom:link href="http://leifmadsen.github.io/hugo_gh_blog/tags/tips/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://blog.leifmadsen.com/tags/tips/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Set() and Goto() on same line</title>
-      <link>http://leifmadsen.github.io/hugo_gh_blog/blog/2011/08/13/set-and-goto-on-same-line/</link>
+      <link>http://blog.leifmadsen.com/blog/2011/08/13/set-and-goto-on-same-line/</link>
       <pubDate>Sat, 13 Aug 2011 02:14:55 +0000</pubDate>
       
-      <guid>http://leifmadsen.github.io/hugo_gh_blog/blog/2011/08/13/set-and-goto-on-same-line/</guid>
+      <guid>http://blog.leifmadsen.com/blog/2011/08/13/set-and-goto-on-same-line/</guid>
       <description>&lt;p&gt;(Thanks to Jared Smith for answering my question in IRC which is the inspiration for this post.)&lt;/p&gt;
 
 &lt;p&gt;Typically when I write dialplan, primarily in the case where I&amp;rsquo;m using a pattern match, I&amp;rsquo;ll save the dialed extension to a channel variable using &lt;code&gt;Set()&lt;/code&gt;, then do a &lt;code&gt;Goto()&lt;/code&gt; where the call logic is handled. The &lt;code&gt;Set()&lt;/code&gt; is so that I don&amp;rsquo;t lose the value of &lt;code&gt;${EXTEN}&lt;/code&gt; throughout the dialplan process, especially if I&amp;rsquo;m using other mechanics such as &lt;code&gt;GoSub()&lt;/code&gt; and others.&lt;/p&gt;

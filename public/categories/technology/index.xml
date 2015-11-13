@@ -2,19 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Technology on Asterisk, and other worldly endeavours</title>
-    <link>http://leifmadsen.github.io/hugo_gh_blog/categories/technology/</link>
+    <link>http://blog.leifmadsen.com/categories/technology/</link>
     <description>Recent content in Technology on Asterisk, and other worldly endeavours</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sat, 24 Nov 2012 22:06:03 +0000</lastBuildDate>
-    <atom:link href="http://leifmadsen.github.io/hugo_gh_blog/categories/technology/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://blog.leifmadsen.com/categories/technology/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Brother printer doesn&#39;t print in Fedora 17</title>
-      <link>http://leifmadsen.github.io/hugo_gh_blog/blog/2012/11/24/brother-printer-doesnt-print-in-fedora-17/</link>
+      <link>http://blog.leifmadsen.com/blog/2012/11/24/brother-printer-doesnt-print-in-fedora-17/</link>
       <pubDate>Sat, 24 Nov 2012 22:06:03 +0000</pubDate>
       
-      <guid>http://leifmadsen.github.io/hugo_gh_blog/blog/2012/11/24/brother-printer-doesnt-print-in-fedora-17/</guid>
+      <guid>http://blog.leifmadsen.com/blog/2012/11/24/brother-printer-doesnt-print-in-fedora-17/</guid>
       <description>&lt;p&gt;&lt;strong&gt;Tip: If your Brother printer won&amp;rsquo;t print after installing the drivers, install glibc.i686&lt;/strong&gt;&lt;/p&gt;
 
 &lt;p&gt;Today ran into an issue with my new Brother MFC-7460DN (which is a really nice laser printer with auto-feed scanner, Scan-to-FTP which creates a PDF file, and other things). I had just recently done a clean install of Fedora 17, and I could install the RPMs (which are i386 files on my x86_64 based system), add the printer to CUPS and all sorts of things that looked fine.&lt;/p&gt;
@@ -27,10 +27,10 @@
     
     <item>
       <title>CentOS 5.8 On AWS EC2 With Xen Kernel (PVGRUB)</title>
-      <link>http://leifmadsen.github.io/hugo_gh_blog/blog/2012/08/22/centos-5.8-on-aws-ec2-with-xen-kernel-pvgrub/</link>
+      <link>http://blog.leifmadsen.com/blog/2012/08/22/centos-5.8-on-aws-ec2-with-xen-kernel-pvgrub/</link>
       <pubDate>Wed, 22 Aug 2012 14:10:46 +0000</pubDate>
       
-      <guid>http://leifmadsen.github.io/hugo_gh_blog/blog/2012/08/22/centos-5.8-on-aws-ec2-with-xen-kernel-pvgrub/</guid>
+      <guid>http://blog.leifmadsen.com/blog/2012/08/22/centos-5.8-on-aws-ec2-with-xen-kernel-pvgrub/</guid>
       <description>&lt;p&gt;At &lt;a href=&#34;http://coredial.com&#34;&gt;CoreDial&lt;/a&gt; we&amp;rsquo;ve been using a lot of AWS EC2 lately for building sandbox infrastructure for testing. Part of the infrastructure is a voice platform utilizing Asterisk 1.4 and 1.8, and those voice platforms are using Zaptel and DAHDI respectively for use with MeetMe(). This hasn&amp;rsquo;t been an issue previously as our testing has either been on bare metal, or in other virtual machine systems where installation of a base image and standard kernel are not an issue.&lt;/p&gt;
 
 &lt;p&gt;However, with the introduction of a lot of EC2 instances in our testing process, we ran into issues with building our own DAHDI RPMs since there aren&amp;rsquo;t any EC2 kernel development packages outside of OpenSuSE (which we don&amp;rsquo;t use). After spending a day of trying to hack around it, Kevin found a &lt;a href=&#34;http://ec2-downloads.s3.amazonaws.com/user_specified_kernels.pdf&#34;&gt;PDF&lt;/a&gt; from Amazon that states AWS now supports the ability to load your own kernels via PVGRUB. Great! If I can do that, then I can just continue using the same RPMs I&amp;rsquo;d be building anyways (albeit the xen based kernel, but that&amp;rsquo;s easy to do in the spec file).&lt;/p&gt;
@@ -74,10 +74,10 @@ If you do happen to use separate partitions, make sure you use the &lt;strong&gt
     
     <item>
       <title>.bashrc trick for git repo and branch information</title>
-      <link>http://leifmadsen.github.io/hugo_gh_blog/blog/2011/12/22/.bashrc-trick-for-git-repo-and-branch-information/</link>
+      <link>http://blog.leifmadsen.com/blog/2011/12/22/.bashrc-trick-for-git-repo-and-branch-information/</link>
       <pubDate>Thu, 22 Dec 2011 14:39:07 +0000</pubDate>
       
-      <guid>http://leifmadsen.github.io/hugo_gh_blog/blog/2011/12/22/.bashrc-trick-for-git-repo-and-branch-information/</guid>
+      <guid>http://blog.leifmadsen.com/blog/2011/12/22/.bashrc-trick-for-git-repo-and-branch-information/</guid>
       <description>&lt;p&gt;The other day I was talking to my friend &lt;a href=&#34;http://russellbryant.net&#34;&gt;Russell Bryant&lt;/a&gt; who pointed me to some .bashrc magic that would show me which branch I was currently working with inside a git repo on my system. I found it incredibly handy and have modified the ANSI colour coding slightly.&lt;/p&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;export PS1=&#39;[\u@\h \[33[0;36m\]\W$(__git_ps1 &amp;quot;\[33[0m\]\[33[0;33m\](%s)&amp;quot;)\[33[0m\]]\$ &#39;
@@ -97,10 +97,10 @@ As I&amp;rsquo;m using my laptop today, I modified the .bashrc file on Ubuntu 10
     
     <item>
       <title>Relaying SMTP via Gmail (or Google Apps) Using Postfix</title>
-      <link>http://leifmadsen.github.io/hugo_gh_blog/blog/2011/11/22/relaying-smtp-via-gmail-or-google-apps-using-postfix/</link>
+      <link>http://blog.leifmadsen.com/blog/2011/11/22/relaying-smtp-via-gmail-or-google-apps-using-postfix/</link>
       <pubDate>Tue, 22 Nov 2011 22:17:18 +0000</pubDate>
       
-      <guid>http://leifmadsen.github.io/hugo_gh_blog/blog/2011/11/22/relaying-smtp-via-gmail-or-google-apps-using-postfix/</guid>
+      <guid>http://blog.leifmadsen.com/blog/2011/11/22/relaying-smtp-via-gmail-or-google-apps-using-postfix/</guid>
       <description>&lt;p&gt;Today I had the need to start relaying mail through my Google Apps account since &lt;del&gt;Super-Evil-Bastard-ITSP&lt;/del&gt;Rogers blocks sending email (it&amp;rsquo;s probably a good thing, however it&amp;rsquo;s quite annoying when running some services from home).&lt;/p&gt;
 
 &lt;p&gt;Found this article while Googling, and it worked great first try. I like when things are this easy.&lt;/p&gt;
@@ -111,10 +111,10 @@ As I&amp;rsquo;m using my laptop today, I modified the .bashrc file on Ubuntu 10
     
     <item>
       <title>Initial impressions of qemu-kvm (virtualization server)</title>
-      <link>http://leifmadsen.github.io/hugo_gh_blog/blog/2011/02/09/initial-impressions-of-qemu-kvm-virtualization-server/</link>
+      <link>http://blog.leifmadsen.com/blog/2011/02/09/initial-impressions-of-qemu-kvm-virtualization-server/</link>
       <pubDate>Wed, 09 Feb 2011 01:18:22 +0000</pubDate>
       
-      <guid>http://leifmadsen.github.io/hugo_gh_blog/blog/2011/02/09/initial-impressions-of-qemu-kvm-virtualization-server/</guid>
+      <guid>http://blog.leifmadsen.com/blog/2011/02/09/initial-impressions-of-qemu-kvm-virtualization-server/</guid>
       <description>&lt;p&gt;The qemu-kvm (&lt;a href=&#34;http://www.linux-kvm.org/page/Main_Page&#34;&gt;http://www.linux-kvm.org/page/Main_Page&lt;/a&gt;) package on Ubuntu 10.10 allows you to create virtual machines much like VMware, Xen, etc.&lt;/p&gt;
 
 &lt;p&gt;My initial impressions are generally pretty positive. I like that it lets you install multiple operating systems (including MS Windows, which I haven&amp;rsquo;t tried yet), and doesn&amp;rsquo;t use a web interface like VMware Server 2 (which I&amp;rsquo;ve found to be terribly crash prone, requiring a restart of the web interface at the least, and sometime the entire server needs to be restarted, often abruptly with the kill application). My favourite part is the libvirt-manager that lets you manage the system and install virtual machines remotely over SSH using VNC (or at least something similar to it).&lt;/p&gt;
@@ -131,10 +131,10 @@ As I&amp;rsquo;m using my laptop today, I modified the .bashrc file on Ubuntu 10
     
     <item>
       <title>Asterisk Cookbook Is On! (We Think :))</title>
-      <link>http://leifmadsen.github.io/hugo_gh_blog/blog/2011/01/27/asterisk-cookbook-is-on-we-think-/</link>
+      <link>http://blog.leifmadsen.com/blog/2011/01/27/asterisk-cookbook-is-on-we-think-/</link>
       <pubDate>Thu, 27 Jan 2011 14:33:00 +0000</pubDate>
       
-      <guid>http://leifmadsen.github.io/hugo_gh_blog/blog/2011/01/27/asterisk-cookbook-is-on-we-think-/</guid>
+      <guid>http://blog.leifmadsen.com/blog/2011/01/27/asterisk-cookbook-is-on-we-think-/</guid>
       <description>&lt;p&gt;After finishing the first draft of &lt;a href=&#34;http://oreilly.com/catalog/9780596517342&#34;&gt;Asterisk: The Definitive Guide (3rd Edition)&lt;/a&gt;, I&amp;rsquo;ve been a bit antsy with wanting to do some more writing. After about a week of a break (i.e. sleeping in past 7am for the first time in nearly a year), &lt;a href=&#34;http://www.russellbryant.net/blog/&#34;&gt;Russell Bryant&lt;/a&gt; and I have decided to team up on delivering the long awaited Asterisk Cookbook.&lt;/p&gt;
 
 &lt;p&gt;To start off with, we&amp;rsquo;ll be writing a short, 80-100 page eBook that will be distributed by O&amp;rsquo;Reilly in all the formats they support (&lt;a href=&#34;http://oreilly.com/ebooks/&#34;&gt;http://oreilly.com/ebooks/&lt;/a&gt;). The book is scheduled to have about 25 recipes, and should be written in the next 30-40 days, which would mean it should be available shortly after&lt;a href=&#34;http://oreilly.com/catalog/9780596517342&#34;&gt; Asterisk: The Definitive Guide&lt;/a&gt; is released (which means you can bundle them together! :)).&lt;/p&gt;
@@ -149,10 +149,10 @@ As I&amp;rsquo;m using my laptop today, I modified the .bashrc file on Ubuntu 10
     
     <item>
       <title>New headset thanks to e4voip.com!</title>
-      <link>http://leifmadsen.github.io/hugo_gh_blog/blog/2010/02/22/new-headset-thanks-to-e4voip.com/</link>
+      <link>http://blog.leifmadsen.com/blog/2010/02/22/new-headset-thanks-to-e4voip.com/</link>
       <pubDate>Mon, 22 Feb 2010 19:04:21 +0000</pubDate>
       
-      <guid>http://leifmadsen.github.io/hugo_gh_blog/blog/2010/02/22/new-headset-thanks-to-e4voip.com/</guid>
+      <guid>http://blog.leifmadsen.com/blog/2010/02/22/new-headset-thanks-to-e4voip.com/</guid>
       <description>&lt;p&gt;Just got my new Plantronics headset from &lt;a href=&#34;http://www.e4voip.com&#34;&gt;http://www.e4voip.com&lt;/a&gt; (or rather, the hardware store at &lt;a href=&#34;http://www.8774e4voip.com/&#34;&gt;http://www.8774e4voip.com/&lt;/a&gt;) and am extremely satisfied with the service. We had an issue with Purolator not wanting to deliver to the building and then not bothering to call me to let me know the address was incorrect. By the time I noticed and got the address corrected, they just decided to send back the package.&lt;/p&gt;
 
 &lt;p&gt;So after letting the guys at e4VoIP know what happened, they just drop shipped a headset via FedEx overnight and I had it by lunch the next day! Amazing service and great prices. I&amp;rsquo;m in Canada, so I know how much of a pain in the ass shipping across the border is, and usually there is a bunch of duty fees across the border, but this time around the headset didn&amp;rsquo;t cost me a thing.&lt;/p&gt;
@@ -163,10 +163,10 @@ As I&amp;rsquo;m using my laptop today, I modified the .bashrc file on Ubuntu 10
     
     <item>
       <title>Interview from Wind Mobile launch</title>
-      <link>http://leifmadsen.github.io/hugo_gh_blog/blog/2010/02/09/interview-from-wind-mobile-launch/</link>
+      <link>http://blog.leifmadsen.com/blog/2010/02/09/interview-from-wind-mobile-launch/</link>
       <pubDate>Tue, 09 Feb 2010 22:10:44 +0000</pubDate>
       
-      <guid>http://leifmadsen.github.io/hugo_gh_blog/blog/2010/02/09/interview-from-wind-mobile-launch/</guid>
+      <guid>http://blog.leifmadsen.com/blog/2010/02/09/interview-from-wind-mobile-launch/</guid>
       <description>&lt;p&gt;I was interviewed at the Wind Mobile launch a couple of months ago, and was interviewed by an online publication. I didn&amp;rsquo;t remember which online publication it was, so had forgotten all about it until I noticed someone had posted a link to it in the on-asterisk mailing list. Enjoy!&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;Wind Mobile launches with contract-free, unlimited plans&lt;/strong&gt;&lt;/p&gt;
@@ -182,10 +182,10 @@ As I&amp;rsquo;m using my laptop today, I modified the .bashrc file on Ubuntu 10
     
     <item>
       <title>Why NDAs are Useless</title>
-      <link>http://leifmadsen.github.io/hugo_gh_blog/blog/2009/12/09/why-ndas-are-useless/</link>
+      <link>http://blog.leifmadsen.com/blog/2009/12/09/why-ndas-are-useless/</link>
       <pubDate>Wed, 09 Dec 2009 23:01:04 +0000</pubDate>
       
-      <guid>http://leifmadsen.github.io/hugo_gh_blog/blog/2009/12/09/why-ndas-are-useless/</guid>
+      <guid>http://blog.leifmadsen.com/blog/2009/12/09/why-ndas-are-useless/</guid>
       <description>&lt;p&gt;Here is a post I came across from my twitter feed discussing why NDAs are essentially useless and unenforceable in the digital age. Many good points are made, and for the most part I agree with them. I&amp;rsquo;m not quite so vehemently opposed to them as the author is as I know they aren&amp;rsquo;t enforceable. The reason I sign them is a good faith gesture to my clients. I think we both know they aren&amp;rsquo;t useful, but it gives the client a nice litmus test to determine whether I&amp;rsquo;m just looking to steal ideas, or at least to say, &amp;ldquo;Hey, it&amp;rsquo;d be great if you didn&amp;rsquo;t twitter or blog about anything you learn while looking at our system.&amp;rdquo; &amp;ndash; at least not directly of course, you can&amp;rsquo;t ask me to forget something I may have learned while working on a project for you :)&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&#34;http://www.contrast.ie/blog/five-reasons-to-drop-ndas/&#34;&gt;http://www.contrast.ie/blog/five-reasons-to-drop-ndas/&lt;/a&gt;&lt;/p&gt;
@@ -194,10 +194,10 @@ As I&amp;rsquo;m using my laptop today, I modified the .bashrc file on Ubuntu 10
     
     <item>
       <title>Cisco VPN Client on Ubuntu Karmic 9.10</title>
-      <link>http://leifmadsen.github.io/hugo_gh_blog/blog/2009/11/27/cisco-vpn-client-on-ubuntu-karmic-9.10/</link>
+      <link>http://blog.leifmadsen.com/blog/2009/11/27/cisco-vpn-client-on-ubuntu-karmic-9.10/</link>
       <pubDate>Fri, 27 Nov 2009 13:19:44 +0000</pubDate>
       
-      <guid>http://leifmadsen.github.io/hugo_gh_blog/blog/2009/11/27/cisco-vpn-client-on-ubuntu-karmic-9.10/</guid>
+      <guid>http://blog.leifmadsen.com/blog/2009/11/27/cisco-vpn-client-on-ubuntu-karmic-9.10/</guid>
       <description>&lt;p&gt;I have a client who I need to connect to via a Cisco VPN, and since I use Ubuntu as my primary OS on my MacBook Pro, I&amp;rsquo;ve often needed to find some information about how to get the client working.&lt;/p&gt;
 
 &lt;p&gt;I had previously found some information about patching on Ubuntu 9.04 and it worked great, but since updating to 9.10 I had the same compile time issues I had before, which makes sense since the kernel is different now.&lt;/p&gt;
@@ -245,10 +245,10 @@ Failed to make module &amp;quot;cisco_ipsec.ko&amp;quot;.
     
     <item>
       <title>Creating vCards with QR Codes</title>
-      <link>http://leifmadsen.github.io/hugo_gh_blog/blog/2009/08/27/creating-vcards-with-qr-codes/</link>
+      <link>http://blog.leifmadsen.com/blog/2009/08/27/creating-vcards-with-qr-codes/</link>
       <pubDate>Thu, 27 Aug 2009 14:02:24 +0000</pubDate>
       
-      <guid>http://leifmadsen.github.io/hugo_gh_blog/blog/2009/08/27/creating-vcards-with-qr-codes/</guid>
+      <guid>http://blog.leifmadsen.com/blog/2009/08/27/creating-vcards-with-qr-codes/</guid>
       <description>&lt;p&gt;Recently I&amp;rsquo;ve been noticing a lot more use of QR codes around the internet. A QR code is those 2D matrices that look like a bar code, but aren&amp;rsquo;t just the ordinary vertical lines that you would see on your box of cereal. These are a box that contain pixels that have been coded to contain information about pretty much anything. I&amp;rsquo;ve been seeing some people using them for contact information, web links, and pretty much anything you can think of to distribute information.&lt;/p&gt;
 
 &lt;p&gt;I also recently saw a show on Discovery where in Japan people will post these large images on a wall somewhere hoping people will scan them with their cell phones, thereby visiting a site of a product, or perhaps giving information about an upcoming show.&lt;/p&gt;
@@ -277,10 +277,10 @@ Failed to make module &amp;quot;cisco_ipsec.ko&amp;quot;.
     
     <item>
       <title>Suzanne Bowen Interviews Leif Madsen, Asterisk Rockstar</title>
-      <link>http://leifmadsen.github.io/hugo_gh_blog/blog/2009/07/30/suzanne-bowen-interviews-leif-madsen-asterisk-rockstar/</link>
+      <link>http://blog.leifmadsen.com/blog/2009/07/30/suzanne-bowen-interviews-leif-madsen-asterisk-rockstar/</link>
       <pubDate>Thu, 30 Jul 2009 22:11:17 +0000</pubDate>
       
-      <guid>http://leifmadsen.github.io/hugo_gh_blog/blog/2009/07/30/suzanne-bowen-interviews-leif-madsen-asterisk-rockstar/</guid>
+      <guid>http://blog.leifmadsen.com/blog/2009/07/30/suzanne-bowen-interviews-leif-madsen-asterisk-rockstar/</guid>
       <description>&lt;p&gt;Today I had the privilege to be interviewed by &lt;a href=&#34;http://www.twitter.com/suzannebowen&#34;&gt;Suzanne Bowen&lt;/a&gt; of &lt;a href=&#34;http://www.didx.net&#34;&gt;DIDX&lt;/a&gt;.&lt;/p&gt;
 
 &lt;p&gt;You can find the interview at &lt;a href=&#34;http://www.didx.net/podcast/?p=episode&amp;amp;name=2009-07-30_leifmadsenjul312009.mp3&#34;&gt;http://www.didx.net/podcast/?p=episode&amp;amp;name=2009-07-30_leifmadsenjul312009.mp3&lt;/a&gt;&lt;/p&gt;

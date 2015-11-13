@@ -2,19 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Call Centres on Asterisk, and other worldly endeavours</title>
-    <link>http://leifmadsen.github.io/hugo_gh_blog/tags/call-centres/</link>
+    <link>http://blog.leifmadsen.com/tags/call-centres/</link>
     <description>Recent content in Call Centres on Asterisk, and other worldly endeavours</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 23 Dec 2011 15:31:22 +0000</lastBuildDate>
-    <atom:link href="http://leifmadsen.github.io/hugo_gh_blog/tags/call-centres/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://blog.leifmadsen.com/tags/call-centres/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Asterisk Powered Distributed Call Centres (Video)</title>
-      <link>http://leifmadsen.github.io/hugo_gh_blog/blog/2011/12/23/asterisk-powered-distributed-call-centres-video/</link>
+      <link>http://blog.leifmadsen.com/blog/2011/12/23/asterisk-powered-distributed-call-centres-video/</link>
       <pubDate>Fri, 23 Dec 2011 15:31:22 +0000</pubDate>
       
-      <guid>http://leifmadsen.github.io/hugo_gh_blog/blog/2011/12/23/asterisk-powered-distributed-call-centres-video/</guid>
+      <guid>http://blog.leifmadsen.com/blog/2011/12/23/asterisk-powered-distributed-call-centres-video/</guid>
       <description>&lt;p&gt;Looks like TMC has posted my presentation from AstriCon 2011! You can see the presentation in its entirety over here:&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&#34;http://www.tmcnet.com/tmc/videos/default.aspx?vid=5821&amp;amp;title=Asterisk-Powered+Distributed+Call+Centers&#34;&gt;http://www.tmcnet.com/tmc/videos/default.aspx?vid=5821&amp;amp;title=Asterisk-Powered+Distributed+Call+Centers&lt;/a&gt;&lt;/p&gt;

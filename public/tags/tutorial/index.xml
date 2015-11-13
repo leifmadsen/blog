@@ -2,19 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tutorial on Asterisk, and other worldly endeavours</title>
-    <link>http://leifmadsen.github.io/hugo_gh_blog/tags/tutorial/</link>
+    <link>http://blog.leifmadsen.com/tags/tutorial/</link>
     <description>Recent content in Tutorial on Asterisk, and other worldly endeavours</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 09 Sep 2011 13:28:47 +0000</lastBuildDate>
-    <atom:link href="http://leifmadsen.github.io/hugo_gh_blog/tags/tutorial/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://blog.leifmadsen.com/tags/tutorial/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Using Dialplan Functions: AES_DECRYPT() and AES_ENCRYPT()</title>
-      <link>http://leifmadsen.github.io/hugo_gh_blog/blog/2011/09/09/using-dialplan-functions-aes_decrypt-and-aes_encrypt/</link>
+      <link>http://blog.leifmadsen.com/blog/2011/09/09/using-dialplan-functions-aes_decrypt-and-aes_encrypt/</link>
       <pubDate>Fri, 09 Sep 2011 13:28:47 +0000</pubDate>
       
-      <guid>http://leifmadsen.github.io/hugo_gh_blog/blog/2011/09/09/using-dialplan-functions-aes_decrypt-and-aes_encrypt/</guid>
+      <guid>http://blog.leifmadsen.com/blog/2011/09/09/using-dialplan-functions-aes_decrypt-and-aes_encrypt/</guid>
       <description>&lt;p&gt;I  recently asked on twitter how many people would be interested in a set of blog posts that focused on how to use the various dialplan functions in Asterisk, and I got quite a positive response. I posted that shortly before getting married, and now that I&amp;rsquo;m back into the groove of things, I&amp;rsquo;m going to take a shot at posting a bunch of content focused around Asterisk dialplan functions. If you don&amp;rsquo;t know what Asterisk dialplan functions are, head on over to the online version of &lt;a href=&#34;http://ofps.oreilly.com/titles/9780596517342/index.html&#34;&gt;Asterisk: The Definitive Guide (3rd edition)&lt;/a&gt; (or &lt;a href=&#34;http://www.amazon.com/Asterisk-Definitive-Guide-Guides/dp/0596517343/ref=sr_1_1?ie=UTF8&amp;amp;qid=1315572209&amp;amp;sr=8-1&#34;&gt;buy&lt;/a&gt; it) and read the section on &lt;a href=&#34;http://ofps.oreilly.com/titles/9780596517342/asterisk-DP-Deeper.html#asterisk-CHP-6-SECT-2&#34;&gt;dialplan functions&lt;/a&gt;. If you&amp;rsquo;re still starting out with Asterisk, I highly suggest you start with the &lt;a href=&#34;http://ofps.oreilly.com/titles/9780596517342/asterisk-DP-Basics.html&#34;&gt;dialplan basics&lt;/a&gt; chapter.&lt;/p&gt;
 
 &lt;p&gt;Today we&amp;rsquo;ll look at the first 2 dialplan functions in my list: &lt;code&gt;AES_DECRYPT()&lt;/code&gt; and &lt;code&gt;AES_ENCRYPT()&lt;/code&gt;&lt;/p&gt;
@@ -87,10 +87,10 @@
     
     <item>
       <title>Installing the Asterisk Test Suite</title>
-      <link>http://leifmadsen.github.io/hugo_gh_blog/blog/2010/05/03/installing-the-asterisk-test-suite/</link>
+      <link>http://blog.leifmadsen.com/blog/2010/05/03/installing-the-asterisk-test-suite/</link>
       <pubDate>Mon, 03 May 2010 15:17:57 +0000</pubDate>
       
-      <guid>http://leifmadsen.github.io/hugo_gh_blog/blog/2010/05/03/installing-the-asterisk-test-suite/</guid>
+      <guid>http://blog.leifmadsen.com/blog/2010/05/03/installing-the-asterisk-test-suite/</guid>
       <description>&lt;p&gt;In case you missed it, I wrote an introductory &lt;a href=&#34;http://blogs.asterisk.org/2010/04/29/installing-the-asterisk-test-suite/&#34;&gt;article&lt;/a&gt; about the Asterisk Test Suite on the &lt;a href=&#34;http://blogs.asterisk.org&#34;&gt;Asterisk blog&lt;/a&gt;. The post takes you from a minimally installed Ubuntu 9.10 up to the point that you can run the tests in the test suite by going through all the possible errors you might encounter getting it loaded, and how to resolve those errors (most of them being missing dependencies).&lt;/p&gt;
 
 &lt;p&gt;Enjoy!&lt;/p&gt;
@@ -101,10 +101,10 @@
     
     <item>
       <title>Using a Nokia E71 with Asterisk (3G or WiFi)</title>
-      <link>http://leifmadsen.github.io/hugo_gh_blog/blog/2010/03/19/using-a-nokia-e71-with-asterisk-3g-or-wifi/</link>
+      <link>http://blog.leifmadsen.com/blog/2010/03/19/using-a-nokia-e71-with-asterisk-3g-or-wifi/</link>
       <pubDate>Fri, 19 Mar 2010 16:28:28 +0000</pubDate>
       
-      <guid>http://leifmadsen.github.io/hugo_gh_blog/blog/2010/03/19/using-a-nokia-e71-with-asterisk-3g-or-wifi/</guid>
+      <guid>http://blog.leifmadsen.com/blog/2010/03/19/using-a-nokia-e71-with-asterisk-3g-or-wifi/</guid>
       <description>&lt;p&gt;There was some talk in one of the IRC chat rooms today about someone trying to get their E61i working with Asterisk. I haven&amp;rsquo;t had an issue getting that phone or my E71 phone working, but regardless he was having issues. I figured I might as well spend a little bit of time today going through my configuration, both for my own reference, and so that other people can get their Nokia&amp;rsquo;s setup with Asterisk as well.&lt;/p&gt;
 
 &lt;p&gt;I&amp;rsquo;ll be using the native SIP client, although I&amp;rsquo;ve had just as good of luck using the Fring application. The advantage to the Fring application is that you can use it with Skype, along with multiple IM clients, and also video! I especially like that the application makes use of the video camera on the front of the phone so that you can use it as a videophone. Using the video on a phone like the iPhone or Nexus One seems useless to me (but I digress!).&lt;/p&gt;

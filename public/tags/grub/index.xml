@@ -2,19 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Grub on Asterisk, and other worldly endeavours</title>
-    <link>http://leifmadsen.github.io/hugo_gh_blog/tags/grub/</link>
+    <link>http://blog.leifmadsen.com/tags/grub/</link>
     <description>Recent content in Grub on Asterisk, and other worldly endeavours</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 22 Aug 2012 14:10:46 +0000</lastBuildDate>
-    <atom:link href="http://leifmadsen.github.io/hugo_gh_blog/tags/grub/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://blog.leifmadsen.com/tags/grub/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>CentOS 5.8 On AWS EC2 With Xen Kernel (PVGRUB)</title>
-      <link>http://leifmadsen.github.io/hugo_gh_blog/blog/2012/08/22/centos-5.8-on-aws-ec2-with-xen-kernel-pvgrub/</link>
+      <link>http://blog.leifmadsen.com/blog/2012/08/22/centos-5.8-on-aws-ec2-with-xen-kernel-pvgrub/</link>
       <pubDate>Wed, 22 Aug 2012 14:10:46 +0000</pubDate>
       
-      <guid>http://leifmadsen.github.io/hugo_gh_blog/blog/2012/08/22/centos-5.8-on-aws-ec2-with-xen-kernel-pvgrub/</guid>
+      <guid>http://blog.leifmadsen.com/blog/2012/08/22/centos-5.8-on-aws-ec2-with-xen-kernel-pvgrub/</guid>
       <description>&lt;p&gt;At &lt;a href=&#34;http://coredial.com&#34;&gt;CoreDial&lt;/a&gt; we&amp;rsquo;ve been using a lot of AWS EC2 lately for building sandbox infrastructure for testing. Part of the infrastructure is a voice platform utilizing Asterisk 1.4 and 1.8, and those voice platforms are using Zaptel and DAHDI respectively for use with MeetMe(). This hasn&amp;rsquo;t been an issue previously as our testing has either been on bare metal, or in other virtual machine systems where installation of a base image and standard kernel are not an issue.&lt;/p&gt;
 
 &lt;p&gt;However, with the introduction of a lot of EC2 instances in our testing process, we ran into issues with building our own DAHDI RPMs since there aren&amp;rsquo;t any EC2 kernel development packages outside of OpenSuSE (which we don&amp;rsquo;t use). After spending a day of trying to hack around it, Kevin found a &lt;a href=&#34;http://ec2-downloads.s3.amazonaws.com/user_specified_kernels.pdf&#34;&gt;PDF&lt;/a&gt; from Amazon that states AWS now supports the ability to load your own kernels via PVGRUB. Great! If I can do that, then I can just continue using the same RPMs I&amp;rsquo;d be building anyways (albeit the xen based kernel, but that&amp;rsquo;s easy to do in the spec file).&lt;/p&gt;
@@ -58,10 +58,10 @@ If you do happen to use separate partitions, make sure you use the &lt;strong&gt
     
     <item>
       <title>Initial impressions of qemu-kvm (virtualization server)</title>
-      <link>http://leifmadsen.github.io/hugo_gh_blog/blog/2011/02/09/initial-impressions-of-qemu-kvm-virtualization-server/</link>
+      <link>http://blog.leifmadsen.com/blog/2011/02/09/initial-impressions-of-qemu-kvm-virtualization-server/</link>
       <pubDate>Wed, 09 Feb 2011 01:18:22 +0000</pubDate>
       
-      <guid>http://leifmadsen.github.io/hugo_gh_blog/blog/2011/02/09/initial-impressions-of-qemu-kvm-virtualization-server/</guid>
+      <guid>http://blog.leifmadsen.com/blog/2011/02/09/initial-impressions-of-qemu-kvm-virtualization-server/</guid>
       <description>&lt;p&gt;The qemu-kvm (&lt;a href=&#34;http://www.linux-kvm.org/page/Main_Page&#34;&gt;http://www.linux-kvm.org/page/Main_Page&lt;/a&gt;) package on Ubuntu 10.10 allows you to create virtual machines much like VMware, Xen, etc.&lt;/p&gt;
 
 &lt;p&gt;My initial impressions are generally pretty positive. I like that it lets you install multiple operating systems (including MS Windows, which I haven&amp;rsquo;t tried yet), and doesn&amp;rsquo;t use a web interface like VMware Server 2 (which I&amp;rsquo;ve found to be terribly crash prone, requiring a restart of the web interface at the least, and sometime the entire server needs to be restarted, often abruptly with the kill application). My favourite part is the libvirt-manager that lets you manage the system and install virtual machines remotely over SSH using VNC (or at least something similar to it).&lt;/p&gt;

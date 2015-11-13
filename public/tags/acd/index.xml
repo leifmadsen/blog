@@ -2,19 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Acd on Asterisk, and other worldly endeavours</title>
-    <link>http://leifmadsen.github.io/hugo_gh_blog/tags/acd/</link>
+    <link>http://blog.leifmadsen.com/tags/acd/</link>
     <description>Recent content in Acd on Asterisk, and other worldly endeavours</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 18 Nov 2009 20:40:15 +0000</lastBuildDate>
-    <atom:link href="http://leifmadsen.github.io/hugo_gh_blog/tags/acd/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://blog.leifmadsen.com/tags/acd/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>AstriCon 2009 Presentation -- Building a Distributed Call Center</title>
-      <link>http://leifmadsen.github.io/hugo_gh_blog/blog/2009/11/18/astricon-2009-presentation----building-a-distributed-call-center/</link>
+      <link>http://blog.leifmadsen.com/blog/2009/11/18/astricon-2009-presentation----building-a-distributed-call-center/</link>
       <pubDate>Wed, 18 Nov 2009 20:40:15 +0000</pubDate>
       
-      <guid>http://leifmadsen.github.io/hugo_gh_blog/blog/2009/11/18/astricon-2009-presentation----building-a-distributed-call-center/</guid>
+      <guid>http://blog.leifmadsen.com/blog/2009/11/18/astricon-2009-presentation----building-a-distributed-call-center/</guid>
       <description>&lt;p&gt;For those who missed it, you&amp;rsquo;re able to get a PDF of my AstriCon 2009 presentation from the &lt;a href=&#34;http://www.astricon.net&#34;&gt;http://www.astricon.net&lt;/a&gt; website.&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&#34;http://images.tmcnet.com/expo/astricon/presentations/cc01-madsen-digium.pdf&#34;&gt;http://images.tmcnet.com/expo/astricon/presentations/cc01-madsen-digium.pdf&lt;/a&gt;&lt;/p&gt;

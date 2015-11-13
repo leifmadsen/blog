@@ -2,19 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Wifi on Asterisk, and other worldly endeavours</title>
-    <link>http://leifmadsen.github.io/hugo_gh_blog/tags/wifi/</link>
+    <link>http://blog.leifmadsen.com/tags/wifi/</link>
     <description>Recent content in Wifi on Asterisk, and other worldly endeavours</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 19 Mar 2010 16:28:28 +0000</lastBuildDate>
-    <atom:link href="http://leifmadsen.github.io/hugo_gh_blog/tags/wifi/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://blog.leifmadsen.com/tags/wifi/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Using a Nokia E71 with Asterisk (3G or WiFi)</title>
-      <link>http://leifmadsen.github.io/hugo_gh_blog/blog/2010/03/19/using-a-nokia-e71-with-asterisk-3g-or-wifi/</link>
+      <link>http://blog.leifmadsen.com/blog/2010/03/19/using-a-nokia-e71-with-asterisk-3g-or-wifi/</link>
       <pubDate>Fri, 19 Mar 2010 16:28:28 +0000</pubDate>
       
-      <guid>http://leifmadsen.github.io/hugo_gh_blog/blog/2010/03/19/using-a-nokia-e71-with-asterisk-3g-or-wifi/</guid>
+      <guid>http://blog.leifmadsen.com/blog/2010/03/19/using-a-nokia-e71-with-asterisk-3g-or-wifi/</guid>
       <description>&lt;p&gt;There was some talk in one of the IRC chat rooms today about someone trying to get their E61i working with Asterisk. I haven&amp;rsquo;t had an issue getting that phone or my E71 phone working, but regardless he was having issues. I figured I might as well spend a little bit of time today going through my configuration, both for my own reference, and so that other people can get their Nokia&amp;rsquo;s setup with Asterisk as well.&lt;/p&gt;
 
 &lt;p&gt;I&amp;rsquo;ll be using the native SIP client, although I&amp;rsquo;ve had just as good of luck using the Fring application. The advantage to the Fring application is that you can use it with Skype, along with multiple IM clients, and also video! I especially like that the application makes use of the video camera on the front of the phone so that you can use it as a videophone. Using the video on a phone like the iPhone or Nexus One seems useless to me (but I digress!).&lt;/p&gt;

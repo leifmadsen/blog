@@ -2,19 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Releases on Asterisk, and other worldly endeavours</title>
-    <link>http://leifmadsen.github.io/hugo_gh_blog/tags/releases/</link>
+    <link>http://blog.leifmadsen.com/tags/releases/</link>
     <description>Recent content in Releases on Asterisk, and other worldly endeavours</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Tue, 17 May 2011 20:40:55 +0000</lastBuildDate>
-    <atom:link href="http://leifmadsen.github.io/hugo_gh_blog/tags/releases/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://blog.leifmadsen.com/tags/releases/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Asterisk 1.8 And The Importance Of Looking Ahead</title>
-      <link>http://leifmadsen.github.io/hugo_gh_blog/blog/2011/05/17/asterisk-1.8-and-the-importance-of-looking-ahead/</link>
+      <link>http://blog.leifmadsen.com/blog/2011/05/17/asterisk-1.8-and-the-importance-of-looking-ahead/</link>
       <pubDate>Tue, 17 May 2011 20:40:55 +0000</pubDate>
       
-      <guid>http://leifmadsen.github.io/hugo_gh_blog/blog/2011/05/17/asterisk-1.8-and-the-importance-of-looking-ahead/</guid>
+      <guid>http://blog.leifmadsen.com/blog/2011/05/17/asterisk-1.8-and-the-importance-of-looking-ahead/</guid>
       <description>&lt;p&gt;With the end of maintenance for the Asterisk 1.4 (the previous long term support (LTS) release) and Asterisk 1.6.2 (the previous standard, short term support release) branches, the time to look at using Asterisk 1.8 (the next long term support release, which provides another 4 years of maintenance, followed by a year of security support) is upon us. For those who have successful deployments of Asterisk 1.4 and 1.6.2 (heck, even 1.2!) there is no immediate need to migrate those existing systems; let them happily continue what they’re doing. And for those who have successful product launches based around 1.4 and 1.6.2, there is still a year of security maintenance, so the lead time to migrating existing systems to 1.8 can start now, but doesn&amp;rsquo;t need to happen for another 12 months, which gives us all a little breathing room.&lt;/p&gt;
 
 &lt;p&gt;It is important that the Asterisk community continue to look forward and progress the Asterisk project. The resources of the Asterisk Development community must be used as effectively as possible, and sometimes this means making tough decisions in the short-term for the greatest benefit in the long term. With the end of maintenance support after the releases of Asterisk 1.4.42 and 1.6.2.19 (with the first release candidates due out shortly), all focus can now be put onto Asterisk 1.8, continuing to stabilize additional components and making it the most robust, feature rich release of Asterisk to date.&lt;/p&gt;

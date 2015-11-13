@@ -2,19 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Public Service Announcement on Asterisk, and other worldly endeavours</title>
-    <link>http://leifmadsen.github.io/hugo_gh_blog/tags/public-service-announcement/</link>
+    <link>http://blog.leifmadsen.com/tags/public-service-announcement/</link>
     <description>Recent content in Public Service Announcement on Asterisk, and other worldly endeavours</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Mon, 29 Aug 2011 20:27:03 +0000</lastBuildDate>
-    <atom:link href="http://leifmadsen.github.io/hugo_gh_blog/tags/public-service-announcement/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://blog.leifmadsen.com/tags/public-service-announcement/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Asterisk 10 == Asterisk 1.^H^H10</title>
-      <link>http://leifmadsen.github.io/hugo_gh_blog/blog/2011/08/29/asterisk-10--asterisk-1.hh10/</link>
+      <link>http://blog.leifmadsen.com/blog/2011/08/29/asterisk-10--asterisk-1.hh10/</link>
       <pubDate>Mon, 29 Aug 2011 20:27:03 +0000</pubDate>
       
-      <guid>http://leifmadsen.github.io/hugo_gh_blog/blog/2011/08/29/asterisk-10--asterisk-1.hh10/</guid>
+      <guid>http://blog.leifmadsen.com/blog/2011/08/29/asterisk-10--asterisk-1.hh10/</guid>
       <description>&lt;p&gt;In case you missed it, the next version of Asterisk is now in beta, and at the same time, has undergone a minor version numbering scheme. As it is unlikely that Asterisk will ever have a 2.0 release since for years now, that has generally meant Asterisk would undergo a major underlying change in both how it was programmed and the user experience (and since it would be a major disruption to the Asterisk community), it was deemed unnecessary to utilize the 1. preamble in front of the version numbers.&lt;/p&gt;
 
 &lt;p&gt;Asterisk versioning has used the following as branch numbers over the years:&lt;/p&gt;

@@ -2,19 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Cellular on Asterisk, and other worldly endeavours</title>
-    <link>http://leifmadsen.github.io/hugo_gh_blog/tags/cellular/</link>
+    <link>http://blog.leifmadsen.com/tags/cellular/</link>
     <description>Recent content in Cellular on Asterisk, and other worldly endeavours</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Tue, 09 Feb 2010 22:10:44 +0000</lastBuildDate>
-    <atom:link href="http://leifmadsen.github.io/hugo_gh_blog/tags/cellular/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://blog.leifmadsen.com/tags/cellular/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Interview from Wind Mobile launch</title>
-      <link>http://leifmadsen.github.io/hugo_gh_blog/blog/2010/02/09/interview-from-wind-mobile-launch/</link>
+      <link>http://blog.leifmadsen.com/blog/2010/02/09/interview-from-wind-mobile-launch/</link>
       <pubDate>Tue, 09 Feb 2010 22:10:44 +0000</pubDate>
       
-      <guid>http://leifmadsen.github.io/hugo_gh_blog/blog/2010/02/09/interview-from-wind-mobile-launch/</guid>
+      <guid>http://blog.leifmadsen.com/blog/2010/02/09/interview-from-wind-mobile-launch/</guid>
       <description>&lt;p&gt;I was interviewed at the Wind Mobile launch a couple of months ago, and was interviewed by an online publication. I didn&amp;rsquo;t remember which online publication it was, so had forgotten all about it until I noticed someone had posted a link to it in the on-asterisk mailing list. Enjoy!&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;Wind Mobile launches with contract-free, unlimited plans&lt;/strong&gt;&lt;/p&gt;

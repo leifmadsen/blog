@@ -2,19 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Life on Asterisk, and other worldly endeavours</title>
-    <link>http://leifmadsen.github.io/hugo_gh_blog/categories/life/</link>
+    <link>http://blog.leifmadsen.com/categories/life/</link>
     <description>Recent content in Life on Asterisk, and other worldly endeavours</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 25 Jul 2014 02:49:12 +0000</lastBuildDate>
-    <atom:link href="http://leifmadsen.github.io/hugo_gh_blog/categories/life/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://blog.leifmadsen.com/categories/life/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Rumors of my death have been greatly exaggerated</title>
-      <link>http://leifmadsen.github.io/hugo_gh_blog/blog/2014/07/25/rumors-of-my-death-have-been-greatly-exaggerated/</link>
+      <link>http://blog.leifmadsen.com/blog/2014/07/25/rumors-of-my-death-have-been-greatly-exaggerated/</link>
       <pubDate>Fri, 25 Jul 2014 02:49:12 +0000</pubDate>
       
-      <guid>http://leifmadsen.github.io/hugo_gh_blog/blog/2014/07/25/rumors-of-my-death-have-been-greatly-exaggerated/</guid>
+      <guid>http://blog.leifmadsen.com/blog/2014/07/25/rumors-of-my-death-have-been-greatly-exaggerated/</guid>
       <description>&lt;p&gt;It&amp;rsquo;s been way too long since I&amp;rsquo;ve blogged. And this post isn&amp;rsquo;t going to be all the impressive unfortunately. However, I recently have been running a BBS and some friends and I have been playing LORD.&lt;/p&gt;
 
 &lt;p&gt;We&amp;rsquo;ve been playing this for the last few months, and I think I&amp;rsquo;m going to run a tournament. Perhaps with some sort of buy in like $10 or something, winner takes all.&lt;/p&gt;
@@ -31,10 +31,10 @@
     
     <item>
       <title>Commodore 64 Turns 30 This Year</title>
-      <link>http://leifmadsen.github.io/hugo_gh_blog/blog/2012/01/09/commodore-64-turns-30-this-year/</link>
+      <link>http://blog.leifmadsen.com/blog/2012/01/09/commodore-64-turns-30-this-year/</link>
       <pubDate>Mon, 09 Jan 2012 13:05:51 +0000</pubDate>
       
-      <guid>http://leifmadsen.github.io/hugo_gh_blog/blog/2012/01/09/commodore-64-turns-30-this-year/</guid>
+      <guid>http://blog.leifmadsen.com/blog/2012/01/09/commodore-64-turns-30-this-year/</guid>
       <description>&lt;p&gt;Having found an article about the Commodore 64 turning 30 this year, I reflected back in a comment on that page about what it is like to be only 1 year older than the Commodore 64, a computer which spiked my interest in technology away from a games system to something much more. The original article is available at &lt;a href=&#34;http://www.linuxjournal.com/content/commodor-64-30-year&#34;&gt;http://www.linuxjournal.com/content/commodor-64-30-year&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;&amp;ldquo;I just turned 31 a couple of days ago on January 7th, and when I was in grade 2 (about 8-9 years old I guess) I started getting interested in the Commodore 64s we had at our school that were plentiful, but rarely used. I remember the first thing the teacher taught me; $p$g&lt;/p&gt;
@@ -47,10 +47,10 @@
     
     <item>
       <title>Now working with CoreDial</title>
-      <link>http://leifmadsen.github.io/hugo_gh_blog/blog/2012/01/04/now-working-with-coredial/</link>
+      <link>http://blog.leifmadsen.com/blog/2012/01/04/now-working-with-coredial/</link>
       <pubDate>Wed, 04 Jan 2012 20:22:08 +0000</pubDate>
       
-      <guid>http://leifmadsen.github.io/hugo_gh_blog/blog/2012/01/04/now-working-with-coredial/</guid>
+      <guid>http://blog.leifmadsen.com/blog/2012/01/04/now-working-with-coredial/</guid>
       <description>&lt;p&gt;&lt;img src=&#34;https://si0.twimg.com/profile_images/1509716558/twitter-coredial-square-avatar_reasonably_small.png&#34; alt=&#34;&#34; /&gt; As of January 3rd, I&amp;rsquo;m now working with the CoreDial team full time. I&amp;rsquo;ve worked with them as a consultant on their infrastructure over the last few years but now will be spending significantly more time working with the engineering team :)&lt;/p&gt;
 
 &lt;p&gt;From the announcement,&lt;/p&gt;
@@ -65,10 +65,10 @@
     
     <item>
       <title>AstriCon 2010 and my talks!</title>
-      <link>http://leifmadsen.github.io/hugo_gh_blog/blog/2010/10/27/astricon-2010-and-my-talks/</link>
+      <link>http://blog.leifmadsen.com/blog/2010/10/27/astricon-2010-and-my-talks/</link>
       <pubDate>Wed, 27 Oct 2010 12:08:06 +0000</pubDate>
       
-      <guid>http://leifmadsen.github.io/hugo_gh_blog/blog/2010/10/27/astricon-2010-and-my-talks/</guid>
+      <guid>http://blog.leifmadsen.com/blog/2010/10/27/astricon-2010-and-my-talks/</guid>
       <description>&lt;p&gt;&lt;em&gt;NOTE: My presentations are available on my website at &lt;a href=&#34;http://leifmadsen.com&#34;&gt;http://leifmadsen.com&lt;/a&gt; under the Presentations tab.&lt;/em&gt;&lt;/p&gt;
 
 &lt;p&gt;Hey all! I&amp;rsquo;m at AstriCon 2010 in Maryland and it&amp;rsquo;s going great so far! Russell Bryant and I spoke with several keen users and developers last night in the Code Zone at a fairly late hour, which shows just how dedicated Asterisk users are. There was pretty much no one else around and we had a room of about 20-30 people just having a great discussion about Asterisk development. Hopefully more of that over the next few days!&lt;/p&gt;
@@ -87,10 +87,10 @@
     
     <item>
       <title>Interesting article about *not* tracking holidays at Netflix</title>
-      <link>http://leifmadsen.github.io/hugo_gh_blog/blog/2010/08/25/interesting-article-about-not-tracking-holidays-at-netflix/</link>
+      <link>http://blog.leifmadsen.com/blog/2010/08/25/interesting-article-about-not-tracking-holidays-at-netflix/</link>
       <pubDate>Wed, 25 Aug 2010 20:07:17 +0000</pubDate>
       
-      <guid>http://leifmadsen.github.io/hugo_gh_blog/blog/2010/08/25/interesting-article-about-not-tracking-holidays-at-netflix/</guid>
+      <guid>http://blog.leifmadsen.com/blog/2010/08/25/interesting-article-about-not-tracking-holidays-at-netflix/</guid>
       <description>&lt;p&gt;The following is an interesting article about not tracking workers time spent at work, or on vacation, but rather tracking their productivity. As a consultant who doesn&amp;rsquo;t have a fixed set of hours in the day that I work, I tend to judge my productivity by the number of hours I get to bill each week (i.e. how productive was I working for customers, rather than playing Flight Simulator :)).&lt;/p&gt;
 
 &lt;p&gt;I haven&amp;rsquo;t tracked actual holidays for years now (since I started consulting full time out of school in 2003), and I&amp;rsquo;m not sure I ever had a job long enough prior to school that I received any sorts of benefits of holidays. Perhaps it&amp;rsquo;s just natural for me because of that, but this article reminds me of two things:&lt;/p&gt;
@@ -109,10 +109,10 @@
     
     <item>
       <title>Long-term &#39;shopping list&#39; helps couple furnish Caledon townhouse</title>
-      <link>http://leifmadsen.github.io/hugo_gh_blog/blog/2010/04/15/long-term-shopping-list-helps-couple-furnish-caledon-townhouse/</link>
+      <link>http://blog.leifmadsen.com/blog/2010/04/15/long-term-shopping-list-helps-couple-furnish-caledon-townhouse/</link>
       <pubDate>Thu, 15 Apr 2010 21:30:21 +0000</pubDate>
       
-      <guid>http://leifmadsen.github.io/hugo_gh_blog/blog/2010/04/15/long-term-shopping-list-helps-couple-furnish-caledon-townhouse/</guid>
+      <guid>http://blog.leifmadsen.com/blog/2010/04/15/long-term-shopping-list-helps-couple-furnish-caledon-townhouse/</guid>
       <description>
 
 &lt;p&gt;Recently, &lt;a href=&#34;http://www.twitter.com/jenspeedy&#34;&gt;@jenspeedy&lt;/a&gt; of &lt;a href=&#34;http://www.yourhome.ca&#34;&gt;http://www.yourhome.ca&lt;/a&gt; interviewed my fiancée and I about our recently purchased townhouse in Caledon after our designer &lt;a href=&#34;http://www.twitter.com/melissadavis&#34;&gt;@melissadavis&lt;/a&gt; of &lt;a href=&#34;http://www.melissadavis.ca&#34;&gt;http://www.melissadavis.ca&lt;/a&gt; and &lt;a href=&#34;http://www.designerfriend.ca&#34;&gt;http://www.designerfriend.ca&lt;/a&gt; recommended she speak to us. Danielle (my fiancée) and I had a pretty good idea about the items we wanted for our new townhouse build, but were looking for a designer to make sure we didn&amp;rsquo;t get too far off track, and to steer us into the direction we ultimately wanted to achieve, while not breaking the bank (i.e. we didn&amp;rsquo;t need someone to hand hold us, or to do the actual implementation; we just needed someone to do some floor plans and give us some ideas on furniture based on our tastes).&lt;/p&gt;

@@ -2,19 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Sip on Asterisk, and other worldly endeavours</title>
-    <link>http://leifmadsen.github.io/hugo_gh_blog/tags/sip/</link>
+    <link>http://blog.leifmadsen.com/tags/sip/</link>
     <description>Recent content in Sip on Asterisk, and other worldly endeavours</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Thu, 11 Oct 2012 20:43:35 +0000</lastBuildDate>
-    <atom:link href="http://leifmadsen.github.io/hugo_gh_blog/tags/sip/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://blog.leifmadsen.com/tags/sip/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Digium D40 and D70 Phone Unboxing</title>
-      <link>http://leifmadsen.github.io/hugo_gh_blog/blog/2012/10/11/digium-d40-and-d70-phone-unboxing/</link>
+      <link>http://blog.leifmadsen.com/blog/2012/10/11/digium-d40-and-d70-phone-unboxing/</link>
       <pubDate>Thu, 11 Oct 2012 20:43:35 +0000</pubDate>
       
-      <guid>http://leifmadsen.github.io/hugo_gh_blog/blog/2012/10/11/digium-d40-and-d70-phone-unboxing/</guid>
+      <guid>http://blog.leifmadsen.com/blog/2012/10/11/digium-d40-and-d70-phone-unboxing/</guid>
       <description>
 
 &lt;p&gt;Today I received a couple of &lt;a href=&#34;http://www1.digium.com/en/products/phones&#34;&gt;phones&lt;/a&gt; from Digium; the D40 and D70. I&amp;rsquo;ll be using these phones for testing and documentation in the 4th edition of &lt;a href=&#34;http://shop.oreilly.com/product/9780596517342.do&#34;&gt;Asterisk: The Definitive Guide&lt;/a&gt; (which &lt;a href=&#34;http://www.coretel.ca/&#34;&gt;Jim Van Meggelen&lt;/a&gt;, &lt;a href=&#34;http://russellbryant.net&#34;&gt;Russell Bryant&lt;/a&gt; and &lt;a href=&#34;http://leifmadsen.com&#34;&gt;myself&lt;/a&gt; are working on right now).&lt;/p&gt;
@@ -85,10 +85,10 @@ Side cut outs for cables that I didn&amp;rsquo;t even notice the first time thro
     
     <item>
       <title>Recent SIP Attacks from Amazon EC2</title>
-      <link>http://leifmadsen.github.io/hugo_gh_blog/blog/2010/04/13/recent-sip-attacks-from-amazon-ec2/</link>
+      <link>http://blog.leifmadsen.com/blog/2010/04/13/recent-sip-attacks-from-amazon-ec2/</link>
       <pubDate>Tue, 13 Apr 2010 00:28:38 +0000</pubDate>
       
-      <guid>http://leifmadsen.github.io/hugo_gh_blog/blog/2010/04/13/recent-sip-attacks-from-amazon-ec2/</guid>
+      <guid>http://blog.leifmadsen.com/blog/2010/04/13/recent-sip-attacks-from-amazon-ec2/</guid>
       <description>&lt;p&gt;Recently (over the weekend and continuing into today) there have been several attacks from Amazon EC2 hosts running scanners looking for open SIP accounts. I&amp;rsquo;ve gathered a couple of links that I think are useful in knowing more about the attacks, along with methods of stopping the attacks. The Joshua Stein blog has a very clever way of stopping the attacks that impressed me.&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&#34;http://jcs.org/notaweblog/2010/04/11/properly_stopping_a_sip_flood&#34;&gt;http://jcs.org/notaweblog/2010/04/11/properly_stopping_a_sip_flood&lt;/a&gt;&lt;/p&gt;
@@ -105,10 +105,10 @@ Side cut outs for cables that I didn&amp;rsquo;t even notice the first time thro
     
     <item>
       <title>Using a Nokia E71 with Asterisk (3G or WiFi)</title>
-      <link>http://leifmadsen.github.io/hugo_gh_blog/blog/2010/03/19/using-a-nokia-e71-with-asterisk-3g-or-wifi/</link>
+      <link>http://blog.leifmadsen.com/blog/2010/03/19/using-a-nokia-e71-with-asterisk-3g-or-wifi/</link>
       <pubDate>Fri, 19 Mar 2010 16:28:28 +0000</pubDate>
       
-      <guid>http://leifmadsen.github.io/hugo_gh_blog/blog/2010/03/19/using-a-nokia-e71-with-asterisk-3g-or-wifi/</guid>
+      <guid>http://blog.leifmadsen.com/blog/2010/03/19/using-a-nokia-e71-with-asterisk-3g-or-wifi/</guid>
       <description>&lt;p&gt;There was some talk in one of the IRC chat rooms today about someone trying to get their E61i working with Asterisk. I haven&amp;rsquo;t had an issue getting that phone or my E71 phone working, but regardless he was having issues. I figured I might as well spend a little bit of time today going through my configuration, both for my own reference, and so that other people can get their Nokia&amp;rsquo;s setup with Asterisk as well.&lt;/p&gt;
 
 &lt;p&gt;I&amp;rsquo;ll be using the native SIP client, although I&amp;rsquo;ve had just as good of luck using the Fring application. The advantage to the Fring application is that you can use it with Skype, along with multiple IM clients, and also video! I especially like that the application makes use of the video camera on the front of the phone so that you can use it as a videophone. Using the video on a phone like the iPhone or Nexus One seems useless to me (but I digress!).&lt;/p&gt;
@@ -238,10 +238,10 @@ a=rtpmap:13 CN/8000/1
     
     <item>
       <title>Musings about ENUMplus and ISNs</title>
-      <link>http://leifmadsen.github.io/hugo_gh_blog/blog/2010/02/19/musings-about-enumplus-and-isns/</link>
+      <link>http://blog.leifmadsen.com/blog/2010/02/19/musings-about-enumplus-and-isns/</link>
       <pubDate>Fri, 19 Feb 2010 15:38:07 +0000</pubDate>
       
-      <guid>http://leifmadsen.github.io/hugo_gh_blog/blog/2010/02/19/musings-about-enumplus-and-isns/</guid>
+      <guid>http://blog.leifmadsen.com/blog/2010/02/19/musings-about-enumplus-and-isns/</guid>
       <description>
 
 &lt;p&gt;Recently I&amp;rsquo;ve been playing around with a couple of technologies that I haven&amp;rsquo;t used in quite a while; ENUM and ISN. First, a little information on what these technologies are about.&lt;/p&gt;
@@ -270,9 +270,9 @@ a=rtpmap:13 CN/8000/1
 
 &lt;p&gt;I think the wikipedia entry about ENUM does more justice about what it is than what I could do, so lets quote a resource :)&lt;/p&gt;
 
-&lt;p&gt;&amp;ldquo;&lt;strong&gt;Telephone number mapping&lt;/strong&gt; is the process of unifying the &lt;a href=&#34;http://leifmadsen.github.io/hugo_gh_blog/wiki/Telephone&#34;&gt;telephone&lt;/a&gt; number system of the &lt;a href=&#34;http://leifmadsen.github.io/hugo_gh_blog/wiki/Public_switched_telephone_network&#34;&gt;public switched telephone network&lt;/a&gt; with the &lt;a href=&#34;http://leifmadsen.github.io/hugo_gh_blog/wiki/Internet&#34;&gt;Internet&lt;/a&gt; addressing and identification &lt;a href=&#34;http://leifmadsen.github.io/hugo_gh_blog/wiki/Name_space&#34;&gt;name spaces&lt;/a&gt;. Telephone numbers are systematically organized in the &lt;a href=&#34;http://leifmadsen.github.io/hugo_gh_blog/wiki/E.164&#34;&gt;E.164&lt;/a&gt; standard, while the Internet uses the &lt;a href=&#34;http://leifmadsen.github.io/hugo_gh_blog/wiki/Domain_Name_System&#34;&gt;Domain Name System&lt;/a&gt; for linking &lt;a href=&#34;http://leifmadsen.github.io/hugo_gh_blog/wiki/Domain_name&#34;&gt;domain names&lt;/a&gt; to &lt;a href=&#34;http://leifmadsen.github.io/hugo_gh_blog/wiki/IP_address&#34;&gt;IP addresses&lt;/a&gt; and other resource information. Telephone number mapping systems provide facilities to determine applicable Internet communications servers responsible for servicing a given telephone number by simple lookups in the Domain Name System.&lt;/p&gt;
+&lt;p&gt;&amp;ldquo;&lt;strong&gt;Telephone number mapping&lt;/strong&gt; is the process of unifying the &lt;a href=&#34;http://blog.leifmadsen.com/wiki/Telephone&#34;&gt;telephone&lt;/a&gt; number system of the &lt;a href=&#34;http://blog.leifmadsen.com/wiki/Public_switched_telephone_network&#34;&gt;public switched telephone network&lt;/a&gt; with the &lt;a href=&#34;http://blog.leifmadsen.com/wiki/Internet&#34;&gt;Internet&lt;/a&gt; addressing and identification &lt;a href=&#34;http://blog.leifmadsen.com/wiki/Name_space&#34;&gt;name spaces&lt;/a&gt;. Telephone numbers are systematically organized in the &lt;a href=&#34;http://blog.leifmadsen.com/wiki/E.164&#34;&gt;E.164&lt;/a&gt; standard, while the Internet uses the &lt;a href=&#34;http://blog.leifmadsen.com/wiki/Domain_Name_System&#34;&gt;Domain Name System&lt;/a&gt; for linking &lt;a href=&#34;http://blog.leifmadsen.com/wiki/Domain_name&#34;&gt;domain names&lt;/a&gt; to &lt;a href=&#34;http://blog.leifmadsen.com/wiki/IP_address&#34;&gt;IP addresses&lt;/a&gt; and other resource information. Telephone number mapping systems provide facilities to determine applicable Internet communications servers responsible for servicing a given telephone number by simple lookups in the Domain Name System.&lt;/p&gt;
 
-&lt;p&gt;The most prominent facility for telephone number mapping is the E.164 NUmber Mapping (ENUM) standard. It uses special &lt;a href=&#34;http://leifmadsen.github.io/hugo_gh_blog/wiki/DNS_record&#34;&gt;DNS record&lt;/a&gt; types to translate a telephone number into a &lt;a href=&#34;http://leifmadsen.github.io/hugo_gh_blog/wiki/Uniform_Resource_Identifier&#34;&gt;Uniform Resource Identifier&lt;/a&gt; or IP address that can be used in Internet communications.&amp;rdquo; &amp;ndash; wikipedia entry at &lt;a href=&#34;http://en.wikipedia.org/wiki/Telephone_Number_Mapping&#34;&gt;http://en.wikipedia.org/wiki/Telephone_Number_Mapping&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;The most prominent facility for telephone number mapping is the E.164 NUmber Mapping (ENUM) standard. It uses special &lt;a href=&#34;http://blog.leifmadsen.com/wiki/DNS_record&#34;&gt;DNS record&lt;/a&gt; types to translate a telephone number into a &lt;a href=&#34;http://blog.leifmadsen.com/wiki/Uniform_Resource_Identifier&#34;&gt;Uniform Resource Identifier&lt;/a&gt; or IP address that can be used in Internet communications.&amp;rdquo; &amp;ndash; wikipedia entry at &lt;a href=&#34;http://en.wikipedia.org/wiki/Telephone_Number_Mapping&#34;&gt;http://en.wikipedia.org/wiki/Telephone_Number_Mapping&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;And cURL is a technology that allows you place a request via a website, and have information returned. It is most typically used by programmers to get information from a website without having to parse through the entire site.&lt;/p&gt;
 
@@ -317,10 +317,10 @@ exten =&amp;gt; no_result,n,Hangup()
     
     <item>
       <title>Load testing SIP registrations with SIPp</title>
-      <link>http://leifmadsen.github.io/hugo_gh_blog/blog/2009/07/29/load-testing-sip-registrations-with-sipp/</link>
+      <link>http://blog.leifmadsen.com/blog/2009/07/29/load-testing-sip-registrations-with-sipp/</link>
       <pubDate>Wed, 29 Jul 2009 16:34:49 +0000</pubDate>
       
-      <guid>http://leifmadsen.github.io/hugo_gh_blog/blog/2009/07/29/load-testing-sip-registrations-with-sipp/</guid>
+      <guid>http://blog.leifmadsen.com/blog/2009/07/29/load-testing-sip-registrations-with-sipp/</guid>
       <description>&lt;p&gt;Today I had a need to go and load a bunch of registrations into Asterisk for a bug I was working on. Since I&amp;rsquo;ve had this need a couple of times now, and I keep going and having to redevelop it, I think I&amp;rsquo;ll just write about it here, and then when I need it again, I can just look it up. Maybe this will be useful for someone else as well.&lt;/p&gt;
 
 &lt;p&gt;First of all, this is all based on the post I found on the SipX wiki. You can read the page I based this all off of &lt;a href=&#34;http://sipx-wiki.calivia.com/index.php/Using_SIPp_to_run_performance_tests&#34;&gt;here&lt;/a&gt;. Lots of good info there. All I&amp;rsquo;m really adding of value is the PHP scripts I used to generate the peers in the database, and the register_client.csv file.&lt;/p&gt;

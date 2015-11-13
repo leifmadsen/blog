@@ -2,19 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Business on Asterisk, and other worldly endeavours</title>
-    <link>http://leifmadsen.github.io/hugo_gh_blog/categories/business/</link>
+    <link>http://blog.leifmadsen.com/categories/business/</link>
     <description>Recent content in Business on Asterisk, and other worldly endeavours</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 04 Jan 2012 20:22:08 +0000</lastBuildDate>
-    <atom:link href="http://leifmadsen.github.io/hugo_gh_blog/categories/business/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://blog.leifmadsen.com/categories/business/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Now working with CoreDial</title>
-      <link>http://leifmadsen.github.io/hugo_gh_blog/blog/2012/01/04/now-working-with-coredial/</link>
+      <link>http://blog.leifmadsen.com/blog/2012/01/04/now-working-with-coredial/</link>
       <pubDate>Wed, 04 Jan 2012 20:22:08 +0000</pubDate>
       
-      <guid>http://leifmadsen.github.io/hugo_gh_blog/blog/2012/01/04/now-working-with-coredial/</guid>
+      <guid>http://blog.leifmadsen.com/blog/2012/01/04/now-working-with-coredial/</guid>
       <description>&lt;p&gt;&lt;img src=&#34;https://si0.twimg.com/profile_images/1509716558/twitter-coredial-square-avatar_reasonably_small.png&#34; alt=&#34;&#34; /&gt; As of January 3rd, I&amp;rsquo;m now working with the CoreDial team full time. I&amp;rsquo;ve worked with them as a consultant on their infrastructure over the last few years but now will be spending significantly more time working with the engineering team :)&lt;/p&gt;
 
 &lt;p&gt;From the announcement,&lt;/p&gt;
@@ -29,10 +29,10 @@
     
     <item>
       <title>Wow, lost ticket recovery for VIA Rail is pretty much garbage</title>
-      <link>http://leifmadsen.github.io/hugo_gh_blog/blog/2010/10/29/wow-lost-ticket-recovery-for-via-rail-is-pretty-much-garbage/</link>
+      <link>http://blog.leifmadsen.com/blog/2010/10/29/wow-lost-ticket-recovery-for-via-rail-is-pretty-much-garbage/</link>
       <pubDate>Fri, 29 Oct 2010 18:35:10 +0000</pubDate>
       
-      <guid>http://leifmadsen.github.io/hugo_gh_blog/blog/2010/10/29/wow-lost-ticket-recovery-for-via-rail-is-pretty-much-garbage/</guid>
+      <guid>http://blog.leifmadsen.com/blog/2010/10/29/wow-lost-ticket-recovery-for-via-rail-is-pretty-much-garbage/</guid>
       <description>&lt;p&gt;Here is the response I got from VIA Rail for a lost ticket, which was printed off at the time of departure for my return trip. Why they insist on printing the return ticket the time of departure I don&amp;rsquo;t know, but how ridiculous is this?&lt;/p&gt;
 
 &lt;p&gt;&amp;ldquo;&lt;em&gt;VIA Rail will not issue a free ticket against a lost or stolen ticket  being reported. Customers are required to purchase a new ticket at the  original fare and complete a Lost Ticket Indemnity Bond. Refund of lost  or stolen tickets are subject to a processing fee of $40 per person per  ticket. The claim for refund of lost tickets must be submitted no later  than 30 days after the last scheduled departure date shown on the  ticket.&lt;/em&gt;
@@ -46,10 +46,10 @@ _ There is a holding period of 60 days from the date of  receipt or the last dat
     
     <item>
       <title>Interesting article about *not* tracking holidays at Netflix</title>
-      <link>http://leifmadsen.github.io/hugo_gh_blog/blog/2010/08/25/interesting-article-about-not-tracking-holidays-at-netflix/</link>
+      <link>http://blog.leifmadsen.com/blog/2010/08/25/interesting-article-about-not-tracking-holidays-at-netflix/</link>
       <pubDate>Wed, 25 Aug 2010 20:07:17 +0000</pubDate>
       
-      <guid>http://leifmadsen.github.io/hugo_gh_blog/blog/2010/08/25/interesting-article-about-not-tracking-holidays-at-netflix/</guid>
+      <guid>http://blog.leifmadsen.com/blog/2010/08/25/interesting-article-about-not-tracking-holidays-at-netflix/</guid>
       <description>&lt;p&gt;The following is an interesting article about not tracking workers time spent at work, or on vacation, but rather tracking their productivity. As a consultant who doesn&amp;rsquo;t have a fixed set of hours in the day that I work, I tend to judge my productivity by the number of hours I get to bill each week (i.e. how productive was I working for customers, rather than playing Flight Simulator :)).&lt;/p&gt;
 
 &lt;p&gt;I haven&amp;rsquo;t tracked actual holidays for years now (since I started consulting full time out of school in 2003), and I&amp;rsquo;m not sure I ever had a job long enough prior to school that I received any sorts of benefits of holidays. Perhaps it&amp;rsquo;s just natural for me because of that, but this article reminds me of two things:&lt;/p&gt;

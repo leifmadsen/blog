@@ -2,19 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Jenkins on Asterisk, and other worldly endeavours</title>
-    <link>http://leifmadsen.github.io/hugo_gh_blog/tags/jenkins/</link>
+    <link>http://blog.leifmadsen.com/tags/jenkins/</link>
     <description>Recent content in Jenkins on Asterisk, and other worldly endeavours</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Tue, 26 Jun 2012 12:51:30 +0000</lastBuildDate>
-    <atom:link href="http://leifmadsen.github.io/hugo_gh_blog/tags/jenkins/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://blog.leifmadsen.com/tags/jenkins/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Integration Testing Using Jenkins (Part 1)</title>
-      <link>http://leifmadsen.github.io/hugo_gh_blog/blog/2012/06/26/integration-testing-using-jenkins-part-1/</link>
+      <link>http://blog.leifmadsen.com/blog/2012/06/26/integration-testing-using-jenkins-part-1/</link>
       <pubDate>Tue, 26 Jun 2012 12:51:30 +0000</pubDate>
       
-      <guid>http://leifmadsen.github.io/hugo_gh_blog/blog/2012/06/26/integration-testing-using-jenkins-part-1/</guid>
+      <guid>http://blog.leifmadsen.com/blog/2012/06/26/integration-testing-using-jenkins-part-1/</guid>
       <description>&lt;p&gt;So for the last week or so, I&amp;rsquo;ve been tasked at &lt;a href=&#34;http://www.coredial.com&#34;&gt;CoreDial&lt;/a&gt; with adding our own set of integration testing now that we&amp;rsquo;re moving to a more formal deployment method using &lt;a href=&#34;http://wiki.opscode.com/display/chef/Home&#34;&gt;chef&lt;/a&gt;. After much pestering of questions to &lt;a href=&#34;https://github.com/thehar&#34;&gt;thehar&lt;/a&gt; of &lt;a href=&#34;https://www.mylookout.com/&#34;&gt;Lookout Mobile Security&lt;/a&gt; and with help of Google, #chef and jhansche in #jenkins I&amp;rsquo;ve finally got a nice clean proof of concept that we can evaluate and likely deploy.&lt;/p&gt;
 
 &lt;p&gt;I&amp;rsquo;ll come back later with another article on my installation issues with jenkins and the solutions that I solved (nothing too terribly complicated), but what I wanted to blog about was the two types of tests that I&amp;rsquo;ve been focusing on and was able to finally solve.&lt;/p&gt;

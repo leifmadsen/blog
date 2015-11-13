@@ -2,19 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>About on Asterisk, and other worldly endeavours</title>
-    <link>http://leifmadsen.github.io/hugo_gh_blog/categories/about/</link>
+    <link>http://blog.leifmadsen.com/categories/about/</link>
     <description>Recent content in About on Asterisk, and other worldly endeavours</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Tue, 10 Nov 2015 19:28:26 -0500</lastBuildDate>
-    <atom:link href="http://leifmadsen.github.io/hugo_gh_blog/categories/about/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://blog.leifmadsen.com/categories/about/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>about</title>
-      <link>http://leifmadsen.github.io/hugo_gh_blog/about/</link>
+      <link>http://blog.leifmadsen.com/about/</link>
       <pubDate>Tue, 10 Nov 2015 19:28:26 -0500</pubDate>
       
-      <guid>http://leifmadsen.github.io/hugo_gh_blog/about/</guid>
+      <guid>http://blog.leifmadsen.com/about/</guid>
       <description>&lt;p&gt;Leif Madsen has been an Asterisk consultant since 2004 and has been working with Asterisk since September, 2002.
 He is also co-author of the O&amp;rsquo;Reilly Media published books, Asterisk: The Future of Telephony 1st and 2nd editions (along with Jared Smith and Jim van Meggelen),
 Asterisk: The Definitive Guide (3rd edition) with Jim van Meggelen and Russell Bryant, and the Asterisk Cookbook with Russell Bryant.&lt;/p&gt;

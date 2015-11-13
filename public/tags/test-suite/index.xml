@@ -2,19 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Test Suite on Asterisk, and other worldly endeavours</title>
-    <link>http://leifmadsen.github.io/hugo_gh_blog/tags/test-suite/</link>
+    <link>http://blog.leifmadsen.com/tags/test-suite/</link>
     <description>Recent content in Test Suite on Asterisk, and other worldly endeavours</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Mon, 03 May 2010 15:17:57 +0000</lastBuildDate>
-    <atom:link href="http://leifmadsen.github.io/hugo_gh_blog/tags/test-suite/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://blog.leifmadsen.com/tags/test-suite/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Installing the Asterisk Test Suite</title>
-      <link>http://leifmadsen.github.io/hugo_gh_blog/blog/2010/05/03/installing-the-asterisk-test-suite/</link>
+      <link>http://blog.leifmadsen.com/blog/2010/05/03/installing-the-asterisk-test-suite/</link>
       <pubDate>Mon, 03 May 2010 15:17:57 +0000</pubDate>
       
-      <guid>http://leifmadsen.github.io/hugo_gh_blog/blog/2010/05/03/installing-the-asterisk-test-suite/</guid>
+      <guid>http://blog.leifmadsen.com/blog/2010/05/03/installing-the-asterisk-test-suite/</guid>
       <description>&lt;p&gt;In case you missed it, I wrote an introductory &lt;a href=&#34;http://blogs.asterisk.org/2010/04/29/installing-the-asterisk-test-suite/&#34;&gt;article&lt;/a&gt; about the Asterisk Test Suite on the &lt;a href=&#34;http://blogs.asterisk.org&#34;&gt;Asterisk blog&lt;/a&gt;. The post takes you from a minimally installed Ubuntu 9.10 up to the point that you can run the tests in the test suite by going through all the possible errors you might encounter getting it loaded, and how to resolve those errors (most of them being missing dependencies).&lt;/p&gt;
 
 &lt;p&gt;Enjoy!&lt;/p&gt;

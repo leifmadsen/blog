@@ -2,19 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts on Asterisk, and other worldly endeavours</title>
-    <link>http://leifmadsen.github.io/hugo_gh_blog/post/</link>
+    <link>http://blog.leifmadsen.com/post/</link>
     <description>Recent content in Posts on Asterisk, and other worldly endeavours</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Tue, 10 Nov 2015 19:41:55 -0500</lastBuildDate>
-    <atom:link href="http://leifmadsen.github.io/hugo_gh_blog/post/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://blog.leifmadsen.com/post/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Asterisk Docker Container: Phase 1</title>
-      <link>http://leifmadsen.github.io/hugo_gh_blog/blog/2015/11/10/asterisk-docker-container-phase-1/</link>
+      <link>http://blog.leifmadsen.com/blog/2015/11/10/asterisk-docker-container-phase-1/</link>
       <pubDate>Tue, 10 Nov 2015 19:41:55 -0500</pubDate>
       
-      <guid>http://leifmadsen.github.io/hugo_gh_blog/blog/2015/11/10/asterisk-docker-container-phase-1/</guid>
+      <guid>http://blog.leifmadsen.com/blog/2015/11/10/asterisk-docker-container-phase-1/</guid>
       <description>&lt;p&gt;At AstriCon 2015 this year, there was a lot (and I mean a lot) of discussion around microservices (Docker),
 and what items are required over the next year by the development community in order to make Asterisk better
 suited to running in that environment.&lt;/p&gt;
@@ -43,10 +43,10 @@ do it.&lt;/p&gt;
     
     <item>
       <title>Docker container results in x509: failed to load system roots and no roots provided</title>
-      <link>http://leifmadsen.github.io/hugo_gh_blog/blog/2015/10/30/docker-container-results-in-x509-failed-to-load-system-roots-and-no-roots-provided/</link>
+      <link>http://blog.leifmadsen.com/blog/2015/10/30/docker-container-results-in-x509-failed-to-load-system-roots-and-no-roots-provided/</link>
       <pubDate>Fri, 30 Oct 2015 20:30:27 +0000</pubDate>
       
-      <guid>http://leifmadsen.github.io/hugo_gh_blog/blog/2015/10/30/docker-container-results-in-x509-failed-to-load-system-roots-and-no-roots-provided/</guid>
+      <guid>http://blog.leifmadsen.com/blog/2015/10/30/docker-container-results-in-x509-failed-to-load-system-roots-and-no-roots-provided/</guid>
       <description>&lt;p&gt;We have a small system running in AWS as a CentOS 7 image. It has a few containers that we&amp;rsquo;re using to host a few Golang API proxies. We migrated a customers API proxy that was running on the local VM into a container, and spun it up. Upon testing, we ran into the following error:&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;x509: failed to load system roots and no roots provided
@@ -71,10 +71,10 @@ do it.&lt;/p&gt;
     
     <item>
       <title>Configuring powerline to show working Git branch</title>
-      <link>http://leifmadsen.github.io/hugo_gh_blog/blog/2015/09/09/configuring-powerline-to-show-working-git-branch/</link>
+      <link>http://blog.leifmadsen.com/blog/2015/09/09/configuring-powerline-to-show-working-git-branch/</link>
       <pubDate>Wed, 09 Sep 2015 21:20:40 +0000</pubDate>
       
-      <guid>http://leifmadsen.github.io/hugo_gh_blog/blog/2015/09/09/configuring-powerline-to-show-working-git-branch/</guid>
+      <guid>http://blog.leifmadsen.com/blog/2015/09/09/configuring-powerline-to-show-working-git-branch/</guid>
       <description>&lt;p&gt;So the documentation for &lt;a href=&#34;http://powerline.readthedocs.org/en/latest/index.html&#34;&gt;Powerline&lt;/a&gt; kind of sucks. I followed &lt;a href=&#34;http://fedoramagazine.org/add-power-terminal-powerline&#34;&gt;this&lt;/a&gt; pretty good article on getting started with it. First thing I noticed however is that the &lt;code&gt;if&lt;/code&gt; statement on the article doesn&amp;rsquo;t work if you don&amp;rsquo;t have powerline installed (which kind of defeats the purpose of having the &lt;code&gt;if&lt;/code&gt; statement there at all).&lt;/p&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;# if powerline is installed, then use it
@@ -121,10 +121,10 @@ fi
     
     <item>
       <title>Rumors of my death have been greatly exaggerated</title>
-      <link>http://leifmadsen.github.io/hugo_gh_blog/blog/2014/07/25/rumors-of-my-death-have-been-greatly-exaggerated/</link>
+      <link>http://blog.leifmadsen.com/blog/2014/07/25/rumors-of-my-death-have-been-greatly-exaggerated/</link>
       <pubDate>Fri, 25 Jul 2014 02:49:12 +0000</pubDate>
       
-      <guid>http://leifmadsen.github.io/hugo_gh_blog/blog/2014/07/25/rumors-of-my-death-have-been-greatly-exaggerated/</guid>
+      <guid>http://blog.leifmadsen.com/blog/2014/07/25/rumors-of-my-death-have-been-greatly-exaggerated/</guid>
       <description>&lt;p&gt;It&amp;rsquo;s been way too long since I&amp;rsquo;ve blogged. And this post isn&amp;rsquo;t going to be all the impressive unfortunately. However, I recently have been running a BBS and some friends and I have been playing LORD.&lt;/p&gt;
 
 &lt;p&gt;We&amp;rsquo;ve been playing this for the last few months, and I think I&amp;rsquo;m going to run a tournament. Perhaps with some sort of buy in like $10 or something, winner takes all.&lt;/p&gt;
@@ -141,10 +141,10 @@ fi
     
     <item>
       <title>Asterisk: The Definitive Guide 4th Edition goes to print</title>
-      <link>http://leifmadsen.github.io/hugo_gh_blog/blog/2013/05/16/asterisk-the-definitive-guide-4th-edition-goes-to-print/</link>
+      <link>http://blog.leifmadsen.com/blog/2013/05/16/asterisk-the-definitive-guide-4th-edition-goes-to-print/</link>
       <pubDate>Thu, 16 May 2013 13:31:46 +0000</pubDate>
       
-      <guid>http://leifmadsen.github.io/hugo_gh_blog/blog/2013/05/16/asterisk-the-definitive-guide-4th-edition-goes-to-print/</guid>
+      <guid>http://blog.leifmadsen.com/blog/2013/05/16/asterisk-the-definitive-guide-4th-edition-goes-to-print/</guid>
       <description>&lt;p&gt;Howdy folks,&lt;/p&gt;
 
 &lt;p&gt;Sorry for the lack of updates lately. I&amp;rsquo;ve recently (December 2012) started at Thinking Phone Networks as the Lead UC Systems Engineer, and we&amp;rsquo;ve been incredibly busy there. In addition, the authors and I had been working on the final touches to the 4th edition of Asterisk: The Definitive Guide, which documents Asterisk 11 LTS.&lt;/p&gt;
@@ -159,10 +159,10 @@ fi
     
     <item>
       <title>Brother printer doesn&#39;t print in Fedora 17</title>
-      <link>http://leifmadsen.github.io/hugo_gh_blog/blog/2012/11/24/brother-printer-doesnt-print-in-fedora-17/</link>
+      <link>http://blog.leifmadsen.com/blog/2012/11/24/brother-printer-doesnt-print-in-fedora-17/</link>
       <pubDate>Sat, 24 Nov 2012 22:06:03 +0000</pubDate>
       
-      <guid>http://leifmadsen.github.io/hugo_gh_blog/blog/2012/11/24/brother-printer-doesnt-print-in-fedora-17/</guid>
+      <guid>http://blog.leifmadsen.com/blog/2012/11/24/brother-printer-doesnt-print-in-fedora-17/</guid>
       <description>&lt;p&gt;&lt;strong&gt;Tip: If your Brother printer won&amp;rsquo;t print after installing the drivers, install glibc.i686&lt;/strong&gt;&lt;/p&gt;
 
 &lt;p&gt;Today ran into an issue with my new Brother MFC-7460DN (which is a really nice laser printer with auto-feed scanner, Scan-to-FTP which creates a PDF file, and other things). I had just recently done a clean install of Fedora 17, and I could install the RPMs (which are i386 files on my x86_64 based system), add the printer to CUPS and all sorts of things that looked fine.&lt;/p&gt;
@@ -175,10 +175,10 @@ fi
     
     <item>
       <title>Digium D40 and D70 Phone Unboxing</title>
-      <link>http://leifmadsen.github.io/hugo_gh_blog/blog/2012/10/11/digium-d40-and-d70-phone-unboxing/</link>
+      <link>http://blog.leifmadsen.com/blog/2012/10/11/digium-d40-and-d70-phone-unboxing/</link>
       <pubDate>Thu, 11 Oct 2012 20:43:35 +0000</pubDate>
       
-      <guid>http://leifmadsen.github.io/hugo_gh_blog/blog/2012/10/11/digium-d40-and-d70-phone-unboxing/</guid>
+      <guid>http://blog.leifmadsen.com/blog/2012/10/11/digium-d40-and-d70-phone-unboxing/</guid>
       <description>
 
 &lt;p&gt;Today I received a couple of &lt;a href=&#34;http://www1.digium.com/en/products/phones&#34;&gt;phones&lt;/a&gt; from Digium; the D40 and D70. I&amp;rsquo;ll be using these phones for testing and documentation in the 4th edition of &lt;a href=&#34;http://shop.oreilly.com/product/9780596517342.do&#34;&gt;Asterisk: The Definitive Guide&lt;/a&gt; (which &lt;a href=&#34;http://www.coretel.ca/&#34;&gt;Jim Van Meggelen&lt;/a&gt;, &lt;a href=&#34;http://russellbryant.net&#34;&gt;Russell Bryant&lt;/a&gt; and &lt;a href=&#34;http://leifmadsen.com&#34;&gt;myself&lt;/a&gt; are working on right now).&lt;/p&gt;
@@ -249,10 +249,10 @@ Side cut outs for cables that I didn&amp;rsquo;t even notice the first time thro
     
     <item>
       <title>Selecting Chef Servers With Environment Variables</title>
-      <link>http://leifmadsen.github.io/hugo_gh_blog/blog/2012/08/22/selecting-chef-servers-with-environment-variables/</link>
+      <link>http://blog.leifmadsen.com/blog/2012/08/22/selecting-chef-servers-with-environment-variables/</link>
       <pubDate>Wed, 22 Aug 2012 18:49:43 +0000</pubDate>
       
-      <guid>http://leifmadsen.github.io/hugo_gh_blog/blog/2012/08/22/selecting-chef-servers-with-environment-variables/</guid>
+      <guid>http://blog.leifmadsen.com/blog/2012/08/22/selecting-chef-servers-with-environment-variables/</guid>
       <description>&lt;p&gt;Today I got playing around with dynamically selecting different chef servers in preparation for migrating some of &lt;a href=&#34;http://coredial.com&#34;&gt;our&lt;/a&gt; nodes away from our chef-dev server to our chef-live server (which I&amp;rsquo;m currently in the process of building and populating with data). I had been talking in the #chef IRC channel a few weeks back about making things dynamic, or at least easily switchable, when using multiple chef servers for different groups of servers in an environment.&lt;/p&gt;
 
 &lt;p&gt;What I want to do, is be able to set an environment variable at my console in order to switch between chef servers. Previously I had been doing this with different files in my ~/.chef/ directory and changing symlinks between the files. This method works, but is kind of annoying. So with the help of some of the folks in #chef, and with &lt;a href=&#34;https://gist.github.com/3176332&#34;&gt;this gist&lt;/a&gt; of a sample file that someone is using for their hosted chef environment, I was able to build my own knife.rb and commit it to our chef.git repository.&lt;/p&gt;
@@ -311,10 +311,10 @@ export PS1=&#39;[\u@\h \[\033[0;36m\]\W$(__git_ps1 &amp;quot;\[\033[0m\]\[\033[0
     
     <item>
       <title>CentOS 5.8 On AWS EC2 With Xen Kernel (PVGRUB)</title>
-      <link>http://leifmadsen.github.io/hugo_gh_blog/blog/2012/08/22/centos-5.8-on-aws-ec2-with-xen-kernel-pvgrub/</link>
+      <link>http://blog.leifmadsen.com/blog/2012/08/22/centos-5.8-on-aws-ec2-with-xen-kernel-pvgrub/</link>
       <pubDate>Wed, 22 Aug 2012 14:10:46 +0000</pubDate>
       
-      <guid>http://leifmadsen.github.io/hugo_gh_blog/blog/2012/08/22/centos-5.8-on-aws-ec2-with-xen-kernel-pvgrub/</guid>
+      <guid>http://blog.leifmadsen.com/blog/2012/08/22/centos-5.8-on-aws-ec2-with-xen-kernel-pvgrub/</guid>
       <description>&lt;p&gt;At &lt;a href=&#34;http://coredial.com&#34;&gt;CoreDial&lt;/a&gt; we&amp;rsquo;ve been using a lot of AWS EC2 lately for building sandbox infrastructure for testing. Part of the infrastructure is a voice platform utilizing Asterisk 1.4 and 1.8, and those voice platforms are using Zaptel and DAHDI respectively for use with MeetMe(). This hasn&amp;rsquo;t been an issue previously as our testing has either been on bare metal, or in other virtual machine systems where installation of a base image and standard kernel are not an issue.&lt;/p&gt;
 
 &lt;p&gt;However, with the introduction of a lot of EC2 instances in our testing process, we ran into issues with building our own DAHDI RPMs since there aren&amp;rsquo;t any EC2 kernel development packages outside of OpenSuSE (which we don&amp;rsquo;t use). After spending a day of trying to hack around it, Kevin found a &lt;a href=&#34;http://ec2-downloads.s3.amazonaws.com/user_specified_kernels.pdf&#34;&gt;PDF&lt;/a&gt; from Amazon that states AWS now supports the ability to load your own kernels via PVGRUB. Great! If I can do that, then I can just continue using the same RPMs I&amp;rsquo;d be building anyways (albeit the xen based kernel, but that&amp;rsquo;s easy to do in the spec file).&lt;/p&gt;
@@ -358,10 +358,10 @@ If you do happen to use separate partitions, make sure you use the &lt;strong&gt
     
     <item>
       <title>Assign unique hostname to dhcp client with dnsmasq</title>
-      <link>http://leifmadsen.github.io/hugo_gh_blog/blog/2012/07/23/assign-unique-hostname-to-dhcp-client-with-dnsmasq/</link>
+      <link>http://blog.leifmadsen.com/blog/2012/07/23/assign-unique-hostname-to-dhcp-client-with-dnsmasq/</link>
       <pubDate>Mon, 23 Jul 2012 19:14:45 +0000</pubDate>
       
-      <guid>http://leifmadsen.github.io/hugo_gh_blog/blog/2012/07/23/assign-unique-hostname-to-dhcp-client-with-dnsmasq/</guid>
+      <guid>http://blog.leifmadsen.com/blog/2012/07/23/assign-unique-hostname-to-dhcp-client-with-dnsmasq/</guid>
       <description>&lt;p&gt;Today I&amp;rsquo;ve been getting our lab environment setup with vagrant to auto-provision our lab servers with chef server in order to allow the development team to quickly and easily turn up and tear down web application servers.&lt;/p&gt;
 
 &lt;p&gt;Because when the server gets spun up with vagrant, it registers itself as a new node to the chef server using its hostname. Since using localhost for every node pretty much makes the chef server useless for more than 1 virtual machine at a time, I needed to figure out how to get dnsmasq to assign a unique hostname based on the IP address being provided by dnsmasq to the dhcp client.&lt;/p&gt;
@@ -388,10 +388,10 @@ If you do happen to use separate partitions, make sure you use the &lt;strong&gt
     
     <item>
       <title>bash creating files named &#39;1&#39; everywhere!</title>
-      <link>http://leifmadsen.github.io/hugo_gh_blog/blog/2012/07/19/bash-creating-files-named-1-everywhere/</link>
+      <link>http://blog.leifmadsen.com/blog/2012/07/19/bash-creating-files-named-1-everywhere/</link>
       <pubDate>Thu, 19 Jul 2012 15:03:05 +0000</pubDate>
       
-      <guid>http://leifmadsen.github.io/hugo_gh_blog/blog/2012/07/19/bash-creating-files-named-1-everywhere/</guid>
+      <guid>http://blog.leifmadsen.com/blog/2012/07/19/bash-creating-files-named-1-everywhere/</guid>
       <description>&lt;p&gt;So I ran into something kind of stupid today :)  Adding a little note for anyone who might run into a similar instance.&lt;/p&gt;
 
 &lt;p&gt;I have some &lt;code&gt;ssh-add&lt;/code&gt; stuff that gets run in my &lt;code&gt;.bashrc&lt;/code&gt; file, but when I was outputting it, I was doing:&lt;/p&gt;
@@ -408,10 +408,10 @@ If you do happen to use separate partitions, make sure you use the &lt;strong&gt
     
     <item>
       <title>Integration Testing Using Jenkins (Part 1)</title>
-      <link>http://leifmadsen.github.io/hugo_gh_blog/blog/2012/06/26/integration-testing-using-jenkins-part-1/</link>
+      <link>http://blog.leifmadsen.com/blog/2012/06/26/integration-testing-using-jenkins-part-1/</link>
       <pubDate>Tue, 26 Jun 2012 12:51:30 +0000</pubDate>
       
-      <guid>http://leifmadsen.github.io/hugo_gh_blog/blog/2012/06/26/integration-testing-using-jenkins-part-1/</guid>
+      <guid>http://blog.leifmadsen.com/blog/2012/06/26/integration-testing-using-jenkins-part-1/</guid>
       <description>&lt;p&gt;So for the last week or so, I&amp;rsquo;ve been tasked at &lt;a href=&#34;http://www.coredial.com&#34;&gt;CoreDial&lt;/a&gt; with adding our own set of integration testing now that we&amp;rsquo;re moving to a more formal deployment method using &lt;a href=&#34;http://wiki.opscode.com/display/chef/Home&#34;&gt;chef&lt;/a&gt;. After much pestering of questions to &lt;a href=&#34;https://github.com/thehar&#34;&gt;thehar&lt;/a&gt; of &lt;a href=&#34;https://www.mylookout.com/&#34;&gt;Lookout Mobile Security&lt;/a&gt; and with help of Google, #chef and jhansche in #jenkins I&amp;rsquo;ve finally got a nice clean proof of concept that we can evaluate and likely deploy.&lt;/p&gt;
 
 &lt;p&gt;I&amp;rsquo;ll come back later with another article on my installation issues with jenkins and the solutions that I solved (nothing too terribly complicated), but what I wanted to blog about was the two types of tests that I&amp;rsquo;ve been focusing on and was able to finally solve.&lt;/p&gt;
@@ -445,10 +445,10 @@ foodcritic -f any site-cookbooks/my_awesome_cookbook
     
     <item>
       <title>rpmlint non-utf8-spec-file error</title>
-      <link>http://leifmadsen.github.io/hugo_gh_blog/blog/2012/02/23/rpmlint-non-utf8-spec-file-error/</link>
+      <link>http://blog.leifmadsen.com/blog/2012/02/23/rpmlint-non-utf8-spec-file-error/</link>
       <pubDate>Thu, 23 Feb 2012 18:43:54 +0000</pubDate>
       
-      <guid>http://leifmadsen.github.io/hugo_gh_blog/blog/2012/02/23/rpmlint-non-utf8-spec-file-error/</guid>
+      <guid>http://blog.leifmadsen.com/blog/2012/02/23/rpmlint-non-utf8-spec-file-error/</guid>
       <description>&lt;p&gt;I&amp;rsquo;ve been doing a bunch of work with RPMs lately, and while running rpmlint against a spec file I was modifying, I received this error:&lt;/p&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;myfile.spec: E: non-utf8-spec-file myfile.spec
@@ -466,10 +466,10 @@ $ diff -u myfile.spec converted.spec
     
     <item>
       <title>Converting multiple exten =&gt; lines to using same =&gt; in Asterisk dialplan</title>
-      <link>http://leifmadsen.github.io/hugo_gh_blog/blog/2012/01/16/converting-multiple-exten--lines-to-using-same--in-asterisk-dialplan/</link>
+      <link>http://blog.leifmadsen.com/blog/2012/01/16/converting-multiple-exten--lines-to-using-same--in-asterisk-dialplan/</link>
       <pubDate>Mon, 16 Jan 2012 13:28:10 +0000</pubDate>
       
-      <guid>http://leifmadsen.github.io/hugo_gh_blog/blog/2012/01/16/converting-multiple-exten--lines-to-using-same--in-asterisk-dialplan/</guid>
+      <guid>http://blog.leifmadsen.com/blog/2012/01/16/converting-multiple-exten--lines-to-using-same--in-asterisk-dialplan/</guid>
       <description>&lt;p&gt;Last week I wanted to start changing some 1.4 based Asterisk dialplan to a 1.8 based Asterisk system, and in that process wanted to convert lines like:&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;exten =&amp;gt; _NXXNXXXXXX,1,NoOp()
@@ -494,10 +494,10 @@ exten =&amp;gt; _NXXNXXXXXX,3,Dial(SIP/foo/${EXTEN})
     
     <item>
       <title>Commodore 64 Turns 30 This Year</title>
-      <link>http://leifmadsen.github.io/hugo_gh_blog/blog/2012/01/09/commodore-64-turns-30-this-year/</link>
+      <link>http://blog.leifmadsen.com/blog/2012/01/09/commodore-64-turns-30-this-year/</link>
       <pubDate>Mon, 09 Jan 2012 13:05:51 +0000</pubDate>
       
-      <guid>http://leifmadsen.github.io/hugo_gh_blog/blog/2012/01/09/commodore-64-turns-30-this-year/</guid>
+      <guid>http://blog.leifmadsen.com/blog/2012/01/09/commodore-64-turns-30-this-year/</guid>
       <description>&lt;p&gt;Having found an article about the Commodore 64 turning 30 this year, I reflected back in a comment on that page about what it is like to be only 1 year older than the Commodore 64, a computer which spiked my interest in technology away from a games system to something much more. The original article is available at &lt;a href=&#34;http://www.linuxjournal.com/content/commodor-64-30-year&#34;&gt;http://www.linuxjournal.com/content/commodor-64-30-year&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;&amp;ldquo;I just turned 31 a couple of days ago on January 7th, and when I was in grade 2 (about 8-9 years old I guess) I started getting interested in the Commodore 64s we had at our school that were plentiful, but rarely used. I remember the first thing the teacher taught me; $p$g&lt;/p&gt;

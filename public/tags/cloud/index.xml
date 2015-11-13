@@ -2,19 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Cloud on Asterisk, and other worldly endeavours</title>
-    <link>http://leifmadsen.github.io/hugo_gh_blog/tags/cloud/</link>
+    <link>http://blog.leifmadsen.com/tags/cloud/</link>
     <description>Recent content in Cloud on Asterisk, and other worldly endeavours</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 22 Aug 2012 14:10:46 +0000</lastBuildDate>
-    <atom:link href="http://leifmadsen.github.io/hugo_gh_blog/tags/cloud/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://blog.leifmadsen.com/tags/cloud/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>CentOS 5.8 On AWS EC2 With Xen Kernel (PVGRUB)</title>
-      <link>http://leifmadsen.github.io/hugo_gh_blog/blog/2012/08/22/centos-5.8-on-aws-ec2-with-xen-kernel-pvgrub/</link>
+      <link>http://blog.leifmadsen.com/blog/2012/08/22/centos-5.8-on-aws-ec2-with-xen-kernel-pvgrub/</link>
       <pubDate>Wed, 22 Aug 2012 14:10:46 +0000</pubDate>
       
-      <guid>http://leifmadsen.github.io/hugo_gh_blog/blog/2012/08/22/centos-5.8-on-aws-ec2-with-xen-kernel-pvgrub/</guid>
+      <guid>http://blog.leifmadsen.com/blog/2012/08/22/centos-5.8-on-aws-ec2-with-xen-kernel-pvgrub/</guid>
       <description>&lt;p&gt;At &lt;a href=&#34;http://coredial.com&#34;&gt;CoreDial&lt;/a&gt; we&amp;rsquo;ve been using a lot of AWS EC2 lately for building sandbox infrastructure for testing. Part of the infrastructure is a voice platform utilizing Asterisk 1.4 and 1.8, and those voice platforms are using Zaptel and DAHDI respectively for use with MeetMe(). This hasn&amp;rsquo;t been an issue previously as our testing has either been on bare metal, or in other virtual machine systems where installation of a base image and standard kernel are not an issue.&lt;/p&gt;
 
 &lt;p&gt;However, with the introduction of a lot of EC2 instances in our testing process, we ran into issues with building our own DAHDI RPMs since there aren&amp;rsquo;t any EC2 kernel development packages outside of OpenSuSE (which we don&amp;rsquo;t use). After spending a day of trying to hack around it, Kevin found a &lt;a href=&#34;http://ec2-downloads.s3.amazonaws.com/user_specified_kernels.pdf&#34;&gt;PDF&lt;/a&gt; from Amazon that states AWS now supports the ability to load your own kernels via PVGRUB. Great! If I can do that, then I can just continue using the same RPMs I&amp;rsquo;d be building anyways (albeit the xen based kernel, but that&amp;rsquo;s easy to do in the spec file).&lt;/p&gt;
@@ -58,10 +58,10 @@ If you do happen to use separate partitions, make sure you use the &lt;strong&gt
     
     <item>
       <title>Now working with CoreDial</title>
-      <link>http://leifmadsen.github.io/hugo_gh_blog/blog/2012/01/04/now-working-with-coredial/</link>
+      <link>http://blog.leifmadsen.com/blog/2012/01/04/now-working-with-coredial/</link>
       <pubDate>Wed, 04 Jan 2012 20:22:08 +0000</pubDate>
       
-      <guid>http://leifmadsen.github.io/hugo_gh_blog/blog/2012/01/04/now-working-with-coredial/</guid>
+      <guid>http://blog.leifmadsen.com/blog/2012/01/04/now-working-with-coredial/</guid>
       <description>&lt;p&gt;&lt;img src=&#34;https://si0.twimg.com/profile_images/1509716558/twitter-coredial-square-avatar_reasonably_small.png&#34; alt=&#34;&#34; /&gt; As of January 3rd, I&amp;rsquo;m now working with the CoreDial team full time. I&amp;rsquo;ve worked with them as a consultant on their infrastructure over the last few years but now will be spending significantly more time working with the engineering team :)&lt;/p&gt;
 
 &lt;p&gt;From the announcement,&lt;/p&gt;
@@ -76,10 +76,10 @@ If you do happen to use separate partitions, make sure you use the &lt;strong&gt
     
     <item>
       <title>MindMeister: Online mind mapping</title>
-      <link>http://leifmadsen.github.io/hugo_gh_blog/blog/2010/08/10/mindmeister-online-mind-mapping/</link>
+      <link>http://blog.leifmadsen.com/blog/2010/08/10/mindmeister-online-mind-mapping/</link>
       <pubDate>Tue, 10 Aug 2010 14:03:13 +0000</pubDate>
       
-      <guid>http://leifmadsen.github.io/hugo_gh_blog/blog/2010/08/10/mindmeister-online-mind-mapping/</guid>
+      <guid>http://blog.leifmadsen.com/blog/2010/08/10/mindmeister-online-mind-mapping/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;http://www.russellbryant.net/&#34;&gt;Russell Bryant&lt;/a&gt; just sent me a link to a neat site that allows you to do online collaborative mind mapping: &lt;a href=&#34;http://www.mindmeister.com/&#34;&gt;MindMeister&lt;/a&gt;. If you&amp;rsquo;re not aware of what mind mapping software does, it is a method to quickly and easily allow you to brainstorm ideas without getting in the way too much. It works by starting from a central node and breaking out in lines from there where you start with an idea or thought, then break that thought down further with additional lines from that node.&lt;/p&gt;
 
 &lt;p&gt;While working on the next edition of the &lt;a href=&#34;http://www.asteriskdocs.org&#34;&gt;Asterisk book&lt;/a&gt;, we spent a significant amount of time using &lt;a href=&#34;http://freemind.sourceforge.net/wiki/index.php/Main_Page&#34;&gt;FreeMind&lt;/a&gt; to brainstorm ideas of what we wanted in the book, then develop a detailed outline to the book which included the chapters, and what each of those chapters would contain. This way we can reference the mindmap while working on the book, and later review all our thoughts to make sure we covered all our original ideas. We continue to refine the mindmap on an almost daily basis while we come up with additional ideas and layout tweaks while working on particular chapters.&lt;/p&gt;
@@ -90,10 +90,10 @@ If you do happen to use separate partitions, make sure you use the &lt;strong&gt
     
     <item>
       <title>AstriCon 2009 Presentation -- Building a Distributed Call Center</title>
-      <link>http://leifmadsen.github.io/hugo_gh_blog/blog/2009/11/18/astricon-2009-presentation----building-a-distributed-call-center/</link>
+      <link>http://blog.leifmadsen.com/blog/2009/11/18/astricon-2009-presentation----building-a-distributed-call-center/</link>
       <pubDate>Wed, 18 Nov 2009 20:40:15 +0000</pubDate>
       
-      <guid>http://leifmadsen.github.io/hugo_gh_blog/blog/2009/11/18/astricon-2009-presentation----building-a-distributed-call-center/</guid>
+      <guid>http://blog.leifmadsen.com/blog/2009/11/18/astricon-2009-presentation----building-a-distributed-call-center/</guid>
       <description>&lt;p&gt;For those who missed it, you&amp;rsquo;re able to get a PDF of my AstriCon 2009 presentation from the &lt;a href=&#34;http://www.astricon.net&#34;&gt;http://www.astricon.net&lt;/a&gt; website.&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&#34;http://images.tmcnet.com/expo/astricon/presentations/cc01-madsen-digium.pdf&#34;&gt;http://images.tmcnet.com/expo/astricon/presentations/cc01-madsen-digium.pdf&lt;/a&gt;&lt;/p&gt;

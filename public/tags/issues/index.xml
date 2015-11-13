@@ -2,19 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Issues on Asterisk, and other worldly endeavours</title>
-    <link>http://leifmadsen.github.io/hugo_gh_blog/tags/issues/</link>
+    <link>http://blog.leifmadsen.com/tags/issues/</link>
     <description>Recent content in Issues on Asterisk, and other worldly endeavours</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sat, 18 Jul 2009 15:18:28 +0000</lastBuildDate>
-    <atom:link href="http://leifmadsen.github.io/hugo_gh_blog/tags/issues/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://blog.leifmadsen.com/tags/issues/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Issues: ast_rtp_senddigit_begin: Don&#39;t know how to represent &#39;f&#39; (one way audio)</title>
-      <link>http://leifmadsen.github.io/hugo_gh_blog/blog/2009/07/18/issues-ast_rtp_senddigit_begin-dont-know-how-to-represent-f-one-way-audio/</link>
+      <link>http://blog.leifmadsen.com/blog/2009/07/18/issues-ast_rtp_senddigit_begin-dont-know-how-to-represent-f-one-way-audio/</link>
       <pubDate>Sat, 18 Jul 2009 15:18:28 +0000</pubDate>
       
-      <guid>http://leifmadsen.github.io/hugo_gh_blog/blog/2009/07/18/issues-ast_rtp_senddigit_begin-dont-know-how-to-represent-f-one-way-audio/</guid>
+      <guid>http://blog.leifmadsen.com/blog/2009/07/18/issues-ast_rtp_senddigit_begin-dont-know-how-to-represent-f-one-way-audio/</guid>
       <description>&lt;p&gt;I keep seeing questions like this recently on the mailing list and in the #asterisk IRC channel.&lt;/p&gt;
 
 &lt;p&gt;&amp;ldquo;ast_rtp_senddigit_begin: Don&amp;rsquo;t know how to represent &amp;lsquo;f&amp;rsquo;   shows up on the console then I get one way audio&amp;hellip;   * 1.4.25.1, wanpipe 3.3.15.20, zaptel 1.4.12.1, libpri 1.4.7&amp;hellip;. any suggestions?&amp;rdquo;&lt;/p&gt;

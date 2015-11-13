@@ -2,19 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Amazon on Asterisk, and other worldly endeavours</title>
-    <link>http://leifmadsen.github.io/hugo_gh_blog/tags/amazon/</link>
+    <link>http://blog.leifmadsen.com/tags/amazon/</link>
     <description>Recent content in Amazon on Asterisk, and other worldly endeavours</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 22 Aug 2012 14:10:46 +0000</lastBuildDate>
-    <atom:link href="http://leifmadsen.github.io/hugo_gh_blog/tags/amazon/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://blog.leifmadsen.com/tags/amazon/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>CentOS 5.8 On AWS EC2 With Xen Kernel (PVGRUB)</title>
-      <link>http://leifmadsen.github.io/hugo_gh_blog/blog/2012/08/22/centos-5.8-on-aws-ec2-with-xen-kernel-pvgrub/</link>
+      <link>http://blog.leifmadsen.com/blog/2012/08/22/centos-5.8-on-aws-ec2-with-xen-kernel-pvgrub/</link>
       <pubDate>Wed, 22 Aug 2012 14:10:46 +0000</pubDate>
       
-      <guid>http://leifmadsen.github.io/hugo_gh_blog/blog/2012/08/22/centos-5.8-on-aws-ec2-with-xen-kernel-pvgrub/</guid>
+      <guid>http://blog.leifmadsen.com/blog/2012/08/22/centos-5.8-on-aws-ec2-with-xen-kernel-pvgrub/</guid>
       <description>&lt;p&gt;At &lt;a href=&#34;http://coredial.com&#34;&gt;CoreDial&lt;/a&gt; we&amp;rsquo;ve been using a lot of AWS EC2 lately for building sandbox infrastructure for testing. Part of the infrastructure is a voice platform utilizing Asterisk 1.4 and 1.8, and those voice platforms are using Zaptel and DAHDI respectively for use with MeetMe(). This hasn&amp;rsquo;t been an issue previously as our testing has either been on bare metal, or in other virtual machine systems where installation of a base image and standard kernel are not an issue.&lt;/p&gt;
 
 &lt;p&gt;However, with the introduction of a lot of EC2 instances in our testing process, we ran into issues with building our own DAHDI RPMs since there aren&amp;rsquo;t any EC2 kernel development packages outside of OpenSuSE (which we don&amp;rsquo;t use). After spending a day of trying to hack around it, Kevin found a &lt;a href=&#34;http://ec2-downloads.s3.amazonaws.com/user_specified_kernels.pdf&#34;&gt;PDF&lt;/a&gt; from Amazon that states AWS now supports the ability to load your own kernels via PVGRUB. Great! If I can do that, then I can just continue using the same RPMs I&amp;rsquo;d be building anyways (albeit the xen based kernel, but that&amp;rsquo;s easy to do in the spec file).&lt;/p&gt;
@@ -58,10 +58,10 @@ If you do happen to use separate partitions, make sure you use the &lt;strong&gt
     
     <item>
       <title>Request for Reviews for Asterisk: The Definitive Guide</title>
-      <link>http://leifmadsen.github.io/hugo_gh_blog/blog/2011/04/26/request-for-reviews-for-asterisk-the-definitive-guide/</link>
+      <link>http://blog.leifmadsen.com/blog/2011/04/26/request-for-reviews-for-asterisk-the-definitive-guide/</link>
       <pubDate>Tue, 26 Apr 2011 17:34:43 +0000</pubDate>
       
-      <guid>http://leifmadsen.github.io/hugo_gh_blog/blog/2011/04/26/request-for-reviews-for-asterisk-the-definitive-guide/</guid>
+      <guid>http://blog.leifmadsen.com/blog/2011/04/26/request-for-reviews-for-asterisk-the-definitive-guide/</guid>
       <description>&lt;p&gt;Recently Jim Van Meggelen, Russell Bryant and myself released the 3rd edition of the Asterisk book published by O&amp;rsquo;Reilly Media titled &amp;lsquo;&lt;a href=&#34;http://oreilly.com/catalog/9780596517342&#34;&gt;Asterisk: The Definitive Guide&lt;/a&gt;&amp;rsquo;.&lt;/p&gt;
 
 &lt;p&gt;We have released this book under a &lt;a href=&#34;http://creativecommons.org/licenses/by-nc-nd/3.0/&#34;&gt;Creative Commons&lt;/a&gt; license in the spirit of Open Source software. It is available in its entirety at &lt;a href=&#34;http://ofps.oreilly.com/titles/9780596517342/&#34;&gt;http://ofps.oreilly.com/titles/9780596517342/&lt;/a&gt; and for purchase through Amazon at &lt;a href=&#34;http://www.amazon.com/Asterisk-Definitive-Guide-Leif-Madsen/dp/0596517343/ref=sr_1_1?ie=UTF8&amp;amp;s=books&amp;amp;qid=1303765969&amp;amp;sr=8-1&#34;&gt;http://www.amazon.com/Asterisk-Definitive-Guide-Leif-Madsen/dp/0596517343/ref=sr_1_1?ie=UTF8&amp;amp;s=books&amp;amp;qid=1303765969&amp;amp;sr=8-1&lt;/a&gt;&lt;/p&gt;
@@ -77,10 +77,10 @@ Leif Madsen.&lt;/p&gt;
     
     <item>
       <title>Recent SIP Attacks from Amazon EC2</title>
-      <link>http://leifmadsen.github.io/hugo_gh_blog/blog/2010/04/13/recent-sip-attacks-from-amazon-ec2/</link>
+      <link>http://blog.leifmadsen.com/blog/2010/04/13/recent-sip-attacks-from-amazon-ec2/</link>
       <pubDate>Tue, 13 Apr 2010 00:28:38 +0000</pubDate>
       
-      <guid>http://leifmadsen.github.io/hugo_gh_blog/blog/2010/04/13/recent-sip-attacks-from-amazon-ec2/</guid>
+      <guid>http://blog.leifmadsen.com/blog/2010/04/13/recent-sip-attacks-from-amazon-ec2/</guid>
       <description>&lt;p&gt;Recently (over the weekend and continuing into today) there have been several attacks from Amazon EC2 hosts running scanners looking for open SIP accounts. I&amp;rsquo;ve gathered a couple of links that I think are useful in knowing more about the attacks, along with methods of stopping the attacks. The Joshua Stein blog has a very clever way of stopping the attacks that impressed me.&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&#34;http://jcs.org/notaweblog/2010/04/11/properly_stopping_a_sip_flood&#34;&gt;http://jcs.org/notaweblog/2010/04/11/properly_stopping_a_sip_flood&lt;/a&gt;&lt;/p&gt;

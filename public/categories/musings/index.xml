@@ -2,19 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Musings on Asterisk, and other worldly endeavours</title>
-    <link>http://leifmadsen.github.io/hugo_gh_blog/categories/musings/</link>
+    <link>http://blog.leifmadsen.com/categories/musings/</link>
     <description>Recent content in Musings on Asterisk, and other worldly endeavours</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 25 Jul 2014 02:49:12 +0000</lastBuildDate>
-    <atom:link href="http://leifmadsen.github.io/hugo_gh_blog/categories/musings/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://blog.leifmadsen.com/categories/musings/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Rumors of my death have been greatly exaggerated</title>
-      <link>http://leifmadsen.github.io/hugo_gh_blog/blog/2014/07/25/rumors-of-my-death-have-been-greatly-exaggerated/</link>
+      <link>http://blog.leifmadsen.com/blog/2014/07/25/rumors-of-my-death-have-been-greatly-exaggerated/</link>
       <pubDate>Fri, 25 Jul 2014 02:49:12 +0000</pubDate>
       
-      <guid>http://leifmadsen.github.io/hugo_gh_blog/blog/2014/07/25/rumors-of-my-death-have-been-greatly-exaggerated/</guid>
+      <guid>http://blog.leifmadsen.com/blog/2014/07/25/rumors-of-my-death-have-been-greatly-exaggerated/</guid>
       <description>&lt;p&gt;It&amp;rsquo;s been way too long since I&amp;rsquo;ve blogged. And this post isn&amp;rsquo;t going to be all the impressive unfortunately. However, I recently have been running a BBS and some friends and I have been playing LORD.&lt;/p&gt;
 
 &lt;p&gt;We&amp;rsquo;ve been playing this for the last few months, and I think I&amp;rsquo;m going to run a tournament. Perhaps with some sort of buy in like $10 or something, winner takes all.&lt;/p&gt;
@@ -31,10 +31,10 @@
     
     <item>
       <title>Digium D40 and D70 Phone Unboxing</title>
-      <link>http://leifmadsen.github.io/hugo_gh_blog/blog/2012/10/11/digium-d40-and-d70-phone-unboxing/</link>
+      <link>http://blog.leifmadsen.com/blog/2012/10/11/digium-d40-and-d70-phone-unboxing/</link>
       <pubDate>Thu, 11 Oct 2012 20:43:35 +0000</pubDate>
       
-      <guid>http://leifmadsen.github.io/hugo_gh_blog/blog/2012/10/11/digium-d40-and-d70-phone-unboxing/</guid>
+      <guid>http://blog.leifmadsen.com/blog/2012/10/11/digium-d40-and-d70-phone-unboxing/</guid>
       <description>
 
 &lt;p&gt;Today I received a couple of &lt;a href=&#34;http://www1.digium.com/en/products/phones&#34;&gt;phones&lt;/a&gt; from Digium; the D40 and D70. I&amp;rsquo;ll be using these phones for testing and documentation in the 4th edition of &lt;a href=&#34;http://shop.oreilly.com/product/9780596517342.do&#34;&gt;Asterisk: The Definitive Guide&lt;/a&gt; (which &lt;a href=&#34;http://www.coretel.ca/&#34;&gt;Jim Van Meggelen&lt;/a&gt;, &lt;a href=&#34;http://russellbryant.net&#34;&gt;Russell Bryant&lt;/a&gt; and &lt;a href=&#34;http://leifmadsen.com&#34;&gt;myself&lt;/a&gt; are working on right now).&lt;/p&gt;
@@ -105,10 +105,10 @@ Side cut outs for cables that I didn&amp;rsquo;t even notice the first time thro
     
     <item>
       <title>bash creating files named &#39;1&#39; everywhere!</title>
-      <link>http://leifmadsen.github.io/hugo_gh_blog/blog/2012/07/19/bash-creating-files-named-1-everywhere/</link>
+      <link>http://blog.leifmadsen.com/blog/2012/07/19/bash-creating-files-named-1-everywhere/</link>
       <pubDate>Thu, 19 Jul 2012 15:03:05 +0000</pubDate>
       
-      <guid>http://leifmadsen.github.io/hugo_gh_blog/blog/2012/07/19/bash-creating-files-named-1-everywhere/</guid>
+      <guid>http://blog.leifmadsen.com/blog/2012/07/19/bash-creating-files-named-1-everywhere/</guid>
       <description>&lt;p&gt;So I ran into something kind of stupid today :)  Adding a little note for anyone who might run into a similar instance.&lt;/p&gt;
 
 &lt;p&gt;I have some &lt;code&gt;ssh-add&lt;/code&gt; stuff that gets run in my &lt;code&gt;.bashrc&lt;/code&gt; file, but when I was outputting it, I was doing:&lt;/p&gt;
@@ -125,10 +125,10 @@ Side cut outs for cables that I didn&amp;rsquo;t even notice the first time thro
     
     <item>
       <title>Commodore 64 Turns 30 This Year</title>
-      <link>http://leifmadsen.github.io/hugo_gh_blog/blog/2012/01/09/commodore-64-turns-30-this-year/</link>
+      <link>http://blog.leifmadsen.com/blog/2012/01/09/commodore-64-turns-30-this-year/</link>
       <pubDate>Mon, 09 Jan 2012 13:05:51 +0000</pubDate>
       
-      <guid>http://leifmadsen.github.io/hugo_gh_blog/blog/2012/01/09/commodore-64-turns-30-this-year/</guid>
+      <guid>http://blog.leifmadsen.com/blog/2012/01/09/commodore-64-turns-30-this-year/</guid>
       <description>&lt;p&gt;Having found an article about the Commodore 64 turning 30 this year, I reflected back in a comment on that page about what it is like to be only 1 year older than the Commodore 64, a computer which spiked my interest in technology away from a games system to something much more. The original article is available at &lt;a href=&#34;http://www.linuxjournal.com/content/commodor-64-30-year&#34;&gt;http://www.linuxjournal.com/content/commodor-64-30-year&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;&amp;ldquo;I just turned 31 a couple of days ago on January 7th, and when I was in grade 2 (about 8-9 years old I guess) I started getting interested in the Commodore 64s we had at our school that were plentiful, but rarely used. I remember the first thing the teacher taught me; $p$g&lt;/p&gt;
@@ -141,10 +141,10 @@ Side cut outs for cables that I didn&amp;rsquo;t even notice the first time thro
     
     <item>
       <title>#AstriCon 2011 Quote of the Conference (@abalashov)</title>
-      <link>http://leifmadsen.github.io/hugo_gh_blog/blog/2011/10/30/</link>
+      <link>http://blog.leifmadsen.com/blog/2011/10/30/</link>
       <pubDate>Sun, 30 Oct 2011 15:46:23 +0000</pubDate>
       
-      <guid>http://leifmadsen.github.io/hugo_gh_blog/blog/2011/10/30/</guid>
+      <guid>http://blog.leifmadsen.com/blog/2011/10/30/</guid>
       <description>&lt;p&gt;I think the best quote I heard the entire time came from @abalashov (Alex Balashov) during the AstriDevCon when we were talking about Asterisk documentation, and how we might better organize it within the source.&lt;/p&gt;
 
 &lt;p&gt;We were discussing perhaps moving some of the existing configuration file examples to a manpage, and Alex piped up to say, &lt;strong&gt;&amp;ldquo;Manpages are a vestige of our glorious, prehensile, curly-tailed past.&amp;rdquo;&lt;/strong&gt;&lt;/p&gt;
@@ -155,10 +155,10 @@ Side cut outs for cables that I didn&amp;rsquo;t even notice the first time thro
     
     <item>
       <title>Connecting two conferences on initial join (with cleanup)</title>
-      <link>http://leifmadsen.github.io/hugo_gh_blog/blog/2011/08/11/connecting-two-conferences-on-initial-join-with-cleanup/</link>
+      <link>http://blog.leifmadsen.com/blog/2011/08/11/connecting-two-conferences-on-initial-join-with-cleanup/</link>
       <pubDate>Thu, 11 Aug 2011 15:48:54 +0000</pubDate>
       
-      <guid>http://leifmadsen.github.io/hugo_gh_blog/blog/2011/08/11/connecting-two-conferences-on-initial-join-with-cleanup/</guid>
+      <guid>http://blog.leifmadsen.com/blog/2011/08/11/connecting-two-conferences-on-initial-join-with-cleanup/</guid>
       <description>&lt;blockquote&gt;
 &lt;p&gt;Update 2011/12/15:  Updated the code to deal with a couple of people joining at about the same time by using GROUP() and GROUP_COUNT(). Additionally updated the &amp;lsquo;h&amp;rsquo; extension which was missing some code&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -201,20 +201,20 @@ exten =&amp;gt; h,1,NoOp()
     
     <item>
       <title>LeifMadsen Enterprises, Inc. enters its 7th year of operation!</title>
-      <link>http://leifmadsen.github.io/hugo_gh_blog/blog/2011/08/02/leifmadsen-enterprises-inc.-enters-its-7th-year-of-operation/</link>
+      <link>http://blog.leifmadsen.com/blog/2011/08/02/leifmadsen-enterprises-inc.-enters-its-7th-year-of-operation/</link>
       <pubDate>Tue, 02 Aug 2011 18:26:57 +0000</pubDate>
       
-      <guid>http://leifmadsen.github.io/hugo_gh_blog/blog/2011/08/02/leifmadsen-enterprises-inc.-enters-its-7th-year-of-operation/</guid>
+      <guid>http://blog.leifmadsen.com/blog/2011/08/02/leifmadsen-enterprises-inc.-enters-its-7th-year-of-operation/</guid>
       <description>&lt;p&gt;On this day in 2005, LeifMadsen Enterprises, Inc. was formally registered as an incorporation by the government of Canada! I&amp;rsquo;ve now been consulting on Asterisk professionally for over 6 years full time (and a few years before that!). I graduated from the telecommuncations technology program at Sheridan Institute of Technology in 2004. In that time I&amp;rsquo;ve spoken at every AstriCon since 2004 (the first one), and have helped write 4 books on the subject of Asterisk (The Future of Telephony 1st, 2nd editions, The Definitive Guide 3rd edition, Cookbook). I&amp;rsquo;m quite proud of the work I have done, and the future is looking bright. The next year in business should be very exciting with some projects currently underway that will allow me to expand my business and start managing more clients with an even higher quality of service. Here&amp;rsquo;s looking forward to year seven! (And subsequently, seven is my lucky number, and the day of January on which I was born.)&lt;/p&gt;
 </description>
     </item>
     
     <item>
       <title>Chopsticks Played On The Phone</title>
-      <link>http://leifmadsen.github.io/hugo_gh_blog/blog/2011/07/29/chopsticks-played-on-the-phone/</link>
+      <link>http://blog.leifmadsen.com/blog/2011/07/29/chopsticks-played-on-the-phone/</link>
       <pubDate>Fri, 29 Jul 2011 17:17:07 +0000</pubDate>
       
-      <guid>http://leifmadsen.github.io/hugo_gh_blog/blog/2011/07/29/chopsticks-played-on-the-phone/</guid>
+      <guid>http://blog.leifmadsen.com/blog/2011/07/29/chopsticks-played-on-the-phone/</guid>
       <description>&lt;p&gt;As I haven&amp;rsquo;t updated my blog in a while (been very busy with wedding planning!) I thought I&amp;rsquo;d share this with you :)&lt;/p&gt;
 
 &lt;p&gt;Enjoy!&lt;/p&gt;
@@ -225,10 +225,10 @@ exten =&amp;gt; h,1,NoOp()
     
     <item>
       <title>Asterisk 1.8 And The Importance Of Looking Ahead</title>
-      <link>http://leifmadsen.github.io/hugo_gh_blog/blog/2011/05/17/asterisk-1.8-and-the-importance-of-looking-ahead/</link>
+      <link>http://blog.leifmadsen.com/blog/2011/05/17/asterisk-1.8-and-the-importance-of-looking-ahead/</link>
       <pubDate>Tue, 17 May 2011 20:40:55 +0000</pubDate>
       
-      <guid>http://leifmadsen.github.io/hugo_gh_blog/blog/2011/05/17/asterisk-1.8-and-the-importance-of-looking-ahead/</guid>
+      <guid>http://blog.leifmadsen.com/blog/2011/05/17/asterisk-1.8-and-the-importance-of-looking-ahead/</guid>
       <description>&lt;p&gt;With the end of maintenance for the Asterisk 1.4 (the previous long term support (LTS) release) and Asterisk 1.6.2 (the previous standard, short term support release) branches, the time to look at using Asterisk 1.8 (the next long term support release, which provides another 4 years of maintenance, followed by a year of security support) is upon us. For those who have successful deployments of Asterisk 1.4 and 1.6.2 (heck, even 1.2!) there is no immediate need to migrate those existing systems; let them happily continue what they’re doing. And for those who have successful product launches based around 1.4 and 1.6.2, there is still a year of security maintenance, so the lead time to migrating existing systems to 1.8 can start now, but doesn&amp;rsquo;t need to happen for another 12 months, which gives us all a little breathing room.&lt;/p&gt;
 
 &lt;p&gt;It is important that the Asterisk community continue to look forward and progress the Asterisk project. The resources of the Asterisk Development community must be used as effectively as possible, and sometimes this means making tough decisions in the short-term for the greatest benefit in the long term. With the end of maintenance support after the releases of Asterisk 1.4.42 and 1.6.2.19 (with the first release candidates due out shortly), all focus can now be put onto Asterisk 1.8, continuing to stabilize additional components and making it the most robust, feature rich release of Asterisk to date.&lt;/p&gt;
@@ -255,10 +255,10 @@ exten =&amp;gt; h,1,NoOp()
     
     <item>
       <title>Asterisk Cookbook Is On! (We Think :))</title>
-      <link>http://leifmadsen.github.io/hugo_gh_blog/blog/2011/01/27/asterisk-cookbook-is-on-we-think-/</link>
+      <link>http://blog.leifmadsen.com/blog/2011/01/27/asterisk-cookbook-is-on-we-think-/</link>
       <pubDate>Thu, 27 Jan 2011 14:33:00 +0000</pubDate>
       
-      <guid>http://leifmadsen.github.io/hugo_gh_blog/blog/2011/01/27/asterisk-cookbook-is-on-we-think-/</guid>
+      <guid>http://blog.leifmadsen.com/blog/2011/01/27/asterisk-cookbook-is-on-we-think-/</guid>
       <description>&lt;p&gt;After finishing the first draft of &lt;a href=&#34;http://oreilly.com/catalog/9780596517342&#34;&gt;Asterisk: The Definitive Guide (3rd Edition)&lt;/a&gt;, I&amp;rsquo;ve been a bit antsy with wanting to do some more writing. After about a week of a break (i.e. sleeping in past 7am for the first time in nearly a year), &lt;a href=&#34;http://www.russellbryant.net/blog/&#34;&gt;Russell Bryant&lt;/a&gt; and I have decided to team up on delivering the long awaited Asterisk Cookbook.&lt;/p&gt;
 
 &lt;p&gt;To start off with, we&amp;rsquo;ll be writing a short, 80-100 page eBook that will be distributed by O&amp;rsquo;Reilly in all the formats they support (&lt;a href=&#34;http://oreilly.com/ebooks/&#34;&gt;http://oreilly.com/ebooks/&lt;/a&gt;). The book is scheduled to have about 25 recipes, and should be written in the next 30-40 days, which would mean it should be available shortly after&lt;a href=&#34;http://oreilly.com/catalog/9780596517342&#34;&gt; Asterisk: The Definitive Guide&lt;/a&gt; is released (which means you can bundle them together! :)).&lt;/p&gt;
@@ -273,10 +273,10 @@ exten =&amp;gt; h,1,NoOp()
     
     <item>
       <title>Asterisk: The Definitive Guide, First Draft Complete!</title>
-      <link>http://leifmadsen.github.io/hugo_gh_blog/blog/2011/01/12/asterisk-the-definitive-guide-first-draft-complete/</link>
+      <link>http://blog.leifmadsen.com/blog/2011/01/12/asterisk-the-definitive-guide-first-draft-complete/</link>
       <pubDate>Wed, 12 Jan 2011 01:30:09 +0000</pubDate>
       
-      <guid>http://leifmadsen.github.io/hugo_gh_blog/blog/2011/01/12/asterisk-the-definitive-guide-first-draft-complete/</guid>
+      <guid>http://blog.leifmadsen.com/blog/2011/01/12/asterisk-the-definitive-guide-first-draft-complete/</guid>
       <description>&lt;p&gt;Today we marked the finishing of Asterisk: The Definitive Guide (3rd Edition) by sending the first draft off to the O&amp;rsquo;Reilly production team. We finished nearly on schedule (within a few days, which is remarkable considering we added 150 more pages than originally intentioned) and have our favourite copy editor Rachel Head (formerly Wheeler) who did the first edition of Asterisk: The Future of Telephony who we emphatically enjoyed working with. We&amp;rsquo;re looking forward to it again.&lt;/p&gt;
 
 &lt;p&gt;With the draft done now, and the copy sent off to production to do their magic, I&amp;rsquo;m not quite sure what I&amp;rsquo;m going to do with my mornings! Perhaps I&amp;rsquo;ll start blogging about some dialplan stuff, or coming up with some sort of project to build. We&amp;rsquo;ll see! Any suggestions about things to document on my blog are of course welcome.&lt;/p&gt;
@@ -289,10 +289,10 @@ exten =&amp;gt; h,1,NoOp()
     
     <item>
       <title>2010 in review</title>
-      <link>http://leifmadsen.github.io/hugo_gh_blog/blog/2011/01/03/2010-in-review/</link>
+      <link>http://blog.leifmadsen.com/blog/2011/01/03/2010-in-review/</link>
       <pubDate>Mon, 03 Jan 2011 18:21:21 +0000</pubDate>
       
-      <guid>http://leifmadsen.github.io/hugo_gh_blog/blog/2011/01/03/2010-in-review/</guid>
+      <guid>http://blog.leifmadsen.com/blog/2011/01/03/2010-in-review/</guid>
       <description>
 
 &lt;p&gt;The stats helper monkeys at WordPress.com mulled over how this blog did in 2010, and here&amp;rsquo;s a high level summary of its overall blog health:&lt;/p&gt;
@@ -352,10 +352,10 @@ exten =&amp;gt; h,1,NoOp()
     
     <item>
       <title>Wow, lost ticket recovery for VIA Rail is pretty much garbage</title>
-      <link>http://leifmadsen.github.io/hugo_gh_blog/blog/2010/10/29/wow-lost-ticket-recovery-for-via-rail-is-pretty-much-garbage/</link>
+      <link>http://blog.leifmadsen.com/blog/2010/10/29/wow-lost-ticket-recovery-for-via-rail-is-pretty-much-garbage/</link>
       <pubDate>Fri, 29 Oct 2010 18:35:10 +0000</pubDate>
       
-      <guid>http://leifmadsen.github.io/hugo_gh_blog/blog/2010/10/29/wow-lost-ticket-recovery-for-via-rail-is-pretty-much-garbage/</guid>
+      <guid>http://blog.leifmadsen.com/blog/2010/10/29/wow-lost-ticket-recovery-for-via-rail-is-pretty-much-garbage/</guid>
       <description>&lt;p&gt;Here is the response I got from VIA Rail for a lost ticket, which was printed off at the time of departure for my return trip. Why they insist on printing the return ticket the time of departure I don&amp;rsquo;t know, but how ridiculous is this?&lt;/p&gt;
 
 &lt;p&gt;&amp;ldquo;&lt;em&gt;VIA Rail will not issue a free ticket against a lost or stolen ticket  being reported. Customers are required to purchase a new ticket at the  original fare and complete a Lost Ticket Indemnity Bond. Refund of lost  or stolen tickets are subject to a processing fee of $40 per person per  ticket. The claim for refund of lost tickets must be submitted no later  than 30 days after the last scheduled departure date shown on the  ticket.&lt;/em&gt;
@@ -369,10 +369,10 @@ _ There is a holding period of 60 days from the date of  receipt or the last dat
     
     <item>
       <title>Long-term &#39;shopping list&#39; helps couple furnish Caledon townhouse</title>
-      <link>http://leifmadsen.github.io/hugo_gh_blog/blog/2010/04/15/long-term-shopping-list-helps-couple-furnish-caledon-townhouse/</link>
+      <link>http://blog.leifmadsen.com/blog/2010/04/15/long-term-shopping-list-helps-couple-furnish-caledon-townhouse/</link>
       <pubDate>Thu, 15 Apr 2010 21:30:21 +0000</pubDate>
       
-      <guid>http://leifmadsen.github.io/hugo_gh_blog/blog/2010/04/15/long-term-shopping-list-helps-couple-furnish-caledon-townhouse/</guid>
+      <guid>http://blog.leifmadsen.com/blog/2010/04/15/long-term-shopping-list-helps-couple-furnish-caledon-townhouse/</guid>
       <description>
 
 &lt;p&gt;Recently, &lt;a href=&#34;http://www.twitter.com/jenspeedy&#34;&gt;@jenspeedy&lt;/a&gt; of &lt;a href=&#34;http://www.yourhome.ca&#34;&gt;http://www.yourhome.ca&lt;/a&gt; interviewed my fiancée and I about our recently purchased townhouse in Caledon after our designer &lt;a href=&#34;http://www.twitter.com/melissadavis&#34;&gt;@melissadavis&lt;/a&gt; of &lt;a href=&#34;http://www.melissadavis.ca&#34;&gt;http://www.melissadavis.ca&lt;/a&gt; and &lt;a href=&#34;http://www.designerfriend.ca&#34;&gt;http://www.designerfriend.ca&lt;/a&gt; recommended she speak to us. Danielle (my fiancée) and I had a pretty good idea about the items we wanted for our new townhouse build, but were looking for a designer to make sure we didn&amp;rsquo;t get too far off track, and to steer us into the direction we ultimately wanted to achieve, while not breaking the bank (i.e. we didn&amp;rsquo;t need someone to hand hold us, or to do the actual implementation; we just needed someone to do some floor plans and give us some ideas on furniture based on our tastes).&lt;/p&gt;
@@ -397,10 +397,10 @@ _ There is a holding period of 60 days from the date of  receipt or the last dat
     
     <item>
       <title>Musings about ENUMplus and ISNs</title>
-      <link>http://leifmadsen.github.io/hugo_gh_blog/blog/2010/02/19/musings-about-enumplus-and-isns/</link>
+      <link>http://blog.leifmadsen.com/blog/2010/02/19/musings-about-enumplus-and-isns/</link>
       <pubDate>Fri, 19 Feb 2010 15:38:07 +0000</pubDate>
       
-      <guid>http://leifmadsen.github.io/hugo_gh_blog/blog/2010/02/19/musings-about-enumplus-and-isns/</guid>
+      <guid>http://blog.leifmadsen.com/blog/2010/02/19/musings-about-enumplus-and-isns/</guid>
       <description>
 
 &lt;p&gt;Recently I&amp;rsquo;ve been playing around with a couple of technologies that I haven&amp;rsquo;t used in quite a while; ENUM and ISN. First, a little information on what these technologies are about.&lt;/p&gt;
@@ -429,9 +429,9 @@ _ There is a holding period of 60 days from the date of  receipt or the last dat
 
 &lt;p&gt;I think the wikipedia entry about ENUM does more justice about what it is than what I could do, so lets quote a resource :)&lt;/p&gt;
 
-&lt;p&gt;&amp;ldquo;&lt;strong&gt;Telephone number mapping&lt;/strong&gt; is the process of unifying the &lt;a href=&#34;http://leifmadsen.github.io/hugo_gh_blog/wiki/Telephone&#34;&gt;telephone&lt;/a&gt; number system of the &lt;a href=&#34;http://leifmadsen.github.io/hugo_gh_blog/wiki/Public_switched_telephone_network&#34;&gt;public switched telephone network&lt;/a&gt; with the &lt;a href=&#34;http://leifmadsen.github.io/hugo_gh_blog/wiki/Internet&#34;&gt;Internet&lt;/a&gt; addressing and identification &lt;a href=&#34;http://leifmadsen.github.io/hugo_gh_blog/wiki/Name_space&#34;&gt;name spaces&lt;/a&gt;. Telephone numbers are systematically organized in the &lt;a href=&#34;http://leifmadsen.github.io/hugo_gh_blog/wiki/E.164&#34;&gt;E.164&lt;/a&gt; standard, while the Internet uses the &lt;a href=&#34;http://leifmadsen.github.io/hugo_gh_blog/wiki/Domain_Name_System&#34;&gt;Domain Name System&lt;/a&gt; for linking &lt;a href=&#34;http://leifmadsen.github.io/hugo_gh_blog/wiki/Domain_name&#34;&gt;domain names&lt;/a&gt; to &lt;a href=&#34;http://leifmadsen.github.io/hugo_gh_blog/wiki/IP_address&#34;&gt;IP addresses&lt;/a&gt; and other resource information. Telephone number mapping systems provide facilities to determine applicable Internet communications servers responsible for servicing a given telephone number by simple lookups in the Domain Name System.&lt;/p&gt;
+&lt;p&gt;&amp;ldquo;&lt;strong&gt;Telephone number mapping&lt;/strong&gt; is the process of unifying the &lt;a href=&#34;http://blog.leifmadsen.com/wiki/Telephone&#34;&gt;telephone&lt;/a&gt; number system of the &lt;a href=&#34;http://blog.leifmadsen.com/wiki/Public_switched_telephone_network&#34;&gt;public switched telephone network&lt;/a&gt; with the &lt;a href=&#34;http://blog.leifmadsen.com/wiki/Internet&#34;&gt;Internet&lt;/a&gt; addressing and identification &lt;a href=&#34;http://blog.leifmadsen.com/wiki/Name_space&#34;&gt;name spaces&lt;/a&gt;. Telephone numbers are systematically organized in the &lt;a href=&#34;http://blog.leifmadsen.com/wiki/E.164&#34;&gt;E.164&lt;/a&gt; standard, while the Internet uses the &lt;a href=&#34;http://blog.leifmadsen.com/wiki/Domain_Name_System&#34;&gt;Domain Name System&lt;/a&gt; for linking &lt;a href=&#34;http://blog.leifmadsen.com/wiki/Domain_name&#34;&gt;domain names&lt;/a&gt; to &lt;a href=&#34;http://blog.leifmadsen.com/wiki/IP_address&#34;&gt;IP addresses&lt;/a&gt; and other resource information. Telephone number mapping systems provide facilities to determine applicable Internet communications servers responsible for servicing a given telephone number by simple lookups in the Domain Name System.&lt;/p&gt;
 
-&lt;p&gt;The most prominent facility for telephone number mapping is the E.164 NUmber Mapping (ENUM) standard. It uses special &lt;a href=&#34;http://leifmadsen.github.io/hugo_gh_blog/wiki/DNS_record&#34;&gt;DNS record&lt;/a&gt; types to translate a telephone number into a &lt;a href=&#34;http://leifmadsen.github.io/hugo_gh_blog/wiki/Uniform_Resource_Identifier&#34;&gt;Uniform Resource Identifier&lt;/a&gt; or IP address that can be used in Internet communications.&amp;rdquo; &amp;ndash; wikipedia entry at &lt;a href=&#34;http://en.wikipedia.org/wiki/Telephone_Number_Mapping&#34;&gt;http://en.wikipedia.org/wiki/Telephone_Number_Mapping&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;The most prominent facility for telephone number mapping is the E.164 NUmber Mapping (ENUM) standard. It uses special &lt;a href=&#34;http://blog.leifmadsen.com/wiki/DNS_record&#34;&gt;DNS record&lt;/a&gt; types to translate a telephone number into a &lt;a href=&#34;http://blog.leifmadsen.com/wiki/Uniform_Resource_Identifier&#34;&gt;Uniform Resource Identifier&lt;/a&gt; or IP address that can be used in Internet communications.&amp;rdquo; &amp;ndash; wikipedia entry at &lt;a href=&#34;http://en.wikipedia.org/wiki/Telephone_Number_Mapping&#34;&gt;http://en.wikipedia.org/wiki/Telephone_Number_Mapping&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;And cURL is a technology that allows you place a request via a website, and have information returned. It is most typically used by programmers to get information from a website without having to parse through the entire site.&lt;/p&gt;
 

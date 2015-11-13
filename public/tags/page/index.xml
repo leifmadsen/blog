@@ -2,19 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Page on Asterisk, and other worldly endeavours</title>
-    <link>http://leifmadsen.github.io/hugo_gh_blog/tags/page/</link>
+    <link>http://blog.leifmadsen.com/tags/page/</link>
     <description>Recent content in Page on Asterisk, and other worldly endeavours</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 15 Jul 2009 18:29:02 +0000</lastBuildDate>
-    <atom:link href="http://leifmadsen.github.io/hugo_gh_blog/tags/page/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://blog.leifmadsen.com/tags/page/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>HowTo: Page() all users, other than current channel</title>
-      <link>http://leifmadsen.github.io/hugo_gh_blog/blog/2009/07/15/howto-page-all-users-other-than-current-channel/</link>
+      <link>http://blog.leifmadsen.com/blog/2009/07/15/howto-page-all-users-other-than-current-channel/</link>
       <pubDate>Wed, 15 Jul 2009 18:29:02 +0000</pubDate>
       
-      <guid>http://leifmadsen.github.io/hugo_gh_blog/blog/2009/07/15/howto-page-all-users-other-than-current-channel/</guid>
+      <guid>http://blog.leifmadsen.com/blog/2009/07/15/howto-page-all-users-other-than-current-channel/</guid>
       <description>&lt;p&gt;I was asked on IRC by bhodder how to Page() all users, other than the current channel (i.e. he had a list of people to call, but one of the channels listed could be the person paging, and he didn&amp;rsquo;t want them paged).&lt;/p&gt;
 
 &lt;p&gt;So I wrote up the following little dialplan script which takes the list of users, and compares it against the current channel, and simply rebuilds the list without the current channel in it prior to calling the Page() application.&lt;/p&gt;

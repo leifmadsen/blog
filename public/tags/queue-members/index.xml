@@ -2,19 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Queue Members on Asterisk, and other worldly endeavours</title>
-    <link>http://leifmadsen.github.io/hugo_gh_blog/tags/queue-members/</link>
+    <link>http://blog.leifmadsen.com/tags/queue-members/</link>
     <description>Recent content in Queue Members on Asterisk, and other worldly endeavours</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sat, 14 Nov 2009 15:07:19 +0000</lastBuildDate>
-    <atom:link href="http://leifmadsen.github.io/hugo_gh_blog/tags/queue-members/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://blog.leifmadsen.com/tags/queue-members/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Building Queues with Asterisk</title>
-      <link>http://leifmadsen.github.io/hugo_gh_blog/blog/2009/11/14/building-queues-with-asterisk/</link>
+      <link>http://blog.leifmadsen.com/blog/2009/11/14/building-queues-with-asterisk/</link>
       <pubDate>Sat, 14 Nov 2009 15:07:19 +0000</pubDate>
       
-      <guid>http://leifmadsen.github.io/hugo_gh_blog/blog/2009/11/14/building-queues-with-asterisk/</guid>
+      <guid>http://blog.leifmadsen.com/blog/2009/11/14/building-queues-with-asterisk/</guid>
       <description>&lt;p&gt;Wow it&amp;rsquo;s been a long time since I&amp;rsquo;ve update my blog. Well, lets do that! :)&lt;/p&gt;
 
 &lt;p&gt;I&amp;rsquo;ve just posted some documentation to the Asterisk issue tracker for review. It&amp;rsquo;s about building queues with Asterisk. It is the start of probably 2 or 3 sets of documentation on building queues with Asterisk that I&amp;rsquo;ll be submitting. You can find the documentation here for now:&lt;/p&gt;

@@ -2,19 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Relay on Asterisk, and other worldly endeavours</title>
-    <link>http://leifmadsen.github.io/hugo_gh_blog/tags/relay/</link>
+    <link>http://blog.leifmadsen.com/tags/relay/</link>
     <description>Recent content in Relay on Asterisk, and other worldly endeavours</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Tue, 22 Nov 2011 22:17:18 +0000</lastBuildDate>
-    <atom:link href="http://leifmadsen.github.io/hugo_gh_blog/tags/relay/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://blog.leifmadsen.com/tags/relay/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Relaying SMTP via Gmail (or Google Apps) Using Postfix</title>
-      <link>http://leifmadsen.github.io/hugo_gh_blog/blog/2011/11/22/relaying-smtp-via-gmail-or-google-apps-using-postfix/</link>
+      <link>http://blog.leifmadsen.com/blog/2011/11/22/relaying-smtp-via-gmail-or-google-apps-using-postfix/</link>
       <pubDate>Tue, 22 Nov 2011 22:17:18 +0000</pubDate>
       
-      <guid>http://leifmadsen.github.io/hugo_gh_blog/blog/2011/11/22/relaying-smtp-via-gmail-or-google-apps-using-postfix/</guid>
+      <guid>http://blog.leifmadsen.com/blog/2011/11/22/relaying-smtp-via-gmail-or-google-apps-using-postfix/</guid>
       <description>&lt;p&gt;Today I had the need to start relaying mail through my Google Apps account since &lt;del&gt;Super-Evil-Bastard-ITSP&lt;/del&gt;Rogers blocks sending email (it&amp;rsquo;s probably a good thing, however it&amp;rsquo;s quite annoying when running some services from home).&lt;/p&gt;
 
 &lt;p&gt;Found this article while Googling, and it worked great first try. I like when things are this easy.&lt;/p&gt;

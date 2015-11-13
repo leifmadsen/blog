@@ -2,19 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Employment on Asterisk, and other worldly endeavours</title>
-    <link>http://leifmadsen.github.io/hugo_gh_blog/tags/employment/</link>
+    <link>http://blog.leifmadsen.com/tags/employment/</link>
     <description>Recent content in Employment on Asterisk, and other worldly endeavours</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 04 Jan 2012 20:22:08 +0000</lastBuildDate>
-    <atom:link href="http://leifmadsen.github.io/hugo_gh_blog/tags/employment/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://blog.leifmadsen.com/tags/employment/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Now working with CoreDial</title>
-      <link>http://leifmadsen.github.io/hugo_gh_blog/blog/2012/01/04/now-working-with-coredial/</link>
+      <link>http://blog.leifmadsen.com/blog/2012/01/04/now-working-with-coredial/</link>
       <pubDate>Wed, 04 Jan 2012 20:22:08 +0000</pubDate>
       
-      <guid>http://leifmadsen.github.io/hugo_gh_blog/blog/2012/01/04/now-working-with-coredial/</guid>
+      <guid>http://blog.leifmadsen.com/blog/2012/01/04/now-working-with-coredial/</guid>
       <description>&lt;p&gt;&lt;img src=&#34;https://si0.twimg.com/profile_images/1509716558/twitter-coredial-square-avatar_reasonably_small.png&#34; alt=&#34;&#34; /&gt; As of January 3rd, I&amp;rsquo;m now working with the CoreDial team full time. I&amp;rsquo;ve worked with them as a consultant on their infrastructure over the last few years but now will be spending significantly more time working with the engineering team :)&lt;/p&gt;
 
 &lt;p&gt;From the announcement,&lt;/p&gt;

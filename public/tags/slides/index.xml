@@ -2,19 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Slides on Asterisk, and other worldly endeavours</title>
-    <link>http://leifmadsen.github.io/hugo_gh_blog/tags/slides/</link>
+    <link>http://blog.leifmadsen.com/tags/slides/</link>
     <description>Recent content in Slides on Asterisk, and other worldly endeavours</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Mon, 01 Nov 2010 12:04:08 +0000</lastBuildDate>
-    <atom:link href="http://leifmadsen.github.io/hugo_gh_blog/tags/slides/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://blog.leifmadsen.com/tags/slides/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>My Presentations from AstriCon 2010 are Available</title>
-      <link>http://leifmadsen.github.io/hugo_gh_blog/blog/2010/11/01/my-presentations-from-astricon-2010-are-available/</link>
+      <link>http://blog.leifmadsen.com/blog/2010/11/01/my-presentations-from-astricon-2010-are-available/</link>
       <pubDate>Mon, 01 Nov 2010 12:04:08 +0000</pubDate>
       
-      <guid>http://leifmadsen.github.io/hugo_gh_blog/blog/2010/11/01/my-presentations-from-astricon-2010-are-available/</guid>
+      <guid>http://blog.leifmadsen.com/blog/2010/11/01/my-presentations-from-astricon-2010-are-available/</guid>
       <description>&lt;p&gt;Check out &lt;a href=&#34;http://leifmadsen.com&#34;&gt;http://leifmadsen.com&lt;/a&gt; and click on the presentations tab. Under that tab you will find my presentations from AstriCon 2010,  &amp;rsquo;&lt;em&gt;5 Things You Didn&amp;rsquo;t Know Asterisk Could Do&lt;/em&gt;&amp;rsquo; and a slightly updated version of my &amp;lsquo;&lt;em&gt;Building Distributed Queue Systems&lt;/em&gt;&amp;rsquo; presentation. Both are in PDF format.&lt;/p&gt;
 
 &lt;p&gt;Both presentations went over extremely well, and I think both probably ended up being, or nearly being, my best presentations ever given. In previous years I&amp;rsquo;ve given presentations on distributed Asterisk systems and last year at IT360 I gave my  &amp;rdquo;&lt;em&gt;5 Things You Didn&amp;rsquo;t Know Asterisk Could Do&lt;/em&gt;&amp;rdquo; presentation, so perhaps being somewhat familiar with the format helped. I completely rewrote the &amp;lsquo;&lt;em&gt;5 Things&lt;/em&gt;&amp;rsquo; chapter though, so you&amp;rsquo;ll find some cool new information there if you&amp;rsquo;ve previously seen me give it.&lt;/p&gt;

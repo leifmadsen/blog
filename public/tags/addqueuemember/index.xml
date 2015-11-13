@@ -2,19 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Addqueuemember on Asterisk, and other worldly endeavours</title>
-    <link>http://leifmadsen.github.io/hugo_gh_blog/tags/addqueuemember/</link>
+    <link>http://blog.leifmadsen.com/tags/addqueuemember/</link>
     <description>Recent content in Addqueuemember on Asterisk, and other worldly endeavours</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Thu, 16 Jul 2009 02:59:34 +0000</lastBuildDate>
-    <atom:link href="http://leifmadsen.github.io/hugo_gh_blog/tags/addqueuemember/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://blog.leifmadsen.com/tags/addqueuemember/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Migrating from AgentCallbackLogin() to Standard Dialplan Methods (part 1)</title>
-      <link>http://leifmadsen.github.io/hugo_gh_blog/blog/2009/07/16/migrating-from-agentcallbacklogin-to-standard-dialplan-methods-part-1/</link>
+      <link>http://blog.leifmadsen.com/blog/2009/07/16/migrating-from-agentcallbacklogin-to-standard-dialplan-methods-part-1/</link>
       <pubDate>Thu, 16 Jul 2009 02:59:34 +0000</pubDate>
       
-      <guid>http://leifmadsen.github.io/hugo_gh_blog/blog/2009/07/16/migrating-from-agentcallbacklogin-to-standard-dialplan-methods-part-1/</guid>
+      <guid>http://blog.leifmadsen.com/blog/2009/07/16/migrating-from-agentcallbacklogin-to-standard-dialplan-methods-part-1/</guid>
       <description>
 
 &lt;p&gt;The purpose of this article is to ease the migration from AgentCallbackLogin() to using standard dialplan applications to solve the problem of calling back queue members (agents) who are logged into a queue.&lt;/p&gt;

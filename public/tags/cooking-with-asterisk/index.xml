@@ -2,19 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Cooking With Asterisk on Asterisk, and other worldly endeavours</title>
-    <link>http://leifmadsen.github.io/hugo_gh_blog/tags/cooking-with-asterisk/</link>
+    <link>http://blog.leifmadsen.com/tags/cooking-with-asterisk/</link>
     <description>Recent content in Cooking With Asterisk on Asterisk, and other worldly endeavours</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 23 Dec 2011 16:17:57 +0000</lastBuildDate>
-    <atom:link href="http://leifmadsen.github.io/hugo_gh_blog/tags/cooking-with-asterisk/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://blog.leifmadsen.com/tags/cooking-with-asterisk/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Cooking With Asterisk (Video)</title>
-      <link>http://leifmadsen.github.io/hugo_gh_blog/blog/2011/12/23/cooking-with-asterisk-video/</link>
+      <link>http://blog.leifmadsen.com/blog/2011/12/23/cooking-with-asterisk-video/</link>
       <pubDate>Fri, 23 Dec 2011 16:17:57 +0000</pubDate>
       
-      <guid>http://leifmadsen.github.io/hugo_gh_blog/blog/2011/12/23/cooking-with-asterisk-video/</guid>
+      <guid>http://blog.leifmadsen.com/blog/2011/12/23/cooking-with-asterisk-video/</guid>
       <description>&lt;p&gt;And I found the Cooking With Asterisk presentation as well! Apologies for the low quality on the video (as this one has a lot more text than the Distributed Call Centre video), but you can follow along with the presentation on your screen as available on my website at:&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&#34;http://leifmadsen.com/sites/default/files/AstriCon%202011%20-%20Cooking%20With%20Asterisk.pdf&#34;&gt;http://leifmadsen.com/sites/default/files/AstriCon%202011%20-%20Cooking%20With%20Asterisk.pdf&lt;/a&gt;&lt;/p&gt;

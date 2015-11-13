@@ -2,19 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Self Discipline on Asterisk, and other worldly endeavours</title>
-    <link>http://leifmadsen.github.io/hugo_gh_blog/tags/self-discipline/</link>
+    <link>http://blog.leifmadsen.com/tags/self-discipline/</link>
     <description>Recent content in Self Discipline on Asterisk, and other worldly endeavours</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 25 Aug 2010 20:07:17 +0000</lastBuildDate>
-    <atom:link href="http://leifmadsen.github.io/hugo_gh_blog/tags/self-discipline/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://blog.leifmadsen.com/tags/self-discipline/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Interesting article about *not* tracking holidays at Netflix</title>
-      <link>http://leifmadsen.github.io/hugo_gh_blog/blog/2010/08/25/interesting-article-about-not-tracking-holidays-at-netflix/</link>
+      <link>http://blog.leifmadsen.com/blog/2010/08/25/interesting-article-about-not-tracking-holidays-at-netflix/</link>
       <pubDate>Wed, 25 Aug 2010 20:07:17 +0000</pubDate>
       
-      <guid>http://leifmadsen.github.io/hugo_gh_blog/blog/2010/08/25/interesting-article-about-not-tracking-holidays-at-netflix/</guid>
+      <guid>http://blog.leifmadsen.com/blog/2010/08/25/interesting-article-about-not-tracking-holidays-at-netflix/</guid>
       <description>&lt;p&gt;The following is an interesting article about not tracking workers time spent at work, or on vacation, but rather tracking their productivity. As a consultant who doesn&amp;rsquo;t have a fixed set of hours in the day that I work, I tend to judge my productivity by the number of hours I get to bill each week (i.e. how productive was I working for customers, rather than playing Flight Simulator :)).&lt;/p&gt;
 
 &lt;p&gt;I haven&amp;rsquo;t tracked actual holidays for years now (since I started consulting full time out of school in 2003), and I&amp;rsquo;m not sure I ever had a job long enough prior to school that I received any sorts of benefits of holidays. Perhaps it&amp;rsquo;s just natural for me because of that, but this article reminds me of two things:&lt;/p&gt;
