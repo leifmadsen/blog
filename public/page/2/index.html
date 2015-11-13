@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
+<head>
+  <link href="http://gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+  <title>Asterisk, and other worldly endeavours &middot; Leif Madsen</title>
+
+  
+  <link rel="stylesheet" href="http://blog.leifmadsen.com/css/poole.css">
+  <link rel="stylesheet" href="http://blog.leifmadsen.com/css/hyde.css">
+  <link rel="stylesheet" href="http://blog.leifmadsen.com/css/poole-overrides.css">
+  <link rel="stylesheet" href="http://blog.leifmadsen.com/css/hyde-overrides.css">
+  <link rel="stylesheet" href="http://blog.leifmadsen.com/css/hyde-x.css">
+  <link rel="stylesheet" href="http://blog.leifmadsen.com/css/highlight/solarized_dark.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700|Abril+Fatface">
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+
+  
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="http://blog.leifmadsen.com/touch-icon-144-precomposed.png">
+  <link href="http://blog.leifmadsen.com/favicon.png" rel="icon">
+
+  
+  
+  
+  <link href="http://blog.leifmadsen.com/index.xml" rel="alternate" type="application/rss+xml" title="Asterisk, and other worldly endeavours &middot; Leif Madsen" />
+
+  <meta name="description" content="Leif Madsen Blog Entry">
+  <meta name="keywords" content="blog,asterisk,leif,madsen,canada">
+  
+</head>
+<body class="theme-base-0b">
+<div class="sidebar">
+  <div class="container sidebar-sticky">
+    <div class="sidebar-about">
+      
+        <img src="https://www.gravatar.com/avatar/77a1196d149eecdb3b35fb5db56d494e?s=200"
+             alt="gravatar" title="Leif Madsen">
+      
+      <h1>Leif Madsen</h1>
+      <p class="lead">Asterisk, and other worldly endeavours</p>
+    </div>
+
+    <ul class="sidebar-nav">
+      <li class="sidebar-nav-item"><a href="http://blog.leifmadsen.com/">Blog</a></li>
+      
+    </ul>
+
+    <ul class="sidebar-nav">
+      <li class="sidebar-nav-item">
+      <a href="http://github.com/leifmadsen"><i class="fa fa-github-square fa-3x"></i></a>
+      
+      
+      <a href="http://linkedin.com/in/leifmadsen"><i class="fa fa-linkedin-square fa-3x"></i></a>
+      
+      
+      <a href="http://twitter.com/leifmadsen"><i class="fa fa-twitter-square fa-3x"></i></a>
+      
+      <a href="http://blog.leifmadsen.com/index.xml" type="application/rss+xml"><i class="fa fa-rss-square fa-3x"></i></a>
+      </li>
+    </ul>
+
+    
+
+    <p>Copyright &copy; 2015 <a href="http://blog.leifmadsen.com/license/">License</a><br/>
+       Powered by <a href="http://gohugo.io">Hugo</a> and <a href="https://github.com/zyro/hyde-x">Hyde-X</a></p>
+  </div>
+</div>
+
+
+<div class="content container">
+  <div class="posts">
+    
+    
+    <div class="post">
+      <h1 class="post-title">
+        <a href="http://blog.leifmadsen.com/blog/2012/07/19/bash-creating-files-named-1-everywhere/">bash creating files named &#39;1&#39; everywhere!</a>
+      </h1>
+      <span class="post-date">Jul 19, 2012 &middot; 1 minute read &middot; <a href="http://blog.leifmadsen.com/blog/2012/07/19/bash-creating-files-named-1-everywhere/#disqus_thread">Comments</a>
+      
+      <br/>
+      <a class="label" href="http://blog.leifmadsen.com/categories/musings">Musings</a><a class="label" href="http://blog.leifmadsen.com/categories/programming">Programming</a>
+      </span>
+      
+      So I ran into something kind of stupid today :) Adding a little note for anyone who might run into a similar instance. I have some ssh-add stuff that gets run in my .bashrc file, but when I was outputting it, I was doing: ssh-add ~/.ssh/some_key &gt; /dev/null 2&amp;&gt;1 Note the 2&amp;&gt;1 at the end. That means to redirect output to a file named 1. You need to flip the
+      <a href="http://blog.leifmadsen.com/blog/2012/07/19/bash-creating-files-named-1-everywhere/">Read On &rarr;</a>
+      
+    </div>
+    
+    <div class="post">
+      <h1 class="post-title">
+        <a href="http://blog.leifmadsen.com/blog/2012/06/26/integration-testing-using-jenkins-part-1/">Integration Testing Using Jenkins (Part 1)</a>
+      </h1>
+      <span class="post-date">Jun 26, 2012 &middot; 3 minute read &middot; <a href="http://blog.leifmadsen.com/blog/2012/06/26/integration-testing-using-jenkins-part-1/#disqus_thread">Comments</a>
+      
+      <br/>
+      <a class="label" href="http://blog.leifmadsen.com/categories/devops">DevOps</a>
+      </span>
+      
+      So for the last week or so, I&rsquo;ve been tasked at CoreDial with adding our own set of integration testing now that we&rsquo;re moving to a more formal deployment method using chef. After much pestering of questions to thehar of Lookout Mobile Security and with help of Google, #chef and jhansche in #jenkins I&rsquo;ve finally got a nice clean proof of concept that we can evaluate and likely deploy. I&rsquo;ll come back later with another article on my installation issues with jenkins and the solutions that I solved (nothing too terribly complicated), but what I wanted to blog about was the two types of tests that I&rsquo;ve been focusing on and was able to finally solve.
+      <a href="http://blog.leifmadsen.com/blog/2012/06/26/integration-testing-using-jenkins-part-1/">Read On &rarr;</a>
+      
+    </div>
+    
+    <div class="post">
+      <h1 class="post-title">
+        <a href="http://blog.leifmadsen.com/blog/2012/02/23/rpmlint-non-utf8-spec-file-error/">rpmlint non-utf8-spec-file error</a>
+      </h1>
+      <span class="post-date">Feb 23, 2012 &middot; 1 minute read &middot; <a href="http://blog.leifmadsen.com/blog/2012/02/23/rpmlint-non-utf8-spec-file-error/#disqus_thread">Comments</a>
+      
+      <br/>
+      <a class="label" href="http://blog.leifmadsen.com/categories/useful-tools">Useful Tools</a>
+      </span>
+      
+      I&rsquo;ve been doing a bunch of work with RPMs lately, and while running rpmlint against a spec file I was modifying, I received this error: myfile.spec: E: non-utf8-spec-file myfile.spec After Googling, I ran into a way of finding the non-compliant characters. $ iconv -f ISO-8859-8 -t UTF-8 myfile.spec &gt; converted.spec $ diff -u myfile.spec converted.spec (Answer thanks to Dominique Leuenberger @ http://lists.opensuse.org/opensuse-packaging/2011-04/msg00005.html)
+      
+      
+    </div>
+    
+    <div class="post">
+      <h1 class="post-title">
+        <a href="http://blog.leifmadsen.com/blog/2012/01/16/converting-multiple-exten--lines-to-using-same--in-asterisk-dialplan/">Converting multiple exten =&gt; lines to using same =&gt; in Asterisk dialplan</a>
+      </h1>
+      <span class="post-date">Jan 16, 2012 &middot; 1 minute read &middot; <a href="http://blog.leifmadsen.com/blog/2012/01/16/converting-multiple-exten--lines-to-using-same--in-asterisk-dialplan/#disqus_thread">Comments</a>
+      
+      <br/>
+      <a class="label" href="http://blog.leifmadsen.com/categories/asterisk">Asterisk</a><a class="label" href="http://blog.leifmadsen.com/categories/programming">Programming</a>
+      </span>
+      
+      Last week I wanted to start changing some 1.4 based Asterisk dialplan to a 1.8 based Asterisk system, and in that process wanted to convert lines like: exten =&gt; _NXXNXXXXXX,1,NoOp() exten =&gt; _NXXNXXXXXX,2,GotoIf($[...]?reject,1) exten =&gt; _NXXNXXXXXX,3,Dial(SIP/foo/${EXTEN}) ... into using the same =&gt; prefix: exten =&gt; _NXXNXXXXXX,1,NoOp() same =&gt; n,GotoIf($[...]?reject,1) same =&gt; n,Dial(SIP/foo/${EXTEN}) In order to do that, Mike King helped me out with the following regular expressing which I used
+      <a href="http://blog.leifmadsen.com/blog/2012/01/16/converting-multiple-exten--lines-to-using-same--in-asterisk-dialplan/">Read On &rarr;</a>
+      
+    </div>
+    
+    <div class="post">
+      <h1 class="post-title">
+        <a href="http://blog.leifmadsen.com/blog/2012/01/09/commodore-64-turns-30-this-year/">Commodore 64 Turns 30 This Year</a>
+      </h1>
+      <span class="post-date">Jan 9, 2012 &middot; 2 minute read &middot; <a href="http://blog.leifmadsen.com/blog/2012/01/09/commodore-64-turns-30-this-year/#disqus_thread">Comments</a>
+      
+      <br/>
+      <a class="label" href="http://blog.leifmadsen.com/categories/life">Life</a><a class="label" href="http://blog.leifmadsen.com/categories/musings">Musings</a>
+      </span>
+      
+      Having found an article about the Commodore 64 turning 30 this year, I reflected back in a comment on that page about what it is like to be only 1 year older than the Commodore 64, a computer which spiked my interest in technology away from a games system to something much more. The original article is available at http://www.linuxjournal.com/content/commodor-64-30-year &ldquo;I just turned 31 a couple of days ago on January 7th, and when I was in grade 2 (about 8-9 years old I guess) I started getting interested in the Commodore 64s we had at our school that were plentiful, but rarely used.
+      <a href="http://blog.leifmadsen.com/blog/2012/01/09/commodore-64-turns-30-this-year/">Read On &rarr;</a>
+      
+    </div>
+    
+    <div class="post">
+      <h1 class="post-title">
+        <a href="http://blog.leifmadsen.com/blog/2012/01/04/now-working-with-coredial/">Now working with CoreDial</a>
+      </h1>
+      <span class="post-date">Jan 4, 2012 &middot; 1 minute read &middot; <a href="http://blog.leifmadsen.com/blog/2012/01/04/now-working-with-coredial/#disqus_thread">Comments</a>
+      
+      <br/>
+      <a class="label" href="http://blog.leifmadsen.com/categories/asterisk">Asterisk</a><a class="label" href="http://blog.leifmadsen.com/categories/business">Business</a><a class="label" href="http://blog.leifmadsen.com/categories/life">Life</a>
+      </span>
+      
+      As of January 3rd, I&rsquo;m now working with the CoreDial team full time. I&rsquo;ve worked with them as a consultant on their infrastructure over the last few years but now will be spending significantly more time working with the engineering team :) From the announcement, “_CoreDial is pleased to announce the addition of Leif Madsen to the CoreDial team,” said Alan Rihm, CEO at CoreDial. “Leif is a well known Asterisk consultant who specializes in distributed telephony deployments and database integration.
+      <a href="http://blog.leifmadsen.com/blog/2012/01/04/now-working-with-coredial/">Read On &rarr;</a>
+      
+    </div>
+    
+    <div class="post">
+      <h1 class="post-title">
+        <a href="http://blog.leifmadsen.com/blog/2011/12/23/cooking-with-asterisk-video/">Cooking With Asterisk (Video)</a>
+      </h1>
+      <span class="post-date">Dec 23, 2011 &middot; 1 minute read &middot; <a href="http://blog.leifmadsen.com/blog/2011/12/23/cooking-with-asterisk-video/#disqus_thread">Comments</a>
+      
+      <br/>
+      <a class="label" href="http://blog.leifmadsen.com/categories/asterisk">Asterisk</a>
+      </span>
+      
+      And I found the Cooking With Asterisk presentation as well! Apologies for the low quality on the video (as this one has a lot more text than the Distributed Call Centre video), but you can follow along with the presentation on your screen as available on my website at: http://leifmadsen.com/sites/default/files/AstriCon%202011%20-%20Cooking%20With%20Asterisk.pdf The video presentation is available here: http://www.tmcnet.com/tmc/videos/default.aspx?vid=5741&amp;title=Cooking+with+Asterisk#
+      
+      
+    </div>
+    
+    <div class="post">
+      <h1 class="post-title">
+        <a href="http://blog.leifmadsen.com/blog/2011/12/23/asterisk-powered-distributed-call-centres-video/">Asterisk Powered Distributed Call Centres (Video)</a>
+      </h1>
+      <span class="post-date">Dec 23, 2011 &middot; 1 minute read &middot; <a href="http://blog.leifmadsen.com/blog/2011/12/23/asterisk-powered-distributed-call-centres-video/#disqus_thread">Comments</a>
+      
+      <br/>
+      <a class="label" href="http://blog.leifmadsen.com/categories/asterisk">Asterisk</a>
+      </span>
+      
+      Looks like TMC has posted my presentation from AstriCon 2011! You can see the presentation in its entirety over here: http://www.tmcnet.com/tmc/videos/default.aspx?vid=5821&amp;title=Asterisk-Powered+Distributed+Call+Centers And the presentation along with the demo configuration files is available on my website at: http://leifmadsen.com/sites/default/files/AstriCon%202011%20-%20Building%20a%20distributed%20call%20centre.zip
+      
+      
+    </div>
+    
+    <div class="post">
+      <h1 class="post-title">
+        <a href="http://blog.leifmadsen.com/blog/2011/12/22/.bashrc-trick-for-git-repo-and-branch-information/">.bashrc trick for git repo and branch information</a>
+      </h1>
+      <span class="post-date">Dec 22, 2011 &middot; 1 minute read &middot; <a href="http://blog.leifmadsen.com/blog/2011/12/22/.bashrc-trick-for-git-repo-and-branch-information/#disqus_thread">Comments</a>
+      
+      <br/>
+      <a class="label" href="http://blog.leifmadsen.com/categories/technology">Technology</a><a class="label" href="http://blog.leifmadsen.com/categories/useful-tools">Useful Tools</a>
+      </span>
+      
+      The other day I was talking to my friend Russell Bryant who pointed me to some .bashrc magic that would show me which branch I was currently working with inside a git repo on my system. I found it incredibly handy and have modified the ANSI colour coding slightly. export PS1='[\u@\h \[33[0;36m\]\W$(__git_ps1 &quot;\[33[0m\]\[33[0;33m\](%s)&quot;)\[33[0m\]]\$ ' On Fedora Russell mentioned that you need the bash-completion installed. We&rsquo;re unsure if you need anything on other distributions.
+      <a href="http://blog.leifmadsen.com/blog/2011/12/22/.bashrc-trick-for-git-repo-and-branch-information/">Read On &rarr;</a>
+      
+    </div>
+    
+    <div class="post">
+      <h1 class="post-title">
+        <a href="http://blog.leifmadsen.com/blog/2011/11/22/relaying-smtp-via-gmail-or-google-apps-using-postfix/">Relaying SMTP via Gmail (or Google Apps) Using Postfix</a>
+      </h1>
+      <span class="post-date">Nov 22, 2011 &middot; 1 minute read &middot; <a href="http://blog.leifmadsen.com/blog/2011/11/22/relaying-smtp-via-gmail-or-google-apps-using-postfix/#disqus_thread">Comments</a>
+      
+      <br/>
+      <a class="label" href="http://blog.leifmadsen.com/categories/being-productive">Being Productive</a><a class="label" href="http://blog.leifmadsen.com/categories/technology">Technology</a><a class="label" href="http://blog.leifmadsen.com/categories/useful-tools">Useful Tools</a>
+      </span>
+      
+      Today I had the need to start relaying mail through my Google Apps account since Super-Evil-Bastard-ITSPRogers blocks sending email (it&rsquo;s probably a good thing, however it&rsquo;s quite annoying when running some services from home). Found this article while Googling, and it worked great first try. I like when things are this easy. http://www.zulius.com/how-to/set-up-postfix-with-a-remote-smtp-relay-host/
+      
+      
+    </div>
+    
+    
+    
+    <ul class="pagination">
+        
+        <li>
+            <a href="http://blog.leifmadsen.com/" aria-label="First"><span aria-hidden="true">&laquo;&laquo;</span></a>
+        </li>
+        
+        <li
+        >
+        <a href="http://blog.leifmadsen.com/" aria-label="Previous"><span aria-hidden="true">&laquo;</span></a>
+        </li>
+        
+        <li
+        ><a href="http://blog.leifmadsen.com/">1</a></li>
+        
+        <li
+        class="active"><a href="http://blog.leifmadsen.com/page/2/">2</a></li>
+        
+        <li
+        ><a href="http://blog.leifmadsen.com/page/3/">3</a></li>
+        
+        <li
+        ><a href="http://blog.leifmadsen.com/page/4/">4</a></li>
+        
+        <li
+        ><a href="http://blog.leifmadsen.com/page/5/">5</a></li>
+        
+        <li
+        ><a href="http://blog.leifmadsen.com/page/6/">6</a></li>
+        
+        <li
+        ><a href="http://blog.leifmadsen.com/page/7/">7</a></li>
+        
+        <li
+        ><a href="http://blog.leifmadsen.com/page/8/">8</a></li>
+        
+        <li
+        ><a href="http://blog.leifmadsen.com/page/9/">9</a></li>
+        
+        <li
+        ><a href="http://blog.leifmadsen.com/page/10/">10</a></li>
+        
+        <li
+        >
+        <a href="http://blog.leifmadsen.com/page/3/" aria-label="Next"><span aria-hidden="true">&raquo;</span></a>
+        </li>
+        
+        <li>
+            <a href="http://blog.leifmadsen.com/page/10/" aria-label="Last"><span aria-hidden="true">&raquo;&raquo;</span></a>
+        </li>
+        
+    </ul>
+    
+  </div>
+</div>
+
+
+<script type="text/javascript">
+var disqus_shortname = "leifmadsen";
+(function () {
+    var s = document.createElement('script'); s.async = true;
+    s.type = 'text/javascript';
+    s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+    (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+}());
+</script>
+
+<script src="http://blog.leifmadsen.com/js/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+</body>
+</html>
+

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Sip.Conf on Asterisk, and other worldly endeavours</title>
+    <link>http://blog.leifmadsen.com/tags/sip/index.conf/</link>
+    <description>Recent content in Sip.Conf on Asterisk, and other worldly endeavours</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 27 Feb 2011 21:57:41 +0000</lastBuildDate>
+    <atom:link href="http://blog.leifmadsen.com/tags/sip.conf/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Using #exec to set externaddr in sip.conf</title>
+      <link>http://blog.leifmadsen.com/blog/2011/02/27/using-</link>
+      <pubDate>Sun, 27 Feb 2011 21:57:41 +0000</pubDate>
+      
+      <guid>http://blog.leifmadsen.com/blog/2011/02/27/using-</guid>
+      <description>&lt;p&gt;Today I was working on a system, and knowing that the system is going to get moved, and that often one of the things forgotten is to update the &lt;strong&gt;externaddr=&lt;/strong&gt; option in &lt;em&gt;sip.conf&lt;/em&gt; (when Asterisk is sitting behind NAT), I decided to put together a little script that returns the external IP address of the system. Using this script along with an &lt;strong&gt;#exec&lt;/strong&gt; in the &lt;em&gt;sip.conf&lt;/em&gt; file will make it so the address gets updated when the system is moved to the new physical location. I used the &lt;em&gt;php5-curl&lt;/em&gt; package on Ubuntu. I used the example from this page for cURL: &lt;a href=&#34;http://www.php.net/manual/en/curl.examples-basic.php&#34;&gt;http://www.php.net/manual/en/curl.examples-basic.php&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Here is the PHP script:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-php&#34;&gt;#!/usr/bin/php
+&amp;lt;?php
+
+$ch = curl_init();
+curl_setopt($ch, CURLOPT_URL, &amp;quot;http://getip.krisk.org&amp;quot;);
+curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+$output = curl_exec($ch);
+curl_close($ch);
+
+echo &amp;quot;externaddr=&amp;quot;.$output.&amp;quot;\n&amp;quot;;
+
+?&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;And the Asterisk configuration required &lt;em&gt;asterisk.conf&lt;/em&gt; to be modified. Enable the &lt;em&gt;execincludes=yes&lt;/em&gt; option, and then add the following to the &lt;strong&gt;[general]&lt;/strong&gt; section of &lt;em&gt;sip.conf&lt;/em&gt;.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;#exec /etc/asterisk/scripts/set_externaddr.php
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

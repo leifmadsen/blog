@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Keynote on Asterisk, and other worldly endeavours</title>
+    <link>http://blog.leifmadsen.com/tags/keynote/</link>
+    <description>Recent content in Keynote on Asterisk, and other worldly endeavours</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 27 Oct 2010 12:08:06 +0000</lastBuildDate>
+    <atom:link href="http://blog.leifmadsen.com/tags/keynote/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>AstriCon 2010 and my talks!</title>
+      <link>http://blog.leifmadsen.com/blog/2010/10/27/astricon-2010-and-my-talks/</link>
+      <pubDate>Wed, 27 Oct 2010 12:08:06 +0000</pubDate>
+      
+      <guid>http://blog.leifmadsen.com/blog/2010/10/27/astricon-2010-and-my-talks/</guid>
+      <description>&lt;p&gt;&lt;em&gt;NOTE: My presentations are available on my website at &lt;a href=&#34;http://leifmadsen.com&#34;&gt;http://leifmadsen.com&lt;/a&gt; under the Presentations tab.&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;Hey all! I&amp;rsquo;m at AstriCon 2010 in Maryland and it&amp;rsquo;s going great so far! Russell Bryant and I spoke with several keen users and developers last night in the Code Zone at a fairly late hour, which shows just how dedicated Asterisk users are. There was pretty much no one else around and we had a room of about 20-30 people just having a great discussion about Asterisk development. Hopefully more of that over the next few days!&lt;/p&gt;
+
+&lt;p&gt;Today is the big keynote by some of the software development team, and while I can&amp;rsquo;t tell you what is going to be said, I can promise you it&amp;rsquo;s going to be big news. A lot of work has been going on over the last few months which has resulted in the biggest announcement yet at AstriCon about the future of telephony. There will be lots of blinky lights as well, which is always cool in a keynote!&lt;/p&gt;
+
+&lt;p&gt;Beyond the keynote this morning will be a lot of very high quality talks. I haven&amp;rsquo;t yet planned out my list of talks that I&amp;rsquo;m going to see, but you should definitely mark my two talks on your list of things to see :) I&amp;rsquo;ll be speaking at 1:45pm today, October 27th in the Asterisk Essentials track with my updated &amp;ldquo;5 Things You Didn&amp;rsquo;t Know Asterisk Could Do&amp;rdquo; presentation. It&amp;rsquo;ll be in National Harbor #5.&lt;/p&gt;
+
+&lt;p&gt;Tomorrow on October 28th I&amp;rsquo;ll be filling in for Jim van Meggelen at 10:00am doing my &amp;ldquo;Building A Distributed Queue System&amp;rdquo; talk which will focus on the basics of Asterisk system design starting from a traditional PBX and taking it through the iterations of a distributed system with multiple physical boxes handling queues and phones distributed across multiple sites and locations. For those who missed it last year come check it out this year, and get there early because each time I do this talk the room is packed. It&amp;rsquo;s part of the Platform Solutions track which is in National Harbor #7.&lt;/p&gt;
+
+&lt;p&gt;See you around at AstriCon!&lt;/p&gt;
+
+&lt;p&gt;PS: I&amp;rsquo;m trying to reach my 500th follower during AstriCon, so you should follow me on twitter :)  (@leifmadsen)&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
