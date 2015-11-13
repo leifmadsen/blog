@@ -2,6 +2,7 @@
 categories = ["asterisk","docker","rpm","automation"]
 date = "2015-11-10T19:41:55-05:00"
 description = ""
+draft = true
 keywords = ["asterisk","docker","rpms","automation"]
 title = "Asterisk Docker Container: Phase 1"
 

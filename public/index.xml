@@ -6,40 +6,8 @@
     <description>Recent content on Asterisk, and other worldly endeavours</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 10 Nov 2015 19:41:55 -0500</lastBuildDate>
+    <lastBuildDate>Tue, 10 Nov 2015 19:28:26 -0500</lastBuildDate>
     <atom:link href="http://blog.leifmadsen.com/index.xml" rel="self" type="application/rss+xml" />
-    
-    <item>
-      <title>Asterisk Docker Container: Phase 1</title>
-      <link>http://blog.leifmadsen.com/blog/2015/11/10/asterisk-docker-container-phase-1/</link>
-      <pubDate>Tue, 10 Nov 2015 19:41:55 -0500</pubDate>
-      
-      <guid>http://blog.leifmadsen.com/blog/2015/11/10/asterisk-docker-container-phase-1/</guid>
-      <description>&lt;p&gt;At AstriCon 2015 this year, there was a lot (and I mean a lot) of discussion around microservices (Docker),
-and what items are required over the next year by the development community in order to make Asterisk better
-suited to running in that environment.&lt;/p&gt;
-
-&lt;p&gt;One of the first things is, clearly, to have a container image that Asterisk runs in. I&amp;rsquo;ve done this a
-few times now, but having something that can be passed over to the official Asterisk Git repository,
-and which everyone can contribute to, utilize and play with would be the goal here. The community is
-already pretty fragmented, and there are a bunch of useful, but unofficial images, and I don&amp;rsquo;t think
-any of them have become the defacto image.&lt;/p&gt;
-
-&lt;p&gt;Part of the problem is really around packages. Digium does release some official Asterisk packages, but
-it&amp;rsquo;s not automated. Another interesting tidbit that came out of AstriDevCon is that no one really uses packages.&lt;/p&gt;
-
-&lt;p&gt;Let me elaborate on what I mean by that. Everyone seems to want packages of the project. The issue seems
-to be that anyone using packages probably already has access to them through their distribution. If they
-don&amp;rsquo;t want or can&amp;rsquo;t use those packages, then they are likely using some sort of custom deployment, in
-which case they are probably compiling Asterisk onto the box in question, along with their custom patches.&lt;/p&gt;
-
-&lt;p&gt;We need to figure out an easier way for people to have access to custom packages.&lt;/p&gt;
-
-&lt;p&gt;With that in mind, we also want people to have access to an Asterisk container image that they can use,
-but with the ability to rebuild it locally if need be, without having to setup a ton of infrastructure to
-do it.&lt;/p&gt;
-</description>
-    </item>
     
     <item>
       <title>about</title>
@@ -516,6 +484,22 @@ exten =&amp;gt; _NXXNXXXXXX,3,Dial(SIP/foo/${EXTEN})
 
 &lt;pre&gt;&lt;code&gt;%s/exten\s*=&amp;gt;\s*[^,]\+,\s*[n2-9]/ same =&amp;gt; n/g
 &lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Commodore 64 Turns 30 This Year</title>
+      <link>http://blog.leifmadsen.com/blog/2012/01/09/commodore-64-turns-30-this-year/</link>
+      <pubDate>Mon, 09 Jan 2012 13:05:51 +0000</pubDate>
+      
+      <guid>http://blog.leifmadsen.com/blog/2012/01/09/commodore-64-turns-30-this-year/</guid>
+      <description>&lt;p&gt;Having found an article about the Commodore 64 turning 30 this year, I reflected back in a comment on that page about what it is like to be only 1 year older than the Commodore 64, a computer which spiked my interest in technology away from a games system to something much more. The original article is available at &lt;a href=&#34;http://www.linuxjournal.com/content/commodor-64-30-year&#34;&gt;http://www.linuxjournal.com/content/commodor-64-30-year&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&amp;ldquo;I just turned 31 a couple of days ago on January 7th, and when I was in grade 2 (about 8-9 years old I guess) I started getting interested in the Commodore 64s we had at our school that were plentiful, but rarely used. I remember the first thing the teacher taught me; $p$g&lt;/p&gt;
+
+&lt;p&gt;The Commodore 64 replaced my interest with Nintendo (which I still have) to a greater interest that shaped me and caused me to grow technologically.  This grew into the Packard Bell &lt;sup&gt;486&lt;/sup&gt;&amp;frasl;&lt;sub&gt;25&lt;/sub&gt; my parents bought where I played flight simulator (after my Dad purchased more RAM for the computer at $100 a MB), and ran a BBS (the first month I played around with the 2400 baud modem calling Las Vegas BBS numbers that a friends father gave me; I lived in Sarnia, ON, Canada which is north-east of Detroit), and eventually ran my own BBS. Running a BBS gave me the sense of community that I possess and the love of telecommunications that is my career to this day.&lt;/p&gt;
+
+&lt;p&gt;So thank you Commodore for your C64 which has allowed me to carve out my career and greatly influenced who I am; and not just professionally.&amp;rdquo;&lt;/p&gt;
 </description>
     </item>
     

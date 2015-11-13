@@ -77,21 +77,6 @@
     
     <div class="post">
       <h1 class="post-title">
-        <a href="http://blog.leifmadsen.com/blog/2012/07/19/bash-creating-files-named-1-everywhere/">bash creating files named &#39;1&#39; everywhere!</a>
-      </h1>
-      <span class="post-date">Jul 19, 2012 &middot; 1 minute read &middot; <a href="http://blog.leifmadsen.com/blog/2012/07/19/bash-creating-files-named-1-everywhere/#disqus_thread">Comments</a>
-      
-      <br/>
-      <a class="label" href="http://blog.leifmadsen.com/categories/musings">Musings</a><a class="label" href="http://blog.leifmadsen.com/categories/programming">Programming</a>
-      </span>
-      
-      So I ran into something kind of stupid today :) Adding a little note for anyone who might run into a similar instance. I have some ssh-add stuff that gets run in my .bashrc file, but when I was outputting it, I was doing: ssh-add ~/.ssh/some_key &gt; /dev/null 2&amp;&gt;1 Note the 2&amp;&gt;1 at the end. That means to redirect output to a file named 1. You need to flip the
-      <a href="http://blog.leifmadsen.com/blog/2012/07/19/bash-creating-files-named-1-everywhere/">Read On &rarr;</a>
-      
-    </div>
-    
-    <div class="post">
-      <h1 class="post-title">
         <a href="http://blog.leifmadsen.com/blog/2012/06/26/integration-testing-using-jenkins-part-1/">Integration Testing Using Jenkins (Part 1)</a>
       </h1>
       <span class="post-date">Jun 26, 2012 &middot; 3 minute read &middot; <a href="http://blog.leifmadsen.com/blog/2012/06/26/integration-testing-using-jenkins-part-1/#disqus_thread">Comments</a>
@@ -222,6 +207,21 @@
       
       Today I had the need to start relaying mail through my Google Apps account since Super-Evil-Bastard-ITSPRogers blocks sending email (it&rsquo;s probably a good thing, however it&rsquo;s quite annoying when running some services from home). Found this article while Googling, and it worked great first try. I like when things are this easy. http://www.zulius.com/how-to/set-up-postfix-with-a-remote-smtp-relay-host/
       
+      
+    </div>
+    
+    <div class="post">
+      <h1 class="post-title">
+        <a href="http://blog.leifmadsen.com/blog/2011/11/02/controlling-outbound-bitrate-using-tc/">Controlling outbound bitrate using tc</a>
+      </h1>
+      <span class="post-date">Nov 2, 2011 &middot; 2 minute read &middot; <a href="http://blog.leifmadsen.com/blog/2011/11/02/controlling-outbound-bitrate-using-tc/#disqus_thread">Comments</a>
+      
+      <br/>
+      <a class="label" href="http://blog.leifmadsen.com/categories/programming">Programming</a><a class="label" href="http://blog.leifmadsen.com/categories/useful-tools">Useful Tools</a>
+      </span>
+      
+      Today I was using the VMware vCenter Converter application to build a VM from a physical machine so that I could replace Ubuntu 10.04.3 LTS with VMware ESXi (and move the functionality that the server is performing now to a VM instead of it being the base OS). Because my server is colocated in a friends rack, and the bandwidth is shared, I needed to limit the rate at which the data was being sent from the colocated server to the virtual machine server.
+      <a href="http://blog.leifmadsen.com/blog/2011/11/02/controlling-outbound-bitrate-using-tc/">Read On &rarr;</a>
       
     </div>
     
