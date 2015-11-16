@@ -183,7 +183,7 @@ that make building packages annoying. It&amp;rsquo;s not clear yet whether FPM r
 like Asterisk that have multiple outside dependencies, but it&amp;rsquo;s worth a look.&lt;/p&gt;
 
 &lt;p&gt;The other approach I&amp;rsquo;ve been thinking about is to have a &lt;code&gt;spec&lt;/code&gt; file per Asterisk version supplied directly
-with Asteris, which makes the editing of the file locally probably a lot simpler since it&amp;rsquo;ll be tied to your
+with Asterisk, which makes the editing of the file locally probably a lot simpler since it&amp;rsquo;ll be tied to your
 base version of Asterisk. From there you simply need to add any extra modules / files that you&amp;rsquo;re adding to the
 Asterisk source code. If changes only happen in existing file, then there should be no need to change the file
 at all, other than maybe a build flag change (which you might be able to pass in with an &lt;code&gt;ENV&lt;/code&gt; variable).&lt;/p&gt;
