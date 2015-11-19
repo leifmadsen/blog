@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
+<head>
+  <link href="http://gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+  <title>Rules For The Greater Goodness; A Product Development Guide &middot; Leif Madsen</title>
+
+  
+  <link rel="stylesheet" href="http://blog.leifmadsen.com/css/poole.css">
+  <link rel="stylesheet" href="http://blog.leifmadsen.com/css/hyde.css">
+  <link rel="stylesheet" href="http://blog.leifmadsen.com/css/poole-overrides.css">
+  <link rel="stylesheet" href="http://blog.leifmadsen.com/css/hyde-overrides.css">
+  <link rel="stylesheet" href="http://blog.leifmadsen.com/css/hyde-x.css">
+  <link rel="stylesheet" href="http://blog.leifmadsen.com/css/highlight/solarized_dark.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700|Abril+Fatface">
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+
+  
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="http://blog.leifmadsen.com/touch-icon-144-precomposed.png">
+  <link href="http://blog.leifmadsen.com/favicon.ico" rel="icon">
+
+  
+  
+  
+  
+
+  <meta name="description" content="Rules For The Greater Goodness">
+  <meta name="keywords" content="blog,asterisk,leif,madsen,canada">
+  
+</head>
+<body class="theme-base-0b">
+<div class="sidebar">
+  <div class="container sidebar-sticky">
+    <div class="sidebar-about">
+      
+        <img src="https://www.gravatar.com/avatar/77a1196d149eecdb3b35fb5db56d494e?s=200"
+             alt="gravatar" title="Leif Madsen">
+      
+      <h1>Leif Madsen</h1>
+      <p class="lead">Asterisk, and other worldly endeavours</p>
+    </div>
+
+    <ul class="sidebar-nav">
+      <li class="sidebar-nav-item"><a href="http://blog.leifmadsen.com/">Blog</a></li>
+      
+    </ul>
+
+    <ul class="sidebar-nav">
+      <li class="sidebar-nav-item">
+      <a href="http://github.com/leifmadsen"><i class="fa fa-github-square fa-3x"></i></a>
+      
+      
+      <a href="http://linkedin.com/in/leifmadsen"><i class="fa fa-linkedin-square fa-3x"></i></a>
+      
+      
+      <a href="http://twitter.com/leifmadsen"><i class="fa fa-twitter-square fa-3x"></i></a>
+      
+      <a href="" type="application/rss+xml"><i class="fa fa-rss-square fa-3x"></i></a>
+      </li>
+    </ul>
+
+    
+
+    <p>Copyright &copy; 2015 <a href="http://blog.leifmadsen.com/license/">License</a><br/>
+       Powered by <a href="http://gohugo.io">Hugo</a> and <a href="https://github.com/zyro/hyde-x">Hyde-X</a></p>
+  </div>
+</div>
+
+
+<div class="content container">
+  <div class="post">
+    <h1>Rules For The Greater Goodness; A Product Development Guide</h1>
+    <span class="post-date">Nov 19, 2015 &middot; 4 minute read &middot; <a href="http://blog.leifmadsen.com/blog/2015/11/19/rules-for-the-greater-goodness-a-product-development-guide/#disqus_thread">Comments</a>
+    
+    <br/>
+    <a class="label" href="http://blog.leifmadsen.com/categories/development">development</a><a class="label" href="http://blog.leifmadsen.com/categories/product">product</a><a class="label" href="http://blog.leifmadsen.com/categories/rules">rules</a><a class="label" href="http://blog.leifmadsen.com/categories/list">list</a>
+    </span>
+    
+
+<h1 id="overview:d657ecf11f134916bcb672868160229d">Overview</h1>
+
+<p>This page documents and provides bullets about the way to approach (or avoid) building products. These are lessons we&rsquo;ve learned from previous encounters and which we wish to avoid in the future. By sticking firmly to these development rules, we avoid getting bogged down in complete system rearchitectures in the future. The means to a scaled end is to approach the first customer as all your customers.</p>
+
+<h1 id="rules-for-the-greater-goodness:d657ecf11f134916bcb672868160229d">Rules For The Greater Goodness</h1>
+
+<h2 id="a-product-development-guide:d657ecf11f134916bcb672868160229d">A Product Development Guide</h2>
+
+<ol>
+<li><strong>Java is strictly forbidden</strong> from any client or server side applications being built or interacted with. Applications utilizing Java may be used in limited usage when warranted.
+
+<ul>
+<li>For example, Confluence, our documentation system utilized Java, but no customer interactions are had via Java, and no core systems utilize Java.</li>
+</ul></li>
+<li><strong>Rube-Goldberg mechanisms are strictly forbidden.</strong> Build simpler, more elegant solutions that scale, are documented, and utilize best practices.</li>
+<li>Utilize development tools and languages that speak to the strengths of the system being built. Prefer using languages already in use. Have a primary development language.</li>
+<li>If you can interact with an <strong>API</strong>, do it. If you need to expose data to another subsystem, front it with an API.</li>
+<li>Love documentation. Be one with documentation. <strong>Document</strong> your code for the next fool that needs to work on it. It&rsquo;s probably going to be you.</li>
+<li><strong>Automate everything</strong> you can so you can spend time building new functionality.</li>
+<li>Build in as much <strong>redundancy</strong> and automatic <strong>failover</strong> as possible. Capture errors in sane manners. The focus is to build systems that require very little support. Support costs money.</li>
+<li>If you have a choice between a pre-paid solution and an open source solution, but the open source solution requires more effort, it doesn&rsquo;t matter. <strong>Use open source software.</strong>
+
+<ul>
+<li><strong>Avoid vendor lock</strong> in at all costs. It costs!</li>
+</ul></li>
+<li><strong>Load testing</strong> is paramount, and realistic load testing even more so.  If you don&rsquo;t know the loads at which your application will break you can&rsquo;t know what customer experiences will be like.
+
+<ul>
+<li>If you don&rsquo;t know the expected load, how do you expect to monitor it? How will you know what your thresholds are for warning and critical alarms?</li>
+</ul></li>
+<li><strong>Monitor</strong> your network and applications. Understand what they are doing.</li>
+<li><strong>Log your data.</strong> Log your network traffic, your application logs, and your API interactions. Provide a simple interface for gathering data. Don&rsquo;t rely on trying to reproduce issue after the fact.</li>
+<li><strong>Have style.</strong> When possible write a style guide for what you&rsquo;re building. Keeping things clean will produce better code in the future. If your code is pretty and conforms to code guidelines you&rsquo;re less likely to hack and slash. Follow the style guides.</li>
+<li><strong>Contribute.</strong> Using open-source projects is a two-way street. Any contributions we can make back to the community helps both the project and us.</li>
+<li><strong>Normalize</strong> your database tables. Database creation should strive towards fifth normal form (5NF). See <a href="http://en.wikipedia.org/wiki/Fifth_normal_form">Fifth Normal Form</a></li>
+<li><strong>Control the applications.</strong> Don&rsquo;t deploy applications to clients that you can&rsquo;t control and upgrade. Subscribing to a hosted mentality is that you have a single application for all clients. Own this and everyone will benefit from the same platform.</li>
+<li><strong>Limit Customization.</strong> If you&rsquo;re going to build the functionality for a client, make sure the time you&rsquo;re spending is helping the greater good. Architect and develop features requested by clients in such a way that they are generic and help the greater community (your client base).
+
+<ul>
+<li>Small customizations derail your forward momentum and take you on tangents.</li>
+</ul></li>
+<li><strong>Sell what you have.</strong> Don&rsquo;t sell what the customer wants and lock yourself into having to build functionality in a rush. Sell the merits of the platform to the customer and help them understand why a customization for them hurts other customers on the platform, and that you don&rsquo;t want to hurt your customers; including them. See 15 and 16.</li>
+<li><strong>User experience</strong> is paramount. It should be well researched and designed with ease-of-use in mind. Engineers should never try to directly implement UX concepts; well-designed software should always be abstracted from design elements.</li>
+<li><strong>Set reasonable and hard limits</strong> for expectations of the platform. Don&rsquo;t allow the platform or any of its features to be misrepresented or misconstrued. See 17.</li>
+<li><strong>Constant innovation</strong> is imperative to the success of the platform. No one wants old technology and all technology becomes obsolete almost immediately.</li>
+<li><strong>Never ignore customer feedback!</strong> Even if it&rsquo;s not feasible to implement a customer&rsquo;s request, the request is generally always coming from an actual use-case.</li>
+<li><strong>Examine and understand use-cases.</strong> Always make sure the use-case is understood so that a proper solution can be implemented.</li>
+</ol>
+
+  </div>
+  <div id="disqus_thread"></div>
+</div>
+
+
+<script type="text/javascript">
+var disqus_shortname = "leifmadsen";
+(function () {
+    var s = document.createElement('script'); s.async = true;
+    s.type = 'text/javascript';
+    s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+    (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+}());
+</script>
+
+
+
+<script type="text/javascript">
+    var disqus_shortname = "leifmadsen";
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+<script src="http://blog.leifmadsen.com/js/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+</body>
+</html>
+

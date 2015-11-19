@@ -77,6 +77,21 @@
     
     <div class="post">
       <h1 class="post-title">
+        <a href="http://blog.leifmadsen.com/blog/2011/11/22/relaying-smtp-via-gmail-or-google-apps-using-postfix/">Relaying SMTP via Gmail (or Google Apps) Using Postfix</a>
+      </h1>
+      <span class="post-date">Nov 22, 2011 &middot; 1 minute read &middot; <a href="http://blog.leifmadsen.com/blog/2011/11/22/relaying-smtp-via-gmail-or-google-apps-using-postfix/#disqus_thread">Comments</a>
+      
+      <br/>
+      <a class="label" href="http://blog.leifmadsen.com/categories/being-productive">Being Productive</a><a class="label" href="http://blog.leifmadsen.com/categories/technology">Technology</a><a class="label" href="http://blog.leifmadsen.com/categories/useful-tools">Useful Tools</a>
+      </span>
+      
+      Today I had the need to start relaying mail through my Google Apps account since Super-Evil-Bastard-ITSPRogers blocks sending email (it&rsquo;s probably a good thing, however it&rsquo;s quite annoying when running some services from home). Found this article while Googling, and it worked great first try. I like when things are this easy. http://www.zulius.com/how-to/set-up-postfix-with-a-remote-smtp-relay-host/
+      
+      
+    </div>
+    
+    <div class="post">
+      <h1 class="post-title">
         <a href="http://blog.leifmadsen.com/blog/2011/11/02/controlling-outbound-bitrate-using-tc/">Controlling outbound bitrate using tc</a>
       </h1>
       <span class="post-date">Nov 2, 2011 &middot; 2 minute read &middot; <a href="http://blog.leifmadsen.com/blog/2011/11/02/controlling-outbound-bitrate-using-tc/#disqus_thread">Comments</a>
@@ -207,21 +222,6 @@
       
       (Thanks to Jared Smith for answering my question in IRC which is the inspiration for this post.) Typically when I write dialplan, primarily in the case where I&rsquo;m using a pattern match, I&rsquo;ll save the dialed extension to a channel variable using Set(), then do a Goto() where the call logic is handled. The Set() is so that I don&rsquo;t lose the value of ${EXTEN} throughout the dialplan process, especially if I&rsquo;m using other mechanics such as GoSub() and others.
       <a href="http://blog.leifmadsen.com/blog/2011/08/13/set-and-goto-on-same-line/">Read On &rarr;</a>
-      
-    </div>
-    
-    <div class="post">
-      <h1 class="post-title">
-        <a href="http://blog.leifmadsen.com/blog/2011/08/11/connecting-two-conferences-on-initial-join-with-cleanup/">Connecting two conferences on initial join (with cleanup)</a>
-      </h1>
-      <span class="post-date">Aug 11, 2011 &middot; 2 minute read &middot; <a href="http://blog.leifmadsen.com/blog/2011/08/11/connecting-two-conferences-on-initial-join-with-cleanup/#disqus_thread">Comments</a>
-      
-      <br/>
-      <a class="label" href="http://blog.leifmadsen.com/categories/asterisk">Asterisk</a><a class="label" href="http://blog.leifmadsen.com/categories/musings">Musings</a><a class="label" href="http://blog.leifmadsen.com/categories/programming">Programming</a>
-      </span>
-      
-      Update 2011/12/15: Updated the code to deal with a couple of people joining at about the same time by using GROUP() and GROUP_COUNT(). Additionally updated the &lsquo;h&rsquo; extension which was missing some code For the last week or so at work, people have been saying, &ldquo;Hey, I can&rsquo;t join the conference call this morning because I&rsquo;m driving but I can&rsquo;t call into the conference room on that server&rdquo;. There are really a couple solutions to the problem, 1) everyone should use the conference room that is accessible via the PSTN, 2) get the IT staff to allow PSTN access to the internal conference room.
-      <a href="http://blog.leifmadsen.com/blog/2011/08/11/connecting-two-conferences-on-initial-join-with-cleanup/">Read On &rarr;</a>
       
     </div>
     
