@@ -19,7 +19,7 @@
 
 &lt;p&gt;Recently I&amp;rsquo;ve been playing around with a couple of technologies that I haven&amp;rsquo;t used in quite a while; ENUM and ISN. First, a little information on what these technologies are about.&lt;/p&gt;
 
-&lt;h2 id=&#34;isns-and-itads:133b4c6dfdac6adcd5cf93b53302f8ac&#34;&gt;ISNs and ITADs&lt;/h2&gt;
+&lt;h2 id=&#34;isns-and-itads&#34;&gt;ISNs and ITADs&lt;/h2&gt;
 
 &lt;p&gt;First, lets talk about ISN (ITAD Subscriber Number) and ITAD (Internet Telephony Administrative Domain). I think the &lt;a href=&#34;http://www.freenum.org&#34;&gt;http://www.freenum.org&lt;/a&gt; website does a good job of succinctly describing the problem attempting to be addressed:&lt;/p&gt;
 
@@ -37,7 +37,7 @@
 
 &lt;p&gt;As this is simply an overview about ISNs, I&amp;rsquo;ll stop here. Future articles will delve into the configurations and testing for outbound and inbound calls with Asterisk, setting up DNS, etc. For now, see the &lt;a href=&#34;http://freenum.org&#34;&gt;http://freenum.org&lt;/a&gt; website for more information about configuring these aspects. Unfortunately the Asterisk information is out of date (in terms of utilizing the best features of the dialplan). I&amp;rsquo;d be happy to update the information if enough requests and interest is generated.&lt;/p&gt;
 
-&lt;h2 id=&#34;enumplus:133b4c6dfdac6adcd5cf93b53302f8ac&#34;&gt;ENUMplus&lt;/h2&gt;
+&lt;h2 id=&#34;enumplus&#34;&gt;ENUMplus&lt;/h2&gt;
 
 &lt;p&gt;ENUMplus (&lt;a href=&#34;http://www.enumplus.org&#34;&gt;http://www.enumplus.org&lt;/a&gt;) is a site which takes the information from several ENUM databases and allows you to perform a single lookup using cURL. Since there is a lot of technology going on in that sentence, lets step back and define each of these aspects.&lt;/p&gt;
 

@@ -18,10 +18,11 @@
   <link rel="stylesheet" href="http://blog.leifmadsen.com/css/highlight/solarized_dark.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700|Abril+Fatface">
   <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  
 
   
   <link rel="apple-touch-icon-precomposed" sizes="144x144" href="http://blog.leifmadsen.com/touch-icon-144-precomposed.png">
-  <link href="http://blog.leifmadsen.com/favicon.ico" rel="icon">
+  <link href="http://blog.leifmadsen.com/favicon.png" rel="icon">
 
   
   
@@ -59,13 +60,13 @@
       
       <a href="http://twitter.com/leifmadsen"><i class="fa fa-twitter-square fa-3x"></i></a>
       
-      <a href="" type="application/rss+xml"><i class="fa fa-rss-square fa-3x"></i></a>
+      <a href="http://blog.leifmadsen.com/index.xml" type="application/rss+xml"><i class="fa fa-rss-square fa-3x"></i></a>
       </li>
     </ul>
 
     
 
-    <p>Copyright &copy; 2015 <a href="http://blog.leifmadsen.com/license/">License</a><br/>
+    <p>Copyright &copy; 2016 <a href="http://blog.leifmadsen.com/license/">License</a><br/>
        Powered by <a href="http://gohugo.io">Hugo</a> and <a href="https://github.com/zyro/hyde-x">Hyde-X</a></p>
   </div>
 </div>
@@ -73,12 +74,12 @@
 
 <div class="content container">
   <div class="post">
-    <h1>Musings about ENUMplus and ISNs</h1>
+    <h1 class="post-title">Musings about ENUMplus and ISNs</h1>
     
 
 <p>Recently I&rsquo;ve been playing around with a couple of technologies that I haven&rsquo;t used in quite a while; ENUM and ISN. First, a little information on what these technologies are about.</p>
 
-<h2 id="isns-and-itads:133b4c6dfdac6adcd5cf93b53302f8ac">ISNs and ITADs</h2>
+<h2 id="isns-and-itads">ISNs and ITADs</h2>
 
 <p>First, lets talk about ISN (ITAD Subscriber Number) and ITAD (Internet Telephony Administrative Domain). I think the <a href="http://www.freenum.org">http://www.freenum.org</a> website does a good job of succinctly describing the problem attempting to be addressed:</p>
 
@@ -96,7 +97,7 @@
 
 <p>As this is simply an overview about ISNs, I&rsquo;ll stop here. Future articles will delve into the configurations and testing for outbound and inbound calls with Asterisk, setting up DNS, etc. For now, see the <a href="http://freenum.org">http://freenum.org</a> website for more information about configuring these aspects. Unfortunately the Asterisk information is out of date (in terms of utilizing the best features of the dialplan). I&rsquo;d be happy to update the information if enough requests and interest is generated.</p>
 
-<h2 id="enumplus:133b4c6dfdac6adcd5cf93b53302f8ac">ENUMplus</h2>
+<h2 id="enumplus">ENUMplus</h2>
 
 <p>ENUMplus (<a href="http://www.enumplus.org">http://www.enumplus.org</a>) is a site which takes the information from several ENUM databases and allows you to perform a single lookup using cURL. Since there is a lot of technology going on in that sentence, lets step back and define each of these aspects.</p>
 
@@ -149,6 +150,6 @@ exten =&gt; no_result,n,Hangup()
 </div>
 <script src="http://blog.leifmadsen.com/js/highlight.pack.js"></script>
 <script>hljs.initHighlightingOnLoad();</script>
-
 </body>
 </html>
+

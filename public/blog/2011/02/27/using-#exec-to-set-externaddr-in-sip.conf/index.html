@@ -18,10 +18,11 @@
   <link rel="stylesheet" href="http://blog.leifmadsen.com/css/highlight/solarized_dark.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700|Abril+Fatface">
   <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  
 
   
   <link rel="apple-touch-icon-precomposed" sizes="144x144" href="http://blog.leifmadsen.com/touch-icon-144-precomposed.png">
-  <link href="http://blog.leifmadsen.com/favicon.ico" rel="icon">
+  <link href="http://blog.leifmadsen.com/favicon.png" rel="icon">
 
   
   
@@ -59,13 +60,13 @@
       
       <a href="http://twitter.com/leifmadsen"><i class="fa fa-twitter-square fa-3x"></i></a>
       
-      <a href="" type="application/rss+xml"><i class="fa fa-rss-square fa-3x"></i></a>
+      <a href="http://blog.leifmadsen.com/index.xml" type="application/rss+xml"><i class="fa fa-rss-square fa-3x"></i></a>
       </li>
     </ul>
 
     
 
-    <p>Copyright &copy; 2015 <a href="http://blog.leifmadsen.com/license/">License</a><br/>
+    <p>Copyright &copy; 2016 <a href="http://blog.leifmadsen.com/license/">License</a><br/>
        Powered by <a href="http://gohugo.io">Hugo</a> and <a href="https://github.com/zyro/hyde-x">Hyde-X</a></p>
   </div>
 </div>
@@ -73,7 +74,7 @@
 
 <div class="content container">
   <div class="post">
-    <h1>Using #exec to set externaddr in sip.conf</h1>
+    <h1 class="post-title">Using #exec to set externaddr in sip.conf</h1>
     <p>Today I was working on a system, and knowing that the system is going to get moved, and that often one of the things forgotten is to update the <strong>externaddr=</strong> option in <em>sip.conf</em> (when Asterisk is sitting behind NAT), I decided to put together a little script that returns the external IP address of the system. Using this script along with an <strong>#exec</strong> in the <em>sip.conf</em> file will make it so the address gets updated when the system is moved to the new physical location. I used the <em>php5-curl</em> package on Ubuntu. I used the example from this page for cURL: <a href="http://www.php.net/manual/en/curl.examples-basic.php">http://www.php.net/manual/en/curl.examples-basic.php</a></p>
 
 <p>Here is the PHP script:</p>
@@ -101,6 +102,6 @@ echo &quot;externaddr=&quot;.$output.&quot;\n&quot;;
 </div>
 <script src="http://blog.leifmadsen.com/js/highlight.pack.js"></script>
 <script>hljs.initHighlightingOnLoad();</script>
-
 </body>
 </html>
+

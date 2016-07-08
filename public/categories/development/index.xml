@@ -17,13 +17,13 @@
       <guid>http://blog.leifmadsen.com/blog/2015/11/19/rules-for-the-greater-goodness-a-product-development-guide/</guid>
       <description>
 
-&lt;h1 id=&#34;overview:d657ecf11f134916bcb672868160229d&#34;&gt;Overview&lt;/h1&gt;
+&lt;h1 id=&#34;overview&#34;&gt;Overview&lt;/h1&gt;
 
 &lt;p&gt;This page documents and provides bullets about the way to approach (or avoid) building products. These are lessons we&amp;rsquo;ve learned from previous encounters and which we wish to avoid in the future. By sticking firmly to these development rules, we avoid getting bogged down in complete system rearchitectures in the future. The means to a scaled end is to approach the first customer as all your customers.&lt;/p&gt;
 
-&lt;h1 id=&#34;rules-for-the-greater-goodness:d657ecf11f134916bcb672868160229d&#34;&gt;Rules For The Greater Goodness&lt;/h1&gt;
+&lt;h1 id=&#34;rules-for-the-greater-goodness&#34;&gt;Rules For The Greater Goodness&lt;/h1&gt;
 
-&lt;h2 id=&#34;a-product-development-guide:d657ecf11f134916bcb672868160229d&#34;&gt;A Product Development Guide&lt;/h2&gt;
+&lt;h2 id=&#34;a-product-development-guide&#34;&gt;A Product Development Guide&lt;/h2&gt;
 
 &lt;ol&gt;
 &lt;li&gt;&lt;strong&gt;Java is strictly forbidden&lt;/strong&gt; from any client or server side applications being built or interacted with. Applications utilizing Java may be used in limited usage when warranted.

@@ -109,13 +109,13 @@
 
 &lt;p&gt;Recently I have been seeing more and more questions about how Asterisk is being released now, and what the 1.6.x versions really mean. I&amp;rsquo;ll try and clear up some of your questions and make it more clear as to how Asterisk versions work. First, lets talk about the Asterisk 1.2 and 1.4 branches.&lt;/p&gt;
 
-&lt;h4 id=&#34;previous-release-methodology:308c603a029c7f870e99ba0db909201d&#34;&gt;Previous release methodology&lt;/h4&gt;
+&lt;h4 id=&#34;previous-release-methodology&#34;&gt;Previous release methodology&lt;/h4&gt;
 
 &lt;p&gt;When we just had Asterisk 1.2 and 1.4, all new development was carried out in trunk (it still is) and only bug fixes went into the 1.2 and 1.4 branches. Currently, the 1.2 branch has been marked as EOL (End of Life), and is currently only receiving security updates. Bug fixes are reserved for the 1.4 branch. This means that until 1.6 came along, all new development was done in trunk, without the ability for people to get access to new features and functionality until the 1.6 branch was created. It&amp;rsquo;s not to say the new functionality wasn&amp;rsquo;t available, but with all the changes that can happen in trunk, running a production server based on it would require a very Asterisk savvy (and C code savvy) administrator.&lt;/p&gt;
 
 &lt;p&gt;Before we talk about 1.6, lets make sure we understand what trunk, branches, and tags mean.&lt;/p&gt;
 
-&lt;h4 id=&#34;branches-and-tags-and-trunk-oh-my:308c603a029c7f870e99ba0db909201d&#34;&gt;Branches, and Tags, and Trunk; oh my!&lt;/h4&gt;
+&lt;h4 id=&#34;branches-and-tags-and-trunk-oh-my&#34;&gt;Branches, and Tags, and Trunk; oh my!&lt;/h4&gt;
 
 &lt;p&gt;Asterisk development is basically a linear process. All changes happen one after the other, and new features are always put on the end. This is referred to as &lt;em&gt;trunk&lt;/em&gt;. All the latest changes to core Asterisk code, new features, and major changes take place here. This is why running trunk in production is not recommended, because the developers essentially have free reign as to what goes in here.&lt;/p&gt;
 
@@ -127,7 +127,7 @@
 
 &lt;p&gt;[caption id=&amp;ldquo;attachment_17&amp;rdquo; align=&amp;ldquo;aligncenter&amp;rdquo; width=&amp;ldquo;449&amp;rdquo; caption=&amp;ldquo;Image 1.1 - Visual representation of Asterisk release branching and tagging.&amp;rdquo;]&lt;img src=&#34;http://leifmadsen.files.wordpress.com/2009/06/asterisk_release_tree.jpg&#34; alt=&#34;Image 1.1&#34; /&gt;[/caption]&lt;/p&gt;
 
-&lt;h4 id=&#34;understanding-the-asterisk-1-6-release-process:308c603a029c7f870e99ba0db909201d&#34;&gt;Understanding the Asterisk 1.6 release process&lt;/h4&gt;
+&lt;h4 id=&#34;understanding-the-asterisk-1-6-release-process&#34;&gt;Understanding the Asterisk 1.6 release process&lt;/h4&gt;
 
 &lt;p&gt;With the advent of Asterisk 1.6, the release process has differed slightly, in that there are multiple 1.6 branches supported at any given time. The reason for this is because the time frame between the creation of the 1.0 &amp;amp; 1.2 branches, and the 1.2 &amp;amp; 1.4 branches was so great (approximately 1 year in the former, and 2 years in the latter!) that new features would sit in trunk, and many changes would take place over that period of time. Due to the rapid development of Asterisk, these changes were grandiose and thus the user experience between these releases were such that major changes had taken place. Backwards compatibility was difficult to maintain, and simply, who wants to wait 3 years to get the next great feature?&lt;/p&gt;
 
@@ -139,7 +139,7 @@
 
 &lt;p&gt;[caption id=&amp;ldquo;attachment_18&amp;rdquo; align=&amp;ldquo;aligncenter&amp;rdquo; width=&amp;ldquo;449&amp;rdquo; caption=&amp;ldquo;Image 1.2 - Visual representation of the Asterisk 1.6 release process&amp;rdquo;]&lt;img src=&#34;http://leifmadsen.files.wordpress.com/2009/06/asterisk_1-6_release_tree.jpg&#34; alt=&#34;Image 1.1 - Visual representation of the Asterisk 1.6 release process&#34; /&gt;[/caption]&lt;/p&gt;
 
-&lt;h4 id=&#34;so-which-version-do-i-use:308c603a029c7f870e99ba0db909201d&#34;&gt;So which version do I use?&lt;/h4&gt;
+&lt;h4 id=&#34;so-which-version-do-i-use&#34;&gt;So which version do I use?&lt;/h4&gt;
 
 &lt;p&gt;It always comes down to the question of, &amp;ldquo;so which version do I use?&amp;rdquo; and this can be a tricky one to answer. It probably boils down to what features you need to utilize. By checking the CHANGES file in your Asterisk source tree, you can see what changes have happened between each of the various branches (i.e. the differences between 1.6.0 and 1.6.1). While writing this article, I was asked by someone on IRC the question, &amp;ldquo;What version do you recommend?&amp;rdquo;, and the answer I gave was, &amp;ldquo;I recommend the version that has the features you require, and that passes the testing you have done prior to rolling it out&amp;rdquo;. He followed up with, &amp;ldquo;But they all have the feature I require!&amp;rdquo;, to which I responded, &amp;ldquo;Do some forward planning, and try to determine that the version you pick has the features you may possibly require in the future so that you don&amp;rsquo;t have to re-architect your system sooner than you want&amp;rdquo;. This can save you a lot of time and effort. Do some testing, and play with all the various branches on a development server. See what dialplan applications and functions exist, and how they work. Try to determine what kinds of things you need your phone system to do, and make sure the version you pick can do it. You can also make use of the various mailing lists and IRC chat rooms (asterisk-users mailing list, and #asterisk IRC channel) to ask specific questions if you&amp;rsquo;re not able to find an answer.&lt;/p&gt;
 

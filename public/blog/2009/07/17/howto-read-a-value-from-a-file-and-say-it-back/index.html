@@ -18,10 +18,11 @@
   <link rel="stylesheet" href="http://blog.leifmadsen.com/css/highlight/solarized_dark.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700|Abril+Fatface">
   <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  
 
   
   <link rel="apple-touch-icon-precomposed" sizes="144x144" href="http://blog.leifmadsen.com/touch-icon-144-precomposed.png">
-  <link href="http://blog.leifmadsen.com/favicon.ico" rel="icon">
+  <link href="http://blog.leifmadsen.com/favicon.png" rel="icon">
 
   
   
@@ -59,13 +60,13 @@
       
       <a href="http://twitter.com/leifmadsen"><i class="fa fa-twitter-square fa-3x"></i></a>
       
-      <a href="" type="application/rss+xml"><i class="fa fa-rss-square fa-3x"></i></a>
+      <a href="http://blog.leifmadsen.com/index.xml" type="application/rss+xml"><i class="fa fa-rss-square fa-3x"></i></a>
       </li>
     </ul>
 
     
 
-    <p>Copyright &copy; 2015 <a href="http://blog.leifmadsen.com/license/">License</a><br/>
+    <p>Copyright &copy; 2016 <a href="http://blog.leifmadsen.com/license/">License</a><br/>
        Powered by <a href="http://gohugo.io">Hugo</a> and <a href="https://github.com/zyro/hyde-x">Hyde-X</a></p>
   </div>
 </div>
@@ -73,10 +74,10 @@
 
 <div class="content container">
   <div class="post">
-    <h1>HowTo: Read a value from a file, and say it back</h1>
+    <h1 class="post-title">HowTo: Read a value from a file, and say it back</h1>
     
 
-<h3 id="preamble:0d635cd39416ed1b6422f4dcd67cbe23">Preamble</h3>
+<h3 id="preamble">Preamble</h3>
 
 <p>Today on the <a href="http://www.voipusersconference.org/">VoIP Users Conference</a> we discussed my request for recipe ideas in order to start developing some additional documentation. Specifically, I&rsquo;m looking for problems that are simple, common problems that can be solved in the dialplan, and which are good examples of the dialplan language (markup, script, yadda yadda).</p>
 
@@ -84,11 +85,11 @@
 
 <p>The discussion delved into some possible solutions, and delved into the problem with writing Asterisk recipes in general; that there are always several ways to skin the same cat. Below I will mention some of the examples that had come up on the conference call in the Discussion section, and will then show a dialplan (that works on Asterisk 1.4) that will solve the problem proposed in the Solution section.</p>
 
-<h3 id="problem:0d635cd39416ed1b6422f4dcd67cbe23">Problem</h3>
+<h3 id="problem">Problem</h3>
 
 <p>To read the contents of a file, where the contents will contain a number, that needs to be read back to the caller, followed by the word &ldquo;degrees&rdquo;.</p>
 
-<h3 id="solution:0d635cd39416ed1b6422f4dcd67cbe23">Solution</h3>
+<h3 id="solution">Solution</h3>
 
 <pre><code>[subSayCurrentTemperature]
 exten =&gt; start,1,Verbose(2,Saying the current temperature back to channel ${CHANNEL})
@@ -123,7 +124,7 @@ exten =&gt; 555,n,GoSub(subSayCurrentTemperature,start,1)
 exten =&gt; 555,n,Hangup()
 </code></pre>
 
-<h3 id="discussion:0d635cd39416ed1b6422f4dcd67cbe23">Discussion</h3>
+<h3 id="discussion">Discussion</h3>
 
 <p>The solution above is really the &ldquo;right&rdquo; way to do it in Asterisk. But with Asterisk, there always seems to be many &ldquo;right&rdquo; ways to solve the same solution. Because the problem was to read in the contents of a file and to say the contents back, then the solution I provided certainly solves that problem directly in dialplan without any external scripts, or dropping to the console.</p>
 
@@ -144,6 +145,6 @@ exten =&gt; 555,n,Hangup()
 </div>
 <script src="http://blog.leifmadsen.com/js/highlight.pack.js"></script>
 <script>hljs.initHighlightingOnLoad();</script>
-
 </body>
 </html>
+

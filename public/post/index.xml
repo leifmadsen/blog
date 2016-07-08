@@ -17,13 +17,13 @@
       <guid>http://blog.leifmadsen.com/blog/2015/11/19/rules-for-the-greater-goodness-a-product-development-guide/</guid>
       <description>
 
-&lt;h1 id=&#34;overview:d657ecf11f134916bcb672868160229d&#34;&gt;Overview&lt;/h1&gt;
+&lt;h1 id=&#34;overview&#34;&gt;Overview&lt;/h1&gt;
 
 &lt;p&gt;This page documents and provides bullets about the way to approach (or avoid) building products. These are lessons we&amp;rsquo;ve learned from previous encounters and which we wish to avoid in the future. By sticking firmly to these development rules, we avoid getting bogged down in complete system rearchitectures in the future. The means to a scaled end is to approach the first customer as all your customers.&lt;/p&gt;
 
-&lt;h1 id=&#34;rules-for-the-greater-goodness:d657ecf11f134916bcb672868160229d&#34;&gt;Rules For The Greater Goodness&lt;/h1&gt;
+&lt;h1 id=&#34;rules-for-the-greater-goodness&#34;&gt;Rules For The Greater Goodness&lt;/h1&gt;
 
-&lt;h2 id=&#34;a-product-development-guide:d657ecf11f134916bcb672868160229d&#34;&gt;A Product Development Guide&lt;/h2&gt;
+&lt;h2 id=&#34;a-product-development-guide&#34;&gt;A Product Development Guide&lt;/h2&gt;
 
 &lt;ol&gt;
 &lt;li&gt;&lt;strong&gt;Java is strictly forbidden&lt;/strong&gt; from any client or server side applications being built or interacted with. Applications utilizing Java may be used in limited usage when warranted.
@@ -76,7 +76,7 @@
       <guid>http://blog.leifmadsen.com/blog/2015/11/10/asterisk-docker-container-phase-1/</guid>
       <description>
 
-&lt;h2 id=&#34;astricon:edca0defca2eee89975749feb87dffb1&#34;&gt;AstriCon&lt;/h2&gt;
+&lt;h2 id=&#34;astricon&#34;&gt;AstriCon&lt;/h2&gt;
 
 &lt;p&gt;At AstriCon 2015 this year, there was a lot (and I mean a lot) of discussion around microservices (Docker),
 and what effort is required over the next year by the development community in order to make Asterisk better
@@ -88,7 +88,7 @@ and which everyone can contribute to, utilize and play with would be the goal he
 already pretty fragmented, and there are a bunch of useful, but unofficial images, and I don&amp;rsquo;t think
 any of them have become the defacto image.&lt;/p&gt;
 
-&lt;h2 id=&#34;the-problem-reproducibility:edca0defca2eee89975749feb87dffb1&#34;&gt;The Problem; Reproducibility&lt;/h2&gt;
+&lt;h2 id=&#34;the-problem-reproducibility&#34;&gt;The Problem; Reproducibility&lt;/h2&gt;
 
 &lt;p&gt;Part of the problem is really around packages. Digium does release some official Asterisk packages, but
 it&amp;rsquo;s not automated. Another interesting tidbit that came out of AstriDevCon is that no one really uses packages.&lt;/p&gt;
@@ -113,7 +113,7 @@ any of that? The answer is, it doesn&amp;rsquo;t. We end up in the exact same si
 Docker images and their own Dockerfile that as borrowed from someone else, and we end up with community
 fragmentation.&lt;/p&gt;
 
-&lt;h2 id=&#34;approaching-a-solution:edca0defca2eee89975749feb87dffb1&#34;&gt;Approaching A Solution&lt;/h2&gt;
+&lt;h2 id=&#34;approaching-a-solution&#34;&gt;Approaching A Solution&lt;/h2&gt;
 
 &lt;p&gt;I think there is a solution here though. Docker makes the building of utility services significantly easier than
 someone having to install applications, spin up the corresponding services, configure them, and ultimately host
@@ -137,7 +137,7 @@ container image relatively simple. We can then avoid any centralized infrastruct
 by a single organization or individual, allowing collaboration across organizations and developers, and also allowing
 everyone to have a slightly tweaked deployment without the overhead of maintaining the entire stack.&lt;/p&gt;
 
-&lt;h2 id=&#34;a-draft-solution:edca0defca2eee89975749feb87dffb1&#34;&gt;A Draft Solution&lt;/h2&gt;
+&lt;h2 id=&#34;a-draft-solution&#34;&gt;A Draft Solution&lt;/h2&gt;
 
 &lt;p&gt;With that in mind, we also want people to have access to an Asterisk container image that they can use,
 but with the ability to rebuild it locally if need be, without having to setup a ton of infrastructure to
@@ -192,7 +192,7 @@ RPM builder, I let it slide for now. The resulting RPMs are then used during the
 container image. This results in a huge savings of space; with the compiled version of the Docker image, the
 size was 1.6GB, but with RPMs, it is closer to 500MB.&lt;/p&gt;
 
-&lt;h2 id=&#34;outstanding-issues:edca0defca2eee89975749feb87dffb1&#34;&gt;Outstanding Issues&lt;/h2&gt;
+&lt;h2 id=&#34;outstanding-issues&#34;&gt;Outstanding Issues&lt;/h2&gt;
 
 &lt;p&gt;I consider the solution I&amp;rsquo;ve been working on far from complete. In this blog post I also don&amp;rsquo;t get into
 how I solved all the little things, and how to use the images (I think I did a decent version of that in
@@ -206,13 +206,13 @@ the &lt;code&gt;README.md&lt;/code&gt; file within the Github repo). Here are a 
 
 &lt;p&gt;Let me break down a bit further why the above are issues.&lt;/p&gt;
 
-&lt;h3 id=&#34;dependency-on-upstream-spec:edca0defca2eee89975749feb87dffb1&#34;&gt;Dependency on upstream &lt;code&gt;spec&lt;/code&gt;&lt;/h3&gt;
+&lt;h3 id=&#34;dependency-on-upstream-spec&#34;&gt;Dependency on upstream &lt;code&gt;spec&lt;/code&gt;&lt;/h3&gt;
 
 &lt;p&gt;When we rely on the upstream &lt;code&gt;spec&lt;/code&gt; file, we&amp;rsquo;re not really a lot further ahead. Sure we have the ability to reproduce
 builds pretty easily, but to a certain degree we&amp;rsquo;re stuck with whatever version is being packaged upstream. The file not
 being local makes it difficult to manage, so we&amp;rsquo;re kind of back to building packages ourselves.&lt;/p&gt;
 
-&lt;h3 id=&#34;dependency-on-fedpkg:edca0defca2eee89975749feb87dffb1&#34;&gt;Dependency on &lt;code&gt;fedpkg&lt;/code&gt;&lt;/h3&gt;
+&lt;h3 id=&#34;dependency-on-fedpkg&#34;&gt;Dependency on &lt;code&gt;fedpkg&lt;/code&gt;&lt;/h3&gt;
 
 &lt;p&gt;A dependency on &lt;code&gt;fedpkg&lt;/code&gt; is actually a nice thing to a certain degree, but doesn&amp;rsquo;t solve all our &amp;ldquo;build from local source&amp;rdquo;
 problems. With &lt;code&gt;fedpkg&lt;/code&gt; the default is to grab the &lt;code&gt;spec&lt;/code&gt; file and sources from a server hosted via Fedora itself (thus we&amp;rsquo;re)
@@ -224,7 +224,7 @@ the override configuration file, we could actually point at our own &lt;code&gt;
 definitely much less than normal. I think there are things we can do with companion containers though to make this much
 more flexible. There might be other tools that are even better than &lt;code&gt;fedpkg&lt;/code&gt; to make the building simpler.&lt;/p&gt;
 
-&lt;h3 id=&#34;inability-to-build-from-local-source:edca0defca2eee89975749feb87dffb1&#34;&gt;Inability to build from local source&lt;/h3&gt;
+&lt;h3 id=&#34;inability-to-build-from-local-source&#34;&gt;Inability to build from local source&lt;/h3&gt;
 
 &lt;p&gt;Right now we technically could build packages using the &lt;code&gt;fedpkg.conf&lt;/code&gt; overrides and point it at some other
 infrastructure (either self-hosted, or supplied via companion containers). The primary issue is if you wanted
@@ -232,7 +232,7 @@ to build a development container for testing some code directly from your local 
 the extra work of building tarballs, uploading them to a remote server, and updating a &lt;code&gt;spec&lt;/code&gt; file, you&amp;rsquo;re kind
 of out of luck.&lt;/p&gt;
 
-&lt;h2 id=&#34;next-steps:edca0defca2eee89975749feb87dffb1&#34;&gt;Next Steps&lt;/h2&gt;
+&lt;h2 id=&#34;next-steps&#34;&gt;Next Steps&lt;/h2&gt;
 
 &lt;p&gt;I think at this point some additional work could be done here to make this all a little less difficult. For
 example the usage of &lt;a href=&#34;https://github.com/jordansissel/fpm&#34;&gt;FPM&lt;/a&gt; within a companion container could make the
@@ -252,7 +252,7 @@ or Asterisk code back into the container during the &lt;code&gt;docker run&lt;/c
 archive into a particular directory, update the signature file, and create a new RPM. Building your own local
 Asterisk container then would be relatively straight forward.&lt;/p&gt;
 
-&lt;h2 id=&#34;conclusion:edca0defca2eee89975749feb87dffb1&#34;&gt;Conclusion&lt;/h2&gt;
+&lt;h2 id=&#34;conclusion&#34;&gt;Conclusion&lt;/h2&gt;
 
 &lt;p&gt;I know this has been a lengthy post, but I wanted to get all the background fleshed out so that anyone wanting
 to jump into this had the prerequisite information. I have some approaches I&amp;rsquo;m going to attempt moving forward
@@ -416,7 +416,7 @@ fi
 
 &lt;p&gt;Phones arrived in some nice looking boxes.&lt;/p&gt;
 
-&lt;h2 id=&#34;digium-d40:1ed6a47b444c6fccdf649002ba4cb4ed&#34;&gt;Digium D40&lt;/h2&gt;
+&lt;h2 id=&#34;digium-d40&#34;&gt;Digium D40&lt;/h2&gt;
 
 &lt;p&gt;&lt;a href=&#34;http://leifmadsen.files.wordpress.com/2012/10/2012-10-11-14-42-33.jpg&#34;&gt;&lt;img src=&#34;http://leifmadsen.files.wordpress.com/2012/10/2012-10-11-14-42-33.jpg?w=300&#34; alt=&#34;&#34; /&gt;&lt;/a&gt;&lt;a href=&#34;http://leifmadsen.files.wordpress.com/2012/10/2012-10-11-14-42-59.jpg&#34;&gt;&lt;img src=&#34;http://leifmadsen.files.wordpress.com/2012/10/2012-10-11-14-42-59.jpg?w=300&#34; alt=&#34;&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
 
@@ -447,7 +447,7 @@ fi
 
 &lt;p&gt;.Size comparison between the D40 and IP335.&lt;/p&gt;
 
-&lt;h2 id=&#34;digium-d70:1ed6a47b444c6fccdf649002ba4cb4ed&#34;&gt;Digium D70&lt;/h2&gt;
+&lt;h2 id=&#34;digium-d70&#34;&gt;Digium D70&lt;/h2&gt;
 
 &lt;p&gt;[caption id=&amp;ldquo;attachment_498&amp;rdquo; align=&amp;ldquo;aligncenter&amp;rdquo; width=&amp;ldquo;300&amp;rdquo;]&lt;a href=&#34;http://leifmadsen.files.wordpress.com/2012/10/2012-10-11-14-57-40.jpg&#34;&gt;&lt;img src=&#34;http://leifmadsen.files.wordpress.com/2012/10/2012-10-11-14-57-40.jpg?w=300&#34; alt=&#34;&#34; /&gt;&lt;/a&gt; Open box[/caption]&lt;/p&gt;
 

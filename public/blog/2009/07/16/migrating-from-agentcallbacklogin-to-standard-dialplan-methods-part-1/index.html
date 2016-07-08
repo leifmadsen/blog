@@ -18,10 +18,11 @@
   <link rel="stylesheet" href="http://blog.leifmadsen.com/css/highlight/solarized_dark.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700|Abril+Fatface">
   <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  
 
   
   <link rel="apple-touch-icon-precomposed" sizes="144x144" href="http://blog.leifmadsen.com/touch-icon-144-precomposed.png">
-  <link href="http://blog.leifmadsen.com/favicon.ico" rel="icon">
+  <link href="http://blog.leifmadsen.com/favicon.png" rel="icon">
 
   
   
@@ -59,13 +60,13 @@
       
       <a href="http://twitter.com/leifmadsen"><i class="fa fa-twitter-square fa-3x"></i></a>
       
-      <a href="" type="application/rss+xml"><i class="fa fa-rss-square fa-3x"></i></a>
+      <a href="http://blog.leifmadsen.com/index.xml" type="application/rss+xml"><i class="fa fa-rss-square fa-3x"></i></a>
       </li>
     </ul>
 
     
 
-    <p>Copyright &copy; 2015 <a href="http://blog.leifmadsen.com/license/">License</a><br/>
+    <p>Copyright &copy; 2016 <a href="http://blog.leifmadsen.com/license/">License</a><br/>
        Powered by <a href="http://gohugo.io">Hugo</a> and <a href="https://github.com/zyro/hyde-x">Hyde-X</a></p>
   </div>
 </div>
@@ -73,7 +74,7 @@
 
 <div class="content container">
   <div class="post">
-    <h1>Migrating from AgentCallbackLogin() to Standard Dialplan Methods (part 1)</h1>
+    <h1 class="post-title">Migrating from AgentCallbackLogin() to Standard Dialplan Methods (part 1)</h1>
     
 
 <p>The purpose of this article is to ease the migration from AgentCallbackLogin() to using standard dialplan applications to solve the problem of calling back queue members (agents) who are logged into a queue.</p>
@@ -84,13 +85,13 @@
 
 <p>All agents (queue members) will be utilizing the SIP channel driver as it is the only channel driver that contains code for true device state monitoring.</p>
 
-<h2 id="starting-simple:aad0b111e8a51eb89242753b6739cd26">Starting Simple</h2>
+<h2 id="starting-simple">Starting Simple</h2>
 
 <p>Lets start with a simple example of how to use AgentCallbackLogin(), and then look at how we can accomplish the same thing with some dialplan logic. First, we need to setup a queue and add some agents to the system. We&rsquo;ll also setup the SIP devices, and configure the dialplan.</p>
 
 <p>While it may seem excessive in the next few sections to setup something that we&rsquo;re going to replace anyways, the majority of the configuration is going to be reused in the sections that follow.</p>
 
-<h3 id="setting-up-the-sip-devices:aad0b111e8a51eb89242753b6739cd26">Setting up the SIP devices</h3>
+<h3 id="setting-up-the-sip-devices">Setting up the SIP devices</h3>
 
 <p>First we need to configure sip.conf for a couple of devices. One of these will be used for calling the Queue(), while the other will be the agent that will be logged into the queue.</p>
 
@@ -153,7 +154,7 @@ Name/username              Host            Dyn Nat ACL Port     Status
 3 sip peers [Monitored: 0 online, 0 offline Unmonitored: 2 online, 1 offline]
 </code></pre>
 
-<h3 id="configuring-agents:aad0b111e8a51eb89242753b6739cd26">Configuring Agents</h3>
+<h3 id="configuring-agents">Configuring Agents</h3>
 
 <p>Next we want to configure a couple of agents which we&rsquo;ll use from the AgentCallbackLogin() test we&rsquo;ll develop shortly.</p>
 
@@ -179,7 +180,7 @@ agent =&gt; 102,1234,Mark Michelson
 3 agents configured [0 online , 3 offline]
 </code></pre>
 
-<h3 id="configuring-queues:aad0b111e8a51eb89242753b6739cd26">Configuring Queues</h3>
+<h3 id="configuring-queues">Configuring Queues</h3>
 
 <p>We now want to configure a queue, and add the agents to that queue. We&rsquo;ll use the previously added agents from the agents.conf file in queues.conf. We&rsquo;re going to add a new queue called &lsquo;primary&rsquo; with just the bare minimum configuration settings to get the queue working. Asterisk will then use default values for anything else we haven&rsquo;t specifically configured.</p>
 
@@ -215,7 +216,7 @@ Agent/100 (Unavailable) has taken no calls yet
 No Callers
 </code></pre>
 
-<h3 id="configuring-the-dialplan:aad0b111e8a51eb89242753b6739cd26">Configuring the Dialplan</h3>
+<h3 id="configuring-the-dialplan">Configuring the Dialplan</h3>
 
 <p>Next, we need to add some dialplan logic which allows use to login the agents to the queue, and then to test that we can get calls to the agents by calling into the queue.</p>
 
@@ -290,7 +291,7 @@ exten =&gt; start,1,Dial(SIP/${EXTENSION})
 <pre><code>*CLI&gt; dialplan reload
 </code></pre>
 
-<h3 id="logging-in-the-agent:aad0b111e8a51eb89242753b6739cd26">Logging in the Agent</h3>
+<h3 id="logging-in-the-agent">Logging in the Agent</h3>
 
 <p>Now that we&rsquo;ve configured our devices, agents, queues, and dialplan, we can now go about testing it. We&rsquo;ll start by logging in an agent to the &lsquo;primary&rsquo; queue, and call it from another device in order to show how the AgentCallbackLogin() application works now.</p>
 
@@ -314,7 +315,7 @@ Agent/100 (Not in use) has taken no calls yet
 No Callers
 </code></pre>
 
-<h3 id="testing-the-queue:aad0b111e8a51eb89242753b6739cd26">Testing the Queue</h3>
+<h3 id="testing-the-queue">Testing the Queue</h3>
 
 <p>We can now test our queue by dialing extension 555 from our second phone, which will then cause the queue to dial our agent.</p>
 
@@ -380,7 +381,7 @@ No Callers
 -- Stopped music on hold on SIP/00085D193AB5-017b24f0
 </code></pre>
 
-<h3 id="logging-out-the-agent:aad0b111e8a51eb89242753b6739cd26">Logging Out the Agent</h3>
+<h3 id="logging-out-the-agent">Logging Out the Agent</h3>
 
 <p>Prior to updating our dialplan to stop using the AgentCallbackLogin(), we should logout our agent. We can do this simply from the dialplan like so.</p>
 
@@ -406,7 +407,7 @@ Agent/100 (Unavailable) has taken 1 calls (last was 1543 secs ago)
 No Callers
 </code></pre>
 
-<h3 id="using-addqueuemember:aad0b111e8a51eb89242753b6739cd26">Using AddQueueMember()</h3>
+<h3 id="using-addqueuemember">Using AddQueueMember()</h3>
 
 <p>In order to stop using the AgentCallbackLogin(), we need to replace it with something. The something is the AddQueueMember() application. With this dialplan application, we can add channels to dial from the queue dynamically.</p>
 
@@ -478,7 +479,7 @@ Local/00085D182ACF@agent_callback (dynamic) (Not in use) has taken no calls yet
 No Callers
 </code></pre>
 
-<h3 id="using-voicemail-conf-for-authentication:aad0b111e8a51eb89242753b6739cd26">Using voicemail.conf for Authentication</h3>
+<h3 id="using-voicemail-conf-for-authentication">Using voicemail.conf for Authentication</h3>
 
 <p>In the previous section, we used the VMauthenticate() application to perform the authentication of our queue member. In order to do this, we needed to add them to the voicemail.conf file, and give them a password. In many situations you will already have created a mailbox for your agents, and can simply use the existing voicemail configuration to perform the authentication. An advantage to this is that you no longer need to maintain a separate authentication file for your agents.</p>
 
@@ -505,7 +506,7 @@ default    101   Russell Bryant                            0
 default    102   Mark Michelson                            0
 </code></pre>
 
-<h3 id="conclusion:aad0b111e8a51eb89242753b6739cd26">Conclusion</h3>
+<h3 id="conclusion">Conclusion</h3>
 
 <p>This article looked at what the AgentCallbackLogin() application gives us, how it is used, and how to perform the same functionality with the AddQueueMember() dialplan application. By doing this, you position yourself to utilize the preferred method of adding members to a queue, and using a 1.6.x compatible method.</p>
 
@@ -517,6 +518,6 @@ default    102   Mark Michelson                            0
 </div>
 <script src="http://blog.leifmadsen.com/js/highlight.pack.js"></script>
 <script>hljs.initHighlightingOnLoad();</script>
-
 </body>
 </html>
+

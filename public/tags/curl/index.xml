@@ -60,7 +60,7 @@ echo &amp;quot;externaddr=&amp;quot;.$output.&amp;quot;\n&amp;quot;;
       <guid>http://blog.leifmadsen.com/blog/2009/07/17/howto-read-a-value-from-a-file-and-say-it-back/</guid>
       <description>
 
-&lt;h3 id=&#34;preamble:0d635cd39416ed1b6422f4dcd67cbe23&#34;&gt;Preamble&lt;/h3&gt;
+&lt;h3 id=&#34;preamble&#34;&gt;Preamble&lt;/h3&gt;
 
 &lt;p&gt;Today on the &lt;a href=&#34;http://www.voipusersconference.org/&#34;&gt;VoIP Users Conference&lt;/a&gt; we discussed my request for recipe ideas in order to start developing some additional documentation. Specifically, I&amp;rsquo;m looking for problems that are simple, common problems that can be solved in the dialplan, and which are good examples of the dialplan language (markup, script, yadda yadda).&lt;/p&gt;
 
@@ -68,11 +68,11 @@ echo &amp;quot;externaddr=&amp;quot;.$output.&amp;quot;\n&amp;quot;;
 
 &lt;p&gt;The discussion delved into some possible solutions, and delved into the problem with writing Asterisk recipes in general; that there are always several ways to skin the same cat. Below I will mention some of the examples that had come up on the conference call in the Discussion section, and will then show a dialplan (that works on Asterisk 1.4) that will solve the problem proposed in the Solution section.&lt;/p&gt;
 
-&lt;h3 id=&#34;problem:0d635cd39416ed1b6422f4dcd67cbe23&#34;&gt;Problem&lt;/h3&gt;
+&lt;h3 id=&#34;problem&#34;&gt;Problem&lt;/h3&gt;
 
 &lt;p&gt;To read the contents of a file, where the contents will contain a number, that needs to be read back to the caller, followed by the word &amp;ldquo;degrees&amp;rdquo;.&lt;/p&gt;
 
-&lt;h3 id=&#34;solution:0d635cd39416ed1b6422f4dcd67cbe23&#34;&gt;Solution&lt;/h3&gt;
+&lt;h3 id=&#34;solution&#34;&gt;Solution&lt;/h3&gt;
 
 &lt;pre&gt;&lt;code&gt;[subSayCurrentTemperature]
 exten =&amp;gt; start,1,Verbose(2,Saying the current temperature back to channel ${CHANNEL})
@@ -107,7 +107,7 @@ exten =&amp;gt; 555,n,GoSub(subSayCurrentTemperature,start,1)
 exten =&amp;gt; 555,n,Hangup()
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h3 id=&#34;discussion:0d635cd39416ed1b6422f4dcd67cbe23&#34;&gt;Discussion&lt;/h3&gt;
+&lt;h3 id=&#34;discussion&#34;&gt;Discussion&lt;/h3&gt;
 
 &lt;p&gt;The solution above is really the &amp;ldquo;right&amp;rdquo; way to do it in Asterisk. But with Asterisk, there always seems to be many &amp;ldquo;right&amp;rdquo; ways to solve the same solution. Because the problem was to read in the contents of a file and to say the contents back, then the solution I provided certainly solves that problem directly in dialplan without any external scripts, or dropping to the console.&lt;/p&gt;
 

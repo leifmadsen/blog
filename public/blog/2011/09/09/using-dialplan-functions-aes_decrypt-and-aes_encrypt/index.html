@@ -18,10 +18,11 @@
   <link rel="stylesheet" href="http://blog.leifmadsen.com/css/highlight/solarized_dark.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700|Abril+Fatface">
   <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  
 
   
   <link rel="apple-touch-icon-precomposed" sizes="144x144" href="http://blog.leifmadsen.com/touch-icon-144-precomposed.png">
-  <link href="http://blog.leifmadsen.com/favicon.ico" rel="icon">
+  <link href="http://blog.leifmadsen.com/favicon.png" rel="icon">
 
   
   
@@ -59,13 +60,13 @@
       
       <a href="http://twitter.com/leifmadsen"><i class="fa fa-twitter-square fa-3x"></i></a>
       
-      <a href="" type="application/rss+xml"><i class="fa fa-rss-square fa-3x"></i></a>
+      <a href="http://blog.leifmadsen.com/index.xml" type="application/rss+xml"><i class="fa fa-rss-square fa-3x"></i></a>
       </li>
     </ul>
 
     
 
-    <p>Copyright &copy; 2015 <a href="http://blog.leifmadsen.com/license/">License</a><br/>
+    <p>Copyright &copy; 2016 <a href="http://blog.leifmadsen.com/license/">License</a><br/>
        Powered by <a href="http://gohugo.io">Hugo</a> and <a href="https://github.com/zyro/hyde-x">Hyde-X</a></p>
   </div>
 </div>
@@ -73,7 +74,7 @@
 
 <div class="content container">
   <div class="post">
-    <h1>Using Dialplan Functions: AES_DECRYPT() and AES_ENCRYPT()</h1>
+    <h1 class="post-title">Using Dialplan Functions: AES_DECRYPT() and AES_ENCRYPT()</h1>
     <p>I  recently asked on twitter how many people would be interested in a set of blog posts that focused on how to use the various dialplan functions in Asterisk, and I got quite a positive response. I posted that shortly before getting married, and now that I&rsquo;m back into the groove of things, I&rsquo;m going to take a shot at posting a bunch of content focused around Asterisk dialplan functions. If you don&rsquo;t know what Asterisk dialplan functions are, head on over to the online version of <a href="http://ofps.oreilly.com/titles/9780596517342/index.html">Asterisk: The Definitive Guide (3rd edition)</a> (or <a href="http://www.amazon.com/Asterisk-Definitive-Guide-Guides/dp/0596517343/ref=sr_1_1?ie=UTF8&amp;qid=1315572209&amp;sr=8-1">buy</a> it) and read the section on <a href="http://ofps.oreilly.com/titles/9780596517342/asterisk-DP-Deeper.html#asterisk-CHP-6-SECT-2">dialplan functions</a>. If you&rsquo;re still starting out with Asterisk, I highly suggest you start with the <a href="http://ofps.oreilly.com/titles/9780596517342/asterisk-DP-Basics.html">dialplan basics</a> chapter.</p>
 
 <p>Today we&rsquo;ll look at the first 2 dialplan functions in my list: <code>AES_DECRYPT()</code> and <code>AES_ENCRYPT()</code></p>
@@ -146,6 +147,6 @@
 </div>
 <script src="http://blog.leifmadsen.com/js/highlight.pack.js"></script>
 <script>hljs.initHighlightingOnLoad();</script>
-
 </body>
 </html>
+
