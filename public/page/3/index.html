@@ -79,6 +79,21 @@
     
     <div class="post">
       <h1 class="post-title">
+        <a href="http://blog.leifmadsen.com/blog/2011/12/22/.bashrc-trick-for-git-repo-and-branch-information/">.bashrc trick for git repo and branch information</a>
+      </h1>
+      <span class="post-date">Dec 22, 2011 &middot; 1 minute read &middot; <a href="http://blog.leifmadsen.com/blog/2011/12/22/.bashrc-trick-for-git-repo-and-branch-information/#disqus_thread">Comments</a>
+      
+      <br/>
+      <a class="label" href="http://blog.leifmadsen.com/categories/technology">Technology</a><a class="label" href="http://blog.leifmadsen.com/categories/useful-tools">Useful Tools</a>
+      </span>
+      
+      The other day I was talking to my friend Russell Bryant who pointed me to some .bashrc magic that would show me which branch I was currently working with inside a git repo on my system. I found it incredibly handy and have modified the ANSI colour coding slightly. export PS1='[\u@\h \[33[0;36m\]\W$(__git_ps1 &quot;\[33[0m\]\[33[0;33m\](%s)&quot;)\[33[0m\]]\$ ' On Fedora Russell mentioned that you need the bash-completion installed. We&rsquo;re unsure if you need anything on other distributions.
+      <a href="http://blog.leifmadsen.com/blog/2011/12/22/.bashrc-trick-for-git-repo-and-branch-information/">Read On &rarr;</a>
+      
+    </div>
+    
+    <div class="post">
+      <h1 class="post-title">
         <a href="http://blog.leifmadsen.com/blog/2011/11/22/relaying-smtp-via-gmail-or-google-apps-using-postfix/">Relaying SMTP via Gmail (or Google Apps) Using Postfix</a>
       </h1>
       <span class="post-date">Nov 22, 2011 &middot; 1 minute read &middot; <a href="http://blog.leifmadsen.com/blog/2011/11/22/relaying-smtp-via-gmail-or-google-apps-using-postfix/#disqus_thread">Comments</a>
@@ -209,21 +224,6 @@
       
       In case you missed it, the next version of Asterisk is now in beta, and at the same time, has undergone a minor version numbering scheme. As it is unlikely that Asterisk will ever have a 2.0 release since for years now, that has generally meant Asterisk would undergo a major underlying change in both how it was programmed and the user experience (and since it would be a major disruption to the Asterisk community), it was deemed unnecessary to utilize the 1.
       <a href="http://blog.leifmadsen.com/blog/2011/08/29/asterisk-10--asterisk-1.hh10/">Read On &rarr;</a>
-      
-    </div>
-    
-    <div class="post">
-      <h1 class="post-title">
-        <a href="http://blog.leifmadsen.com/blog/2011/08/13/set-and-goto-on-same-line/">Set() and Goto() on same line</a>
-      </h1>
-      <span class="post-date">Aug 13, 2011 &middot; 2 minute read &middot; <a href="http://blog.leifmadsen.com/blog/2011/08/13/set-and-goto-on-same-line/#disqus_thread">Comments</a>
-      
-      <br/>
-      <a class="label" href="http://blog.leifmadsen.com/categories/asterisk">Asterisk</a><a class="label" href="http://blog.leifmadsen.com/categories/programming">Programming</a>
-      </span>
-      
-      (Thanks to Jared Smith for answering my question in IRC which is the inspiration for this post.) Typically when I write dialplan, primarily in the case where I&rsquo;m using a pattern match, I&rsquo;ll save the dialed extension to a channel variable using Set(), then do a Goto() where the call logic is handled. The Set() is so that I don&rsquo;t lose the value of ${EXTEN} throughout the dialplan process, especially if I&rsquo;m using other mechanics such as GoSub() and others.
-      <a href="http://blog.leifmadsen.com/blog/2011/08/13/set-and-goto-on-same-line/">Read On &rarr;</a>
       
     </div>
     

@@ -6,8 +6,19 @@
     <description>Recent content in Posts on Asterisk, and other worldly endeavours</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 19 Nov 2015 10:21:26 -0500</lastBuildDate>
+    <lastBuildDate>Fri, 08 Jul 2016 16:41:52 -0400</lastBuildDate>
     <atom:link href="http://blog.leifmadsen.com/post/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Yes I&#39;m still alive...</title>
+      <link>http://blog.leifmadsen.com/blog/2016/07/08/yes-im-still-alive.../</link>
+      <pubDate>Fri, 08 Jul 2016 16:41:52 -0400</pubDate>
+      
+      <guid>http://blog.leifmadsen.com/blog/2016/07/08/yes-im-still-alive.../</guid>
+      <description>&lt;p&gt;It&amp;rsquo;s been a while since I&amp;rsquo;ve posted, and I&amp;rsquo;ll update this blog post soon. I
+just needed to get my blog set back up so I could post via Hugo :)&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>Rules For The Greater Goodness; A Product Development Guide</title>
@@ -688,34 +699,6 @@ $ diff -u myfile.spec converted.spec
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;(Answer thanks to Dominique Leuenberger @ &lt;a href=&#34;http://lists.opensuse.org/opensuse-packaging/2011-04/msg00005.html&#34;&gt;http://lists.opensuse.org/opensuse-packaging/2011-04/msg00005.html&lt;/a&gt;)&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Converting multiple exten =&gt; lines to using same =&gt; in Asterisk dialplan</title>
-      <link>http://blog.leifmadsen.com/blog/2012/01/16/converting-multiple-exten--lines-to-using-same--in-asterisk-dialplan/</link>
-      <pubDate>Mon, 16 Jan 2012 13:28:10 +0000</pubDate>
-      
-      <guid>http://blog.leifmadsen.com/blog/2012/01/16/converting-multiple-exten--lines-to-using-same--in-asterisk-dialplan/</guid>
-      <description>&lt;p&gt;Last week I wanted to start changing some 1.4 based Asterisk dialplan to a 1.8 based Asterisk system, and in that process wanted to convert lines like:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;exten =&amp;gt; _NXXNXXXXXX,1,NoOp()
-exten =&amp;gt; _NXXNXXXXXX,2,GotoIf($[...]?reject,1)
-exten =&amp;gt; _NXXNXXXXXX,3,Dial(SIP/foo/${EXTEN})
-...
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;into using the same =&amp;gt; prefix:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;exten =&amp;gt; _NXXNXXXXXX,1,NoOp()
- same =&amp;gt; n,GotoIf($[...]?reject,1)
- same =&amp;gt; n,Dial(SIP/foo/${EXTEN})
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;In order to do that, &lt;a href=&#34;https://twitter.com/#!/mikemking&#34;&gt;Mike King&lt;/a&gt; helped me out with the following regular expressing which I used in vim:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;%s/exten\s*=&amp;gt;\s*[^,]\+,\s*[n2-9]/ same =&amp;gt; n/g
-&lt;/code&gt;&lt;/pre&gt;
 </description>
     </item>
     
