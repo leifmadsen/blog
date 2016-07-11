@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
+<head>
+  <link href="http://gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+  <title>HowTo: Getting Jabber/XMPP notifications from your PBX &middot; Leif Madsen</title>
+
+  
+  <link rel="stylesheet" href="http://blog.leifmadsen.com/css/poole.css">
+  <link rel="stylesheet" href="http://blog.leifmadsen.com/css/hyde.css">
+  <link rel="stylesheet" href="http://blog.leifmadsen.com/css/poole-overrides.css">
+  <link rel="stylesheet" href="http://blog.leifmadsen.com/css/hyde-overrides.css">
+  <link rel="stylesheet" href="http://blog.leifmadsen.com/css/hyde-x.css">
+  <link rel="stylesheet" href="http://blog.leifmadsen.com/css/highlight/solarized_dark.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700|Abril+Fatface">
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  
+
+  
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="http://blog.leifmadsen.com/touch-icon-144-precomposed.png">
+  <link href="http://blog.leifmadsen.com/favicon.png" rel="icon">
+
+  
+  
+  
+  
+
+  <meta name="description" content="Leif Madsen Blog Entry">
+  <meta name="keywords" content="blog,asterisk,leif,madsen,canada">
+  
+</head>
+<body class="theme-base-0b">
+<div class="sidebar">
+  <div class="container sidebar-sticky">
+    <div class="sidebar-about">
+      
+        <img src="https://www.gravatar.com/avatar/77a1196d149eecdb3b35fb5db56d494e?s=200"
+             alt="gravatar" title="Leif Madsen">
+      
+      <h1>Leif Madsen</h1>
+      <p class="lead">Asterisk, and other worldly endeavours</p>
+    </div>
+
+    <ul class="sidebar-nav">
+      <li class="sidebar-nav-item"><a href="http://blog.leifmadsen.com/">Blog</a></li>
+      
+    </ul>
+
+    <ul class="sidebar-nav">
+      <li class="sidebar-nav-item">
+      <a href="http://github.com/leifmadsen"><i class="fa fa-github-square fa-3x"></i></a>
+      
+      
+      <a href="http://linkedin.com/in/leifmadsen"><i class="fa fa-linkedin-square fa-3x"></i></a>
+      
+      
+      <a href="http://twitter.com/leifmadsen"><i class="fa fa-twitter-square fa-3x"></i></a>
+      
+      <a href="http://blog.leifmadsen.com/index.xml" type="application/rss+xml"><i class="fa fa-rss-square fa-3x"></i></a>
+      </li>
+    </ul>
+
+    
+
+    <p>Copyright &copy; 2016 <a href="http://blog.leifmadsen.com/license/">License</a><br/>
+       Powered by <a href="http://gohugo.io">Hugo</a> and <a href="https://github.com/zyro/hyde-x">Hyde-X</a></p>
+  </div>
+</div>
+
+
+<div class="content container">
+  <div class="post">
+    <h1 class="post-title">HowTo: Getting Jabber/XMPP notifications from your PBX</h1>
+    
+
+<p>I just have to write up a quick post to show you JUST HOW SIMPLE it is to get interesting events from your PBX via Jabber. Right now I&rsquo;m using it to notify me of anyone trying out my test ISN number, or whenever they join my conference bridge (good reminder if I lose track of time and forget that I scheduled some people to join my conference room).</p>
+
+<p>This is based on Asterisk 1.4, although the same configuration should work on 1.6, but I like to try and give 1.4 examples where I can for those of you still running 1.4.</p>
+
+<p>So the first thing you need to do is configure Asterisk to connect to a Jabber server. I like to use the Google Jabber servers since it saves me from setting one up :) I have setup Google Apps as well so that I can use my own domain, but using a Gmail address should work just as well.</p>
+
+<p>Configuring res_jabber (the Jabber module in Asterisk) is nice and easy. The main thing to notice is that I uncommented the &lsquo;debug&rsquo; option as the default is to have a bunch of debugging on the console. Find below the entire jabber.conf file from <em>/etc/asterisk</em> based on the sample file, but with the required options uncommented for connecting to talk.google.com. Note that I&rsquo;ve created a Jabber account specifically for my Asterisk box, although I&rsquo;m sure you could use an existing account if you wanted.</p>
+
+<pre><code class="language-css">[general]
+debug=no                                   ;;Turn on debugging by default.
+;autoprune=yes                           ;;Auto remove users from buddy list.
+;autoregister=yes                        ;;Auto register users from buddy list.
+
+[asterisk]                                   ;;label
+type=client                                 ;;Client or Component connection
+serverhost=talk.google.com          ;;Route to server for example,
+                                                ;;	talk.google.com
+username=asterisk@leifmadsen.com        ;;Username with optional roster.
+secret=welcome                                    ;;Password
+port=5222                                            ;;Port to use defaults to 5222
+usetls=yes                                           ;;Use tls or not
+usesasl=yes                                         ;;Use sasl or not
+buddy=leif@leifmadsen.com                    ;;Manual addition of buddy to list.
+statusmessage=&quot;I am available&quot;               ;;Have custom status message for
+                                                           ;;Asterisk.
+;timeout=100                                        ;;Timeout on the message stack.
+</code></pre>
+
+<p>You&rsquo;ll notice that I&rsquo;ve added the buddy &lsquo;leif@leifmadsen.com&rsquo; manually. In order to be able to send messages to the &lsquo;leif@leifmadsen.com&rsquo; contact, I need to add them to the buddy list in the Asterisk memory. Once Asterisk goes to send a message via the JabberSend() application, then you will get an authorization request. Once the authorization has been granted, then you will be able to get messages.</p>
+
+<p>Now that we have configured jabber.conf, lets reload the res_jabber module.</p>
+
+<p>From the Asterisk CLI, run:</p>
+
+<p><code>*CLI&gt; module reload res_jabber.so</code></p>
+
+<p>Then we can verify we have connected to the server correctly by running:</p>
+
+<p>``` *CLI&gt; jabber show connected
+Jabber Users and their status:</p>
+
+<h2 id="user-asterisk-leifmadsen-com-connected">User: asterisk@leifmadsen.com     - Connected</h2>
+
+<p>Number of users: 1```</p>
+
+<p>And we can run <code>jabber test</code> to do a verification everything is OK:</p>
+
+<p><code>*CLI&gt; jabber test
+User: leif@leifmadsen.com
+Resource: linux918E72D1
+client: http://pidgin.im/caps
+version: 2.5.5
+Jingle Capable: 0
+Priority: 1
+Status: 1
+Message:</code></p>
+
+<p>Oooh a working message stack!</p>
+
+<p>Now that everything looks good to go, lets send a message over Jabber!</p>
+
+<p>From the Dialplan, we need to use the JabberSend() application to send us some information. The example I&rsquo;ll use will send a message whenever someone joins my conference room.</p>
+
+<pre><code>[incoming]
+exten =&gt; 7070,1,Verbose(2,${CALLERID(all)} is joining the conference bridge.)
+exten =&gt; 7070,n,JabberSend(asterisk,leif@leifmadsen.com,${CALLERID(all)} is joining the conference bridge.)
+exten =&gt; 7070,n,MeetMe(7070,d)
+exten =&gt; 7070,n,Hangup()
+</code></pre>
+
+<p>The format for the JabberSend() application is as follows:
+* Jabber:  the jabber configuration to use, this is the [name] you configured in jabber.conf
+* ScreenName: the screen name of the person you want to send an XMPP message to
+* Message: the message you want to send</p>
+
+<p>And that should be pretty much it! Pretty simple eh?</p>
+
+  </div>
+</div>
+<script src="http://blog.leifmadsen.com/js/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+</body>
+</html>
+

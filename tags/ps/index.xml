@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Ps on Asterisk, and other worldly endeavours</title>
+    <link>http://blog.leifmadsen.com/tags/ps/</link>
+    <description>Recent content in Ps on Asterisk, and other worldly endeavours</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 15 Sep 2011 12:34:35 +0000</lastBuildDate>
+    <atom:link href="http://blog.leifmadsen.com/tags/ps/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Return just PID of script with &#39;ps&#39; and &#39;awk&#39;</title>
+      <link>http://blog.leifmadsen.com/blog/2011/09/15/return-just-pid-of-script-with-ps-and-awk/</link>
+      <pubDate>Thu, 15 Sep 2011 12:34:35 +0000</pubDate>
+      
+      <guid>http://blog.leifmadsen.com/blog/2011/09/15/return-just-pid-of-script-with-ps-and-awk/</guid>
+      <description>&lt;p&gt;Today I ran into an issue where I am running a python script that I needed to get the process ID (PID) of, but that the process was being output with a space between &amp;lsquo;python&amp;rsquo; and the actual script name (in this case, jiraircbot.py).&lt;/p&gt;
+
+&lt;p&gt;I&amp;rsquo;m sure it&amp;rsquo;s totally overkill and there is a much easier way I didn&amp;rsquo;t find to do this, but after some scouring of The Google, I found something that works! (The purpose of this was to kill off a rogue script process each night so I could restart it.)&lt;/p&gt;
+
+&lt;p&gt;Here is what the output looks like with just &lt;code&gt;ps aux | grep python&lt;/code&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;# ps aux | grep python
+root      1120  0.0  0.2  50176  4380 ?        Sl   Aug04  24:52 /usr/bin/python /usr/bin/fail2ban-server -b -s /var/run/fail2ban/fail2ban.sock
+root     18182  2.2  1.5  35328 32148 pts/0    S    08:21   0:11 python jiraircbot.py
+root     18219  0.0  0.0   3328   804 pts/0    S+   08:29   0:00 grep python
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;A little bit more data than I wanted, plus of course &amp;lsquo;grep python&amp;rsquo; is always going to be returned if I just use grep straight up. Putting many pieces together from a few websites, this is what I came up with to just return the PID of the jiraircbot.py script:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;ps -eo pid,command | grep &amp;quot;jiraircbot.py&amp;quot; | grep -v grep | awk &#39;{print $1}&#39;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;What I&amp;rsquo;m doing, is controlling what is returned, so in this case have &lt;code&gt;ps&lt;/code&gt; just return the pid and command fields. Run that through &lt;code&gt;grep&lt;/code&gt; to just get the script I wanted, pipe that back through &lt;code&gt;grep&lt;/code&gt; to remove the line including &lt;code&gt;grep python&lt;/code&gt; and then pipe that through &lt;code&gt;awk&lt;/code&gt; to just return the first field (which would be the pid of the process I wanted).&lt;/p&gt;
+
+&lt;p&gt;All in all, a nice hack :)&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

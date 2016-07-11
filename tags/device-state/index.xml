@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Device State on Asterisk, and other worldly endeavours</title>
+    <link>http://blog.leifmadsen.com/tags/device-state/</link>
+    <description>Recent content in Device State on Asterisk, and other worldly endeavours</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 21 Dec 2010 15:26:43 +0000</lastBuildDate>
+    <atom:link href="http://blog.leifmadsen.com/tags/device-state/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Video of &#39;5 Things You Didn&#39;t Know Asterisk Could Do&#39; Presentation Now Available</title>
+      <link>http://blog.leifmadsen.com/blog/2010/12/21/video-of-5-things-you-didnt-know-asterisk-could-do-presentation-now-available/</link>
+      <pubDate>Tue, 21 Dec 2010 15:26:43 +0000</pubDate>
+      
+      <guid>http://blog.leifmadsen.com/blog/2010/12/21/video-of-5-things-you-didnt-know-asterisk-could-do-presentation-now-available/</guid>
+      <description>&lt;p&gt;Check out the &lt;a href=&#34;http://www.astricon.net&#34;&gt;AstriCon&lt;/a&gt; website for my presentation that was recorded this year. I did three presentations this year (5 Things You Didn&amp;rsquo;t Know Asterisk Could Do, Distributed Call Centres, and the Asterisk Project Update with &lt;a href=&#34;http://www.russellbryant.net&#34;&gt;Russell Bryant&lt;/a&gt;) but unfortunately the only one I see so far is the 5 Things presentation (which is a very good presentation! :))&lt;/p&gt;
+
+&lt;p&gt;The link to the presentations are here: &lt;a href=&#34;http://www.astricon.net/videoPresentations.aspx#Digium7&#34;&gt;http://www.astricon.net/videoPresentations.aspx#Digium7&lt;/a&gt; with mine being at the top of the list.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

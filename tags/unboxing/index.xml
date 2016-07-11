@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Unboxing on Asterisk, and other worldly endeavours</title>
+    <link>http://blog.leifmadsen.com/tags/unboxing/</link>
+    <description>Recent content in Unboxing on Asterisk, and other worldly endeavours</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 11 Oct 2012 20:43:35 +0000</lastBuildDate>
+    <atom:link href="http://blog.leifmadsen.com/tags/unboxing/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Digium D40 and D70 Phone Unboxing</title>
+      <link>http://blog.leifmadsen.com/blog/2012/10/11/digium-d40-and-d70-phone-unboxing/</link>
+      <pubDate>Thu, 11 Oct 2012 20:43:35 +0000</pubDate>
+      
+      <guid>http://blog.leifmadsen.com/blog/2012/10/11/digium-d40-and-d70-phone-unboxing/</guid>
+      <description>
+
+&lt;p&gt;Today I received a couple of &lt;a href=&#34;http://www1.digium.com/en/products/phones&#34;&gt;phones&lt;/a&gt; from Digium; the D40 and D70. I&amp;rsquo;ll be using these phones for testing and documentation in the 4th edition of &lt;a href=&#34;http://shop.oreilly.com/product/9780596517342.do&#34;&gt;Asterisk: The Definitive Guide&lt;/a&gt; (which &lt;a href=&#34;http://www.coretel.ca/&#34;&gt;Jim Van Meggelen&lt;/a&gt;, &lt;a href=&#34;http://russellbryant.net&#34;&gt;Russell Bryant&lt;/a&gt; and &lt;a href=&#34;http://leifmadsen.com&#34;&gt;myself&lt;/a&gt; are working on right now).&lt;/p&gt;
+
+&lt;p&gt;Here is my unboxing of the phones and some commentary about my initial impressions of the hardware itself.&lt;/p&gt;
+
+&lt;p&gt;[caption id=&amp;ldquo;attachment_484&amp;rdquo; align=&amp;ldquo;aligncenter&amp;rdquo; width=&amp;ldquo;300&amp;rdquo;]&lt;a href=&#34;http://leifmadsen.files.wordpress.com/2012/10/2012-10-11-14-42-01.jpg&#34;&gt;&lt;img src=&#34;http://leifmadsen.files.wordpress.com/2012/10/2012-10-11-14-42-01.jpg?w=300&#34; alt=&#34;&#34; /&gt;&lt;/a&gt; Pretty boxes![/caption]&lt;/p&gt;
+
+&lt;p&gt;Phones arrived in some nice looking boxes.&lt;/p&gt;
+
+&lt;h2 id=&#34;digium-d40&#34;&gt;Digium D40&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://leifmadsen.files.wordpress.com/2012/10/2012-10-11-14-42-33.jpg&#34;&gt;&lt;img src=&#34;http://leifmadsen.files.wordpress.com/2012/10/2012-10-11-14-42-33.jpg?w=300&#34; alt=&#34;&#34; /&gt;&lt;/a&gt;&lt;a href=&#34;http://leifmadsen.files.wordpress.com/2012/10/2012-10-11-14-42-59.jpg&#34;&gt;&lt;img src=&#34;http://leifmadsen.files.wordpress.com/2012/10/2012-10-11-14-42-59.jpg?w=300&#34; alt=&#34;&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Comes with a little pamphlet to help you get the phones setup on your network.&lt;a href=&#34;http://leifmadsen.files.wordpress.com/2012/10/2012-10-11-14-43-17.jpg&#34;&gt;&lt;img src=&#34;http://leifmadsen.files.wordpress.com/2012/10/2012-10-11-14-43-17.jpg?w=300&#34; alt=&#34;&#34; /&gt;&lt;/a&gt;&lt;a href=&#34;http://leifmadsen.files.wordpress.com/2012/10/2012-10-11-14-43-55.jpg&#34;&gt;&lt;img src=&#34;http://leifmadsen.files.wordpress.com/2012/10/2012-10-11-14-43-55.jpg?w=300&#34; alt=&#34;&#34; /&gt;&lt;/a&gt;&lt;a href=&#34;http://leifmadsen.files.wordpress.com/2012/10/2012-10-11-14-45-16.jpg&#34;&gt;&lt;img src=&#34;http://leifmadsen.files.wordpress.com/2012/10/2012-10-11-14-45-16.jpg?w=300&#34; alt=&#34;&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Comes with all the little things you need to get the phone up and running, including a network cable. I was just using POE to power the phone, so I didn&amp;rsquo;t end up with the 5VDC power adapter.
+&lt;a href=&#34;http://leifmadsen.files.wordpress.com/2012/10/2012-10-11-14-47-01.jpg&#34;&gt;&lt;img src=&#34;http://leifmadsen.files.wordpress.com/2012/10/2012-10-11-14-47-01.jpg?w=300&#34; alt=&#34;&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Nice looking base. Easy to put onto the phone. Just uses friction to hold the phones on the base. Not sure how well that&amp;rsquo;ll work over time, but this isn&amp;rsquo;t something that should be getting attached and detached a lot. The space for cables in the base is also quite large.&lt;/p&gt;
+
+&lt;p&gt;[caption id=&amp;ldquo;attachment_491&amp;rdquo; align=&amp;ldquo;aligncenter&amp;rdquo; width=&amp;ldquo;300&amp;rdquo;]&lt;img src=&#34;http://leifmadsen.files.wordpress.com/2012/10/2012-10-11-14-48-58.jpg?w=300&#34; alt=&#34;&#34; /&gt; Holes to mount to wall. Requires adapter.[/caption]&lt;/p&gt;
+
+&lt;p&gt;[caption id=&amp;ldquo;attachment_492&amp;rdquo; align=&amp;ldquo;aligncenter&amp;rdquo; width=&amp;ldquo;300&amp;rdquo;]&lt;a href=&#34;http://leifmadsen.files.wordpress.com/2012/10/2012-10-11-14-49-36.jpg&#34;&gt;&lt;img src=&#34;http://leifmadsen.files.wordpress.com/2012/10/2012-10-11-14-49-36.jpg?w=300&#34; alt=&#34;&#34; /&gt;&lt;/a&gt; Easy access![/caption]&lt;/p&gt;
+
+&lt;p&gt;Lots of space for my hand to plug in cables. Much nicer than any of the Polycom bases where I usually give up and just remove it.&lt;/p&gt;
+
+&lt;p&gt;[caption id=&amp;ldquo;attachment_495&amp;rdquo; align=&amp;ldquo;aligncenter&amp;rdquo; width=&amp;ldquo;300&amp;rdquo;]&lt;a href=&#34;http://leifmadsen.files.wordpress.com/2012/10/2012-10-11-14-51-00.jpg&#34;&gt;&lt;img src=&#34;http://leifmadsen.files.wordpress.com/2012/10/2012-10-11-14-51-00.jpg?w=300&#34; alt=&#34;&#34; /&gt;&lt;/a&gt; Boot screen[/caption]&lt;/p&gt;
+
+&lt;p&gt;Booting up with the Digium logo.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://leifmadsen.files.wordpress.com/2012/10/2012-10-11-14-49-56.jpg&#34;&gt;&lt;img src=&#34;http://leifmadsen.files.wordpress.com/2012/10/2012-10-11-14-49-56.jpg?w=300&#34; alt=&#34;&#34; /&gt;&lt;/a&gt;&lt;a href=&#34;http://leifmadsen.files.wordpress.com/2012/10/2012-10-11-14-50-51.jpg&#34;&gt;&lt;img src=&#34;http://leifmadsen.files.wordpress.com/2012/10/2012-10-11-14-50-51.jpg?w=300&#34; alt=&#34;&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;[caption id=&amp;ldquo;attachment_496&amp;rdquo; align=&amp;ldquo;aligncenter&amp;rdquo; width=&amp;ldquo;300&amp;rdquo;]&lt;a href=&#34;http://leifmadsen.files.wordpress.com/2012/10/2012-10-11-14-54-35.jpg&#34;&gt;&lt;img src=&#34;http://leifmadsen.files.wordpress.com/2012/10/2012-10-11-14-54-35.jpg?w=300&#34; alt=&#34;&#34; /&gt;&lt;/a&gt; Handset hook access[/caption]&lt;/p&gt;
+
+&lt;p&gt;The tab on the back here is well designed so that you don&amp;rsquo;t require a tool to pull out and flip around. I prefer to have the hook for the handset so it doesn&amp;rsquo;t fall off the base easily. On the Polycoms (which have the same type of setup) it&amp;rsquo;s nearly impossible to remove with your fingers&lt;/p&gt;
+
+&lt;p&gt;[caption id=&amp;ldquo;attachment_497&amp;rdquo; align=&amp;ldquo;aligncenter&amp;rdquo; width=&amp;ldquo;300&amp;rdquo;]&lt;a href=&#34;http://leifmadsen.files.wordpress.com/2012/10/2012-10-11-14-56-01.jpg&#34;&gt;&lt;img src=&#34;http://leifmadsen.files.wordpress.com/2012/10/2012-10-11-14-56-01.jpg?w=300&#34; alt=&#34;&#34; /&gt;&lt;/a&gt; D40 vs IP335 size comparison[/caption]&lt;/p&gt;
+
+&lt;p&gt;.Size comparison between the D40 and IP335.&lt;/p&gt;
+
+&lt;h2 id=&#34;digium-d70&#34;&gt;Digium D70&lt;/h2&gt;
+
+&lt;p&gt;[caption id=&amp;ldquo;attachment_498&amp;rdquo; align=&amp;ldquo;aligncenter&amp;rdquo; width=&amp;ldquo;300&amp;rdquo;]&lt;a href=&#34;http://leifmadsen.files.wordpress.com/2012/10/2012-10-11-14-57-40.jpg&#34;&gt;&lt;img src=&#34;http://leifmadsen.files.wordpress.com/2012/10/2012-10-11-14-57-40.jpg?w=300&#34; alt=&#34;&#34; /&gt;&lt;/a&gt; Open box[/caption]&lt;/p&gt;
+
+&lt;p&gt;[caption id=&amp;ldquo;attachment_500&amp;rdquo; align=&amp;ldquo;aligncenter&amp;rdquo; width=&amp;ldquo;300&amp;rdquo;]&lt;a href=&#34;http://leifmadsen.files.wordpress.com/2012/10/2012-10-11-14-58-28.jpg&#34;&gt;&lt;img src=&#34;http://leifmadsen.files.wordpress.com/2012/10/2012-10-11-14-58-28.jpg?w=300&#34; alt=&#34;&#34; /&gt;&lt;/a&gt; Hidden compartment[/caption]&lt;/p&gt;
+
+&lt;p&gt;[caption id=&amp;ldquo;attachment_503&amp;rdquo; align=&amp;ldquo;aligncenter&amp;rdquo; width=&amp;ldquo;300&amp;rdquo;]&lt;a href=&#34;http://leifmadsen.files.wordpress.com/2012/10/2012-10-11-15-00-52.jpg&#34;&gt;&lt;img src=&#34;http://leifmadsen.files.wordpress.com/2012/10/2012-10-11-15-00-52.jpg?w=300&#34; alt=&#34;&#34; /&gt;&lt;/a&gt; Back of the D70[/caption]&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://leifmadsen.files.wordpress.com/2012/10/2012-10-11-14-57-57.jpg&#34;&gt;&lt;img src=&#34;http://leifmadsen.files.wordpress.com/2012/10/2012-10-11-14-57-57.jpg?w=300&#34; alt=&#34;&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://leifmadsen.files.wordpress.com/2012/10/2012-10-11-14-58-46.jpg&#34;&gt;&lt;img src=&#34;http://leifmadsen.files.wordpress.com/2012/10/2012-10-11-14-58-46.jpg?w=300&#34; alt=&#34;&#34; /&gt;&lt;/a&gt;
+&lt;a href=&#34;http://leifmadsen.files.wordpress.com/2012/10/2012-10-11-14-59-58.jpg&#34;&gt;&lt;img src=&#34;http://leifmadsen.files.wordpress.com/2012/10/2012-10-11-14-59-58.jpg?w=300&#34; alt=&#34;&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://leifmadsen.files.wordpress.com/2012/10/2012-10-11-15-01-37.jpg&#34;&gt;&lt;img src=&#34;http://leifmadsen.files.wordpress.com/2012/10/2012-10-11-15-01-37.jpg?w=300&#34; alt=&#34;&#34; /&gt;&lt;/a&gt;&lt;a href=&#34;http://leifmadsen.files.wordpress.com/2012/10/2012-10-11-15-03-21.jpg&#34;&gt;&lt;img src=&#34;http://leifmadsen.files.wordpress.com/2012/10/2012-10-11-15-03-21.jpg?w=300&#34; alt=&#34;&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;I don&amp;rsquo;t quite get the base with the wall mount holes, but impossible mounting angles on the base. Must have something to do with the manufacturing process and not having separate molds for footing.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Update: Michael pointed out that the A-frame is actually two separate pieces, so with a (separately purchased) piece, you can attach it to the base and make the system wall mountable. With the number of phones I&amp;rsquo;ve actually wall mounted in deployments (I think the number is only one or two), I think I prefer the 2 options for steep and shallow angles. Neat idea.&lt;/em&gt;
+&lt;a href=&#34;http://leifmadsen.files.wordpress.com/2012/10/2012-10-11-15-03-34.jpg&#34;&gt;&lt;img src=&#34;http://leifmadsen.files.wordpress.com/2012/10/2012-10-11-15-03-34.jpg?w=300&#34; alt=&#34;&#34; /&gt;&lt;/a&gt;
+Side cut outs for cables that I didn&amp;rsquo;t even notice the first time through. Michael pointed out they are for cable management. Nice!&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://leifmadsen.files.wordpress.com/2012/10/2012-10-11-15-05-20.jpg&#34;&gt;&lt;img src=&#34;http://leifmadsen.files.wordpress.com/2012/10/2012-10-11-15-05-20.jpg?w=300&#34; alt=&#34;&#34; /&gt;&lt;/a&gt;Oh my! So much space! Very roomy :)
+&lt;a href=&#34;http://leifmadsen.files.wordpress.com/2012/10/2012-10-11-15-07-22.jpg&#34;&gt;&lt;img src=&#34;http://leifmadsen.files.wordpress.com/2012/10/2012-10-11-15-07-22.jpg?w=300&#34; alt=&#34;&#34; /&gt;&lt;/a&gt;Side by side comparison of the D70 vs the IP650 w/ sidecar.
+&lt;a href=&#34;http://leifmadsen.files.wordpress.com/2012/10/2012-10-11-15-08-05.jpg&#34;&gt;&lt;img src=&#34;http://leifmadsen.files.wordpress.com/2012/10/2012-10-11-15-08-05.jpg?w=300&#34; alt=&#34;&#34; /&gt;&lt;/a&gt;Front to back comparison of the D70 vs IP650 w/ sidecar.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
