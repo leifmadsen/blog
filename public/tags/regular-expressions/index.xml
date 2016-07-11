@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Regular Expressions on Asterisk, and other worldly endeavours</title>
+    <link>http://blog.leifmadsen.com/tags/regular-expressions/</link>
+    <description>Recent content in Regular Expressions on Asterisk, and other worldly endeavours</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 16 Jan 2012 13:28:10 +0000</lastBuildDate>
+    <atom:link href="http://blog.leifmadsen.com/tags/regular-expressions/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Converting multiple exten =&gt; lines to using same =&gt; in Asterisk dialplan</title>
+      <link>http://blog.leifmadsen.com/blog/2012/01/16/converting-multiple-exten--lines-to-using-same--in-asterisk-dialplan/</link>
+      <pubDate>Mon, 16 Jan 2012 13:28:10 +0000</pubDate>
+      
+      <guid>http://blog.leifmadsen.com/blog/2012/01/16/converting-multiple-exten--lines-to-using-same--in-asterisk-dialplan/</guid>
+      <description>&lt;p&gt;Last week I wanted to start changing some 1.4 based Asterisk dialplan to a 1.8 based Asterisk system, and in that process wanted to convert lines like:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;exten =&amp;gt; _NXXNXXXXXX,1,NoOp()
+exten =&amp;gt; _NXXNXXXXXX,2,GotoIf($[...]?reject,1)
+exten =&amp;gt; _NXXNXXXXXX,3,Dial(SIP/foo/${EXTEN})
+...
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;into using the same =&amp;gt; prefix:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;exten =&amp;gt; _NXXNXXXXXX,1,NoOp()
+ same =&amp;gt; n,GotoIf($[...]?reject,1)
+ same =&amp;gt; n,Dial(SIP/foo/${EXTEN})
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;In order to do that, &lt;a href=&#34;https://twitter.com/#!/mikemking&#34;&gt;Mike King&lt;/a&gt; helped me out with the following regular expressing which I used in vim:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;%s/exten\s*=&amp;gt;\s*[^,]\+,\s*[n2-9]/ same =&amp;gt; n/g
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

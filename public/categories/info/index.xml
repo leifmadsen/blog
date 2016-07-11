@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Info on Asterisk, and other worldly endeavours</title>
+    <link>http://blog.leifmadsen.com/categories/info/</link>
+    <description>Recent content in Info on Asterisk, and other worldly endeavours</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 10 Nov 2015 19:28:26 -0500</lastBuildDate>
+    <atom:link href="http://blog.leifmadsen.com/categories/info/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>about</title>
+      <link>http://blog.leifmadsen.com/about/</link>
+      <pubDate>Tue, 10 Nov 2015 19:28:26 -0500</pubDate>
+      
+      <guid>http://blog.leifmadsen.com/about/</guid>
+      <description>&lt;p&gt;Leif Madsen has been an Asterisk consultant since 2004 and has been working with Asterisk since September, 2002.
+He is also co-author of the O&amp;rsquo;Reilly Media published books, Asterisk: The Future of Telephony 1st and 2nd editions (along with Jared Smith and Jim van Meggelen),
+Asterisk: The Definitive Guide (3rd edition) with Jim van Meggelen and Russell Bryant, and the Asterisk Cookbook with Russell Bryant.&lt;/p&gt;
+
+&lt;p&gt;As an active member of the Asterisk community, Leif was formerly the primary issue marshal on the Asterisk issue tracker, in addition to the Asterisk release manager. Some of the projects Leif has built or implemented include:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;a distributed, fault-tolerant, and self-healing network for an ITSP&lt;/li&gt;
+&lt;li&gt;an E911 portal for customers to update their address for their VoIP line utilizing SOAP&lt;/li&gt;
+&lt;li&gt;a multi-site call centre for a job recruiting agency that allows agents to login to remote queues&lt;/li&gt;
+&lt;li&gt;founder of the Asterisk Documentation Project; basis of the first edition of Asterisk: The Future of Telephony&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;In addition, Leif has spoken at many Asterisk conferences, helped write the first Asterisk training classes and dCAP (Digium Certified Asterisk Professional) test,
+helped to steer the implementation of several features in Asterisk, and performed consulting for dozens of clients over the years.
+You can be assured you&amp;rsquo;re getting one of the most highly qualified Asterisk consultants in the business.&lt;/p&gt;
+
+&lt;p&gt;Leif resides in Caledon, Ontario, Canada but has worked remotely for customers all over the world.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

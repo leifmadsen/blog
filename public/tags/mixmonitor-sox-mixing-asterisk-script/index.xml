@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Mixmonitor Sox Mixing Asterisk Script on Asterisk, and other worldly endeavours</title>
+    <link>http://blog.leifmadsen.com/tags/mixmonitor-sox-mixing-asterisk-script/</link>
+    <description>Recent content in Mixmonitor Sox Mixing Asterisk Script on Asterisk, and other worldly endeavours</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 30 Jun 2009 18:19:40 +0000</lastBuildDate>
+    <atom:link href="http://blog.leifmadsen.com/tags/mixmonitor-sox-mixing-asterisk-script/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Manually mixing files created by MixMonitor()</title>
+      <link>http://blog.leifmadsen.com/blog/2009/06/30/manually-mixing-files-created-by-mixmonitor/</link>
+      <pubDate>Tue, 30 Jun 2009 18:19:40 +0000</pubDate>
+      
+      <guid>http://blog.leifmadsen.com/blog/2009/06/30/manually-mixing-files-created-by-mixmonitor/</guid>
+      <description>&lt;p&gt;So last night I did a system update between 11:30pm and 5:00am. One of the things I forgot to do when I was moving to the new system was to install &lt;a href=&#34;http://sox.sourceforge.net/&#34;&gt;sox&lt;/a&gt; so that &lt;code&gt;MixMonitor()&lt;/code&gt; could mix the &lt;code&gt;-in&lt;/code&gt; and &lt;code&gt;-out&lt;/code&gt; files automatically for me. I still had the recordings, but I needed to get them mixed. I first installed &lt;em&gt;sox&lt;/em&gt; so that all new recorded files would be mixed for me. I also needed the &lt;em&gt;soxmix&lt;/em&gt; application to mix the files together for me. :)&lt;/p&gt;
+
+&lt;p&gt;I created a little bash script to do this for me. Some of my files had different numbers of fields, but I think the common format for Asterisk is 5 fields (separate with a hyphen) followed by either &lt;code&gt;-in.wav&lt;/code&gt; or -&lt;code&gt;out.wav&lt;/code&gt;. The following script takes the files in the &lt;code&gt;/var/spool/asterisk/monitor/merge/&lt;/code&gt; directory, and mixes them together to a single file, then places them in the &lt;code&gt;/var/spool/asterisk/monitor/&lt;/code&gt; directory.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;#!/bin/bash
+
+for NAME in $(find /var/spool/asterisk/monitor/merge/ -maxdepth 1 -type f | cut -d &amp;quot;/&amp;quot; -f7 | cut -d &amp;quot;-&amp;quot; -f1-5)
+#                                                                                         fields we want  ^^^
+do
+        IN=$NAME-in.wav
+        OUT=$NAME-out.wav
+        MERGE=$NAME.wav
+        MERGE_PATH=/var/spool/asterisk/monitor/merge
+        WRITE_PATH=/var/spool/asterisk/monitor
+
+        if [ -e $MERGE_PATH/$IN -a -e $MERGE_PATH/$OUT ]
+        then
+                echo &amp;quot;Both IN and OUT files exist. Creating $MERGE&amp;quot;
+                soxmix $MERGE_PATH/$IN $MERGE_PATH/$OUT $WRITE_PATH/$MERGE
+                mv $MERGE_PATH/$IN $MERGE_PATH/done/
+                mv $MERGE_PATH/$OUT $MERGE_PATH/done/
+        else
+                echo &amp;quot;Skipping the creating of $MERGE due to IN and OUT not being found&amp;quot;
+        fi
+        echo &amp;quot;&amp;quot;
+done
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

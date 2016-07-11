@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Vpn on Asterisk, and other worldly endeavours</title>
+    <link>http://blog.leifmadsen.com/tags/vpn/</link>
+    <description>Recent content in Vpn on Asterisk, and other worldly endeavours</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 27 Nov 2009 13:19:44 +0000</lastBuildDate>
+    <atom:link href="http://blog.leifmadsen.com/tags/vpn/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Cisco VPN Client on Ubuntu Karmic 9.10</title>
+      <link>http://blog.leifmadsen.com/blog/2009/11/27/cisco-vpn-client-on-ubuntu-karmic-9.10/</link>
+      <pubDate>Fri, 27 Nov 2009 13:19:44 +0000</pubDate>
+      
+      <guid>http://blog.leifmadsen.com/blog/2009/11/27/cisco-vpn-client-on-ubuntu-karmic-9.10/</guid>
+      <description>&lt;p&gt;I have a client who I need to connect to via a Cisco VPN, and since I use Ubuntu as my primary OS on my MacBook Pro, I&amp;rsquo;ve often needed to find some information about how to get the client working.&lt;/p&gt;
+
+&lt;p&gt;I had previously found some information about patching on Ubuntu 9.04 and it worked great, but since updating to 9.10 I had the same compile time issues I had before, which makes sense since the kernel is different now.&lt;/p&gt;
+
+&lt;p&gt;I found this site: &lt;a href=&#34;http://joepcremers.nl/wordpress/?p=1699&#34;&gt;http://joepcremers.nl/wordpress/?p=1699&lt;/a&gt; which had some good instructions for getting it going, but there almost appeared to be a patch missing, at least for my platform. The patch I needed was found on this site here: &lt;a href=&#34;http://www.painfullscratch.nl/code/vpn/&#34;&gt;http://www.painfullscratch.nl/code/vpn/&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;All the patches for the VPN client appear to have come from the tuxx-home.at forums: &lt;a href=&#34;http://forum.tuxx-home.at/viewforum.php?f=15&#34;&gt;http://forum.tuxx-home.at/viewforum.php?f=15&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Hopefully that gets you all the information you need to get your Cisco VPN client working on Ubuntu Karmic 9.10!&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Update: June 15, 2010&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;So I&amp;rsquo;ve been having some problems trying to get the Cisco VPN client working past a certain kernel version update (I think it&amp;rsquo;s something like 2.6.19-something). I&amp;rsquo;m currently running 2.6.31-22-generic x86_64. I spent a bit of time trying to figure out why I couldn&amp;rsquo;t get past that older kernel (and to avoid rebooting). On some kernels it would lock up the system entirely, on other kernels the CPN client just wouldn&amp;rsquo;t connect.&lt;/p&gt;
+
+&lt;p&gt;After some web searching, I came across this blog post dated September 2009: &lt;a href=&#34;http://ilapstech.blogspot.com/2009/09/cisco-vpn-client-on-karmic-koala.html&#34;&gt;http://ilapstech.blogspot.com/2009/09/cisco-vpn-client-on-karmic-koala.html&lt;/a&gt;. It seems to have the patch I needed to get around a compile time option that is described on that blog post. The error I was getting when compiling was:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;CC [M]  /usr/src/vpnclient/interceptor.o
+/usr/src/vpnclient/interceptor.c: In function ‘add_netdev’:
+/usr/src/vpnclient/interceptor.c:284: error: assignment of read-only location ‘*dev-&amp;gt;netdev_ops’
+/usr/src/vpnclient/interceptor.c: In function ‘remove_netdev’:
+/usr/src/vpnclient/interceptor.c:311: error: assignment of read-only location ‘*dev-&amp;gt;netdev_ops’
+make[2]: *** [/usr/src/vpnclient/interceptor.o] Error 1
+make[1]: *** [_module_/usr/src/vpnclient] Error 2
+make[1]: Leaving directory `/usr/src/linux-headers-2.6.31-22-generic&#39;
+make: *** [default] Error 2
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;After the patch provided on that blog post I was still getting an error like so:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;Making module
+make -C /lib/modules/2.6.31-22-generic/build SUBDIRS=/usr/src/vpnclient-4.8.02.0030 modules
+make[1]: Entering directory `/usr/src/linux-headers-2.6.31-22-generic&#39;
+scripts/Makefile.build:49: *** CFLAGS was changed in &amp;quot;/usr/src/vpnclient-4.8.02.0030/Makefile&amp;quot;. Fix it to use EXTRA_CFLAGS.  Stop.
+make[1]: *** [_module_/usr/src/vpnclient-4.8.02.0030] Error 2
+make[1]: Leaving directory `/usr/src/linux-headers-2.6.31-22-generic&#39;
+make: *** [default] Error 2
+Failed to make module &amp;quot;cisco_ipsec.ko&amp;quot;.
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Oh I&amp;rsquo;ve seen that error before. I used a patch from a site I mentioned earlier: &lt;a href=&#34;http://www.painfullscratch.nl/code/vpn/&#34;&gt;http://www.painfullscratch.nl/code/vpn/&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Note that I&amp;rsquo;ve not actually checked to see if I only needed the latter patch, but with a combination of patch with the first site I mentioned in this update followed by the above mentioned sites patch, I was able to get onto my VPN connection for the client I require this for. Hope it helps!&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

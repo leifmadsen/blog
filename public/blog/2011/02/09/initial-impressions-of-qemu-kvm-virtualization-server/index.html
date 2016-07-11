@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
+<head>
+  <link href="http://gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+  <title>Initial impressions of qemu-kvm (virtualization server) &middot; Leif Madsen</title>
+
+  
+  <link rel="stylesheet" href="http://blog.leifmadsen.com/css/poole.css">
+  <link rel="stylesheet" href="http://blog.leifmadsen.com/css/hyde.css">
+  <link rel="stylesheet" href="http://blog.leifmadsen.com/css/poole-overrides.css">
+  <link rel="stylesheet" href="http://blog.leifmadsen.com/css/hyde-overrides.css">
+  <link rel="stylesheet" href="http://blog.leifmadsen.com/css/hyde-x.css">
+  <link rel="stylesheet" href="http://blog.leifmadsen.com/css/highlight/solarized_dark.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700|Abril+Fatface">
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  
+
+  
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="http://blog.leifmadsen.com/touch-icon-144-precomposed.png">
+  <link href="http://blog.leifmadsen.com/favicon.png" rel="icon">
+
+  
+  
+  
+  
+
+  <meta name="description" content="Leif Madsen Blog Entry">
+  <meta name="keywords" content="blog,asterisk,leif,madsen,canada">
+  
+</head>
+<body class="theme-base-0b">
+<div class="sidebar">
+  <div class="container sidebar-sticky">
+    <div class="sidebar-about">
+      
+        <img src="https://www.gravatar.com/avatar/77a1196d149eecdb3b35fb5db56d494e?s=200"
+             alt="gravatar" title="Leif Madsen">
+      
+      <h1>Leif Madsen</h1>
+      <p class="lead">Asterisk, and other worldly endeavours</p>
+    </div>
+
+    <ul class="sidebar-nav">
+      <li class="sidebar-nav-item"><a href="http://blog.leifmadsen.com/">Blog</a></li>
+      
+    </ul>
+
+    <ul class="sidebar-nav">
+      <li class="sidebar-nav-item">
+      <a href="http://github.com/leifmadsen"><i class="fa fa-github-square fa-3x"></i></a>
+      
+      
+      <a href="http://linkedin.com/in/leifmadsen"><i class="fa fa-linkedin-square fa-3x"></i></a>
+      
+      
+      <a href="http://twitter.com/leifmadsen"><i class="fa fa-twitter-square fa-3x"></i></a>
+      
+      <a href="http://blog.leifmadsen.com/index.xml" type="application/rss+xml"><i class="fa fa-rss-square fa-3x"></i></a>
+      </li>
+    </ul>
+
+    
+
+    <p>Copyright &copy; 2016 <a href="http://blog.leifmadsen.com/license/">License</a><br/>
+       Powered by <a href="http://gohugo.io">Hugo</a> and <a href="https://github.com/zyro/hyde-x">Hyde-X</a></p>
+  </div>
+</div>
+
+
+<div class="content container">
+  <div class="post">
+    <h1 class="post-title">Initial impressions of qemu-kvm (virtualization server)</h1>
+    <p>The qemu-kvm (<a href="http://www.linux-kvm.org/page/Main_Page">http://www.linux-kvm.org/page/Main_Page</a>) package on Ubuntu 10.10 allows you to create virtual machines much like VMware, Xen, etc.</p>
+
+<p>My initial impressions are generally pretty positive. I like that it lets you install multiple operating systems (including MS Windows, which I haven&rsquo;t tried yet), and doesn&rsquo;t use a web interface like VMware Server 2 (which I&rsquo;ve found to be terribly crash prone, requiring a restart of the web interface at the least, and sometime the entire server needs to be restarted, often abruptly with the kill application). My favourite part is the libvirt-manager that lets you manage the system and install virtual machines remotely over SSH using VNC (or at least something similar to it).</p>
+
+<p>The one problem I had initially was installing CentOS 5.5. It was terribly slow, and when I started the virtual machine, I coudn&rsquo;t get it past GRUB. I thought perhaps it was just a problem with running CentOS VMs on an Ubuntu host machine, but then I had the same problem with an Ubuntu installation (which took at least 3-4 times as long to install as CentOS for some reason).</p>
+
+<p>I got looking around and found people with similar issues as me, but they all basically just outlined reinstalling GRUB via a rescue disk. I tried this which got me just a little bit further, but still no GRUB menu, or system booting.</p>
+
+<p>Then I found a post indicating that restarting the KVM service caused things to work, which I tried doing, but nothing changed. So as a last ditch effort I tried rebooting the service, which I didn&rsquo;t expect to actually fix anything, but oddly enough worked. The existing VMs I installed started up fine, and the new installation I tried went significantly faster.</p>
+
+<p>I haven&rsquo;t had much of a chance to try more than what I&rsquo;ve described, but thus far I like KVM a lot more than VMware. Hopefully I keep enjoying it as I go forward now that I&rsquo;ve gotten VMs to boot :)</p>
+
+  </div>
+</div>
+<script src="http://blog.leifmadsen.com/js/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+</body>
+</html>
+

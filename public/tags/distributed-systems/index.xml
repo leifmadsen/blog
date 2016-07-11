@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Distributed Systems on Asterisk, and other worldly endeavours</title>
+    <link>http://blog.leifmadsen.com/tags/distributed-systems/</link>
+    <description>Recent content in Distributed Systems on Asterisk, and other worldly endeavours</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 23 Dec 2011 15:31:22 +0000</lastBuildDate>
+    <atom:link href="http://blog.leifmadsen.com/tags/distributed-systems/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Asterisk Powered Distributed Call Centres (Video)</title>
+      <link>http://blog.leifmadsen.com/blog/2011/12/23/asterisk-powered-distributed-call-centres-video/</link>
+      <pubDate>Fri, 23 Dec 2011 15:31:22 +0000</pubDate>
+      
+      <guid>http://blog.leifmadsen.com/blog/2011/12/23/asterisk-powered-distributed-call-centres-video/</guid>
+      <description>&lt;p&gt;Looks like TMC has posted my presentation from AstriCon 2011! You can see the presentation in its entirety over here:&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://www.tmcnet.com/tmc/videos/default.aspx?vid=5821&amp;amp;title=Asterisk-Powered+Distributed+Call+Centers&#34;&gt;http://www.tmcnet.com/tmc/videos/default.aspx?vid=5821&amp;amp;title=Asterisk-Powered+Distributed+Call+Centers&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;And the presentation along with the demo configuration files is available on my website at:&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://leifmadsen.com/sites/default/files/AstriCon%202011%20-%20Building%20a%20distributed%20call%20centre.zip&#34;&gt;http://leifmadsen.com/sites/default/files/AstriCon%202011%20-%20Building%20a%20distributed%20call%20centre.zip &lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>#AstriCon 2011: Building a Distributed Call Centre</title>
+      <link>http://blog.leifmadsen.com/blog/2011/10/26/</link>
+      <pubDate>Wed, 26 Oct 2011 19:15:41 +0000</pubDate>
+      
+      <guid>http://blog.leifmadsen.com/blog/2011/10/26/</guid>
+      <description>&lt;p&gt;The presentation and configuration files from my presentation at AstriCon 2011 today is available at:&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://leifmadsen.com/sites/default/files/AstriCon 2011 - Building a distributed call centre.zip&#34;&gt;http://leifmadsen.com/sites/default/files/AstriCon 2011 - Building a distributed call centre.zip
+&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>My Presentations from AstriCon 2010 are Available</title>
+      <link>http://blog.leifmadsen.com/blog/2010/11/01/my-presentations-from-astricon-2010-are-available/</link>
+      <pubDate>Mon, 01 Nov 2010 12:04:08 +0000</pubDate>
+      
+      <guid>http://blog.leifmadsen.com/blog/2010/11/01/my-presentations-from-astricon-2010-are-available/</guid>
+      <description>&lt;p&gt;Check out &lt;a href=&#34;http://leifmadsen.com&#34;&gt;http://leifmadsen.com&lt;/a&gt; and click on the presentations tab. Under that tab you will find my presentations from AstriCon 2010,  &amp;rsquo;&lt;em&gt;5 Things You Didn&amp;rsquo;t Know Asterisk Could Do&lt;/em&gt;&amp;rsquo; and a slightly updated version of my &amp;lsquo;&lt;em&gt;Building Distributed Queue Systems&lt;/em&gt;&amp;rsquo; presentation. Both are in PDF format.&lt;/p&gt;
+
+&lt;p&gt;Both presentations went over extremely well, and I think both probably ended up being, or nearly being, my best presentations ever given. In previous years I&amp;rsquo;ve given presentations on distributed Asterisk systems and last year at IT360 I gave my  &amp;rdquo;&lt;em&gt;5 Things You Didn&amp;rsquo;t Know Asterisk Could Do&lt;/em&gt;&amp;rdquo; presentation, so perhaps being somewhat familiar with the format helped. I completely rewrote the &amp;lsquo;&lt;em&gt;5 Things&lt;/em&gt;&amp;rsquo; chapter though, so you&amp;rsquo;ll find some cool new information there if you&amp;rsquo;ve previously seen me give it.&lt;/p&gt;
+
+&lt;p&gt;The presentations were also video taped, so I&amp;rsquo;m really hoping that the AstriCon people will get those made available soon. I myself want to see if I&amp;rsquo;m just dreaming about how well I did :)&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>AstriCon 2010 and my talks!</title>
+      <link>http://blog.leifmadsen.com/blog/2010/10/27/astricon-2010-and-my-talks/</link>
+      <pubDate>Wed, 27 Oct 2010 12:08:06 +0000</pubDate>
+      
+      <guid>http://blog.leifmadsen.com/blog/2010/10/27/astricon-2010-and-my-talks/</guid>
+      <description>&lt;p&gt;&lt;em&gt;NOTE: My presentations are available on my website at &lt;a href=&#34;http://leifmadsen.com&#34;&gt;http://leifmadsen.com&lt;/a&gt; under the Presentations tab.&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;Hey all! I&amp;rsquo;m at AstriCon 2010 in Maryland and it&amp;rsquo;s going great so far! Russell Bryant and I spoke with several keen users and developers last night in the Code Zone at a fairly late hour, which shows just how dedicated Asterisk users are. There was pretty much no one else around and we had a room of about 20-30 people just having a great discussion about Asterisk development. Hopefully more of that over the next few days!&lt;/p&gt;
+
+&lt;p&gt;Today is the big keynote by some of the software development team, and while I can&amp;rsquo;t tell you what is going to be said, I can promise you it&amp;rsquo;s going to be big news. A lot of work has been going on over the last few months which has resulted in the biggest announcement yet at AstriCon about the future of telephony. There will be lots of blinky lights as well, which is always cool in a keynote!&lt;/p&gt;
+
+&lt;p&gt;Beyond the keynote this morning will be a lot of very high quality talks. I haven&amp;rsquo;t yet planned out my list of talks that I&amp;rsquo;m going to see, but you should definitely mark my two talks on your list of things to see :) I&amp;rsquo;ll be speaking at 1:45pm today, October 27th in the Asterisk Essentials track with my updated &amp;ldquo;5 Things You Didn&amp;rsquo;t Know Asterisk Could Do&amp;rdquo; presentation. It&amp;rsquo;ll be in National Harbor #5.&lt;/p&gt;
+
+&lt;p&gt;Tomorrow on October 28th I&amp;rsquo;ll be filling in for Jim van Meggelen at 10:00am doing my &amp;ldquo;Building A Distributed Queue System&amp;rdquo; talk which will focus on the basics of Asterisk system design starting from a traditional PBX and taking it through the iterations of a distributed system with multiple physical boxes handling queues and phones distributed across multiple sites and locations. For those who missed it last year come check it out this year, and get there early because each time I do this talk the room is packed. It&amp;rsquo;s part of the Platform Solutions track which is in National Harbor #7.&lt;/p&gt;
+
+&lt;p&gt;See you around at AstriCon!&lt;/p&gt;
+
+&lt;p&gt;PS: I&amp;rsquo;m trying to reach my 500th follower during AstriCon, so you should follow me on twitter :)  (@leifmadsen)&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
