@@ -1,7 +1,7 @@
 +++
 categories = ["update"]
 date = "2016-07-08T16:41:52-04:00"
-description = "Still Alive"
+description = ""
 keywords = []
 title = "Yes I'm still alive..."
 

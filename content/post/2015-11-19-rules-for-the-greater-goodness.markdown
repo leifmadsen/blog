@@ -1,7 +1,7 @@
 +++
 categories = ["development","product","rules","list"]
 date = "2015-11-19T10:21:26-05:00"
-description = "Rules For The Greater Goodness"
+description = ""
 keywords = []
 title = "Rules For The Greater Goodness; A Product Development Guide"
 

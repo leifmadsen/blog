@@ -21,15 +21,13 @@ paginate = 10
     defaultDescription = "Leif Madsen Blog Entry"
     defaultKeywords = "blog,asterisk,leif,madsen,canada"
 
-    theme = "theme-base-0b"
-
     highlight = "solarized_dark"
 
     tagline = "Asterisk, and other worldly endeavours"
 
     home = "Blog"
 
-    gravatarHash = "77a1196d149eecdb3b35fb5db56d494e"
+    #gravatarHash = "77a1196d149eecdb3b35fb5db56d494e"
 
     github = "http://github.com/leifmadsen"
     twitter = "http://twitter.com/leifmadsen"
