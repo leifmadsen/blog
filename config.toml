@@ -9,6 +9,7 @@ disqusShortname = "leifmadsen"
 MetaDataFormat = "toml"
 theme = "hyde-x"
 paginate = 10
+googleAnalytics = "UA-84933598-1"
 
 [author]
     name = "Leif Madsen"
