@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Linux on Asterisk, and other worldly endeavours</title>
-    <link>http://blog.leifmadsen.com/categories/linux/</link>
-    <description>Recent content in Linux on Asterisk, and other worldly endeavours</description>
+    <title>Openstack on Asterisk, and other worldly endeavours</title>
+    <link>http://blog.leifmadsen.com/categories/openstack/</link>
+    <description>Recent content in Openstack on Asterisk, and other worldly endeavours</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Mon, 03 Oct 2016 15:34:08 -0400</lastBuildDate>
-    <atom:link href="http://blog.leifmadsen.com/categories/linux/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://blog.leifmadsen.com/categories/openstack/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>TripleO: Consuming Composable Roles</title>
@@ -263,70 +263,6 @@ would append &lt;code&gt;tht/&lt;/code&gt; after &lt;code&gt;--templates&lt;/cod
 composable services and roles in TripleO. Next up will be attempting to build
 out my own set of roles and see how easy it is to construct new topologies and
 to move services around to different systems.&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>A Console Obsession</title>
-      <link>http://blog.leifmadsen.com/blog/2016/09/27/a-console-obsession/</link>
-      <pubDate>Tue, 27 Sep 2016 16:11:17 -0400</pubDate>
-      
-      <guid>http://blog.leifmadsen.com/blog/2016/09/27/a-console-obsession/</guid>
-      <description>
-
-&lt;h1 id=&#34;it-s-a-console-thing&#34;&gt;It&amp;rsquo;s A Console Thing&lt;/h1&gt;
-
-&lt;p&gt;Recently I&amp;rsquo;ve gotten into running as many of my day-to-day applications in a
-Linux console. Thought I&amp;rsquo;d briefly share the applications I&amp;rsquo;ve been playing
-with.&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;GerTTY&lt;/strong&gt; (&lt;a href=&#34;http://gertty.readthedocs.io/en/master/):&#34;&gt;http://gertty.readthedocs.io/en/master/):&lt;/a&gt; Synchronize and follow
-Gerrit-hosted projects, and perform code reviews. It&amp;rsquo;s a bit slow, but
-generally works pretty well once you get over the initial sync.&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;More Info&lt;/em&gt;: &lt;a href=&#34;https://major.io/2016/05/11/getting-started-gertty/&#34;&gt;https://major.io/2016/05/11/getting-started-gertty/&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;Weechat&lt;/strong&gt; (&lt;a href=&#34;https://weechat.org/):&#34;&gt;https://weechat.org/):&lt;/a&gt; IRC client with tiling-window manager like
-options. Can split the window into various buffers in either horizontal or
-vertical arrangements. Deals with multiple servers, and provides many
-plugins.&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;More Info&lt;/em&gt;: &lt;a href=&#34;http://benoliver999.com/2014/02/18/weechatconf/&#34;&gt;http://benoliver999.com/2014/02/18/weechatconf/&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;Profanity.IM&lt;/strong&gt; (&lt;a href=&#34;http://profanity.im/):&#34;&gt;http://profanity.im/):&lt;/a&gt; XMPP client using libstrophe and ncurses
-for an IRSSI (see Weechat&amp;hellip;) like interface. I&amp;rsquo;m using this to connect to
-the Slack XMPP gateway.&lt;/p&gt;
-
-&lt;p&gt;I had to build the project myself since there is no native RPM for Fedora.
-This meant I had to also compile libstrophe and get that all installed in the
-right location to make it available for Profanity. Not sure why, but I could
-never get Profanity to find it in &lt;code&gt;/usr/local/lib&lt;/code&gt; so I gave up and installed
-libstrophe in &lt;code&gt;/usr/lib64&lt;/code&gt; and all was well.&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;More Info&lt;/em&gt;: &lt;a href=&#34;http://nochair.net/posts/2015/11-09-linux-messaging.html&#34;&gt;http://nochair.net/posts/2015/11-09-linux-messaging.html&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;NeoMutt&lt;/strong&gt; (&lt;a href=&#34;http://www.neomutt.org/):&#34;&gt;http://www.neomutt.org/):&lt;/a&gt; Email application that I got working with
-my works (Red Hat) Google Apps service. So far I&amp;rsquo;m a rookie when it comes to
-using Mutt, but I&amp;rsquo;ve been reading and slowly learning some of the keys. The
-sidebar certainly helps. I had to map some custom stuff to move around the
-sidebar comfortable, but that wasn&amp;rsquo;t a big deal.&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;More Info&lt;/em&gt;: &lt;a href=&#34;https://hobo.house/2016/08/08/switching-from-mutt-to-neomutt/&#34;&gt;https://hobo.house/2016/08/08/switching-from-mutt-to-neomutt/&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;OfflineIMAP&lt;/strong&gt; (&lt;a href=&#34;http://www.offlineimap.org/):&#34;&gt;http://www.offlineimap.org/):&lt;/a&gt; I&amp;rsquo;m currently writing this while
-waiting for all my email to sync offline (OMG there is so much&amp;hellip;), so I
-don&amp;rsquo;t even have it fully integrated yet. OfflineIMAP is an application that
-I&amp;rsquo;ll integrate with NeoMutt so I can have offline email.&lt;/p&gt;
-
-&lt;p&gt;I don&amp;rsquo;t really travel a lot, but I&amp;rsquo;ve been told using this along with notmuch
-makes searching for emails really powerful.&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;More Info&lt;/em&gt;: &lt;a href=&#34;http://stevelosh.com/blog/2012/10/the-homely-mutt/&#34;&gt;http://stevelosh.com/blog/2012/10/the-homely-mutt/&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;Notmuch&lt;/strong&gt; (&lt;a href=&#34;https://notmuchmail.org/):&#34;&gt;https://notmuchmail.org/):&lt;/a&gt; A powerful tag-based email search system.
-I haven&amp;rsquo;t even set this up yet, so I have no idea what I&amp;rsquo;m doing here :)&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;
 </description>
     </item>
     
