@@ -1,7 +1,7 @@
 +++
 categories = ["OpenStack", "Linux", "Cloud Computing", "TripleO", "nfvpe"]
 date = "2016-10-03T15:34:08-04:00"
-description = "Consuming composable services and roles in TripleO on OpenStack Newton"
+description = ""
 keywords = ["composable services", "composable roles", "tripleO", "openstack",
 "newton"]
 title = "TripleO: Consuming Composable Roles"
@@ -12,7 +12,7 @@ roles](http://hardysteven.blogspot.ca/2016/08/tripleo-composable-services-101.ht
 that was added to Newton. I previously learned a little bit about deploying
 OpenStack clouds when I did training after joining Red Hat, but that was based
 on Liberty, and a lot has changed in TripleO since that time.
-
+<!--more-->
 The first thing was learning what composable services and roles are, and
 generally what they are intended to solve. I don't want to get into that
 here, so I'd encourage you to go read some links first and then come back here.

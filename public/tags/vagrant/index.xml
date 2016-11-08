@@ -15,28 +15,7 @@
       <pubDate>Mon, 23 Jul 2012 19:14:45 +0000</pubDate>
       
       <guid>http://blog.leifmadsen.com/blog/2012/07/23/assign-unique-hostname-to-dhcp-client-with-dnsmasq/</guid>
-      <description>&lt;p&gt;Today I&amp;rsquo;ve been getting our lab environment setup with vagrant to auto-provision our lab servers with chef server in order to allow the development team to quickly and easily turn up and tear down web application servers.&lt;/p&gt;
-
-&lt;p&gt;Because when the server gets spun up with vagrant, it registers itself as a new node to the chef server using its hostname. Since using localhost for every node pretty much makes the chef server useless for more than 1 virtual machine at a time, I needed to figure out how to get dnsmasq to assign a unique hostname based on the IP address being provided by dnsmasq to the dhcp client.&lt;/p&gt;
-
-&lt;p&gt;I had seen a similar thing done with Amazon EC2 instances that when they turn up, they gets a hostname that looks similar to the private IP address it has been assigned. For example, if the private IP address assigned to the server was 192.168.12.14 it would get a hostname like &lt;em&gt;ip-192-168-12-14&lt;/em&gt;. I wanted to do a similar thing with our server.&lt;/p&gt;
-
-&lt;p&gt;After a little bit of Googling and reading the dnsmasq configuration file, it donned on me how simple this really was. You simply need to define the hostnames that the dnsmasq server could assign to a server, list those in the &lt;em&gt;/etc/hosts&lt;/em&gt; file on the dnsmasq server, and then define the hostname you wanted to provide to the server. I didn&amp;rsquo;t want to use the MAC address of the servers (a la &lt;em&gt;dhcp-host&lt;/em&gt; option) since the MAC address will be dynamic each time I spin up a virtual machine.&lt;/p&gt;
-
-&lt;p&gt;So in my &lt;em&gt;dnsmasq.conf&lt;/em&gt; file I might have something defined like&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;dhcp-range=90.100.1.120,90.100.1.124,24h
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;So in my &lt;em&gt;/etc/hosts&lt;/em&gt; file I&amp;rsquo;d just place the following to assign those unique hostnames:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;90.100.1.120    ip-90-100-1-120
-90.100.1.121    ip-90-100-1-121
-90.100.1.122    ip-90-100-1-122
-90.100.1.123    ip-90-100-1-123
-90.100.1.124    ip-90-100-1-124
-&lt;/code&gt;&lt;/pre&gt;
-</description>
+      <description>Today I&amp;rsquo;ve been getting our lab environment setup with vagrant to auto-provision our lab servers with chef server in order to allow the development team to quickly and easily turn up and tear down web application servers. Because when the server gets spun up with vagrant, it registers itself as a new node to the chef server using its hostname. Since using localhost for every node pretty much makes the chef server useless for more than 1 virtual machine at a time, I needed to figure out how to get dnsmasq to assign a unique hostname based on the IP address being provided by dnsmasq to the dhcp client.</description>
     </item>
     
   </channel>

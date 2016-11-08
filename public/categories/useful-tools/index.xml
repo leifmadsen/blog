@@ -15,28 +15,7 @@
       <pubDate>Mon, 23 Jul 2012 19:14:45 +0000</pubDate>
       
       <guid>http://blog.leifmadsen.com/blog/2012/07/23/assign-unique-hostname-to-dhcp-client-with-dnsmasq/</guid>
-      <description>&lt;p&gt;Today I&amp;rsquo;ve been getting our lab environment setup with vagrant to auto-provision our lab servers with chef server in order to allow the development team to quickly and easily turn up and tear down web application servers.&lt;/p&gt;
-
-&lt;p&gt;Because when the server gets spun up with vagrant, it registers itself as a new node to the chef server using its hostname. Since using localhost for every node pretty much makes the chef server useless for more than 1 virtual machine at a time, I needed to figure out how to get dnsmasq to assign a unique hostname based on the IP address being provided by dnsmasq to the dhcp client.&lt;/p&gt;
-
-&lt;p&gt;I had seen a similar thing done with Amazon EC2 instances that when they turn up, they gets a hostname that looks similar to the private IP address it has been assigned. For example, if the private IP address assigned to the server was 192.168.12.14 it would get a hostname like &lt;em&gt;ip-192-168-12-14&lt;/em&gt;. I wanted to do a similar thing with our server.&lt;/p&gt;
-
-&lt;p&gt;After a little bit of Googling and reading the dnsmasq configuration file, it donned on me how simple this really was. You simply need to define the hostnames that the dnsmasq server could assign to a server, list those in the &lt;em&gt;/etc/hosts&lt;/em&gt; file on the dnsmasq server, and then define the hostname you wanted to provide to the server. I didn&amp;rsquo;t want to use the MAC address of the servers (a la &lt;em&gt;dhcp-host&lt;/em&gt; option) since the MAC address will be dynamic each time I spin up a virtual machine.&lt;/p&gt;
-
-&lt;p&gt;So in my &lt;em&gt;dnsmasq.conf&lt;/em&gt; file I might have something defined like&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;dhcp-range=90.100.1.120,90.100.1.124,24h
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;So in my &lt;em&gt;/etc/hosts&lt;/em&gt; file I&amp;rsquo;d just place the following to assign those unique hostnames:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;90.100.1.120    ip-90-100-1-120
-90.100.1.121    ip-90-100-1-121
-90.100.1.122    ip-90-100-1-122
-90.100.1.123    ip-90-100-1-123
-90.100.1.124    ip-90-100-1-124
-&lt;/code&gt;&lt;/pre&gt;
-</description>
+      <description>Today I&amp;rsquo;ve been getting our lab environment setup with vagrant to auto-provision our lab servers with chef server in order to allow the development team to quickly and easily turn up and tear down web application servers. Because when the server gets spun up with vagrant, it registers itself as a new node to the chef server using its hostname. Since using localhost for every node pretty much makes the chef server useless for more than 1 virtual machine at a time, I needed to figure out how to get dnsmasq to assign a unique hostname based on the IP address being provided by dnsmasq to the dhcp client.</description>
     </item>
     
     <item>
@@ -45,19 +24,7 @@
       <pubDate>Thu, 23 Feb 2012 18:43:54 +0000</pubDate>
       
       <guid>http://blog.leifmadsen.com/blog/2012/02/23/rpmlint-non-utf8-spec-file-error/</guid>
-      <description>&lt;p&gt;I&amp;rsquo;ve been doing a bunch of work with RPMs lately, and while running rpmlint against a spec file I was modifying, I received this error:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;myfile.spec: E: non-utf8-spec-file myfile.spec
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;After Googling, I ran into a way of finding the non-compliant characters.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;$ iconv -f ISO-8859-8 -t UTF-8 myfile.spec &amp;gt; converted.spec
-$ diff -u myfile.spec converted.spec
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;(Answer thanks to Dominique Leuenberger @ &lt;a href=&#34;http://lists.opensuse.org/opensuse-packaging/2011-04/msg00005.html&#34;&gt;http://lists.opensuse.org/opensuse-packaging/2011-04/msg00005.html&lt;/a&gt;)&lt;/p&gt;
-</description>
+      <description>I&amp;rsquo;ve been doing a bunch of work with RPMs lately, and while running rpmlint against a spec file I was modifying, I received this error: myfile.spec: E: non-utf8-spec-file myfile.spec After Googling, I ran into a way of finding the non-compliant characters. $ iconv -f ISO-8859-8 -t UTF-8 myfile.spec &amp;gt; converted.spec $ diff -u myfile.spec converted.spec (Answer thanks to Dominique Leuenberger @ http://lists.opensuse.org/opensuse-packaging/2011-04/msg00005.html)</description>
     </item>
     
     <item>
@@ -66,21 +33,7 @@ $ diff -u myfile.spec converted.spec
       <pubDate>Thu, 22 Dec 2011 14:39:07 +0000</pubDate>
       
       <guid>http://blog.leifmadsen.com/blog/2011/12/22/.bashrc-trick-for-git-repo-and-branch-information/</guid>
-      <description>&lt;p&gt;The other day I was talking to my friend &lt;a href=&#34;http://russellbryant.net&#34;&gt;Russell Bryant&lt;/a&gt; who pointed me to some .bashrc magic that would show me which branch I was currently working with inside a git repo on my system. I found it incredibly handy and have modified the ANSI colour coding slightly.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;export PS1=&#39;[\u@\h \[33[0;36m\]\W$(__git_ps1 &amp;quot;\[33[0m\]\[33[0;33m\](%s)&amp;quot;)\[33[0m\]]\$ &#39;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;On Fedora Russell mentioned that you need the &lt;code&gt;bash-completion&lt;/code&gt; installed. We&amp;rsquo;re unsure if you need anything on other distributions.&lt;/p&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;Edit: January 6, 2012_
-As I&amp;rsquo;m using my laptop today, I modified the .bashrc file on Ubuntu 10.04, and here is the PS1 code I came up with. It&amp;rsquo;s nearly the same, but I&amp;rsquo;m using bold today instead of the unbolded colours of lore.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;PS1=&#39;${debian_chroot:+($debian_chroot)}\[\033[28;01m\]\u@\h\[\033[00m\]:\[\033[1;36m\]\W$(__git_ps1 &amp;quot;\[\033[00m\]\[\033[1;33m\](%s)&amp;quot;)\[\033[00m\]\$ &#39;
-&lt;/code&gt;&lt;/pre&gt;
-</description>
+      <description>The other day I was talking to my friend Russell Bryant who pointed me to some .bashrc magic that would show me which branch I was currently working with inside a git repo on my system. I found it incredibly handy and have modified the ANSI colour coding slightly. export PS1=&#39;[\u@\h \[33[0;36m\]\W$(__git_ps1 &amp;quot;\[33[0m\]\[33[0;33m\](%s)&amp;quot;)\[33[0m\]]\$ &#39; On Fedora Russell mentioned that you need the bash-completion installed. We&amp;rsquo;re unsure if you need anything on other distributions.</description>
     </item>
     
     <item>
@@ -89,12 +42,7 @@ As I&amp;rsquo;m using my laptop today, I modified the .bashrc file on Ubuntu 10
       <pubDate>Tue, 22 Nov 2011 22:17:18 +0000</pubDate>
       
       <guid>http://blog.leifmadsen.com/blog/2011/11/22/relaying-smtp-via-gmail-or-google-apps-using-postfix/</guid>
-      <description>&lt;p&gt;Today I had the need to start relaying mail through my Google Apps account since &lt;del&gt;Super-Evil-Bastard-ITSP&lt;/del&gt;Rogers blocks sending email (it&amp;rsquo;s probably a good thing, however it&amp;rsquo;s quite annoying when running some services from home).&lt;/p&gt;
-
-&lt;p&gt;Found this article while Googling, and it worked great first try. I like when things are this easy.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://www.zulius.com/how-to/set-up-postfix-with-a-remote-smtp-relay-host/&#34;&gt;http://www.zulius.com/how-to/set-up-postfix-with-a-remote-smtp-relay-host/&lt;/a&gt;&lt;/p&gt;
-</description>
+      <description>Today I had the need to start relaying mail through my Google Apps account since Super-Evil-Bastard-ITSPRogers blocks sending email (it&amp;rsquo;s probably a good thing, however it&amp;rsquo;s quite annoying when running some services from home). Found this article while Googling, and it worked great first try. I like when things are this easy. http://www.zulius.com/how-to/set-up-postfix-with-a-remote-smtp-relay-host/</description>
     </item>
     
     <item>
@@ -103,27 +51,7 @@ As I&amp;rsquo;m using my laptop today, I modified the .bashrc file on Ubuntu 10
       <pubDate>Wed, 02 Nov 2011 16:08:40 +0000</pubDate>
       
       <guid>http://blog.leifmadsen.com/blog/2011/11/02/controlling-outbound-bitrate-using-tc/</guid>
-      <description>&lt;p&gt;Today I was using the VMware vCenter Converter application to build a VM from a physical machine so that I could replace Ubuntu 10.04.3 LTS with VMware ESXi (and move the functionality that the server is performing now to a VM instead of it being the base OS).&lt;/p&gt;
-
-&lt;p&gt;Because my server is colocated in a friends rack, and the bandwidth is shared, I needed to limit the rate at which the data was being sent from the colocated server to the virtual machine server. I needed to do this so he didn&amp;rsquo;t get pages, and so that my local connection would remain viable for VoIP communication.&lt;/p&gt;
-
-&lt;p&gt;After scouring Google, I found this page: &lt;a href=&#34;http://opalsoft.net/qos/DS.htm&#34;&gt;http://opalsoft.net/qos/DS.htm&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;I looked at the HTB queuing section, and came up with a simple rate limiter for my outbound data to a specific IP. The example he shows is more complex, but it gave me enough to make it work. Here is what I entered at the console:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;tc qdisc del dev eth0 root  # clear existing rules
-tc qdisc add dev eth0 root handle 1:0 htb
-tc class add dev eth0 parent 1:0 classid 1:1 htb rate 2048kbit
-tc class add dev eth0 parent 1:1 classid 1:2 htb rate 1228kbit ceil 2048kbit
-tc class add dev eth0 parent 1:2 classid 1:21 htb rate 1228kbit ceil 2048kbit
-tc qdisc add dev eth0 parent 1:21 handle 210: pfifo limit 10
-tc filter add dev eth0 parent 1:0 protocol ip prio 1 u32 match ip dst 172.16.0.228/32 flowid 1:21
-
-iptables -t mangle -A OUTPUT --dest 172.16.0.228 -p tcp -j MARK --set-mark 21
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;I&amp;rsquo;m sure I could have made that a bit more efficient on lines 4 and 5, but not knowing a ton about &lt;strong&gt;tc&lt;/strong&gt; and the fact it worked, made me happy enough :)&lt;/p&gt;
-</description>
+      <description>Today I was using the VMware vCenter Converter application to build a VM from a physical machine so that I could replace Ubuntu 10.04.3 LTS with VMware ESXi (and move the functionality that the server is performing now to a VM instead of it being the base OS). Because my server is colocated in a friends rack, and the bandwidth is shared, I needed to limit the rate at which the data was being sent from the colocated server to the virtual machine server.</description>
     </item>
     
     <item>
@@ -132,18 +60,7 @@ iptables -t mangle -A OUTPUT --dest 172.16.0.228 -p tcp -j MARK --set-mark 21
       <pubDate>Wed, 09 Feb 2011 01:18:22 +0000</pubDate>
       
       <guid>http://blog.leifmadsen.com/blog/2011/02/09/initial-impressions-of-qemu-kvm-virtualization-server/</guid>
-      <description>&lt;p&gt;The qemu-kvm (&lt;a href=&#34;http://www.linux-kvm.org/page/Main_Page&#34;&gt;http://www.linux-kvm.org/page/Main_Page&lt;/a&gt;) package on Ubuntu 10.10 allows you to create virtual machines much like VMware, Xen, etc.&lt;/p&gt;
-
-&lt;p&gt;My initial impressions are generally pretty positive. I like that it lets you install multiple operating systems (including MS Windows, which I haven&amp;rsquo;t tried yet), and doesn&amp;rsquo;t use a web interface like VMware Server 2 (which I&amp;rsquo;ve found to be terribly crash prone, requiring a restart of the web interface at the least, and sometime the entire server needs to be restarted, often abruptly with the kill application). My favourite part is the libvirt-manager that lets you manage the system and install virtual machines remotely over SSH using VNC (or at least something similar to it).&lt;/p&gt;
-
-&lt;p&gt;The one problem I had initially was installing CentOS 5.5. It was terribly slow, and when I started the virtual machine, I coudn&amp;rsquo;t get it past GRUB. I thought perhaps it was just a problem with running CentOS VMs on an Ubuntu host machine, but then I had the same problem with an Ubuntu installation (which took at least 3-4 times as long to install as CentOS for some reason).&lt;/p&gt;
-
-&lt;p&gt;I got looking around and found people with similar issues as me, but they all basically just outlined reinstalling GRUB via a rescue disk. I tried this which got me just a little bit further, but still no GRUB menu, or system booting.&lt;/p&gt;
-
-&lt;p&gt;Then I found a post indicating that restarting the KVM service caused things to work, which I tried doing, but nothing changed. So as a last ditch effort I tried rebooting the service, which I didn&amp;rsquo;t expect to actually fix anything, but oddly enough worked. The existing VMs I installed started up fine, and the new installation I tried went significantly faster.&lt;/p&gt;
-
-&lt;p&gt;I haven&amp;rsquo;t had much of a chance to try more than what I&amp;rsquo;ve described, but thus far I like KVM a lot more than VMware. Hopefully I keep enjoying it as I go forward now that I&amp;rsquo;ve gotten VMs to boot :)&lt;/p&gt;
-</description>
+      <description>The qemu-kvm (http://www.linux-kvm.org/page/Main_Page) package on Ubuntu 10.10 allows you to create virtual machines much like VMware, Xen, etc. My initial impressions are generally pretty positive. I like that it lets you install multiple operating systems (including MS Windows, which I haven&amp;rsquo;t tried yet), and doesn&amp;rsquo;t use a web interface like VMware Server 2 (which I&amp;rsquo;ve found to be terribly crash prone, requiring a restart of the web interface at the least, and sometime the entire server needs to be restarted, often abruptly with the kill application).</description>
     </item>
     
     <item>
@@ -152,57 +69,7 @@ iptables -t mangle -A OUTPUT --dest 172.16.0.228 -p tcp -j MARK --set-mark 21
       <pubDate>Wed, 29 Sep 2010 14:25:50 +0000</pubDate>
       
       <guid>http://blog.leifmadsen.com/blog/2010/09/29/scheduling-automated-calls-between-two-participants-with-res_calendar/</guid>
-      <description>&lt;p&gt;Here is a little dialplan snippet I wrote this morning for the next edition of the Asterisk book. While I&amp;rsquo;m not going to delve into all the aspects of setting up res_calendar like we do in the book, I thought for those of you who might already have this working might enjoy it.&lt;/p&gt;
-
-&lt;p&gt;(The calendaring modules are available in Asterisk 1.8, which is currently in release candidate status. Check out &lt;a href=&#34;http://www.asterisk.org/downloads&#34;&gt;http://www.asterisk.org/downloads&lt;/a&gt; for the current version.)&lt;/p&gt;
-
-&lt;p&gt;I started with this little bit of dialplan that gets triggered when a call is answered from the calendaring module:&lt;/p&gt;
-
-&lt;p&gt;﻿﻿﻿&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;[AutomatedMeetingSetup]
-exten =&amp;gt; start,1,Verbose(2,Triggering meeting setup for two participants)
-   same =&amp;gt; n,Set(DeviceToDial=${FILTER(0-9A-Za-z,${CALENDAR_EVENT(location)})})
-   same =&amp;gt; n,Dial(SIP/${DeviceToDial},30)
-   same =&amp;gt; n,Hangup()
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;The location field in my calendar event (which in this case is labeled as Destination in my Google Calendar) contains the string 0000FFFF0002 which is the device identifier in my example.&lt;/p&gt;
-
-&lt;p&gt;Once you get that working, the cool magic happens below. In the following example, a call is placed from the calendaring module when a meeting needs to take place between two participants. The first part of the dialplan allows the first person called to accept or reject the meeting, and if accepted, to record a message for the other party. Once that recording is saved, the dialplan will go ahead and trigger a call to the other meeting participant.&lt;/p&gt;
-
-&lt;p&gt;When that meeting participant answers the call, a Macro() is employed to allow them to listen to the recorded message left by the first party, (i.e. &amp;ldquo;Hey Jim, this is Leif. We have a meeting scheduled right now.&amp;rdquo;). That person is then presented the same option to accept or reject the call by pressing 1 or 2.&lt;/p&gt;
-
-&lt;p&gt;Of course the dialplan could even by further expanded to play back messages when the calls were rejected, the option for the called party to leave a return message of why they are rejecting the call, and maybe even the ability to post-pone the call for a few minutes. All it takes is some clever dialplan!&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;[AutomatedMeetingSetup]
-exten =&amp;gt; start,1,Verbose(2,Triggering meeting setup for two participants)
-same =&amp;gt; n,Read(CheckMeetingAcceptance,to-confirm-wakeup&amp;amp;press-1&amp;amp;otherwise&amp;amp;press-2,,1)
-same =&amp;gt; n,GotoIf($[&amp;quot;${CheckMeetingAcceptance}&amp;quot; != &amp;quot;1&amp;quot;]?hangup,1)
-
-same =&amp;gt; n,Playback(silence/1&amp;amp;pls-rcrd-name-at-tone&amp;amp;and-prs-pound-whn-finished)
-same =&amp;gt; n,Set(__RandomNumber=${RAND()})
-same =&amp;gt; n,Record(/tmp/meeting-invite-${RandomNumber}.ulaw)
-
-same =&amp;gt; n,Set(DeviceToDial=${FILTER(0-9A-Za-z,${CALENDAR_EVENT(location)})})
-same =&amp;gt; n,Dial(SIP/${DeviceToDial},30,M(CheckConfirm))
-same =&amp;gt; n,Hangup()
-
-exten =&amp;gt; hangup,1,Verbose(2,Call was rejected)
-same =&amp;gt; n,Playback(vm-goodbye)
-same =&amp;gt; n,Hangup()
-
-[macro-CheckConfirm]
-exten =&amp;gt; s,1,Verbose(2,Allowing called party to accept or reject)
-same =&amp;gt; n,Playback(/tmp/meeting-invite-${RandomNumber})
-same =&amp;gt; n,Read(CheckMeetingAcceptance,to-confirm-wakeup&amp;amp;press-1&amp;amp;otherwise&amp;amp;press-2,,1)
-same =&amp;gt; n,GotoIf($[&amp;quot;${CheckMeetingAcceptance}&amp;quot; != &amp;quot;1&amp;quot;]?hangup,1)
-
-exten =&amp;gt; hangup,1,Verbose(2,Call was rejected by called party)
-same =&amp;gt; n,Playback(vm-goodbye)
-same =&amp;gt; n,Hangup()
-&lt;/code&gt;&lt;/pre&gt;
-</description>
+      <description>Here is a little dialplan snippet I wrote this morning for the next edition of the Asterisk book. While I&amp;rsquo;m not going to delve into all the aspects of setting up res_calendar like we do in the book, I thought for those of you who might already have this working might enjoy it. (The calendaring modules are available in Asterisk 1.8, which is currently in release candidate status. Check out http://www.asterisk.org/downloads for the current version.) I started with this little bit of dialplan that gets triggered when a call is answered from the calendaring module: ﻿﻿﻿ [AutomatedMeetingSetup] exten =&amp;gt; start,1,Verbose(2,Triggering meeting setup for two participants) same =&amp;gt; n,Set(DeviceToDial=${FILTER(0-9A-Za-z,${CALENDAR_EVENT(location)})}) same =&amp;gt; n,Dial(SIP/${DeviceToDial},30) same =&amp;gt; n,Hangup() The location field in my calendar event (which in this case is labeled as Destination in my Google Calendar) contains the string 0000FFFF0002 which is the device identifier in my example.</description>
     </item>
     
     <item>
@@ -211,12 +78,7 @@ same =&amp;gt; n,Hangup()
       <pubDate>Tue, 10 Aug 2010 14:03:13 +0000</pubDate>
       
       <guid>http://blog.leifmadsen.com/blog/2010/08/10/mindmeister-online-mind-mapping/</guid>
-      <description>&lt;p&gt;&lt;a href=&#34;http://www.russellbryant.net/&#34;&gt;Russell Bryant&lt;/a&gt; just sent me a link to a neat site that allows you to do online collaborative mind mapping: &lt;a href=&#34;http://www.mindmeister.com/&#34;&gt;MindMeister&lt;/a&gt;. If you&amp;rsquo;re not aware of what mind mapping software does, it is a method to quickly and easily allow you to brainstorm ideas without getting in the way too much. It works by starting from a central node and breaking out in lines from there where you start with an idea or thought, then break that thought down further with additional lines from that node.&lt;/p&gt;
-
-&lt;p&gt;While working on the next edition of the &lt;a href=&#34;http://www.asteriskdocs.org&#34;&gt;Asterisk book&lt;/a&gt;, we spent a significant amount of time using &lt;a href=&#34;http://freemind.sourceforge.net/wiki/index.php/Main_Page&#34;&gt;FreeMind&lt;/a&gt; to brainstorm ideas of what we wanted in the book, then develop a detailed outline to the book which included the chapters, and what each of those chapters would contain. This way we can reference the mindmap while working on the book, and later review all our thoughts to make sure we covered all our original ideas. We continue to refine the mindmap on an almost daily basis while we come up with additional ideas and layout tweaks while working on particular chapters.&lt;/p&gt;
-
-&lt;p&gt;The website allows you to import mindmaps from FreeMind into the site, which is a valuable tool for those who have existing mindmaps. Check it out and tell me what you think!&lt;/p&gt;
-</description>
+      <description>Russell Bryant just sent me a link to a neat site that allows you to do online collaborative mind mapping: MindMeister. If you&amp;rsquo;re not aware of what mind mapping software does, it is a method to quickly and easily allow you to brainstorm ideas without getting in the way too much. It works by starting from a central node and breaking out in lines from there where you start with an idea or thought, then break that thought down further with additional lines from that node.</description>
     </item>
     
   </channel>

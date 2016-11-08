@@ -15,12 +15,7 @@
       <pubDate>Wed, 15 Jul 2009 17:36:51 +0000</pubDate>
       
       <guid>http://blog.leifmadsen.com/blog/2009/07/15/back-from-vacation/</guid>
-      <description>&lt;p&gt;Just a quick note letting you know I&amp;rsquo;m back from vacation! Just been working on catching up on a few things, and have started working on a new article. It will be focusing on how to convert from using AgentCallbackLogin() to using the AddQueueMember() method of dynamically adding members to queues. Since AgentCallbackLogin() has been removed from Asterisk 1.6.0 and beyond, you&amp;rsquo;ll need to use the AddQueueMember() method.&lt;/p&gt;
-
-&lt;p&gt;Luckily, all the tools we need to use it on Asterisk 1.4 are available for us, so the article will look at doing it on Asterisk 1.4 so you can get comfortable using that method before upgrading to Asterisk 1.6.0 (and beyond) if you need some of the new features. Some people have not been able to upgrade to Asterisk 1.6.0 due to the need for AgentCallbackLogin(), and have not had a chance to create the dialplans necessary.&lt;/p&gt;
-
-&lt;p&gt;The article will probably be called something like, &amp;ldquo;Migrating from AgentCallbackLogin() to standard dialplan methods&amp;rdquo;. I hope to have a draft out later today or tomorrow!&lt;/p&gt;
-</description>
+      <description>Just a quick note letting you know I&amp;rsquo;m back from vacation! Just been working on catching up on a few things, and have started working on a new article. It will be focusing on how to convert from using AgentCallbackLogin() to using the AddQueueMember() method of dynamically adding members to queues. Since AgentCallbackLogin() has been removed from Asterisk 1.6.0 and beyond, you&amp;rsquo;ll need to use the AddQueueMember() method. Luckily, all the tools we need to use it on Asterisk 1.4 are available for us, so the article will look at doing it on Asterisk 1.4 so you can get comfortable using that method before upgrading to Asterisk 1.6.0 (and beyond) if you need some of the new features.</description>
     </item>
     
   </channel>

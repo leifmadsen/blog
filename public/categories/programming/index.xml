@@ -15,48 +15,7 @@
       <pubDate>Wed, 09 Sep 2015 21:20:40 +0000</pubDate>
       
       <guid>http://blog.leifmadsen.com/blog/2015/09/09/configuring-powerline-to-show-working-git-branch/</guid>
-      <description>&lt;p&gt;So the documentation for &lt;a href=&#34;http://powerline.readthedocs.org/en/latest/index.html&#34;&gt;Powerline&lt;/a&gt; kind of sucks. I followed &lt;a href=&#34;http://fedoramagazine.org/add-power-terminal-powerline&#34;&gt;this&lt;/a&gt; pretty good article on getting started with it. First thing I noticed however is that the &lt;code&gt;if&lt;/code&gt; statement on the article doesn&amp;rsquo;t work if you don&amp;rsquo;t have powerline installed (which kind of defeats the purpose of having the &lt;code&gt;if&lt;/code&gt; statement there at all).&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;# if powerline is installed, then use it
-command -v powerline-daemon &amp;amp;&amp;gt;/dev/null
-if [ $? -eq 0 ]; then
-powerline-daemon -q
-POWERLINE_BASH_CONTINUATION=1
-POWERLINE_BASH_SELECT=1
-. /usr/share/powerline/bash/powerline.sh
-fi
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Next up is the configuration. I primarily use my bash prompt as a way to indicate which branch I&amp;rsquo;m working in within a Git repository. You need to point at the &lt;code&gt;default_leftonly&lt;/code&gt; theme which is pretty easy to find when you web search for it. The issue is everything seems to just point you at the powerline docs, which aren&amp;rsquo;t the most clear.&lt;/p&gt;
-
-&lt;p&gt;First, start by creating a local configuration directory that will override the configuration for powerline for your user.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;$ mkdir -p ~/.config/powerline
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Then the next thing is to copy over the &lt;code&gt;config.json&lt;/code&gt; from the main powerline configuration directory where you can find the available color schemes and other shell, i3, vim, etc themes.&lt;/p&gt;
-
-&lt;p&gt;(Again, the documentation kind of sucks on where the root of these configurations live&amp;hellip;)&lt;/p&gt;
-
-&lt;p&gt;On my Fedora 22 system they live in &lt;code&gt;/etc/xdg/powerline/&lt;/code&gt;. I then copy the &lt;code&gt;config.json&lt;/code&gt; from that directory to &lt;code&gt;~/.config/powerline&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;To get the Git branch stuff going, I modified the configuration file in the following way:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;--- /etc/xdg/powerline/config.json 2015-02-18 18:56:51.000000000 -0500
-+++ /home/lmadsen/.config/powerline/config.json 2015-09-09 17:11:43.937522571 -0400
-@@ -18,7 +18,7 @@
-},
-&amp;quot;shell&amp;quot;: {
-&amp;quot;colorscheme&amp;quot;: &amp;quot;default&amp;quot;,
-- &amp;quot;theme&amp;quot;: &amp;quot;default&amp;quot;,
-+ &amp;quot;theme&amp;quot;: &amp;quot;default_leftonly&amp;quot;,
-&amp;quot;local_themes&amp;quot;: {
-&amp;quot;continuation&amp;quot;: &amp;quot;continuation&amp;quot;,
-&amp;quot;select&amp;quot;: &amp;quot;select&amp;quot;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;To make it active you can run &lt;code&gt;powerline-config --reload&lt;/code&gt;. If you have any errors in your configuration (I actually ran into this when playing with the colorscheme setting and used &amp;ldquo;solorized&amp;rdquo; instead of &amp;ldquo;solarized&amp;rdquo;), you can check it with &lt;code&gt;powerline-lint&lt;/code&gt;.&lt;/p&gt;
-</description>
+      <description>So the documentation for Powerline kind of sucks. I followed this pretty good article on getting started with it. First thing I noticed however is that the if statement on the article doesn&amp;rsquo;t work if you don&amp;rsquo;t have powerline installed (which kind of defeats the purpose of having the if statement there at all). # if powerline is installed, then use it command -v powerline-daemon &amp;amp;&amp;gt;/dev/null if [ $? -eq 0 ]; then powerline-daemon -q POWERLINE_BASH_CONTINUATION=1 POWERLINE_BASH_SELECT=1 .</description>
     </item>
     
     <item>
@@ -65,18 +24,7 @@ fi
       <pubDate>Thu, 19 Jul 2012 15:03:05 +0000</pubDate>
       
       <guid>http://blog.leifmadsen.com/blog/2012/07/19/bash-creating-files-named-1-everywhere/</guid>
-      <description>&lt;p&gt;So I ran into something kind of stupid today :)  Adding a little note for anyone who might run into a similar instance.&lt;/p&gt;
-
-&lt;p&gt;I have some &lt;code&gt;ssh-add&lt;/code&gt; stuff that gets run in my &lt;code&gt;.bashrc&lt;/code&gt; file, but when I was outputting it, I was doing:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;ssh-add ~/.ssh/some_key &amp;gt; /dev/null 2&amp;amp;&amp;gt;1
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Note the &lt;code&gt;2&amp;amp;&amp;gt;1&lt;/code&gt; at the end. That means to redirect output to a file named 1. You need to flip the &lt;code&gt;&amp;amp;&amp;gt;&lt;/code&gt; into &lt;code&gt;&amp;gt;&amp;amp;&lt;/code&gt;, so the fixed version looks like:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;ssh-add ~/.ssh/some_key &amp;gt; /dev/null 2&amp;gt;&amp;amp;1
-&lt;/code&gt;&lt;/pre&gt;
-</description>
+      <description>So I ran into something kind of stupid today :) Adding a little note for anyone who might run into a similar instance. I have some ssh-add stuff that gets run in my .bashrc file, but when I was outputting it, I was doing: ssh-add ~/.ssh/some_key &amp;gt; /dev/null 2&amp;amp;&amp;gt;1 Note the 2&amp;amp;&amp;gt;1 at the end. That means to redirect output to a file named 1. You need to flip the</description>
     </item>
     
     <item>
@@ -85,26 +33,7 @@ fi
       <pubDate>Mon, 16 Jan 2012 13:28:10 +0000</pubDate>
       
       <guid>http://blog.leifmadsen.com/blog/2012/01/16/converting-multiple-exten--lines-to-using-same--in-asterisk-dialplan/</guid>
-      <description>&lt;p&gt;Last week I wanted to start changing some 1.4 based Asterisk dialplan to a 1.8 based Asterisk system, and in that process wanted to convert lines like:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;exten =&amp;gt; _NXXNXXXXXX,1,NoOp()
-exten =&amp;gt; _NXXNXXXXXX,2,GotoIf($[...]?reject,1)
-exten =&amp;gt; _NXXNXXXXXX,3,Dial(SIP/foo/${EXTEN})
-...
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;into using the same =&amp;gt; prefix:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;exten =&amp;gt; _NXXNXXXXXX,1,NoOp()
- same =&amp;gt; n,GotoIf($[...]?reject,1)
- same =&amp;gt; n,Dial(SIP/foo/${EXTEN})
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;In order to do that, &lt;a href=&#34;https://twitter.com/#!/mikemking&#34;&gt;Mike King&lt;/a&gt; helped me out with the following regular expressing which I used in vim:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;%s/exten\s*=&amp;gt;\s*[^,]\+,\s*[n2-9]/ same =&amp;gt; n/g
-&lt;/code&gt;&lt;/pre&gt;
-</description>
+      <description>Last week I wanted to start changing some 1.4 based Asterisk dialplan to a 1.8 based Asterisk system, and in that process wanted to convert lines like: exten =&amp;gt; _NXXNXXXXXX,1,NoOp() exten =&amp;gt; _NXXNXXXXXX,2,GotoIf($[...]?reject,1) exten =&amp;gt; _NXXNXXXXXX,3,Dial(SIP/foo/${EXTEN}) ... into using the same =&amp;gt; prefix: exten =&amp;gt; _NXXNXXXXXX,1,NoOp() same =&amp;gt; n,GotoIf($[...]?reject,1) same =&amp;gt; n,Dial(SIP/foo/${EXTEN}) In order to do that, Mike King helped me out with the following regular expressing which I used</description>
     </item>
     
     <item>
@@ -113,27 +42,7 @@ exten =&amp;gt; _NXXNXXXXXX,3,Dial(SIP/foo/${EXTEN})
       <pubDate>Wed, 02 Nov 2011 16:08:40 +0000</pubDate>
       
       <guid>http://blog.leifmadsen.com/blog/2011/11/02/controlling-outbound-bitrate-using-tc/</guid>
-      <description>&lt;p&gt;Today I was using the VMware vCenter Converter application to build a VM from a physical machine so that I could replace Ubuntu 10.04.3 LTS with VMware ESXi (and move the functionality that the server is performing now to a VM instead of it being the base OS).&lt;/p&gt;
-
-&lt;p&gt;Because my server is colocated in a friends rack, and the bandwidth is shared, I needed to limit the rate at which the data was being sent from the colocated server to the virtual machine server. I needed to do this so he didn&amp;rsquo;t get pages, and so that my local connection would remain viable for VoIP communication.&lt;/p&gt;
-
-&lt;p&gt;After scouring Google, I found this page: &lt;a href=&#34;http://opalsoft.net/qos/DS.htm&#34;&gt;http://opalsoft.net/qos/DS.htm&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;I looked at the HTB queuing section, and came up with a simple rate limiter for my outbound data to a specific IP. The example he shows is more complex, but it gave me enough to make it work. Here is what I entered at the console:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;tc qdisc del dev eth0 root  # clear existing rules
-tc qdisc add dev eth0 root handle 1:0 htb
-tc class add dev eth0 parent 1:0 classid 1:1 htb rate 2048kbit
-tc class add dev eth0 parent 1:1 classid 1:2 htb rate 1228kbit ceil 2048kbit
-tc class add dev eth0 parent 1:2 classid 1:21 htb rate 1228kbit ceil 2048kbit
-tc qdisc add dev eth0 parent 1:21 handle 210: pfifo limit 10
-tc filter add dev eth0 parent 1:0 protocol ip prio 1 u32 match ip dst 172.16.0.228/32 flowid 1:21
-
-iptables -t mangle -A OUTPUT --dest 172.16.0.228 -p tcp -j MARK --set-mark 21
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;I&amp;rsquo;m sure I could have made that a bit more efficient on lines 4 and 5, but not knowing a ton about &lt;strong&gt;tc&lt;/strong&gt; and the fact it worked, made me happy enough :)&lt;/p&gt;
-</description>
+      <description>Today I was using the VMware vCenter Converter application to build a VM from a physical machine so that I could replace Ubuntu 10.04.3 LTS with VMware ESXi (and move the functionality that the server is performing now to a VM instead of it being the base OS). Because my server is colocated in a friends rack, and the bandwidth is shared, I needed to limit the rate at which the data was being sent from the colocated server to the virtual machine server.</description>
     </item>
     
     <item>
@@ -142,27 +51,7 @@ iptables -t mangle -A OUTPUT --dest 172.16.0.228 -p tcp -j MARK --set-mark 21
       <pubDate>Thu, 15 Sep 2011 12:34:35 +0000</pubDate>
       
       <guid>http://blog.leifmadsen.com/blog/2011/09/15/return-just-pid-of-script-with-ps-and-awk/</guid>
-      <description>&lt;p&gt;Today I ran into an issue where I am running a python script that I needed to get the process ID (PID) of, but that the process was being output with a space between &amp;lsquo;python&amp;rsquo; and the actual script name (in this case, jiraircbot.py).&lt;/p&gt;
-
-&lt;p&gt;I&amp;rsquo;m sure it&amp;rsquo;s totally overkill and there is a much easier way I didn&amp;rsquo;t find to do this, but after some scouring of The Google, I found something that works! (The purpose of this was to kill off a rogue script process each night so I could restart it.)&lt;/p&gt;
-
-&lt;p&gt;Here is what the output looks like with just &lt;code&gt;ps aux | grep python&lt;/code&gt;&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;# ps aux | grep python
-root      1120  0.0  0.2  50176  4380 ?        Sl   Aug04  24:52 /usr/bin/python /usr/bin/fail2ban-server -b -s /var/run/fail2ban/fail2ban.sock
-root     18182  2.2  1.5  35328 32148 pts/0    S    08:21   0:11 python jiraircbot.py
-root     18219  0.0  0.0   3328   804 pts/0    S+   08:29   0:00 grep python
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;A little bit more data than I wanted, plus of course &amp;lsquo;grep python&amp;rsquo; is always going to be returned if I just use grep straight up. Putting many pieces together from a few websites, this is what I came up with to just return the PID of the jiraircbot.py script:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;ps -eo pid,command | grep &amp;quot;jiraircbot.py&amp;quot; | grep -v grep | awk &#39;{print $1}&#39;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;What I&amp;rsquo;m doing, is controlling what is returned, so in this case have &lt;code&gt;ps&lt;/code&gt; just return the pid and command fields. Run that through &lt;code&gt;grep&lt;/code&gt; to just get the script I wanted, pipe that back through &lt;code&gt;grep&lt;/code&gt; to remove the line including &lt;code&gt;grep python&lt;/code&gt; and then pipe that through &lt;code&gt;awk&lt;/code&gt; to just return the first field (which would be the pid of the process I wanted).&lt;/p&gt;
-
-&lt;p&gt;All in all, a nice hack :)&lt;/p&gt;
-</description>
+      <description>Today I ran into an issue where I am running a python script that I needed to get the process ID (PID) of, but that the process was being output with a space between &amp;lsquo;python&amp;rsquo; and the actual script name (in this case, jiraircbot.py). I&amp;rsquo;m sure it&amp;rsquo;s totally overkill and there is a much easier way I didn&amp;rsquo;t find to do this, but after some scouring of The Google, I found something that works!</description>
     </item>
     
     <item>
@@ -171,51 +60,7 @@ root     18219  0.0  0.0   3328   804 pts/0    S+   08:29   0:00 grep python
       <pubDate>Sat, 13 Aug 2011 02:14:55 +0000</pubDate>
       
       <guid>http://blog.leifmadsen.com/blog/2011/08/13/set-and-goto-on-same-line/</guid>
-      <description>&lt;p&gt;(Thanks to Jared Smith for answering my question in IRC which is the inspiration for this post.)&lt;/p&gt;
-
-&lt;p&gt;Typically when I write dialplan, primarily in the case where I&amp;rsquo;m using a pattern match, I&amp;rsquo;ll save the dialed extension to a channel variable using &lt;code&gt;Set()&lt;/code&gt;, then do a &lt;code&gt;Goto()&lt;/code&gt; where the call logic is handled. The &lt;code&gt;Set()&lt;/code&gt; is so that I don&amp;rsquo;t lose the value of &lt;code&gt;${EXTEN}&lt;/code&gt; throughout the dialplan process, especially if I&amp;rsquo;m using other mechanics such as &lt;code&gt;GoSub()&lt;/code&gt; and others.&lt;/p&gt;
-
-&lt;p&gt;I&amp;rsquo;ve been doing this on two or three lines like this (usually three because I like using a &lt;code&gt;NoOp()&lt;/code&gt; or &lt;code&gt;Verbose()&lt;/code&gt; for the first priority):&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;exten =&amp;gt; _NXXNXXXXXX,1,NoOp()
-   same =&amp;gt; n,Set(DialedExtension=${EXTEN})
-   same =&amp;gt; n,Goto(CallHandler,1)
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;This is kind of annoying for each pattern match, especially if you&amp;rsquo;re going to do multiple. Here is a legitimate example of the &lt;code&gt;CallHandler&lt;/code&gt; extension:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;exten =&amp;gt; _NXXNXXXXXX,1,NoOp()
-   same =&amp;gt; n,Set(DialedExtension=${EXTEN})
-   same =&amp;gt; n,Goto(CallHandler,1)
-
-exten =&amp;gt; _1NXXNXXXXXX,1,NoOp()
-   same =&amp;gt; n,Set(DialedExtension=${EXTEN})
-   same =&amp;gt; n,Goto(CallHandler,1)
-
-exten =&amp;gt; _NXXXXXX,1,NoOp()
-   same =&amp;gt; n,Set(DialedExtension=${EXTEN})
-   same =&amp;gt; n,Goto(CallHandler,1)
-
-exten =&amp;gt; CallHandler,1,NoOp()
-   same =&amp;gt; n,Dial(${GLOBAL(PSTN_CONNECTION)}/${DialedExtension},30)
-   same =&amp;gt; n,Hangup()
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;It&amp;rsquo;s a bit annoying having to either type out the same type of logic multiple times, even if it&amp;rsquo;s only 2-3 lines (even if you just copy and paste the &lt;code&gt;same =&amp;gt;&lt;/code&gt; lines it&amp;rsquo;s a bit better, but still not ideal). So here&amp;rsquo;s a solution to the same problem of multiple pattern matches and doing a &lt;code&gt;Goto()&lt;/code&gt; our &lt;code&gt;CallHandler&lt;/code&gt; extension.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;exten =&amp;gt; _NXXNXXXXXX,1,GotoIf($[${EXISTS(${SET(DialedExtension=${EXTEN})})}]?CallHandler,1:i,1)
-exten =&amp;gt; _1NXXNXXXXXX,1,GotoIf($[${EXISTS(${SET(DialedExtension=${EXTEN})})}]?CallHandler,1:i,1)
-exten =&amp;gt; _NXXXXXX,1,GotoIf($[${EXISTS(${SET(DialedExtension=${EXTEN})})}]?CallHandler,1:i,1)
-
-exten =&amp;gt; CallHandler,1,NoOp()
-   same =&amp;gt; n,Dial(${GLOBAL(PSTN_CONNECTION)}/${DialedExtension},30)
-   same =&amp;gt; n,Hangup()
-
-exten =&amp;gt; i,1,Congestion()
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;While both ways are perfectly reasonable (and some may argue the more verbose method is easier to read), I like embedding dialplan into a single line when I can as I find it easier to maintain. I&amp;rsquo;m also pretty good at knowing how many brackets to end with when nesting functions, but not everyone is comfortable doing that; in those cases you should probably break it out to multiple lines in order to save debugging time. Both methods are perfectly valid, so enjoy using whichever you prefer!&lt;/p&gt;
-</description>
+      <description>(Thanks to Jared Smith for answering my question in IRC which is the inspiration for this post.) Typically when I write dialplan, primarily in the case where I&amp;rsquo;m using a pattern match, I&amp;rsquo;ll save the dialed extension to a channel variable using Set(), then do a Goto() where the call logic is handled. The Set() is so that I don&amp;rsquo;t lose the value of ${EXTEN} throughout the dialplan process, especially if I&amp;rsquo;m using other mechanics such as GoSub() and others.</description>
     </item>
     
     <item>
@@ -224,44 +69,7 @@ exten =&amp;gt; i,1,Congestion()
       <pubDate>Thu, 11 Aug 2011 15:48:54 +0000</pubDate>
       
       <guid>http://blog.leifmadsen.com/blog/2011/08/11/connecting-two-conferences-on-initial-join-with-cleanup/</guid>
-      <description>&lt;blockquote&gt;
-&lt;p&gt;Update 2011/12/15:  Updated the code to deal with a couple of people joining at about the same time by using GROUP() and GROUP_COUNT(). Additionally updated the &amp;lsquo;h&amp;rsquo; extension which was missing some code&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;For the last week or so at work, people have been saying, &amp;ldquo;Hey, I can&amp;rsquo;t join the conference call this morning because I&amp;rsquo;m driving but I can&amp;rsquo;t call into the conference room on that server&amp;rdquo;. There are really a couple solutions to the problem, 1) everyone should use the conference room that is accessible via the PSTN, 2) get the IT staff to allow PSTN access to the internal conference room.&lt;/p&gt;
-
-&lt;p&gt;Those would be reasonable solutions, but who wants to be reasonable?! Terry Wilson suggested that we just keep a persistent connection between the two PBXs so that conferences could be joined. (I also earlier suggested that someone could just bridge the conference rooms together from their phone, but that required someone to remember to do that.) So instead of keeping the conferences connected indefinitely, I thought of a way to only connect them when the conference started, and then to kill it when the last person left.&lt;/p&gt;
-
-&lt;p&gt;Below you will see the dialplan I wrote that sets up the call between the conference rooms, then tears them down when the last person leaves. (In case you care, we&amp;rsquo;re connecting a MeetMe() room on a Switchvox server with the ConfBridge() application running on an Asterisk 10 based box &amp;ndash; we use ConfBridge() to permit high quality audio and video conferencing during the daily stand up calls.)&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;[IncomingCalls]
-exten =&amp;gt; 500004,1,Verbose(2,${CALLERID(all)} is looking for a conference!)
-   same =&amp;gt; n,Playback(silence/1)
-   same =&amp;gt; n,Read(ConferenceRoom,conf-getconfno&amp;amp;beep)
-   same =&amp;gt; n,GotoIf($[${DIALPLAN_EXISTS(ConferenceRooms,${ConferenceRoom},1)}]?${ConferenceRoom},1:no_conf_room,1)
-   same =&amp;gt; n,Hangup()
-
-include =&amp;gt; ConferenceRooms
-
-[ConferenceRooms]
-exten =&amp;gt; 12345,1,Answer()
-   same =&amp;gt; n,Verbose(2,${CALLERID(all)} is joining the wideband public conference room with ${CONFBRIDGE_INFO(paries,12345)} people)
-   same =&amp;gt; n,Set(GROUP(conference)=12345)
-   same =&amp;gt; n,ExecIf($[0${CONFBRIDGE_INFO(parties,12345)} &amp;lt; 1 &amp;amp; ${GROUP_COUNT(12345@conference)} &amp;lt;= 1]?Originate(Local/bridge_conference@ConferenceRooms,app,ConfBridge,12345))
-   same =&amp;gt; n,ConfBridge(12345)
-   same =&amp;gt; n,Hangup()
-
-exten =&amp;gt; bridge_conference,1,NoOp()
-   same =&amp;gt; n,Dial(SIP/7070@remote-server.tld,,D(wwww12345#))
-
-exten =&amp;gt; no_conf_room,1,Verbose(2,${CALLERID(all)} attempted to join an non-existant conference room)
-   same =&amp;gt; n,Playback(conf-invalid)
-   same =&amp;gt; n,Goto(500004,1)
-
-exten =&amp;gt; h,1,NoOp()
-   same =&amp;gt; n,ExecIf($[0${CONFBRIDGE_INFO(parties,11111)} &amp;lt;= 1]?SoftHangup(SIP/remote-server.tld,a))
-&lt;/code&gt;&lt;/pre&gt;
-</description>
+      <description>Update 2011/12/15: Updated the code to deal with a couple of people joining at about the same time by using GROUP() and GROUP_COUNT(). Additionally updated the &amp;lsquo;h&amp;rsquo; extension which was missing some code For the last week or so at work, people have been saying, &amp;ldquo;Hey, I can&amp;rsquo;t join the conference call this morning because I&amp;rsquo;m driving but I can&amp;rsquo;t call into the conference room on that server&amp;rdquo;. There are really a couple solutions to the problem, 1) everyone should use the conference room that is accessible via the PSTN, 2) get the IT staff to allow PSTN access to the internal conference room.</description>
     </item>
     
     <item>
@@ -270,57 +78,7 @@ exten =&amp;gt; h,1,NoOp()
       <pubDate>Wed, 29 Sep 2010 14:25:50 +0000</pubDate>
       
       <guid>http://blog.leifmadsen.com/blog/2010/09/29/scheduling-automated-calls-between-two-participants-with-res_calendar/</guid>
-      <description>&lt;p&gt;Here is a little dialplan snippet I wrote this morning for the next edition of the Asterisk book. While I&amp;rsquo;m not going to delve into all the aspects of setting up res_calendar like we do in the book, I thought for those of you who might already have this working might enjoy it.&lt;/p&gt;
-
-&lt;p&gt;(The calendaring modules are available in Asterisk 1.8, which is currently in release candidate status. Check out &lt;a href=&#34;http://www.asterisk.org/downloads&#34;&gt;http://www.asterisk.org/downloads&lt;/a&gt; for the current version.)&lt;/p&gt;
-
-&lt;p&gt;I started with this little bit of dialplan that gets triggered when a call is answered from the calendaring module:&lt;/p&gt;
-
-&lt;p&gt;﻿﻿﻿&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;[AutomatedMeetingSetup]
-exten =&amp;gt; start,1,Verbose(2,Triggering meeting setup for two participants)
-   same =&amp;gt; n,Set(DeviceToDial=${FILTER(0-9A-Za-z,${CALENDAR_EVENT(location)})})
-   same =&amp;gt; n,Dial(SIP/${DeviceToDial},30)
-   same =&amp;gt; n,Hangup()
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;The location field in my calendar event (which in this case is labeled as Destination in my Google Calendar) contains the string 0000FFFF0002 which is the device identifier in my example.&lt;/p&gt;
-
-&lt;p&gt;Once you get that working, the cool magic happens below. In the following example, a call is placed from the calendaring module when a meeting needs to take place between two participants. The first part of the dialplan allows the first person called to accept or reject the meeting, and if accepted, to record a message for the other party. Once that recording is saved, the dialplan will go ahead and trigger a call to the other meeting participant.&lt;/p&gt;
-
-&lt;p&gt;When that meeting participant answers the call, a Macro() is employed to allow them to listen to the recorded message left by the first party, (i.e. &amp;ldquo;Hey Jim, this is Leif. We have a meeting scheduled right now.&amp;rdquo;). That person is then presented the same option to accept or reject the call by pressing 1 or 2.&lt;/p&gt;
-
-&lt;p&gt;Of course the dialplan could even by further expanded to play back messages when the calls were rejected, the option for the called party to leave a return message of why they are rejecting the call, and maybe even the ability to post-pone the call for a few minutes. All it takes is some clever dialplan!&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;[AutomatedMeetingSetup]
-exten =&amp;gt; start,1,Verbose(2,Triggering meeting setup for two participants)
-same =&amp;gt; n,Read(CheckMeetingAcceptance,to-confirm-wakeup&amp;amp;press-1&amp;amp;otherwise&amp;amp;press-2,,1)
-same =&amp;gt; n,GotoIf($[&amp;quot;${CheckMeetingAcceptance}&amp;quot; != &amp;quot;1&amp;quot;]?hangup,1)
-
-same =&amp;gt; n,Playback(silence/1&amp;amp;pls-rcrd-name-at-tone&amp;amp;and-prs-pound-whn-finished)
-same =&amp;gt; n,Set(__RandomNumber=${RAND()})
-same =&amp;gt; n,Record(/tmp/meeting-invite-${RandomNumber}.ulaw)
-
-same =&amp;gt; n,Set(DeviceToDial=${FILTER(0-9A-Za-z,${CALENDAR_EVENT(location)})})
-same =&amp;gt; n,Dial(SIP/${DeviceToDial},30,M(CheckConfirm))
-same =&amp;gt; n,Hangup()
-
-exten =&amp;gt; hangup,1,Verbose(2,Call was rejected)
-same =&amp;gt; n,Playback(vm-goodbye)
-same =&amp;gt; n,Hangup()
-
-[macro-CheckConfirm]
-exten =&amp;gt; s,1,Verbose(2,Allowing called party to accept or reject)
-same =&amp;gt; n,Playback(/tmp/meeting-invite-${RandomNumber})
-same =&amp;gt; n,Read(CheckMeetingAcceptance,to-confirm-wakeup&amp;amp;press-1&amp;amp;otherwise&amp;amp;press-2,,1)
-same =&amp;gt; n,GotoIf($[&amp;quot;${CheckMeetingAcceptance}&amp;quot; != &amp;quot;1&amp;quot;]?hangup,1)
-
-exten =&amp;gt; hangup,1,Verbose(2,Call was rejected by called party)
-same =&amp;gt; n,Playback(vm-goodbye)
-same =&amp;gt; n,Hangup()
-&lt;/code&gt;&lt;/pre&gt;
-</description>
+      <description>Here is a little dialplan snippet I wrote this morning for the next edition of the Asterisk book. While I&amp;rsquo;m not going to delve into all the aspects of setting up res_calendar like we do in the book, I thought for those of you who might already have this working might enjoy it. (The calendaring modules are available in Asterisk 1.8, which is currently in release candidate status. Check out http://www.asterisk.org/downloads for the current version.) I started with this little bit of dialplan that gets triggered when a call is answered from the calendaring module: ﻿﻿﻿ [AutomatedMeetingSetup] exten =&amp;gt; start,1,Verbose(2,Triggering meeting setup for two participants) same =&amp;gt; n,Set(DeviceToDial=${FILTER(0-9A-Za-z,${CALENDAR_EVENT(location)})}) same =&amp;gt; n,Dial(SIP/${DeviceToDial},30) same =&amp;gt; n,Hangup() The location field in my calendar event (which in this case is labeled as Destination in my Google Calendar) contains the string 0000FFFF0002 which is the device identifier in my example.</description>
     </item>
     
     <item>
@@ -329,12 +87,7 @@ same =&amp;gt; n,Hangup()
       <pubDate>Tue, 10 Aug 2010 14:03:13 +0000</pubDate>
       
       <guid>http://blog.leifmadsen.com/blog/2010/08/10/mindmeister-online-mind-mapping/</guid>
-      <description>&lt;p&gt;&lt;a href=&#34;http://www.russellbryant.net/&#34;&gt;Russell Bryant&lt;/a&gt; just sent me a link to a neat site that allows you to do online collaborative mind mapping: &lt;a href=&#34;http://www.mindmeister.com/&#34;&gt;MindMeister&lt;/a&gt;. If you&amp;rsquo;re not aware of what mind mapping software does, it is a method to quickly and easily allow you to brainstorm ideas without getting in the way too much. It works by starting from a central node and breaking out in lines from there where you start with an idea or thought, then break that thought down further with additional lines from that node.&lt;/p&gt;
-
-&lt;p&gt;While working on the next edition of the &lt;a href=&#34;http://www.asteriskdocs.org&#34;&gt;Asterisk book&lt;/a&gt;, we spent a significant amount of time using &lt;a href=&#34;http://freemind.sourceforge.net/wiki/index.php/Main_Page&#34;&gt;FreeMind&lt;/a&gt; to brainstorm ideas of what we wanted in the book, then develop a detailed outline to the book which included the chapters, and what each of those chapters would contain. This way we can reference the mindmap while working on the book, and later review all our thoughts to make sure we covered all our original ideas. We continue to refine the mindmap on an almost daily basis while we come up with additional ideas and layout tweaks while working on particular chapters.&lt;/p&gt;
-
-&lt;p&gt;The website allows you to import mindmaps from FreeMind into the site, which is a valuable tool for those who have existing mindmaps. Check it out and tell me what you think!&lt;/p&gt;
-</description>
+      <description>Russell Bryant just sent me a link to a neat site that allows you to do online collaborative mind mapping: MindMeister. If you&amp;rsquo;re not aware of what mind mapping software does, it is a method to quickly and easily allow you to brainstorm ideas without getting in the way too much. It works by starting from a central node and breaking out in lines from there where you start with an idea or thought, then break that thought down further with additional lines from that node.</description>
     </item>
     
     <item>
@@ -343,159 +96,7 @@ same =&amp;gt; n,Hangup()
       <pubDate>Tue, 04 Aug 2009 17:57:11 +0000</pubDate>
       
       <guid>http://blog.leifmadsen.com/blog/2009/08/04/consuming-soap-complextype-webservice-with-php/</guid>
-      <description>&lt;p&gt;I recently had a client request that I communicate with a webservice via SOAP in order to do some credit card authorization for an Asterisk project they were implementing. After a couple of days of reading several posts I found via Google (which funny enough weren&amp;rsquo;t exactly what I was looking for, but gave me JUST enough information to finally start putting it all together), I had something that worked.&lt;/p&gt;
-
-&lt;p&gt;In order to potentially save someone the hassle of having to figure out how to consume a complexType in SOAP via PHP (and not using NuSoap as many of the posts pointed out), I&amp;rsquo;m writing this down. As with many of my posts, there is probably just enough information here that will be useful for me in the future should I need to do this again. If this helps someone else out, then great!&lt;/p&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;&lt;strong&gt;Note:&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;I am not a programmer. What I&amp;rsquo;m showing may be entirely the WRONG approach to solving this issue, but it solves it for me. Feel free to provide better examples by commenting on this article. In addition, there is the potential I may be using the wrong terminology. Please feel free to correct me, and I will then update the article to reflect anything deemed to be incorrect._&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;First, you need to install the php-soap module for your PHP installation. This could require you to recompile PHP with SOAP support, or if you&amp;rsquo;re using a package based distro (like me), you may just need to do something like:&lt;/p&gt;
-
-&lt;p&gt;&lt;code&gt;# yum install php-soap&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;In order to give you just enough of a reference point to figure out what I&amp;rsquo;m trying to do here, the following snippet of XML code is from the webservice I&amp;rsquo;m trying to consume. It is the complextype which I need to perform request against, and defines how the object should be passed. I&amp;rsquo;ll then show the result. This is &lt;em&gt;not&lt;/em&gt; the entire WSDL.&lt;/p&gt;
-
-&lt;p&gt;First we&amp;rsquo;re looking at the element named &amp;lsquo;Purchase&amp;rsquo;. This element contains a complexType object named &lt;em&gt;oPurchaseRequest&lt;/em&gt; and receives a request of the type &lt;em&gt;PurchaseRequestType&lt;/em&gt;.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-xml&#34;&gt;&amp;lt;s:element name=&amp;quot;Purchase&amp;quot;&amp;gt;
- &amp;lt;s:complexType&amp;gt;
-   &amp;lt;s:sequence&amp;gt;
-     &amp;lt;s:element minOccurs=&amp;quot;0&amp;quot; maxOccurs=&amp;quot;1&amp;quot; name=&amp;quot;oPurchaseRequest&amp;quot; type=&amp;quot;tns:PurchaseRequestType&amp;quot;/&amp;gt;
-   &amp;lt;/s:sequence&amp;gt;
- &amp;lt;/s:complexType&amp;gt;
-&amp;lt;/s:element&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;The structure of the PurchaseRequestType is as follows. This is how we need to structure our complexType.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-xml&#34;&gt;&amp;lt;s:complexType name=&amp;quot;PurchaseRequestType&amp;quot;&amp;gt;
- &amp;lt;s:sequence&amp;gt;
-   &amp;lt;s:element minOccurs=&amp;quot;0&amp;quot; maxOccurs=&amp;quot;1&amp;quot; name=&amp;quot;MembershipNumber&amp;quot; type=&amp;quot;s:string&amp;quot;/&amp;gt;
-   &amp;lt;s:element minOccurs=&amp;quot;0&amp;quot; maxOccurs=&amp;quot;1&amp;quot; name=&amp;quot;SessionID&amp;quot; type=&amp;quot;s:string&amp;quot;/&amp;gt;
-   &amp;lt;s:element minOccurs=&amp;quot;0&amp;quot; maxOccurs=&amp;quot;1&amp;quot; name=&amp;quot;Password&amp;quot; type=&amp;quot;s:string&amp;quot;/&amp;gt;
-   &amp;lt;s:element minOccurs=&amp;quot;0&amp;quot; maxOccurs=&amp;quot;1&amp;quot; name=&amp;quot;Gender&amp;quot; type=&amp;quot;s:string&amp;quot;/&amp;gt;
-   &amp;lt;s:element minOccurs=&amp;quot;1&amp;quot; maxOccurs=&amp;quot;1&amp;quot; name=&amp;quot;RatePlanID&amp;quot; type=&amp;quot;s:int&amp;quot;/&amp;gt;
-   &amp;lt;s:element minOccurs=&amp;quot;0&amp;quot; maxOccurs=&amp;quot;1&amp;quot; name=&amp;quot;CCNumber&amp;quot; type=&amp;quot;s:string&amp;quot;/&amp;gt;
-   &amp;lt;s:element minOccurs=&amp;quot;1&amp;quot; maxOccurs=&amp;quot;1&amp;quot; name=&amp;quot;CCExpireMonth&amp;quot; type=&amp;quot;s:int&amp;quot;/&amp;gt;
-   &amp;lt;s:element minOccurs=&amp;quot;1&amp;quot; maxOccurs=&amp;quot;1&amp;quot; name=&amp;quot;CCExpireYear&amp;quot; type=&amp;quot;s:int&amp;quot;/&amp;gt;
-   &amp;lt;s:element minOccurs=&amp;quot;1&amp;quot; maxOccurs=&amp;quot;1&amp;quot; name=&amp;quot;CCCode&amp;quot; type=&amp;quot;s:int&amp;quot;/&amp;gt;
-   &amp;lt;s:element minOccurs=&amp;quot;1&amp;quot; maxOccurs=&amp;quot;1&amp;quot; name=&amp;quot;Zip&amp;quot; type=&amp;quot;s:int&amp;quot;/&amp;gt;
-  &amp;lt;/s:sequence&amp;gt;
- &amp;lt;/s:complexType&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;The magic really happens in the following code. It is how I built the object in order to be consumed by the webservice. It works by first creating a new standard class, and then creating another standard class inside the oPurchaseRequest object (which is the name of the complexType that the Purchase element is expecting). Then you build the oPurchaseRequest by adding the elements outlined by the PurchaseRequestType complexType, and assigning values to them.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-php&#34;&gt;$search_query = new StdClass();
-$search_query-&amp;gt;oPurchaseRequest = new StdClass();
-$search_query-&amp;gt;oPurchaseRequest-&amp;gt;MembershipNumber = $MembershipNumber;
-$search_query-&amp;gt;oPurchaseRequest-&amp;gt;SessionID = $SessionID;
-$search_query-&amp;gt;oPurchaseRequest-&amp;gt;Password = $Password;
-$search_query-&amp;gt;oPurchaseRequest-&amp;gt;Gender = $Gender;
-$search_query-&amp;gt;oPurchaseRequest-&amp;gt;RatePlanID = $RatePlanID;
-$search_query-&amp;gt;oPurchaseRequest-&amp;gt;CCNumber = $CCNumber;
-$search_query-&amp;gt;oPurchaseRequest-&amp;gt;CCExpireMonth = $CCExpireMonth;
-$search_query-&amp;gt;oPurchaseRequest-&amp;gt;CCExpireYear = $CCExpireYear;
-$search_query-&amp;gt;oPurchaseRequest-&amp;gt;CCCode = $CCCode;
-$search_query-&amp;gt;oPurchaseRequest-&amp;gt;Zip = $Zip;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;The entire snippet of code is available below.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-php&#34;&gt;// We can take in our arguments from the console if we&#39;re using PHP CLI
-$MembershipNumber = $argv[1];
-$SessionID = $argv[2];
-$Password = $argv[3];
-$Gender = $argv[4];
-$RatePlanID = $argv[5];
-$CCNumber = $argv[6];
-$CCExpireMonth = $argv[7];
-$CCExpireYear = $argv[8];
-$CCCode = $argv[9];
-$Zip = $argv[10];
-
-// Create the object we&#39;ll pass back over the SOAP interface. This is the MAGIC!
-$search_query = new StdClass();
-$search_query-&amp;gt;oPurchaseRequest = new StdClass();
-$search_query-&amp;gt;oPurchaseRequest-&amp;gt;MembershipNumber = $MembershipNumber;
-$search_query-&amp;gt;oPurchaseRequest-&amp;gt;SessionID = $SessionID;
-$search_query-&amp;gt;oPurchaseRequest-&amp;gt;Password = $Password;
-$search_query-&amp;gt;oPurchaseRequest-&amp;gt;Gender = $Gender;
-$search_query-&amp;gt;oPurchaseRequest-&amp;gt;RatePlanID = $RatePlanID;
-$search_query-&amp;gt;oPurchaseRequest-&amp;gt;CCNumber = $CCNumber;
-$search_query-&amp;gt;oPurchaseRequest-&amp;gt;CCExpireMonth = $CCExpireMonth;
-$search_query-&amp;gt;oPurchaseRequest-&amp;gt;CCExpireYear = $CCExpireYear;
-$search_query-&amp;gt;oPurchaseRequest-&amp;gt;CCCode = $CCCode;
-$search_query-&amp;gt;oPurchaseRequest-&amp;gt;Zip = $Zip;
-
-// setup some SOAP options
-echo &amp;quot;Setting up SOAP options\n&amp;quot;;
-$soap_options = array(
-        &#39;trace&#39;       =&amp;gt; 1,     // traces let us look at the actual SOAP messages later
-        &#39;exceptions&#39;  =&amp;gt; 1 );
-
-
-// configure our WSDL location
-echo &amp;quot;Configuring WSDL\n&amp;quot;;
-$wsdl = &amp;quot;https://locationofservices.tld/asterisk.asmx?WSDL&amp;quot;;
-
-
-// Make sure the PHP-Soap module is installed
-echo &amp;quot;Checking SoapClient exists\n&amp;quot;;
-if (!class_exists(&#39;SoapClient&#39;))
-{
-        die (&amp;quot;You haven&#39;t installed the PHP-Soap module.&amp;quot;);
-}
-
-// we use the WSDL file to create a connection to the web service
-echo &amp;quot;Creating webservice connection to $wsdl\n&amp;quot;;
-$webservice = new SoapClient($wsdl,$soap_options);
-
-echo &amp;quot;Attempting Purchase\n&amp;quot;;
-try {
-        $result = $webservice-&amp;gt;Purchase($search_query);
-
-        // save our results to some variables
-        $TransactionID = $result-&amp;gt;PurchaseResult-&amp;gt;TransactionID;
-        $ResponseCode = $result-&amp;gt;PurchaseResult-&amp;gt;ResponseCode;
-        $ResponseDetail = $result-&amp;gt;PurchaseResult-&amp;gt;ResponseDetail;
-        $AddMinutes = $result-&amp;gt;PurchaseResult-&amp;gt;AddMinutes;
-
-        // perform some logic, output the data to Asterisk, or whatever you want to do with it.
-
-} catch (SOAPFault $f) {
-        // handle the fault here
-}
-
-echo &amp;quot;Script complete\n\n&amp;quot;;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;You&amp;rsquo;ll notice that our results are passed back in the &amp;lsquo;try&amp;rsquo; statement. We assign the values passed back to some variables we could use. The layout of the result is similar to the request. It is laid out as follows in the WSDL.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-php&#34;&gt;&amp;lt;s:element name=&amp;quot;PurchaseResponse&amp;quot;&amp;gt;
- &amp;lt;s:complexType&amp;gt;
-  &amp;lt;s:sequence&amp;gt;
-   &amp;lt;s:element minOccurs=&amp;quot;0&amp;quot; maxOccurs=&amp;quot;1&amp;quot; name=&amp;quot;PurchaseResult&amp;quot; type=&amp;quot;tns:PurchaseResponseType&amp;quot;/&amp;gt;
-  &amp;lt;/s:sequence&amp;gt;
- &amp;lt;/s:complexType&amp;gt;
-&amp;lt;/s:element&amp;gt;
-
-&amp;lt;s:complexType name=&amp;quot;PurchaseResponseType&amp;quot;&amp;gt;
- &amp;lt;s:sequence&amp;gt;
-  &amp;lt;s:element minOccurs=&amp;quot;0&amp;quot; maxOccurs=&amp;quot;1&amp;quot; name=&amp;quot;TransactionID&amp;quot; type=&amp;quot;s:string&amp;quot;/&amp;gt;
-  &amp;lt;s:element minOccurs=&amp;quot;1&amp;quot; maxOccurs=&amp;quot;1&amp;quot; name=&amp;quot;ResponseCode&amp;quot; type=&amp;quot;tns:ResponseCodes&amp;quot;/&amp;gt;
-  &amp;lt;s:element minOccurs=&amp;quot;0&amp;quot; maxOccurs=&amp;quot;1&amp;quot; name=&amp;quot;ResponseDetail&amp;quot; type=&amp;quot;s:string&amp;quot;/&amp;gt;
-  &amp;lt;s:element minOccurs=&amp;quot;1&amp;quot; maxOccurs=&amp;quot;1&amp;quot; name=&amp;quot;AddMinutes&amp;quot; type=&amp;quot;s:int&amp;quot;/&amp;gt;
- &amp;lt;/s:sequence&amp;gt;
-&amp;lt;/s:complexType&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Hope that helps!&lt;/p&gt;
-</description>
+      <description>I recently had a client request that I communicate with a webservice via SOAP in order to do some credit card authorization for an Asterisk project they were implementing. After a couple of days of reading several posts I found via Google (which funny enough weren&amp;rsquo;t exactly what I was looking for, but gave me JUST enough information to finally start putting it all together), I had something that worked. In order to potentially save someone the hassle of having to figure out how to consume a complexType in SOAP via PHP (and not using NuSoap as many of the posts pointed out), I&amp;rsquo;m writing this down.</description>
     </item>
     
   </channel>

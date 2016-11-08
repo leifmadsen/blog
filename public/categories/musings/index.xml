@@ -15,18 +15,7 @@
       <pubDate>Fri, 25 Jul 2014 02:49:12 +0000</pubDate>
       
       <guid>http://blog.leifmadsen.com/blog/2014/07/25/rumors-of-my-death-have-been-greatly-exaggerated/</guid>
-      <description>&lt;p&gt;It&amp;rsquo;s been way too long since I&amp;rsquo;ve blogged. And this post isn&amp;rsquo;t going to be all the impressive unfortunately. However, I recently have been running a BBS and some friends and I have been playing LORD.&lt;/p&gt;
-
-&lt;p&gt;We&amp;rsquo;ve been playing this for the last few months, and I think I&amp;rsquo;m going to run a tournament. Perhaps with some sort of buy in like $10 or something, winner takes all.&lt;/p&gt;
-
-&lt;p&gt;Going to build it out in such a way that first person to beat the dragon 3 times will win the game, and at that point that person will win the pot.&lt;/p&gt;
-
-&lt;p&gt;Additionally, I&amp;rsquo;ve been reading a lot about the Go language and trying to get myself up to speed on that. Very interesting programming language. Essentially C but for concurrency (multiple processors).&lt;/p&gt;
-
-&lt;p&gt;I&amp;rsquo;m hoping to start blogging in the near future, but my current work has just kept me too busy and I haven&amp;rsquo;t really had anything all that worth of blogging about. I hope to start changing that around soon and get back to blogging on a semi-regular basis with things I&amp;rsquo;ve learned in the world of telecommunications and cloud platforms / virtualization.&lt;/p&gt;
-
-&lt;p&gt;Additionally, I don&amp;rsquo;t have any confirmation yet, but I&amp;rsquo;m pretty sure I&amp;rsquo;ll be attending AstriCon in Las Vegas this year. I&amp;rsquo;m going to figure it out either way, so hopefully i can meet up with some of you this year! The last few years I&amp;rsquo;ve just kind of mostly kept to myself and hung out with those I&amp;rsquo;ve met previously. I&amp;rsquo;m going to make a better attempt at reaching out to those I haven&amp;rsquo;t met before, so if you see me, come say hi please!&lt;/p&gt;
-</description>
+      <description>It&amp;rsquo;s been way too long since I&amp;rsquo;ve blogged. And this post isn&amp;rsquo;t going to be all the impressive unfortunately. However, I recently have been running a BBS and some friends and I have been playing LORD. We&amp;rsquo;ve been playing this for the last few months, and I think I&amp;rsquo;m going to run a tournament. Perhaps with some sort of buy in like $10 or something, winner takes all. Going to build it out in such a way that first person to beat the dragon 3 times will win the game, and at that point that person will win the pot.</description>
     </item>
     
     <item>
@@ -35,72 +24,7 @@
       <pubDate>Thu, 11 Oct 2012 20:43:35 +0000</pubDate>
       
       <guid>http://blog.leifmadsen.com/blog/2012/10/11/digium-d40-and-d70-phone-unboxing/</guid>
-      <description>
-
-&lt;p&gt;Today I received a couple of &lt;a href=&#34;http://www1.digium.com/en/products/phones&#34;&gt;phones&lt;/a&gt; from Digium; the D40 and D70. I&amp;rsquo;ll be using these phones for testing and documentation in the 4th edition of &lt;a href=&#34;http://shop.oreilly.com/product/9780596517342.do&#34;&gt;Asterisk: The Definitive Guide&lt;/a&gt; (which &lt;a href=&#34;http://www.coretel.ca/&#34;&gt;Jim Van Meggelen&lt;/a&gt;, &lt;a href=&#34;http://russellbryant.net&#34;&gt;Russell Bryant&lt;/a&gt; and &lt;a href=&#34;http://leifmadsen.com&#34;&gt;myself&lt;/a&gt; are working on right now).&lt;/p&gt;
-
-&lt;p&gt;Here is my unboxing of the phones and some commentary about my initial impressions of the hardware itself.&lt;/p&gt;
-
-&lt;p&gt;[caption id=&amp;ldquo;attachment_484&amp;rdquo; align=&amp;ldquo;aligncenter&amp;rdquo; width=&amp;ldquo;300&amp;rdquo;]&lt;a href=&#34;http://leifmadsen.files.wordpress.com/2012/10/2012-10-11-14-42-01.jpg&#34;&gt;&lt;img src=&#34;http://leifmadsen.files.wordpress.com/2012/10/2012-10-11-14-42-01.jpg?w=300&#34; alt=&#34;&#34; /&gt;&lt;/a&gt; Pretty boxes![/caption]&lt;/p&gt;
-
-&lt;p&gt;Phones arrived in some nice looking boxes.&lt;/p&gt;
-
-&lt;h2 id=&#34;digium-d40&#34;&gt;Digium D40&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://leifmadsen.files.wordpress.com/2012/10/2012-10-11-14-42-33.jpg&#34;&gt;&lt;img src=&#34;http://leifmadsen.files.wordpress.com/2012/10/2012-10-11-14-42-33.jpg?w=300&#34; alt=&#34;&#34; /&gt;&lt;/a&gt;&lt;a href=&#34;http://leifmadsen.files.wordpress.com/2012/10/2012-10-11-14-42-59.jpg&#34;&gt;&lt;img src=&#34;http://leifmadsen.files.wordpress.com/2012/10/2012-10-11-14-42-59.jpg?w=300&#34; alt=&#34;&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;Comes with a little pamphlet to help you get the phones setup on your network.&lt;a href=&#34;http://leifmadsen.files.wordpress.com/2012/10/2012-10-11-14-43-17.jpg&#34;&gt;&lt;img src=&#34;http://leifmadsen.files.wordpress.com/2012/10/2012-10-11-14-43-17.jpg?w=300&#34; alt=&#34;&#34; /&gt;&lt;/a&gt;&lt;a href=&#34;http://leifmadsen.files.wordpress.com/2012/10/2012-10-11-14-43-55.jpg&#34;&gt;&lt;img src=&#34;http://leifmadsen.files.wordpress.com/2012/10/2012-10-11-14-43-55.jpg?w=300&#34; alt=&#34;&#34; /&gt;&lt;/a&gt;&lt;a href=&#34;http://leifmadsen.files.wordpress.com/2012/10/2012-10-11-14-45-16.jpg&#34;&gt;&lt;img src=&#34;http://leifmadsen.files.wordpress.com/2012/10/2012-10-11-14-45-16.jpg?w=300&#34; alt=&#34;&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;Comes with all the little things you need to get the phone up and running, including a network cable. I was just using POE to power the phone, so I didn&amp;rsquo;t end up with the 5VDC power adapter.
-&lt;a href=&#34;http://leifmadsen.files.wordpress.com/2012/10/2012-10-11-14-47-01.jpg&#34;&gt;&lt;img src=&#34;http://leifmadsen.files.wordpress.com/2012/10/2012-10-11-14-47-01.jpg?w=300&#34; alt=&#34;&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;Nice looking base. Easy to put onto the phone. Just uses friction to hold the phones on the base. Not sure how well that&amp;rsquo;ll work over time, but this isn&amp;rsquo;t something that should be getting attached and detached a lot. The space for cables in the base is also quite large.&lt;/p&gt;
-
-&lt;p&gt;[caption id=&amp;ldquo;attachment_491&amp;rdquo; align=&amp;ldquo;aligncenter&amp;rdquo; width=&amp;ldquo;300&amp;rdquo;]&lt;img src=&#34;http://leifmadsen.files.wordpress.com/2012/10/2012-10-11-14-48-58.jpg?w=300&#34; alt=&#34;&#34; /&gt; Holes to mount to wall. Requires adapter.[/caption]&lt;/p&gt;
-
-&lt;p&gt;[caption id=&amp;ldquo;attachment_492&amp;rdquo; align=&amp;ldquo;aligncenter&amp;rdquo; width=&amp;ldquo;300&amp;rdquo;]&lt;a href=&#34;http://leifmadsen.files.wordpress.com/2012/10/2012-10-11-14-49-36.jpg&#34;&gt;&lt;img src=&#34;http://leifmadsen.files.wordpress.com/2012/10/2012-10-11-14-49-36.jpg?w=300&#34; alt=&#34;&#34; /&gt;&lt;/a&gt; Easy access![/caption]&lt;/p&gt;
-
-&lt;p&gt;Lots of space for my hand to plug in cables. Much nicer than any of the Polycom bases where I usually give up and just remove it.&lt;/p&gt;
-
-&lt;p&gt;[caption id=&amp;ldquo;attachment_495&amp;rdquo; align=&amp;ldquo;aligncenter&amp;rdquo; width=&amp;ldquo;300&amp;rdquo;]&lt;a href=&#34;http://leifmadsen.files.wordpress.com/2012/10/2012-10-11-14-51-00.jpg&#34;&gt;&lt;img src=&#34;http://leifmadsen.files.wordpress.com/2012/10/2012-10-11-14-51-00.jpg?w=300&#34; alt=&#34;&#34; /&gt;&lt;/a&gt; Boot screen[/caption]&lt;/p&gt;
-
-&lt;p&gt;Booting up with the Digium logo.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://leifmadsen.files.wordpress.com/2012/10/2012-10-11-14-49-56.jpg&#34;&gt;&lt;img src=&#34;http://leifmadsen.files.wordpress.com/2012/10/2012-10-11-14-49-56.jpg?w=300&#34; alt=&#34;&#34; /&gt;&lt;/a&gt;&lt;a href=&#34;http://leifmadsen.files.wordpress.com/2012/10/2012-10-11-14-50-51.jpg&#34;&gt;&lt;img src=&#34;http://leifmadsen.files.wordpress.com/2012/10/2012-10-11-14-50-51.jpg?w=300&#34; alt=&#34;&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;[caption id=&amp;ldquo;attachment_496&amp;rdquo; align=&amp;ldquo;aligncenter&amp;rdquo; width=&amp;ldquo;300&amp;rdquo;]&lt;a href=&#34;http://leifmadsen.files.wordpress.com/2012/10/2012-10-11-14-54-35.jpg&#34;&gt;&lt;img src=&#34;http://leifmadsen.files.wordpress.com/2012/10/2012-10-11-14-54-35.jpg?w=300&#34; alt=&#34;&#34; /&gt;&lt;/a&gt; Handset hook access[/caption]&lt;/p&gt;
-
-&lt;p&gt;The tab on the back here is well designed so that you don&amp;rsquo;t require a tool to pull out and flip around. I prefer to have the hook for the handset so it doesn&amp;rsquo;t fall off the base easily. On the Polycoms (which have the same type of setup) it&amp;rsquo;s nearly impossible to remove with your fingers&lt;/p&gt;
-
-&lt;p&gt;[caption id=&amp;ldquo;attachment_497&amp;rdquo; align=&amp;ldquo;aligncenter&amp;rdquo; width=&amp;ldquo;300&amp;rdquo;]&lt;a href=&#34;http://leifmadsen.files.wordpress.com/2012/10/2012-10-11-14-56-01.jpg&#34;&gt;&lt;img src=&#34;http://leifmadsen.files.wordpress.com/2012/10/2012-10-11-14-56-01.jpg?w=300&#34; alt=&#34;&#34; /&gt;&lt;/a&gt; D40 vs IP335 size comparison[/caption]&lt;/p&gt;
-
-&lt;p&gt;.Size comparison between the D40 and IP335.&lt;/p&gt;
-
-&lt;h2 id=&#34;digium-d70&#34;&gt;Digium D70&lt;/h2&gt;
-
-&lt;p&gt;[caption id=&amp;ldquo;attachment_498&amp;rdquo; align=&amp;ldquo;aligncenter&amp;rdquo; width=&amp;ldquo;300&amp;rdquo;]&lt;a href=&#34;http://leifmadsen.files.wordpress.com/2012/10/2012-10-11-14-57-40.jpg&#34;&gt;&lt;img src=&#34;http://leifmadsen.files.wordpress.com/2012/10/2012-10-11-14-57-40.jpg?w=300&#34; alt=&#34;&#34; /&gt;&lt;/a&gt; Open box[/caption]&lt;/p&gt;
-
-&lt;p&gt;[caption id=&amp;ldquo;attachment_500&amp;rdquo; align=&amp;ldquo;aligncenter&amp;rdquo; width=&amp;ldquo;300&amp;rdquo;]&lt;a href=&#34;http://leifmadsen.files.wordpress.com/2012/10/2012-10-11-14-58-28.jpg&#34;&gt;&lt;img src=&#34;http://leifmadsen.files.wordpress.com/2012/10/2012-10-11-14-58-28.jpg?w=300&#34; alt=&#34;&#34; /&gt;&lt;/a&gt; Hidden compartment[/caption]&lt;/p&gt;
-
-&lt;p&gt;[caption id=&amp;ldquo;attachment_503&amp;rdquo; align=&amp;ldquo;aligncenter&amp;rdquo; width=&amp;ldquo;300&amp;rdquo;]&lt;a href=&#34;http://leifmadsen.files.wordpress.com/2012/10/2012-10-11-15-00-52.jpg&#34;&gt;&lt;img src=&#34;http://leifmadsen.files.wordpress.com/2012/10/2012-10-11-15-00-52.jpg?w=300&#34; alt=&#34;&#34; /&gt;&lt;/a&gt; Back of the D70[/caption]&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://leifmadsen.files.wordpress.com/2012/10/2012-10-11-14-57-57.jpg&#34;&gt;&lt;img src=&#34;http://leifmadsen.files.wordpress.com/2012/10/2012-10-11-14-57-57.jpg?w=300&#34; alt=&#34;&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://leifmadsen.files.wordpress.com/2012/10/2012-10-11-14-58-46.jpg&#34;&gt;&lt;img src=&#34;http://leifmadsen.files.wordpress.com/2012/10/2012-10-11-14-58-46.jpg?w=300&#34; alt=&#34;&#34; /&gt;&lt;/a&gt;
-&lt;a href=&#34;http://leifmadsen.files.wordpress.com/2012/10/2012-10-11-14-59-58.jpg&#34;&gt;&lt;img src=&#34;http://leifmadsen.files.wordpress.com/2012/10/2012-10-11-14-59-58.jpg?w=300&#34; alt=&#34;&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://leifmadsen.files.wordpress.com/2012/10/2012-10-11-15-01-37.jpg&#34;&gt;&lt;img src=&#34;http://leifmadsen.files.wordpress.com/2012/10/2012-10-11-15-01-37.jpg?w=300&#34; alt=&#34;&#34; /&gt;&lt;/a&gt;&lt;a href=&#34;http://leifmadsen.files.wordpress.com/2012/10/2012-10-11-15-03-21.jpg&#34;&gt;&lt;img src=&#34;http://leifmadsen.files.wordpress.com/2012/10/2012-10-11-15-03-21.jpg?w=300&#34; alt=&#34;&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;I don&amp;rsquo;t quite get the base with the wall mount holes, but impossible mounting angles on the base. Must have something to do with the manufacturing process and not having separate molds for footing.&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;Update: Michael pointed out that the A-frame is actually two separate pieces, so with a (separately purchased) piece, you can attach it to the base and make the system wall mountable. With the number of phones I&amp;rsquo;ve actually wall mounted in deployments (I think the number is only one or two), I think I prefer the 2 options for steep and shallow angles. Neat idea.&lt;/em&gt;
-&lt;a href=&#34;http://leifmadsen.files.wordpress.com/2012/10/2012-10-11-15-03-34.jpg&#34;&gt;&lt;img src=&#34;http://leifmadsen.files.wordpress.com/2012/10/2012-10-11-15-03-34.jpg?w=300&#34; alt=&#34;&#34; /&gt;&lt;/a&gt;
-Side cut outs for cables that I didn&amp;rsquo;t even notice the first time through. Michael pointed out they are for cable management. Nice!&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://leifmadsen.files.wordpress.com/2012/10/2012-10-11-15-05-20.jpg&#34;&gt;&lt;img src=&#34;http://leifmadsen.files.wordpress.com/2012/10/2012-10-11-15-05-20.jpg?w=300&#34; alt=&#34;&#34; /&gt;&lt;/a&gt;Oh my! So much space! Very roomy :)
-&lt;a href=&#34;http://leifmadsen.files.wordpress.com/2012/10/2012-10-11-15-07-22.jpg&#34;&gt;&lt;img src=&#34;http://leifmadsen.files.wordpress.com/2012/10/2012-10-11-15-07-22.jpg?w=300&#34; alt=&#34;&#34; /&gt;&lt;/a&gt;Side by side comparison of the D70 vs the IP650 w/ sidecar.
-&lt;a href=&#34;http://leifmadsen.files.wordpress.com/2012/10/2012-10-11-15-08-05.jpg&#34;&gt;&lt;img src=&#34;http://leifmadsen.files.wordpress.com/2012/10/2012-10-11-15-08-05.jpg?w=300&#34; alt=&#34;&#34; /&gt;&lt;/a&gt;Front to back comparison of the D70 vs IP650 w/ sidecar.&lt;/p&gt;
-</description>
+      <description>Today I received a couple of phones from Digium; the D40 and D70. I&amp;rsquo;ll be using these phones for testing and documentation in the 4th edition of Asterisk: The Definitive Guide (which Jim Van Meggelen, Russell Bryant and myself are working on right now). Here is my unboxing of the phones and some commentary about my initial impressions of the hardware itself. [caption id=&amp;ldquo;attachment_484&amp;rdquo; align=&amp;ldquo;aligncenter&amp;rdquo; width=&amp;ldquo;300&amp;rdquo;] Pretty boxes![/caption] Phones arrived in some nice looking boxes.</description>
     </item>
     
     <item>
@@ -109,18 +33,7 @@ Side cut outs for cables that I didn&amp;rsquo;t even notice the first time thro
       <pubDate>Thu, 19 Jul 2012 15:03:05 +0000</pubDate>
       
       <guid>http://blog.leifmadsen.com/blog/2012/07/19/bash-creating-files-named-1-everywhere/</guid>
-      <description>&lt;p&gt;So I ran into something kind of stupid today :)  Adding a little note for anyone who might run into a similar instance.&lt;/p&gt;
-
-&lt;p&gt;I have some &lt;code&gt;ssh-add&lt;/code&gt; stuff that gets run in my &lt;code&gt;.bashrc&lt;/code&gt; file, but when I was outputting it, I was doing:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;ssh-add ~/.ssh/some_key &amp;gt; /dev/null 2&amp;amp;&amp;gt;1
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Note the &lt;code&gt;2&amp;amp;&amp;gt;1&lt;/code&gt; at the end. That means to redirect output to a file named 1. You need to flip the &lt;code&gt;&amp;amp;&amp;gt;&lt;/code&gt; into &lt;code&gt;&amp;gt;&amp;amp;&lt;/code&gt;, so the fixed version looks like:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;ssh-add ~/.ssh/some_key &amp;gt; /dev/null 2&amp;gt;&amp;amp;1
-&lt;/code&gt;&lt;/pre&gt;
-</description>
+      <description>So I ran into something kind of stupid today :) Adding a little note for anyone who might run into a similar instance. I have some ssh-add stuff that gets run in my .bashrc file, but when I was outputting it, I was doing: ssh-add ~/.ssh/some_key &amp;gt; /dev/null 2&amp;amp;&amp;gt;1 Note the 2&amp;amp;&amp;gt;1 at the end. That means to redirect output to a file named 1. You need to flip the</description>
     </item>
     
     <item>
@@ -129,14 +42,7 @@ Side cut outs for cables that I didn&amp;rsquo;t even notice the first time thro
       <pubDate>Mon, 09 Jan 2012 13:05:51 +0000</pubDate>
       
       <guid>http://blog.leifmadsen.com/blog/2012/01/09/commodore-64-turns-30-this-year/</guid>
-      <description>&lt;p&gt;Having found an article about the Commodore 64 turning 30 this year, I reflected back in a comment on that page about what it is like to be only 1 year older than the Commodore 64, a computer which spiked my interest in technology away from a games system to something much more. The original article is available at &lt;a href=&#34;http://www.linuxjournal.com/content/commodor-64-30-year&#34;&gt;http://www.linuxjournal.com/content/commodor-64-30-year&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&amp;ldquo;I just turned 31 a couple of days ago on January 7th, and when I was in grade 2 (about 8-9 years old I guess) I started getting interested in the Commodore 64s we had at our school that were plentiful, but rarely used. I remember the first thing the teacher taught me; $p$g&lt;/p&gt;
-
-&lt;p&gt;The Commodore 64 replaced my interest with Nintendo (which I still have) to a greater interest that shaped me and caused me to grow technologically.  This grew into the Packard Bell &lt;sup&gt;486&lt;/sup&gt;&amp;frasl;&lt;sub&gt;25&lt;/sub&gt; my parents bought where I played flight simulator (after my Dad purchased more RAM for the computer at $100 a MB), and ran a BBS (the first month I played around with the 2400 baud modem calling Las Vegas BBS numbers that a friends father gave me; I lived in Sarnia, ON, Canada which is north-east of Detroit), and eventually ran my own BBS. Running a BBS gave me the sense of community that I possess and the love of telecommunications that is my career to this day.&lt;/p&gt;
-
-&lt;p&gt;So thank you Commodore for your C64 which has allowed me to carve out my career and greatly influenced who I am; and not just professionally.&amp;rdquo;&lt;/p&gt;
-</description>
+      <description>Having found an article about the Commodore 64 turning 30 this year, I reflected back in a comment on that page about what it is like to be only 1 year older than the Commodore 64, a computer which spiked my interest in technology away from a games system to something much more. The original article is available at http://www.linuxjournal.com/content/commodor-64-30-year &amp;ldquo;I just turned 31 a couple of days ago on January 7th, and when I was in grade 2 (about 8-9 years old I guess) I started getting interested in the Commodore 64s we had at our school that were plentiful, but rarely used.</description>
     </item>
     
     <item>
@@ -145,12 +51,7 @@ Side cut outs for cables that I didn&amp;rsquo;t even notice the first time thro
       <pubDate>Sun, 30 Oct 2011 15:46:23 +0000</pubDate>
       
       <guid>http://blog.leifmadsen.com/blog/2011/10/30/</guid>
-      <description>&lt;p&gt;I think the best quote I heard the entire time came from @abalashov (Alex Balashov) during the AstriDevCon when we were talking about Asterisk documentation, and how we might better organize it within the source.&lt;/p&gt;
-
-&lt;p&gt;We were discussing perhaps moving some of the existing configuration file examples to a manpage, and Alex piped up to say, &lt;strong&gt;&amp;ldquo;Manpages are a vestige of our glorious, prehensile, curly-tailed past.&amp;rdquo;&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;There wasn&amp;rsquo;t much left to be said after that :)&lt;/p&gt;
-</description>
+      <description>I think the best quote I heard the entire time came from @abalashov (Alex Balashov) during the AstriDevCon when we were talking about Asterisk documentation, and how we might better organize it within the source. We were discussing perhaps moving some of the existing configuration file examples to a manpage, and Alex piped up to say, &amp;ldquo;Manpages are a vestige of our glorious, prehensile, curly-tailed past.&amp;rdquo; There wasn&amp;rsquo;t much left</description>
     </item>
     
     <item>
@@ -159,44 +60,7 @@ Side cut outs for cables that I didn&amp;rsquo;t even notice the first time thro
       <pubDate>Thu, 11 Aug 2011 15:48:54 +0000</pubDate>
       
       <guid>http://blog.leifmadsen.com/blog/2011/08/11/connecting-two-conferences-on-initial-join-with-cleanup/</guid>
-      <description>&lt;blockquote&gt;
-&lt;p&gt;Update 2011/12/15:  Updated the code to deal with a couple of people joining at about the same time by using GROUP() and GROUP_COUNT(). Additionally updated the &amp;lsquo;h&amp;rsquo; extension which was missing some code&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;For the last week or so at work, people have been saying, &amp;ldquo;Hey, I can&amp;rsquo;t join the conference call this morning because I&amp;rsquo;m driving but I can&amp;rsquo;t call into the conference room on that server&amp;rdquo;. There are really a couple solutions to the problem, 1) everyone should use the conference room that is accessible via the PSTN, 2) get the IT staff to allow PSTN access to the internal conference room.&lt;/p&gt;
-
-&lt;p&gt;Those would be reasonable solutions, but who wants to be reasonable?! Terry Wilson suggested that we just keep a persistent connection between the two PBXs so that conferences could be joined. (I also earlier suggested that someone could just bridge the conference rooms together from their phone, but that required someone to remember to do that.) So instead of keeping the conferences connected indefinitely, I thought of a way to only connect them when the conference started, and then to kill it when the last person left.&lt;/p&gt;
-
-&lt;p&gt;Below you will see the dialplan I wrote that sets up the call between the conference rooms, then tears them down when the last person leaves. (In case you care, we&amp;rsquo;re connecting a MeetMe() room on a Switchvox server with the ConfBridge() application running on an Asterisk 10 based box &amp;ndash; we use ConfBridge() to permit high quality audio and video conferencing during the daily stand up calls.)&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;[IncomingCalls]
-exten =&amp;gt; 500004,1,Verbose(2,${CALLERID(all)} is looking for a conference!)
-   same =&amp;gt; n,Playback(silence/1)
-   same =&amp;gt; n,Read(ConferenceRoom,conf-getconfno&amp;amp;beep)
-   same =&amp;gt; n,GotoIf($[${DIALPLAN_EXISTS(ConferenceRooms,${ConferenceRoom},1)}]?${ConferenceRoom},1:no_conf_room,1)
-   same =&amp;gt; n,Hangup()
-
-include =&amp;gt; ConferenceRooms
-
-[ConferenceRooms]
-exten =&amp;gt; 12345,1,Answer()
-   same =&amp;gt; n,Verbose(2,${CALLERID(all)} is joining the wideband public conference room with ${CONFBRIDGE_INFO(paries,12345)} people)
-   same =&amp;gt; n,Set(GROUP(conference)=12345)
-   same =&amp;gt; n,ExecIf($[0${CONFBRIDGE_INFO(parties,12345)} &amp;lt; 1 &amp;amp; ${GROUP_COUNT(12345@conference)} &amp;lt;= 1]?Originate(Local/bridge_conference@ConferenceRooms,app,ConfBridge,12345))
-   same =&amp;gt; n,ConfBridge(12345)
-   same =&amp;gt; n,Hangup()
-
-exten =&amp;gt; bridge_conference,1,NoOp()
-   same =&amp;gt; n,Dial(SIP/7070@remote-server.tld,,D(wwww12345#))
-
-exten =&amp;gt; no_conf_room,1,Verbose(2,${CALLERID(all)} attempted to join an non-existant conference room)
-   same =&amp;gt; n,Playback(conf-invalid)
-   same =&amp;gt; n,Goto(500004,1)
-
-exten =&amp;gt; h,1,NoOp()
-   same =&amp;gt; n,ExecIf($[0${CONFBRIDGE_INFO(parties,11111)} &amp;lt;= 1]?SoftHangup(SIP/remote-server.tld,a))
-&lt;/code&gt;&lt;/pre&gt;
-</description>
+      <description>Update 2011/12/15: Updated the code to deal with a couple of people joining at about the same time by using GROUP() and GROUP_COUNT(). Additionally updated the &amp;lsquo;h&amp;rsquo; extension which was missing some code For the last week or so at work, people have been saying, &amp;ldquo;Hey, I can&amp;rsquo;t join the conference call this morning because I&amp;rsquo;m driving but I can&amp;rsquo;t call into the conference room on that server&amp;rdquo;. There are really a couple solutions to the problem, 1) everyone should use the conference room that is accessible via the PSTN, 2) get the IT staff to allow PSTN access to the internal conference room.</description>
     </item>
     
     <item>
@@ -205,8 +69,7 @@ exten =&amp;gt; h,1,NoOp()
       <pubDate>Tue, 02 Aug 2011 18:26:57 +0000</pubDate>
       
       <guid>http://blog.leifmadsen.com/blog/2011/08/02/leifmadsen-enterprises-inc.-enters-its-7th-year-of-operation/</guid>
-      <description>&lt;p&gt;On this day in 2005, LeifMadsen Enterprises, Inc. was formally registered as an incorporation by the government of Canada! I&amp;rsquo;ve now been consulting on Asterisk professionally for over 6 years full time (and a few years before that!). I graduated from the telecommuncations technology program at Sheridan Institute of Technology in 2004. In that time I&amp;rsquo;ve spoken at every AstriCon since 2004 (the first one), and have helped write 4 books on the subject of Asterisk (The Future of Telephony 1st, 2nd editions, The Definitive Guide 3rd edition, Cookbook). I&amp;rsquo;m quite proud of the work I have done, and the future is looking bright. The next year in business should be very exciting with some projects currently underway that will allow me to expand my business and start managing more clients with an even higher quality of service. Here&amp;rsquo;s looking forward to year seven! (And subsequently, seven is my lucky number, and the day of January on which I was born.)&lt;/p&gt;
-</description>
+      <description>On this day in 2005, LeifMadsen Enterprises, Inc. was formally registered as an incorporation by the government of Canada! I&amp;rsquo;ve now been consulting on Asterisk professionally for over 6 years full time (and a few years before that!). I graduated from the telecommuncations technology program at Sheridan Institute of Technology in 2004. In that time I&amp;rsquo;ve spoken at every AstriCon since 2004 (the first one), and have helped write 4 books on the subject of Asterisk (The Future of Telephony 1st, 2nd editions, The Definitive Guide 3rd edition, Cookbook).</description>
     </item>
     
     <item>
@@ -215,12 +78,7 @@ exten =&amp;gt; h,1,NoOp()
       <pubDate>Fri, 29 Jul 2011 17:17:07 +0000</pubDate>
       
       <guid>http://blog.leifmadsen.com/blog/2011/07/29/chopsticks-played-on-the-phone/</guid>
-      <description>&lt;p&gt;As I haven&amp;rsquo;t updated my blog in a while (been very busy with wedding planning!) I thought I&amp;rsquo;d share this with you :)&lt;/p&gt;
-
-&lt;p&gt;Enjoy!&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://www.break.com/index/chopsticks-played-on-phone.html&#34;&gt;http://www.break.com/index/chopsticks-played-on-phone.html&lt;/a&gt;&lt;/p&gt;
-</description>
+      <description>As I haven&amp;rsquo;t updated my blog in a while (been very busy with wedding planning!) I thought I&amp;rsquo;d share this with you :) Enjoy! http://www.break.com/index/chopsticks-played-on-phone.html</description>
     </item>
     
     <item>
@@ -229,28 +87,7 @@ exten =&amp;gt; h,1,NoOp()
       <pubDate>Tue, 17 May 2011 20:40:55 +0000</pubDate>
       
       <guid>http://blog.leifmadsen.com/blog/2011/05/17/asterisk-1.8-and-the-importance-of-looking-ahead/</guid>
-      <description>&lt;p&gt;With the end of maintenance for the Asterisk 1.4 (the previous long term support (LTS) release) and Asterisk 1.6.2 (the previous standard, short term support release) branches, the time to look at using Asterisk 1.8 (the next long term support release, which provides another 4 years of maintenance, followed by a year of security support) is upon us. For those who have successful deployments of Asterisk 1.4 and 1.6.2 (heck, even 1.2!) there is no immediate need to migrate those existing systems; let them happily continue what they’re doing. And for those who have successful product launches based around 1.4 and 1.6.2, there is still a year of security maintenance, so the lead time to migrating existing systems to 1.8 can start now, but doesn&amp;rsquo;t need to happen for another 12 months, which gives us all a little breathing room.&lt;/p&gt;
-
-&lt;p&gt;It is important that the Asterisk community continue to look forward and progress the Asterisk project. The resources of the Asterisk Development community must be used as effectively as possible, and sometimes this means making tough decisions in the short-term for the greatest benefit in the long term. With the end of maintenance support after the releases of Asterisk 1.4.42 and 1.6.2.19 (with the first release candidates due out shortly), all focus can now be put onto Asterisk 1.8, continuing to stabilize additional components and making it the most robust, feature rich release of Asterisk to date.&lt;/p&gt;
-
-&lt;p&gt;I&amp;rsquo;ve already deployed numerous systems on Asterisk 1.8, and have been ecstatic as to the early reliability compared to other dot-zero releases. I&amp;rsquo;ve always been an early adopter when it came to Asterisk though, and I can certainly say the number of show-stopping issues I&amp;rsquo;ve run into has continued to decrease excessively over the years. When deploying Asterisk 1.4 pre-1.4.0, I was working on a database driven, physically distributed call centre where I learned many of the tricks of my trade. When I deployed another call centre running pre-1.6.2.0, I found it remarkably stable in comparison to those early 1.4 deployments (and that call centre is STILL running pre-1.6.2.0 code without issue).&lt;/p&gt;
-
-&lt;p&gt;Having done a few more deployments with pre-Asterisk 1.8.0  (and subsequently 1.8.2 and 1.8.3 based deployments), I&amp;rsquo;ve run into even less issues, and none of them show stoppers. I think a few things contribute to those successful deployments:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;Enhanced understanding of Asterisk after dozens of custom installations&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Development of best-practices in many areas of Asterisk&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;&lt;a href=&#34;https://reviewboard.asterisk.org&#34;&gt;Reviewboard&lt;/a&gt; which finds many issues in code BEFORE they are committed, rather than when doing deployments&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Developers having greater experience with the Asterisk code base and knowing how best to code in various situations &amp;ndash; greater code fu&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;One of my favourite new things is the &lt;a href=&#34;http://bamboo.asterisk.org&#34;&gt;Asterisk Testing Framework&lt;/a&gt;, currently being managed by Paul Belanger. The testing framework allows people to provide tests to the project in order to have greater confidence in performing upgrades going forward. So if there are some business critical aspects to your deployments, and you want to be confident that code changes don&amp;rsquo;t break your infrastructure, then spend the time writing tests and submitting them to the project. Not only will you be helping to make Asterisk better, you&amp;rsquo;ll be getting the direct advantage of having the developers notified of changes to functionality shortly after a commit.&lt;/p&gt;
-
-&lt;p&gt;More information about where Asterisk is going into the future was posted by Bryan M. Johns on the Digium blog: &lt;a href=&#34;http://blogs.digium.com/2011/05/03/the-importance-of-looking-ahead/&#34;&gt;http://blogs.digium.com/2011/05/03/the-importance-of-looking-ahead/&lt;/a&gt;&lt;/p&gt;
-</description>
+      <description>With the end of maintenance for the Asterisk 1.4 (the previous long term support (LTS) release) and Asterisk 1.6.2 (the previous standard, short term support release) branches, the time to look at using Asterisk 1.8 (the next long term support release, which provides another 4 years of maintenance, followed by a year of security support) is upon us. For those who have successful deployments of Asterisk 1.4 and 1.6.2 (heck, even 1.2!) there is no immediate need to migrate those existing systems; let them happily continue what they’re doing.</description>
     </item>
     
     <item>
@@ -259,16 +96,7 @@ exten =&amp;gt; h,1,NoOp()
       <pubDate>Thu, 27 Jan 2011 14:33:00 +0000</pubDate>
       
       <guid>http://blog.leifmadsen.com/blog/2011/01/27/asterisk-cookbook-is-on-we-think-/</guid>
-      <description>&lt;p&gt;After finishing the first draft of &lt;a href=&#34;http://oreilly.com/catalog/9780596517342&#34;&gt;Asterisk: The Definitive Guide (3rd Edition)&lt;/a&gt;, I&amp;rsquo;ve been a bit antsy with wanting to do some more writing. After about a week of a break (i.e. sleeping in past 7am for the first time in nearly a year), &lt;a href=&#34;http://www.russellbryant.net/blog/&#34;&gt;Russell Bryant&lt;/a&gt; and I have decided to team up on delivering the long awaited Asterisk Cookbook.&lt;/p&gt;
-
-&lt;p&gt;To start off with, we&amp;rsquo;ll be writing a short, 80-100 page eBook that will be distributed by O&amp;rsquo;Reilly in all the formats they support (&lt;a href=&#34;http://oreilly.com/ebooks/&#34;&gt;http://oreilly.com/ebooks/&lt;/a&gt;). The book is scheduled to have about 25 recipes, and should be written in the next 30-40 days, which would mean it should be available shortly after&lt;a href=&#34;http://oreilly.com/catalog/9780596517342&#34;&gt; Asterisk: The Definitive Guide&lt;/a&gt; is released (which means you can bundle them together! :)).&lt;/p&gt;
-
-&lt;p&gt;We just finished the outline this morning and sent it off to our editor Mike Loukides. Unless O&amp;rsquo;Reilly is already booked up (pun intended?) for the next few months with production and other books, we should be starting work on this as early as next week. If all goes well after we&amp;rsquo;re done the eBook, we&amp;rsquo;ll continue expanding it with the goal of eventually releasing it as a print edition.&lt;/p&gt;
-
-&lt;p&gt;As a side note, we&amp;rsquo;re still accepting reviews from people for Asterisk: The Definitive Guide. We have to return all edits and changes to O&amp;rsquo;Reilly no later than February 14th, so that means you still have a couple of weeks to get some reviews and testing done! If you could make sure you have your reviews done before February 11, 2011 that would help us out tremendously as we&amp;rsquo;ll be working on getting all the edits we need done in an email to O&amp;rsquo;Reilly by Monday, February 14th. You can help out at &lt;a href=&#34;http://ofps.oreilly.com/titles/9780596517342/&#34;&gt;http://ofps.oreilly.com/titles/9780596517342/&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;Thanks to everyone who has contributed thus far!&lt;/p&gt;
-</description>
+      <description>After finishing the first draft of Asterisk: The Definitive Guide (3rd Edition), I&amp;rsquo;ve been a bit antsy with wanting to do some more writing. After about a week of a break (i.e. sleeping in past 7am for the first time in nearly a year), Russell Bryant and I have decided to team up on delivering the long awaited Asterisk Cookbook. To start off with, we&amp;rsquo;ll be writing a short, 80-100 page eBook that will be distributed by O&amp;rsquo;Reilly in all the formats they support (http://oreilly.com/ebooks/).</description>
     </item>
     
     <item>
@@ -277,14 +105,7 @@ exten =&amp;gt; h,1,NoOp()
       <pubDate>Wed, 12 Jan 2011 01:30:09 +0000</pubDate>
       
       <guid>http://blog.leifmadsen.com/blog/2011/01/12/asterisk-the-definitive-guide-first-draft-complete/</guid>
-      <description>&lt;p&gt;Today we marked the finishing of Asterisk: The Definitive Guide (3rd Edition) by sending the first draft off to the O&amp;rsquo;Reilly production team. We finished nearly on schedule (within a few days, which is remarkable considering we added 150 more pages than originally intentioned) and have our favourite copy editor Rachel Head (formerly Wheeler) who did the first edition of Asterisk: The Future of Telephony who we emphatically enjoyed working with. We&amp;rsquo;re looking forward to it again.&lt;/p&gt;
-
-&lt;p&gt;With the draft done now, and the copy sent off to production to do their magic, I&amp;rsquo;m not quite sure what I&amp;rsquo;m going to do with my mornings! Perhaps I&amp;rsquo;ll start blogging about some dialplan stuff, or coming up with some sort of project to build. We&amp;rsquo;ll see! Any suggestions about things to document on my blog are of course welcome.&lt;/p&gt;
-
-&lt;p&gt;Don&amp;rsquo;t stop posting your comments and suggestions to the OFPS site though! (&lt;a href=&#34;http://ofps.oreilly.com&#34;&gt;http://ofps.oreilly.com&lt;/a&gt;) When the O&amp;rsquo;Reilly production team is done with the book in a few weeks, we&amp;rsquo;re going to have time to do additional modifications and editing, so your comments will get addressed then. It&amp;rsquo;s looking like the estimated shipping date of books for March is realistic at this point.&lt;/p&gt;
-
-&lt;p&gt;Thanks for all the support the community has shown us this far. This is going to be by far the best book on Asterisk to date.&lt;/p&gt;
-</description>
+      <description>Today we marked the finishing of Asterisk: The Definitive Guide (3rd Edition) by sending the first draft off to the O&amp;rsquo;Reilly production team. We finished nearly on schedule (within a few days, which is remarkable considering we added 150 more pages than originally intentioned) and have our favourite copy editor Rachel Head (formerly Wheeler) who did the first edition of Asterisk: The Future of Telephony who we emphatically enjoyed working with.</description>
     </item>
     
     <item>
@@ -293,61 +114,7 @@ exten =&amp;gt; h,1,NoOp()
       <pubDate>Mon, 03 Jan 2011 18:21:21 +0000</pubDate>
       
       <guid>http://blog.leifmadsen.com/blog/2011/01/03/2010-in-review/</guid>
-      <description>
-
-&lt;p&gt;The stats helper monkeys at WordPress.com mulled over how this blog did in 2010, and here&amp;rsquo;s a high level summary of its overall blog health:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;http://s0.wp.com/i/annual-recap/meter-healthy5.gif&#34; alt=&#34;Healthy blog!&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;The &lt;em&gt;Blog-Health-o-Meter™&lt;/em&gt; reads Wow.&lt;/p&gt;
-
-&lt;h2 id=&#34;crunchy-numbers&#34;&gt;Crunchy numbers&lt;/h2&gt;
-
-&lt;p&gt;&lt;img src=&#34;http://s0.wp.com/i/annual-recap/abstract-stats-1.png&#34; alt=&#34;Featured image&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;A helper monkey made this abstract painting, inspired by your stats.&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;About 3 million people visit the Taj Mahal every year.  This blog was viewed about &lt;strong&gt;39,000&lt;/strong&gt; times in 2010.  If it were the Taj Mahal, it would take about 5 days for that many people to see it.&lt;/p&gt;
-
-&lt;p&gt;In 2010, there were &lt;strong&gt;21&lt;/strong&gt; new posts, growing the total archive of this blog to 50 posts.&lt;/p&gt;
-
-&lt;p&gt;The busiest day of the year was September 29th with &lt;strong&gt;449&lt;/strong&gt; views. The most popular post that day was &lt;a href=&#34;http://leifmadsen.wordpress.com/2010/09/20/asterisk-imap-and-gmail/&#34;&gt;Asterisk IMAP and Gmail&lt;/a&gt;.&lt;/p&gt;
-
-&lt;h2 id=&#34;where-did-they-come-from&#34;&gt;Where did they come from?&lt;/h2&gt;
-
-&lt;p&gt;The top referring sites in 2010 were &lt;strong&gt;venturevoip.com&lt;/strong&gt;, &lt;strong&gt;leifmadsen.com&lt;/strong&gt;, &lt;strong&gt;johnlange.ca&lt;/strong&gt;, &lt;strong&gt;voip-info.org&lt;/strong&gt;, and &lt;strong&gt;google.com&lt;/strong&gt;.&lt;/p&gt;
-
-&lt;p&gt;Some visitors came searching, mostly for &lt;strong&gt;qr code vcard&lt;/strong&gt;, &lt;strong&gt;cisco vpn client ubuntu 9.10&lt;/strong&gt;, &lt;strong&gt;cisco vpn ubuntu 9.10&lt;/strong&gt;, &lt;strong&gt;vcard qr code&lt;/strong&gt;, and &lt;strong&gt;asterisk mixmonitor&lt;/strong&gt;.&lt;/p&gt;
-
-&lt;h2 id=&#34;attractions-in-2010&#34;&gt;Attractions in 2010&lt;/h2&gt;
-
-&lt;p&gt;These are the posts and pages that got the most views in 2010.&lt;/p&gt;
-
-&lt;p&gt;1&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://leifmadsen.wordpress.com/2010/09/20/asterisk-imap-and-gmail/&#34;&gt;Asterisk IMAP and Gmail&lt;/a&gt; September 2010
-4 comments and 1 Like on WordPress.com,&lt;/p&gt;
-
-&lt;p&gt;2&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://leifmadsen.wordpress.com/2009/08/27/creating-vcards-with-qr-codes/&#34;&gt;Creating vCards with QR Codes&lt;/a&gt; August 2009
-30 comments&lt;/p&gt;
-
-&lt;p&gt;3&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://leifmadsen.wordpress.com/2009/11/27/cisco-vpn-client-on-ubuntu-karmic-9-10/&#34;&gt;Cisco VPN Client on Ubuntu Karmic 9.10&lt;/a&gt; November 2009
-11 comments&lt;/p&gt;
-
-&lt;p&gt;4&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://leifmadsen.wordpress.com/2010/03/19/using-a-nokia-e71-with-asterisk-3g-or-wifi/&#34;&gt;Using a Nokia E71 with Asterisk (3G or WiFi)&lt;/a&gt; March 2010
-11 comments&lt;/p&gt;
-
-&lt;p&gt;5&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://leifmadsen.wordpress.com/2009/08/04/consuming-soap-complextype-webservice-with-php/&#34;&gt;Consuming SOAP complexType webservice with PHP&lt;/a&gt; August 2009
-21 comments&lt;/p&gt;
-</description>
+      <description>The stats helper monkeys at WordPress.com mulled over how this blog did in 2010, and here&amp;rsquo;s a high level summary of its overall blog health: The Blog-Health-o-Meter™ reads Wow. Crunchy numbers A helper monkey made this abstract painting, inspired by your stats. About 3 million people visit the Taj Mahal every year. This blog was viewed about 39,000 times in 2010. If it were the Taj Mahal, it would take about 5 days for that many people to see it.</description>
     </item>
     
     <item>
@@ -356,15 +123,7 @@ exten =&amp;gt; h,1,NoOp()
       <pubDate>Fri, 29 Oct 2010 18:35:10 +0000</pubDate>
       
       <guid>http://blog.leifmadsen.com/blog/2010/10/29/wow-lost-ticket-recovery-for-via-rail-is-pretty-much-garbage/</guid>
-      <description>&lt;p&gt;Here is the response I got from VIA Rail for a lost ticket, which was printed off at the time of departure for my return trip. Why they insist on printing the return ticket the time of departure I don&amp;rsquo;t know, but how ridiculous is this?&lt;/p&gt;
-
-&lt;p&gt;&amp;ldquo;&lt;em&gt;VIA Rail will not issue a free ticket against a lost or stolen ticket  being reported. Customers are required to purchase a new ticket at the  original fare and complete a Lost Ticket Indemnity Bond. Refund of lost  or stolen tickets are subject to a processing fee of $40 per person per  ticket. The claim for refund of lost tickets must be submitted no later  than 30 days after the last scheduled departure date shown on the  ticket.&lt;/em&gt;
-_ There is a holding period of 60 days from the date of  receipt or the last date of travel, whichever is later. Total time for  processing the claim is 75-90 days._&amp;rdquo;&lt;/p&gt;
-
-&lt;p&gt;Wow, $40 processing fee, purchase of ticket at full price, and a lead time of 3 months for a refund? It should also be noted the entire trip was $141 with taxes return, so the $40 processing fee seems extreme, not to mention the out of pocket expense and 3 month lead time for refund.&lt;/p&gt;
-
-&lt;p&gt;If tickets were scanned with a hand scanner when on the train, it would be trivial to cancel one ticket and scan the new ticket in order to avoid people scamming the system. I don&amp;rsquo;t think VIA Rail could make replacing a lost ticket any more inconvenient.&lt;/p&gt;
-</description>
+      <description>Here is the response I got from VIA Rail for a lost ticket, which was printed off at the time of departure for my return trip. Why they insist on printing the return ticket the time of departure I don&amp;rsquo;t know, but how ridiculous is this? &amp;ldquo;VIA Rail will not issue a free ticket against a lost or stolen ticket being reported. Customers are required to purchase a new ticket at the original fare and complete a Lost Ticket Indemnity Bond.</description>
     </item>
     
     <item>
@@ -373,26 +132,7 @@ _ There is a holding period of 60 days from the date of  receipt or the last dat
       <pubDate>Thu, 15 Apr 2010 21:30:21 +0000</pubDate>
       
       <guid>http://blog.leifmadsen.com/blog/2010/04/15/long-term-shopping-list-helps-couple-furnish-caledon-townhouse/</guid>
-      <description>
-
-&lt;p&gt;Recently, &lt;a href=&#34;http://www.twitter.com/jenspeedy&#34;&gt;@jenspeedy&lt;/a&gt; of &lt;a href=&#34;http://www.yourhome.ca&#34;&gt;http://www.yourhome.ca&lt;/a&gt; interviewed my fiancée and I about our recently purchased townhouse in Caledon after our designer &lt;a href=&#34;http://www.twitter.com/melissadavis&#34;&gt;@melissadavis&lt;/a&gt; of &lt;a href=&#34;http://www.melissadavis.ca&#34;&gt;http://www.melissadavis.ca&lt;/a&gt; and &lt;a href=&#34;http://www.designerfriend.ca&#34;&gt;http://www.designerfriend.ca&lt;/a&gt; recommended she speak to us. Danielle (my fiancée) and I had a pretty good idea about the items we wanted for our new townhouse build, but were looking for a designer to make sure we didn&amp;rsquo;t get too far off track, and to steer us into the direction we ultimately wanted to achieve, while not breaking the bank (i.e. we didn&amp;rsquo;t need someone to hand hold us, or to do the actual implementation; we just needed someone to do some floor plans and give us some ideas on furniture based on our tastes).&lt;/p&gt;
-
-&lt;p&gt;The article describes the process we took about keeping prices within a reasonable range while at the same time getting almost everything we wanted out of our home, knowing it&amp;rsquo;d be a medium-term house for us until we eventually scale up to something a bit larger in the future (like when we have kids, etc&amp;hellip;). Our thoughts are we&amp;rsquo;ll be there anywhere from 5-7 years, so obviously we want to make sure there are some items that help us enjoy our home while we live there, while giving good resale value in the future, but not installing frivolous items that aren&amp;rsquo;t necessarily worth it for a home we won&amp;rsquo;t be in for 20+ years.&lt;/p&gt;
-
-&lt;p&gt;Check out the article because it&amp;rsquo;s awesome ;)   &lt;a href=&#34;http://yourhome.ca/homes/realestate/buyingahome/article/795438--long-term-shopping-list-helps-couple-furnish-caledon-townhouse&#34;&gt;http://yourhome.ca/homes/realestate/buyingahome/article/795438&amp;ndash;long-term-shopping-list-helps-couple-furnish-caledon-townhouse&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;Our article is part of a larger set of articles too, so check those out as well:  &lt;a href=&#34;http://ow.ly/1z1us&#34;&gt;http://ow.ly/1z1us&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;PS: Check out this table we bought on the weekend based on style recommendations by Melissa Davis! She gave us a &amp;lsquo;shopping list&amp;rsquo; of items so we can get a feel for things that all go together. When we saw this table, I saw it and liked it quite a bit. I saw the price, and thought &amp;ldquo;wow, that&amp;rsquo;s a pretty good price!&amp;rdquo;. As we walked around the store looking for sofas, I kept coming back to it, and we both liked it so much we decided to buy it! Just remember not to be stuck on exactly what is on the list, because the purpose is to give you a feel for the type of pieces that would go together, but be sure to give it some of your own character!&lt;/em&gt;&lt;/p&gt;
-
-&lt;h4 id=&#34;what-was-on-the-list&#34;&gt;What was on the list&lt;/h4&gt;
-
-&lt;p&gt;[caption id=&amp;ldquo;&amp;rdquo; align=&amp;ldquo;aligncenter&amp;rdquo; width=&amp;ldquo;380&amp;rdquo; caption=&amp;ldquo;What was on the list&amp;rdquo;]&lt;img src=&#34;http://www.stylegarage.com/products1/dining/plank/image.jpg&#34; alt=&#34;What was on the list&#34; /&gt;[/caption]&lt;/p&gt;
-
-&lt;h4 id=&#34;what-we-got&#34;&gt;What we got&lt;/h4&gt;
-
-&lt;p&gt;[caption id=&amp;ldquo;&amp;rdquo; align=&amp;ldquo;aligncenter&amp;rdquo; width=&amp;ldquo;432&amp;rdquo; caption=&amp;ldquo;The table we purchased&amp;rdquo;]&lt;img src=&#34;http://sphotos.ak.fbcdn.net/hphotos-ak-snc3/hs385.snc3/23536_385681645761_512680761_3766020_7105510_n.jpg&#34; alt=&#34;Table we purchased&#34; /&gt;[/caption]&lt;/p&gt;
-</description>
+      <description>Recently, @jenspeedy of http://www.yourhome.ca interviewed my fiancée and I about our recently purchased townhouse in Caledon after our designer @melissadavis of http://www.melissadavis.ca and http://www.designerfriend.ca recommended she speak to us. Danielle (my fiancée) and I had a pretty good idea about the items we wanted for our new townhouse build, but were looking for a designer to make sure we didn&amp;rsquo;t get too far off track, and to steer us into the direction we ultimately wanted to achieve, while not breaking the bank (i.e.</description>
     </item>
     
     <item>
@@ -401,77 +141,7 @@ _ There is a holding period of 60 days from the date of  receipt or the last dat
       <pubDate>Fri, 19 Feb 2010 15:38:07 +0000</pubDate>
       
       <guid>http://blog.leifmadsen.com/blog/2010/02/19/musings-about-enumplus-and-isns/</guid>
-      <description>
-
-&lt;p&gt;Recently I&amp;rsquo;ve been playing around with a couple of technologies that I haven&amp;rsquo;t used in quite a while; ENUM and ISN. First, a little information on what these technologies are about.&lt;/p&gt;
-
-&lt;h2 id=&#34;isns-and-itads&#34;&gt;ISNs and ITADs&lt;/h2&gt;
-
-&lt;p&gt;First, lets talk about ISN (ITAD Subscriber Number) and ITAD (Internet Telephony Administrative Domain). I think the &lt;a href=&#34;http://www.freenum.org&#34;&gt;http://www.freenum.org&lt;/a&gt; website does a good job of succinctly describing the problem attempting to be addressed:&lt;/p&gt;
-
-&lt;p&gt;&amp;ldquo;The Freenum/ISN system is 12-digit-keypad (telephone handset) friendly method of providing mapping between users. While the eventual use of email-style URI pointers is the eventual goal for communications identifiers, it is still the case that the majority of the world&amp;rsquo;s telephony users are trapped using a 12-digit keypad for extended numeric entry, and it is for the purposes of these devices that the Freenum system and ISN dialing was designed as a &amp;ldquo;stopgap&amp;rdquo; which may last many years. Using ENUM-like methods and IETF standards but not using telephone numbers, the Freenum/ISN dialing system is designed to initially allow SIP-capable proxies and iPBX systems to connect to each other in a free, open, and protocol agnostic manner over the Internet. Initially focused on SIP voice communications, the platform is hoped to eventually extend to other communications methods as those protocols become more widespread.&amp;rdquo; &amp;ndash; freenum.org&lt;/p&gt;
-
-&lt;p&gt;An ISN is a number that looks like:  100*460&lt;/p&gt;
-
-&lt;p&gt;The ITAD part of that ISN is the number 460 where you can think of the 460 as the domain. If we used an email address (or SIP URI for that matter) as an example, we&amp;rsquo;d have something like leif@leifmadsen.com where leifmadsen.com would be the domain, and the number 460 would be the equivalent of that. The number 100 would be the unique identifier within that domain, which would represent &amp;lsquo;leif&amp;rsquo; prior to the email &amp;lsquo;at&amp;rsquo; symbol. And finally, you can think of the asterisk in the ISN as the &amp;lsquo;at&amp;rsquo; symbol (@) in the ISN. We could then read 100*460 as &amp;ldquo;extension 100 at ITAD 460&amp;rdquo;. And the 100*460 would then map to the SIP URI of sip:leif@leifmadsen.com (for example).&lt;/p&gt;
-
-&lt;p&gt;This allows a stopgap measure of permitting traditional telephony devices to dial VoIP addresses from their keypad. Because of the nature of VoIP and how a simple URI can actually ring multiple devices, enter into a queue, or an auto-attendant, it doesn&amp;rsquo;t always make sense to utilize a telephone number to represent a SIP URI (see more information about this below in the ENUM section). Perhaps you are a small company with approximately 20 devices, but only 2-3 phone numbers. It doesn&amp;rsquo;t make sense to obtain multiple phone numbers for your company just as a method of dialing a SIP URI from a traditional keypad. In this way, you can assign numbers any which way it makes sense in your company with ISNs.&lt;/p&gt;
-
-&lt;p&gt;The company with 20 extensions could then assign ISNs to each device such as:  201*460, 202*460 &amp;hellip; 220*460. The operator could be 0*460, and perhaps the auto-attendant could be 1*460. There are no set mechanisms or best practices (yet), but as time evolves, perhaps these will come to fruition.&lt;/p&gt;
-
-&lt;p&gt;I&amp;rsquo;m not sure if ISNs will catch on with the general public, as historically things like ENUM and other services of this nature haven&amp;rsquo;t progressed as much as they likely should, but the idea is sound, and certainly makes more sense to me than having to remember several phone numbers for each extension or location.&lt;/p&gt;
-
-&lt;p&gt;As this is simply an overview about ISNs, I&amp;rsquo;ll stop here. Future articles will delve into the configurations and testing for outbound and inbound calls with Asterisk, setting up DNS, etc. For now, see the &lt;a href=&#34;http://freenum.org&#34;&gt;http://freenum.org&lt;/a&gt; website for more information about configuring these aspects. Unfortunately the Asterisk information is out of date (in terms of utilizing the best features of the dialplan). I&amp;rsquo;d be happy to update the information if enough requests and interest is generated.&lt;/p&gt;
-
-&lt;h2 id=&#34;enumplus&#34;&gt;ENUMplus&lt;/h2&gt;
-
-&lt;p&gt;ENUMplus (&lt;a href=&#34;http://www.enumplus.org&#34;&gt;http://www.enumplus.org&lt;/a&gt;) is a site which takes the information from several ENUM databases and allows you to perform a single lookup using cURL. Since there is a lot of technology going on in that sentence, lets step back and define each of these aspects.&lt;/p&gt;
-
-&lt;p&gt;I think the wikipedia entry about ENUM does more justice about what it is than what I could do, so lets quote a resource :)&lt;/p&gt;
-
-&lt;p&gt;&amp;ldquo;&lt;strong&gt;Telephone number mapping&lt;/strong&gt; is the process of unifying the &lt;a href=&#34;http://blog.leifmadsen.com/wiki/Telephone&#34;&gt;telephone&lt;/a&gt; number system of the &lt;a href=&#34;http://blog.leifmadsen.com/wiki/Public_switched_telephone_network&#34;&gt;public switched telephone network&lt;/a&gt; with the &lt;a href=&#34;http://blog.leifmadsen.com/wiki/Internet&#34;&gt;Internet&lt;/a&gt; addressing and identification &lt;a href=&#34;http://blog.leifmadsen.com/wiki/Name_space&#34;&gt;name spaces&lt;/a&gt;. Telephone numbers are systematically organized in the &lt;a href=&#34;http://blog.leifmadsen.com/wiki/E.164&#34;&gt;E.164&lt;/a&gt; standard, while the Internet uses the &lt;a href=&#34;http://blog.leifmadsen.com/wiki/Domain_Name_System&#34;&gt;Domain Name System&lt;/a&gt; for linking &lt;a href=&#34;http://blog.leifmadsen.com/wiki/Domain_name&#34;&gt;domain names&lt;/a&gt; to &lt;a href=&#34;http://blog.leifmadsen.com/wiki/IP_address&#34;&gt;IP addresses&lt;/a&gt; and other resource information. Telephone number mapping systems provide facilities to determine applicable Internet communications servers responsible for servicing a given telephone number by simple lookups in the Domain Name System.&lt;/p&gt;
-
-&lt;p&gt;The most prominent facility for telephone number mapping is the E.164 NUmber Mapping (ENUM) standard. It uses special &lt;a href=&#34;http://blog.leifmadsen.com/wiki/DNS_record&#34;&gt;DNS record&lt;/a&gt; types to translate a telephone number into a &lt;a href=&#34;http://blog.leifmadsen.com/wiki/Uniform_Resource_Identifier&#34;&gt;Uniform Resource Identifier&lt;/a&gt; or IP address that can be used in Internet communications.&amp;rdquo; &amp;ndash; wikipedia entry at &lt;a href=&#34;http://en.wikipedia.org/wiki/Telephone_Number_Mapping&#34;&gt;http://en.wikipedia.org/wiki/Telephone_Number_Mapping&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;And cURL is a technology that allows you place a request via a website, and have information returned. It is most typically used by programmers to get information from a website without having to parse through the entire site.&lt;/p&gt;
-
-&lt;p&gt;So by marrying these two technologies, ENUM and cURL together, ENUMplus has created a one-stop-shop for performing ENUM lookups. By performing an ENUM lookup prior to placing a call from your Asterisk system, is that if a telephone number has been registered with one of the ENUM organizations and has a SIP URI to point to, then we can utilize that SIP URI instead of calling over the PSTN, which can save toll costs, and free up a circuit for other calls.&lt;/p&gt;
-
-&lt;p&gt;I originally wrote a section of dialplan while testing out the service (which is very quick!) and added it to the ENUMplus wiki page for the configuration of Asterisk 1.6 systems. Originally I had this done as a separate path for dialing that would utilize a prefix of 7 prior to dialing out in order to do an ENUM lookup, and then you could dial without the prefix if you didn&amp;rsquo;t want the lookup (or if the lookup failed). I&amp;rsquo;ve since realized that this method is the wrong approach for obvious reasons (who wants to dial the number twice?), so I have since modified my dialplan to always utilize ENUM lookups prior to placing a call via the PSTN.&lt;/p&gt;
-
-&lt;p&gt;I want to show you the following example from my dialplan, which I&amp;rsquo;ll eventually clean up and add to the ENUMplus wiki.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;exten =&amp;gt; _+1NXXNXXXXXX,1,Set(X=${EXTEN:1})
-exten =&amp;gt; _+1NXXNXXXXXX,n,Goto(setCID,1)
-exten =&amp;gt; _+NXXNXXXXXX,1,Set(X=1${EXTEN:1})
-exten =&amp;gt; _+NXXNXXXXXX,n,Goto(setCID,1)
-exten =&amp;gt; _1NXXNXXXXXX,1,Set(X=${EXTEN})
-exten =&amp;gt; _1NXXNXXXXXX,n,Goto(setCID,1)
-exten =&amp;gt; _NXXNXXXXXX,1,Goto(1${EXTEN},1)
-
-exten =&amp;gt; setCID,1,NoOp()
-exten =&amp;gt; setCID,n,Set(CALLERID(name)=LM Enterprises)
-exten =&amp;gt; setCID,n,Set(CALLERID(num)=4164790259)
-exten =&amp;gt; setCID,n,Goto(lookup,1)
-
-exten =&amp;gt; lookup,1,Verbose(2,Looking up direct dial via ENUM from ENUMPlus: ${X:1})
-exten =&amp;gt; lookup,n,Playback(silence/1&amp;amp;doing-enum-lookup)
-exten =&amp;gt; lookup,n,Set(CURL_RESULT=${CURL(${GLOBAL(G_ENUMPLUS_API)}/${X:1},key=${GLOBAL(G_ENUMPLUS_KEY)})})
-exten =&amp;gt; lookup,n,GotoIf($[${ISNULL(${CURL_RESULT})}]?no_result,1)
-exten =&amp;gt; lookup,n,Goto(dial,1)
-
-exten =&amp;gt; dial,1,Verbose(2,Lookup returned:  ${CURL_RESULT})
-exten =&amp;gt; dial,n,Playback(enum-lookup-successful)
-exten =&amp;gt; dial,n,Dial(${CUT(CURL_RESULT,|,1)},30)
-exten =&amp;gt; dial,n,Hangup()
-
-exten =&amp;gt; no_result,1,Verbose(2,ENUMPlus returned no data.)
-exten =&amp;gt; no_result,n,Playback(silence/1&amp;amp;enum-lookup-failed)
-exten =&amp;gt; no_result,n,Set(OUTBOUND_ROUTE=SIP/${DEFAULT_ITSP_ROUTE})
-exten =&amp;gt; no_result,n,Dial(${OUTBOUND_ROUTE}/${X})
-exten =&amp;gt; no_result,n,Hangup()
-&lt;/code&gt;&lt;/pre&gt;
-</description>
+      <description>Recently I&amp;rsquo;ve been playing around with a couple of technologies that I haven&amp;rsquo;t used in quite a while; ENUM and ISN. First, a little information on what these technologies are about. ISNs and ITADs First, lets talk about ISN (ITAD Subscriber Number) and ITAD (Internet Telephony Administrative Domain). I think the http://www.freenum.org website does a good job of succinctly describing the problem attempting to be addressed: &amp;ldquo;The Freenum/ISN system is 12-digit-keypad (telephone handset) friendly method of providing mapping between users.</description>
     </item>
     
   </channel>
