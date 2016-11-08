@@ -15,26 +15,7 @@
       <pubDate>Fri, 30 Oct 2015 20:30:27 +0000</pubDate>
       
       <guid>http://blog.leifmadsen.com/blog/2015/10/30/docker-container-results-in-x509-failed-to-load-system-roots-and-no-roots-provided/</guid>
-      <description>&lt;p&gt;We have a small system running in AWS as a CentOS 7 image. It has a few containers that we&amp;rsquo;re using to host a few Golang API proxies. We migrated a customers API proxy that was running on the local VM into a container, and spun it up. Upon testing, we ran into the following error:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;x509: failed to load system roots and no roots provided
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;We get that failure when trying to connect to an HTTPS endpoint (remote API that we&amp;rsquo;re proxying to Asterisk).&lt;/p&gt;
-
-&lt;p&gt;Figured it had to do with the fact we were using a scratch disk to build the container image, and that there were no certs loaded. Did some Googling and found some people with similar problems, but their solutions didn&amp;rsquo;t work for us on our CentOS 7 host system.&lt;/p&gt;
-
-&lt;p&gt;Then I thought maybe there was some issue with following a symlink as the source since we were loading in the &lt;code&gt;ca-bundle.crt&lt;/code&gt; file as a volume. I didn&amp;rsquo;t test enough to determine if that was the issue (it probably wasn&amp;rsquo;t), but this post gave me a hint:&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://github.com/docker/docker/issues/5157#issuecomment-69325677&#34;&gt;https://github.com/docker/docker/issues/5157#issuecomment-69325677&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;So we did the following:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;docker run -d -p 8085:8085 -v /etc/pki/ca-trust/extracted/pem/tls-ca-bundle.pem:/etc/ssl/certs/ca-certificates.crt [etc...]
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;After linking that file and mounting it in the container, all was well. I suspect it&amp;rsquo;s the path to the &lt;code&gt;ca-certificates.crt&lt;/code&gt; that was the real trick.&lt;/p&gt;
-</description>
+      <description>We have a small system running in AWS as a CentOS 7 image. It has a few containers that we&amp;rsquo;re using to host a few Golang API proxies. We migrated a customers API proxy that was running on the local VM into a container, and spun it up. Upon testing, we ran into the following error: x509: failed to load system roots and no roots provided We get that failure when trying to connect to an HTTPS endpoint (remote API that we&amp;rsquo;re proxying to Asterisk).</description>
     </item>
     
     <item>
@@ -43,48 +24,7 @@
       <pubDate>Wed, 09 Sep 2015 21:20:40 +0000</pubDate>
       
       <guid>http://blog.leifmadsen.com/blog/2015/09/09/configuring-powerline-to-show-working-git-branch/</guid>
-      <description>&lt;p&gt;So the documentation for &lt;a href=&#34;http://powerline.readthedocs.org/en/latest/index.html&#34;&gt;Powerline&lt;/a&gt; kind of sucks. I followed &lt;a href=&#34;http://fedoramagazine.org/add-power-terminal-powerline&#34;&gt;this&lt;/a&gt; pretty good article on getting started with it. First thing I noticed however is that the &lt;code&gt;if&lt;/code&gt; statement on the article doesn&amp;rsquo;t work if you don&amp;rsquo;t have powerline installed (which kind of defeats the purpose of having the &lt;code&gt;if&lt;/code&gt; statement there at all).&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;# if powerline is installed, then use it
-command -v powerline-daemon &amp;amp;&amp;gt;/dev/null
-if [ $? -eq 0 ]; then
-powerline-daemon -q
-POWERLINE_BASH_CONTINUATION=1
-POWERLINE_BASH_SELECT=1
-. /usr/share/powerline/bash/powerline.sh
-fi
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Next up is the configuration. I primarily use my bash prompt as a way to indicate which branch I&amp;rsquo;m working in within a Git repository. You need to point at the &lt;code&gt;default_leftonly&lt;/code&gt; theme which is pretty easy to find when you web search for it. The issue is everything seems to just point you at the powerline docs, which aren&amp;rsquo;t the most clear.&lt;/p&gt;
-
-&lt;p&gt;First, start by creating a local configuration directory that will override the configuration for powerline for your user.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;$ mkdir -p ~/.config/powerline
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Then the next thing is to copy over the &lt;code&gt;config.json&lt;/code&gt; from the main powerline configuration directory where you can find the available color schemes and other shell, i3, vim, etc themes.&lt;/p&gt;
-
-&lt;p&gt;(Again, the documentation kind of sucks on where the root of these configurations live&amp;hellip;)&lt;/p&gt;
-
-&lt;p&gt;On my Fedora 22 system they live in &lt;code&gt;/etc/xdg/powerline/&lt;/code&gt;. I then copy the &lt;code&gt;config.json&lt;/code&gt; from that directory to &lt;code&gt;~/.config/powerline&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;To get the Git branch stuff going, I modified the configuration file in the following way:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;--- /etc/xdg/powerline/config.json 2015-02-18 18:56:51.000000000 -0500
-+++ /home/lmadsen/.config/powerline/config.json 2015-09-09 17:11:43.937522571 -0400
-@@ -18,7 +18,7 @@
-},
-&amp;quot;shell&amp;quot;: {
-&amp;quot;colorscheme&amp;quot;: &amp;quot;default&amp;quot;,
-- &amp;quot;theme&amp;quot;: &amp;quot;default&amp;quot;,
-+ &amp;quot;theme&amp;quot;: &amp;quot;default_leftonly&amp;quot;,
-&amp;quot;local_themes&amp;quot;: {
-&amp;quot;continuation&amp;quot;: &amp;quot;continuation&amp;quot;,
-&amp;quot;select&amp;quot;: &amp;quot;select&amp;quot;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;To make it active you can run &lt;code&gt;powerline-config --reload&lt;/code&gt;. If you have any errors in your configuration (I actually ran into this when playing with the colorscheme setting and used &amp;ldquo;solorized&amp;rdquo; instead of &amp;ldquo;solarized&amp;rdquo;), you can check it with &lt;code&gt;powerline-lint&lt;/code&gt;.&lt;/p&gt;
-</description>
+      <description>So the documentation for Powerline kind of sucks. I followed this pretty good article on getting started with it. First thing I noticed however is that the if statement on the article doesn&amp;rsquo;t work if you don&amp;rsquo;t have powerline installed (which kind of defeats the purpose of having the if statement there at all). # if powerline is installed, then use it command -v powerline-daemon &amp;amp;&amp;gt;/dev/null if [ $? -eq 0 ]; then powerline-daemon -q POWERLINE_BASH_CONTINUATION=1 POWERLINE_BASH_SELECT=1 .</description>
     </item>
     
     <item>
@@ -93,60 +33,7 @@ fi
       <pubDate>Wed, 22 Aug 2012 18:49:43 +0000</pubDate>
       
       <guid>http://blog.leifmadsen.com/blog/2012/08/22/selecting-chef-servers-with-environment-variables/</guid>
-      <description>&lt;p&gt;Today I got playing around with dynamically selecting different chef servers in preparation for migrating some of &lt;a href=&#34;http://coredial.com&#34;&gt;our&lt;/a&gt; nodes away from our chef-dev server to our chef-live server (which I&amp;rsquo;m currently in the process of building and populating with data). I had been talking in the #chef IRC channel a few weeks back about making things dynamic, or at least easily switchable, when using multiple chef servers for different groups of servers in an environment.&lt;/p&gt;
-
-&lt;p&gt;What I want to do, is be able to set an environment variable at my console in order to switch between chef servers. Previously I had been doing this with different files in my ~/.chef/ directory and changing symlinks between the files. This method works, but is kind of annoying. So with the help of some of the folks in #chef, and with &lt;a href=&#34;https://gist.github.com/3176332&#34;&gt;this gist&lt;/a&gt; of a sample file that someone is using for their hosted chef environment, I was able to build my own knife.rb and commit it to our chef.git repository.&lt;/p&gt;
-
-&lt;p&gt;In our &lt;strong&gt;chef.git&lt;/strong&gt; repository, I created a directory &lt;strong&gt;.chef&lt;/strong&gt; and placed a &lt;strong&gt;knife.rb&lt;/strong&gt; file in it:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;$ cd ~/src/chef-repo
-$ mkdir .chef
-$ touch .chef/knife.rb
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;I then filled &lt;strong&gt;knife.rb&lt;/strong&gt; with the following contents:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-ruby&#34;&gt;current_dir = File.dirname(__FILE__)
-
-sys_user = ENV[&amp;quot;USER&amp;quot;]
-
-log_level                :info
-log_location             STDOUT
-node_name                sys_user
-client_key               &amp;quot;#{ENV[&amp;quot;HOME&amp;quot;]}/.chef/#{ENV[&amp;quot;KNIFE_ENV&amp;quot;]}/#{ENV[&amp;quot;USER&amp;quot;]}.pem&amp;quot;
-validation_client_name   &amp;quot;chef-validator&amp;quot;
-validation_key           &amp;quot;#{ENV[&amp;quot;HOME&amp;quot;]}/.chef/#{ENV[&amp;quot;KNIFE_ENV&amp;quot;]}/validator.pem&amp;quot;
-chef_server_url          &amp;quot;http://chef-#{ENV[&amp;quot;KNIFE_ENV&amp;quot;]}.shifteight.org:4000&amp;quot;
-cache_type               &#39;BasicFile&#39;
-cache_options( :path =&amp;gt; &amp;quot;#{ENV[&#39;HOME&#39;]}/.chef/checksums&amp;quot; )
-cookbook_path            [ &amp;quot;#{current_dir}/../cookbooks&amp;quot;, &amp;quot;#{current_dir}/../site-cookbooks&amp;quot; ]
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;The main key is the KNIFE_ENV environment variable which I set using: &lt;code&gt;export KNIFE_ENV=dev&lt;/code&gt; or &lt;code&gt;export KNIFE_ENV=live&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;After setting the environment variable, which server I&amp;rsquo;m using is selected for me. Additionally, I copied my validation.pem and client.pem files into corresponding directories in my ~/.chef/ directory: &lt;code&gt;$ mkdir ~/.chef/{live,dev}&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;With all that done, I can now easily switch between our different servers in order to start the migration of our nodes. (I might create another blog post about that in the future if I get a chance.)&lt;/p&gt;
-
-&lt;p&gt;&amp;ldquo;BUT HOW DO I KNOW WHICH ENVIRONMENT I&amp;rsquo;M WORKING WITH?!?!?!&amp;rdquo;, you say? Oh fancy this little PS1 and function I added to my ~/.bashrc file:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;if [ &amp;quot;$KNIFE_ENV&amp;quot; == &amp;quot;&amp;quot; ]; then
- export KNIFE_ENV=&amp;quot;dev&amp;quot;
-fi
-
-function which_env {
-  if [ &amp;quot;$KNIFE_ENV&amp;quot; == &amp;quot;live&amp;quot; ]; then
-    echo &amp;quot;31&amp;quot;
-  else
-    echo &amp;quot;32&amp;quot;
-  fi
-}
-
-export PS1=&#39;[\u@\h \[\033[0;36m\]\W$(__git_ps1 &amp;quot;\[\033[0m\]\[\033[0;33m\](%s) \[\033[0;`which_env`m\]~$KNIFE_ENV~&amp;quot;)\[\033[0m\]]\$ &#39;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Is nice :)&lt;/p&gt;
-</description>
+      <description>Today I got playing around with dynamically selecting different chef servers in preparation for migrating some of our nodes away from our chef-dev server to our chef-live server (which I&amp;rsquo;m currently in the process of building and populating with data). I had been talking in the #chef IRC channel a few weeks back about making things dynamic, or at least easily switchable, when using multiple chef servers for different groups of servers in an environment.</description>
     </item>
     
     <item>
@@ -155,45 +42,7 @@ export PS1=&#39;[\u@\h \[\033[0;36m\]\W$(__git_ps1 &amp;quot;\[\033[0m\]\[\033[0
       <pubDate>Wed, 22 Aug 2012 14:10:46 +0000</pubDate>
       
       <guid>http://blog.leifmadsen.com/blog/2012/08/22/centos-5.8-on-aws-ec2-with-xen-kernel-pvgrub/</guid>
-      <description>&lt;p&gt;At &lt;a href=&#34;http://coredial.com&#34;&gt;CoreDial&lt;/a&gt; we&amp;rsquo;ve been using a lot of AWS EC2 lately for building sandbox infrastructure for testing. Part of the infrastructure is a voice platform utilizing Asterisk 1.4 and 1.8, and those voice platforms are using Zaptel and DAHDI respectively for use with MeetMe(). This hasn&amp;rsquo;t been an issue previously as our testing has either been on bare metal, or in other virtual machine systems where installation of a base image and standard kernel are not an issue.&lt;/p&gt;
-
-&lt;p&gt;However, with the introduction of a lot of EC2 instances in our testing process, we ran into issues with building our own DAHDI RPMs since there aren&amp;rsquo;t any EC2 kernel development packages outside of OpenSuSE (which we don&amp;rsquo;t use). After spending a day of trying to hack around it, Kevin found a &lt;a href=&#34;http://ec2-downloads.s3.amazonaws.com/user_specified_kernels.pdf&#34;&gt;PDF&lt;/a&gt; from Amazon that states AWS now supports the ability to load your own kernels via PVGRUB. Great! If I can do that, then I can just continue using the same RPMs I&amp;rsquo;d be building anyways (albeit the xen based kernel, but that&amp;rsquo;s easy to do in the spec file).&lt;/p&gt;
-
-&lt;p&gt;Unfortunately this was not nearly as trivial and simple as it appeared at first. The first problem was that I had to figure out the correct magic kernel AKI that needed to be loaded, and the PDF wasn&amp;rsquo;t incredibly clear about which one to use. (There is two different styles of the AKI, one called &amp;ldquo;hd0&amp;rdquo; and another called &amp;ldquo;hd00&amp;rdquo; which I&amp;rsquo;ll get into shortly.) After searching Google and looking through several forum posts and other blogs (linked at the end), I finally found a combination that seems to work for our imported CentOS 5.8 base image. Below is a list of the steps I executed after loading up an image from our base AMI:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;yum install grub kernel-xen kernel-xen-devel&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;grub-install /dev/sda&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;cd /boot/&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;mkinitrd -f -v --allow-missing --builtin uhci-hcd --builtin ohci-hcd --builtin ehci-hcd --preload xennet --preload xenblk --preload dm-mod --preload linear --force-lvm-probe /boot/initrd-2.6.18-308.13.1.el5xen.img 2.6.18-308.13.1.el5xen&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;touch /boot/grub/menu.lst&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;cat /boot/grub/menu.lst&lt;/code&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;default 0
-timeout 1
-
-title EC2
-     root (hd0)
-     kernel /boot/vmlinuz-2.6.18-308.11.1.el5xen root=/dev/sda1
-     initrd /boot/initrd-2.6.18-308.11.1.el5xen.img
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Once the changes were made to the image, I took a snapshot of the running instances volume. I then created an image from the snapshot. When creating the image, I selected a new kernel ID. The kernel ID&amp;rsquo;s for the various zones and architectures are listed in the &lt;a href=&#34;http://ec2-downloads.s3.amazonaws.com/user_specified_kernels.pdf&#34;&gt;PDF&lt;/a&gt;. As our base image was CentOS 5.8 i386 in the us-east-1 zone, I had to select between either aki‐4c7d9525 or aki‐407d9529. The paragraph above seems to indicate there is a difference based on what type of machine you&amp;rsquo;re using, and references S3 or EBS based images. We are using EBS based images, so I tried the first one, which in the end failed miserably. After reading through the &lt;a href=&#34;http://www.ioncannon.net/system-administration/1205/installing-cent-os-5-5-on-ec2-with-the-cent-os-5-5-kernel/&#34;&gt;IonCannon&lt;/a&gt; blog post it became clear that the &lt;em&gt;hd0&lt;/em&gt; and &lt;em&gt;hd00&lt;/em&gt; AKIs are really differences in whether you have a single partition, or multiple partitions with a separate /boot/ partition.&lt;/p&gt;
-
-&lt;p&gt;With that bit of knowledge, and knowing that we only had a single partition that contained our /boot/ directory, I knew to use &lt;strong&gt;aki-407d9529&lt;/strong&gt; (hd0). Another forum post also pointed out that I needed to enable some modules for the xen kernel or the system wouldn&amp;rsquo;t boot (and I verified that by stepping through each of the steps listed above to make sure it was required). With those two major items checked off, I am now able to build an AMI that will load with a stock CentOS Xen kernel image, making it trivial to build RPMs against now.&lt;/p&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;&lt;strong&gt;Note&lt;/strong&gt;:
-If you do happen to use separate partitions, make sure you use the &lt;strong&gt;hd00&lt;/strong&gt; AKI. In the &lt;strong&gt;menu.lst&lt;/strong&gt; you need to make sure to use &lt;em&gt;root (hd0,0)&lt;/em&gt; instead of just (hd0). Additionally, your &lt;em&gt;menu.lst&lt;/em&gt; file needs to live at &lt;em&gt;/boot/boot/grub/menu.lst&lt;/em&gt; since AWS is going to look in the &lt;em&gt;/boot/grub/menu.lst&lt;/em&gt; location on the &lt;em&gt;/boot/&lt;/em&gt; partition. On a single partition the file can just live at &lt;em&gt;/boot/grub/menu.lst&lt;/em&gt;.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;&lt;strong&gt;References&lt;/strong&gt;
-* &lt;a href=&#34;https://forums.aws.amazon.com/message.jspa?messageID=202366&#34;&gt;https://forums.aws.amazon.com/message.jspa?messageID=202366&lt;/a&gt; &amp;lt;&amp;ndash; provided the mkinitfs command required to get everything to work on boot
-* &lt;a href=&#34;https://forums.aws.amazon.com/message.jspa?messageID=253943&#34;&gt;https://forums.aws.amazon.com/message.jspa?messageID=253943&lt;/a&gt;
-* &lt;a href=&#34;http://technotes.twosmallcoins.com/?tag=bootgrubmenulst&#34;&gt;http://technotes.twosmallcoins.com/?tag=bootgrubmenulst&lt;/a&gt;
-* &lt;a href=&#34;http://www.ioncannon.net/system-administration/1205/installing-cent-os-5-5-on-ec2-with-the-cent-os-5-5-kernel/&#34;&gt;http://www.ioncannon.net/system-administration/1205/installing-cent-os-5-5-on-ec2-with-the-cent-os-5-5-kernel/&lt;/a&gt; &amp;lt;&amp;ndash; this was the best link, but was also the most verbose and overly complicated for what I needed, but it had a couple of tips in there that ended up helping a lot. The explanation of the difference between the hd0 and hd00 AKIs was they key to my success.&lt;/p&gt;
-</description>
+      <description>At CoreDial we&amp;rsquo;ve been using a lot of AWS EC2 lately for building sandbox infrastructure for testing. Part of the infrastructure is a voice platform utilizing Asterisk 1.4 and 1.8, and those voice platforms are using Zaptel and DAHDI respectively for use with MeetMe(). This hasn&amp;rsquo;t been an issue previously as our testing has either been on bare metal, or in other virtual machine systems where installation of a base image and standard kernel are not an issue.</description>
     </item>
     
     <item>
@@ -202,28 +51,7 @@ If you do happen to use separate partitions, make sure you use the &lt;strong&gt
       <pubDate>Mon, 23 Jul 2012 19:14:45 +0000</pubDate>
       
       <guid>http://blog.leifmadsen.com/blog/2012/07/23/assign-unique-hostname-to-dhcp-client-with-dnsmasq/</guid>
-      <description>&lt;p&gt;Today I&amp;rsquo;ve been getting our lab environment setup with vagrant to auto-provision our lab servers with chef server in order to allow the development team to quickly and easily turn up and tear down web application servers.&lt;/p&gt;
-
-&lt;p&gt;Because when the server gets spun up with vagrant, it registers itself as a new node to the chef server using its hostname. Since using localhost for every node pretty much makes the chef server useless for more than 1 virtual machine at a time, I needed to figure out how to get dnsmasq to assign a unique hostname based on the IP address being provided by dnsmasq to the dhcp client.&lt;/p&gt;
-
-&lt;p&gt;I had seen a similar thing done with Amazon EC2 instances that when they turn up, they gets a hostname that looks similar to the private IP address it has been assigned. For example, if the private IP address assigned to the server was 192.168.12.14 it would get a hostname like &lt;em&gt;ip-192-168-12-14&lt;/em&gt;. I wanted to do a similar thing with our server.&lt;/p&gt;
-
-&lt;p&gt;After a little bit of Googling and reading the dnsmasq configuration file, it donned on me how simple this really was. You simply need to define the hostnames that the dnsmasq server could assign to a server, list those in the &lt;em&gt;/etc/hosts&lt;/em&gt; file on the dnsmasq server, and then define the hostname you wanted to provide to the server. I didn&amp;rsquo;t want to use the MAC address of the servers (a la &lt;em&gt;dhcp-host&lt;/em&gt; option) since the MAC address will be dynamic each time I spin up a virtual machine.&lt;/p&gt;
-
-&lt;p&gt;So in my &lt;em&gt;dnsmasq.conf&lt;/em&gt; file I might have something defined like&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;dhcp-range=90.100.1.120,90.100.1.124,24h
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;So in my &lt;em&gt;/etc/hosts&lt;/em&gt; file I&amp;rsquo;d just place the following to assign those unique hostnames:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;90.100.1.120    ip-90-100-1-120
-90.100.1.121    ip-90-100-1-121
-90.100.1.122    ip-90-100-1-122
-90.100.1.123    ip-90-100-1-123
-90.100.1.124    ip-90-100-1-124
-&lt;/code&gt;&lt;/pre&gt;
-</description>
+      <description>Today I&amp;rsquo;ve been getting our lab environment setup with vagrant to auto-provision our lab servers with chef server in order to allow the development team to quickly and easily turn up and tear down web application servers. Because when the server gets spun up with vagrant, it registers itself as a new node to the chef server using its hostname. Since using localhost for every node pretty much makes the chef server useless for more than 1 virtual machine at a time, I needed to figure out how to get dnsmasq to assign a unique hostname based on the IP address being provided by dnsmasq to the dhcp client.</description>
     </item>
     
     <item>
@@ -232,35 +60,7 @@ If you do happen to use separate partitions, make sure you use the &lt;strong&gt
       <pubDate>Tue, 26 Jun 2012 12:51:30 +0000</pubDate>
       
       <guid>http://blog.leifmadsen.com/blog/2012/06/26/integration-testing-using-jenkins-part-1/</guid>
-      <description>&lt;p&gt;So for the last week or so, I&amp;rsquo;ve been tasked at &lt;a href=&#34;http://www.coredial.com&#34;&gt;CoreDial&lt;/a&gt; with adding our own set of integration testing now that we&amp;rsquo;re moving to a more formal deployment method using &lt;a href=&#34;http://wiki.opscode.com/display/chef/Home&#34;&gt;chef&lt;/a&gt;. After much pestering of questions to &lt;a href=&#34;https://github.com/thehar&#34;&gt;thehar&lt;/a&gt; of &lt;a href=&#34;https://www.mylookout.com/&#34;&gt;Lookout Mobile Security&lt;/a&gt; and with help of Google, #chef and jhansche in #jenkins I&amp;rsquo;ve finally got a nice clean proof of concept that we can evaluate and likely deploy.&lt;/p&gt;
-
-&lt;p&gt;I&amp;rsquo;ll come back later with another article on my installation issues with jenkins and the solutions that I solved (nothing too terribly complicated), but what I wanted to blog about was the two types of tests that I&amp;rsquo;ve been focusing on and was able to finally solve.&lt;/p&gt;
-
-&lt;p&gt;First, I wanted to simply get a working test going in &lt;a href=&#34;http://jenkins-ci.org/&#34;&gt;jenkins&lt;/a&gt; since I&amp;rsquo;d never used it before and needed a minimum viable product to look at. Based on a recommendation from thehar a couple weeks ago, I looked at &lt;a href=&#34;http://acrmp.github.com/foodcritic/&#34;&gt;foodcritic&lt;/a&gt;, got that working, and with their instructions, was able to get that integrated for my first automated test in jenkins.&lt;/p&gt;
-
-&lt;p&gt;The main problem I had was really getting an environment path variable set so that I could execute a ruby shell (&lt;code&gt;#!/usr/bin/env rvm-shell 1.9.3&lt;/code&gt;, in the foodcritic instructions). After some searching, I came across a hint (sorry, I&amp;rsquo;ve misplaced the link) that stated I needed to add &lt;code&gt;source /etc/profile&lt;/code&gt; to the bottom of my /etc/default/jenkins file, which worked marvellously to get the command I was trying to run to go. (Note that I installed on Ubuntu 12.04 for this test.)&lt;/p&gt;
-
-&lt;p&gt;(Prior to that, I installed &lt;a href=&#34;https://rvm.io/rvm/install/&#34;&gt;rvm&lt;/a&gt; and then ran the multi-user instructions to get ruby 1.9.3 installed. I also installed foodcritic via &lt;code&gt;gem install foodcritic&lt;/code&gt; which depends on ruby 1.9.2+.)&lt;/p&gt;
-
-&lt;p&gt;Having created my first job, I filled in the Git information to connect to my git server. I ran into a few issues there, and needed to create a new .ssh directory in /var/lib/jenkins/.ssh/ (/var/lib/jenkins is the $HOME directory of jenkins). I then placed the appropriate authentication keys in the directory, but was still having issues with connecting to the server. It ended up being that I needed to add a &lt;code&gt;config&lt;/code&gt; file to the .ssh directory with the following contents:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;Host coredial-git
-  HostName gitserver.hostname.com
-  User git
-  IdentityFile /var/lib/jenkins/.ssh/id_rsa.key
-  StrictHostKeyChecking no
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;After adding this, then I could set the repository URL to &lt;code&gt;git@coredial-git:chef-repo.git&lt;/code&gt; and the branch specifier to something like &lt;code&gt;*/feature/ENG-*&lt;/code&gt; in order to test all our engineering testing branches. I then setup &lt;strong&gt;Poll SCM&lt;/strong&gt; with polling schedule &lt;code&gt;*/5 * * * *&lt;/code&gt; (I set to */1 at first for testing, and will likely increase this further, or add a post-commit hook to git.)&lt;/p&gt;
-
-&lt;p&gt;The actual command I&amp;rsquo;m running in the Execute Shell section looks like this:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-ruby&#34;&gt;#!/usr/bin/env rvm-shell 1.9.3
-foodcritic -f any site-cookbooks/my_awesome_cookbook
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Then I saved the test, made some changes, and during the poll was able to trigger off both expected failed and expected passing tests. Very cool indeed!&lt;/p&gt;
-</description>
+      <description>So for the last week or so, I&amp;rsquo;ve been tasked at CoreDial with adding our own set of integration testing now that we&amp;rsquo;re moving to a more formal deployment method using chef. After much pestering of questions to thehar of Lookout Mobile Security and with help of Google, #chef and jhansche in #jenkins I&amp;rsquo;ve finally got a nice clean proof of concept that we can evaluate and likely deploy. I&amp;rsquo;ll come back later with another article on my installation issues with jenkins and the solutions that I solved (nothing too terribly complicated), but what I wanted to blog about was the two types of tests that I&amp;rsquo;ve been focusing on and was able to finally solve.</description>
     </item>
     
   </channel>

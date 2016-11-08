@@ -15,18 +15,7 @@
       <pubDate>Sat, 14 Nov 2009 15:07:19 +0000</pubDate>
       
       <guid>http://blog.leifmadsen.com/blog/2009/11/14/building-queues-with-asterisk/</guid>
-      <description>&lt;p&gt;Wow it&amp;rsquo;s been a long time since I&amp;rsquo;ve update my blog. Well, lets do that! :)&lt;/p&gt;
-
-&lt;p&gt;I&amp;rsquo;ve just posted some documentation to the Asterisk issue tracker for review. It&amp;rsquo;s about building queues with Asterisk. It is the start of probably 2 or 3 sets of documentation on building queues with Asterisk that I&amp;rsquo;ll be submitting. You can find the documentation here for now:&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://issues.asterisk.org/view.php?id=16237&#34;&gt;https://issues.asterisk.org/view.php?id=16237&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;This documentation will likely be merged into core Asterisk at some point in the near future (doc/ subdirectory of your Asterisk source) and likely posted on &lt;a href=&#34;http://blogs.asterisk.org&#34;&gt;http://blogs.asterisk.org&lt;/a&gt; as well.&lt;/p&gt;
-
-&lt;p&gt;Check it out, and let me know if you find any spelling errors, documentation errors, anything that isn&amp;rsquo;t clear, or errors in the examples. Of course suggestions for future documentation to be written would also be welcomed.&lt;/p&gt;
-
-&lt;p&gt;Thanks!&lt;/p&gt;
-</description>
+      <description>Wow it&amp;rsquo;s been a long time since I&amp;rsquo;ve update my blog. Well, lets do that! :) I&amp;rsquo;ve just posted some documentation to the Asterisk issue tracker for review. It&amp;rsquo;s about building queues with Asterisk. It is the start of probably 2 or 3 sets of documentation on building queues with Asterisk that I&amp;rsquo;ll be submitting. You can find the documentation here for now: https://issues.asterisk.org/view.php?id=16237 This documentation will likely be merged into core Asterisk at some point in the near future (doc/ subdirectory of your Asterisk source) and likely posted on http://blogs.asterisk.org as well.</description>
     </item>
     
   </channel>

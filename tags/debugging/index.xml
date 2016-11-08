@@ -15,10 +15,7 @@
       <pubDate>Fri, 04 Mar 2011 14:16:16 +0000</pubDate>
       
       <guid>http://blog.leifmadsen.com/blog/2011/03/04/debugging-the-asterisk-dialplan-with-verbose/</guid>
-      <description>&lt;p&gt;In case you missed it, &lt;a href=&#34;http://www.russellbryant.net&#34;&gt;Russell Bryant&lt;/a&gt; wrote a blog post on &lt;a href=&#34;http://www.russellbryant.net/blog/2011/03/04/debugging-the-asterisk-dialplan-with-verbose/&#34;&gt;debugging the Asterisk dialplan with the Verbose() application&lt;/a&gt;. This is one of the recipes that will be features in the upcoming &lt;a href=&#34;http://oreilly.com/catalog/0636920018551/&#34;&gt;Asterisk Cookbook&lt;/a&gt; that we&amp;rsquo;re writing, and hoping to have done by the end of March!&lt;/p&gt;
-
-&lt;p&gt;(In case you&amp;rsquo;ve missed all the cool stuff lately, the Asterisk Cookbook will also be released under the same Creative Commons license as the previous Asterisk books. We&amp;rsquo;re also making use of the &lt;a href=&#34;http://ofps.oreilly.com&#34;&gt;Open Feedback Publishing System (OFPS)&lt;/a&gt; again. You can help review the text and test the recipes at &lt;a href=&#34;http://ofps.oreilly.com/titles/9781449303822/&#34;&gt;http://ofps.oreilly.com/titles/9781449303822/&lt;/a&gt;.)&lt;/p&gt;
-</description>
+      <description>In case you missed it, Russell Bryant wrote a blog post on debugging the Asterisk dialplan with the Verbose() application. This is one of the recipes that will be features in the upcoming Asterisk Cookbook that we&amp;rsquo;re writing, and hoping to have done by the end of March! (In case you&amp;rsquo;ve missed all the cool stuff lately, the Asterisk Cookbook will also be released under the same Creative Commons license as the previous Asterisk books.</description>
     </item>
     
   </channel>

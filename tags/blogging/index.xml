@@ -15,12 +15,7 @@
       <pubDate>Mon, 03 May 2010 15:17:57 +0000</pubDate>
       
       <guid>http://blog.leifmadsen.com/blog/2010/05/03/installing-the-asterisk-test-suite/</guid>
-      <description>&lt;p&gt;In case you missed it, I wrote an introductory &lt;a href=&#34;http://blogs.asterisk.org/2010/04/29/installing-the-asterisk-test-suite/&#34;&gt;article&lt;/a&gt; about the Asterisk Test Suite on the &lt;a href=&#34;http://blogs.asterisk.org&#34;&gt;Asterisk blog&lt;/a&gt;. The post takes you from a minimally installed Ubuntu 9.10 up to the point that you can run the tests in the test suite by going through all the possible errors you might encounter getting it loaded, and how to resolve those errors (most of them being missing dependencies).&lt;/p&gt;
-
-&lt;p&gt;Enjoy!&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://blogs.asterisk.org/2010/04/29/installing-the-asterisk-test-suite/&#34;&gt;http://blogs.asterisk.org/2010/04/29/installing-the-asterisk-test-suite/&lt;/a&gt;&lt;/p&gt;
-</description>
+      <description>In case you missed it, I wrote an introductory article about the Asterisk Test Suite on the Asterisk blog. The post takes you from a minimally installed Ubuntu 9.10 up to the point that you can run the tests in the test suite by going through all the possible errors you might encounter getting it loaded, and how to resolve those errors (most of them being missing dependencies). Enjoy! http://blogs.asterisk.org/2010/04/29/installing-the-asterisk-test-suite/</description>
     </item>
     
   </channel>

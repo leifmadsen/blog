@@ -15,19 +15,7 @@
       <pubDate>Thu, 23 Feb 2012 18:43:54 +0000</pubDate>
       
       <guid>http://blog.leifmadsen.com/blog/2012/02/23/rpmlint-non-utf8-spec-file-error/</guid>
-      <description>&lt;p&gt;I&amp;rsquo;ve been doing a bunch of work with RPMs lately, and while running rpmlint against a spec file I was modifying, I received this error:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;myfile.spec: E: non-utf8-spec-file myfile.spec
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;After Googling, I ran into a way of finding the non-compliant characters.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;$ iconv -f ISO-8859-8 -t UTF-8 myfile.spec &amp;gt; converted.spec
-$ diff -u myfile.spec converted.spec
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;(Answer thanks to Dominique Leuenberger @ &lt;a href=&#34;http://lists.opensuse.org/opensuse-packaging/2011-04/msg00005.html&#34;&gt;http://lists.opensuse.org/opensuse-packaging/2011-04/msg00005.html&lt;/a&gt;)&lt;/p&gt;
-</description>
+      <description>I&amp;rsquo;ve been doing a bunch of work with RPMs lately, and while running rpmlint against a spec file I was modifying, I received this error: myfile.spec: E: non-utf8-spec-file myfile.spec After Googling, I ran into a way of finding the non-compliant characters. $ iconv -f ISO-8859-8 -t UTF-8 myfile.spec &amp;gt; converted.spec $ diff -u myfile.spec converted.spec (Answer thanks to Dominique Leuenberger @ http://lists.opensuse.org/opensuse-packaging/2011-04/msg00005.html)</description>
     </item>
     
   </channel>

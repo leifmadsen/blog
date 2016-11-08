@@ -15,18 +15,7 @@
       <pubDate>Thu, 19 Jul 2012 15:03:05 +0000</pubDate>
       
       <guid>http://blog.leifmadsen.com/blog/2012/07/19/bash-creating-files-named-1-everywhere/</guid>
-      <description>&lt;p&gt;So I ran into something kind of stupid today :)  Adding a little note for anyone who might run into a similar instance.&lt;/p&gt;
-
-&lt;p&gt;I have some &lt;code&gt;ssh-add&lt;/code&gt; stuff that gets run in my &lt;code&gt;.bashrc&lt;/code&gt; file, but when I was outputting it, I was doing:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;ssh-add ~/.ssh/some_key &amp;gt; /dev/null 2&amp;amp;&amp;gt;1
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Note the &lt;code&gt;2&amp;amp;&amp;gt;1&lt;/code&gt; at the end. That means to redirect output to a file named 1. You need to flip the &lt;code&gt;&amp;amp;&amp;gt;&lt;/code&gt; into &lt;code&gt;&amp;gt;&amp;amp;&lt;/code&gt;, so the fixed version looks like:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;ssh-add ~/.ssh/some_key &amp;gt; /dev/null 2&amp;gt;&amp;amp;1
-&lt;/code&gt;&lt;/pre&gt;
-</description>
+      <description>So I ran into something kind of stupid today :) Adding a little note for anyone who might run into a similar instance. I have some ssh-add stuff that gets run in my .bashrc file, but when I was outputting it, I was doing: ssh-add ~/.ssh/some_key &amp;gt; /dev/null 2&amp;amp;&amp;gt;1 Note the 2&amp;amp;&amp;gt;1 at the end. That means to redirect output to a file named 1. You need to flip the</description>
     </item>
     
   </channel>

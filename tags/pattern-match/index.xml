@@ -15,26 +15,7 @@
       <pubDate>Mon, 16 Jan 2012 13:28:10 +0000</pubDate>
       
       <guid>http://blog.leifmadsen.com/blog/2012/01/16/converting-multiple-exten--lines-to-using-same--in-asterisk-dialplan/</guid>
-      <description>&lt;p&gt;Last week I wanted to start changing some 1.4 based Asterisk dialplan to a 1.8 based Asterisk system, and in that process wanted to convert lines like:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;exten =&amp;gt; _NXXNXXXXXX,1,NoOp()
-exten =&amp;gt; _NXXNXXXXXX,2,GotoIf($[...]?reject,1)
-exten =&amp;gt; _NXXNXXXXXX,3,Dial(SIP/foo/${EXTEN})
-...
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;into using the same =&amp;gt; prefix:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;exten =&amp;gt; _NXXNXXXXXX,1,NoOp()
- same =&amp;gt; n,GotoIf($[...]?reject,1)
- same =&amp;gt; n,Dial(SIP/foo/${EXTEN})
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;In order to do that, &lt;a href=&#34;https://twitter.com/#!/mikemking&#34;&gt;Mike King&lt;/a&gt; helped me out with the following regular expressing which I used in vim:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;%s/exten\s*=&amp;gt;\s*[^,]\+,\s*[n2-9]/ same =&amp;gt; n/g
-&lt;/code&gt;&lt;/pre&gt;
-</description>
+      <description>Last week I wanted to start changing some 1.4 based Asterisk dialplan to a 1.8 based Asterisk system, and in that process wanted to convert lines like: exten =&amp;gt; _NXXNXXXXXX,1,NoOp() exten =&amp;gt; _NXXNXXXXXX,2,GotoIf($[...]?reject,1) exten =&amp;gt; _NXXNXXXXXX,3,Dial(SIP/foo/${EXTEN}) ... into using the same =&amp;gt; prefix: exten =&amp;gt; _NXXNXXXXXX,1,NoOp() same =&amp;gt; n,GotoIf($[...]?reject,1) same =&amp;gt; n,Dial(SIP/foo/${EXTEN}) In order to do that, Mike King helped me out with the following regular expressing which I used</description>
     </item>
     
   </channel>

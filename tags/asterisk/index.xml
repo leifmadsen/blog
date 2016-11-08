@@ -15,16 +15,7 @@
       <pubDate>Thu, 16 May 2013 13:31:46 +0000</pubDate>
       
       <guid>http://blog.leifmadsen.com/blog/2013/05/16/asterisk-the-definitive-guide-4th-edition-goes-to-print/</guid>
-      <description>&lt;p&gt;Howdy folks,&lt;/p&gt;
-
-&lt;p&gt;Sorry for the lack of updates lately. I&amp;rsquo;ve recently (December 2012) started at Thinking Phone Networks as the Lead UC Systems Engineer, and we&amp;rsquo;ve been incredibly busy there. In addition, the authors and I had been working on the final touches to the 4th edition of Asterisk: The Definitive Guide, which documents Asterisk 11 LTS.&lt;/p&gt;
-
-&lt;p&gt;Late last week, the book went to print, and should start to appear on store shelves and start shipping from Amazon and other locations within the next 6-8 weeks I believe. However, if you&amp;rsquo;ve purchased the digital version, it&amp;rsquo;s already available!&lt;/p&gt;
-
-&lt;p&gt;I got mine from O&amp;rsquo;Reilly, and sync&amp;rsquo;d it to my Dropbox and shared it with my co-workers. There are usually deals around on Amazon and the O&amp;rsquo;Reilly website that will let you purchase both the digital and printed versions. The digital should be available immediately, with the printed version shipping as soon as it&amp;rsquo;s available.&lt;/p&gt;
-
-&lt;p&gt;Thanks to everyone who helped make the 4th edition a success, and to get it done in the last 8 months! It&amp;rsquo;s been quite the journey since the 1st edition was released in 2005.&lt;/p&gt;
-</description>
+      <description>Howdy folks, Sorry for the lack of updates lately. I&amp;rsquo;ve recently (December 2012) started at Thinking Phone Networks as the Lead UC Systems Engineer, and we&amp;rsquo;ve been incredibly busy there. In addition, the authors and I had been working on the final touches to the 4th edition of Asterisk: The Definitive Guide, which documents Asterisk 11 LTS. Late last week, the book went to print, and should start to appear on store shelves and start shipping from Amazon and other locations within the next 6-8 weeks I believe.</description>
     </item>
     
     <item>
@@ -33,72 +24,7 @@
       <pubDate>Thu, 11 Oct 2012 20:43:35 +0000</pubDate>
       
       <guid>http://blog.leifmadsen.com/blog/2012/10/11/digium-d40-and-d70-phone-unboxing/</guid>
-      <description>
-
-&lt;p&gt;Today I received a couple of &lt;a href=&#34;http://www1.digium.com/en/products/phones&#34;&gt;phones&lt;/a&gt; from Digium; the D40 and D70. I&amp;rsquo;ll be using these phones for testing and documentation in the 4th edition of &lt;a href=&#34;http://shop.oreilly.com/product/9780596517342.do&#34;&gt;Asterisk: The Definitive Guide&lt;/a&gt; (which &lt;a href=&#34;http://www.coretel.ca/&#34;&gt;Jim Van Meggelen&lt;/a&gt;, &lt;a href=&#34;http://russellbryant.net&#34;&gt;Russell Bryant&lt;/a&gt; and &lt;a href=&#34;http://leifmadsen.com&#34;&gt;myself&lt;/a&gt; are working on right now).&lt;/p&gt;
-
-&lt;p&gt;Here is my unboxing of the phones and some commentary about my initial impressions of the hardware itself.&lt;/p&gt;
-
-&lt;p&gt;[caption id=&amp;ldquo;attachment_484&amp;rdquo; align=&amp;ldquo;aligncenter&amp;rdquo; width=&amp;ldquo;300&amp;rdquo;]&lt;a href=&#34;http://leifmadsen.files.wordpress.com/2012/10/2012-10-11-14-42-01.jpg&#34;&gt;&lt;img src=&#34;http://leifmadsen.files.wordpress.com/2012/10/2012-10-11-14-42-01.jpg?w=300&#34; alt=&#34;&#34; /&gt;&lt;/a&gt; Pretty boxes![/caption]&lt;/p&gt;
-
-&lt;p&gt;Phones arrived in some nice looking boxes.&lt;/p&gt;
-
-&lt;h2 id=&#34;digium-d40&#34;&gt;Digium D40&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://leifmadsen.files.wordpress.com/2012/10/2012-10-11-14-42-33.jpg&#34;&gt;&lt;img src=&#34;http://leifmadsen.files.wordpress.com/2012/10/2012-10-11-14-42-33.jpg?w=300&#34; alt=&#34;&#34; /&gt;&lt;/a&gt;&lt;a href=&#34;http://leifmadsen.files.wordpress.com/2012/10/2012-10-11-14-42-59.jpg&#34;&gt;&lt;img src=&#34;http://leifmadsen.files.wordpress.com/2012/10/2012-10-11-14-42-59.jpg?w=300&#34; alt=&#34;&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;Comes with a little pamphlet to help you get the phones setup on your network.&lt;a href=&#34;http://leifmadsen.files.wordpress.com/2012/10/2012-10-11-14-43-17.jpg&#34;&gt;&lt;img src=&#34;http://leifmadsen.files.wordpress.com/2012/10/2012-10-11-14-43-17.jpg?w=300&#34; alt=&#34;&#34; /&gt;&lt;/a&gt;&lt;a href=&#34;http://leifmadsen.files.wordpress.com/2012/10/2012-10-11-14-43-55.jpg&#34;&gt;&lt;img src=&#34;http://leifmadsen.files.wordpress.com/2012/10/2012-10-11-14-43-55.jpg?w=300&#34; alt=&#34;&#34; /&gt;&lt;/a&gt;&lt;a href=&#34;http://leifmadsen.files.wordpress.com/2012/10/2012-10-11-14-45-16.jpg&#34;&gt;&lt;img src=&#34;http://leifmadsen.files.wordpress.com/2012/10/2012-10-11-14-45-16.jpg?w=300&#34; alt=&#34;&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;Comes with all the little things you need to get the phone up and running, including a network cable. I was just using POE to power the phone, so I didn&amp;rsquo;t end up with the 5VDC power adapter.
-&lt;a href=&#34;http://leifmadsen.files.wordpress.com/2012/10/2012-10-11-14-47-01.jpg&#34;&gt;&lt;img src=&#34;http://leifmadsen.files.wordpress.com/2012/10/2012-10-11-14-47-01.jpg?w=300&#34; alt=&#34;&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;Nice looking base. Easy to put onto the phone. Just uses friction to hold the phones on the base. Not sure how well that&amp;rsquo;ll work over time, but this isn&amp;rsquo;t something that should be getting attached and detached a lot. The space for cables in the base is also quite large.&lt;/p&gt;
-
-&lt;p&gt;[caption id=&amp;ldquo;attachment_491&amp;rdquo; align=&amp;ldquo;aligncenter&amp;rdquo; width=&amp;ldquo;300&amp;rdquo;]&lt;img src=&#34;http://leifmadsen.files.wordpress.com/2012/10/2012-10-11-14-48-58.jpg?w=300&#34; alt=&#34;&#34; /&gt; Holes to mount to wall. Requires adapter.[/caption]&lt;/p&gt;
-
-&lt;p&gt;[caption id=&amp;ldquo;attachment_492&amp;rdquo; align=&amp;ldquo;aligncenter&amp;rdquo; width=&amp;ldquo;300&amp;rdquo;]&lt;a href=&#34;http://leifmadsen.files.wordpress.com/2012/10/2012-10-11-14-49-36.jpg&#34;&gt;&lt;img src=&#34;http://leifmadsen.files.wordpress.com/2012/10/2012-10-11-14-49-36.jpg?w=300&#34; alt=&#34;&#34; /&gt;&lt;/a&gt; Easy access![/caption]&lt;/p&gt;
-
-&lt;p&gt;Lots of space for my hand to plug in cables. Much nicer than any of the Polycom bases where I usually give up and just remove it.&lt;/p&gt;
-
-&lt;p&gt;[caption id=&amp;ldquo;attachment_495&amp;rdquo; align=&amp;ldquo;aligncenter&amp;rdquo; width=&amp;ldquo;300&amp;rdquo;]&lt;a href=&#34;http://leifmadsen.files.wordpress.com/2012/10/2012-10-11-14-51-00.jpg&#34;&gt;&lt;img src=&#34;http://leifmadsen.files.wordpress.com/2012/10/2012-10-11-14-51-00.jpg?w=300&#34; alt=&#34;&#34; /&gt;&lt;/a&gt; Boot screen[/caption]&lt;/p&gt;
-
-&lt;p&gt;Booting up with the Digium logo.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://leifmadsen.files.wordpress.com/2012/10/2012-10-11-14-49-56.jpg&#34;&gt;&lt;img src=&#34;http://leifmadsen.files.wordpress.com/2012/10/2012-10-11-14-49-56.jpg?w=300&#34; alt=&#34;&#34; /&gt;&lt;/a&gt;&lt;a href=&#34;http://leifmadsen.files.wordpress.com/2012/10/2012-10-11-14-50-51.jpg&#34;&gt;&lt;img src=&#34;http://leifmadsen.files.wordpress.com/2012/10/2012-10-11-14-50-51.jpg?w=300&#34; alt=&#34;&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;[caption id=&amp;ldquo;attachment_496&amp;rdquo; align=&amp;ldquo;aligncenter&amp;rdquo; width=&amp;ldquo;300&amp;rdquo;]&lt;a href=&#34;http://leifmadsen.files.wordpress.com/2012/10/2012-10-11-14-54-35.jpg&#34;&gt;&lt;img src=&#34;http://leifmadsen.files.wordpress.com/2012/10/2012-10-11-14-54-35.jpg?w=300&#34; alt=&#34;&#34; /&gt;&lt;/a&gt; Handset hook access[/caption]&lt;/p&gt;
-
-&lt;p&gt;The tab on the back here is well designed so that you don&amp;rsquo;t require a tool to pull out and flip around. I prefer to have the hook for the handset so it doesn&amp;rsquo;t fall off the base easily. On the Polycoms (which have the same type of setup) it&amp;rsquo;s nearly impossible to remove with your fingers&lt;/p&gt;
-
-&lt;p&gt;[caption id=&amp;ldquo;attachment_497&amp;rdquo; align=&amp;ldquo;aligncenter&amp;rdquo; width=&amp;ldquo;300&amp;rdquo;]&lt;a href=&#34;http://leifmadsen.files.wordpress.com/2012/10/2012-10-11-14-56-01.jpg&#34;&gt;&lt;img src=&#34;http://leifmadsen.files.wordpress.com/2012/10/2012-10-11-14-56-01.jpg?w=300&#34; alt=&#34;&#34; /&gt;&lt;/a&gt; D40 vs IP335 size comparison[/caption]&lt;/p&gt;
-
-&lt;p&gt;.Size comparison between the D40 and IP335.&lt;/p&gt;
-
-&lt;h2 id=&#34;digium-d70&#34;&gt;Digium D70&lt;/h2&gt;
-
-&lt;p&gt;[caption id=&amp;ldquo;attachment_498&amp;rdquo; align=&amp;ldquo;aligncenter&amp;rdquo; width=&amp;ldquo;300&amp;rdquo;]&lt;a href=&#34;http://leifmadsen.files.wordpress.com/2012/10/2012-10-11-14-57-40.jpg&#34;&gt;&lt;img src=&#34;http://leifmadsen.files.wordpress.com/2012/10/2012-10-11-14-57-40.jpg?w=300&#34; alt=&#34;&#34; /&gt;&lt;/a&gt; Open box[/caption]&lt;/p&gt;
-
-&lt;p&gt;[caption id=&amp;ldquo;attachment_500&amp;rdquo; align=&amp;ldquo;aligncenter&amp;rdquo; width=&amp;ldquo;300&amp;rdquo;]&lt;a href=&#34;http://leifmadsen.files.wordpress.com/2012/10/2012-10-11-14-58-28.jpg&#34;&gt;&lt;img src=&#34;http://leifmadsen.files.wordpress.com/2012/10/2012-10-11-14-58-28.jpg?w=300&#34; alt=&#34;&#34; /&gt;&lt;/a&gt; Hidden compartment[/caption]&lt;/p&gt;
-
-&lt;p&gt;[caption id=&amp;ldquo;attachment_503&amp;rdquo; align=&amp;ldquo;aligncenter&amp;rdquo; width=&amp;ldquo;300&amp;rdquo;]&lt;a href=&#34;http://leifmadsen.files.wordpress.com/2012/10/2012-10-11-15-00-52.jpg&#34;&gt;&lt;img src=&#34;http://leifmadsen.files.wordpress.com/2012/10/2012-10-11-15-00-52.jpg?w=300&#34; alt=&#34;&#34; /&gt;&lt;/a&gt; Back of the D70[/caption]&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://leifmadsen.files.wordpress.com/2012/10/2012-10-11-14-57-57.jpg&#34;&gt;&lt;img src=&#34;http://leifmadsen.files.wordpress.com/2012/10/2012-10-11-14-57-57.jpg?w=300&#34; alt=&#34;&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://leifmadsen.files.wordpress.com/2012/10/2012-10-11-14-58-46.jpg&#34;&gt;&lt;img src=&#34;http://leifmadsen.files.wordpress.com/2012/10/2012-10-11-14-58-46.jpg?w=300&#34; alt=&#34;&#34; /&gt;&lt;/a&gt;
-&lt;a href=&#34;http://leifmadsen.files.wordpress.com/2012/10/2012-10-11-14-59-58.jpg&#34;&gt;&lt;img src=&#34;http://leifmadsen.files.wordpress.com/2012/10/2012-10-11-14-59-58.jpg?w=300&#34; alt=&#34;&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://leifmadsen.files.wordpress.com/2012/10/2012-10-11-15-01-37.jpg&#34;&gt;&lt;img src=&#34;http://leifmadsen.files.wordpress.com/2012/10/2012-10-11-15-01-37.jpg?w=300&#34; alt=&#34;&#34; /&gt;&lt;/a&gt;&lt;a href=&#34;http://leifmadsen.files.wordpress.com/2012/10/2012-10-11-15-03-21.jpg&#34;&gt;&lt;img src=&#34;http://leifmadsen.files.wordpress.com/2012/10/2012-10-11-15-03-21.jpg?w=300&#34; alt=&#34;&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;I don&amp;rsquo;t quite get the base with the wall mount holes, but impossible mounting angles on the base. Must have something to do with the manufacturing process and not having separate molds for footing.&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;Update: Michael pointed out that the A-frame is actually two separate pieces, so with a (separately purchased) piece, you can attach it to the base and make the system wall mountable. With the number of phones I&amp;rsquo;ve actually wall mounted in deployments (I think the number is only one or two), I think I prefer the 2 options for steep and shallow angles. Neat idea.&lt;/em&gt;
-&lt;a href=&#34;http://leifmadsen.files.wordpress.com/2012/10/2012-10-11-15-03-34.jpg&#34;&gt;&lt;img src=&#34;http://leifmadsen.files.wordpress.com/2012/10/2012-10-11-15-03-34.jpg?w=300&#34; alt=&#34;&#34; /&gt;&lt;/a&gt;
-Side cut outs for cables that I didn&amp;rsquo;t even notice the first time through. Michael pointed out they are for cable management. Nice!&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://leifmadsen.files.wordpress.com/2012/10/2012-10-11-15-05-20.jpg&#34;&gt;&lt;img src=&#34;http://leifmadsen.files.wordpress.com/2012/10/2012-10-11-15-05-20.jpg?w=300&#34; alt=&#34;&#34; /&gt;&lt;/a&gt;Oh my! So much space! Very roomy :)
-&lt;a href=&#34;http://leifmadsen.files.wordpress.com/2012/10/2012-10-11-15-07-22.jpg&#34;&gt;&lt;img src=&#34;http://leifmadsen.files.wordpress.com/2012/10/2012-10-11-15-07-22.jpg?w=300&#34; alt=&#34;&#34; /&gt;&lt;/a&gt;Side by side comparison of the D70 vs the IP650 w/ sidecar.
-&lt;a href=&#34;http://leifmadsen.files.wordpress.com/2012/10/2012-10-11-15-08-05.jpg&#34;&gt;&lt;img src=&#34;http://leifmadsen.files.wordpress.com/2012/10/2012-10-11-15-08-05.jpg?w=300&#34; alt=&#34;&#34; /&gt;&lt;/a&gt;Front to back comparison of the D70 vs IP650 w/ sidecar.&lt;/p&gt;
-</description>
+      <description>Today I received a couple of phones from Digium; the D40 and D70. I&amp;rsquo;ll be using these phones for testing and documentation in the 4th edition of Asterisk: The Definitive Guide (which Jim Van Meggelen, Russell Bryant and myself are working on right now). Here is my unboxing of the phones and some commentary about my initial impressions of the hardware itself. [caption id=&amp;ldquo;attachment_484&amp;rdquo; align=&amp;ldquo;aligncenter&amp;rdquo; width=&amp;ldquo;300&amp;rdquo;] Pretty boxes![/caption] Phones arrived in some nice looking boxes.</description>
     </item>
     
     <item>
@@ -107,26 +33,7 @@ Side cut outs for cables that I didn&amp;rsquo;t even notice the first time thro
       <pubDate>Mon, 16 Jan 2012 13:28:10 +0000</pubDate>
       
       <guid>http://blog.leifmadsen.com/blog/2012/01/16/converting-multiple-exten--lines-to-using-same--in-asterisk-dialplan/</guid>
-      <description>&lt;p&gt;Last week I wanted to start changing some 1.4 based Asterisk dialplan to a 1.8 based Asterisk system, and in that process wanted to convert lines like:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;exten =&amp;gt; _NXXNXXXXXX,1,NoOp()
-exten =&amp;gt; _NXXNXXXXXX,2,GotoIf($[...]?reject,1)
-exten =&amp;gt; _NXXNXXXXXX,3,Dial(SIP/foo/${EXTEN})
-...
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;into using the same =&amp;gt; prefix:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;exten =&amp;gt; _NXXNXXXXXX,1,NoOp()
- same =&amp;gt; n,GotoIf($[...]?reject,1)
- same =&amp;gt; n,Dial(SIP/foo/${EXTEN})
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;In order to do that, &lt;a href=&#34;https://twitter.com/#!/mikemking&#34;&gt;Mike King&lt;/a&gt; helped me out with the following regular expressing which I used in vim:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;%s/exten\s*=&amp;gt;\s*[^,]\+,\s*[n2-9]/ same =&amp;gt; n/g
-&lt;/code&gt;&lt;/pre&gt;
-</description>
+      <description>Last week I wanted to start changing some 1.4 based Asterisk dialplan to a 1.8 based Asterisk system, and in that process wanted to convert lines like: exten =&amp;gt; _NXXNXXXXXX,1,NoOp() exten =&amp;gt; _NXXNXXXXXX,2,GotoIf($[...]?reject,1) exten =&amp;gt; _NXXNXXXXXX,3,Dial(SIP/foo/${EXTEN}) ... into using the same =&amp;gt; prefix: exten =&amp;gt; _NXXNXXXXXX,1,NoOp() same =&amp;gt; n,GotoIf($[...]?reject,1) same =&amp;gt; n,Dial(SIP/foo/${EXTEN}) In order to do that, Mike King helped me out with the following regular expressing which I used</description>
     </item>
     
     <item>
@@ -135,16 +42,7 @@ exten =&amp;gt; _NXXNXXXXXX,3,Dial(SIP/foo/${EXTEN})
       <pubDate>Wed, 04 Jan 2012 20:22:08 +0000</pubDate>
       
       <guid>http://blog.leifmadsen.com/blog/2012/01/04/now-working-with-coredial/</guid>
-      <description>&lt;p&gt;&lt;img src=&#34;https://si0.twimg.com/profile_images/1509716558/twitter-coredial-square-avatar_reasonably_small.png&#34; alt=&#34;&#34; /&gt; As of January 3rd, I&amp;rsquo;m now working with the CoreDial team full time. I&amp;rsquo;ve worked with them as a consultant on their infrastructure over the last few years but now will be spending significantly more time working with the engineering team :)&lt;/p&gt;
-
-&lt;p&gt;From the announcement,&lt;/p&gt;
-
-&lt;p&gt;“_CoreDial is pleased to announce the addition of Leif Madsen to the CoreDial team,” said Alan Rihm, CEO at CoreDial. “Leif is a well known Asterisk consultant who specializes in distributed telephony deployments and database integration. In addition, Leif is co-author of several O’Reilly published books on Asterisk, including Asterisk: The Definitive Guide (3rd edition). We’re pleased to be adding Leif to our team, and look forward to the exciting opportunity to work together._”&lt;/p&gt;
-
-&lt;p&gt;The entire announcement can be found at &lt;a href=&#34;http://coredial.com/asterisk-consultant-leif-madsen-joins-coredial-team/&#34;&gt;http://coredial.com/asterisk-consultant-leif-madsen-joins-coredial-team/&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;I&amp;rsquo;m really excited to be working with these guys, and to see what we&amp;rsquo;ll develop over the coming months! I&amp;rsquo;ll keep you informed here on my blog, and will continue to post Asterisk tidbits and snippets as I go.&lt;/p&gt;
-</description>
+      <description>As of January 3rd, I&amp;rsquo;m now working with the CoreDial team full time. I&amp;rsquo;ve worked with them as a consultant on their infrastructure over the last few years but now will be spending significantly more time working with the engineering team :) From the announcement, “_CoreDial is pleased to announce the addition of Leif Madsen to the CoreDial team,” said Alan Rihm, CEO at CoreDial. “Leif is a well known Asterisk consultant who specializes in distributed telephony deployments and database integration.</description>
     </item>
     
     <item>
@@ -153,14 +51,7 @@ exten =&amp;gt; _NXXNXXXXXX,3,Dial(SIP/foo/${EXTEN})
       <pubDate>Fri, 23 Dec 2011 16:17:57 +0000</pubDate>
       
       <guid>http://blog.leifmadsen.com/blog/2011/12/23/cooking-with-asterisk-video/</guid>
-      <description>&lt;p&gt;And I found the Cooking With Asterisk presentation as well! Apologies for the low quality on the video (as this one has a lot more text than the Distributed Call Centre video), but you can follow along with the presentation on your screen as available on my website at:&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://leifmadsen.com/sites/default/files/AstriCon%202011%20-%20Cooking%20With%20Asterisk.pdf&#34;&gt;http://leifmadsen.com/sites/default/files/AstriCon%202011%20-%20Cooking%20With%20Asterisk.pdf&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;The video presentation is available here:&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://www.tmcnet.com/tmc/videos/default.aspx?vid=5741&amp;amp;title=Cooking+with+Asterisk#&#34;&gt;http://www.tmcnet.com/tmc/videos/default.aspx?vid=5741&amp;amp;title=Cooking+with+Asterisk#&lt;/a&gt;&lt;/p&gt;
-</description>
+      <description>And I found the Cooking With Asterisk presentation as well! Apologies for the low quality on the video (as this one has a lot more text than the Distributed Call Centre video), but you can follow along with the presentation on your screen as available on my website at: http://leifmadsen.com/sites/default/files/AstriCon%202011%20-%20Cooking%20With%20Asterisk.pdf The video presentation is available here: http://www.tmcnet.com/tmc/videos/default.aspx?vid=5741&amp;amp;title=Cooking+with+Asterisk#</description>
     </item>
     
     <item>
@@ -169,14 +60,7 @@ exten =&amp;gt; _NXXNXXXXXX,3,Dial(SIP/foo/${EXTEN})
       <pubDate>Fri, 23 Dec 2011 15:31:22 +0000</pubDate>
       
       <guid>http://blog.leifmadsen.com/blog/2011/12/23/asterisk-powered-distributed-call-centres-video/</guid>
-      <description>&lt;p&gt;Looks like TMC has posted my presentation from AstriCon 2011! You can see the presentation in its entirety over here:&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://www.tmcnet.com/tmc/videos/default.aspx?vid=5821&amp;amp;title=Asterisk-Powered+Distributed+Call+Centers&#34;&gt;http://www.tmcnet.com/tmc/videos/default.aspx?vid=5821&amp;amp;title=Asterisk-Powered+Distributed+Call+Centers&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;And the presentation along with the demo configuration files is available on my website at:&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://leifmadsen.com/sites/default/files/AstriCon%202011%20-%20Building%20a%20distributed%20call%20centre.zip&#34;&gt;http://leifmadsen.com/sites/default/files/AstriCon%202011%20-%20Building%20a%20distributed%20call%20centre.zip &lt;/a&gt;&lt;/p&gt;
-</description>
+      <description>Looks like TMC has posted my presentation from AstriCon 2011! You can see the presentation in its entirety over here: http://www.tmcnet.com/tmc/videos/default.aspx?vid=5821&amp;amp;title=Asterisk-Powered+Distributed+Call+Centers And the presentation along with the demo configuration files is available on my website at: http://leifmadsen.com/sites/default/files/AstriCon%202011%20-%20Building%20a%20distributed%20call%20centre.zip</description>
     </item>
     
     <item>
@@ -185,12 +69,7 @@ exten =&amp;gt; _NXXNXXXXXX,3,Dial(SIP/foo/${EXTEN})
       <pubDate>Sun, 30 Oct 2011 15:46:23 +0000</pubDate>
       
       <guid>http://blog.leifmadsen.com/blog/2011/10/30/</guid>
-      <description>&lt;p&gt;I think the best quote I heard the entire time came from @abalashov (Alex Balashov) during the AstriDevCon when we were talking about Asterisk documentation, and how we might better organize it within the source.&lt;/p&gt;
-
-&lt;p&gt;We were discussing perhaps moving some of the existing configuration file examples to a manpage, and Alex piped up to say, &lt;strong&gt;&amp;ldquo;Manpages are a vestige of our glorious, prehensile, curly-tailed past.&amp;rdquo;&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;There wasn&amp;rsquo;t much left to be said after that :)&lt;/p&gt;
-</description>
+      <description>I think the best quote I heard the entire time came from @abalashov (Alex Balashov) during the AstriDevCon when we were talking about Asterisk documentation, and how we might better organize it within the source. We were discussing perhaps moving some of the existing configuration file examples to a manpage, and Alex piped up to say, &amp;ldquo;Manpages are a vestige of our glorious, prehensile, curly-tailed past.&amp;rdquo; There wasn&amp;rsquo;t much left</description>
     </item>
     
     <item>
@@ -199,11 +78,7 @@ exten =&amp;gt; _NXXNXXXXXX,3,Dial(SIP/foo/${EXTEN})
       <pubDate>Wed, 26 Oct 2011 19:15:41 +0000</pubDate>
       
       <guid>http://blog.leifmadsen.com/blog/2011/10/26/</guid>
-      <description>&lt;p&gt;The presentation and configuration files from my presentation at AstriCon 2011 today is available at:&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://leifmadsen.com/sites/default/files/AstriCon 2011 - Building a distributed call centre.zip&#34;&gt;http://leifmadsen.com/sites/default/files/AstriCon 2011 - Building a distributed call centre.zip
-&lt;/a&gt;&lt;/p&gt;
-</description>
+      <description>The presentation and configuration files from my presentation at AstriCon 2011 today is available at: http://leifmadsen.com/sites/default/files/AstriCon 2011 - Building a distributed call centre.zip</description>
     </item>
     
     <item>
@@ -212,74 +87,7 @@ exten =&amp;gt; _NXXNXXXXXX,3,Dial(SIP/foo/${EXTEN})
       <pubDate>Fri, 09 Sep 2011 13:28:47 +0000</pubDate>
       
       <guid>http://blog.leifmadsen.com/blog/2011/09/09/using-dialplan-functions-aes_decrypt-and-aes_encrypt/</guid>
-      <description>&lt;p&gt;I  recently asked on twitter how many people would be interested in a set of blog posts that focused on how to use the various dialplan functions in Asterisk, and I got quite a positive response. I posted that shortly before getting married, and now that I&amp;rsquo;m back into the groove of things, I&amp;rsquo;m going to take a shot at posting a bunch of content focused around Asterisk dialplan functions. If you don&amp;rsquo;t know what Asterisk dialplan functions are, head on over to the online version of &lt;a href=&#34;http://ofps.oreilly.com/titles/9780596517342/index.html&#34;&gt;Asterisk: The Definitive Guide (3rd edition)&lt;/a&gt; (or &lt;a href=&#34;http://www.amazon.com/Asterisk-Definitive-Guide-Guides/dp/0596517343/ref=sr_1_1?ie=UTF8&amp;amp;qid=1315572209&amp;amp;sr=8-1&#34;&gt;buy&lt;/a&gt; it) and read the section on &lt;a href=&#34;http://ofps.oreilly.com/titles/9780596517342/asterisk-DP-Deeper.html#asterisk-CHP-6-SECT-2&#34;&gt;dialplan functions&lt;/a&gt;. If you&amp;rsquo;re still starting out with Asterisk, I highly suggest you start with the &lt;a href=&#34;http://ofps.oreilly.com/titles/9780596517342/asterisk-DP-Basics.html&#34;&gt;dialplan basics&lt;/a&gt; chapter.&lt;/p&gt;
-
-&lt;p&gt;Today we&amp;rsquo;ll look at the first 2 dialplan functions in my list: &lt;code&gt;AES_DECRYPT()&lt;/code&gt; and &lt;code&gt;AES_ENCRYPT()&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;The AES_DECRYPT() and AES_ENCRYPT() functions work by passing strings to the functions, and they return a result. If you pass an unencrypted string to the AES_ENCRYPT() function it will return an encrypted string; vice-versa for the AES_DECRYPT() function. The two functions operate by passing a string and a key where the result is encoded  in base64.&lt;/p&gt;
-
-&lt;p&gt;Use case for these functions probably makes the most sense when you need to store data outside of the dialplan, perhaps passwords, pins, or other data passed in by the caller, but which you want to secure when you go to store it. Let&amp;rsquo;s take an example where we create some dialplan that allows a caller to set their pin and store it in the database. For the sake of simplicity I&amp;rsquo;m not going to add any error checking (like to verify we really have data to work with, allow the caller to verify their extension, etc.):&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;exten =&amp;gt; *88,1,NoOp()
- same =&amp;gt; n,Playback(silence/1)
- same =&amp;gt; n,Read(UserExtension,extension,3)                  ; read persons 3 digit extension unmber
- same =&amp;gt; n,Verbose(2,Extension number: ${UserExtension})
- same =&amp;gt; n,Read(PinEntry,agent-pass)                        ; ask for a pin number
- same =&amp;gt; n,Verbose(2,Pin number: ${PinEntry})
- same =&amp;gt; n,SayDigits(${PinEntry})                           ; say pin back to caller
- same =&amp;gt; n,Set(DB(pin/${UserExtension})=${PinEntry})        ; store pin in the AstDB
- same =&amp;gt; n,Playback(vm-goodbye)
- same =&amp;gt; n,Hangup()
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;After the user enters their extension and pin, we store it in the AstDB. We can verify it was stored correctly by checking from the Asterisk CLI:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;scrappy*CLI&amp;gt; database show pin
-/pin/100 : 1234
-1 results found.
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Now let&amp;rsquo;s modify our dialplan to store the pin in the database using a value returned from &lt;code&gt;AES_ENCRYPT()&lt;/code&gt;.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;exten =&amp;gt; *88,1,NoOp()
- same =&amp;gt; n,Playback(silence/1)
- same =&amp;gt; n,Read(UserExtension,extension,3)
- same =&amp;gt; n,Verbose(2,Extension number: ${UserExtension})
- same =&amp;gt; n,Read(PinEntry,agent-pass)
- same =&amp;gt; n,Verbose(2,Pin number: ${PinEntry})
- same =&amp;gt; n,SayDigits(${PinEntry})
- same =&amp;gt; n,Set(SpecialKey=1234qwerasdfzxcv)
- same =&amp;gt; n,Set(EncryptedPin=${AES_ENCRYPT(${SpecialKey},${PinEntry})})
- same =&amp;gt; n,Set(DB(pin/${UserExtension})=${EncryptedPin})
- same =&amp;gt; n,Playback(vm-goodbye)
- same =&amp;gt; n,Hangup()
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;And we can see the encoded string stored in the database:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;scrappy*CLI&amp;gt; database show pin
-/pin/100 : Je2G/qyHuGVKgvvXDwXjHA==
-1 results found.
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Of course anyone who has access to the AstDB from the Asterisk CLI is also going to have access to the Asterisk dialplan, so you&amp;rsquo;ll have to do a better job than I have here of hiding the secret key being used for encrypting the data. Really all we&amp;rsquo;re trying to do here is not make the list of pins and data in our AstDB quite so obvious. We could of course not use AstDB at all, and store the data remotely where we know people will have access to the data, but not access to the secret key on our Asterisk server.&lt;/p&gt;
-
-&lt;p&gt;Now lets look at the inverse by decoding the pin to authenticate someone.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;exten =&amp;gt; *77,1,NoOp()
- same =&amp;gt; n,Playback(silence/1)
- same =&amp;gt; n,Read(UserExtension,extension,3)                     ; get users extension
- same =&amp;gt; n,Set(EncryptedPin=${DB(pin/${UserExtension})})       ; get encrypted pin from AstDB
- same =&amp;gt; n,Read(PinEntry,agent-pass)                           ; get pin from user
- same =&amp;gt; n,Set(SpecialKey=1234qwerasdfzxcv)
- same =&amp;gt; n,Set(DecryptedPin=${AES_DECRYPT(${SpecialKey},${EncryptedPin})})                          ; decrypt the pin
- same =&amp;gt; n,Playback(${IF($[&amp;quot;${PinEntry}&amp;quot; = &amp;quot;${DecryptedPin}&amp;quot;]?pin-number-accepted:pin-invalid)})    ; if pin is correct, play number accepted, else, pin invalid
- same =&amp;gt; n,Playback(vm-goodbye)
- same =&amp;gt; n,Hangup()
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;That&amp;rsquo;s it for now. Leave a comment if you like this format, and if you found this article useful. Thanks!&lt;/p&gt;
-</description>
+      <description>I recently asked on twitter how many people would be interested in a set of blog posts that focused on how to use the various dialplan functions in Asterisk, and I got quite a positive response. I posted that shortly before getting married, and now that I&amp;rsquo;m back into the groove of things, I&amp;rsquo;m going to take a shot at posting a bunch of content focused around Asterisk dialplan functions. If you don&amp;rsquo;t know what Asterisk dialplan functions are, head on over to the online version of Asterisk: The Definitive Guide (3rd edition) (or buy it) and read the section on dialplan functions.</description>
     </item>
     
     <item>
@@ -288,51 +96,7 @@ exten =&amp;gt; _NXXNXXXXXX,3,Dial(SIP/foo/${EXTEN})
       <pubDate>Sat, 13 Aug 2011 02:14:55 +0000</pubDate>
       
       <guid>http://blog.leifmadsen.com/blog/2011/08/13/set-and-goto-on-same-line/</guid>
-      <description>&lt;p&gt;(Thanks to Jared Smith for answering my question in IRC which is the inspiration for this post.)&lt;/p&gt;
-
-&lt;p&gt;Typically when I write dialplan, primarily in the case where I&amp;rsquo;m using a pattern match, I&amp;rsquo;ll save the dialed extension to a channel variable using &lt;code&gt;Set()&lt;/code&gt;, then do a &lt;code&gt;Goto()&lt;/code&gt; where the call logic is handled. The &lt;code&gt;Set()&lt;/code&gt; is so that I don&amp;rsquo;t lose the value of &lt;code&gt;${EXTEN}&lt;/code&gt; throughout the dialplan process, especially if I&amp;rsquo;m using other mechanics such as &lt;code&gt;GoSub()&lt;/code&gt; and others.&lt;/p&gt;
-
-&lt;p&gt;I&amp;rsquo;ve been doing this on two or three lines like this (usually three because I like using a &lt;code&gt;NoOp()&lt;/code&gt; or &lt;code&gt;Verbose()&lt;/code&gt; for the first priority):&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;exten =&amp;gt; _NXXNXXXXXX,1,NoOp()
-   same =&amp;gt; n,Set(DialedExtension=${EXTEN})
-   same =&amp;gt; n,Goto(CallHandler,1)
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;This is kind of annoying for each pattern match, especially if you&amp;rsquo;re going to do multiple. Here is a legitimate example of the &lt;code&gt;CallHandler&lt;/code&gt; extension:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;exten =&amp;gt; _NXXNXXXXXX,1,NoOp()
-   same =&amp;gt; n,Set(DialedExtension=${EXTEN})
-   same =&amp;gt; n,Goto(CallHandler,1)
-
-exten =&amp;gt; _1NXXNXXXXXX,1,NoOp()
-   same =&amp;gt; n,Set(DialedExtension=${EXTEN})
-   same =&amp;gt; n,Goto(CallHandler,1)
-
-exten =&amp;gt; _NXXXXXX,1,NoOp()
-   same =&amp;gt; n,Set(DialedExtension=${EXTEN})
-   same =&amp;gt; n,Goto(CallHandler,1)
-
-exten =&amp;gt; CallHandler,1,NoOp()
-   same =&amp;gt; n,Dial(${GLOBAL(PSTN_CONNECTION)}/${DialedExtension},30)
-   same =&amp;gt; n,Hangup()
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;It&amp;rsquo;s a bit annoying having to either type out the same type of logic multiple times, even if it&amp;rsquo;s only 2-3 lines (even if you just copy and paste the &lt;code&gt;same =&amp;gt;&lt;/code&gt; lines it&amp;rsquo;s a bit better, but still not ideal). So here&amp;rsquo;s a solution to the same problem of multiple pattern matches and doing a &lt;code&gt;Goto()&lt;/code&gt; our &lt;code&gt;CallHandler&lt;/code&gt; extension.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;exten =&amp;gt; _NXXNXXXXXX,1,GotoIf($[${EXISTS(${SET(DialedExtension=${EXTEN})})}]?CallHandler,1:i,1)
-exten =&amp;gt; _1NXXNXXXXXX,1,GotoIf($[${EXISTS(${SET(DialedExtension=${EXTEN})})}]?CallHandler,1:i,1)
-exten =&amp;gt; _NXXXXXX,1,GotoIf($[${EXISTS(${SET(DialedExtension=${EXTEN})})}]?CallHandler,1:i,1)
-
-exten =&amp;gt; CallHandler,1,NoOp()
-   same =&amp;gt; n,Dial(${GLOBAL(PSTN_CONNECTION)}/${DialedExtension},30)
-   same =&amp;gt; n,Hangup()
-
-exten =&amp;gt; i,1,Congestion()
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;While both ways are perfectly reasonable (and some may argue the more verbose method is easier to read), I like embedding dialplan into a single line when I can as I find it easier to maintain. I&amp;rsquo;m also pretty good at knowing how many brackets to end with when nesting functions, but not everyone is comfortable doing that; in those cases you should probably break it out to multiple lines in order to save debugging time. Both methods are perfectly valid, so enjoy using whichever you prefer!&lt;/p&gt;
-</description>
+      <description>(Thanks to Jared Smith for answering my question in IRC which is the inspiration for this post.) Typically when I write dialplan, primarily in the case where I&amp;rsquo;m using a pattern match, I&amp;rsquo;ll save the dialed extension to a channel variable using Set(), then do a Goto() where the call logic is handled. The Set() is so that I don&amp;rsquo;t lose the value of ${EXTEN} throughout the dialplan process, especially if I&amp;rsquo;m using other mechanics such as GoSub() and others.</description>
     </item>
     
     <item>
@@ -341,8 +105,7 @@ exten =&amp;gt; i,1,Congestion()
       <pubDate>Tue, 02 Aug 2011 18:26:57 +0000</pubDate>
       
       <guid>http://blog.leifmadsen.com/blog/2011/08/02/leifmadsen-enterprises-inc.-enters-its-7th-year-of-operation/</guid>
-      <description>&lt;p&gt;On this day in 2005, LeifMadsen Enterprises, Inc. was formally registered as an incorporation by the government of Canada! I&amp;rsquo;ve now been consulting on Asterisk professionally for over 6 years full time (and a few years before that!). I graduated from the telecommuncations technology program at Sheridan Institute of Technology in 2004. In that time I&amp;rsquo;ve spoken at every AstriCon since 2004 (the first one), and have helped write 4 books on the subject of Asterisk (The Future of Telephony 1st, 2nd editions, The Definitive Guide 3rd edition, Cookbook). I&amp;rsquo;m quite proud of the work I have done, and the future is looking bright. The next year in business should be very exciting with some projects currently underway that will allow me to expand my business and start managing more clients with an even higher quality of service. Here&amp;rsquo;s looking forward to year seven! (And subsequently, seven is my lucky number, and the day of January on which I was born.)&lt;/p&gt;
-</description>
+      <description>On this day in 2005, LeifMadsen Enterprises, Inc. was formally registered as an incorporation by the government of Canada! I&amp;rsquo;ve now been consulting on Asterisk professionally for over 6 years full time (and a few years before that!). I graduated from the telecommuncations technology program at Sheridan Institute of Technology in 2004. In that time I&amp;rsquo;ve spoken at every AstriCon since 2004 (the first one), and have helped write 4 books on the subject of Asterisk (The Future of Telephony 1st, 2nd editions, The Definitive Guide 3rd edition, Cookbook).</description>
     </item>
     
     <item>
@@ -351,28 +114,7 @@ exten =&amp;gt; i,1,Congestion()
       <pubDate>Tue, 17 May 2011 20:40:55 +0000</pubDate>
       
       <guid>http://blog.leifmadsen.com/blog/2011/05/17/asterisk-1.8-and-the-importance-of-looking-ahead/</guid>
-      <description>&lt;p&gt;With the end of maintenance for the Asterisk 1.4 (the previous long term support (LTS) release) and Asterisk 1.6.2 (the previous standard, short term support release) branches, the time to look at using Asterisk 1.8 (the next long term support release, which provides another 4 years of maintenance, followed by a year of security support) is upon us. For those who have successful deployments of Asterisk 1.4 and 1.6.2 (heck, even 1.2!) there is no immediate need to migrate those existing systems; let them happily continue what they’re doing. And for those who have successful product launches based around 1.4 and 1.6.2, there is still a year of security maintenance, so the lead time to migrating existing systems to 1.8 can start now, but doesn&amp;rsquo;t need to happen for another 12 months, which gives us all a little breathing room.&lt;/p&gt;
-
-&lt;p&gt;It is important that the Asterisk community continue to look forward and progress the Asterisk project. The resources of the Asterisk Development community must be used as effectively as possible, and sometimes this means making tough decisions in the short-term for the greatest benefit in the long term. With the end of maintenance support after the releases of Asterisk 1.4.42 and 1.6.2.19 (with the first release candidates due out shortly), all focus can now be put onto Asterisk 1.8, continuing to stabilize additional components and making it the most robust, feature rich release of Asterisk to date.&lt;/p&gt;
-
-&lt;p&gt;I&amp;rsquo;ve already deployed numerous systems on Asterisk 1.8, and have been ecstatic as to the early reliability compared to other dot-zero releases. I&amp;rsquo;ve always been an early adopter when it came to Asterisk though, and I can certainly say the number of show-stopping issues I&amp;rsquo;ve run into has continued to decrease excessively over the years. When deploying Asterisk 1.4 pre-1.4.0, I was working on a database driven, physically distributed call centre where I learned many of the tricks of my trade. When I deployed another call centre running pre-1.6.2.0, I found it remarkably stable in comparison to those early 1.4 deployments (and that call centre is STILL running pre-1.6.2.0 code without issue).&lt;/p&gt;
-
-&lt;p&gt;Having done a few more deployments with pre-Asterisk 1.8.0  (and subsequently 1.8.2 and 1.8.3 based deployments), I&amp;rsquo;ve run into even less issues, and none of them show stoppers. I think a few things contribute to those successful deployments:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;Enhanced understanding of Asterisk after dozens of custom installations&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Development of best-practices in many areas of Asterisk&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;&lt;a href=&#34;https://reviewboard.asterisk.org&#34;&gt;Reviewboard&lt;/a&gt; which finds many issues in code BEFORE they are committed, rather than when doing deployments&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Developers having greater experience with the Asterisk code base and knowing how best to code in various situations &amp;ndash; greater code fu&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;One of my favourite new things is the &lt;a href=&#34;http://bamboo.asterisk.org&#34;&gt;Asterisk Testing Framework&lt;/a&gt;, currently being managed by Paul Belanger. The testing framework allows people to provide tests to the project in order to have greater confidence in performing upgrades going forward. So if there are some business critical aspects to your deployments, and you want to be confident that code changes don&amp;rsquo;t break your infrastructure, then spend the time writing tests and submitting them to the project. Not only will you be helping to make Asterisk better, you&amp;rsquo;ll be getting the direct advantage of having the developers notified of changes to functionality shortly after a commit.&lt;/p&gt;
-
-&lt;p&gt;More information about where Asterisk is going into the future was posted by Bryan M. Johns on the Digium blog: &lt;a href=&#34;http://blogs.digium.com/2011/05/03/the-importance-of-looking-ahead/&#34;&gt;http://blogs.digium.com/2011/05/03/the-importance-of-looking-ahead/&lt;/a&gt;&lt;/p&gt;
-</description>
+      <description>With the end of maintenance for the Asterisk 1.4 (the previous long term support (LTS) release) and Asterisk 1.6.2 (the previous standard, short term support release) branches, the time to look at using Asterisk 1.8 (the next long term support release, which provides another 4 years of maintenance, followed by a year of security support) is upon us. For those who have successful deployments of Asterisk 1.4 and 1.6.2 (heck, even 1.2!) there is no immediate need to migrate those existing systems; let them happily continue what they’re doing.</description>
     </item>
     
     <item>
@@ -381,17 +123,7 @@ exten =&amp;gt; i,1,Congestion()
       <pubDate>Tue, 26 Apr 2011 17:34:43 +0000</pubDate>
       
       <guid>http://blog.leifmadsen.com/blog/2011/04/26/request-for-reviews-for-asterisk-the-definitive-guide/</guid>
-      <description>&lt;p&gt;Recently Jim Van Meggelen, Russell Bryant and myself released the 3rd edition of the Asterisk book published by O&amp;rsquo;Reilly Media titled &amp;lsquo;&lt;a href=&#34;http://oreilly.com/catalog/9780596517342&#34;&gt;Asterisk: The Definitive Guide&lt;/a&gt;&amp;rsquo;.&lt;/p&gt;
-
-&lt;p&gt;We have released this book under a &lt;a href=&#34;http://creativecommons.org/licenses/by-nc-nd/3.0/&#34;&gt;Creative Commons&lt;/a&gt; license in the spirit of Open Source software. It is available in its entirety at &lt;a href=&#34;http://ofps.oreilly.com/titles/9780596517342/&#34;&gt;http://ofps.oreilly.com/titles/9780596517342/&lt;/a&gt; and for purchase through Amazon at &lt;a href=&#34;http://www.amazon.com/Asterisk-Definitive-Guide-Leif-Madsen/dp/0596517343/ref=sr_1_1?ie=UTF8&amp;amp;s=books&amp;amp;qid=1303765969&amp;amp;sr=8-1&#34;&gt;http://www.amazon.com/Asterisk-Definitive-Guide-Leif-Madsen/dp/0596517343/ref=sr_1_1?ie=UTF8&amp;amp;s=books&amp;amp;qid=1303765969&amp;amp;sr=8-1&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;If you have a chance to review the book, and feel it is a useful and well written resource, we would appreciate your favorable review on &lt;a href=&#34;http://www.amazon.com/Asterisk-Definitive-Guide-Leif-Madsen/dp/0596517343/ref=sr_1_1?ie=UTF8&amp;amp;s=books&amp;amp;qid=1303765969&amp;amp;sr=8-1&#34;&gt;Amazon.com&lt;/a&gt;. One of the biggest factors in sales is favorable reviews, and with better sales comes the ability to dedicate more time to writing books like this one (which are typically written in our &amp;ldquo;free time&amp;rdquo;).&lt;/p&gt;
-
-&lt;p&gt;Any comments, suggestions, or constructive criticisms are always welcome.&lt;/p&gt;
-
-&lt;p&gt;Thanks!
-Leif Madsen.&lt;/p&gt;
-</description>
+      <description>Recently Jim Van Meggelen, Russell Bryant and myself released the 3rd edition of the Asterisk book published by O&amp;rsquo;Reilly Media titled &amp;lsquo;Asterisk: The Definitive Guide&amp;rsquo;. We have released this book under a Creative Commons license in the spirit of Open Source software. It is available in its entirety at http://ofps.oreilly.com/titles/9780596517342/ and for purchase through Amazon at http://www.amazon.com/Asterisk-Definitive-Guide-Leif-Madsen/dp/0596517343/ref=sr_1_1?ie=UTF8&amp;amp;s=books&amp;amp;qid=1303765969&amp;amp;sr=8-1 If you have a chance to review the book, and feel it is a useful and well written resource, we would appreciate your favorable review on Amazon.com.</description>
     </item>
     
     <item>
@@ -400,10 +132,7 @@ Leif Madsen.&lt;/p&gt;
       <pubDate>Fri, 25 Mar 2011 13:40:31 +0000</pubDate>
       
       <guid>http://blog.leifmadsen.com/blog/2011/03/25/asterisk-cookbook-is-done/</guid>
-      <description>&lt;p&gt;Just a quick update that the Asterisk Cookbook is complete! We&amp;rsquo;ll be releasing it under a Creative Commons license (just like Asterisk: The Definitive Guide) again. It&amp;rsquo;ll be a 24 recipe e-book right now, with it growing over time and eventually becoming a full print edition once the size warrants it. Of course if you purchase now you help spur on additional incentive to continue making it larger. I&amp;rsquo;ve been told that you also continue to receive updates automatically as the book grows and corrections are made (which sounds pretty cool!).&lt;/p&gt;
-
-&lt;p&gt;More information about the book is here: &lt;a href=&#34;http://oreilly.com/catalog/0636920018551&#34;&gt;http://oreilly.com/catalog/0636920018551&lt;/a&gt;&lt;/p&gt;
-</description>
+      <description>Just a quick update that the Asterisk Cookbook is complete! We&amp;rsquo;ll be releasing it under a Creative Commons license (just like Asterisk: The Definitive Guide) again. It&amp;rsquo;ll be a 24 recipe e-book right now, with it growing over time and eventually becoming a full print edition once the size warrants it. Of course if you purchase now you help spur on additional incentive to continue making it larger. I&amp;rsquo;ve been told that you also continue to receive updates automatically as the book grows and corrections are made (which sounds pretty cool!).</description>
     </item>
     
     <item>
@@ -412,10 +141,7 @@ Leif Madsen.&lt;/p&gt;
       <pubDate>Fri, 04 Mar 2011 14:16:16 +0000</pubDate>
       
       <guid>http://blog.leifmadsen.com/blog/2011/03/04/debugging-the-asterisk-dialplan-with-verbose/</guid>
-      <description>&lt;p&gt;In case you missed it, &lt;a href=&#34;http://www.russellbryant.net&#34;&gt;Russell Bryant&lt;/a&gt; wrote a blog post on &lt;a href=&#34;http://www.russellbryant.net/blog/2011/03/04/debugging-the-asterisk-dialplan-with-verbose/&#34;&gt;debugging the Asterisk dialplan with the Verbose() application&lt;/a&gt;. This is one of the recipes that will be features in the upcoming &lt;a href=&#34;http://oreilly.com/catalog/0636920018551/&#34;&gt;Asterisk Cookbook&lt;/a&gt; that we&amp;rsquo;re writing, and hoping to have done by the end of March!&lt;/p&gt;
-
-&lt;p&gt;(In case you&amp;rsquo;ve missed all the cool stuff lately, the Asterisk Cookbook will also be released under the same Creative Commons license as the previous Asterisk books. We&amp;rsquo;re also making use of the &lt;a href=&#34;http://ofps.oreilly.com&#34;&gt;Open Feedback Publishing System (OFPS)&lt;/a&gt; again. You can help review the text and test the recipes at &lt;a href=&#34;http://ofps.oreilly.com/titles/9781449303822/&#34;&gt;http://ofps.oreilly.com/titles/9781449303822/&lt;/a&gt;.)&lt;/p&gt;
-</description>
+      <description>In case you missed it, Russell Bryant wrote a blog post on debugging the Asterisk dialplan with the Verbose() application. This is one of the recipes that will be features in the upcoming Asterisk Cookbook that we&amp;rsquo;re writing, and hoping to have done by the end of March! (In case you&amp;rsquo;ve missed all the cool stuff lately, the Asterisk Cookbook will also be released under the same Creative Commons license as the previous Asterisk books.</description>
     </item>
     
   </channel>

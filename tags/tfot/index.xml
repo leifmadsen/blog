@@ -15,14 +15,7 @@
       <pubDate>Fri, 19 Feb 2010 14:39:35 +0000</pubDate>
       
       <guid>http://blog.leifmadsen.com/blog/2010/02/19/update-on-tfot-v3-progress/</guid>
-      <description>&lt;p&gt;Just another quick update on the progress of the 3rd edition of the Asterisk book. It&amp;rsquo;s been a bit slow coming, but Jim and I have renewed vigor and vigilance to be productive and get things done. Since the last update, there was a period of time where nothing got done unfortunately. We did get a lot done in the week off I took to focus on the book (I think we ended up writing about 2-3 new chapters, and updated a lot of the old ones), but then of course work got in the way.&lt;/p&gt;
-
-&lt;p&gt;This has really been the problem the whole time, or else we&amp;rsquo;d be working on the 4th edition at this point. So instead of dreaming about having more time to work on the book, and for that time to be allocated all chaotic and patchy, we&amp;rsquo;ve come up with a new method. Each morning we&amp;rsquo;re getting together for an hour between 8am and 9am where the amount of distractions is low, and the amount of energy is high. This way, we can get in a good 5 hours each week on the book, plus any additional time either of us is able to work on it separately.&lt;/p&gt;
-
-&lt;p&gt;It may not be the quickest way to get a book done, but we both have worked well in the past together on the other two editions and have always gotten lots accomplished, so we&amp;rsquo;re going to try this method out for a couple months and see how it goes. After a week of using it and not missing any time we&amp;rsquo;ve already gotten through 3 chapters of review and additional content. The method seems to be working, and is giving us some renewed energy to keep plugging away, hoping to have the book ready to launch along with Asterisk 1.8.0.&lt;/p&gt;
-
-&lt;p&gt;More information to come in the coming months.&lt;/p&gt;
-</description>
+      <description>Just another quick update on the progress of the 3rd edition of the Asterisk book. It&amp;rsquo;s been a bit slow coming, but Jim and I have renewed vigor and vigilance to be productive and get things done. Since the last update, there was a period of time where nothing got done unfortunately. We did get a lot done in the week off I took to focus on the book (I think we ended up writing about 2-3 new chapters, and updated a lot of the old ones), but then of course work got in the way.</description>
     </item>
     
     <item>
@@ -31,16 +24,7 @@
       <pubDate>Fri, 27 Nov 2009 13:27:22 +0000</pubDate>
       
       <guid>http://blog.leifmadsen.com/blog/2009/11/27/update-asterisk-tfot-v3-progressing-nicely/</guid>
-      <description>&lt;p&gt;Jim and I have been working feverishly for the past few days, and the only thing that can cure it is more cowbell! Or probably more accurately, more writing!&lt;/p&gt;
-
-&lt;p&gt;We&amp;rsquo;ve been making some good progress on rewriting a couple of chapters so far, and tweaking a few other ones. We&amp;rsquo;re in the process of finishing up the first drafts of the new installation chapter and the initial configuration chapter, and I&amp;rsquo;ve started work on a chapter about queues. I hope to have about 50% of the queue chapter done by the end of today.&lt;/p&gt;
-
-&lt;p&gt;Last night Jim and myself went out to have a pint and to talk about the book, and we both realized how much our consulting experience is going to impact the quality of the book, and the ability to better define a set of best practices. I certainly think this edition of the book will surmount the quality of the first two editions, and the entire community will benefit from it. I&amp;rsquo;m really excited about it.&lt;/p&gt;
-
-&lt;p&gt;Hopefully we can make some good pushes over the next couple of months and get a draft of the book done early in the new year, which should set us up for a release in the spring. It&amp;rsquo;s amazing how much work and time goes into creating books; the people who do this for a living are certainly a special kind of people.&lt;/p&gt;
-
-&lt;p&gt;Since our plan is to more openly develop the book and get the community more actively involved in the testing and proofreading of the book, I&amp;rsquo;ll be sure to post an update here as soon as we have something available for reading.&lt;/p&gt;
-</description>
+      <description>Jim and I have been working feverishly for the past few days, and the only thing that can cure it is more cowbell! Or probably more accurately, more writing! We&amp;rsquo;ve been making some good progress on rewriting a couple of chapters so far, and tweaking a few other ones. We&amp;rsquo;re in the process of finishing up the first drafts of the new installation chapter and the initial configuration chapter, and I&amp;rsquo;ve started work on a chapter about queues.</description>
     </item>
     
     <item>
@@ -49,14 +33,7 @@
       <pubDate>Mon, 23 Nov 2009 14:03:35 +0000</pubDate>
       
       <guid>http://blog.leifmadsen.com/blog/2009/11/23/starting-work-on-asterisk-tfot-3rd-edition/</guid>
-      <description>&lt;p&gt;As many of you know, I&amp;rsquo;m a co-author of &lt;a href=&#34;http://www.oreilly.com/catalog/asterisk&#34;&gt;Asterisk: The Future of Telephony&lt;/a&gt;. While my girlfriend is away in Mexico for a week with the girls, I&amp;rsquo;m going to try and focus a bunch of attention on getting A:TFoT 3rd edition started (which is much overdue).&lt;/p&gt;
-
-&lt;p&gt;If you have any ideas for topics you would like covered in the new edition, or something that wasn&amp;rsquo;t covered as heavily as you wanted in the 1st and 2nd editions, feel free to let me know, and your ideas will be considered! I hope to get the installation chapter written today, and as things progress, we&amp;rsquo;ll get them posted up on the web (likely somewhere on &lt;a href=&#34;http://www.asteriskdocs.org&#34;&gt;http://www.asteriskdocs.org&lt;/a&gt;) for review by the community.&lt;/p&gt;
-
-&lt;p&gt;We&amp;rsquo;re going to try and write mostly in the open as we have things ready to go, so a more thorough community review can be done this time around rather than the closed review we&amp;rsquo;ve used in the past and the &amp;ldquo;get it when it&amp;rsquo;s done&amp;rdquo; approach.&lt;/p&gt;
-
-&lt;p&gt;More information to follow in the coming week(s)!&lt;/p&gt;
-</description>
+      <description>As many of you know, I&amp;rsquo;m a co-author of Asterisk: The Future of Telephony. While my girlfriend is away in Mexico for a week with the girls, I&amp;rsquo;m going to try and focus a bunch of attention on getting A:TFoT 3rd edition started (which is much overdue). If you have any ideas for topics you would like covered in the new edition, or something that wasn&amp;rsquo;t covered as heavily as you wanted in the 1st and 2nd editions, feel free to let me know, and your ideas will be considered!</description>
     </item>
     
     <item>
@@ -65,26 +42,7 @@
       <pubDate>Wed, 17 Jun 2009 01:24:07 +0000</pubDate>
       
       <guid>http://blog.leifmadsen.com/blog/2009/06/17/new-articles-coming-soon/</guid>
-      <description>&lt;p&gt;I have vowed to try and write at least ONE article per week on my blog, even if it is quite short. I&amp;rsquo;m not sure I will be able to get to write an article this week due to some pressing consulting issues, but I&amp;rsquo;m still gonna try. If anything, I&amp;rsquo;m going to cheat and say this is my post for &lt;em&gt;this&lt;/em&gt; week. How about I make a rule that says I can only cheat once per month? :)&lt;/p&gt;
-
-&lt;p&gt;I wanted to let you know I have a couple of articles lined up for later this week and next week. They will deal with Asterisk Queue()&amp;rsquo;s as that is the area I have been spending the most time lately. They include:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;Moving from the deprecated AgentCallbackLogin() application to a dialplan based solution&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;A series of articles (4-5 articles) on building a single system, hot-desking Agent queue system&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;The first draft of a complete re-write of chapter 3 of Asterisk: The Future of Telephony&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;The first bullet point is an issue I have been seeing on IRC and other forums for about 2 years, and which I want to solve by providing the necessary documentation on how to move from using AgentCallbackLogin() to a dialplan based solution as is the preferred method. I will create a dialplan subroutine which will hopefully make it easy to replace the calls to AgentCallbackLogin() with a GoSub().&lt;/p&gt;
-
-&lt;p&gt;The second bullet point is something I&amp;rsquo;m very excited about. I recently build a hot-desking solution for a client, and while building it was able to keep it quite general and didn&amp;rsquo;t need to add anything that wouldn&amp;rsquo;t be useful for the general population. I have received permission from the client (who will remain nameless for now) to utilize the configuration files I built for them in a series of articles detailing how to build the system from scratch. It is a win-win situation because you get to learn how I built the system, and they get some additional documentation on how the system works, and why things were built the way they were.&lt;/p&gt;
-
-&lt;p&gt;The third bullet point is a good deal amount of work, which is really just the start of a greater amount of work; the updating of Asterisk: The Future of Telephony, 2nd Edition, to a 3rd edition that covers the 1.6 series of Asterisk. I have recently gotten enough exposure to working with Asterisk 1.6 releases that I&amp;rsquo;m confident in being able to start on this grandiose project. I plan on using this blog as a test bed for some draft work.&lt;/p&gt;
-
-&lt;p&gt;So stay tuned for some exciting articles over the coming 2-3 weeks!&lt;/p&gt;
-</description>
+      <description>I have vowed to try and write at least ONE article per week on my blog, even if it is quite short. I&amp;rsquo;m not sure I will be able to get to write an article this week due to some pressing consulting issues, but I&amp;rsquo;m still gonna try. If anything, I&amp;rsquo;m going to cheat and say this is my post for this week. How about I make a rule that says I can only cheat once per month?</description>
     </item>
     
   </channel>

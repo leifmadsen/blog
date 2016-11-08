@@ -15,14 +15,7 @@
       <pubDate>Fri, 23 Dec 2011 16:17:57 +0000</pubDate>
       
       <guid>http://blog.leifmadsen.com/blog/2011/12/23/cooking-with-asterisk-video/</guid>
-      <description>&lt;p&gt;And I found the Cooking With Asterisk presentation as well! Apologies for the low quality on the video (as this one has a lot more text than the Distributed Call Centre video), but you can follow along with the presentation on your screen as available on my website at:&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://leifmadsen.com/sites/default/files/AstriCon%202011%20-%20Cooking%20With%20Asterisk.pdf&#34;&gt;http://leifmadsen.com/sites/default/files/AstriCon%202011%20-%20Cooking%20With%20Asterisk.pdf&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;The video presentation is available here:&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://www.tmcnet.com/tmc/videos/default.aspx?vid=5741&amp;amp;title=Cooking+with+Asterisk#&#34;&gt;http://www.tmcnet.com/tmc/videos/default.aspx?vid=5741&amp;amp;title=Cooking+with+Asterisk#&lt;/a&gt;&lt;/p&gt;
-</description>
+      <description>And I found the Cooking With Asterisk presentation as well! Apologies for the low quality on the video (as this one has a lot more text than the Distributed Call Centre video), but you can follow along with the presentation on your screen as available on my website at: http://leifmadsen.com/sites/default/files/AstriCon%202011%20-%20Cooking%20With%20Asterisk.pdf The video presentation is available here: http://www.tmcnet.com/tmc/videos/default.aspx?vid=5741&amp;amp;title=Cooking+with+Asterisk#</description>
     </item>
     
     <item>
@@ -31,14 +24,7 @@
       <pubDate>Fri, 23 Dec 2011 15:31:22 +0000</pubDate>
       
       <guid>http://blog.leifmadsen.com/blog/2011/12/23/asterisk-powered-distributed-call-centres-video/</guid>
-      <description>&lt;p&gt;Looks like TMC has posted my presentation from AstriCon 2011! You can see the presentation in its entirety over here:&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://www.tmcnet.com/tmc/videos/default.aspx?vid=5821&amp;amp;title=Asterisk-Powered+Distributed+Call+Centers&#34;&gt;http://www.tmcnet.com/tmc/videos/default.aspx?vid=5821&amp;amp;title=Asterisk-Powered+Distributed+Call+Centers&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;And the presentation along with the demo configuration files is available on my website at:&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://leifmadsen.com/sites/default/files/AstriCon%202011%20-%20Building%20a%20distributed%20call%20centre.zip&#34;&gt;http://leifmadsen.com/sites/default/files/AstriCon%202011%20-%20Building%20a%20distributed%20call%20centre.zip &lt;/a&gt;&lt;/p&gt;
-</description>
+      <description>Looks like TMC has posted my presentation from AstriCon 2011! You can see the presentation in its entirety over here: http://www.tmcnet.com/tmc/videos/default.aspx?vid=5821&amp;amp;title=Asterisk-Powered+Distributed+Call+Centers And the presentation along with the demo configuration files is available on my website at: http://leifmadsen.com/sites/default/files/AstriCon%202011%20-%20Building%20a%20distributed%20call%20centre.zip</description>
     </item>
     
     <item>
@@ -47,12 +33,7 @@
       <pubDate>Sun, 30 Oct 2011 15:46:23 +0000</pubDate>
       
       <guid>http://blog.leifmadsen.com/blog/2011/10/30/</guid>
-      <description>&lt;p&gt;I think the best quote I heard the entire time came from @abalashov (Alex Balashov) during the AstriDevCon when we were talking about Asterisk documentation, and how we might better organize it within the source.&lt;/p&gt;
-
-&lt;p&gt;We were discussing perhaps moving some of the existing configuration file examples to a manpage, and Alex piped up to say, &lt;strong&gt;&amp;ldquo;Manpages are a vestige of our glorious, prehensile, curly-tailed past.&amp;rdquo;&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;There wasn&amp;rsquo;t much left to be said after that :)&lt;/p&gt;
-</description>
+      <description>I think the best quote I heard the entire time came from @abalashov (Alex Balashov) during the AstriDevCon when we were talking about Asterisk documentation, and how we might better organize it within the source. We were discussing perhaps moving some of the existing configuration file examples to a manpage, and Alex piped up to say, &amp;ldquo;Manpages are a vestige of our glorious, prehensile, curly-tailed past.&amp;rdquo; There wasn&amp;rsquo;t much left</description>
     </item>
     
   </channel>
