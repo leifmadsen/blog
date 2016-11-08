@@ -3,7 +3,7 @@ categories = ["OpenStack", "Linux", "Cloud Computing", "TripleO"]
 date = "2016-10-03T15:34:08-04:00"
 description = ""
 keywords = ["composable services", "composable roles", "tripleO", "openstack",
-"newton"]
+"newton", "nfvpe"]
 title = "TripleO: Consuming Composable Roles"
 
 +++
