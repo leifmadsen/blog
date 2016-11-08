@@ -15,7 +15,7 @@
       <pubDate>Tue, 10 Nov 2015 19:41:55 -0500</pubDate>
       
       <guid>http://blog.leifmadsen.com/blog/2015/11/10/asterisk-docker-container-phase-1/</guid>
-      <description>AstriCon At AstriCon 2015 this year, there was a lot (and I mean a lot) of discussion around microservices (Docker), and what effort is required over the next year by the development community in order to make Asterisk better suited to running in that environment. One of the first things is, clearly, to have a container image that Asterisk runs in. I&amp;rsquo;ve done this a few times now, but having something that can be passed over to the official Asterisk Git repository, and which everyone can contribute to, utilize and play with would be the goal here.</description>
+      <description>AstriCon At AstriCon 2015 this year, there was a lot (and I mean a lot) of discussion around microservices (Docker), and what effort is required over the next year by the development community in order to make Asterisk better suited to running in that environment. One of the first things is, clearly, to have a container image that Asterisk runs in. I&rsquo;ve done this a few times now, but having something that can be passed over to the official Asterisk Git repository, and which everyone can contribute to, utilize and play with would be the goal here.</description>
     </item>
     
     <item>
@@ -24,7 +24,7 @@
       <pubDate>Fri, 30 Oct 2015 20:30:27 +0000</pubDate>
       
       <guid>http://blog.leifmadsen.com/blog/2015/10/30/docker-container-results-in-x509-failed-to-load-system-roots-and-no-roots-provided/</guid>
-      <description>We have a small system running in AWS as a CentOS 7 image. It has a few containers that we&amp;rsquo;re using to host a few Golang API proxies. We migrated a customers API proxy that was running on the local VM into a container, and spun it up. Upon testing, we ran into the following error: x509: failed to load system roots and no roots provided We get that failure when trying to connect to an HTTPS endpoint (remote API that we&amp;rsquo;re proxying to Asterisk).</description>
+      <description>We have a small system running in AWS as a CentOS 7 image. It has a few containers that we&rsquo;re using to host a few Golang API proxies. We migrated a customers API proxy that was running on the local VM into a container, and spun it up. Upon testing, we ran into the following error: x509: failed to load system roots and no roots provided We get that failure when trying to connect to an HTTPS endpoint (remote API that we&rsquo;re proxying to Asterisk).</description>
     </item>
     
   </channel>

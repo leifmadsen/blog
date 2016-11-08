@@ -15,7 +15,7 @@
       <pubDate>Tue, 10 Nov 2015 19:41:55 -0500</pubDate>
       
       <guid>http://blog.leifmadsen.com/blog/2015/11/10/asterisk-docker-container-phase-1/</guid>
-      <description>AstriCon At AstriCon 2015 this year, there was a lot (and I mean a lot) of discussion around microservices (Docker), and what effort is required over the next year by the development community in order to make Asterisk better suited to running in that environment. One of the first things is, clearly, to have a container image that Asterisk runs in. I&amp;rsquo;ve done this a few times now, but having something that can be passed over to the official Asterisk Git repository, and which everyone can contribute to, utilize and play with would be the goal here.</description>
+      <description>AstriCon At AstriCon 2015 this year, there was a lot (and I mean a lot) of discussion around microservices (Docker), and what effort is required over the next year by the development community in order to make Asterisk better suited to running in that environment. One of the first things is, clearly, to have a container image that Asterisk runs in. I&rsquo;ve done this a few times now, but having something that can be passed over to the official Asterisk Git repository, and which everyone can contribute to, utilize and play with would be the goal here.</description>
     </item>
     
   </channel>

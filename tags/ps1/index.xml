@@ -15,7 +15,7 @@
       <pubDate>Wed, 22 Aug 2012 18:49:43 +0000</pubDate>
       
       <guid>http://blog.leifmadsen.com/blog/2012/08/22/selecting-chef-servers-with-environment-variables/</guid>
-      <description>Today I got playing around with dynamically selecting different chef servers in preparation for migrating some of our nodes away from our chef-dev server to our chef-live server (which I&amp;rsquo;m currently in the process of building and populating with data). I had been talking in the #chef IRC channel a few weeks back about making things dynamic, or at least easily switchable, when using multiple chef servers for different groups of servers in an environment.</description>
+      <description>Today I got playing around with dynamically selecting different chef servers in preparation for migrating some of our nodes away from our chef-dev server to our chef-live server (which I&rsquo;m currently in the process of building and populating with data). I had been talking in the #chef IRC channel a few weeks back about making things dynamic, or at least easily switchable, when using multiple chef servers for different groups of servers in an environment.</description>
     </item>
     
     <item>
@@ -24,7 +24,7 @@
       <pubDate>Thu, 22 Dec 2011 14:39:07 +0000</pubDate>
       
       <guid>http://blog.leifmadsen.com/blog/2011/12/22/.bashrc-trick-for-git-repo-and-branch-information/</guid>
-      <description>The other day I was talking to my friend Russell Bryant who pointed me to some .bashrc magic that would show me which branch I was currently working with inside a git repo on my system. I found it incredibly handy and have modified the ANSI colour coding slightly. export PS1=&#39;[\u@\h \[33[0;36m\]\W$(__git_ps1 &amp;quot;\[33[0m\]\[33[0;33m\](%s)&amp;quot;)\[33[0m\]]\$ &#39; On Fedora Russell mentioned that you need the bash-completion installed. We&amp;rsquo;re unsure if you need anything on other distributions.</description>
+      <description>The other day I was talking to my friend Russell Bryant who pointed me to some .bashrc magic that would show me which branch I was currently working with inside a git repo on my system. I found it incredibly handy and have modified the ANSI colour coding slightly. export PS1='[\u@\h \[33[0;36m\]\W$(__git_ps1 &quot;\[33[0m\]\[33[0;33m\](%s)&quot;)\[33[0m\]]\$ ' On Fedora Russell mentioned that you need the bash-completion installed. We&rsquo;re unsure if you need anything on other distributions.</description>
     </item>
     
   </channel>

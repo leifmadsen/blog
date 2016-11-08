@@ -15,7 +15,7 @@
       <pubDate>Fri, 19 Mar 2010 16:28:28 +0000</pubDate>
       
       <guid>http://blog.leifmadsen.com/blog/2010/03/19/using-a-nokia-e71-with-asterisk-3g-or-wifi/</guid>
-      <description>There was some talk in one of the IRC chat rooms today about someone trying to get their E61i working with Asterisk. I haven&amp;rsquo;t had an issue getting that phone or my E71 phone working, but regardless he was having issues. I figured I might as well spend a little bit of time today going through my configuration, both for my own reference, and so that other people can get their Nokia&amp;rsquo;s setup with Asterisk as well.</description>
+      <description>There was some talk in one of the IRC chat rooms today about someone trying to get their E61i working with Asterisk. I haven&rsquo;t had an issue getting that phone or my E71 phone working, but regardless he was having issues. I figured I might as well spend a little bit of time today going through my configuration, both for my own reference, and so that other people can get their Nokia&rsquo;s setup with Asterisk as well.</description>
     </item>
     
     <item>
@@ -33,7 +33,7 @@
       <pubDate>Tue, 09 Feb 2010 22:10:44 +0000</pubDate>
       
       <guid>http://blog.leifmadsen.com/blog/2010/02/09/interview-from-wind-mobile-launch/</guid>
-      <description>I was interviewed at the Wind Mobile launch a couple of months ago, and was interviewed by an online publication. I didn&amp;rsquo;t remember which online publication it was, so had forgotten all about it until I noticed someone had posted a link to it in the on-asterisk mailing list. Enjoy! Wind Mobile launches with contract-free, unlimited plans Globalive&amp;rsquo;s Wind Mobile brand is officially live in Toronto and will soon be opening its doors in Calgary and other Canadian cities.</description>
+      <description>I was interviewed at the Wind Mobile launch a couple of months ago, and was interviewed by an online publication. I didn&rsquo;t remember which online publication it was, so had forgotten all about it until I noticed someone had posted a link to it in the on-asterisk mailing list. Enjoy! Wind Mobile launches with contract-free, unlimited plans Globalive&rsquo;s Wind Mobile brand is officially live in Toronto and will soon be opening its doors in Calgary and other Canadian cities.</description>
     </item>
     
     <item>
@@ -42,7 +42,7 @@
       <pubDate>Thu, 30 Jul 2009 22:11:17 +0000</pubDate>
       
       <guid>http://blog.leifmadsen.com/blog/2009/07/30/suzanne-bowen-interviews-leif-madsen-asterisk-rockstar/</guid>
-      <description>Today I had the privilege to be interviewed by Suzanne Bowen of DIDX. You can find the interview at http://www.didx.net/podcast/?p=episode&amp;amp;name=2009-07-30_leifmadsenjul312009.mp3 Hope you enjoy! Here is a description of the interview: &amp;ldquo;Truth is that I &amp;ldquo;met&amp;rdquo; the authors of the book &amp;ldquo;Asterisk, the Future of Telephony&amp;rdquo; when I was an English teacher and had volunteered over email to help edit the documentation. It was a joy to interview Leif Madsen. The Asterisk rockstar* shares with us the history of how he became interested in voice, telephony, Asterisk and open source.</description>
+      <description>Today I had the privilege to be interviewed by Suzanne Bowen of DIDX. You can find the interview at http://www.didx.net/podcast/?p=episode&amp;name=2009-07-30_leifmadsenjul312009.mp3 Hope you enjoy! Here is a description of the interview: &ldquo;Truth is that I &ldquo;met&rdquo; the authors of the book &ldquo;Asterisk, the Future of Telephony&rdquo; when I was an English teacher and had volunteered over email to help edit the documentation. It was a joy to interview Leif Madsen. The Asterisk rockstar* shares with us the history of how he became interested in voice, telephony, Asterisk and open source.</description>
     </item>
     
   </channel>

@@ -15,7 +15,7 @@
       <pubDate>Fri, 19 Feb 2010 15:38:07 +0000</pubDate>
       
       <guid>http://blog.leifmadsen.com/blog/2010/02/19/musings-about-enumplus-and-isns/</guid>
-      <description>Recently I&amp;rsquo;ve been playing around with a couple of technologies that I haven&amp;rsquo;t used in quite a while; ENUM and ISN. First, a little information on what these technologies are about. ISNs and ITADs First, lets talk about ISN (ITAD Subscriber Number) and ITAD (Internet Telephony Administrative Domain). I think the http://www.freenum.org website does a good job of succinctly describing the problem attempting to be addressed: &amp;ldquo;The Freenum/ISN system is 12-digit-keypad (telephone handset) friendly method of providing mapping between users.</description>
+      <description>Recently I&rsquo;ve been playing around with a couple of technologies that I haven&rsquo;t used in quite a while; ENUM and ISN. First, a little information on what these technologies are about. ISNs and ITADs First, lets talk about ISN (ITAD Subscriber Number) and ITAD (Internet Telephony Administrative Domain). I think the http://www.freenum.org website does a good job of succinctly describing the problem attempting to be addressed: &ldquo;The Freenum/ISN system is 12-digit-keypad (telephone handset) friendly method of providing mapping between users.</description>
     </item>
     
   </channel>

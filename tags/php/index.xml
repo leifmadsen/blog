@@ -24,7 +24,7 @@
       <pubDate>Tue, 04 Aug 2009 17:57:11 +0000</pubDate>
       
       <guid>http://blog.leifmadsen.com/blog/2009/08/04/consuming-soap-complextype-webservice-with-php/</guid>
-      <description>I recently had a client request that I communicate with a webservice via SOAP in order to do some credit card authorization for an Asterisk project they were implementing. After a couple of days of reading several posts I found via Google (which funny enough weren&amp;rsquo;t exactly what I was looking for, but gave me JUST enough information to finally start putting it all together), I had something that worked. In order to potentially save someone the hassle of having to figure out how to consume a complexType in SOAP via PHP (and not using NuSoap as many of the posts pointed out), I&amp;rsquo;m writing this down.</description>
+      <description>I recently had a client request that I communicate with a webservice via SOAP in order to do some credit card authorization for an Asterisk project they were implementing. After a couple of days of reading several posts I found via Google (which funny enough weren&rsquo;t exactly what I was looking for, but gave me JUST enough information to finally start putting it all together), I had something that worked. In order to potentially save someone the hassle of having to figure out how to consume a complexType in SOAP via PHP (and not using NuSoap as many of the posts pointed out), I&rsquo;m writing this down.</description>
     </item>
     
   </channel>

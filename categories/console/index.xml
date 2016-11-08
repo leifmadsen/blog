@@ -15,7 +15,7 @@
       <pubDate>Tue, 27 Sep 2016 16:11:17 -0400</pubDate>
       
       <guid>http://blog.leifmadsen.com/blog/2016/09/27/a-console-obsession/</guid>
-      <description>It&amp;rsquo;s A Console Thing Recently I&amp;rsquo;ve gotten into running as many of my day-to-day applications in a Linux console. Thought I&amp;rsquo;d briefly share the applications I&amp;rsquo;ve been playing with. GerTTY (http://gertty.readthedocs.io/en/master/): Synchronize and follow Gerrit-hosted projects, and perform code reviews. It&amp;rsquo;s a bit slow, but generally works pretty well once you get over the initial sync. More Info: https://major.io/2016/05/11/getting-started-gertty/ Weechat (https://weechat.org/): IRC client with tiling-window manager like options. Can split the window into various buffers in either horizontal or vertical arrangements.</description>
+      <description>It&rsquo;s A Console Thing Recently I&rsquo;ve gotten into running as many of my day-to-day applications in a Linux console. Thought I&rsquo;d briefly share the applications I&rsquo;ve been playing with. GerTTY (http://gertty.readthedocs.io/en/master/): Synchronize and follow Gerrit-hosted projects, and perform code reviews. It&rsquo;s a bit slow, but generally works pretty well once you get over the initial sync. More Info: https://major.io/2016/05/11/getting-started-gertty/ Weechat (https://weechat.org/): IRC client with tiling-window manager like options. Can split the window into various buffers in either horizontal or vertical arrangements.</description>
     </item>
     
   </channel>

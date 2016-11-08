@@ -15,7 +15,7 @@
       <pubDate>Fri, 23 Dec 2011 15:31:22 +0000</pubDate>
       
       <guid>http://blog.leifmadsen.com/blog/2011/12/23/asterisk-powered-distributed-call-centres-video/</guid>
-      <description>Looks like TMC has posted my presentation from AstriCon 2011! You can see the presentation in its entirety over here: http://www.tmcnet.com/tmc/videos/default.aspx?vid=5821&amp;amp;title=Asterisk-Powered+Distributed+Call+Centers And the presentation along with the demo configuration files is available on my website at: http://leifmadsen.com/sites/default/files/AstriCon%202011%20-%20Building%20a%20distributed%20call%20centre.zip</description>
+      <description>Looks like TMC has posted my presentation from AstriCon 2011! You can see the presentation in its entirety over here: http://www.tmcnet.com/tmc/videos/default.aspx?vid=5821&amp;title=Asterisk-Powered+Distributed+Call+Centers And the presentation along with the demo configuration files is available on my website at: http://leifmadsen.com/sites/default/files/AstriCon%202011%20-%20Building%20a%20distributed%20call%20centre.zip</description>
     </item>
     
     <item>
@@ -33,7 +33,7 @@
       <pubDate>Wed, 26 Oct 2011 16:36:49 +0000</pubDate>
       
       <guid>http://blog.leifmadsen.com/blog/2011/10/26/astricon-presentation-today-at-1140am/</guid>
-      <description>I&amp;rsquo;ll be speaking at AstriCon today (and tomorrow) about building a distributed call centre. The presentation will be 35 minutes long and will contain a set of slides that moves you from an existing traditional PBX system up through a distributed model (which happens to use a call centre as the example system). A PDF of the presentation along with the configuration files from the demo will be available on my website after the presentation.</description>
+      <description>I&rsquo;ll be speaking at AstriCon today (and tomorrow) about building a distributed call centre. The presentation will be 35 minutes long and will contain a set of slides that moves you from an existing traditional PBX system up through a distributed model (which happens to use a call centre as the example system). A PDF of the presentation along with the configuration files from the demo will be available on my website after the presentation.</description>
     </item>
     
     <item>
@@ -42,7 +42,7 @@
       <pubDate>Mon, 01 Nov 2010 12:04:08 +0000</pubDate>
       
       <guid>http://blog.leifmadsen.com/blog/2010/11/01/my-presentations-from-astricon-2010-are-available/</guid>
-      <description>Check out http://leifmadsen.com and click on the presentations tab. Under that tab you will find my presentations from AstriCon 2010, &amp;rsquo;5 Things You Didn&amp;rsquo;t Know Asterisk Could Do&amp;rsquo; and a slightly updated version of my &amp;lsquo;Building Distributed Queue Systems&amp;rsquo; presentation. Both are in PDF format. Both presentations went over extremely well, and I think both probably ended up being, or nearly being, my best presentations ever given. In previous years I&amp;rsquo;ve given presentations on distributed Asterisk systems and last year at IT360 I gave my &amp;rdquo;5 Things You Didn&amp;rsquo;t Know Asterisk Could Do&amp;rdquo; presentation, so perhaps being somewhat familiar with the format helped.</description>
+      <description>Check out http://leifmadsen.com and click on the presentations tab. Under that tab you will find my presentations from AstriCon 2010, &rsquo;5 Things You Didn&rsquo;t Know Asterisk Could Do&rsquo; and a slightly updated version of my &lsquo;Building Distributed Queue Systems&rsquo; presentation. Both are in PDF format. Both presentations went over extremely well, and I think both probably ended up being, or nearly being, my best presentations ever given. In previous years I&rsquo;ve given presentations on distributed Asterisk systems and last year at IT360 I gave my &rdquo;5 Things You Didn&rsquo;t Know Asterisk Could Do&rdquo; presentation, so perhaps being somewhat familiar with the format helped.</description>
     </item>
     
     <item>
@@ -51,7 +51,7 @@
       <pubDate>Wed, 18 Nov 2009 20:40:15 +0000</pubDate>
       
       <guid>http://blog.leifmadsen.com/blog/2009/11/18/astricon-2009-presentation----building-a-distributed-call-center/</guid>
-      <description>For those who missed it, you&amp;rsquo;re able to get a PDF of my AstriCon 2009 presentation from the http://www.astricon.net website. http://images.tmcnet.com/expo/astricon/presentations/cc01-madsen-digium.pdf There are additional presentations available from the conference as well. Check them out here: http://www.astricon.net/2009/astricon/agendaAtaGlance.aspx Overall, the conference was extremely well attended and I had a great time. I&amp;rsquo;ve been to a lot of conferences, and AstriCon is definitely a premiere conference that is professionally run, and contains a great deal of useful information by well versed presenters with little fluff (i.e.</description>
+      <description>For those who missed it, you&rsquo;re able to get a PDF of my AstriCon 2009 presentation from the http://www.astricon.net website. http://images.tmcnet.com/expo/astricon/presentations/cc01-madsen-digium.pdf There are additional presentations available from the conference as well. Check them out here: http://www.astricon.net/2009/astricon/agendaAtaGlance.aspx Overall, the conference was extremely well attended and I had a great time. I&rsquo;ve been to a lot of conferences, and AstriCon is definitely a premiere conference that is professionally run, and contains a great deal of useful information by well versed presenters with little fluff (i.e.</description>
     </item>
     
     <item>
@@ -60,7 +60,7 @@
       <pubDate>Sat, 14 Nov 2009 15:07:19 +0000</pubDate>
       
       <guid>http://blog.leifmadsen.com/blog/2009/11/14/building-queues-with-asterisk/</guid>
-      <description>Wow it&amp;rsquo;s been a long time since I&amp;rsquo;ve update my blog. Well, lets do that! :) I&amp;rsquo;ve just posted some documentation to the Asterisk issue tracker for review. It&amp;rsquo;s about building queues with Asterisk. It is the start of probably 2 or 3 sets of documentation on building queues with Asterisk that I&amp;rsquo;ll be submitting. You can find the documentation here for now: https://issues.asterisk.org/view.php?id=16237 This documentation will likely be merged into core Asterisk at some point in the near future (doc/ subdirectory of your Asterisk source) and likely posted on http://blogs.asterisk.org as well.</description>
+      <description>Wow it&rsquo;s been a long time since I&rsquo;ve update my blog. Well, lets do that! :) I&rsquo;ve just posted some documentation to the Asterisk issue tracker for review. It&rsquo;s about building queues with Asterisk. It is the start of probably 2 or 3 sets of documentation on building queues with Asterisk that I&rsquo;ll be submitting. You can find the documentation here for now: https://issues.asterisk.org/view.php?id=16237 This documentation will likely be merged into core Asterisk at some point in the near future (doc/ subdirectory of your Asterisk source) and likely posted on http://blogs.asterisk.org as well.</description>
     </item>
     
   </channel>
