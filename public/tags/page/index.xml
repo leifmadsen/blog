@@ -15,7 +15,7 @@
       <pubDate>Wed, 15 Jul 2009 18:29:02 +0000</pubDate>
       
       <guid>http://blog.leifmadsen.com/blog/2009/07/15/howto-page-all-users-other-than-current-channel/</guid>
-      <description>I was asked on IRC by bhodder how to Page() all users, other than the current channel (i.e. he had a list of people to call, but one of the channels listed could be the person paging, and he didn&amp;rsquo;t want them paged). So I wrote up the following little dialplan script which takes the list of users, and compares it against the current channel, and simply rebuilds the list without the current channel in it prior to calling the Page() application.</description>
+      <description>I was asked on IRC by bhodder how to Page() all users, other than the current channel (i.e. he had a list of people to call, but one of the channels listed could be the person paging, and he didn&rsquo;t want them paged). So I wrote up the following little dialplan script which takes the list of users, and compares it against the current channel, and simply rebuilds the list without the current channel in it prior to calling the Page() application.</description>
     </item>
     
   </channel>

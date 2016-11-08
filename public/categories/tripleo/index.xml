@@ -15,11 +15,11 @@
       <pubDate>Mon, 03 Oct 2016 15:34:08 -0400</pubDate>
       
       <guid>http://blog.leifmadsen.com/blog/2016/10/03/tripleo-consuming-composable-roles/</guid>
-      <description>&lt;p&gt;So last week I started to look into learning the new &lt;a href=&#34;http://hardysteven.blogspot.ca/2016/08/tripleo-composable-services-101.html&#34;&gt;composable services and
-roles&lt;/a&gt;
+      <description><p>So last week I started to look into learning the new <a href="http://hardysteven.blogspot.ca/2016/08/tripleo-composable-services-101.html">composable services and
+roles</a>
 that was added to Newton. I previously learned a little bit about deploying
 OpenStack clouds when I did training after joining Red Hat, but that was based
-on Liberty, and a lot has changed in TripleO since that time.&lt;/p&gt;
+on Liberty, and a lot has changed in TripleO since that time.</p>
 </description>
     </item>
     

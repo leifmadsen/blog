@@ -15,7 +15,7 @@
       <pubDate>Tue, 26 Jun 2012 12:51:30 +0000</pubDate>
       
       <guid>http://blog.leifmadsen.com/blog/2012/06/26/integration-testing-using-jenkins-part-1/</guid>
-      <description>So for the last week or so, I&amp;rsquo;ve been tasked at CoreDial with adding our own set of integration testing now that we&amp;rsquo;re moving to a more formal deployment method using chef. After much pestering of questions to thehar of Lookout Mobile Security and with help of Google, #chef and jhansche in #jenkins I&amp;rsquo;ve finally got a nice clean proof of concept that we can evaluate and likely deploy. I&amp;rsquo;ll come back later with another article on my installation issues with jenkins and the solutions that I solved (nothing too terribly complicated), but what I wanted to blog about was the two types of tests that I&amp;rsquo;ve been focusing on and was able to finally solve.</description>
+      <description>So for the last week or so, I&rsquo;ve been tasked at CoreDial with adding our own set of integration testing now that we&rsquo;re moving to a more formal deployment method using chef. After much pestering of questions to thehar of Lookout Mobile Security and with help of Google, #chef and jhansche in #jenkins I&rsquo;ve finally got a nice clean proof of concept that we can evaluate and likely deploy. I&rsquo;ll come back later with another article on my installation issues with jenkins and the solutions that I solved (nothing too terribly complicated), but what I wanted to blog about was the two types of tests that I&rsquo;ve been focusing on and was able to finally solve.</description>
     </item>
     
     <item>
@@ -24,7 +24,7 @@
       <pubDate>Thu, 22 Dec 2011 14:39:07 +0000</pubDate>
       
       <guid>http://blog.leifmadsen.com/blog/2011/12/22/.bashrc-trick-for-git-repo-and-branch-information/</guid>
-      <description>The other day I was talking to my friend Russell Bryant who pointed me to some .bashrc magic that would show me which branch I was currently working with inside a git repo on my system. I found it incredibly handy and have modified the ANSI colour coding slightly. export PS1=&#39;[\u@\h \[33[0;36m\]\W$(__git_ps1 &amp;quot;\[33[0m\]\[33[0;33m\](%s)&amp;quot;)\[33[0m\]]\$ &#39; On Fedora Russell mentioned that you need the bash-completion installed. We&amp;rsquo;re unsure if you need anything on other distributions.</description>
+      <description>The other day I was talking to my friend Russell Bryant who pointed me to some .bashrc magic that would show me which branch I was currently working with inside a git repo on my system. I found it incredibly handy and have modified the ANSI colour coding slightly. export PS1='[\u@\h \[33[0;36m\]\W$(__git_ps1 &quot;\[33[0m\]\[33[0;33m\](%s)&quot;)\[33[0m\]]\$ ' On Fedora Russell mentioned that you need the bash-completion installed. We&rsquo;re unsure if you need anything on other distributions.</description>
     </item>
     
   </channel>

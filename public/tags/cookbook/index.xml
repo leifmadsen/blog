@@ -15,7 +15,7 @@
       <pubDate>Fri, 23 Dec 2011 16:17:57 +0000</pubDate>
       
       <guid>http://blog.leifmadsen.com/blog/2011/12/23/cooking-with-asterisk-video/</guid>
-      <description>And I found the Cooking With Asterisk presentation as well! Apologies for the low quality on the video (as this one has a lot more text than the Distributed Call Centre video), but you can follow along with the presentation on your screen as available on my website at: http://leifmadsen.com/sites/default/files/AstriCon%202011%20-%20Cooking%20With%20Asterisk.pdf The video presentation is available here: http://www.tmcnet.com/tmc/videos/default.aspx?vid=5741&amp;amp;title=Cooking+with+Asterisk#</description>
+      <description>And I found the Cooking With Asterisk presentation as well! Apologies for the low quality on the video (as this one has a lot more text than the Distributed Call Centre video), but you can follow along with the presentation on your screen as available on my website at: http://leifmadsen.com/sites/default/files/AstriCon%202011%20-%20Cooking%20With%20Asterisk.pdf The video presentation is available here: http://www.tmcnet.com/tmc/videos/default.aspx?vid=5741&amp;title=Cooking+with+Asterisk#</description>
     </item>
     
     <item>
@@ -24,7 +24,7 @@
       <pubDate>Fri, 25 Mar 2011 13:40:31 +0000</pubDate>
       
       <guid>http://blog.leifmadsen.com/blog/2011/03/25/asterisk-cookbook-is-done/</guid>
-      <description>Just a quick update that the Asterisk Cookbook is complete! We&amp;rsquo;ll be releasing it under a Creative Commons license (just like Asterisk: The Definitive Guide) again. It&amp;rsquo;ll be a 24 recipe e-book right now, with it growing over time and eventually becoming a full print edition once the size warrants it. Of course if you purchase now you help spur on additional incentive to continue making it larger. I&amp;rsquo;ve been told that you also continue to receive updates automatically as the book grows and corrections are made (which sounds pretty cool!).</description>
+      <description>Just a quick update that the Asterisk Cookbook is complete! We&rsquo;ll be releasing it under a Creative Commons license (just like Asterisk: The Definitive Guide) again. It&rsquo;ll be a 24 recipe e-book right now, with it growing over time and eventually becoming a full print edition once the size warrants it. Of course if you purchase now you help spur on additional incentive to continue making it larger. I&rsquo;ve been told that you also continue to receive updates automatically as the book grows and corrections are made (which sounds pretty cool!).</description>
     </item>
     
     <item>
@@ -33,7 +33,7 @@
       <pubDate>Fri, 04 Mar 2011 14:16:16 +0000</pubDate>
       
       <guid>http://blog.leifmadsen.com/blog/2011/03/04/debugging-the-asterisk-dialplan-with-verbose/</guid>
-      <description>In case you missed it, Russell Bryant wrote a blog post on debugging the Asterisk dialplan with the Verbose() application. This is one of the recipes that will be features in the upcoming Asterisk Cookbook that we&amp;rsquo;re writing, and hoping to have done by the end of March! (In case you&amp;rsquo;ve missed all the cool stuff lately, the Asterisk Cookbook will also be released under the same Creative Commons license as the previous Asterisk books.</description>
+      <description>In case you missed it, Russell Bryant wrote a blog post on debugging the Asterisk dialplan with the Verbose() application. This is one of the recipes that will be features in the upcoming Asterisk Cookbook that we&rsquo;re writing, and hoping to have done by the end of March! (In case you&rsquo;ve missed all the cool stuff lately, the Asterisk Cookbook will also be released under the same Creative Commons license as the previous Asterisk books.</description>
     </item>
     
     <item>
@@ -42,7 +42,7 @@
       <pubDate>Thu, 27 Jan 2011 14:33:00 +0000</pubDate>
       
       <guid>http://blog.leifmadsen.com/blog/2011/01/27/asterisk-cookbook-is-on-we-think-/</guid>
-      <description>After finishing the first draft of Asterisk: The Definitive Guide (3rd Edition), I&amp;rsquo;ve been a bit antsy with wanting to do some more writing. After about a week of a break (i.e. sleeping in past 7am for the first time in nearly a year), Russell Bryant and I have decided to team up on delivering the long awaited Asterisk Cookbook. To start off with, we&amp;rsquo;ll be writing a short, 80-100 page eBook that will be distributed by O&amp;rsquo;Reilly in all the formats they support (http://oreilly.com/ebooks/).</description>
+      <description>After finishing the first draft of Asterisk: The Definitive Guide (3rd Edition), I&rsquo;ve been a bit antsy with wanting to do some more writing. After about a week of a break (i.e. sleeping in past 7am for the first time in nearly a year), Russell Bryant and I have decided to team up on delivering the long awaited Asterisk Cookbook. To start off with, we&rsquo;ll be writing a short, 80-100 page eBook that will be distributed by O&rsquo;Reilly in all the formats they support (http://oreilly.com/ebooks/).</description>
     </item>
     
   </channel>

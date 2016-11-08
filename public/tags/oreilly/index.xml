@@ -15,7 +15,7 @@
       <pubDate>Thu, 16 May 2013 13:31:46 +0000</pubDate>
       
       <guid>http://blog.leifmadsen.com/blog/2013/05/16/asterisk-the-definitive-guide-4th-edition-goes-to-print/</guid>
-      <description>Howdy folks, Sorry for the lack of updates lately. I&amp;rsquo;ve recently (December 2012) started at Thinking Phone Networks as the Lead UC Systems Engineer, and we&amp;rsquo;ve been incredibly busy there. In addition, the authors and I had been working on the final touches to the 4th edition of Asterisk: The Definitive Guide, which documents Asterisk 11 LTS. Late last week, the book went to print, and should start to appear on store shelves and start shipping from Amazon and other locations within the next 6-8 weeks I believe.</description>
+      <description>Howdy folks, Sorry for the lack of updates lately. I&rsquo;ve recently (December 2012) started at Thinking Phone Networks as the Lead UC Systems Engineer, and we&rsquo;ve been incredibly busy there. In addition, the authors and I had been working on the final touches to the 4th edition of Asterisk: The Definitive Guide, which documents Asterisk 11 LTS. Late last week, the book went to print, and should start to appear on store shelves and start shipping from Amazon and other locations within the next 6-8 weeks I believe.</description>
     </item>
     
     <item>
@@ -24,7 +24,7 @@
       <pubDate>Tue, 26 Apr 2011 17:34:43 +0000</pubDate>
       
       <guid>http://blog.leifmadsen.com/blog/2011/04/26/request-for-reviews-for-asterisk-the-definitive-guide/</guid>
-      <description>Recently Jim Van Meggelen, Russell Bryant and myself released the 3rd edition of the Asterisk book published by O&amp;rsquo;Reilly Media titled &amp;lsquo;Asterisk: The Definitive Guide&amp;rsquo;. We have released this book under a Creative Commons license in the spirit of Open Source software. It is available in its entirety at http://ofps.oreilly.com/titles/9780596517342/ and for purchase through Amazon at http://www.amazon.com/Asterisk-Definitive-Guide-Leif-Madsen/dp/0596517343/ref=sr_1_1?ie=UTF8&amp;amp;s=books&amp;amp;qid=1303765969&amp;amp;sr=8-1 If you have a chance to review the book, and feel it is a useful and well written resource, we would appreciate your favorable review on Amazon.com.</description>
+      <description>Recently Jim Van Meggelen, Russell Bryant and myself released the 3rd edition of the Asterisk book published by O&rsquo;Reilly Media titled &lsquo;Asterisk: The Definitive Guide&rsquo;. We have released this book under a Creative Commons license in the spirit of Open Source software. It is available in its entirety at http://ofps.oreilly.com/titles/9780596517342/ and for purchase through Amazon at http://www.amazon.com/Asterisk-Definitive-Guide-Leif-Madsen/dp/0596517343/ref=sr_1_1?ie=UTF8&amp;s=books&amp;qid=1303765969&amp;sr=8-1 If you have a chance to review the book, and feel it is a useful and well written resource, we would appreciate your favorable review on Amazon.com.</description>
     </item>
     
     <item>
@@ -33,7 +33,7 @@
       <pubDate>Thu, 27 Jan 2011 14:33:00 +0000</pubDate>
       
       <guid>http://blog.leifmadsen.com/blog/2011/01/27/asterisk-cookbook-is-on-we-think-/</guid>
-      <description>After finishing the first draft of Asterisk: The Definitive Guide (3rd Edition), I&amp;rsquo;ve been a bit antsy with wanting to do some more writing. After about a week of a break (i.e. sleeping in past 7am for the first time in nearly a year), Russell Bryant and I have decided to team up on delivering the long awaited Asterisk Cookbook. To start off with, we&amp;rsquo;ll be writing a short, 80-100 page eBook that will be distributed by O&amp;rsquo;Reilly in all the formats they support (http://oreilly.com/ebooks/).</description>
+      <description>After finishing the first draft of Asterisk: The Definitive Guide (3rd Edition), I&rsquo;ve been a bit antsy with wanting to do some more writing. After about a week of a break (i.e. sleeping in past 7am for the first time in nearly a year), Russell Bryant and I have decided to team up on delivering the long awaited Asterisk Cookbook. To start off with, we&rsquo;ll be writing a short, 80-100 page eBook that will be distributed by O&rsquo;Reilly in all the formats they support (http://oreilly.com/ebooks/).</description>
     </item>
     
     <item>
@@ -42,7 +42,7 @@
       <pubDate>Thu, 06 Jan 2011 15:22:55 +0000</pubDate>
       
       <guid>http://blog.leifmadsen.com/blog/2011/01/06/asterisk-the-definitive-guide----call-for-reviewers/</guid>
-      <description>Here is the text I posted to the asterisk-doc mailing list this morning. You can sign up for asterisk-doc at http://lists.digium.com and get involved! We&amp;rsquo;d love to make this the best book on Asterisk ever, and your input can make that true! Our goal is to build a book for, and by, the Asterisk community. &amp;ldquo;_Hey all! _ _We&amp;rsquo;re getting VERY close to having the first draft of the next Asterisk book, Asterisk: The Definitive Guide ready to be sent off to production.</description>
+      <description>Here is the text I posted to the asterisk-doc mailing list this morning. You can sign up for asterisk-doc at http://lists.digium.com and get involved! We&rsquo;d love to make this the best book on Asterisk ever, and your input can make that true! Our goal is to build a book for, and by, the Asterisk community. &ldquo;_Hey all! _ _We&rsquo;re getting VERY close to having the first draft of the next Asterisk book, Asterisk: The Definitive Guide ready to be sent off to production.</description>
     </item>
     
     <item>
@@ -51,7 +51,7 @@
       <pubDate>Tue, 21 Dec 2010 15:54:09 +0000</pubDate>
       
       <guid>http://blog.leifmadsen.com/blog/2010/12/21/update-for-asterisk-the-definitive-guide-3rd-edition/</guid>
-      <description>It&amp;rsquo;s been a while since I&amp;rsquo;ve done an update on my blog, but that&amp;rsquo;s just because we&amp;rsquo;ve been so busy at work on the next edition of the O&amp;rsquo;Reilly published Asterisk book! Asterisk: The Definitive Guide is the next update to the Asterisk: The Future Of Telephony books and is thus the 3rd edition. We&amp;rsquo;ve changed the name for two reasons: 1) This is pretty much a complete re-write of the book based on Asterisk 1.8 and 2) Asterisk is no longer the FUTURE of telephony; it&amp;rsquo;s the present.</description>
+      <description>It&rsquo;s been a while since I&rsquo;ve done an update on my blog, but that&rsquo;s just because we&rsquo;ve been so busy at work on the next edition of the O&rsquo;Reilly published Asterisk book! Asterisk: The Definitive Guide is the next update to the Asterisk: The Future Of Telephony books and is thus the 3rd edition. We&rsquo;ve changed the name for two reasons: 1) This is pretty much a complete re-write of the book based on Asterisk 1.8 and 2) Asterisk is no longer the FUTURE of telephony; it&rsquo;s the present.</description>
     </item>
     
   </channel>

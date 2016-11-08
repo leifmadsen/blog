@@ -15,7 +15,7 @@
       <pubDate>Thu, 11 Oct 2012 20:43:35 +0000</pubDate>
       
       <guid>http://blog.leifmadsen.com/blog/2012/10/11/digium-d40-and-d70-phone-unboxing/</guid>
-      <description>Today I received a couple of phones from Digium; the D40 and D70. I&amp;rsquo;ll be using these phones for testing and documentation in the 4th edition of Asterisk: The Definitive Guide (which Jim Van Meggelen, Russell Bryant and myself are working on right now). Here is my unboxing of the phones and some commentary about my initial impressions of the hardware itself. [caption id=&amp;ldquo;attachment_484&amp;rdquo; align=&amp;ldquo;aligncenter&amp;rdquo; width=&amp;ldquo;300&amp;rdquo;] Pretty boxes![/caption] Phones arrived in some nice looking boxes.</description>
+      <description>Today I received a couple of phones from Digium; the D40 and D70. I&rsquo;ll be using these phones for testing and documentation in the 4th edition of Asterisk: The Definitive Guide (which Jim Van Meggelen, Russell Bryant and myself are working on right now). Here is my unboxing of the phones and some commentary about my initial impressions of the hardware itself. [caption id=&ldquo;attachment_484&rdquo; align=&ldquo;aligncenter&rdquo; width=&ldquo;300&rdquo;] Pretty boxes![/caption] Phones arrived in some nice looking boxes.</description>
     </item>
     
     <item>
@@ -24,7 +24,7 @@
       <pubDate>Tue, 13 Apr 2010 00:28:38 +0000</pubDate>
       
       <guid>http://blog.leifmadsen.com/blog/2010/04/13/recent-sip-attacks-from-amazon-ec2/</guid>
-      <description>Recently (over the weekend and continuing into today) there have been several attacks from Amazon EC2 hosts running scanners looking for open SIP accounts. I&amp;rsquo;ve gathered a couple of links that I think are useful in knowing more about the attacks, along with methods of stopping the attacks. The Joshua Stein blog has a very clever way of stopping the attacks that impressed me. http://jcs.org/notaweblog/2010/04/11/properly_stopping_a_sip_flood http://www.voiptechchat.com/voip/457/amazon-ec2-sip-brute-force-attacks-on-rise/ http://www.stuartsheldon.org/blog/2010/04/sip-brute-force-attack-originating-from-amazon-ec2-hosts/ Update (2010/04/18): It seems the story has made it at least as far as Slashdot now.</description>
+      <description>Recently (over the weekend and continuing into today) there have been several attacks from Amazon EC2 hosts running scanners looking for open SIP accounts. I&rsquo;ve gathered a couple of links that I think are useful in knowing more about the attacks, along with methods of stopping the attacks. The Joshua Stein blog has a very clever way of stopping the attacks that impressed me. http://jcs.org/notaweblog/2010/04/11/properly_stopping_a_sip_flood http://www.voiptechchat.com/voip/457/amazon-ec2-sip-brute-force-attacks-on-rise/ http://www.stuartsheldon.org/blog/2010/04/sip-brute-force-attack-originating-from-amazon-ec2-hosts/ Update (2010/04/18): It seems the story has made it at least as far as Slashdot now.</description>
     </item>
     
     <item>
@@ -33,7 +33,7 @@
       <pubDate>Fri, 19 Mar 2010 16:28:28 +0000</pubDate>
       
       <guid>http://blog.leifmadsen.com/blog/2010/03/19/using-a-nokia-e71-with-asterisk-3g-or-wifi/</guid>
-      <description>There was some talk in one of the IRC chat rooms today about someone trying to get their E61i working with Asterisk. I haven&amp;rsquo;t had an issue getting that phone or my E71 phone working, but regardless he was having issues. I figured I might as well spend a little bit of time today going through my configuration, both for my own reference, and so that other people can get their Nokia&amp;rsquo;s setup with Asterisk as well.</description>
+      <description>There was some talk in one of the IRC chat rooms today about someone trying to get their E61i working with Asterisk. I haven&rsquo;t had an issue getting that phone or my E71 phone working, but regardless he was having issues. I figured I might as well spend a little bit of time today going through my configuration, both for my own reference, and so that other people can get their Nokia&rsquo;s setup with Asterisk as well.</description>
     </item>
     
     <item>
@@ -42,7 +42,7 @@
       <pubDate>Fri, 19 Feb 2010 15:38:07 +0000</pubDate>
       
       <guid>http://blog.leifmadsen.com/blog/2010/02/19/musings-about-enumplus-and-isns/</guid>
-      <description>Recently I&amp;rsquo;ve been playing around with a couple of technologies that I haven&amp;rsquo;t used in quite a while; ENUM and ISN. First, a little information on what these technologies are about. ISNs and ITADs First, lets talk about ISN (ITAD Subscriber Number) and ITAD (Internet Telephony Administrative Domain). I think the http://www.freenum.org website does a good job of succinctly describing the problem attempting to be addressed: &amp;ldquo;The Freenum/ISN system is 12-digit-keypad (telephone handset) friendly method of providing mapping between users.</description>
+      <description>Recently I&rsquo;ve been playing around with a couple of technologies that I haven&rsquo;t used in quite a while; ENUM and ISN. First, a little information on what these technologies are about. ISNs and ITADs First, lets talk about ISN (ITAD Subscriber Number) and ITAD (Internet Telephony Administrative Domain). I think the http://www.freenum.org website does a good job of succinctly describing the problem attempting to be addressed: &ldquo;The Freenum/ISN system is 12-digit-keypad (telephone handset) friendly method of providing mapping between users.</description>
     </item>
     
     <item>
@@ -51,7 +51,7 @@
       <pubDate>Wed, 29 Jul 2009 16:34:49 +0000</pubDate>
       
       <guid>http://blog.leifmadsen.com/blog/2009/07/29/load-testing-sip-registrations-with-sipp/</guid>
-      <description>Today I had a need to go and load a bunch of registrations into Asterisk for a bug I was working on. Since I&amp;rsquo;ve had this need a couple of times now, and I keep going and having to redevelop it, I think I&amp;rsquo;ll just write about it here, and then when I need it again, I can just look it up. Maybe this will be useful for someone else as well.</description>
+      <description>Today I had a need to go and load a bunch of registrations into Asterisk for a bug I was working on. Since I&rsquo;ve had this need a couple of times now, and I keep going and having to redevelop it, I think I&rsquo;ll just write about it here, and then when I need it again, I can just look it up. Maybe this will be useful for someone else as well.</description>
     </item>
     
   </channel>

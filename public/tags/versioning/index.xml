@@ -24,7 +24,7 @@
       <pubDate>Sat, 06 Jun 2009 15:42:11 +0000</pubDate>
       
       <guid>http://blog.leifmadsen.com/blog/2009/06/06/about-the-new-asterisk-versioning-method/</guid>
-      <description>Recently I have been seeing more and more questions about how Asterisk is being released now, and what the 1.6.x versions really mean. I&amp;rsquo;ll try and clear up some of your questions and make it more clear as to how Asterisk versions work. First, lets talk about the Asterisk 1.2 and 1.4 branches. Previous release methodology When we just had Asterisk 1.2 and 1.4, all new development was carried out in trunk (it still is) and only bug fixes went into the 1.2 and 1.4 branches.</description>
+      <description>Recently I have been seeing more and more questions about how Asterisk is being released now, and what the 1.6.x versions really mean. I&rsquo;ll try and clear up some of your questions and make it more clear as to how Asterisk versions work. First, lets talk about the Asterisk 1.2 and 1.4 branches. Previous release methodology When we just had Asterisk 1.2 and 1.4, all new development was carried out in trunk (it still is) and only bug fixes went into the 1.2 and 1.4 branches.</description>
     </item>
     
   </channel>
