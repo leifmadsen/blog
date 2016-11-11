@@ -6,8 +6,17 @@
     <description>Recent content in Nfvpe on Asterisk, and other worldly endeavours</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 03 Oct 2016 15:34:08 -0400</lastBuildDate>
+    <lastBuildDate>Wed, 09 Nov 2016 15:08:53 -0500</lastBuildDate>
     <atom:link href="http://blog.leifmadsen.com/categories/nfvpe/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>TripleO: Using the fake_pxe driver with Ironic</title>
+      <link>http://blog.leifmadsen.com/blog/2016/11/09/tripleo-using-the-fake_pxe-driver-with-ironic/</link>
+      <pubDate>Wed, 09 Nov 2016 15:08:53 -0500</pubDate>
+      
+      <guid>http://blog.leifmadsen.com/blog/2016/11/09/tripleo-using-the-fake_pxe-driver-with-ironic/</guid>
+      <description>I&rsquo;ve been working on testing things with TripleO and normally I use TripleO Quickstart to spin things up in a virtual environment. Often when doing NFV work though, you need things that can&rsquo;t be used in a virtual environment (such as DPDK, SR-IOV, etc) so you need some baremetal nodes. In my home lab environment though, I don&rsquo;t have the luxury of IPMI, so I need to make use of the fake_pxe driver in Ironic, which allows for standard PXE control, but requires you to deal with powering on and off the machines manually.</description>
+    </item>
     
     <item>
       <title>TripleO: Consuming Composable Roles</title>
