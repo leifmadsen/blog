@@ -22,7 +22,8 @@ googleAnalytics = "UA-84933598-1"
     defaultDescription = "Leif Madsen Blog Entry"
     defaultKeywords = "blog,asterisk,leif,madsen,canada"
 
-    highlight = "solarized_dark"
+    #highlight = "solarized_dark"
+    highlight = "monokai"
 
     tagline = "Asterisk, and other worldly endeavours"
 
