@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
+<head>
+  <link href="http://gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+  <title>TripleO: Using the fake_pxe driver with Ironic &middot; Leif Madsen</title>
+
+  
+  <link rel="stylesheet" href="http://blog.leifmadsen.com/css/poole.css">
+  <link rel="stylesheet" href="http://blog.leifmadsen.com/css/hyde.css">
+  <link rel="stylesheet" href="http://blog.leifmadsen.com/css/poole-overrides.css">
+  <link rel="stylesheet" href="http://blog.leifmadsen.com/css/hyde-overrides.css">
+  <link rel="stylesheet" href="http://blog.leifmadsen.com/css/hyde-x.css">
+  <link rel="stylesheet" href="http://blog.leifmadsen.com/css/highlight/monokai.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700|Abril+Fatface">
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  
+
+  
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="http://blog.leifmadsen.com/touch-icon-144-precomposed.png">
+  <link href="http://blog.leifmadsen.com/favicon.png" rel="icon">
+
+  
+  
+  
+  
+
+  <meta name="description" content="Leif Madsen Blog Entry">
+  <meta name="keywords" content="blog,asterisk,leif,madsen,canada">
+  
+</head>
+<body>
+<div class="sidebar">
+  <div class="container sidebar-sticky">
+    <div class="sidebar-about">
+      
+      <h1>Leif Madsen</h1>
+      <p class="lead">Asterisk, and other worldly endeavours</p>
+    </div>
+
+    <ul class="sidebar-nav">
+      <li class="sidebar-nav-item"><a href="http://blog.leifmadsen.com/">Blog</a></li>
+      
+    </ul>
+
+    <ul class="sidebar-nav">
+      <li class="sidebar-nav-item">
+      <a href="http://github.com/leifmadsen"><i class="fa fa-github-square fa-3x"></i></a>
+      
+      
+      <a href="http://linkedin.com/in/leifmadsen"><i class="fa fa-linkedin-square fa-3x"></i></a>
+      
+      
+      <a href="http://twitter.com/leifmadsen"><i class="fa fa-twitter-square fa-3x"></i></a>
+      
+      <a href="http://blog.leifmadsen.com/index.xml" type="application/rss+xml"><i class="fa fa-rss-square fa-3x"></i></a>
+      </li>
+    </ul>
+
+    
+
+    <p>Copyright &copy; 2016 <a href="http://blog.leifmadsen.com/license/">License</a><br/>
+       Powered by <a href="http://gohugo.io">Hugo</a> and <a href="https://github.com/zyro/hyde-x">Hyde-X</a></p>
+  </div>
+</div>
+
+
+<div class="content container">
+  <div class="post">
+    <h1 class="post-title">TripleO: Using the fake_pxe driver with Ironic</h1>
+    <span class="post-date">Nov 9, 2016 &middot; 7 minute read &middot; <a href="http://blog.leifmadsen.com/blog/2016/11/09/tripleo-using-the-fake_pxe-driver-with-ironic/#disqus_thread">Comments</a>
+    
+    <br/>
+    <a class="label" href="http://blog.leifmadsen.com/categories/tripleo">TripleO</a><a class="label" href="http://blog.leifmadsen.com/categories/nfvpe">nfvpe</a>
+    </span>
+    
+
+<p>I&rsquo;ve been working on testing things with TripleO and normally I use <a href="https://github.com/openstack/tripleo-quickstart/">TripleO
+Quickstart</a> to spin things up
+in a virtual environment.</p>
+
+<p>Often when doing NFV work though, you need things that can&rsquo;t be used in a
+virtual environment (such as DPDK, SR-IOV, etc) so you need some baremetal
+nodes.</p>
+
+<p>In my home lab environment though, I don&rsquo;t have the luxury of IPMI, so I need
+to make use of the <code>fake_pxe</code> driver in Ironic, which allows for standard PXE
+control, but requires you to deal with powering on and off the machines
+manually. Let me show you how I make use of that.</p>
+
+<h1 id="tl-dr">tl;dr</h1>
+
+<ul>
+<li>power off machines</li>
+<li>start introspection</li>
+<li>power up machines</li>
+<li>wait for <code>openstack baremetal node list</code> to show <code>available</code></li>
+<li>power off machines</li>
+<li>start <code>openstack overcloud deploy [...]</code></li>
+<li>watch output of <code>openstack baremetal node list</code></li>
+<li>when you see <code>wait for call-back</code> then power on the machines</li>
+<li>machines will boot via PXE, pull image from undercloud, write to disk</li>
+<li>machine will power down automatically via Linux <code>shutdown</code></li>
+<li>watch <code>openstack baremetal node list</code> for <code>active</code></li>
+<li>power machines on</li>
+<li>machine will report back to undercloud, and Puppet will execute to configure
+system</li>
+</ul>
+
+<h1 id="why-use-the-fake-pxe-driver">Why use the <code>fake_pxe</code> driver?</h1>
+
+<p>The <code>fake_pxe</code> driver &ldquo;provides stubs instead of real power and management
+operations&rdquo;<sup><a href="http://docs.openstack.org/developer/tripleo-docs/environments/baremetal.html">1</a></sup>
+so that you can utilize hardware that supports PXE, but doesn&rsquo;t provide the
+necessary functionality to control power management functionality remotely.</p>
+
+<p>This allows you to use some standard commodity hardware that doesn&rsquo;t have the
+advanced power management systems of more expensive hardware.</p>
+
+<h1 id="enabling-the-driver-in-ironic">Enabling the driver in Ironic</h1>
+
+<p>By default the <code>fake_pxe</code> driver isn&rsquo;t enabled on the undercloud. You can
+enable it in the <code>/etc/ironic/ironic.conf</code> by modifying the following line:</p>
+
+<pre><code>enabled_drivers = pxe_ipmitool,pxe_ssh,pxe_drac,pxe_ilo,fake_pxe
+</code></pre>
+
+<p>Add <code>fake_pxe</code> to the end of the <code>enabled_drivers</code> configuration option. Then
+we&rsquo;ll need to restart the Ironic services.</p>
+
+<pre><code>$ sudo systemctl list-unit-files | grep ironic
+openstack-ironic-api.service                  enabled
+openstack-ironic-conductor.service            enabled
+openstack-ironic-inspector-dnsmasq.service    enabled
+openstack-ironic-inspector.service            enabled
+</code></pre>
+
+<p>I believe the only service you need to restart to make the driver active is
+<code>openstack-ironic-conductor.service</code> but you can easily restart all the
+services with the following commands:</p>
+
+<pre><code>ironic_services=$(sudo systemctl list-unit-files | grep ironic | awk '/enabled/ {print $1}')
+sudo systemctl restart $ironic_services
+</code></pre>
+
+<h1 id="validate-driver-is-active">Validate driver is active</h1>
+
+<p>Now that we&rsquo;ve modified the <code>ironic.conf</code> file and restarted the Ironic
+services, let&rsquo;s double check the driver is active:</p>
+
+<pre><code>$ openstack baremetal driver list
+Jun 2017. Please use osc_lib.utils
++---------------------+-----------------------+
+| Supported driver(s) | Active host(s)        |
++---------------------+-----------------------+
+| fake_pxe            | localhost.localdomain |
+| pxe_drac            | localhost.localdomain |
+| pxe_ilo             | localhost.localdomain |
+| pxe_ipmitool        | localhost.localdomain |
+| pxe_ssh             | localhost.localdomain |
++---------------------+-----------------------+
+</code></pre>
+
+<h1 id="workflow-for-tripleo-deploy">Workflow for TripleO deploy</h1>
+
+<p>Awesome, our driver is enabled. Now we can make use of it for our nodes. Using
+the driver and understanding when to turn machines on and off wasn&rsquo;t super
+obvious, so lets review the workflow.</p>
+
+<h2 id="import-nodes-for-introspection">Import nodes for introspection</h2>
+
+<p>First, we need to make sure our baremetal nodes are configured on the
+undercloud to make use of the <code>fake_pxe</code> driver. In our <code>instackenv.json</code> we
+can set that up:</p>
+
+<pre><code>{
+    &quot;nodes&quot;: [
+        {
+            &quot;pm_type&quot;:&quot;fake_pxe&quot;,
+            &quot;mac&quot;:[
+                &quot;aa:bb:cc:dd:ee:ff&quot;
+            ],
+            &quot;cpu&quot;:&quot;2&quot;,
+            &quot;memory&quot;:&quot;4096&quot;,
+            &quot;disk&quot;:&quot;40&quot;,
+            &quot;arch&quot;:&quot;x86_64&quot;,
+            &quot;pm_user&quot;:&quot;admin&quot;,
+            &quot;pm_password&quot;:&quot;password&quot;,
+            &quot;pm_addr&quot;:&quot;10.0.0.8&quot;,
+            &quot;capabilities&quot;: &quot;profile:control,boot_option:local&quot;
+        }
+    ]
+}
+</code></pre>
+
+<p>We&rsquo;ve configured the <code>pm_type</code> to be <code>fake_pxe</code>, filled in our MAC address, and
+setup some initial data about the node. I generally enable the
+<code>inspection_extras = true</code> option in the <code>undercloud.conf</code> file so that the
+hardware is evaluated during introspection and the database setup
+appropriately. You can modify these values to match the hardware if you don&rsquo;t
+want to execute that step (or it isn&rsquo;t detecting the hardware accurately).</p>
+
+<p>The other <code>pm_???</code> values are just dummy data, and don&rsquo;t need to be populated
+with anything meaningful (since we don&rsquo;t have any IPMI interface to connect to,
+they are unnecessary). In previous versions of TripleO importing the nodes
+would fail without the <code>pm_???</code> values which is why they are there at all.</p>
+
+<h2 id="perform-introspection">Perform introspection</h2>
+
+<p>With our nodes imported, can start the introspection process. Remember that we
+want to start with the nodes turned off. Of course make sure you have the BIOS
+setup to allow booting from PXE as the first boot device.</p>
+
+<p>Start the introspection process:</p>
+
+<pre><code>$ openstack baremetal import --initial-state=enroll instackenv.json
+
+$ openstack baremetal introspection bulk start
+</code></pre>
+
+<p>You can monitor status of the machines using <code>watch</code>:</p>
+
+<pre><code>$ watch -n30 &quot;openstack baremetal node list&quot;
+</code></pre>
+
+<p>When the introspection process starts, you&rsquo;ll see the <code>Power State</code> switch to
+<code>power on</code> and the <code>Provisioning State</code> field work its way through the
+introspection process.</p>
+
+<p>At this point, <strong>power on</strong> the machines.</p>
+
+<pre><code>+--------------------------------------+------+---------------+-------------+--------------------+-------------+
+| UUID                                 | Name | Instance UUID | Power State | Provisioning State | Maintenance |
++--------------------------------------+------+---------------+-------------+--------------------+-------------+
+| 25167102-fc8d-4907-b16c-dbdb09ea9d10 | None | None          | power on    | manageable         | False       |
+| 97c229c3-07bc-4f5e-a451-6ae3341f1f5a | None | None          | power on    | manageable         | False       |
+| a5d8a413-4458-480f-8a94-5f22902cea6c | None | None          | power on    | manageable         | False       |
++--------------------------------------+------+---------------+-------------+--------------------+-------------+
+</code></pre>
+
+<p>When introspection completes, you&rsquo;ll see the <code>Provisioning State</code> switch to
+<code>available</code> and the <code>Power State</code> should show <code>power off</code>. You&rsquo;ll need to
+manually power down the machines at this point.</p>
+
+<pre><code>+--------------------------------------+------+---------------+-------------+--------------------+-------------+
+| UUID                                 | Name | Instance UUID | Power State | Provisioning State | Maintenance |
++--------------------------------------+------+---------------+-------------+--------------------+-------------+
+| 25167102-fc8d-4907-b16c-dbdb09ea9d10 | None | None          | power off   | available          | False       |
+| 97c229c3-07bc-4f5e-a451-6ae3341f1f5a | None | None          | power off   | available          | False       |
+| a5d8a413-4458-480f-8a94-5f22902cea6c | None | None          | power off   | available          | False       |
++--------------------------------------+------+---------------+-------------+--------------------+-------------+
+</code></pre>
+
+<h2 id="start-overcloud-deployment">Start overcloud deployment</h2>
+
+<p>With introspection completed and our machines <strong>powered off</strong>, we can start the
+overcloud deployment. I won&rsquo;t get into how to deploy your cloud here (you might
+want to refresh your memory with <a href="http://blog.leifmadsen.com/blog/2016/10/03/tripleo-consuming-composable-roles/">TripleO: Consuming Composable
+Roles</a>) but here is the general process:</p>
+
+<ul>
+<li>power off machines</li>
+<li>start <code>openstack overcloud deploy [...]</code></li>
+<li>watch output of <code>openstack baremetal node list</code></li>
+<li>when you see <code>wait for call-back</code> then power on the machines</li>
+<li>machines will boot via PXE, pull image from undercloud, write to disk</li>
+<li>machine will power down automatically via Linux <code>shutdown</code></li>
+<li>watch <code>openstack baremetal node list</code> for <code>active</code></li>
+<li>power machines on</li>
+<li>machine will report back to undercloud, and Puppet will execute to configure
+system</li>
+</ul>
+
+<p>Once you run the <code>openstack overcloud deploy [...]</code> command, you&rsquo;ll <code>watch</code> the
+output of your <code>openstack overcloud baremetal list</code> command, waiting for <code>Power
+State</code> to switch to <code>power on</code>. At this point you&rsquo;ll power up the nodes.</p>
+
+<p>Here is what we&rsquo;ll see while the overcloud starts to get provisioned:</p>
+
+<pre><code>+--------------------------------------+------+---------------+-------------+--------------------+-------------+
+| UUID                                 | Name | Instance UUID | Power State | Provisioning State | Maintenance |
++--------------------------------------+------+---------------+-------------+--------------------+-------------+
+| 25167102-fc8d-4907-b16c-dbdb09ea9d10 | None | None          | power off   | available          | False       |
+| 97c229c3-07bc-4f5e-a451-6ae3341f1f5a | None | None          | power off   | available          | False       |
+| a5d8a413-4458-480f-8a94-5f22902cea6c | None | None          | power off   | available          | False       |
++--------------------------------------+------+---------------+-------------+--------------------+-------------+
+</code></pre>
+
+<p>Once you see the <code>Provisioning State</code> switch to <code>wait call-back</code> then you can
+power the nodes back up so they can pull the disk image from the undercloud and
+write it to the local disk drive.</p>
+
+<pre><code>+--------------------------------------+------+--------------------------------------+-------------+--------------------+-------------+
+| UUID                                 | Name | Instance UUID                        | Power State | Provisioning State | Maintenance |
++--------------------------------------+------+--------------------------------------+-------------+--------------------+-------------+
+| 25167102-fc8d-4907-b16c-dbdb09ea9d10 | None | c57f80dc-2e27-465a-b4ba-3e811313627b | power on    | wait call-back     | False       |
+| 97c229c3-07bc-4f5e-a451-6ae3341f1f5a | None | ef1d5f8e-79fd-423c-bdd2-39b850dadac8 | power on    | wait call-back     | False       |
+| a5d8a413-4458-480f-8a94-5f22902cea6c | None | 784f79b0-37de-461a-957a-8cac55fea72c | power on    | wait call-back     | False       |
++--------------------------------------+------+--------------------------------------+-------------+--------------------+-------------+
+</code></pre>
+
+<p>The machines will then call back to the undercloud and you should see the
+<code>Provisioning State</code> change to <code>deploying</code>.</p>
+
+<p>After about 5-10 minutes (depending on image size, network speed, disk speed,
+etc) your machines should power themselves off. The <code>Power State</code> value won&rsquo;t
+change to <code>power off</code> though so you&rsquo;ll need to physically look at the machines
+to validate the nodes have powered off.</p>
+
+<p>We need to continue monitoring the nodes for the <code>Provisioning State</code> to switch
+to <code>active</code>, meaning the undercloud is ready for you to power the machines back
+up. After the state changes to <code>active</code> power the machines back on manually.</p>
+
+<p>At this point, you&rsquo;re done playing power jockey, and can simply sit back and
+watch your overcloud <code>COMPLETE</code> or <code>FAIL</code>.</p>
+
+<h1 id="conclusion">Conclusion</h1>
+
+<p>The <code>fake_pxe</code> driver is useful when you need to utilize commodity hardware
+that doesn&rsquo;t have remote power management, when you&rsquo;re using hardware that
+doesn&rsquo;t have a driver available for power management, or when your IPMI network
+isn&rsquo;t available to the undercloud directly. Knowing when to power the nodes up
+and down is really the only key to being successful with hardware that doesn&rsquo;t
+have remote power management.</p>
+
+  </div>
+  <div id="disqus_thread"></div>
+</div>
+
+
+<script type="text/javascript">
+var disqus_shortname = "leifmadsen";
+(function () {
+    var s = document.createElement('script'); s.async = true;
+    s.type = 'text/javascript';
+    s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+    (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+}());
+</script>
+
+
+
+<script type="text/javascript">
+    var disqus_shortname = "leifmadsen";
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-84933598-1', 'auto');
+ga('send', 'pageview');
+</script>
+
+<script src="http://blog.leifmadsen.com/js/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+</body>
+</html>
+

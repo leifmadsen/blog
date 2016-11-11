@@ -16,7 +16,7 @@
   <link rel="stylesheet" href="http://blog.leifmadsen.com/css/poole-overrides.css">
   <link rel="stylesheet" href="http://blog.leifmadsen.com/css/hyde-overrides.css">
   <link rel="stylesheet" href="http://blog.leifmadsen.com/css/hyde-x.css">
-  <link rel="stylesheet" href="http://blog.leifmadsen.com/css/highlight/solarized_dark.css">
+  <link rel="stylesheet" href="http://blog.leifmadsen.com/css/highlight/monokai.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700|Abril+Fatface">
   <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
   
@@ -73,6 +73,21 @@
 <div class="content container">
   <div class="posts">
     
+    
+    <div class="post">
+      <h1 class="post-title">
+        <a href="http://blog.leifmadsen.com/blog/2016/11/09/tripleo-using-the-fake_pxe-driver-with-ironic/">TripleO: Using the fake_pxe driver with Ironic</a>
+      </h1>
+      <span class="post-date">Nov 9, 2016 &middot; 7 minute read &middot; <a href="http://blog.leifmadsen.com/blog/2016/11/09/tripleo-using-the-fake_pxe-driver-with-ironic/#disqus_thread">Comments</a>
+      
+      <br/>
+      <a class="label" href="http://blog.leifmadsen.com/categories/tripleo">TripleO</a><a class="label" href="http://blog.leifmadsen.com/categories/nfvpe">nfvpe</a>
+      </span>
+      
+      I&rsquo;ve been working on testing things with TripleO and normally I use TripleO Quickstart to spin things up in a virtual environment. Often when doing NFV work though, you need things that can&rsquo;t be used in a virtual environment (such as DPDK, SR-IOV, etc) so you need some baremetal nodes. In my home lab environment though, I don&rsquo;t have the luxury of IPMI, so I need to make use of the fake_pxe driver in Ironic, which allows for standard PXE control, but requires you to deal with powering on and off the machines manually.
+      <a href="http://blog.leifmadsen.com/blog/2016/11/09/tripleo-using-the-fake_pxe-driver-with-ironic/">Read On &rarr;</a>
+      
+    </div>
     
     <div class="post">
       <h1 class="post-title">
@@ -211,21 +226,6 @@ on Liberty, and a lot has changed in TripleO since that time.</p>
       
     </div>
     
-    <div class="post">
-      <h1 class="post-title">
-        <a href="http://blog.leifmadsen.com/blog/2012/11/24/brother-printer-doesnt-print-in-fedora-17/">Brother printer doesn&#39;t print in Fedora 17</a>
-      </h1>
-      <span class="post-date">Nov 24, 2012 &middot; 1 minute read &middot; <a href="http://blog.leifmadsen.com/blog/2012/11/24/brother-printer-doesnt-print-in-fedora-17/#disqus_thread">Comments</a>
-      
-      <br/>
-      <a class="label" href="http://blog.leifmadsen.com/categories/technology">Technology</a>
-      </span>
-      
-      Tip: If your Brother printer won&rsquo;t print after installing the drivers, install glibc.i686 Today ran into an issue with my new Brother MFC-7460DN (which is a really nice laser printer with auto-feed scanner, Scan-to-FTP which creates a PDF file, and other things). I had just recently done a clean install of Fedora 17, and I could install the RPMs (which are i386 files on my x86_64 based system), add the printer to CUPS and all sorts of things that looked fine.
-      <a href="http://blog.leifmadsen.com/blog/2012/11/24/brother-printer-doesnt-print-in-fedora-17/">Read On &rarr;</a>
-      
-    </div>
-    
     
     
     <ul class="pagination">
@@ -270,12 +270,15 @@ on Liberty, and a lot has changed in TripleO since that time.</p>
         ><a href="http://blog.leifmadsen.com/page/10/">10</a></li>
         
         <li
+        ><a href="http://blog.leifmadsen.com/page/11/">11</a></li>
+        
+        <li
         >
         <a href="http://blog.leifmadsen.com/page/2/" aria-label="Next"><span aria-hidden="true">&raquo;</span></a>
         </li>
         
         <li>
-            <a href="http://blog.leifmadsen.com/page/10/" aria-label="Last"><span aria-hidden="true">&raquo;&raquo;</span></a>
+            <a href="http://blog.leifmadsen.com/page/11/" aria-label="Last"><span aria-hidden="true">&raquo;&raquo;</span></a>
         </li>
         
     </ul>
