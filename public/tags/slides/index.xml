@@ -2,12 +2,11 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Slides on Asterisk, and other worldly endeavours</title>
-    <link>http://blog.leifmadsen.com/tags/slides/</link>
+    <link>http://blog.leifmadsen.com/tags/slides/index.xml</link>
     <description>Recent content in Slides on Asterisk, and other worldly endeavours</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 01 Nov 2010 12:04:08 +0000</lastBuildDate>
-    <atom:link href="http://blog.leifmadsen.com/tags/slides/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="/tags/slides/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>My Presentations from AstriCon 2010 are Available</title>
@@ -15,7 +14,8 @@
       <pubDate>Mon, 01 Nov 2010 12:04:08 +0000</pubDate>
       
       <guid>http://blog.leifmadsen.com/blog/2010/11/01/my-presentations-from-astricon-2010-are-available/</guid>
-      <description>Check out http://leifmadsen.com and click on the presentations tab. Under that tab you will find my presentations from AstriCon 2010, &rsquo;5 Things You Didn&rsquo;t Know Asterisk Could Do&rsquo; and a slightly updated version of my &lsquo;Building Distributed Queue Systems&rsquo; presentation. Both are in PDF format. Both presentations went over extremely well, and I think both probably ended up being, or nearly being, my best presentations ever given. In previous years I&rsquo;ve given presentations on distributed Asterisk systems and last year at IT360 I gave my &rdquo;5 Things You Didn&rsquo;t Know Asterisk Could Do&rdquo; presentation, so perhaps being somewhat familiar with the format helped.</description>
+      <description>Check out http://leifmadsen.com and click on the presentations tab. Under that tab you will find my presentations from AstriCon 2010, &rsquo;5 Things You Didn&rsquo;t Know Asterisk Could Do&rsquo; and a slightly updated version of my &lsquo;Building Distributed Queue Systems&rsquo; presentation. Both are in PDF format.
+Both presentations went over extremely well, and I think both probably ended up being, or nearly being, my best presentations ever given. In previous years I&rsquo;ve given presentations on distributed Asterisk systems and last year at IT360 I gave my &rdquo;5 Things You Didn&rsquo;t Know Asterisk Could Do&rdquo; presentation, so perhaps being somewhat familiar with the format helped.</description>
     </item>
     
   </channel>

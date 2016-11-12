@@ -2,12 +2,11 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Calendar Integration on Asterisk, and other worldly endeavours</title>
-    <link>http://blog.leifmadsen.com/tags/calendar-integration/</link>
+    <link>http://blog.leifmadsen.com/tags/calendar-integration/index.xml</link>
     <description>Recent content in Calendar Integration on Asterisk, and other worldly endeavours</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 21 Dec 2010 15:26:43 +0000</lastBuildDate>
-    <atom:link href="http://blog.leifmadsen.com/tags/calendar-integration/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="/tags/calendar-integration/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Video of &#39;5 Things You Didn&#39;t Know Asterisk Could Do&#39; Presentation Now Available</title>
@@ -15,7 +14,8 @@
       <pubDate>Tue, 21 Dec 2010 15:26:43 +0000</pubDate>
       
       <guid>http://blog.leifmadsen.com/blog/2010/12/21/video-of-5-things-you-didnt-know-asterisk-could-do-presentation-now-available/</guid>
-      <description>Check out the AstriCon website for my presentation that was recorded this year. I did three presentations this year (5 Things You Didn&rsquo;t Know Asterisk Could Do, Distributed Call Centres, and the Asterisk Project Update with Russell Bryant) but unfortunately the only one I see so far is the 5 Things presentation (which is a very good presentation! :)) The link to the presentations are here: http://www.astricon.net/videoPresentations.aspx#Digium7 with mine being at the top of the list.</description>
+      <description>Check out the AstriCon website for my presentation that was recorded this year. I did three presentations this year (5 Things You Didn&rsquo;t Know Asterisk Could Do, Distributed Call Centres, and the Asterisk Project Update with Russell Bryant) but unfortunately the only one I see so far is the 5 Things presentation (which is a very good presentation! :))
+The link to the presentations are here: http://www.astricon.net/videoPresentations.aspx#Digium7 with mine being at the top of the list.</description>
     </item>
     
   </channel>

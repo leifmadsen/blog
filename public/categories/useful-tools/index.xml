@@ -2,12 +2,11 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Useful Tools on Asterisk, and other worldly endeavours</title>
-    <link>http://blog.leifmadsen.com/categories/useful-tools/</link>
+    <link>http://blog.leifmadsen.com/categories/useful-tools/index.xml</link>
     <description>Recent content in Useful Tools on Asterisk, and other worldly endeavours</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 23 Jul 2012 19:14:45 +0000</lastBuildDate>
-    <atom:link href="http://blog.leifmadsen.com/categories/useful-tools/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="/categories/useful-tools/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Assign unique hostname to dhcp client with dnsmasq</title>
@@ -15,7 +14,8 @@
       <pubDate>Mon, 23 Jul 2012 19:14:45 +0000</pubDate>
       
       <guid>http://blog.leifmadsen.com/blog/2012/07/23/assign-unique-hostname-to-dhcp-client-with-dnsmasq/</guid>
-      <description>Today I&rsquo;ve been getting our lab environment setup with vagrant to auto-provision our lab servers with chef server in order to allow the development team to quickly and easily turn up and tear down web application servers. Because when the server gets spun up with vagrant, it registers itself as a new node to the chef server using its hostname. Since using localhost for every node pretty much makes the chef server useless for more than 1 virtual machine at a time, I needed to figure out how to get dnsmasq to assign a unique hostname based on the IP address being provided by dnsmasq to the dhcp client.</description>
+      <description>Today I&rsquo;ve been getting our lab environment setup with vagrant to auto-provision our lab servers with chef server in order to allow the development team to quickly and easily turn up and tear down web application servers.
+Because when the server gets spun up with vagrant, it registers itself as a new node to the chef server using its hostname. Since using localhost for every node pretty much makes the chef server useless for more than 1 virtual machine at a time, I needed to figure out how to get dnsmasq to assign a unique hostname based on the IP address being provided by dnsmasq to the dhcp client.</description>
     </item>
     
     <item>
@@ -24,7 +24,9 @@
       <pubDate>Thu, 23 Feb 2012 18:43:54 +0000</pubDate>
       
       <guid>http://blog.leifmadsen.com/blog/2012/02/23/rpmlint-non-utf8-spec-file-error/</guid>
-      <description>I&rsquo;ve been doing a bunch of work with RPMs lately, and while running rpmlint against a spec file I was modifying, I received this error: myfile.spec: E: non-utf8-spec-file myfile.spec After Googling, I ran into a way of finding the non-compliant characters. $ iconv -f ISO-8859-8 -t UTF-8 myfile.spec &gt; converted.spec $ diff -u myfile.spec converted.spec (Answer thanks to Dominique Leuenberger @ http://lists.opensuse.org/opensuse-packaging/2011-04/msg00005.html)</description>
+      <description>I&rsquo;ve been doing a bunch of work with RPMs lately, and while running rpmlint against a spec file I was modifying, I received this error:
+myfile.spec: E: non-utf8-spec-file myfile.spec  After Googling, I ran into a way of finding the non-compliant characters.
+$ iconv -f ISO-8859-8 -t UTF-8 myfile.spec &gt; converted.spec $ diff -u myfile.spec converted.spec  (Answer thanks to Dominique Leuenberger @ http://lists.opensuse.org/opensuse-packaging/2011-04/msg00005.html)</description>
     </item>
     
     <item>
@@ -33,7 +35,8 @@
       <pubDate>Thu, 22 Dec 2011 14:39:07 +0000</pubDate>
       
       <guid>http://blog.leifmadsen.com/blog/2011/12/22/.bashrc-trick-for-git-repo-and-branch-information/</guid>
-      <description>The other day I was talking to my friend Russell Bryant who pointed me to some .bashrc magic that would show me which branch I was currently working with inside a git repo on my system. I found it incredibly handy and have modified the ANSI colour coding slightly. export PS1='[\u@\h \[33[0;36m\]\W$(__git_ps1 &quot;\[33[0m\]\[33[0;33m\](%s)&quot;)\[33[0m\]]\$ ' On Fedora Russell mentioned that you need the bash-completion installed. We&rsquo;re unsure if you need anything on other distributions.</description>
+      <description>The other day I was talking to my friend Russell Bryant who pointed me to some .bashrc magic that would show me which branch I was currently working with inside a git repo on my system. I found it incredibly handy and have modified the ANSI colour coding slightly.
+export PS1='[\u@\h \[33[0;36m\]\W$(__git_ps1 &quot;\[33[0m\]\[33[0;33m\](%s)&quot;)\[33[0m\]]\$ '  On Fedora Russell mentioned that you need the bash-completion installed. We&rsquo;re unsure if you need anything on other distributions.</description>
     </item>
     
     <item>
@@ -42,7 +45,9 @@
       <pubDate>Tue, 22 Nov 2011 22:17:18 +0000</pubDate>
       
       <guid>http://blog.leifmadsen.com/blog/2011/11/22/relaying-smtp-via-gmail-or-google-apps-using-postfix/</guid>
-      <description>Today I had the need to start relaying mail through my Google Apps account since Super-Evil-Bastard-ITSPRogers blocks sending email (it&rsquo;s probably a good thing, however it&rsquo;s quite annoying when running some services from home). Found this article while Googling, and it worked great first try. I like when things are this easy. http://www.zulius.com/how-to/set-up-postfix-with-a-remote-smtp-relay-host/</description>
+      <description>Today I had the need to start relaying mail through my Google Apps account since Super-Evil-Bastard-ITSPRogers blocks sending email (it&rsquo;s probably a good thing, however it&rsquo;s quite annoying when running some services from home).
+Found this article while Googling, and it worked great first try. I like when things are this easy.
+http://www.zulius.com/how-to/set-up-postfix-with-a-remote-smtp-relay-host/</description>
     </item>
     
     <item>
@@ -51,7 +56,8 @@
       <pubDate>Wed, 02 Nov 2011 16:08:40 +0000</pubDate>
       
       <guid>http://blog.leifmadsen.com/blog/2011/11/02/controlling-outbound-bitrate-using-tc/</guid>
-      <description>Today I was using the VMware vCenter Converter application to build a VM from a physical machine so that I could replace Ubuntu 10.04.3 LTS with VMware ESXi (and move the functionality that the server is performing now to a VM instead of it being the base OS). Because my server is colocated in a friends rack, and the bandwidth is shared, I needed to limit the rate at which the data was being sent from the colocated server to the virtual machine server.</description>
+      <description>Today I was using the VMware vCenter Converter application to build a VM from a physical machine so that I could replace Ubuntu 10.04.3 LTS with VMware ESXi (and move the functionality that the server is performing now to a VM instead of it being the base OS).
+Because my server is colocated in a friends rack, and the bandwidth is shared, I needed to limit the rate at which the data was being sent from the colocated server to the virtual machine server.</description>
     </item>
     
     <item>
@@ -60,7 +66,8 @@
       <pubDate>Wed, 09 Feb 2011 01:18:22 +0000</pubDate>
       
       <guid>http://blog.leifmadsen.com/blog/2011/02/09/initial-impressions-of-qemu-kvm-virtualization-server/</guid>
-      <description>The qemu-kvm (http://www.linux-kvm.org/page/Main_Page) package on Ubuntu 10.10 allows you to create virtual machines much like VMware, Xen, etc. My initial impressions are generally pretty positive. I like that it lets you install multiple operating systems (including MS Windows, which I haven&rsquo;t tried yet), and doesn&rsquo;t use a web interface like VMware Server 2 (which I&rsquo;ve found to be terribly crash prone, requiring a restart of the web interface at the least, and sometime the entire server needs to be restarted, often abruptly with the kill application).</description>
+      <description>The qemu-kvm (http://www.linux-kvm.org/page/Main_Page) package on Ubuntu 10.10 allows you to create virtual machines much like VMware, Xen, etc.
+My initial impressions are generally pretty positive. I like that it lets you install multiple operating systems (including MS Windows, which I haven&rsquo;t tried yet), and doesn&rsquo;t use a web interface like VMware Server 2 (which I&rsquo;ve found to be terribly crash prone, requiring a restart of the web interface at the least, and sometime the entire server needs to be restarted, often abruptly with the kill application).</description>
     </item>
     
     <item>
@@ -69,7 +76,8 @@
       <pubDate>Wed, 29 Sep 2010 14:25:50 +0000</pubDate>
       
       <guid>http://blog.leifmadsen.com/blog/2010/09/29/scheduling-automated-calls-between-two-participants-with-res_calendar/</guid>
-      <description>Here is a little dialplan snippet I wrote this morning for the next edition of the Asterisk book. While I&rsquo;m not going to delve into all the aspects of setting up res_calendar like we do in the book, I thought for those of you who might already have this working might enjoy it. (The calendaring modules are available in Asterisk 1.8, which is currently in release candidate status. Check out http://www.asterisk.org/downloads for the current version.) I started with this little bit of dialplan that gets triggered when a call is answered from the calendaring module: ﻿﻿﻿ [AutomatedMeetingSetup] exten =&gt; start,1,Verbose(2,Triggering meeting setup for two participants) same =&gt; n,Set(DeviceToDial=${FILTER(0-9A-Za-z,${CALENDAR_EVENT(location)})}) same =&gt; n,Dial(SIP/${DeviceToDial},30) same =&gt; n,Hangup() The location field in my calendar event (which in this case is labeled as Destination in my Google Calendar) contains the string 0000FFFF0002 which is the device identifier in my example.</description>
+      <description>Here is a little dialplan snippet I wrote this morning for the next edition of the Asterisk book. While I&rsquo;m not going to delve into all the aspects of setting up res_calendar like we do in the book, I thought for those of you who might already have this working might enjoy it.
+(The calendaring modules are available in Asterisk 1.8, which is currently in release candidate status. Check out http://www.</description>
     </item>
     
     <item>

@@ -2,12 +2,11 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Rvm on Asterisk, and other worldly endeavours</title>
-    <link>http://blog.leifmadsen.com/tags/rvm/</link>
+    <link>http://blog.leifmadsen.com/tags/rvm/index.xml</link>
     <description>Recent content in Rvm on Asterisk, and other worldly endeavours</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 26 Jun 2012 12:51:30 +0000</lastBuildDate>
-    <atom:link href="http://blog.leifmadsen.com/tags/rvm/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="/tags/rvm/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Integration Testing Using Jenkins (Part 1)</title>
@@ -15,7 +14,8 @@
       <pubDate>Tue, 26 Jun 2012 12:51:30 +0000</pubDate>
       
       <guid>http://blog.leifmadsen.com/blog/2012/06/26/integration-testing-using-jenkins-part-1/</guid>
-      <description>So for the last week or so, I&rsquo;ve been tasked at CoreDial with adding our own set of integration testing now that we&rsquo;re moving to a more formal deployment method using chef. After much pestering of questions to thehar of Lookout Mobile Security and with help of Google, #chef and jhansche in #jenkins I&rsquo;ve finally got a nice clean proof of concept that we can evaluate and likely deploy. I&rsquo;ll come back later with another article on my installation issues with jenkins and the solutions that I solved (nothing too terribly complicated), but what I wanted to blog about was the two types of tests that I&rsquo;ve been focusing on and was able to finally solve.</description>
+      <description>So for the last week or so, I&rsquo;ve been tasked at CoreDial with adding our own set of integration testing now that we&rsquo;re moving to a more formal deployment method using chef. After much pestering of questions to thehar of Lookout Mobile Security and with help of Google, #chef and jhansche in #jenkins I&rsquo;ve finally got a nice clean proof of concept that we can evaluate and likely deploy.
+I&rsquo;ll come back later with another article on my installation issues with jenkins and the solutions that I solved (nothing too terribly complicated), but what I wanted to blog about was the two types of tests that I&rsquo;ve been focusing on and was able to finally solve.</description>
     </item>
     
   </channel>

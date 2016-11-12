@@ -2,12 +2,11 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Asterisk.Distributed Device State on Asterisk, and other worldly endeavours</title>
-    <link>http://blog.leifmadsen.com/tags/asterisk/index.distributed-device-state/</link>
+    <link>http://blog.leifmadsen.com/tags/asterisk.distributed-device-state/index.xml</link>
     <description>Recent content in Asterisk.Distributed Device State on Asterisk, and other worldly endeavours</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 26 Oct 2011 16:36:49 +0000</lastBuildDate>
-    <atom:link href="http://blog.leifmadsen.com/tags/asterisk.distributed-device-state/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="/tags/asterisk.distributed-device-state/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>AstriCon presentation today at 11:40am</title>
@@ -15,7 +14,8 @@
       <pubDate>Wed, 26 Oct 2011 16:36:49 +0000</pubDate>
       
       <guid>http://blog.leifmadsen.com/blog/2011/10/26/astricon-presentation-today-at-1140am/</guid>
-      <description>I&rsquo;ll be speaking at AstriCon today (and tomorrow) about building a distributed call centre. The presentation will be 35 minutes long and will contain a set of slides that moves you from an existing traditional PBX system up through a distributed model (which happens to use a call centre as the example system). A PDF of the presentation along with the configuration files from the demo will be available on my website after the presentation.</description>
+      <description>I&rsquo;ll be speaking at AstriCon today (and tomorrow) about building a distributed call centre. The presentation will be 35 minutes long and will contain a set of slides that moves you from an existing traditional PBX system up through a distributed model (which happens to use a call centre as the example system).
+A PDF of the presentation along with the configuration files from the demo will be available on my website after the presentation.</description>
     </item>
     
   </channel>

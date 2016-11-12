@@ -2,12 +2,11 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Relay on Asterisk, and other worldly endeavours</title>
-    <link>http://blog.leifmadsen.com/tags/relay/</link>
+    <link>http://blog.leifmadsen.com/tags/relay/index.xml</link>
     <description>Recent content in Relay on Asterisk, and other worldly endeavours</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 22 Nov 2011 22:17:18 +0000</lastBuildDate>
-    <atom:link href="http://blog.leifmadsen.com/tags/relay/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="/tags/relay/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Relaying SMTP via Gmail (or Google Apps) Using Postfix</title>
@@ -15,7 +14,9 @@
       <pubDate>Tue, 22 Nov 2011 22:17:18 +0000</pubDate>
       
       <guid>http://blog.leifmadsen.com/blog/2011/11/22/relaying-smtp-via-gmail-or-google-apps-using-postfix/</guid>
-      <description>Today I had the need to start relaying mail through my Google Apps account since Super-Evil-Bastard-ITSPRogers blocks sending email (it&rsquo;s probably a good thing, however it&rsquo;s quite annoying when running some services from home). Found this article while Googling, and it worked great first try. I like when things are this easy. http://www.zulius.com/how-to/set-up-postfix-with-a-remote-smtp-relay-host/</description>
+      <description>Today I had the need to start relaying mail through my Google Apps account since Super-Evil-Bastard-ITSPRogers blocks sending email (it&rsquo;s probably a good thing, however it&rsquo;s quite annoying when running some services from home).
+Found this article while Googling, and it worked great first try. I like when things are this easy.
+http://www.zulius.com/how-to/set-up-postfix-with-a-remote-smtp-relay-host/</description>
     </item>
     
   </channel>

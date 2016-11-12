@@ -2,12 +2,11 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Invite on Asterisk, and other worldly endeavours</title>
-    <link>http://blog.leifmadsen.com/tags/invite/</link>
+    <link>http://blog.leifmadsen.com/tags/invite/index.xml</link>
     <description>Recent content in Invite on Asterisk, and other worldly endeavours</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 19 Mar 2010 16:28:28 +0000</lastBuildDate>
-    <atom:link href="http://blog.leifmadsen.com/tags/invite/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="/tags/invite/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Using a Nokia E71 with Asterisk (3G or WiFi)</title>

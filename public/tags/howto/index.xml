@@ -2,12 +2,11 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Howto on Asterisk, and other worldly endeavours</title>
-    <link>http://blog.leifmadsen.com/tags/howto/</link>
+    <link>http://blog.leifmadsen.com/tags/howto/index.xml</link>
     <description>Recent content in Howto on Asterisk, and other worldly endeavours</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 09 Sep 2011 13:28:47 +0000</lastBuildDate>
-    <atom:link href="http://blog.leifmadsen.com/tags/howto/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="/tags/howto/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Using Dialplan Functions: AES_DECRYPT() and AES_ENCRYPT()</title>
@@ -24,7 +23,8 @@
       <pubDate>Wed, 29 Sep 2010 14:25:50 +0000</pubDate>
       
       <guid>http://blog.leifmadsen.com/blog/2010/09/29/scheduling-automated-calls-between-two-participants-with-res_calendar/</guid>
-      <description>Here is a little dialplan snippet I wrote this morning for the next edition of the Asterisk book. While I&rsquo;m not going to delve into all the aspects of setting up res_calendar like we do in the book, I thought for those of you who might already have this working might enjoy it. (The calendaring modules are available in Asterisk 1.8, which is currently in release candidate status. Check out http://www.asterisk.org/downloads for the current version.) I started with this little bit of dialplan that gets triggered when a call is answered from the calendaring module: ﻿﻿﻿ [AutomatedMeetingSetup] exten =&gt; start,1,Verbose(2,Triggering meeting setup for two participants) same =&gt; n,Set(DeviceToDial=${FILTER(0-9A-Za-z,${CALENDAR_EVENT(location)})}) same =&gt; n,Dial(SIP/${DeviceToDial},30) same =&gt; n,Hangup() The location field in my calendar event (which in this case is labeled as Destination in my Google Calendar) contains the string 0000FFFF0002 which is the device identifier in my example.</description>
+      <description>Here is a little dialplan snippet I wrote this morning for the next edition of the Asterisk book. While I&rsquo;m not going to delve into all the aspects of setting up res_calendar like we do in the book, I thought for those of you who might already have this working might enjoy it.
+(The calendaring modules are available in Asterisk 1.8, which is currently in release candidate status. Check out http://www.</description>
     </item>
     
     <item>
@@ -42,7 +42,9 @@
       <pubDate>Mon, 03 May 2010 15:17:57 +0000</pubDate>
       
       <guid>http://blog.leifmadsen.com/blog/2010/05/03/installing-the-asterisk-test-suite/</guid>
-      <description>In case you missed it, I wrote an introductory article about the Asterisk Test Suite on the Asterisk blog. The post takes you from a minimally installed Ubuntu 9.10 up to the point that you can run the tests in the test suite by going through all the possible errors you might encounter getting it loaded, and how to resolve those errors (most of them being missing dependencies). Enjoy! http://blogs.asterisk.org/2010/04/29/installing-the-asterisk-test-suite/</description>
+      <description>In case you missed it, I wrote an introductory article about the Asterisk Test Suite on the Asterisk blog. The post takes you from a minimally installed Ubuntu 9.10 up to the point that you can run the tests in the test suite by going through all the possible errors you might encounter getting it loaded, and how to resolve those errors (most of them being missing dependencies).
+Enjoy!
+http://blogs.asterisk.org/2010/04/29/installing-the-asterisk-test-suite/</description>
     </item>
     
     <item>
@@ -60,7 +62,10 @@
       <pubDate>Sat, 14 Nov 2009 15:07:19 +0000</pubDate>
       
       <guid>http://blog.leifmadsen.com/blog/2009/11/14/building-queues-with-asterisk/</guid>
-      <description>Wow it&rsquo;s been a long time since I&rsquo;ve update my blog. Well, lets do that! :) I&rsquo;ve just posted some documentation to the Asterisk issue tracker for review. It&rsquo;s about building queues with Asterisk. It is the start of probably 2 or 3 sets of documentation on building queues with Asterisk that I&rsquo;ll be submitting. You can find the documentation here for now: https://issues.asterisk.org/view.php?id=16237 This documentation will likely be merged into core Asterisk at some point in the near future (doc/ subdirectory of your Asterisk source) and likely posted on http://blogs.asterisk.org as well.</description>
+      <description>Wow it&rsquo;s been a long time since I&rsquo;ve update my blog. Well, lets do that! :)
+I&rsquo;ve just posted some documentation to the Asterisk issue tracker for review. It&rsquo;s about building queues with Asterisk. It is the start of probably 2 or 3 sets of documentation on building queues with Asterisk that I&rsquo;ll be submitting. You can find the documentation here for now:
+https://issues.asterisk.org/view.php?id=16237
+This documentation will likely be merged into core Asterisk at some point in the near future (doc/ subdirectory of your Asterisk source) and likely posted on http://blogs.</description>
     </item>
     
     <item>
@@ -69,7 +74,7 @@
       <pubDate>Sat, 18 Jul 2009 03:47:57 +0000</pubDate>
       
       <guid>http://blog.leifmadsen.com/blog/2009/07/18/howto-getting-jabber/xmpp-notifications-from-your-pbx/</guid>
-      <description>I just have to write up a quick post to show you JUST HOW SIMPLE it is to get interesting events from your PBX via Jabber. Right now I&rsquo;m using it to notify me of anyone trying out my test ISN number, or whenever they join my conference bridge (good reminder if I lose track of time and forget that I scheduled some people to join my conference room). This is based on Asterisk 1.4, although the same configuration should work on 1.6, but I like to try and give 1.4 examples where I can for those of you still running 1.4.</description>
+      <description>I just have to write up a quick post to show you JUST HOW SIMPLE it is to get interesting events from your PBX via Jabber. Right now I&rsquo;m using it to notify me of anyone trying out my test ISN number, or whenever they join my conference bridge (good reminder if I lose track of time and forget that I scheduled some people to join my conference room).</description>
     </item>
     
     <item>
@@ -78,7 +83,8 @@
       <pubDate>Fri, 17 Jul 2009 17:21:15 +0000</pubDate>
       
       <guid>http://blog.leifmadsen.com/blog/2009/07/17/howto-read-a-value-from-a-file-and-say-it-back/</guid>
-      <description>Preamble Today on the VoIP Users Conference we discussed my request for recipe ideas in order to start developing some additional documentation. Specifically, I&rsquo;m looking for problems that are simple, common problems that can be solved in the dialplan, and which are good examples of the dialplan language (markup, script, yadda yadda). One of the suggestions was something posted to the Asterisk mailing list which was pretty straight forward: to read in the contents of a file, where the file contained a number which was the current temperature.</description>
+      <description>Preamble Today on the VoIP Users Conference we discussed my request for recipe ideas in order to start developing some additional documentation. Specifically, I&rsquo;m looking for problems that are simple, common problems that can be solved in the dialplan, and which are good examples of the dialplan language (markup, script, yadda yadda).
+One of the suggestions was something posted to the Asterisk mailing list which was pretty straight forward: to read in the contents of a file, where the file contained a number which was the current temperature.</description>
     </item>
     
     <item>
@@ -87,7 +93,8 @@
       <pubDate>Wed, 15 Jul 2009 18:29:02 +0000</pubDate>
       
       <guid>http://blog.leifmadsen.com/blog/2009/07/15/howto-page-all-users-other-than-current-channel/</guid>
-      <description>I was asked on IRC by bhodder how to Page() all users, other than the current channel (i.e. he had a list of people to call, but one of the channels listed could be the person paging, and he didn&rsquo;t want them paged). So I wrote up the following little dialplan script which takes the list of users, and compares it against the current channel, and simply rebuilds the list without the current channel in it prior to calling the Page() application.</description>
+      <description>I was asked on IRC by bhodder how to Page() all users, other than the current channel (i.e. he had a list of people to call, but one of the channels listed could be the person paging, and he didn&rsquo;t want them paged).
+So I wrote up the following little dialplan script which takes the list of users, and compares it against the current channel, and simply rebuilds the list without the current channel in it prior to calling the Page() application.</description>
     </item>
     
   </channel>

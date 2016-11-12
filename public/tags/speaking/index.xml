@@ -2,12 +2,11 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Speaking on Asterisk, and other worldly endeavours</title>
-    <link>http://blog.leifmadsen.com/tags/speaking/</link>
+    <link>http://blog.leifmadsen.com/tags/speaking/index.xml</link>
     <description>Recent content in Speaking on Asterisk, and other worldly endeavours</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 27 Oct 2010 12:08:06 +0000</lastBuildDate>
-    <atom:link href="http://blog.leifmadsen.com/tags/speaking/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="/tags/speaking/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>AstriCon 2010 and my talks!</title>
@@ -15,7 +14,8 @@
       <pubDate>Wed, 27 Oct 2010 12:08:06 +0000</pubDate>
       
       <guid>http://blog.leifmadsen.com/blog/2010/10/27/astricon-2010-and-my-talks/</guid>
-      <description>NOTE: My presentations are available on my website at http://leifmadsen.com under the Presentations tab. Hey all! I&rsquo;m at AstriCon 2010 in Maryland and it&rsquo;s going great so far! Russell Bryant and I spoke with several keen users and developers last night in the Code Zone at a fairly late hour, which shows just how dedicated Asterisk users are. There was pretty much no one else around and we had a room of about 20-30 people just having a great discussion about Asterisk development.</description>
+      <description>NOTE: My presentations are available on my website at http://leifmadsen.com under the Presentations tab.
+Hey all! I&rsquo;m at AstriCon 2010 in Maryland and it&rsquo;s going great so far! Russell Bryant and I spoke with several keen users and developers last night in the Code Zone at a fairly late hour, which shows just how dedicated Asterisk users are. There was pretty much no one else around and we had a room of about 20-30 people just having a great discussion about Asterisk development.</description>
     </item>
     
     <item>
@@ -24,7 +24,8 @@
       <pubDate>Tue, 03 Aug 2010 19:12:28 +0000</pubDate>
       
       <guid>http://blog.leifmadsen.com/blog/2010/08/03/speaking-at-astricon-2010-come-see-my-talk-/</guid>
-      <description>Hey everyone! Sorry for the lack of updates recently. We&rsquo;ve been hard at work on the next version of the Asterisk book, which is shaping up to be the best book ever written on Asterisk. The scope and detail we&rsquo;re working towards is ambitious, but will be very much worth it. Of course the book will be focused on the upcoming Asterisk 1.8 releases (which was recently branched and betas are now available for testing!).</description>
+      <description>Hey everyone!
+Sorry for the lack of updates recently. We&rsquo;ve been hard at work on the next version of the Asterisk book, which is shaping up to be the best book ever written on Asterisk. The scope and detail we&rsquo;re working towards is ambitious, but will be very much worth it. Of course the book will be focused on the upcoming Asterisk 1.8 releases (which was recently branched and betas are now available for testing!</description>
     </item>
     
     <item>
@@ -33,7 +34,8 @@
       <pubDate>Wed, 17 Mar 2010 15:27:15 +0000</pubDate>
       
       <guid>http://blog.leifmadsen.com/blog/2010/03/17/speaking--it360-april-7th-2010/</guid>
-      <description>I will be speaking again at the IT360 conference in Toronto, ON, Canada in the Asterisk &amp; Open Telephony portion of the conference. IT360 is on April 7 this year (2010) being held at the Metro Toronto Convention Centre. I will be speaking on the Super Panel – Enterprise Use, Security, Virtual Hosting, Mobility &amp; More along with John Todd, Kevin Fleming, Steve Sokol, and others. My primary focus will likely be on the large scale call centre implementations I&rsquo;ve done, along with clustering, database integration, and distributed information.</description>
+      <description>I will be speaking again at the IT360 conference in Toronto, ON, Canada in the Asterisk &amp; Open Telephony portion of the conference. IT360 is on April 7 this year (2010) being held at the Metro Toronto Convention Centre. I will be speaking on the Super Panel – Enterprise Use, Security, Virtual Hosting, Mobility &amp; More along with John Todd, Kevin Fleming, Steve Sokol, and others.
+My primary focus will likely be on the large scale call centre implementations I&rsquo;ve done, along with clustering, database integration, and distributed information.</description>
     </item>
     
     <item>

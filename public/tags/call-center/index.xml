@@ -2,12 +2,11 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Call Center on Asterisk, and other worldly endeavours</title>
-    <link>http://blog.leifmadsen.com/tags/call-center/</link>
+    <link>http://blog.leifmadsen.com/tags/call-center/index.xml</link>
     <description>Recent content in Call Center on Asterisk, and other worldly endeavours</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 18 Nov 2009 20:40:15 +0000</lastBuildDate>
-    <atom:link href="http://blog.leifmadsen.com/tags/call-center/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="/tags/call-center/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>AstriCon 2009 Presentation -- Building a Distributed Call Center</title>
@@ -15,7 +14,10 @@
       <pubDate>Wed, 18 Nov 2009 20:40:15 +0000</pubDate>
       
       <guid>http://blog.leifmadsen.com/blog/2009/11/18/astricon-2009-presentation----building-a-distributed-call-center/</guid>
-      <description>For those who missed it, you&rsquo;re able to get a PDF of my AstriCon 2009 presentation from the http://www.astricon.net website. http://images.tmcnet.com/expo/astricon/presentations/cc01-madsen-digium.pdf There are additional presentations available from the conference as well. Check them out here: http://www.astricon.net/2009/astricon/agendaAtaGlance.aspx Overall, the conference was extremely well attended and I had a great time. I&rsquo;ve been to a lot of conferences, and AstriCon is definitely a premiere conference that is professionally run, and contains a great deal of useful information by well versed presenters with little fluff (i.e.</description>
+      <description>For those who missed it, you&rsquo;re able to get a PDF of my AstriCon 2009 presentation from the http://www.astricon.net website.
+http://images.tmcnet.com/expo/astricon/presentations/cc01-madsen-digium.pdf
+There are additional presentations available from the conference as well. Check them out here: http://www.astricon.net/2009/astricon/agendaAtaGlance.aspx
+Overall, the conference was extremely well attended and I had a great time. I&rsquo;ve been to a lot of conferences, and AstriCon is definitely a premiere conference that is professionally run, and contains a great deal of useful information by well versed presenters with little fluff (i.</description>
     </item>
     
   </channel>

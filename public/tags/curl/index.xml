@@ -2,12 +2,11 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Curl on Asterisk, and other worldly endeavours</title>
-    <link>http://blog.leifmadsen.com/tags/curl/</link>
+    <link>http://blog.leifmadsen.com/tags/curl/index.xml</link>
     <description>Recent content in Curl on Asterisk, and other worldly endeavours</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 27 Feb 2011 21:57:41 +0000</lastBuildDate>
-    <atom:link href="http://blog.leifmadsen.com/tags/curl/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="/tags/curl/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Using #exec to set externaddr in sip.conf</title>
@@ -24,7 +23,8 @@
       <pubDate>Tue, 21 Dec 2010 15:26:43 +0000</pubDate>
       
       <guid>http://blog.leifmadsen.com/blog/2010/12/21/video-of-5-things-you-didnt-know-asterisk-could-do-presentation-now-available/</guid>
-      <description>Check out the AstriCon website for my presentation that was recorded this year. I did three presentations this year (5 Things You Didn&rsquo;t Know Asterisk Could Do, Distributed Call Centres, and the Asterisk Project Update with Russell Bryant) but unfortunately the only one I see so far is the 5 Things presentation (which is a very good presentation! :)) The link to the presentations are here: http://www.astricon.net/videoPresentations.aspx#Digium7 with mine being at the top of the list.</description>
+      <description>Check out the AstriCon website for my presentation that was recorded this year. I did three presentations this year (5 Things You Didn&rsquo;t Know Asterisk Could Do, Distributed Call Centres, and the Asterisk Project Update with Russell Bryant) but unfortunately the only one I see so far is the 5 Things presentation (which is a very good presentation! :))
+The link to the presentations are here: http://www.astricon.net/videoPresentations.aspx#Digium7 with mine being at the top of the list.</description>
     </item>
     
     <item>
@@ -33,7 +33,8 @@
       <pubDate>Fri, 17 Jul 2009 17:21:15 +0000</pubDate>
       
       <guid>http://blog.leifmadsen.com/blog/2009/07/17/howto-read-a-value-from-a-file-and-say-it-back/</guid>
-      <description>Preamble Today on the VoIP Users Conference we discussed my request for recipe ideas in order to start developing some additional documentation. Specifically, I&rsquo;m looking for problems that are simple, common problems that can be solved in the dialplan, and which are good examples of the dialplan language (markup, script, yadda yadda). One of the suggestions was something posted to the Asterisk mailing list which was pretty straight forward: to read in the contents of a file, where the file contained a number which was the current temperature.</description>
+      <description>Preamble Today on the VoIP Users Conference we discussed my request for recipe ideas in order to start developing some additional documentation. Specifically, I&rsquo;m looking for problems that are simple, common problems that can be solved in the dialplan, and which are good examples of the dialplan language (markup, script, yadda yadda).
+One of the suggestions was something posted to the Asterisk mailing list which was pretty straight forward: to read in the contents of a file, where the file contained a number which was the current temperature.</description>
     </item>
     
   </channel>

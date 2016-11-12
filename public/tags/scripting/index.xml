@@ -2,12 +2,11 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Scripting on Asterisk, and other worldly endeavours</title>
-    <link>http://blog.leifmadsen.com/tags/scripting/</link>
+    <link>http://blog.leifmadsen.com/tags/scripting/index.xml</link>
     <description>Recent content in Scripting on Asterisk, and other worldly endeavours</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 15 Sep 2011 12:34:35 +0000</lastBuildDate>
-    <atom:link href="http://blog.leifmadsen.com/tags/scripting/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="/tags/scripting/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Return just PID of script with &#39;ps&#39; and &#39;awk&#39;</title>
@@ -15,7 +14,8 @@
       <pubDate>Thu, 15 Sep 2011 12:34:35 +0000</pubDate>
       
       <guid>http://blog.leifmadsen.com/blog/2011/09/15/return-just-pid-of-script-with-ps-and-awk/</guid>
-      <description>Today I ran into an issue where I am running a python script that I needed to get the process ID (PID) of, but that the process was being output with a space between &lsquo;python&rsquo; and the actual script name (in this case, jiraircbot.py). I&rsquo;m sure it&rsquo;s totally overkill and there is a much easier way I didn&rsquo;t find to do this, but after some scouring of The Google, I found something that works!</description>
+      <description>Today I ran into an issue where I am running a python script that I needed to get the process ID (PID) of, but that the process was being output with a space between &lsquo;python&rsquo; and the actual script name (in this case, jiraircbot.py).
+I&rsquo;m sure it&rsquo;s totally overkill and there is a much easier way I didn&rsquo;t find to do this, but after some scouring of The Google, I found something that works!</description>
     </item>
     
   </channel>

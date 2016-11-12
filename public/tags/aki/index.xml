@@ -2,12 +2,11 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Aki on Asterisk, and other worldly endeavours</title>
-    <link>http://blog.leifmadsen.com/tags/aki/</link>
+    <link>http://blog.leifmadsen.com/tags/aki/index.xml</link>
     <description>Recent content in Aki on Asterisk, and other worldly endeavours</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 22 Aug 2012 14:10:46 +0000</lastBuildDate>
-    <atom:link href="http://blog.leifmadsen.com/tags/aki/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="/tags/aki/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>CentOS 5.8 On AWS EC2 With Xen Kernel (PVGRUB)</title>

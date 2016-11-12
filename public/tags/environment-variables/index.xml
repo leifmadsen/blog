@@ -2,12 +2,11 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Environment Variables on Asterisk, and other worldly endeavours</title>
-    <link>http://blog.leifmadsen.com/tags/environment-variables/</link>
+    <link>http://blog.leifmadsen.com/tags/environment-variables/index.xml</link>
     <description>Recent content in Environment Variables on Asterisk, and other worldly endeavours</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 22 Aug 2012 18:49:43 +0000</lastBuildDate>
-    <atom:link href="http://blog.leifmadsen.com/tags/environment-variables/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="/tags/environment-variables/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Selecting Chef Servers With Environment Variables</title>

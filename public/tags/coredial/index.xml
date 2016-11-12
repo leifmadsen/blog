@@ -2,12 +2,11 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Coredial on Asterisk, and other worldly endeavours</title>
-    <link>http://blog.leifmadsen.com/tags/coredial/</link>
+    <link>http://blog.leifmadsen.com/tags/coredial/index.xml</link>
     <description>Recent content in Coredial on Asterisk, and other worldly endeavours</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 04 Jan 2012 20:22:08 +0000</lastBuildDate>
-    <atom:link href="http://blog.leifmadsen.com/tags/coredial/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="/tags/coredial/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Now working with CoreDial</title>
@@ -15,7 +14,9 @@
       <pubDate>Wed, 04 Jan 2012 20:22:08 +0000</pubDate>
       
       <guid>http://blog.leifmadsen.com/blog/2012/01/04/now-working-with-coredial/</guid>
-      <description>As of January 3rd, I&rsquo;m now working with the CoreDial team full time. I&rsquo;ve worked with them as a consultant on their infrastructure over the last few years but now will be spending significantly more time working with the engineering team :) From the announcement, “_CoreDial is pleased to announce the addition of Leif Madsen to the CoreDial team,” said Alan Rihm, CEO at CoreDial. “Leif is a well known Asterisk consultant who specializes in distributed telephony deployments and database integration.</description>
+      <description>As of January 3rd, I&rsquo;m now working with the CoreDial team full time. I&rsquo;ve worked with them as a consultant on their infrastructure over the last few years but now will be spending significantly more time working with the engineering team :)
+From the announcement,
+“_CoreDial is pleased to announce the addition of Leif Madsen to the CoreDial team,” said Alan Rihm, CEO at CoreDial. “Leif is a well known Asterisk consultant who specializes in distributed telephony deployments and database integration.</description>
     </item>
     
   </channel>

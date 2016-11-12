@@ -2,12 +2,11 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tripleo on Asterisk, and other worldly endeavours</title>
-    <link>http://blog.leifmadsen.com/categories/tripleo/</link>
+    <link>http://blog.leifmadsen.com/categories/tripleo/index.xml</link>
     <description>Recent content in Tripleo on Asterisk, and other worldly endeavours</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 09 Nov 2016 15:08:53 -0500</lastBuildDate>
-    <atom:link href="http://blog.leifmadsen.com/categories/tripleo/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="/categories/tripleo/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>TripleO: Using the fake_pxe driver with Ironic</title>
@@ -15,7 +14,9 @@
       <pubDate>Wed, 09 Nov 2016 15:08:53 -0500</pubDate>
       
       <guid>http://blog.leifmadsen.com/blog/2016/11/09/tripleo-using-the-fake_pxe-driver-with-ironic/</guid>
-      <description>I&rsquo;ve been working on testing things with TripleO and normally I use TripleO Quickstart to spin things up in a virtual environment. Often when doing NFV work though, you need things that can&rsquo;t be used in a virtual environment (such as DPDK, SR-IOV, etc) so you need some baremetal nodes. In my home lab environment though, I don&rsquo;t have the luxury of IPMI, so I need to make use of the fake_pxe driver in Ironic, which allows for standard PXE control, but requires you to deal with powering on and off the machines manually.</description>
+      <description>I&rsquo;ve been working on testing things with TripleO and normally I use TripleO Quickstart to spin things up in a virtual environment.
+Often when doing NFV work though, you need things that can&rsquo;t be used in a virtual environment (such as DPDK, SR-IOV, etc) so you need some baremetal nodes.
+In my home lab environment though, I don&rsquo;t have the luxury of IPMI, so I need to make use of the fake_pxe driver in Ironic, which allows for standard PXE control, but requires you to deal with powering on and off the machines manually.</description>
     </item>
     
     <item>
@@ -28,8 +29,12 @@
 roles</a>
 that was added to Newton. I previously learned a little bit about deploying
 OpenStack clouds when I did training after joining Red Hat, but that was based
-on Liberty, and a lot has changed in TripleO since that time.</p>
-</description>
+on Liberty, and a lot has changed in TripleO since that time.
+
+The first thing was learning what composable services and roles are, and
+generally what they are intended to solve. I don&rsquo;t want to get into that
+here, so I&rsquo;d encourage you to go read some links first and then come back here.
+Additionally, it&rsquo;s assumed you know what a TripleO is :)</p></description>
     </item>
     
   </channel>

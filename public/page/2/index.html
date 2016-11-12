@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
 <head>
-	<meta name="generator" content="Hugo 0.17-DEV" />
+	<meta name="generator" content="Hugo 0.18-DEV" />
   <link href="http://gmpg.org/xfn/11" rel="profile">
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
 
@@ -30,8 +30,8 @@
   
   <link href="http://blog.leifmadsen.com/index.xml" rel="alternate" type="application/rss+xml" title="Asterisk, and other worldly endeavours &middot; Leif Madsen" />
 
-  <meta name="description" content="Leif Madsen Blog Entry">
-  <meta name="keywords" content="blog,asterisk,leif,madsen,canada">
+  <meta name="description" content="">
+  <meta name="keywords" content="">
   
 </head>
 <body>
@@ -84,7 +84,8 @@
       <a class="label" href="http://blog.leifmadsen.com/categories/technology">Technology</a>
       </span>
       
-      Tip: If your Brother printer won&rsquo;t print after installing the drivers, install glibc.i686 Today ran into an issue with my new Brother MFC-7460DN (which is a really nice laser printer with auto-feed scanner, Scan-to-FTP which creates a PDF file, and other things). I had just recently done a clean install of Fedora 17, and I could install the RPMs (which are i386 files on my x86_64 based system), add the printer to CUPS and all sorts of things that looked fine.
+      Tip: If your Brother printer won&rsquo;t print after installing the drivers, install glibc.i686
+Today ran into an issue with my new Brother MFC-7460DN (which is a really nice laser printer with auto-feed scanner, Scan-to-FTP which creates a PDF file, and other things). I had just recently done a clean install of Fedora 17, and I could install the RPMs (which are i386 files on my x86_64 based system), add the printer to CUPS and all sorts of things that looked fine.
       <a href="http://blog.leifmadsen.com/blog/2012/11/24/brother-printer-doesnt-print-in-fedora-17/">Read On &rarr;</a>
       
     </div>
@@ -99,7 +100,10 @@
       <a class="label" href="http://blog.leifmadsen.com/categories/asterisk">Asterisk</a><a class="label" href="http://blog.leifmadsen.com/categories/musings">Musings</a>
       </span>
       
-      Today I received a couple of phones from Digium; the D40 and D70. I&rsquo;ll be using these phones for testing and documentation in the 4th edition of Asterisk: The Definitive Guide (which Jim Van Meggelen, Russell Bryant and myself are working on right now). Here is my unboxing of the phones and some commentary about my initial impressions of the hardware itself. [caption id=&ldquo;attachment_484&rdquo; align=&ldquo;aligncenter&rdquo; width=&ldquo;300&rdquo;] Pretty boxes![/caption] Phones arrived in some nice looking boxes.
+      Today I received a couple of phones from Digium; the D40 and D70. I&rsquo;ll be using these phones for testing and documentation in the 4th edition of Asterisk: The Definitive Guide (which Jim Van Meggelen, Russell Bryant and myself are working on right now).
+Here is my unboxing of the phones and some commentary about my initial impressions of the hardware itself.
+[caption id=&ldquo;attachment_484&rdquo; align=&ldquo;aligncenter&rdquo; width=&ldquo;300&rdquo;] Pretty boxes![/caption]
+Phones arrived in some nice looking boxes.
       <a href="http://blog.leifmadsen.com/blog/2012/10/11/digium-d40-and-d70-phone-unboxing/">Read On &rarr;</a>
       
     </div>
@@ -144,7 +148,8 @@
       <a class="label" href="http://blog.leifmadsen.com/categories/being-productive">Being Productive</a><a class="label" href="http://blog.leifmadsen.com/categories/devops">DevOps</a><a class="label" href="http://blog.leifmadsen.com/categories/useful-tools">Useful Tools</a>
       </span>
       
-      Today I&rsquo;ve been getting our lab environment setup with vagrant to auto-provision our lab servers with chef server in order to allow the development team to quickly and easily turn up and tear down web application servers. Because when the server gets spun up with vagrant, it registers itself as a new node to the chef server using its hostname. Since using localhost for every node pretty much makes the chef server useless for more than 1 virtual machine at a time, I needed to figure out how to get dnsmasq to assign a unique hostname based on the IP address being provided by dnsmasq to the dhcp client.
+      Today I&rsquo;ve been getting our lab environment setup with vagrant to auto-provision our lab servers with chef server in order to allow the development team to quickly and easily turn up and tear down web application servers.
+Because when the server gets spun up with vagrant, it registers itself as a new node to the chef server using its hostname. Since using localhost for every node pretty much makes the chef server useless for more than 1 virtual machine at a time, I needed to figure out how to get dnsmasq to assign a unique hostname based on the IP address being provided by dnsmasq to the dhcp client.
       <a href="http://blog.leifmadsen.com/blog/2012/07/23/assign-unique-hostname-to-dhcp-client-with-dnsmasq/">Read On &rarr;</a>
       
     </div>
@@ -159,7 +164,9 @@
       <a class="label" href="http://blog.leifmadsen.com/categories/musings">Musings</a><a class="label" href="http://blog.leifmadsen.com/categories/programming">Programming</a>
       </span>
       
-      So I ran into something kind of stupid today :) Adding a little note for anyone who might run into a similar instance. I have some ssh-add stuff that gets run in my .bashrc file, but when I was outputting it, I was doing: ssh-add ~/.ssh/some_key &gt; /dev/null 2&amp;&gt;1 Note the 2&amp;&gt;1 at the end. That means to redirect output to a file named 1. You need to flip the
+      So I ran into something kind of stupid today :) Adding a little note for anyone who might run into a similar instance.
+I have some ssh-add stuff that gets run in my .bashrc file, but when I was outputting it, I was doing:
+ssh-add ~/.ssh/some_key &gt; /dev/null 2&amp;&gt;1  Note the 2&amp;&gt;1 at the end. That means to redirect output to a file named 1. You need to flip the &amp;&gt; into &gt;&amp;, so the fixed version looks like:
       <a href="http://blog.leifmadsen.com/blog/2012/07/19/bash-creating-files-named-1-everywhere/">Read On &rarr;</a>
       
     </div>
@@ -174,7 +181,8 @@
       <a class="label" href="http://blog.leifmadsen.com/categories/devops">DevOps</a>
       </span>
       
-      So for the last week or so, I&rsquo;ve been tasked at CoreDial with adding our own set of integration testing now that we&rsquo;re moving to a more formal deployment method using chef. After much pestering of questions to thehar of Lookout Mobile Security and with help of Google, #chef and jhansche in #jenkins I&rsquo;ve finally got a nice clean proof of concept that we can evaluate and likely deploy. I&rsquo;ll come back later with another article on my installation issues with jenkins and the solutions that I solved (nothing too terribly complicated), but what I wanted to blog about was the two types of tests that I&rsquo;ve been focusing on and was able to finally solve.
+      So for the last week or so, I&rsquo;ve been tasked at CoreDial with adding our own set of integration testing now that we&rsquo;re moving to a more formal deployment method using chef. After much pestering of questions to thehar of Lookout Mobile Security and with help of Google, #chef and jhansche in #jenkins I&rsquo;ve finally got a nice clean proof of concept that we can evaluate and likely deploy.
+I&rsquo;ll come back later with another article on my installation issues with jenkins and the solutions that I solved (nothing too terribly complicated), but what I wanted to blog about was the two types of tests that I&rsquo;ve been focusing on and was able to finally solve.
       <a href="http://blog.leifmadsen.com/blog/2012/06/26/integration-testing-using-jenkins-part-1/">Read On &rarr;</a>
       
     </div>
@@ -189,7 +197,9 @@
       <a class="label" href="http://blog.leifmadsen.com/categories/useful-tools">Useful Tools</a>
       </span>
       
-      I&rsquo;ve been doing a bunch of work with RPMs lately, and while running rpmlint against a spec file I was modifying, I received this error: myfile.spec: E: non-utf8-spec-file myfile.spec After Googling, I ran into a way of finding the non-compliant characters. $ iconv -f ISO-8859-8 -t UTF-8 myfile.spec &gt; converted.spec $ diff -u myfile.spec converted.spec (Answer thanks to Dominique Leuenberger @ http://lists.opensuse.org/opensuse-packaging/2011-04/msg00005.html)
+      I&rsquo;ve been doing a bunch of work with RPMs lately, and while running rpmlint against a spec file I was modifying, I received this error:
+myfile.spec: E: non-utf8-spec-file myfile.spec  After Googling, I ran into a way of finding the non-compliant characters.
+$ iconv -f ISO-8859-8 -t UTF-8 myfile.spec &gt; converted.spec $ diff -u myfile.spec converted.spec  (Answer thanks to Dominique Leuenberger @ http://lists.opensuse.org/opensuse-packaging/2011-04/msg00005.html)
       
       
     </div>
@@ -204,7 +214,9 @@
       <a class="label" href="http://blog.leifmadsen.com/categories/asterisk">Asterisk</a><a class="label" href="http://blog.leifmadsen.com/categories/programming">Programming</a>
       </span>
       
-      Last week I wanted to start changing some 1.4 based Asterisk dialplan to a 1.8 based Asterisk system, and in that process wanted to convert lines like: exten =&gt; _NXXNXXXXXX,1,NoOp() exten =&gt; _NXXNXXXXXX,2,GotoIf($[...]?reject,1) exten =&gt; _NXXNXXXXXX,3,Dial(SIP/foo/${EXTEN}) ... into using the same =&gt; prefix: exten =&gt; _NXXNXXXXXX,1,NoOp() same =&gt; n,GotoIf($[...]?reject,1) same =&gt; n,Dial(SIP/foo/${EXTEN}) In order to do that, Mike King helped me out with the following regular expressing which I used
+      Last week I wanted to start changing some 1.4 based Asterisk dialplan to a 1.8 based Asterisk system, and in that process wanted to convert lines like:
+exten =&gt; _NXXNXXXXXX,1,NoOp() exten =&gt; _NXXNXXXXXX,2,GotoIf($[...]?reject,1) exten =&gt; _NXXNXXXXXX,3,Dial(SIP/foo/${EXTEN}) ...  into using the same =&gt; prefix:
+exten =&gt; _NXXNXXXXXX,1,NoOp() same =&gt; n,GotoIf($[...]?reject,1) same =&gt; n,Dial(SIP/foo/${EXTEN})  In order to do that, Mike King helped me out with the following regular expressing which I used in vim:
       <a href="http://blog.leifmadsen.com/blog/2012/01/16/converting-multiple-exten--lines-to-using-same--in-asterisk-dialplan/">Read On &rarr;</a>
       
     </div>
@@ -219,7 +231,8 @@
       <a class="label" href="http://blog.leifmadsen.com/categories/life">Life</a><a class="label" href="http://blog.leifmadsen.com/categories/musings">Musings</a>
       </span>
       
-      Having found an article about the Commodore 64 turning 30 this year, I reflected back in a comment on that page about what it is like to be only 1 year older than the Commodore 64, a computer which spiked my interest in technology away from a games system to something much more. The original article is available at http://www.linuxjournal.com/content/commodor-64-30-year &ldquo;I just turned 31 a couple of days ago on January 7th, and when I was in grade 2 (about 8-9 years old I guess) I started getting interested in the Commodore 64s we had at our school that were plentiful, but rarely used.
+      Having found an article about the Commodore 64 turning 30 this year, I reflected back in a comment on that page about what it is like to be only 1 year older than the Commodore 64, a computer which spiked my interest in technology away from a games system to something much more. The original article is available at http://www.linuxjournal.com/content/commodor-64-30-year
+&ldquo;I just turned 31 a couple of days ago on January 7th, and when I was in grade 2 (about 8-9 years old I guess) I started getting interested in the Commodore 64s we had at our school that were plentiful, but rarely used.
       <a href="http://blog.leifmadsen.com/blog/2012/01/09/commodore-64-turns-30-this-year/">Read On &rarr;</a>
       
     </div>
