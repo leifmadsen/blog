@@ -14,7 +14,7 @@
       <pubDate>Sat, 24 Nov 2012 22:06:03 +0000</pubDate>
       
       <guid>http://blog.leifmadsen.com/blog/2012/11/24/brother-printer-doesnt-print-in-fedora-17/</guid>
-      <description>Tip: If your Brother printer won&rsquo;t print after installing the drivers, install glibc.i686
+      <description>Tip: If your Brother printer won&amp;rsquo;t print after installing the drivers, install glibc.i686
 Today ran into an issue with my new Brother MFC-7460DN (which is a really nice laser printer with auto-feed scanner, Scan-to-FTP which creates a PDF file, and other things). I had just recently done a clean install of Fedora 17, and I could install the RPMs (which are i386 files on my x86_64 based system), add the printer to CUPS and all sorts of things that looked fine.</description>
     </item>
     
@@ -24,7 +24,7 @@ Today ran into an issue with my new Brother MFC-7460DN (which is a really nice l
       <pubDate>Fri, 27 Nov 2009 13:19:44 +0000</pubDate>
       
       <guid>http://blog.leifmadsen.com/blog/2009/11/27/cisco-vpn-client-on-ubuntu-karmic-9.10/</guid>
-      <description>I have a client who I need to connect to via a Cisco VPN, and since I use Ubuntu as my primary OS on my MacBook Pro, I&rsquo;ve often needed to find some information about how to get the client working.
+      <description>I have a client who I need to connect to via a Cisco VPN, and since I use Ubuntu as my primary OS on my MacBook Pro, I&amp;rsquo;ve often needed to find some information about how to get the client working.
 I had previously found some information about patching on Ubuntu 9.04 and it worked great, but since updating to 9.10 I had the same compile time issues I had before, which makes sense since the kernel is different now.</description>
     </item>
     

@@ -15,7 +15,7 @@
       
       <guid>http://blog.leifmadsen.com/blog/2011/08/13/set-and-goto-on-same-line/</guid>
       <description>(Thanks to Jared Smith for answering my question in IRC which is the inspiration for this post.)
-Typically when I write dialplan, primarily in the case where I&rsquo;m using a pattern match, I&rsquo;ll save the dialed extension to a channel variable using Set(), then do a Goto() where the call logic is handled. The Set() is so that I don&rsquo;t lose the value of ${EXTEN} throughout the dialplan process, especially if I&rsquo;m using other mechanics such as GoSub() and others.</description>
+Typically when I write dialplan, primarily in the case where I&amp;rsquo;m using a pattern match, I&amp;rsquo;ll save the dialed extension to a channel variable using Set(), then do a Goto() where the call logic is handled. The Set() is so that I don&amp;rsquo;t lose the value of ${EXTEN} throughout the dialplan process, especially if I&amp;rsquo;m using other mechanics such as GoSub() and others.</description>
     </item>
     
   </channel>

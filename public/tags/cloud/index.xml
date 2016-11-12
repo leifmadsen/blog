@@ -14,7 +14,7 @@
       <pubDate>Wed, 22 Aug 2012 14:10:46 +0000</pubDate>
       
       <guid>http://blog.leifmadsen.com/blog/2012/08/22/centos-5.8-on-aws-ec2-with-xen-kernel-pvgrub/</guid>
-      <description>At CoreDial we&rsquo;ve been using a lot of AWS EC2 lately for building sandbox infrastructure for testing. Part of the infrastructure is a voice platform utilizing Asterisk 1.4 and 1.8, and those voice platforms are using Zaptel and DAHDI respectively for use with MeetMe(). This hasn&rsquo;t been an issue previously as our testing has either been on bare metal, or in other virtual machine systems where installation of a base image and standard kernel are not an issue.</description>
+      <description>At CoreDial we&amp;rsquo;ve been using a lot of AWS EC2 lately for building sandbox infrastructure for testing. Part of the infrastructure is a voice platform utilizing Asterisk 1.4 and 1.8, and those voice platforms are using Zaptel and DAHDI respectively for use with MeetMe(). This hasn&amp;rsquo;t been an issue previously as our testing has either been on bare metal, or in other virtual machine systems where installation of a base image and standard kernel are not an issue.</description>
     </item>
     
     <item>
@@ -23,7 +23,7 @@
       <pubDate>Wed, 04 Jan 2012 20:22:08 +0000</pubDate>
       
       <guid>http://blog.leifmadsen.com/blog/2012/01/04/now-working-with-coredial/</guid>
-      <description>As of January 3rd, I&rsquo;m now working with the CoreDial team full time. I&rsquo;ve worked with them as a consultant on their infrastructure over the last few years but now will be spending significantly more time working with the engineering team :)
+      <description>As of January 3rd, I&amp;rsquo;m now working with the CoreDial team full time. I&amp;rsquo;ve worked with them as a consultant on their infrastructure over the last few years but now will be spending significantly more time working with the engineering team :)
 From the announcement,
 “_CoreDial is pleased to announce the addition of Leif Madsen to the CoreDial team,” said Alan Rihm, CEO at CoreDial. “Leif is a well known Asterisk consultant who specializes in distributed telephony deployments and database integration.</description>
     </item>
@@ -34,7 +34,7 @@ From the announcement,
       <pubDate>Tue, 10 Aug 2010 14:03:13 +0000</pubDate>
       
       <guid>http://blog.leifmadsen.com/blog/2010/08/10/mindmeister-online-mind-mapping/</guid>
-      <description>Russell Bryant just sent me a link to a neat site that allows you to do online collaborative mind mapping: MindMeister. If you&rsquo;re not aware of what mind mapping software does, it is a method to quickly and easily allow you to brainstorm ideas without getting in the way too much. It works by starting from a central node and breaking out in lines from there where you start with an idea or thought, then break that thought down further with additional lines from that node.</description>
+      <description>Russell Bryant just sent me a link to a neat site that allows you to do online collaborative mind mapping: MindMeister. If you&amp;rsquo;re not aware of what mind mapping software does, it is a method to quickly and easily allow you to brainstorm ideas without getting in the way too much. It works by starting from a central node and breaking out in lines from there where you start with an idea or thought, then break that thought down further with additional lines from that node.</description>
     </item>
     
     <item>
@@ -43,10 +43,10 @@ From the announcement,
       <pubDate>Wed, 18 Nov 2009 20:40:15 +0000</pubDate>
       
       <guid>http://blog.leifmadsen.com/blog/2009/11/18/astricon-2009-presentation----building-a-distributed-call-center/</guid>
-      <description>For those who missed it, you&rsquo;re able to get a PDF of my AstriCon 2009 presentation from the http://www.astricon.net website.
+      <description>For those who missed it, you&amp;rsquo;re able to get a PDF of my AstriCon 2009 presentation from the http://www.astricon.net website.
 http://images.tmcnet.com/expo/astricon/presentations/cc01-madsen-digium.pdf
 There are additional presentations available from the conference as well. Check them out here: http://www.astricon.net/2009/astricon/agendaAtaGlance.aspx
-Overall, the conference was extremely well attended and I had a great time. I&rsquo;ve been to a lot of conferences, and AstriCon is definitely a premiere conference that is professionally run, and contains a great deal of useful information by well versed presenters with little fluff (i.</description>
+Overall, the conference was extremely well attended and I had a great time. I&amp;rsquo;ve been to a lot of conferences, and AstriCon is definitely a premiere conference that is professionally run, and contains a great deal of useful information by well versed presenters with little fluff (i.</description>
     </item>
     
   </channel>

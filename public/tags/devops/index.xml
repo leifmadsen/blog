@@ -14,7 +14,7 @@
       <pubDate>Wed, 22 Aug 2012 18:49:43 +0000</pubDate>
       
       <guid>http://blog.leifmadsen.com/blog/2012/08/22/selecting-chef-servers-with-environment-variables/</guid>
-      <description>Today I got playing around with dynamically selecting different chef servers in preparation for migrating some of our nodes away from our chef-dev server to our chef-live server (which I&rsquo;m currently in the process of building and populating with data). I had been talking in the #chef IRC channel a few weeks back about making things dynamic, or at least easily switchable, when using multiple chef servers for different groups of servers in an environment.</description>
+      <description>Today I got playing around with dynamically selecting different chef servers in preparation for migrating some of our nodes away from our chef-dev server to our chef-live server (which I&amp;rsquo;m currently in the process of building and populating with data). I had been talking in the #chef IRC channel a few weeks back about making things dynamic, or at least easily switchable, when using multiple chef servers for different groups of servers in an environment.</description>
     </item>
     
     <item>
@@ -23,7 +23,7 @@
       <pubDate>Mon, 23 Jul 2012 19:14:45 +0000</pubDate>
       
       <guid>http://blog.leifmadsen.com/blog/2012/07/23/assign-unique-hostname-to-dhcp-client-with-dnsmasq/</guid>
-      <description>Today I&rsquo;ve been getting our lab environment setup with vagrant to auto-provision our lab servers with chef server in order to allow the development team to quickly and easily turn up and tear down web application servers.
+      <description>Today I&amp;rsquo;ve been getting our lab environment setup with vagrant to auto-provision our lab servers with chef server in order to allow the development team to quickly and easily turn up and tear down web application servers.
 Because when the server gets spun up with vagrant, it registers itself as a new node to the chef server using its hostname. Since using localhost for every node pretty much makes the chef server useless for more than 1 virtual machine at a time, I needed to figure out how to get dnsmasq to assign a unique hostname based on the IP address being provided by dnsmasq to the dhcp client.</description>
     </item>
     
@@ -33,8 +33,8 @@ Because when the server gets spun up with vagrant, it registers itself as a new 
       <pubDate>Tue, 26 Jun 2012 12:51:30 +0000</pubDate>
       
       <guid>http://blog.leifmadsen.com/blog/2012/06/26/integration-testing-using-jenkins-part-1/</guid>
-      <description>So for the last week or so, I&rsquo;ve been tasked at CoreDial with adding our own set of integration testing now that we&rsquo;re moving to a more formal deployment method using chef. After much pestering of questions to thehar of Lookout Mobile Security and with help of Google, #chef and jhansche in #jenkins I&rsquo;ve finally got a nice clean proof of concept that we can evaluate and likely deploy.
-I&rsquo;ll come back later with another article on my installation issues with jenkins and the solutions that I solved (nothing too terribly complicated), but what I wanted to blog about was the two types of tests that I&rsquo;ve been focusing on and was able to finally solve.</description>
+      <description>So for the last week or so, I&amp;rsquo;ve been tasked at CoreDial with adding our own set of integration testing now that we&amp;rsquo;re moving to a more formal deployment method using chef. After much pestering of questions to thehar of Lookout Mobile Security and with help of Google, #chef and jhansche in #jenkins I&amp;rsquo;ve finally got a nice clean proof of concept that we can evaluate and likely deploy.
+I&amp;rsquo;ll come back later with another article on my installation issues with jenkins and the solutions that I solved (nothing too terribly complicated), but what I wanted to blog about was the two types of tests that I&amp;rsquo;ve been focusing on and was able to finally solve.</description>
     </item>
     
     <item>
@@ -43,7 +43,7 @@ I&rsquo;ll come back later with another article on my installation issues with j
       <pubDate>Wed, 04 Jan 2012 20:22:08 +0000</pubDate>
       
       <guid>http://blog.leifmadsen.com/blog/2012/01/04/now-working-with-coredial/</guid>
-      <description>As of January 3rd, I&rsquo;m now working with the CoreDial team full time. I&rsquo;ve worked with them as a consultant on their infrastructure over the last few years but now will be spending significantly more time working with the engineering team :)
+      <description>As of January 3rd, I&amp;rsquo;m now working with the CoreDial team full time. I&amp;rsquo;ve worked with them as a consultant on their infrastructure over the last few years but now will be spending significantly more time working with the engineering team :)
 From the announcement,
 “_CoreDial is pleased to announce the addition of Leif Madsen to the CoreDial team,” said Alan Rihm, CEO at CoreDial. “Leif is a well known Asterisk consultant who specializes in distributed telephony deployments and database integration.</description>
     </item>

@@ -14,7 +14,7 @@
       <pubDate>Wed, 29 Sep 2010 14:25:50 +0000</pubDate>
       
       <guid>http://blog.leifmadsen.com/blog/2010/09/29/scheduling-automated-calls-between-two-participants-with-res_calendar/</guid>
-      <description>Here is a little dialplan snippet I wrote this morning for the next edition of the Asterisk book. While I&rsquo;m not going to delve into all the aspects of setting up res_calendar like we do in the book, I thought for those of you who might already have this working might enjoy it.
+      <description>Here is a little dialplan snippet I wrote this morning for the next edition of the Asterisk book. While I&amp;rsquo;m not going to delve into all the aspects of setting up res_calendar like we do in the book, I thought for those of you who might already have this working might enjoy it.
 (The calendaring modules are available in Asterisk 1.8, which is currently in release candidate status. Check out http://www.</description>
     </item>
     

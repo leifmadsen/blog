@@ -14,7 +14,7 @@
       <pubDate>Tue, 21 Dec 2010 15:26:43 +0000</pubDate>
       
       <guid>http://blog.leifmadsen.com/blog/2010/12/21/video-of-5-things-you-didnt-know-asterisk-could-do-presentation-now-available/</guid>
-      <description>Check out the AstriCon website for my presentation that was recorded this year. I did three presentations this year (5 Things You Didn&rsquo;t Know Asterisk Could Do, Distributed Call Centres, and the Asterisk Project Update with Russell Bryant) but unfortunately the only one I see so far is the 5 Things presentation (which is a very good presentation! :))
+      <description>Check out the AstriCon website for my presentation that was recorded this year. I did three presentations this year (5 Things You Didn&amp;rsquo;t Know Asterisk Could Do, Distributed Call Centres, and the Asterisk Project Update with Russell Bryant) but unfortunately the only one I see so far is the 5 Things presentation (which is a very good presentation! :))
 The link to the presentations are here: http://www.astricon.net/videoPresentations.aspx#Digium7 with mine being at the top of the list.</description>
     </item>
     
@@ -24,7 +24,7 @@ The link to the presentations are here: http://www.astricon.net/videoPresentati
       <pubDate>Wed, 29 Sep 2010 14:25:50 +0000</pubDate>
       
       <guid>http://blog.leifmadsen.com/blog/2010/09/29/scheduling-automated-calls-between-two-participants-with-res_calendar/</guid>
-      <description>Here is a little dialplan snippet I wrote this morning for the next edition of the Asterisk book. While I&rsquo;m not going to delve into all the aspects of setting up res_calendar like we do in the book, I thought for those of you who might already have this working might enjoy it.
+      <description>Here is a little dialplan snippet I wrote this morning for the next edition of the Asterisk book. While I&amp;rsquo;m not going to delve into all the aspects of setting up res_calendar like we do in the book, I thought for those of you who might already have this working might enjoy it.
 (The calendaring modules are available in Asterisk 1.8, which is currently in release candidate status. Check out http://www.</description>
     </item>
     

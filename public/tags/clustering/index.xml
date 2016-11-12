@@ -14,7 +14,7 @@
       <pubDate>Wed, 04 Jan 2012 20:22:08 +0000</pubDate>
       
       <guid>http://blog.leifmadsen.com/blog/2012/01/04/now-working-with-coredial/</guid>
-      <description>As of January 3rd, I&rsquo;m now working with the CoreDial team full time. I&rsquo;ve worked with them as a consultant on their infrastructure over the last few years but now will be spending significantly more time working with the engineering team :)
+      <description>As of January 3rd, I&amp;rsquo;m now working with the CoreDial team full time. I&amp;rsquo;ve worked with them as a consultant on their infrastructure over the last few years but now will be spending significantly more time working with the engineering team :)
 From the announcement,
 “_CoreDial is pleased to announce the addition of Leif Madsen to the CoreDial team,” said Alan Rihm, CEO at CoreDial. “Leif is a well known Asterisk consultant who specializes in distributed telephony deployments and database integration.</description>
     </item>
@@ -25,8 +25,8 @@ From the announcement,
       <pubDate>Mon, 01 Nov 2010 12:04:08 +0000</pubDate>
       
       <guid>http://blog.leifmadsen.com/blog/2010/11/01/my-presentations-from-astricon-2010-are-available/</guid>
-      <description>Check out http://leifmadsen.com and click on the presentations tab. Under that tab you will find my presentations from AstriCon 2010, &rsquo;5 Things You Didn&rsquo;t Know Asterisk Could Do&rsquo; and a slightly updated version of my &lsquo;Building Distributed Queue Systems&rsquo; presentation. Both are in PDF format.
-Both presentations went over extremely well, and I think both probably ended up being, or nearly being, my best presentations ever given. In previous years I&rsquo;ve given presentations on distributed Asterisk systems and last year at IT360 I gave my &rdquo;5 Things You Didn&rsquo;t Know Asterisk Could Do&rdquo; presentation, so perhaps being somewhat familiar with the format helped.</description>
+      <description>Check out http://leifmadsen.com and click on the presentations tab. Under that tab you will find my presentations from AstriCon 2010, &amp;rsquo;5 Things You Didn&amp;rsquo;t Know Asterisk Could Do&amp;rsquo; and a slightly updated version of my &amp;lsquo;Building Distributed Queue Systems&amp;rsquo; presentation. Both are in PDF format.
+Both presentations went over extremely well, and I think both probably ended up being, or nearly being, my best presentations ever given. In previous years I&amp;rsquo;ve given presentations on distributed Asterisk systems and last year at IT360 I gave my &amp;rdquo;5 Things You Didn&amp;rsquo;t Know Asterisk Could Do&amp;rdquo; presentation, so perhaps being somewhat familiar with the format helped.</description>
     </item>
     
     <item>
@@ -36,7 +36,7 @@ Both presentations went over extremely well, and I think both probably ended up 
       
       <guid>http://blog.leifmadsen.com/blog/2010/10/27/astricon-2010-and-my-talks/</guid>
       <description>NOTE: My presentations are available on my website at http://leifmadsen.com under the Presentations tab.
-Hey all! I&rsquo;m at AstriCon 2010 in Maryland and it&rsquo;s going great so far! Russell Bryant and I spoke with several keen users and developers last night in the Code Zone at a fairly late hour, which shows just how dedicated Asterisk users are. There was pretty much no one else around and we had a room of about 20-30 people just having a great discussion about Asterisk development.</description>
+Hey all! I&amp;rsquo;m at AstriCon 2010 in Maryland and it&amp;rsquo;s going great so far! Russell Bryant and I spoke with several keen users and developers last night in the Code Zone at a fairly late hour, which shows just how dedicated Asterisk users are. There was pretty much no one else around and we had a room of about 20-30 people just having a great discussion about Asterisk development.</description>
     </item>
     
     <item>
@@ -45,10 +45,10 @@ Hey all! I&rsquo;m at AstriCon 2010 in Maryland and it&rsquo;s going great so fa
       <pubDate>Wed, 18 Nov 2009 20:40:15 +0000</pubDate>
       
       <guid>http://blog.leifmadsen.com/blog/2009/11/18/astricon-2009-presentation----building-a-distributed-call-center/</guid>
-      <description>For those who missed it, you&rsquo;re able to get a PDF of my AstriCon 2009 presentation from the http://www.astricon.net website.
+      <description>For those who missed it, you&amp;rsquo;re able to get a PDF of my AstriCon 2009 presentation from the http://www.astricon.net website.
 http://images.tmcnet.com/expo/astricon/presentations/cc01-madsen-digium.pdf
 There are additional presentations available from the conference as well. Check them out here: http://www.astricon.net/2009/astricon/agendaAtaGlance.aspx
-Overall, the conference was extremely well attended and I had a great time. I&rsquo;ve been to a lot of conferences, and AstriCon is definitely a premiere conference that is professionally run, and contains a great deal of useful information by well versed presenters with little fluff (i.</description>
+Overall, the conference was extremely well attended and I had a great time. I&amp;rsquo;ve been to a lot of conferences, and AstriCon is definitely a premiere conference that is professionally run, and contains a great deal of useful information by well versed presenters with little fluff (i.</description>
     </item>
     
   </channel>

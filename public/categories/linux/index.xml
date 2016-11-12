@@ -14,16 +14,16 @@
       <pubDate>Mon, 03 Oct 2016 15:34:08 -0400</pubDate>
       
       <guid>http://blog.leifmadsen.com/blog/2016/10/03/tripleo-consuming-composable-roles/</guid>
-      <description><p>So last week I started to look into learning the new <a href="http://hardysteven.blogspot.ca/2016/08/tripleo-composable-services-101.html">composable services and
-roles</a>
+      <description>&lt;p&gt;So last week I started to look into learning the new &lt;a href=&#34;http://hardysteven.blogspot.ca/2016/08/tripleo-composable-services-101.html&#34;&gt;composable services and
+roles&lt;/a&gt;
 that was added to Newton. I previously learned a little bit about deploying
 OpenStack clouds when I did training after joining Red Hat, but that was based
 on Liberty, and a lot has changed in TripleO since that time.
 
 The first thing was learning what composable services and roles are, and
-generally what they are intended to solve. I don&rsquo;t want to get into that
-here, so I&rsquo;d encourage you to go read some links first and then come back here.
-Additionally, it&rsquo;s assumed you know what a TripleO is :)</p></description>
+generally what they are intended to solve. I don&amp;rsquo;t want to get into that
+here, so I&amp;rsquo;d encourage you to go read some links first and then come back here.
+Additionally, it&amp;rsquo;s assumed you know what a TripleO is :)&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -32,8 +32,8 @@ Additionally, it&rsquo;s assumed you know what a TripleO is :)</p></description>
       <pubDate>Tue, 27 Sep 2016 16:11:17 -0400</pubDate>
       
       <guid>http://blog.leifmadsen.com/blog/2016/09/27/a-console-obsession/</guid>
-      <description>It&rsquo;s A Console Thing Recently I&rsquo;ve gotten into running as many of my day-to-day applications in a Linux console. Thought I&rsquo;d briefly share the applications I&rsquo;ve been playing with.
- GerTTY (http://gertty.readthedocs.io/en/master/): Synchronize and follow Gerrit-hosted projects, and perform code reviews. It&rsquo;s a bit slow, but generally works pretty well once you get over the initial sync.
+      <description>It&amp;rsquo;s A Console Thing Recently I&amp;rsquo;ve gotten into running as many of my day-to-day applications in a Linux console. Thought I&amp;rsquo;d briefly share the applications I&amp;rsquo;ve been playing with.
+ GerTTY (http://gertty.readthedocs.io/en/master/): Synchronize and follow Gerrit-hosted projects, and perform code reviews. It&amp;rsquo;s a bit slow, but generally works pretty well once you get over the initial sync.
 More Info: https://major.io/2016/05/11/getting-started-gertty/
  Weechat (https://weechat.org/): IRC client with tiling-window manager like options.</description>
     </item>

@@ -14,8 +14,8 @@
       <pubDate>Wed, 09 Sep 2015 21:20:40 +0000</pubDate>
       
       <guid>http://blog.leifmadsen.com/blog/2015/09/09/configuring-powerline-to-show-working-git-branch/</guid>
-      <description>So the documentation for Powerline kind of sucks. I followed this pretty good article on getting started with it. First thing I noticed however is that the if statement on the article doesn&rsquo;t work if you don&rsquo;t have powerline installed (which kind of defeats the purpose of having the if statement there at all).
-# if powerline is installed, then use it command -v powerline-daemon &amp;&gt;/dev/null if [ $? -eq 0 ]; then powerline-daemon -q POWERLINE_BASH_CONTINUATION=1 POWERLINE_BASH_SELECT=1 .</description>
+      <description>So the documentation for Powerline kind of sucks. I followed this pretty good article on getting started with it. First thing I noticed however is that the if statement on the article doesn&amp;rsquo;t work if you don&amp;rsquo;t have powerline installed (which kind of defeats the purpose of having the if statement there at all).
+# if powerline is installed, then use it command -v powerline-daemon &amp;amp;&amp;gt;/dev/null if [ $? -eq 0 ]; then powerline-daemon -q POWERLINE_BASH_CONTINUATION=1 POWERLINE_BASH_SELECT=1 .</description>
     </item>
     
   </channel>

@@ -14,8 +14,8 @@
       <pubDate>Wed, 09 Sep 2015 21:20:40 +0000</pubDate>
       
       <guid>http://blog.leifmadsen.com/blog/2015/09/09/configuring-powerline-to-show-working-git-branch/</guid>
-      <description>So the documentation for Powerline kind of sucks. I followed this pretty good article on getting started with it. First thing I noticed however is that the if statement on the article doesn&rsquo;t work if you don&rsquo;t have powerline installed (which kind of defeats the purpose of having the if statement there at all).
-# if powerline is installed, then use it command -v powerline-daemon &amp;&gt;/dev/null if [ $? -eq 0 ]; then powerline-daemon -q POWERLINE_BASH_CONTINUATION=1 POWERLINE_BASH_SELECT=1 .</description>
+      <description>So the documentation for Powerline kind of sucks. I followed this pretty good article on getting started with it. First thing I noticed however is that the if statement on the article doesn&amp;rsquo;t work if you don&amp;rsquo;t have powerline installed (which kind of defeats the purpose of having the if statement there at all).
+# if powerline is installed, then use it command -v powerline-daemon &amp;amp;&amp;gt;/dev/null if [ $? -eq 0 ]; then powerline-daemon -q POWERLINE_BASH_CONTINUATION=1 POWERLINE_BASH_SELECT=1 .</description>
     </item>
     
     <item>
@@ -24,7 +24,7 @@
       <pubDate>Mon, 23 Jul 2012 19:14:45 +0000</pubDate>
       
       <guid>http://blog.leifmadsen.com/blog/2012/07/23/assign-unique-hostname-to-dhcp-client-with-dnsmasq/</guid>
-      <description>Today I&rsquo;ve been getting our lab environment setup with vagrant to auto-provision our lab servers with chef server in order to allow the development team to quickly and easily turn up and tear down web application servers.
+      <description>Today I&amp;rsquo;ve been getting our lab environment setup with vagrant to auto-provision our lab servers with chef server in order to allow the development team to quickly and easily turn up and tear down web application servers.
 Because when the server gets spun up with vagrant, it registers itself as a new node to the chef server using its hostname. Since using localhost for every node pretty much makes the chef server useless for more than 1 virtual machine at a time, I needed to figure out how to get dnsmasq to assign a unique hostname based on the IP address being provided by dnsmasq to the dhcp client.</description>
     </item>
     
@@ -34,7 +34,7 @@ Because when the server gets spun up with vagrant, it registers itself as a new 
       <pubDate>Tue, 22 Nov 2011 22:17:18 +0000</pubDate>
       
       <guid>http://blog.leifmadsen.com/blog/2011/11/22/relaying-smtp-via-gmail-or-google-apps-using-postfix/</guid>
-      <description>Today I had the need to start relaying mail through my Google Apps account since Super-Evil-Bastard-ITSPRogers blocks sending email (it&rsquo;s probably a good thing, however it&rsquo;s quite annoying when running some services from home).
+      <description>Today I had the need to start relaying mail through my Google Apps account since Super-Evil-Bastard-ITSPRogers blocks sending email (it&amp;rsquo;s probably a good thing, however it&amp;rsquo;s quite annoying when running some services from home).
 Found this article while Googling, and it worked great first try. I like when things are this easy.
 http://www.zulius.com/how-to/set-up-postfix-with-a-remote-smtp-relay-host/</description>
     </item>
@@ -45,8 +45,8 @@ http://www.zulius.com/how-to/set-up-postfix-with-a-remote-smtp-relay-host/</desc
       <pubDate>Thu, 15 Sep 2011 12:34:35 +0000</pubDate>
       
       <guid>http://blog.leifmadsen.com/blog/2011/09/15/return-just-pid-of-script-with-ps-and-awk/</guid>
-      <description>Today I ran into an issue where I am running a python script that I needed to get the process ID (PID) of, but that the process was being output with a space between &lsquo;python&rsquo; and the actual script name (in this case, jiraircbot.py).
-I&rsquo;m sure it&rsquo;s totally overkill and there is a much easier way I didn&rsquo;t find to do this, but after some scouring of The Google, I found something that works!</description>
+      <description>Today I ran into an issue where I am running a python script that I needed to get the process ID (PID) of, but that the process was being output with a space between &amp;lsquo;python&amp;rsquo; and the actual script name (in this case, jiraircbot.py).
+I&amp;rsquo;m sure it&amp;rsquo;s totally overkill and there is a much easier way I didn&amp;rsquo;t find to do this, but after some scouring of The Google, I found something that works!</description>
     </item>
     
     <item>
@@ -55,7 +55,7 @@ I&rsquo;m sure it&rsquo;s totally overkill and there is a much easier way I didn
       <pubDate>Wed, 12 Jan 2011 01:30:09 +0000</pubDate>
       
       <guid>http://blog.leifmadsen.com/blog/2011/01/12/asterisk-the-definitive-guide-first-draft-complete/</guid>
-      <description>Today we marked the finishing of Asterisk: The Definitive Guide (3rd Edition) by sending the first draft off to the O&rsquo;Reilly production team. We finished nearly on schedule (within a few days, which is remarkable considering we added 150 more pages than originally intentioned) and have our favourite copy editor Rachel Head (formerly Wheeler) who did the first edition of Asterisk: The Future of Telephony who we emphatically enjoyed working with.</description>
+      <description>Today we marked the finishing of Asterisk: The Definitive Guide (3rd Edition) by sending the first draft off to the O&amp;rsquo;Reilly production team. We finished nearly on schedule (within a few days, which is remarkable considering we added 150 more pages than originally intentioned) and have our favourite copy editor Rachel Head (formerly Wheeler) who did the first edition of Asterisk: The Future of Telephony who we emphatically enjoyed working with.</description>
     </item>
     
     <item>
@@ -64,7 +64,7 @@ I&rsquo;m sure it&rsquo;s totally overkill and there is a much easier way I didn
       <pubDate>Wed, 25 Aug 2010 20:07:17 +0000</pubDate>
       
       <guid>http://blog.leifmadsen.com/blog/2010/08/25/interesting-article-about-not-tracking-holidays-at-netflix/</guid>
-      <description>The following is an interesting article about not tracking workers time spent at work, or on vacation, but rather tracking their productivity. As a consultant who doesn&rsquo;t have a fixed set of hours in the day that I work, I tend to judge my productivity by the number of hours I get to bill each week (i.e. how productive was I working for customers, rather than playing Flight Simulator :)).</description>
+      <description>The following is an interesting article about not tracking workers time spent at work, or on vacation, but rather tracking their productivity. As a consultant who doesn&amp;rsquo;t have a fixed set of hours in the day that I work, I tend to judge my productivity by the number of hours I get to bill each week (i.e. how productive was I working for customers, rather than playing Flight Simulator :)).</description>
     </item>
     
     <item>
@@ -73,7 +73,7 @@ I&rsquo;m sure it&rsquo;s totally overkill and there is a much easier way I didn
       <pubDate>Tue, 10 Aug 2010 14:03:13 +0000</pubDate>
       
       <guid>http://blog.leifmadsen.com/blog/2010/08/10/mindmeister-online-mind-mapping/</guid>
-      <description>Russell Bryant just sent me a link to a neat site that allows you to do online collaborative mind mapping: MindMeister. If you&rsquo;re not aware of what mind mapping software does, it is a method to quickly and easily allow you to brainstorm ideas without getting in the way too much. It works by starting from a central node and breaking out in lines from there where you start with an idea or thought, then break that thought down further with additional lines from that node.</description>
+      <description>Russell Bryant just sent me a link to a neat site that allows you to do online collaborative mind mapping: MindMeister. If you&amp;rsquo;re not aware of what mind mapping software does, it is a method to quickly and easily allow you to brainstorm ideas without getting in the way too much. It works by starting from a central node and breaking out in lines from there where you start with an idea or thought, then break that thought down further with additional lines from that node.</description>
     </item>
     
   </channel>
