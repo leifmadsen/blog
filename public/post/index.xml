@@ -6,19 +6,8 @@
     <description>Recent content in Posts on Asterisk, and other worldly endeavours</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 09 Nov 2016 15:08:53 -0500</lastBuildDate>
+    <lastBuildDate>Mon, 03 Oct 2016 15:34:08 -0400</lastBuildDate>
     <atom:link href="/post/index.xml" rel="self" type="application/rss+xml" />
-    
-    <item>
-      <title>TripleO: Using the fake_pxe driver with Ironic</title>
-      <link>http://blog.leifmadsen.com/blog/2016/11/09/tripleo-using-the-fake_pxe-driver-with-ironic/</link>
-      <pubDate>Wed, 09 Nov 2016 15:08:53 -0500</pubDate>
-      
-      <guid>http://blog.leifmadsen.com/blog/2016/11/09/tripleo-using-the-fake_pxe-driver-with-ironic/</guid>
-      <description>I&amp;rsquo;ve been working on testing things with TripleO and normally I use TripleO Quickstart to spin things up in a virtual environment.
-Often when doing NFV work though, you need things that can&amp;rsquo;t be used in a virtual environment (such as DPDK, SR-IOV, etc) so you need some baremetal nodes.
-In my home lab environment though, I don&amp;rsquo;t have the luxury of IPMI, so I need to make use of the fake_pxe driver in Ironic, which allows for standard PXE control, but requires you to deal with powering on and off the machines manually.</description>
-    </item>
     
     <item>
       <title>TripleO: Consuming Composable Roles</title>
@@ -169,6 +158,17 @@ Phones arrived in some nice looking boxes.</description>
       <guid>http://blog.leifmadsen.com/blog/2012/07/23/assign-unique-hostname-to-dhcp-client-with-dnsmasq/</guid>
       <description>Today I&amp;rsquo;ve been getting our lab environment setup with vagrant to auto-provision our lab servers with chef server in order to allow the development team to quickly and easily turn up and tear down web application servers.
 Because when the server gets spun up with vagrant, it registers itself as a new node to the chef server using its hostname. Since using localhost for every node pretty much makes the chef server useless for more than 1 virtual machine at a time, I needed to figure out how to get dnsmasq to assign a unique hostname based on the IP address being provided by dnsmasq to the dhcp client.</description>
+    </item>
+    
+    <item>
+      <title>bash creating files named &#39;1&#39; everywhere!</title>
+      <link>http://blog.leifmadsen.com/blog/2012/07/19/bash-creating-files-named-1-everywhere/</link>
+      <pubDate>Thu, 19 Jul 2012 15:03:05 +0000</pubDate>
+      
+      <guid>http://blog.leifmadsen.com/blog/2012/07/19/bash-creating-files-named-1-everywhere/</guid>
+      <description>So I ran into something kind of stupid today :) Adding a little note for anyone who might run into a similar instance.
+I have some ssh-add stuff that gets run in my .bashrc file, but when I was outputting it, I was doing:
+ssh-add ~/.ssh/some_key &amp;gt; /dev/null 2&amp;amp;&amp;gt;1  Note the 2&amp;amp;&amp;gt;1 at the end. That means to redirect output to a file named 1. You need to flip the &amp;amp;&amp;gt; into &amp;gt;&amp;amp;, so the fixed version looks like:</description>
     </item>
     
   </channel>

@@ -6,19 +6,8 @@
     <description>Recent content on Asterisk, and other worldly endeavours</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 09 Nov 2016 15:08:53 -0500</lastBuildDate>
+    <lastBuildDate>Mon, 03 Oct 2016 15:34:08 -0400</lastBuildDate>
     <atom:link href="/index.xml" rel="self" type="application/rss+xml" />
-    
-    <item>
-      <title>TripleO: Using the fake_pxe driver with Ironic</title>
-      <link>http://blog.leifmadsen.com/blog/2016/11/09/tripleo-using-the-fake_pxe-driver-with-ironic/</link>
-      <pubDate>Wed, 09 Nov 2016 15:08:53 -0500</pubDate>
-      
-      <guid>http://blog.leifmadsen.com/blog/2016/11/09/tripleo-using-the-fake_pxe-driver-with-ironic/</guid>
-      <description>I&amp;rsquo;ve been working on testing things with TripleO and normally I use TripleO Quickstart to spin things up in a virtual environment.
-Often when doing NFV work though, you need things that can&amp;rsquo;t be used in a virtual environment (such as DPDK, SR-IOV, etc) so you need some baremetal nodes.
-In my home lab environment though, I don&amp;rsquo;t have the luxury of IPMI, so I need to make use of the fake_pxe driver in Ironic, which allows for standard PXE control, but requires you to deal with powering on and off the machines manually.</description>
-    </item>
     
     <item>
       <title>TripleO: Consuming Composable Roles</title>
@@ -169,6 +158,16 @@ Phones arrived in some nice looking boxes.</description>
       
       <guid>http://blog.leifmadsen.com/blog/2012/08/22/centos-5.8-on-aws-ec2-with-xen-kernel-pvgrub/</guid>
       <description>At CoreDial we&amp;rsquo;ve been using a lot of AWS EC2 lately for building sandbox infrastructure for testing. Part of the infrastructure is a voice platform utilizing Asterisk 1.4 and 1.8, and those voice platforms are using Zaptel and DAHDI respectively for use with MeetMe(). This hasn&amp;rsquo;t been an issue previously as our testing has either been on bare metal, or in other virtual machine systems where installation of a base image and standard kernel are not an issue.</description>
+    </item>
+    
+    <item>
+      <title>Assign unique hostname to dhcp client with dnsmasq</title>
+      <link>http://blog.leifmadsen.com/blog/2012/07/23/assign-unique-hostname-to-dhcp-client-with-dnsmasq/</link>
+      <pubDate>Mon, 23 Jul 2012 19:14:45 +0000</pubDate>
+      
+      <guid>http://blog.leifmadsen.com/blog/2012/07/23/assign-unique-hostname-to-dhcp-client-with-dnsmasq/</guid>
+      <description>Today I&amp;rsquo;ve been getting our lab environment setup with vagrant to auto-provision our lab servers with chef server in order to allow the development team to quickly and easily turn up and tear down web application servers.
+Because when the server gets spun up with vagrant, it registers itself as a new node to the chef server using its hostname. Since using localhost for every node pretty much makes the chef server useless for more than 1 virtual machine at a time, I needed to figure out how to get dnsmasq to assign a unique hostname based on the IP address being provided by dnsmasq to the dhcp client.</description>
     </item>
     
   </channel>
