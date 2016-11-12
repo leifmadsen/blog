@@ -2,12 +2,11 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tools on Asterisk, and other worldly endeavours</title>
-    <link>http://blog.leifmadsen.com/tags/tools/</link>
+    <link>http://blog.leifmadsen.com/tags/tools/index.xml</link>
     <description>Recent content in Tools on Asterisk, and other worldly endeavours</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 10 Aug 2010 14:03:13 +0000</lastBuildDate>
-    <atom:link href="http://blog.leifmadsen.com/tags/tools/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="/tags/tools/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>MindMeister: Online mind mapping</title>

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
 <head>
-	<meta name="generator" content="Hugo 0.17-DEV" />
+	<meta name="generator" content="Hugo 0.18-DEV" />
   <link href="http://gmpg.org/xfn/11" rel="profile">
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
 
@@ -30,8 +30,8 @@
   
   <link href="http://blog.leifmadsen.com/index.xml" rel="alternate" type="application/rss+xml" title="Asterisk, and other worldly endeavours &middot; Leif Madsen" />
 
-  <meta name="description" content="Leif Madsen Blog Entry">
-  <meta name="keywords" content="blog,asterisk,leif,madsen,canada">
+  <meta name="description" content="">
+  <meta name="keywords" content="">
   
 </head>
 <body>
@@ -84,7 +84,8 @@
       <a class="label" href="http://blog.leifmadsen.com/categories/being-productive">Being Productive</a><a class="label" href="http://blog.leifmadsen.com/categories/programming">Programming</a>
       </span>
       
-      Today I ran into an issue where I am running a python script that I needed to get the process ID (PID) of, but that the process was being output with a space between &lsquo;python&rsquo; and the actual script name (in this case, jiraircbot.py). I&rsquo;m sure it&rsquo;s totally overkill and there is a much easier way I didn&rsquo;t find to do this, but after some scouring of The Google, I found something that works!
+      Today I ran into an issue where I am running a python script that I needed to get the process ID (PID) of, but that the process was being output with a space between &lsquo;python&rsquo; and the actual script name (in this case, jiraircbot.py).
+I&rsquo;m sure it&rsquo;s totally overkill and there is a much easier way I didn&rsquo;t find to do this, but after some scouring of The Google, I found something that works!
       <a href="http://blog.leifmadsen.com/blog/2011/09/15/return-just-pid-of-script-with-ps-and-awk/">Read On &rarr;</a>
       
     </div>
@@ -129,7 +130,8 @@
       <a class="label" href="http://blog.leifmadsen.com/categories/asterisk">Asterisk</a><a class="label" href="http://blog.leifmadsen.com/categories/programming">Programming</a>
       </span>
       
-      (Thanks to Jared Smith for answering my question in IRC which is the inspiration for this post.) Typically when I write dialplan, primarily in the case where I&rsquo;m using a pattern match, I&rsquo;ll save the dialed extension to a channel variable using Set(), then do a Goto() where the call logic is handled. The Set() is so that I don&rsquo;t lose the value of ${EXTEN} throughout the dialplan process, especially if I&rsquo;m using other mechanics such as GoSub() and others.
+      (Thanks to Jared Smith for answering my question in IRC which is the inspiration for this post.)
+Typically when I write dialplan, primarily in the case where I&rsquo;m using a pattern match, I&rsquo;ll save the dialed extension to a channel variable using Set(), then do a Goto() where the call logic is handled. The Set() is so that I don&rsquo;t lose the value of ${EXTEN} throughout the dialplan process, especially if I&rsquo;m using other mechanics such as GoSub() and others.
       <a href="http://blog.leifmadsen.com/blog/2011/08/13/set-and-goto-on-same-line/">Read On &rarr;</a>
       
     </div>
@@ -144,7 +146,8 @@
       <a class="label" href="http://blog.leifmadsen.com/categories/asterisk">Asterisk</a><a class="label" href="http://blog.leifmadsen.com/categories/musings">Musings</a><a class="label" href="http://blog.leifmadsen.com/categories/programming">Programming</a>
       </span>
       
-      Update 2011/12/15: Updated the code to deal with a couple of people joining at about the same time by using GROUP() and GROUP_COUNT(). Additionally updated the &lsquo;h&rsquo; extension which was missing some code For the last week or so at work, people have been saying, &ldquo;Hey, I can&rsquo;t join the conference call this morning because I&rsquo;m driving but I can&rsquo;t call into the conference room on that server&rdquo;. There are really a couple solutions to the problem, 1) everyone should use the conference room that is accessible via the PSTN, 2) get the IT staff to allow PSTN access to the internal conference room.
+      Update 2011/12/15: Updated the code to deal with a couple of people joining at about the same time by using GROUP() and GROUP_COUNT(). Additionally updated the &lsquo;h&rsquo; extension which was missing some code
+ For the last week or so at work, people have been saying, &ldquo;Hey, I can&rsquo;t join the conference call this morning because I&rsquo;m driving but I can&rsquo;t call into the conference room on that server&rdquo;. There are really a couple solutions to the problem, 1) everyone should use the conference room that is accessible via the PSTN, 2) get the IT staff to allow PSTN access to the internal conference room.
       <a href="http://blog.leifmadsen.com/blog/2011/08/11/connecting-two-conferences-on-initial-join-with-cleanup/">Read On &rarr;</a>
       
     </div>
@@ -174,7 +177,9 @@
       <a class="label" href="http://blog.leifmadsen.com/categories/musings">Musings</a>
       </span>
       
-      As I haven&rsquo;t updated my blog in a while (been very busy with wedding planning!) I thought I&rsquo;d share this with you :) Enjoy! http://www.break.com/index/chopsticks-played-on-phone.html
+      As I haven&rsquo;t updated my blog in a while (been very busy with wedding planning!) I thought I&rsquo;d share this with you :)
+Enjoy!
+http://www.break.com/index/chopsticks-played-on-phone.html
       
       
     </div>
@@ -189,7 +194,7 @@
       <a class="label" href="http://blog.leifmadsen.com/categories/asterisk">Asterisk</a><a class="label" href="http://blog.leifmadsen.com/categories/musings">Musings</a>
       </span>
       
-      With the end of maintenance for the Asterisk 1.4 (the previous long term support (LTS) release) and Asterisk 1.6.2 (the previous standard, short term support release) branches, the time to look at using Asterisk 1.8 (the next long term support release, which provides another 4 years of maintenance, followed by a year of security support) is upon us. For those who have successful deployments of Asterisk 1.4 and 1.6.2 (heck, even 1.2!) there is no immediate need to migrate those existing systems; let them happily continue what they’re doing.
+      With the end of maintenance for the Asterisk 1.4 (the previous long term support (LTS) release) and Asterisk 1.6.2 (the previous standard, short term support release) branches, the time to look at using Asterisk 1.8 (the next long term support release, which provides another 4 years of maintenance, followed by a year of security support) is upon us. For those who have successful deployments of Asterisk 1.4 and 1.6.2 (heck, even 1.
       <a href="http://blog.leifmadsen.com/blog/2011/05/17/asterisk-1.8-and-the-importance-of-looking-ahead/">Read On &rarr;</a>
       
     </div>
@@ -219,7 +224,9 @@
       <a class="label" href="http://blog.leifmadsen.com/categories/asterisk">Asterisk</a>
       </span>
       
-      Recently Jim Van Meggelen, Russell Bryant and myself released the 3rd edition of the Asterisk book published by O&rsquo;Reilly Media titled &lsquo;Asterisk: The Definitive Guide&rsquo;. We have released this book under a Creative Commons license in the spirit of Open Source software. It is available in its entirety at http://ofps.oreilly.com/titles/9780596517342/ and for purchase through Amazon at http://www.amazon.com/Asterisk-Definitive-Guide-Leif-Madsen/dp/0596517343/ref=sr_1_1?ie=UTF8&amp;s=books&amp;qid=1303765969&amp;sr=8-1 If you have a chance to review the book, and feel it is a useful and well written resource, we would appreciate your favorable review on Amazon.com.
+      Recently Jim Van Meggelen, Russell Bryant and myself released the 3rd edition of the Asterisk book published by O&rsquo;Reilly Media titled &lsquo;Asterisk: The Definitive Guide&rsquo;.
+We have released this book under a Creative Commons license in the spirit of Open Source software. It is available in its entirety at http://ofps.oreilly.com/titles/9780596517342/ and for purchase through Amazon at http://www.amazon.com/Asterisk-Definitive-Guide-Leif-Madsen/dp/0596517343/ref=sr_1_1?ie=UTF8&amp;s=books&amp;qid=1303765969&amp;sr=8-1
+If you have a chance to review the book, and feel it is a useful and well written resource, we would appreciate your favorable review on Amazon.
       <a href="http://blog.leifmadsen.com/blog/2011/04/26/request-for-reviews-for-asterisk-the-definitive-guide/">Read On &rarr;</a>
       
     </div>

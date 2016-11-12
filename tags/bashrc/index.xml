@@ -2,12 +2,11 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Bashrc on Asterisk, and other worldly endeavours</title>
-    <link>http://blog.leifmadsen.com/tags/bashrc/</link>
+    <link>http://blog.leifmadsen.com/tags/bashrc/index.xml</link>
     <description>Recent content in Bashrc on Asterisk, and other worldly endeavours</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 19 Jul 2012 15:03:05 +0000</lastBuildDate>
-    <atom:link href="http://blog.leifmadsen.com/tags/bashrc/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="/tags/bashrc/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>bash creating files named &#39;1&#39; everywhere!</title>
@@ -15,7 +14,9 @@
       <pubDate>Thu, 19 Jul 2012 15:03:05 +0000</pubDate>
       
       <guid>http://blog.leifmadsen.com/blog/2012/07/19/bash-creating-files-named-1-everywhere/</guid>
-      <description>So I ran into something kind of stupid today :) Adding a little note for anyone who might run into a similar instance. I have some ssh-add stuff that gets run in my .bashrc file, but when I was outputting it, I was doing: ssh-add ~/.ssh/some_key &gt; /dev/null 2&amp;&gt;1 Note the 2&amp;&gt;1 at the end. That means to redirect output to a file named 1. You need to flip the</description>
+      <description>So I ran into something kind of stupid today :) Adding a little note for anyone who might run into a similar instance.
+I have some ssh-add stuff that gets run in my .bashrc file, but when I was outputting it, I was doing:
+ssh-add ~/.ssh/some_key &gt; /dev/null 2&amp;&gt;1  Note the 2&amp;&gt;1 at the end. That means to redirect output to a file named 1. You need to flip the &amp;&gt; into &gt;&amp;, so the fixed version looks like:</description>
     </item>
     
     <item>
@@ -24,7 +25,8 @@
       <pubDate>Thu, 22 Dec 2011 14:39:07 +0000</pubDate>
       
       <guid>http://blog.leifmadsen.com/blog/2011/12/22/.bashrc-trick-for-git-repo-and-branch-information/</guid>
-      <description>The other day I was talking to my friend Russell Bryant who pointed me to some .bashrc magic that would show me which branch I was currently working with inside a git repo on my system. I found it incredibly handy and have modified the ANSI colour coding slightly. export PS1='[\u@\h \[33[0;36m\]\W$(__git_ps1 &quot;\[33[0m\]\[33[0;33m\](%s)&quot;)\[33[0m\]]\$ ' On Fedora Russell mentioned that you need the bash-completion installed. We&rsquo;re unsure if you need anything on other distributions.</description>
+      <description>The other day I was talking to my friend Russell Bryant who pointed me to some .bashrc magic that would show me which branch I was currently working with inside a git repo on my system. I found it incredibly handy and have modified the ANSI colour coding slightly.
+export PS1='[\u@\h \[33[0;36m\]\W$(__git_ps1 &quot;\[33[0m\]\[33[0;33m\](%s)&quot;)\[33[0m\]]\$ '  On Fedora Russell mentioned that you need the bash-completion installed. We&rsquo;re unsure if you need anything on other distributions.</description>
     </item>
     
   </channel>

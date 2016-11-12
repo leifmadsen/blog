@@ -2,12 +2,11 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Astricon on Asterisk, and other worldly endeavours</title>
-    <link>http://blog.leifmadsen.com/tags/astricon/</link>
+    <link>http://blog.leifmadsen.com/tags/astricon/index.xml</link>
     <description>Recent content in Astricon on Asterisk, and other worldly endeavours</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 23 Dec 2011 16:17:57 +0000</lastBuildDate>
-    <atom:link href="http://blog.leifmadsen.com/tags/astricon/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="/tags/astricon/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Cooking With Asterisk (Video)</title>
@@ -15,7 +14,10 @@
       <pubDate>Fri, 23 Dec 2011 16:17:57 +0000</pubDate>
       
       <guid>http://blog.leifmadsen.com/blog/2011/12/23/cooking-with-asterisk-video/</guid>
-      <description>And I found the Cooking With Asterisk presentation as well! Apologies for the low quality on the video (as this one has a lot more text than the Distributed Call Centre video), but you can follow along with the presentation on your screen as available on my website at: http://leifmadsen.com/sites/default/files/AstriCon%202011%20-%20Cooking%20With%20Asterisk.pdf The video presentation is available here: http://www.tmcnet.com/tmc/videos/default.aspx?vid=5741&amp;title=Cooking+with+Asterisk#</description>
+      <description>And I found the Cooking With Asterisk presentation as well! Apologies for the low quality on the video (as this one has a lot more text than the Distributed Call Centre video), but you can follow along with the presentation on your screen as available on my website at:
+http://leifmadsen.com/sites/default/files/AstriCon%202011%20-%20Cooking%20With%20Asterisk.pdf
+The video presentation is available here:
+http://www.tmcnet.com/tmc/videos/default.aspx?vid=5741&amp;title=Cooking+with+Asterisk#</description>
     </item>
     
     <item>
@@ -24,7 +26,10 @@
       <pubDate>Fri, 23 Dec 2011 15:31:22 +0000</pubDate>
       
       <guid>http://blog.leifmadsen.com/blog/2011/12/23/asterisk-powered-distributed-call-centres-video/</guid>
-      <description>Looks like TMC has posted my presentation from AstriCon 2011! You can see the presentation in its entirety over here: http://www.tmcnet.com/tmc/videos/default.aspx?vid=5821&amp;title=Asterisk-Powered+Distributed+Call+Centers And the presentation along with the demo configuration files is available on my website at: http://leifmadsen.com/sites/default/files/AstriCon%202011%20-%20Building%20a%20distributed%20call%20centre.zip</description>
+      <description>Looks like TMC has posted my presentation from AstriCon 2011! You can see the presentation in its entirety over here:
+http://www.tmcnet.com/tmc/videos/default.aspx?vid=5821&amp;title=Asterisk-Powered+Distributed+Call+Centers
+And the presentation along with the demo configuration files is available on my website at:
+http://leifmadsen.com/sites/default/files/AstriCon%202011%20-%20Building%20a%20distributed%20call%20centre.zip</description>
     </item>
     
     <item>
@@ -33,7 +38,9 @@
       <pubDate>Sun, 30 Oct 2011 15:46:23 +0000</pubDate>
       
       <guid>http://blog.leifmadsen.com/blog/2011/10/30/</guid>
-      <description>I think the best quote I heard the entire time came from @abalashov (Alex Balashov) during the AstriDevCon when we were talking about Asterisk documentation, and how we might better organize it within the source. We were discussing perhaps moving some of the existing configuration file examples to a manpage, and Alex piped up to say, &ldquo;Manpages are a vestige of our glorious, prehensile, curly-tailed past.&rdquo; There wasn&rsquo;t much left</description>
+      <description>I think the best quote I heard the entire time came from @abalashov (Alex Balashov) during the AstriDevCon when we were talking about Asterisk documentation, and how we might better organize it within the source.
+We were discussing perhaps moving some of the existing configuration file examples to a manpage, and Alex piped up to say, &ldquo;Manpages are a vestige of our glorious, prehensile, curly-tailed past.&rdquo;
+There wasn&rsquo;t much left to be said after that :)</description>
     </item>
     
     <item>
@@ -42,7 +49,8 @@
       <pubDate>Wed, 26 Oct 2011 19:15:41 +0000</pubDate>
       
       <guid>http://blog.leifmadsen.com/blog/2011/10/26/</guid>
-      <description>The presentation and configuration files from my presentation at AstriCon 2011 today is available at: http://leifmadsen.com/sites/default/files/AstriCon 2011 - Building a distributed call centre.zip</description>
+      <description>The presentation and configuration files from my presentation at AstriCon 2011 today is available at:
+http://leifmadsen.com/sites/default/files/AstriCon 2011 - Building a distributed call centre.zip</description>
     </item>
     
     <item>
@@ -51,7 +59,8 @@
       <pubDate>Wed, 26 Oct 2011 16:36:49 +0000</pubDate>
       
       <guid>http://blog.leifmadsen.com/blog/2011/10/26/astricon-presentation-today-at-1140am/</guid>
-      <description>I&rsquo;ll be speaking at AstriCon today (and tomorrow) about building a distributed call centre. The presentation will be 35 minutes long and will contain a set of slides that moves you from an existing traditional PBX system up through a distributed model (which happens to use a call centre as the example system). A PDF of the presentation along with the configuration files from the demo will be available on my website after the presentation.</description>
+      <description>I&rsquo;ll be speaking at AstriCon today (and tomorrow) about building a distributed call centre. The presentation will be 35 minutes long and will contain a set of slides that moves you from an existing traditional PBX system up through a distributed model (which happens to use a call centre as the example system).
+A PDF of the presentation along with the configuration files from the demo will be available on my website after the presentation.</description>
     </item>
     
     <item>
@@ -60,7 +69,8 @@
       <pubDate>Tue, 21 Dec 2010 15:26:43 +0000</pubDate>
       
       <guid>http://blog.leifmadsen.com/blog/2010/12/21/video-of-5-things-you-didnt-know-asterisk-could-do-presentation-now-available/</guid>
-      <description>Check out the AstriCon website for my presentation that was recorded this year. I did three presentations this year (5 Things You Didn&rsquo;t Know Asterisk Could Do, Distributed Call Centres, and the Asterisk Project Update with Russell Bryant) but unfortunately the only one I see so far is the 5 Things presentation (which is a very good presentation! :)) The link to the presentations are here: http://www.astricon.net/videoPresentations.aspx#Digium7 with mine being at the top of the list.</description>
+      <description>Check out the AstriCon website for my presentation that was recorded this year. I did three presentations this year (5 Things You Didn&rsquo;t Know Asterisk Could Do, Distributed Call Centres, and the Asterisk Project Update with Russell Bryant) but unfortunately the only one I see so far is the 5 Things presentation (which is a very good presentation! :))
+The link to the presentations are here: http://www.astricon.net/videoPresentations.aspx#Digium7 with mine being at the top of the list.</description>
     </item>
     
     <item>
@@ -69,7 +79,8 @@
       <pubDate>Mon, 01 Nov 2010 12:04:08 +0000</pubDate>
       
       <guid>http://blog.leifmadsen.com/blog/2010/11/01/my-presentations-from-astricon-2010-are-available/</guid>
-      <description>Check out http://leifmadsen.com and click on the presentations tab. Under that tab you will find my presentations from AstriCon 2010, &rsquo;5 Things You Didn&rsquo;t Know Asterisk Could Do&rsquo; and a slightly updated version of my &lsquo;Building Distributed Queue Systems&rsquo; presentation. Both are in PDF format. Both presentations went over extremely well, and I think both probably ended up being, or nearly being, my best presentations ever given. In previous years I&rsquo;ve given presentations on distributed Asterisk systems and last year at IT360 I gave my &rdquo;5 Things You Didn&rsquo;t Know Asterisk Could Do&rdquo; presentation, so perhaps being somewhat familiar with the format helped.</description>
+      <description>Check out http://leifmadsen.com and click on the presentations tab. Under that tab you will find my presentations from AstriCon 2010, &rsquo;5 Things You Didn&rsquo;t Know Asterisk Could Do&rsquo; and a slightly updated version of my &lsquo;Building Distributed Queue Systems&rsquo; presentation. Both are in PDF format.
+Both presentations went over extremely well, and I think both probably ended up being, or nearly being, my best presentations ever given. In previous years I&rsquo;ve given presentations on distributed Asterisk systems and last year at IT360 I gave my &rdquo;5 Things You Didn&rsquo;t Know Asterisk Could Do&rdquo; presentation, so perhaps being somewhat familiar with the format helped.</description>
     </item>
     
     <item>
@@ -78,7 +89,8 @@
       <pubDate>Wed, 27 Oct 2010 12:08:06 +0000</pubDate>
       
       <guid>http://blog.leifmadsen.com/blog/2010/10/27/astricon-2010-and-my-talks/</guid>
-      <description>NOTE: My presentations are available on my website at http://leifmadsen.com under the Presentations tab. Hey all! I&rsquo;m at AstriCon 2010 in Maryland and it&rsquo;s going great so far! Russell Bryant and I spoke with several keen users and developers last night in the Code Zone at a fairly late hour, which shows just how dedicated Asterisk users are. There was pretty much no one else around and we had a room of about 20-30 people just having a great discussion about Asterisk development.</description>
+      <description>NOTE: My presentations are available on my website at http://leifmadsen.com under the Presentations tab.
+Hey all! I&rsquo;m at AstriCon 2010 in Maryland and it&rsquo;s going great so far! Russell Bryant and I spoke with several keen users and developers last night in the Code Zone at a fairly late hour, which shows just how dedicated Asterisk users are. There was pretty much no one else around and we had a room of about 20-30 people just having a great discussion about Asterisk development.</description>
     </item>
     
     <item>
@@ -87,7 +99,8 @@
       <pubDate>Tue, 03 Aug 2010 19:12:28 +0000</pubDate>
       
       <guid>http://blog.leifmadsen.com/blog/2010/08/03/speaking-at-astricon-2010-come-see-my-talk-/</guid>
-      <description>Hey everyone! Sorry for the lack of updates recently. We&rsquo;ve been hard at work on the next version of the Asterisk book, which is shaping up to be the best book ever written on Asterisk. The scope and detail we&rsquo;re working towards is ambitious, but will be very much worth it. Of course the book will be focused on the upcoming Asterisk 1.8 releases (which was recently branched and betas are now available for testing!).</description>
+      <description>Hey everyone!
+Sorry for the lack of updates recently. We&rsquo;ve been hard at work on the next version of the Asterisk book, which is shaping up to be the best book ever written on Asterisk. The scope and detail we&rsquo;re working towards is ambitious, but will be very much worth it. Of course the book will be focused on the upcoming Asterisk 1.8 releases (which was recently branched and betas are now available for testing!</description>
     </item>
     
     <item>
@@ -105,7 +118,10 @@
       <pubDate>Wed, 18 Nov 2009 20:40:15 +0000</pubDate>
       
       <guid>http://blog.leifmadsen.com/blog/2009/11/18/astricon-2009-presentation----building-a-distributed-call-center/</guid>
-      <description>For those who missed it, you&rsquo;re able to get a PDF of my AstriCon 2009 presentation from the http://www.astricon.net website. http://images.tmcnet.com/expo/astricon/presentations/cc01-madsen-digium.pdf There are additional presentations available from the conference as well. Check them out here: http://www.astricon.net/2009/astricon/agendaAtaGlance.aspx Overall, the conference was extremely well attended and I had a great time. I&rsquo;ve been to a lot of conferences, and AstriCon is definitely a premiere conference that is professionally run, and contains a great deal of useful information by well versed presenters with little fluff (i.e.</description>
+      <description>For those who missed it, you&rsquo;re able to get a PDF of my AstriCon 2009 presentation from the http://www.astricon.net website.
+http://images.tmcnet.com/expo/astricon/presentations/cc01-madsen-digium.pdf
+There are additional presentations available from the conference as well. Check them out here: http://www.astricon.net/2009/astricon/agendaAtaGlance.aspx
+Overall, the conference was extremely well attended and I had a great time. I&rsquo;ve been to a lot of conferences, and AstriCon is definitely a premiere conference that is professionally run, and contains a great deal of useful information by well versed presenters with little fluff (i.</description>
     </item>
     
   </channel>

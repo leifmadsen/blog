@@ -2,12 +2,11 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Development on Asterisk, and other worldly endeavours</title>
-    <link>http://blog.leifmadsen.com/tags/development/</link>
+    <link>http://blog.leifmadsen.com/tags/development/index.xml</link>
     <description>Recent content in Development on Asterisk, and other worldly endeavours</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 17 May 2011 20:40:55 +0000</lastBuildDate>
-    <atom:link href="http://blog.leifmadsen.com/tags/development/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="/tags/development/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Asterisk 1.8 And The Importance Of Looking Ahead</title>
@@ -15,7 +14,7 @@
       <pubDate>Tue, 17 May 2011 20:40:55 +0000</pubDate>
       
       <guid>http://blog.leifmadsen.com/blog/2011/05/17/asterisk-1.8-and-the-importance-of-looking-ahead/</guid>
-      <description>With the end of maintenance for the Asterisk 1.4 (the previous long term support (LTS) release) and Asterisk 1.6.2 (the previous standard, short term support release) branches, the time to look at using Asterisk 1.8 (the next long term support release, which provides another 4 years of maintenance, followed by a year of security support) is upon us. For those who have successful deployments of Asterisk 1.4 and 1.6.2 (heck, even 1.2!) there is no immediate need to migrate those existing systems; let them happily continue what they’re doing.</description>
+      <description>With the end of maintenance for the Asterisk 1.4 (the previous long term support (LTS) release) and Asterisk 1.6.2 (the previous standard, short term support release) branches, the time to look at using Asterisk 1.8 (the next long term support release, which provides another 4 years of maintenance, followed by a year of security support) is upon us. For those who have successful deployments of Asterisk 1.4 and 1.6.2 (heck, even 1.</description>
     </item>
     
   </channel>

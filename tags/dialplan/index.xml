@@ -2,12 +2,11 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Dialplan on Asterisk, and other worldly endeavours</title>
-    <link>http://blog.leifmadsen.com/tags/dialplan/</link>
+    <link>http://blog.leifmadsen.com/tags/dialplan/index.xml</link>
     <description>Recent content in Dialplan on Asterisk, and other worldly endeavours</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 16 Jan 2012 13:28:10 +0000</lastBuildDate>
-    <atom:link href="http://blog.leifmadsen.com/tags/dialplan/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="/tags/dialplan/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Converting multiple exten =&gt; lines to using same =&gt; in Asterisk dialplan</title>
@@ -15,7 +14,9 @@
       <pubDate>Mon, 16 Jan 2012 13:28:10 +0000</pubDate>
       
       <guid>http://blog.leifmadsen.com/blog/2012/01/16/converting-multiple-exten--lines-to-using-same--in-asterisk-dialplan/</guid>
-      <description>Last week I wanted to start changing some 1.4 based Asterisk dialplan to a 1.8 based Asterisk system, and in that process wanted to convert lines like: exten =&gt; _NXXNXXXXXX,1,NoOp() exten =&gt; _NXXNXXXXXX,2,GotoIf($[...]?reject,1) exten =&gt; _NXXNXXXXXX,3,Dial(SIP/foo/${EXTEN}) ... into using the same =&gt; prefix: exten =&gt; _NXXNXXXXXX,1,NoOp() same =&gt; n,GotoIf($[...]?reject,1) same =&gt; n,Dial(SIP/foo/${EXTEN}) In order to do that, Mike King helped me out with the following regular expressing which I used</description>
+      <description>Last week I wanted to start changing some 1.4 based Asterisk dialplan to a 1.8 based Asterisk system, and in that process wanted to convert lines like:
+exten =&gt; _NXXNXXXXXX,1,NoOp() exten =&gt; _NXXNXXXXXX,2,GotoIf($[...]?reject,1) exten =&gt; _NXXNXXXXXX,3,Dial(SIP/foo/${EXTEN}) ...  into using the same =&gt; prefix:
+exten =&gt; _NXXNXXXXXX,1,NoOp() same =&gt; n,GotoIf($[...]?reject,1) same =&gt; n,Dial(SIP/foo/${EXTEN})  In order to do that, Mike King helped me out with the following regular expressing which I used in vim:</description>
     </item>
     
     <item>
@@ -24,7 +25,10 @@
       <pubDate>Fri, 23 Dec 2011 16:17:57 +0000</pubDate>
       
       <guid>http://blog.leifmadsen.com/blog/2011/12/23/cooking-with-asterisk-video/</guid>
-      <description>And I found the Cooking With Asterisk presentation as well! Apologies for the low quality on the video (as this one has a lot more text than the Distributed Call Centre video), but you can follow along with the presentation on your screen as available on my website at: http://leifmadsen.com/sites/default/files/AstriCon%202011%20-%20Cooking%20With%20Asterisk.pdf The video presentation is available here: http://www.tmcnet.com/tmc/videos/default.aspx?vid=5741&amp;title=Cooking+with+Asterisk#</description>
+      <description>And I found the Cooking With Asterisk presentation as well! Apologies for the low quality on the video (as this one has a lot more text than the Distributed Call Centre video), but you can follow along with the presentation on your screen as available on my website at:
+http://leifmadsen.com/sites/default/files/AstriCon%202011%20-%20Cooking%20With%20Asterisk.pdf
+The video presentation is available here:
+http://www.tmcnet.com/tmc/videos/default.aspx?vid=5741&amp;title=Cooking+with+Asterisk#</description>
     </item>
     
     <item>
@@ -42,7 +46,8 @@
       <pubDate>Sat, 13 Aug 2011 02:14:55 +0000</pubDate>
       
       <guid>http://blog.leifmadsen.com/blog/2011/08/13/set-and-goto-on-same-line/</guid>
-      <description>(Thanks to Jared Smith for answering my question in IRC which is the inspiration for this post.) Typically when I write dialplan, primarily in the case where I&rsquo;m using a pattern match, I&rsquo;ll save the dialed extension to a channel variable using Set(), then do a Goto() where the call logic is handled. The Set() is so that I don&rsquo;t lose the value of ${EXTEN} throughout the dialplan process, especially if I&rsquo;m using other mechanics such as GoSub() and others.</description>
+      <description>(Thanks to Jared Smith for answering my question in IRC which is the inspiration for this post.)
+Typically when I write dialplan, primarily in the case where I&rsquo;m using a pattern match, I&rsquo;ll save the dialed extension to a channel variable using Set(), then do a Goto() where the call logic is handled. The Set() is so that I don&rsquo;t lose the value of ${EXTEN} throughout the dialplan process, especially if I&rsquo;m using other mechanics such as GoSub() and others.</description>
     </item>
     
     <item>
@@ -60,7 +65,8 @@
       <pubDate>Wed, 29 Sep 2010 14:25:50 +0000</pubDate>
       
       <guid>http://blog.leifmadsen.com/blog/2010/09/29/scheduling-automated-calls-between-two-participants-with-res_calendar/</guid>
-      <description>Here is a little dialplan snippet I wrote this morning for the next edition of the Asterisk book. While I&rsquo;m not going to delve into all the aspects of setting up res_calendar like we do in the book, I thought for those of you who might already have this working might enjoy it. (The calendaring modules are available in Asterisk 1.8, which is currently in release candidate status. Check out http://www.asterisk.org/downloads for the current version.) I started with this little bit of dialplan that gets triggered when a call is answered from the calendaring module: ﻿﻿﻿ [AutomatedMeetingSetup] exten =&gt; start,1,Verbose(2,Triggering meeting setup for two participants) same =&gt; n,Set(DeviceToDial=${FILTER(0-9A-Za-z,${CALENDAR_EVENT(location)})}) same =&gt; n,Dial(SIP/${DeviceToDial},30) same =&gt; n,Hangup() The location field in my calendar event (which in this case is labeled as Destination in my Google Calendar) contains the string 0000FFFF0002 which is the device identifier in my example.</description>
+      <description>Here is a little dialplan snippet I wrote this morning for the next edition of the Asterisk book. While I&rsquo;m not going to delve into all the aspects of setting up res_calendar like we do in the book, I thought for those of you who might already have this working might enjoy it.
+(The calendaring modules are available in Asterisk 1.8, which is currently in release candidate status. Check out http://www.</description>
     </item>
     
     <item>
@@ -69,7 +75,9 @@
       <pubDate>Fri, 19 Feb 2010 15:38:07 +0000</pubDate>
       
       <guid>http://blog.leifmadsen.com/blog/2010/02/19/musings-about-enumplus-and-isns/</guid>
-      <description>Recently I&rsquo;ve been playing around with a couple of technologies that I haven&rsquo;t used in quite a while; ENUM and ISN. First, a little information on what these technologies are about. ISNs and ITADs First, lets talk about ISN (ITAD Subscriber Number) and ITAD (Internet Telephony Administrative Domain). I think the http://www.freenum.org website does a good job of succinctly describing the problem attempting to be addressed: &ldquo;The Freenum/ISN system is 12-digit-keypad (telephone handset) friendly method of providing mapping between users.</description>
+      <description>Recently I&rsquo;ve been playing around with a couple of technologies that I haven&rsquo;t used in quite a while; ENUM and ISN. First, a little information on what these technologies are about.
+ISNs and ITADs First, lets talk about ISN (ITAD Subscriber Number) and ITAD (Internet Telephony Administrative Domain). I think the http://www.freenum.org website does a good job of succinctly describing the problem attempting to be addressed:
+&ldquo;The Freenum/ISN system is 12-digit-keypad (telephone handset) friendly method of providing mapping between users.</description>
     </item>
     
     <item>
@@ -78,7 +86,8 @@
       <pubDate>Tue, 08 Sep 2009 13:12:20 +0000</pubDate>
       
       <guid>http://blog.leifmadsen.com/blog/2009/09/08/ask-the-expert/</guid>
-      <description>_UPDATE (October 7, 2009): This post didn&rsquo;t quite generate the type of questions I was hoping for, and because of that I&rsquo;m not able to generate a knowledgeable and informed response that would be overtly useful. However, I will leave this topic open for the next little while in the hopes some more questions can be generated. It is entirely possible I haven&rsquo;t been specific enough in my request for the type of questions I&rsquo;d like to answer, so here goes.</description>
+      <description>_UPDATE (October 7, 2009):
+This post didn&rsquo;t quite generate the type of questions I was hoping for, and because of that I&rsquo;m not able to generate a knowledgeable and informed response that would be overtly useful. However, I will leave this topic open for the next little while in the hopes some more questions can be generated. It is entirely possible I haven&rsquo;t been specific enough in my request for the type of questions I&rsquo;d like to answer, so here goes.</description>
     </item>
     
     <item>

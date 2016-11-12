@@ -2,12 +2,11 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Linux on Asterisk, and other worldly endeavours</title>
-    <link>http://blog.leifmadsen.com/categories/linux/</link>
+    <link>http://blog.leifmadsen.com/categories/linux/index.xml</link>
     <description>Recent content in Linux on Asterisk, and other worldly endeavours</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 03 Oct 2016 15:34:08 -0400</lastBuildDate>
-    <atom:link href="http://blog.leifmadsen.com/categories/linux/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="/categories/linux/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>TripleO: Consuming Composable Roles</title>
@@ -19,8 +18,12 @@
 roles</a>
 that was added to Newton. I previously learned a little bit about deploying
 OpenStack clouds when I did training after joining Red Hat, but that was based
-on Liberty, and a lot has changed in TripleO since that time.</p>
-</description>
+on Liberty, and a lot has changed in TripleO since that time.
+
+The first thing was learning what composable services and roles are, and
+generally what they are intended to solve. I don&rsquo;t want to get into that
+here, so I&rsquo;d encourage you to go read some links first and then come back here.
+Additionally, it&rsquo;s assumed you know what a TripleO is :)</p></description>
     </item>
     
     <item>
@@ -29,7 +32,10 @@ on Liberty, and a lot has changed in TripleO since that time.</p>
       <pubDate>Tue, 27 Sep 2016 16:11:17 -0400</pubDate>
       
       <guid>http://blog.leifmadsen.com/blog/2016/09/27/a-console-obsession/</guid>
-      <description>It&rsquo;s A Console Thing Recently I&rsquo;ve gotten into running as many of my day-to-day applications in a Linux console. Thought I&rsquo;d briefly share the applications I&rsquo;ve been playing with. GerTTY (http://gertty.readthedocs.io/en/master/): Synchronize and follow Gerrit-hosted projects, and perform code reviews. It&rsquo;s a bit slow, but generally works pretty well once you get over the initial sync. More Info: https://major.io/2016/05/11/getting-started-gertty/ Weechat (https://weechat.org/): IRC client with tiling-window manager like options. Can split the window into various buffers in either horizontal or vertical arrangements.</description>
+      <description>It&rsquo;s A Console Thing Recently I&rsquo;ve gotten into running as many of my day-to-day applications in a Linux console. Thought I&rsquo;d briefly share the applications I&rsquo;ve been playing with.
+ GerTTY (http://gertty.readthedocs.io/en/master/): Synchronize and follow Gerrit-hosted projects, and perform code reviews. It&rsquo;s a bit slow, but generally works pretty well once you get over the initial sync.
+More Info: https://major.io/2016/05/11/getting-started-gertty/
+ Weechat (https://weechat.org/): IRC client with tiling-window manager like options.</description>
     </item>
     
   </channel>

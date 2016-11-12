@@ -2,12 +2,11 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Import on Asterisk, and other worldly endeavours</title>
-    <link>http://blog.leifmadsen.com/tags/import/</link>
+    <link>http://blog.leifmadsen.com/tags/import/index.xml</link>
     <description>Recent content in Import on Asterisk, and other worldly endeavours</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 29 Jul 2009 12:49:51 +0000</lastBuildDate>
-    <atom:link href="http://blog.leifmadsen.com/tags/import/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="/tags/import/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Importing Master.csv into MySQL CDR table</title>
@@ -15,7 +14,8 @@
       <pubDate>Wed, 29 Jul 2009 12:49:51 +0000</pubDate>
       
       <guid>http://blog.leifmadsen.com/blog/2009/07/29/importing-master.csv-into-mysql-cdr-table/</guid>
-      <description>Edit: I have updated the original post, which contained &lsquo;custom&rsquo; field name in the database instead of &lsquo;userfield&rsquo; which is a field Asterisk-Stat uses. Edit2: Updated the field from &lsquo;amaflag&rsquo; to &lsquo;amaflags&rsquo; thanks to Justin. Edit3: Updated the script based on feedback from Mads Peter Nielsen and Gabriel. Thanks! Today I had a client that had a need to run some statistical analysis on their data, but since they didn&rsquo;t have anything like that developed, I had to go on a search to find them something.</description>
+      <description>Edit: I have updated the original post, which contained &lsquo;custom&rsquo; field name in the database instead of &lsquo;userfield&rsquo; which is a field Asterisk-Stat uses. Edit2: Updated the field from &lsquo;amaflag&rsquo; to &lsquo;amaflags&rsquo; thanks to Justin. Edit3: Updated the script based on feedback from Mads Peter Nielsen and Gabriel. Thanks!
+ Today I had a client that had a need to run some statistical analysis on their data, but since they didn&rsquo;t have anything like that developed, I had to go on a search to find them something.</description>
     </item>
     
   </channel>

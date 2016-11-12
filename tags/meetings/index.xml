@@ -2,12 +2,11 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Meetings on Asterisk, and other worldly endeavours</title>
-    <link>http://blog.leifmadsen.com/tags/meetings/</link>
+    <link>http://blog.leifmadsen.com/tags/meetings/index.xml</link>
     <description>Recent content in Meetings on Asterisk, and other worldly endeavours</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 29 Sep 2010 14:25:50 +0000</lastBuildDate>
-    <atom:link href="http://blog.leifmadsen.com/tags/meetings/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="/tags/meetings/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Scheduling automated calls between two participants with res_calendar</title>
@@ -15,7 +14,8 @@
       <pubDate>Wed, 29 Sep 2010 14:25:50 +0000</pubDate>
       
       <guid>http://blog.leifmadsen.com/blog/2010/09/29/scheduling-automated-calls-between-two-participants-with-res_calendar/</guid>
-      <description>Here is a little dialplan snippet I wrote this morning for the next edition of the Asterisk book. While I&rsquo;m not going to delve into all the aspects of setting up res_calendar like we do in the book, I thought for those of you who might already have this working might enjoy it. (The calendaring modules are available in Asterisk 1.8, which is currently in release candidate status. Check out http://www.asterisk.org/downloads for the current version.) I started with this little bit of dialplan that gets triggered when a call is answered from the calendaring module: ﻿﻿﻿ [AutomatedMeetingSetup] exten =&gt; start,1,Verbose(2,Triggering meeting setup for two participants) same =&gt; n,Set(DeviceToDial=${FILTER(0-9A-Za-z,${CALENDAR_EVENT(location)})}) same =&gt; n,Dial(SIP/${DeviceToDial},30) same =&gt; n,Hangup() The location field in my calendar event (which in this case is labeled as Destination in my Google Calendar) contains the string 0000FFFF0002 which is the device identifier in my example.</description>
+      <description>Here is a little dialplan snippet I wrote this morning for the next edition of the Asterisk book. While I&rsquo;m not going to delve into all the aspects of setting up res_calendar like we do in the book, I thought for those of you who might already have this working might enjoy it.
+(The calendaring modules are available in Asterisk 1.8, which is currently in release candidate status. Check out http://www.</description>
     </item>
     
   </channel>

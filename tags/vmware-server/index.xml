@@ -2,12 +2,11 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Vmware Server on Asterisk, and other worldly endeavours</title>
-    <link>http://blog.leifmadsen.com/tags/vmware-server/</link>
+    <link>http://blog.leifmadsen.com/tags/vmware-server/index.xml</link>
     <description>Recent content in Vmware Server on Asterisk, and other worldly endeavours</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 09 Feb 2011 01:18:22 +0000</lastBuildDate>
-    <atom:link href="http://blog.leifmadsen.com/tags/vmware-server/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="/tags/vmware-server/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Initial impressions of qemu-kvm (virtualization server)</title>
@@ -15,7 +14,8 @@
       <pubDate>Wed, 09 Feb 2011 01:18:22 +0000</pubDate>
       
       <guid>http://blog.leifmadsen.com/blog/2011/02/09/initial-impressions-of-qemu-kvm-virtualization-server/</guid>
-      <description>The qemu-kvm (http://www.linux-kvm.org/page/Main_Page) package on Ubuntu 10.10 allows you to create virtual machines much like VMware, Xen, etc. My initial impressions are generally pretty positive. I like that it lets you install multiple operating systems (including MS Windows, which I haven&rsquo;t tried yet), and doesn&rsquo;t use a web interface like VMware Server 2 (which I&rsquo;ve found to be terribly crash prone, requiring a restart of the web interface at the least, and sometime the entire server needs to be restarted, often abruptly with the kill application).</description>
+      <description>The qemu-kvm (http://www.linux-kvm.org/page/Main_Page) package on Ubuntu 10.10 allows you to create virtual machines much like VMware, Xen, etc.
+My initial impressions are generally pretty positive. I like that it lets you install multiple operating systems (including MS Windows, which I haven&rsquo;t tried yet), and doesn&rsquo;t use a web interface like VMware Server 2 (which I&rsquo;ve found to be terribly crash prone, requiring a restart of the web interface at the least, and sometime the entire server needs to be restarted, often abruptly with the kill application).</description>
     </item>
     
   </channel>

@@ -2,12 +2,11 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Qr Code on Asterisk, and other worldly endeavours</title>
-    <link>http://blog.leifmadsen.com/tags/qr-code/</link>
+    <link>http://blog.leifmadsen.com/tags/qr-code/index.xml</link>
     <description>Recent content in Qr Code on Asterisk, and other worldly endeavours</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 27 Aug 2009 14:02:24 +0000</lastBuildDate>
-    <atom:link href="http://blog.leifmadsen.com/tags/qr-code/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="/tags/qr-code/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Creating vCards with QR Codes</title>

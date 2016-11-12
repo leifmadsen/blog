@@ -2,12 +2,11 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Jabbersend on Asterisk, and other worldly endeavours</title>
-    <link>http://blog.leifmadsen.com/tags/jabbersend/</link>
+    <link>http://blog.leifmadsen.com/tags/jabbersend/index.xml</link>
     <description>Recent content in Jabbersend on Asterisk, and other worldly endeavours</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 18 Jul 2009 03:47:57 +0000</lastBuildDate>
-    <atom:link href="http://blog.leifmadsen.com/tags/jabbersend/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="/tags/jabbersend/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>HowTo: Getting Jabber/XMPP notifications from your PBX</title>
@@ -15,7 +14,7 @@
       <pubDate>Sat, 18 Jul 2009 03:47:57 +0000</pubDate>
       
       <guid>http://blog.leifmadsen.com/blog/2009/07/18/howto-getting-jabber/xmpp-notifications-from-your-pbx/</guid>
-      <description>I just have to write up a quick post to show you JUST HOW SIMPLE it is to get interesting events from your PBX via Jabber. Right now I&rsquo;m using it to notify me of anyone trying out my test ISN number, or whenever they join my conference bridge (good reminder if I lose track of time and forget that I scheduled some people to join my conference room). This is based on Asterisk 1.4, although the same configuration should work on 1.6, but I like to try and give 1.4 examples where I can for those of you still running 1.4.</description>
+      <description>I just have to write up a quick post to show you JUST HOW SIMPLE it is to get interesting events from your PBX via Jabber. Right now I&rsquo;m using it to notify me of anyone trying out my test ISN number, or whenever they join my conference bridge (good reminder if I lose track of time and forget that I scheduled some people to join my conference room).</description>
     </item>
     
   </channel>

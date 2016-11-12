@@ -2,12 +2,11 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Questions on Asterisk, and other worldly endeavours</title>
-    <link>http://blog.leifmadsen.com/tags/questions/</link>
+    <link>http://blog.leifmadsen.com/tags/questions/index.xml</link>
     <description>Recent content in Questions on Asterisk, and other worldly endeavours</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 08 Sep 2009 13:12:20 +0000</lastBuildDate>
-    <atom:link href="http://blog.leifmadsen.com/tags/questions/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="/tags/questions/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Ask the Expert!</title>
@@ -15,7 +14,8 @@
       <pubDate>Tue, 08 Sep 2009 13:12:20 +0000</pubDate>
       
       <guid>http://blog.leifmadsen.com/blog/2009/09/08/ask-the-expert/</guid>
-      <description>_UPDATE (October 7, 2009): This post didn&rsquo;t quite generate the type of questions I was hoping for, and because of that I&rsquo;m not able to generate a knowledgeable and informed response that would be overtly useful. However, I will leave this topic open for the next little while in the hopes some more questions can be generated. It is entirely possible I haven&rsquo;t been specific enough in my request for the type of questions I&rsquo;d like to answer, so here goes.</description>
+      <description>_UPDATE (October 7, 2009):
+This post didn&rsquo;t quite generate the type of questions I was hoping for, and because of that I&rsquo;m not able to generate a knowledgeable and informed response that would be overtly useful. However, I will leave this topic open for the next little while in the hopes some more questions can be generated. It is entirely possible I haven&rsquo;t been specific enough in my request for the type of questions I&rsquo;d like to answer, so here goes.</description>
     </item>
     
   </channel>

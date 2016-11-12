@@ -2,12 +2,11 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Versioning on Asterisk, and other worldly endeavours</title>
-    <link>http://blog.leifmadsen.com/tags/versioning/</link>
+    <link>http://blog.leifmadsen.com/tags/versioning/index.xml</link>
     <description>Recent content in Versioning on Asterisk, and other worldly endeavours</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 29 Aug 2011 20:27:03 +0000</lastBuildDate>
-    <atom:link href="http://blog.leifmadsen.com/tags/versioning/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="/tags/versioning/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Asterisk 10 == Asterisk 1.^H^H10</title>
@@ -24,7 +23,8 @@
       <pubDate>Sat, 06 Jun 2009 15:42:11 +0000</pubDate>
       
       <guid>http://blog.leifmadsen.com/blog/2009/06/06/about-the-new-asterisk-versioning-method/</guid>
-      <description>Recently I have been seeing more and more questions about how Asterisk is being released now, and what the 1.6.x versions really mean. I&rsquo;ll try and clear up some of your questions and make it more clear as to how Asterisk versions work. First, lets talk about the Asterisk 1.2 and 1.4 branches. Previous release methodology When we just had Asterisk 1.2 and 1.4, all new development was carried out in trunk (it still is) and only bug fixes went into the 1.2 and 1.4 branches.</description>
+      <description>Recently I have been seeing more and more questions about how Asterisk is being released now, and what the 1.6.x versions really mean. I&rsquo;ll try and clear up some of your questions and make it more clear as to how Asterisk versions work. First, lets talk about the Asterisk 1.2 and 1.4 branches.
+Previous release methodology When we just had Asterisk 1.2 and 1.4, all new development was carried out in trunk (it still is) and only bug fixes went into the 1.</description>
     </item>
     
   </channel>

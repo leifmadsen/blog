@@ -2,12 +2,11 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Using Dialplan Functions on Asterisk, and other worldly endeavours</title>
-    <link>http://blog.leifmadsen.com/tags/using-dialplan-functions/</link>
+    <link>http://blog.leifmadsen.com/tags/using-dialplan-functions/index.xml</link>
     <description>Recent content in Using Dialplan Functions on Asterisk, and other worldly endeavours</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 09 Sep 2011 13:28:47 +0000</lastBuildDate>
-    <atom:link href="http://blog.leifmadsen.com/tags/using-dialplan-functions/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="/tags/using-dialplan-functions/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Using Dialplan Functions: AES_DECRYPT() and AES_ENCRYPT()</title>

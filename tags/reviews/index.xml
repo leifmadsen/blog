@@ -2,12 +2,11 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Reviews on Asterisk, and other worldly endeavours</title>
-    <link>http://blog.leifmadsen.com/tags/reviews/</link>
+    <link>http://blog.leifmadsen.com/tags/reviews/index.xml</link>
     <description>Recent content in Reviews on Asterisk, and other worldly endeavours</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 26 Apr 2011 17:34:43 +0000</lastBuildDate>
-    <atom:link href="http://blog.leifmadsen.com/tags/reviews/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="/tags/reviews/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Request for Reviews for Asterisk: The Definitive Guide</title>
@@ -15,7 +14,9 @@
       <pubDate>Tue, 26 Apr 2011 17:34:43 +0000</pubDate>
       
       <guid>http://blog.leifmadsen.com/blog/2011/04/26/request-for-reviews-for-asterisk-the-definitive-guide/</guid>
-      <description>Recently Jim Van Meggelen, Russell Bryant and myself released the 3rd edition of the Asterisk book published by O&rsquo;Reilly Media titled &lsquo;Asterisk: The Definitive Guide&rsquo;. We have released this book under a Creative Commons license in the spirit of Open Source software. It is available in its entirety at http://ofps.oreilly.com/titles/9780596517342/ and for purchase through Amazon at http://www.amazon.com/Asterisk-Definitive-Guide-Leif-Madsen/dp/0596517343/ref=sr_1_1?ie=UTF8&amp;s=books&amp;qid=1303765969&amp;sr=8-1 If you have a chance to review the book, and feel it is a useful and well written resource, we would appreciate your favorable review on Amazon.com.</description>
+      <description>Recently Jim Van Meggelen, Russell Bryant and myself released the 3rd edition of the Asterisk book published by O&rsquo;Reilly Media titled &lsquo;Asterisk: The Definitive Guide&rsquo;.
+We have released this book under a Creative Commons license in the spirit of Open Source software. It is available in its entirety at http://ofps.oreilly.com/titles/9780596517342/ and for purchase through Amazon at http://www.amazon.com/Asterisk-Definitive-Guide-Leif-Madsen/dp/0596517343/ref=sr_1_1?ie=UTF8&amp;s=books&amp;qid=1303765969&amp;sr=8-1
+If you have a chance to review the book, and feel it is a useful and well written resource, we would appreciate your favorable review on Amazon.</description>
     </item>
     
   </channel>

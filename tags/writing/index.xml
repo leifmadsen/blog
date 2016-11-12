@@ -2,12 +2,11 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Writing on Asterisk, and other worldly endeavours</title>
-    <link>http://blog.leifmadsen.com/tags/writing/</link>
+    <link>http://blog.leifmadsen.com/tags/writing/index.xml</link>
     <description>Recent content in Writing on Asterisk, and other worldly endeavours</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 26 Apr 2011 17:34:43 +0000</lastBuildDate>
-    <atom:link href="http://blog.leifmadsen.com/tags/writing/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="/tags/writing/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Request for Reviews for Asterisk: The Definitive Guide</title>
@@ -15,7 +14,9 @@
       <pubDate>Tue, 26 Apr 2011 17:34:43 +0000</pubDate>
       
       <guid>http://blog.leifmadsen.com/blog/2011/04/26/request-for-reviews-for-asterisk-the-definitive-guide/</guid>
-      <description>Recently Jim Van Meggelen, Russell Bryant and myself released the 3rd edition of the Asterisk book published by O&rsquo;Reilly Media titled &lsquo;Asterisk: The Definitive Guide&rsquo;. We have released this book under a Creative Commons license in the spirit of Open Source software. It is available in its entirety at http://ofps.oreilly.com/titles/9780596517342/ and for purchase through Amazon at http://www.amazon.com/Asterisk-Definitive-Guide-Leif-Madsen/dp/0596517343/ref=sr_1_1?ie=UTF8&amp;s=books&amp;qid=1303765969&amp;sr=8-1 If you have a chance to review the book, and feel it is a useful and well written resource, we would appreciate your favorable review on Amazon.com.</description>
+      <description>Recently Jim Van Meggelen, Russell Bryant and myself released the 3rd edition of the Asterisk book published by O&rsquo;Reilly Media titled &lsquo;Asterisk: The Definitive Guide&rsquo;.
+We have released this book under a Creative Commons license in the spirit of Open Source software. It is available in its entirety at http://ofps.oreilly.com/titles/9780596517342/ and for purchase through Amazon at http://www.amazon.com/Asterisk-Definitive-Guide-Leif-Madsen/dp/0596517343/ref=sr_1_1?ie=UTF8&amp;s=books&amp;qid=1303765969&amp;sr=8-1
+If you have a chance to review the book, and feel it is a useful and well written resource, we would appreciate your favorable review on Amazon.</description>
     </item>
     
     <item>
@@ -24,7 +25,7 @@
       <pubDate>Fri, 25 Mar 2011 13:40:31 +0000</pubDate>
       
       <guid>http://blog.leifmadsen.com/blog/2011/03/25/asterisk-cookbook-is-done/</guid>
-      <description>Just a quick update that the Asterisk Cookbook is complete! We&rsquo;ll be releasing it under a Creative Commons license (just like Asterisk: The Definitive Guide) again. It&rsquo;ll be a 24 recipe e-book right now, with it growing over time and eventually becoming a full print edition once the size warrants it. Of course if you purchase now you help spur on additional incentive to continue making it larger. I&rsquo;ve been told that you also continue to receive updates automatically as the book grows and corrections are made (which sounds pretty cool!).</description>
+      <description>Just a quick update that the Asterisk Cookbook is complete! We&rsquo;ll be releasing it under a Creative Commons license (just like Asterisk: The Definitive Guide) again. It&rsquo;ll be a 24 recipe e-book right now, with it growing over time and eventually becoming a full print edition once the size warrants it. Of course if you purchase now you help spur on additional incentive to continue making it larger. I&rsquo;ve been told that you also continue to receive updates automatically as the book grows and corrections are made (which sounds pretty cool!</description>
     </item>
     
     <item>
@@ -33,7 +34,8 @@
       <pubDate>Fri, 04 Mar 2011 14:16:16 +0000</pubDate>
       
       <guid>http://blog.leifmadsen.com/blog/2011/03/04/debugging-the-asterisk-dialplan-with-verbose/</guid>
-      <description>In case you missed it, Russell Bryant wrote a blog post on debugging the Asterisk dialplan with the Verbose() application. This is one of the recipes that will be features in the upcoming Asterisk Cookbook that we&rsquo;re writing, and hoping to have done by the end of March! (In case you&rsquo;ve missed all the cool stuff lately, the Asterisk Cookbook will also be released under the same Creative Commons license as the previous Asterisk books.</description>
+      <description>In case you missed it, Russell Bryant wrote a blog post on debugging the Asterisk dialplan with the Verbose() application. This is one of the recipes that will be features in the upcoming Asterisk Cookbook that we&rsquo;re writing, and hoping to have done by the end of March!
+(In case you&rsquo;ve missed all the cool stuff lately, the Asterisk Cookbook will also be released under the same Creative Commons license as the previous Asterisk books.</description>
     </item>
     
     <item>
@@ -42,7 +44,8 @@
       <pubDate>Thu, 27 Jan 2011 14:33:00 +0000</pubDate>
       
       <guid>http://blog.leifmadsen.com/blog/2011/01/27/asterisk-cookbook-is-on-we-think-/</guid>
-      <description>After finishing the first draft of Asterisk: The Definitive Guide (3rd Edition), I&rsquo;ve been a bit antsy with wanting to do some more writing. After about a week of a break (i.e. sleeping in past 7am for the first time in nearly a year), Russell Bryant and I have decided to team up on delivering the long awaited Asterisk Cookbook. To start off with, we&rsquo;ll be writing a short, 80-100 page eBook that will be distributed by O&rsquo;Reilly in all the formats they support (http://oreilly.com/ebooks/).</description>
+      <description>After finishing the first draft of Asterisk: The Definitive Guide (3rd Edition), I&rsquo;ve been a bit antsy with wanting to do some more writing. After about a week of a break (i.e. sleeping in past 7am for the first time in nearly a year), Russell Bryant and I have decided to team up on delivering the long awaited Asterisk Cookbook.
+To start off with, we&rsquo;ll be writing a short, 80-100 page eBook that will be distributed by O&rsquo;Reilly in all the formats they support (http://oreilly.</description>
     </item>
     
     <item>
@@ -51,7 +54,9 @@
       <pubDate>Thu, 06 Jan 2011 15:22:55 +0000</pubDate>
       
       <guid>http://blog.leifmadsen.com/blog/2011/01/06/asterisk-the-definitive-guide----call-for-reviewers/</guid>
-      <description>Here is the text I posted to the asterisk-doc mailing list this morning. You can sign up for asterisk-doc at http://lists.digium.com and get involved! We&rsquo;d love to make this the best book on Asterisk ever, and your input can make that true! Our goal is to build a book for, and by, the Asterisk community. &ldquo;_Hey all! _ _We&rsquo;re getting VERY close to having the first draft of the next Asterisk book, Asterisk: The Definitive Guide ready to be sent off to production.</description>
+      <description>Here is the text I posted to the asterisk-doc mailing list this morning. You can sign up for asterisk-doc at http://lists.digium.com and get involved! We&rsquo;d love to make this the best book on Asterisk ever, and your input can make that true! Our goal is to build a book for, and by, the Asterisk community.
+&ldquo;_Hey all! _
+_We&rsquo;re getting VERY close to having the first draft of the next Asterisk book, Asterisk: The Definitive Guide ready to be sent off to production.</description>
     </item>
     
     <item>
@@ -60,7 +65,7 @@
       <pubDate>Fri, 19 Feb 2010 14:39:35 +0000</pubDate>
       
       <guid>http://blog.leifmadsen.com/blog/2010/02/19/update-on-tfot-v3-progress/</guid>
-      <description>Just another quick update on the progress of the 3rd edition of the Asterisk book. It&rsquo;s been a bit slow coming, but Jim and I have renewed vigor and vigilance to be productive and get things done. Since the last update, there was a period of time where nothing got done unfortunately. We did get a lot done in the week off I took to focus on the book (I think we ended up writing about 2-3 new chapters, and updated a lot of the old ones), but then of course work got in the way.</description>
+      <description>Just another quick update on the progress of the 3rd edition of the Asterisk book. It&rsquo;s been a bit slow coming, but Jim and I have renewed vigor and vigilance to be productive and get things done. Since the last update, there was a period of time where nothing got done unfortunately. We did get a lot done in the week off I took to focus on the book (I think we ended up writing about 2-3 new chapters, and updated a lot of the old ones), but then of course work got in the way.</description>
     </item>
     
   </channel>

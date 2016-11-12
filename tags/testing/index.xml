@@ -2,12 +2,11 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Testing on Asterisk, and other worldly endeavours</title>
-    <link>http://blog.leifmadsen.com/tags/testing/</link>
+    <link>http://blog.leifmadsen.com/tags/testing/index.xml</link>
     <description>Recent content in Testing on Asterisk, and other worldly endeavours</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 04 Mar 2011 14:16:16 +0000</lastBuildDate>
-    <atom:link href="http://blog.leifmadsen.com/tags/testing/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="/tags/testing/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Debugging the Asterisk Dialplan with Verbose()</title>
@@ -15,7 +14,8 @@
       <pubDate>Fri, 04 Mar 2011 14:16:16 +0000</pubDate>
       
       <guid>http://blog.leifmadsen.com/blog/2011/03/04/debugging-the-asterisk-dialplan-with-verbose/</guid>
-      <description>In case you missed it, Russell Bryant wrote a blog post on debugging the Asterisk dialplan with the Verbose() application. This is one of the recipes that will be features in the upcoming Asterisk Cookbook that we&rsquo;re writing, and hoping to have done by the end of March! (In case you&rsquo;ve missed all the cool stuff lately, the Asterisk Cookbook will also be released under the same Creative Commons license as the previous Asterisk books.</description>
+      <description>In case you missed it, Russell Bryant wrote a blog post on debugging the Asterisk dialplan with the Verbose() application. This is one of the recipes that will be features in the upcoming Asterisk Cookbook that we&rsquo;re writing, and hoping to have done by the end of March!
+(In case you&rsquo;ve missed all the cool stuff lately, the Asterisk Cookbook will also be released under the same Creative Commons license as the previous Asterisk books.</description>
     </item>
     
     <item>
@@ -24,7 +24,9 @@
       <pubDate>Thu, 06 Jan 2011 15:22:55 +0000</pubDate>
       
       <guid>http://blog.leifmadsen.com/blog/2011/01/06/asterisk-the-definitive-guide----call-for-reviewers/</guid>
-      <description>Here is the text I posted to the asterisk-doc mailing list this morning. You can sign up for asterisk-doc at http://lists.digium.com and get involved! We&rsquo;d love to make this the best book on Asterisk ever, and your input can make that true! Our goal is to build a book for, and by, the Asterisk community. &ldquo;_Hey all! _ _We&rsquo;re getting VERY close to having the first draft of the next Asterisk book, Asterisk: The Definitive Guide ready to be sent off to production.</description>
+      <description>Here is the text I posted to the asterisk-doc mailing list this morning. You can sign up for asterisk-doc at http://lists.digium.com and get involved! We&rsquo;d love to make this the best book on Asterisk ever, and your input can make that true! Our goal is to build a book for, and by, the Asterisk community.
+&ldquo;_Hey all! _
+_We&rsquo;re getting VERY close to having the first draft of the next Asterisk book, Asterisk: The Definitive Guide ready to be sent off to production.</description>
     </item>
     
     <item>
@@ -33,7 +35,9 @@
       <pubDate>Mon, 03 May 2010 15:17:57 +0000</pubDate>
       
       <guid>http://blog.leifmadsen.com/blog/2010/05/03/installing-the-asterisk-test-suite/</guid>
-      <description>In case you missed it, I wrote an introductory article about the Asterisk Test Suite on the Asterisk blog. The post takes you from a minimally installed Ubuntu 9.10 up to the point that you can run the tests in the test suite by going through all the possible errors you might encounter getting it loaded, and how to resolve those errors (most of them being missing dependencies). Enjoy! http://blogs.asterisk.org/2010/04/29/installing-the-asterisk-test-suite/</description>
+      <description>In case you missed it, I wrote an introductory article about the Asterisk Test Suite on the Asterisk blog. The post takes you from a minimally installed Ubuntu 9.10 up to the point that you can run the tests in the test suite by going through all the possible errors you might encounter getting it loaded, and how to resolve those errors (most of them being missing dependencies).
+Enjoy!
+http://blogs.asterisk.org/2010/04/29/installing-the-asterisk-test-suite/</description>
     </item>
     
   </channel>
