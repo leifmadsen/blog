@@ -15,7 +15,7 @@
       
       <guid>http://blog.leifmadsen.com/blog/2013/05/16/asterisk-the-definitive-guide-4th-edition-goes-to-print/</guid>
       <description>Howdy folks,
-Sorry for the lack of updates lately. I&rsquo;ve recently (December 2012) started at Thinking Phone Networks as the Lead UC Systems Engineer, and we&rsquo;ve been incredibly busy there. In addition, the authors and I had been working on the final touches to the 4th edition of Asterisk: The Definitive Guide, which documents Asterisk 11 LTS.
+Sorry for the lack of updates lately. I&amp;rsquo;ve recently (December 2012) started at Thinking Phone Networks as the Lead UC Systems Engineer, and we&amp;rsquo;ve been incredibly busy there. In addition, the authors and I had been working on the final touches to the 4th edition of Asterisk: The Definitive Guide, which documents Asterisk 11 LTS.
 Late last week, the book went to print, and should start to appear on store shelves and start shipping from Amazon and other locations within the next 6-8 weeks I believe.</description>
     </item>
     
@@ -25,9 +25,9 @@ Late last week, the book went to print, and should start to appear on store shel
       <pubDate>Thu, 11 Oct 2012 20:43:35 +0000</pubDate>
       
       <guid>http://blog.leifmadsen.com/blog/2012/10/11/digium-d40-and-d70-phone-unboxing/</guid>
-      <description>Today I received a couple of phones from Digium; the D40 and D70. I&rsquo;ll be using these phones for testing and documentation in the 4th edition of Asterisk: The Definitive Guide (which Jim Van Meggelen, Russell Bryant and myself are working on right now).
+      <description>Today I received a couple of phones from Digium; the D40 and D70. I&amp;rsquo;ll be using these phones for testing and documentation in the 4th edition of Asterisk: The Definitive Guide (which Jim Van Meggelen, Russell Bryant and myself are working on right now).
 Here is my unboxing of the phones and some commentary about my initial impressions of the hardware itself.
-[caption id=&ldquo;attachment_484&rdquo; align=&ldquo;aligncenter&rdquo; width=&ldquo;300&rdquo;] Pretty boxes![/caption]
+[caption id=&amp;ldquo;attachment_484&amp;rdquo; align=&amp;ldquo;aligncenter&amp;rdquo; width=&amp;ldquo;300&amp;rdquo;] Pretty boxes![/caption]
 Phones arrived in some nice looking boxes.</description>
     </item>
     
@@ -38,8 +38,8 @@ Phones arrived in some nice looking boxes.</description>
       
       <guid>http://blog.leifmadsen.com/blog/2012/01/16/converting-multiple-exten--lines-to-using-same--in-asterisk-dialplan/</guid>
       <description>Last week I wanted to start changing some 1.4 based Asterisk dialplan to a 1.8 based Asterisk system, and in that process wanted to convert lines like:
-exten =&gt; _NXXNXXXXXX,1,NoOp() exten =&gt; _NXXNXXXXXX,2,GotoIf($[...]?reject,1) exten =&gt; _NXXNXXXXXX,3,Dial(SIP/foo/${EXTEN}) ...  into using the same =&gt; prefix:
-exten =&gt; _NXXNXXXXXX,1,NoOp() same =&gt; n,GotoIf($[...]?reject,1) same =&gt; n,Dial(SIP/foo/${EXTEN})  In order to do that, Mike King helped me out with the following regular expressing which I used in vim:</description>
+exten =&amp;gt; _NXXNXXXXXX,1,NoOp() exten =&amp;gt; _NXXNXXXXXX,2,GotoIf($[...]?reject,1) exten =&amp;gt; _NXXNXXXXXX,3,Dial(SIP/foo/${EXTEN}) ...  into using the same =&amp;gt; prefix:
+exten =&amp;gt; _NXXNXXXXXX,1,NoOp() same =&amp;gt; n,GotoIf($[...]?reject,1) same =&amp;gt; n,Dial(SIP/foo/${EXTEN})  In order to do that, Mike King helped me out with the following regular expressing which I used in vim:</description>
     </item>
     
     <item>
@@ -48,7 +48,7 @@ exten =&gt; _NXXNXXXXXX,1,NoOp() same =&gt; n,GotoIf($[...]?reject,1) same =&gt;
       <pubDate>Wed, 04 Jan 2012 20:22:08 +0000</pubDate>
       
       <guid>http://blog.leifmadsen.com/blog/2012/01/04/now-working-with-coredial/</guid>
-      <description>As of January 3rd, I&rsquo;m now working with the CoreDial team full time. I&rsquo;ve worked with them as a consultant on their infrastructure over the last few years but now will be spending significantly more time working with the engineering team :)
+      <description>As of January 3rd, I&amp;rsquo;m now working with the CoreDial team full time. I&amp;rsquo;ve worked with them as a consultant on their infrastructure over the last few years but now will be spending significantly more time working with the engineering team :)
 From the announcement,
 “_CoreDial is pleased to announce the addition of Leif Madsen to the CoreDial team,” said Alan Rihm, CEO at CoreDial. “Leif is a well known Asterisk consultant who specializes in distributed telephony deployments and database integration.</description>
     </item>
@@ -62,7 +62,7 @@ From the announcement,
       <description>And I found the Cooking With Asterisk presentation as well! Apologies for the low quality on the video (as this one has a lot more text than the Distributed Call Centre video), but you can follow along with the presentation on your screen as available on my website at:
 http://leifmadsen.com/sites/default/files/AstriCon%202011%20-%20Cooking%20With%20Asterisk.pdf
 The video presentation is available here:
-http://www.tmcnet.com/tmc/videos/default.aspx?vid=5741&amp;title=Cooking+with+Asterisk#</description>
+http://www.tmcnet.com/tmc/videos/default.aspx?vid=5741&amp;amp;title=Cooking+with+Asterisk#</description>
     </item>
     
     <item>
@@ -72,7 +72,7 @@ http://www.tmcnet.com/tmc/videos/default.aspx?vid=5741&amp;title=Cooking+with+As
       
       <guid>http://blog.leifmadsen.com/blog/2011/12/23/asterisk-powered-distributed-call-centres-video/</guid>
       <description>Looks like TMC has posted my presentation from AstriCon 2011! You can see the presentation in its entirety over here:
-http://www.tmcnet.com/tmc/videos/default.aspx?vid=5821&amp;title=Asterisk-Powered+Distributed+Call+Centers
+http://www.tmcnet.com/tmc/videos/default.aspx?vid=5821&amp;amp;title=Asterisk-Powered+Distributed+Call+Centers
 And the presentation along with the demo configuration files is available on my website at:
 http://leifmadsen.com/sites/default/files/AstriCon%202011%20-%20Building%20a%20distributed%20call%20centre.zip</description>
     </item>
@@ -84,8 +84,8 @@ http://leifmadsen.com/sites/default/files/AstriCon%202011%20-%20Building%20a%20d
       
       <guid>http://blog.leifmadsen.com/blog/2011/10/30/</guid>
       <description>I think the best quote I heard the entire time came from @abalashov (Alex Balashov) during the AstriDevCon when we were talking about Asterisk documentation, and how we might better organize it within the source.
-We were discussing perhaps moving some of the existing configuration file examples to a manpage, and Alex piped up to say, &ldquo;Manpages are a vestige of our glorious, prehensile, curly-tailed past.&rdquo;
-There wasn&rsquo;t much left to be said after that :)</description>
+We were discussing perhaps moving some of the existing configuration file examples to a manpage, and Alex piped up to say, &amp;ldquo;Manpages are a vestige of our glorious, prehensile, curly-tailed past.&amp;rdquo;
+There wasn&amp;rsquo;t much left to be said after that :)</description>
     </item>
     
     <item>
@@ -104,7 +104,7 @@ http://leifmadsen.com/sites/default/files/AstriCon 2011 - Building a distributed
       <pubDate>Fri, 09 Sep 2011 13:28:47 +0000</pubDate>
       
       <guid>http://blog.leifmadsen.com/blog/2011/09/09/using-dialplan-functions-aes_decrypt-and-aes_encrypt/</guid>
-      <description>I recently asked on twitter how many people would be interested in a set of blog posts that focused on how to use the various dialplan functions in Asterisk, and I got quite a positive response. I posted that shortly before getting married, and now that I&rsquo;m back into the groove of things, I&rsquo;m going to take a shot at posting a bunch of content focused around Asterisk dialplan functions. If you don&rsquo;t know what Asterisk dialplan functions are, head on over to the online version of Asterisk: The Definitive Guide (3rd edition) (or buy it) and read the section on dialplan functions.</description>
+      <description>I recently asked on twitter how many people would be interested in a set of blog posts that focused on how to use the various dialplan functions in Asterisk, and I got quite a positive response. I posted that shortly before getting married, and now that I&amp;rsquo;m back into the groove of things, I&amp;rsquo;m going to take a shot at posting a bunch of content focused around Asterisk dialplan functions. If you don&amp;rsquo;t know what Asterisk dialplan functions are, head on over to the online version of Asterisk: The Definitive Guide (3rd edition) (or buy it) and read the section on dialplan functions.</description>
     </item>
     
     <item>
@@ -114,7 +114,7 @@ http://leifmadsen.com/sites/default/files/AstriCon 2011 - Building a distributed
       
       <guid>http://blog.leifmadsen.com/blog/2011/08/13/set-and-goto-on-same-line/</guid>
       <description>(Thanks to Jared Smith for answering my question in IRC which is the inspiration for this post.)
-Typically when I write dialplan, primarily in the case where I&rsquo;m using a pattern match, I&rsquo;ll save the dialed extension to a channel variable using Set(), then do a Goto() where the call logic is handled. The Set() is so that I don&rsquo;t lose the value of ${EXTEN} throughout the dialplan process, especially if I&rsquo;m using other mechanics such as GoSub() and others.</description>
+Typically when I write dialplan, primarily in the case where I&amp;rsquo;m using a pattern match, I&amp;rsquo;ll save the dialed extension to a channel variable using Set(), then do a Goto() where the call logic is handled. The Set() is so that I don&amp;rsquo;t lose the value of ${EXTEN} throughout the dialplan process, especially if I&amp;rsquo;m using other mechanics such as GoSub() and others.</description>
     </item>
     
     <item>
@@ -123,7 +123,7 @@ Typically when I write dialplan, primarily in the case where I&rsquo;m using a p
       <pubDate>Tue, 02 Aug 2011 18:26:57 +0000</pubDate>
       
       <guid>http://blog.leifmadsen.com/blog/2011/08/02/leifmadsen-enterprises-inc.-enters-its-7th-year-of-operation/</guid>
-      <description>On this day in 2005, LeifMadsen Enterprises, Inc. was formally registered as an incorporation by the government of Canada! I&rsquo;ve now been consulting on Asterisk professionally for over 6 years full time (and a few years before that!). I graduated from the telecommuncations technology program at Sheridan Institute of Technology in 2004. In that time I&rsquo;ve spoken at every AstriCon since 2004 (the first one), and have helped write 4 books on the subject of Asterisk (The Future of Telephony 1st, 2nd editions, The Definitive Guide 3rd edition, Cookbook).</description>
+      <description>On this day in 2005, LeifMadsen Enterprises, Inc. was formally registered as an incorporation by the government of Canada! I&amp;rsquo;ve now been consulting on Asterisk professionally for over 6 years full time (and a few years before that!). I graduated from the telecommuncations technology program at Sheridan Institute of Technology in 2004. In that time I&amp;rsquo;ve spoken at every AstriCon since 2004 (the first one), and have helped write 4 books on the subject of Asterisk (The Future of Telephony 1st, 2nd editions, The Definitive Guide 3rd edition, Cookbook).</description>
     </item>
     
     <item>
@@ -141,8 +141,8 @@ Typically when I write dialplan, primarily in the case where I&rsquo;m using a p
       <pubDate>Tue, 26 Apr 2011 17:34:43 +0000</pubDate>
       
       <guid>http://blog.leifmadsen.com/blog/2011/04/26/request-for-reviews-for-asterisk-the-definitive-guide/</guid>
-      <description>Recently Jim Van Meggelen, Russell Bryant and myself released the 3rd edition of the Asterisk book published by O&rsquo;Reilly Media titled &lsquo;Asterisk: The Definitive Guide&rsquo;.
-We have released this book under a Creative Commons license in the spirit of Open Source software. It is available in its entirety at http://ofps.oreilly.com/titles/9780596517342/ and for purchase through Amazon at http://www.amazon.com/Asterisk-Definitive-Guide-Leif-Madsen/dp/0596517343/ref=sr_1_1?ie=UTF8&amp;s=books&amp;qid=1303765969&amp;sr=8-1
+      <description>Recently Jim Van Meggelen, Russell Bryant and myself released the 3rd edition of the Asterisk book published by O&amp;rsquo;Reilly Media titled &amp;lsquo;Asterisk: The Definitive Guide&amp;rsquo;.
+We have released this book under a Creative Commons license in the spirit of Open Source software. It is available in its entirety at http://ofps.oreilly.com/titles/9780596517342/ and for purchase through Amazon at http://www.amazon.com/Asterisk-Definitive-Guide-Leif-Madsen/dp/0596517343/ref=sr_1_1?ie=UTF8&amp;amp;s=books&amp;amp;qid=1303765969&amp;amp;sr=8-1
 If you have a chance to review the book, and feel it is a useful and well written resource, we would appreciate your favorable review on Amazon.</description>
     </item>
     
@@ -152,7 +152,7 @@ If you have a chance to review the book, and feel it is a useful and well writte
       <pubDate>Fri, 25 Mar 2011 13:40:31 +0000</pubDate>
       
       <guid>http://blog.leifmadsen.com/blog/2011/03/25/asterisk-cookbook-is-done/</guid>
-      <description>Just a quick update that the Asterisk Cookbook is complete! We&rsquo;ll be releasing it under a Creative Commons license (just like Asterisk: The Definitive Guide) again. It&rsquo;ll be a 24 recipe e-book right now, with it growing over time and eventually becoming a full print edition once the size warrants it. Of course if you purchase now you help spur on additional incentive to continue making it larger. I&rsquo;ve been told that you also continue to receive updates automatically as the book grows and corrections are made (which sounds pretty cool!</description>
+      <description>Just a quick update that the Asterisk Cookbook is complete! We&amp;rsquo;ll be releasing it under a Creative Commons license (just like Asterisk: The Definitive Guide) again. It&amp;rsquo;ll be a 24 recipe e-book right now, with it growing over time and eventually becoming a full print edition once the size warrants it. Of course if you purchase now you help spur on additional incentive to continue making it larger. I&amp;rsquo;ve been told that you also continue to receive updates automatically as the book grows and corrections are made (which sounds pretty cool!</description>
     </item>
     
     <item>
@@ -161,8 +161,8 @@ If you have a chance to review the book, and feel it is a useful and well writte
       <pubDate>Fri, 04 Mar 2011 14:16:16 +0000</pubDate>
       
       <guid>http://blog.leifmadsen.com/blog/2011/03/04/debugging-the-asterisk-dialplan-with-verbose/</guid>
-      <description>In case you missed it, Russell Bryant wrote a blog post on debugging the Asterisk dialplan with the Verbose() application. This is one of the recipes that will be features in the upcoming Asterisk Cookbook that we&rsquo;re writing, and hoping to have done by the end of March!
-(In case you&rsquo;ve missed all the cool stuff lately, the Asterisk Cookbook will also be released under the same Creative Commons license as the previous Asterisk books.</description>
+      <description>In case you missed it, Russell Bryant wrote a blog post on debugging the Asterisk dialplan with the Verbose() application. This is one of the recipes that will be features in the upcoming Asterisk Cookbook that we&amp;rsquo;re writing, and hoping to have done by the end of March!
+(In case you&amp;rsquo;ve missed all the cool stuff lately, the Asterisk Cookbook will also be released under the same Creative Commons license as the previous Asterisk books.</description>
     </item>
     
   </channel>

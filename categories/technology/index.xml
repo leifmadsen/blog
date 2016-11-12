@@ -14,7 +14,7 @@
       <pubDate>Sat, 24 Nov 2012 22:06:03 +0000</pubDate>
       
       <guid>http://blog.leifmadsen.com/blog/2012/11/24/brother-printer-doesnt-print-in-fedora-17/</guid>
-      <description>Tip: If your Brother printer won&rsquo;t print after installing the drivers, install glibc.i686
+      <description>Tip: If your Brother printer won&amp;rsquo;t print after installing the drivers, install glibc.i686
 Today ran into an issue with my new Brother MFC-7460DN (which is a really nice laser printer with auto-feed scanner, Scan-to-FTP which creates a PDF file, and other things). I had just recently done a clean install of Fedora 17, and I could install the RPMs (which are i386 files on my x86_64 based system), add the printer to CUPS and all sorts of things that looked fine.</description>
     </item>
     
@@ -24,7 +24,7 @@ Today ran into an issue with my new Brother MFC-7460DN (which is a really nice l
       <pubDate>Wed, 22 Aug 2012 14:10:46 +0000</pubDate>
       
       <guid>http://blog.leifmadsen.com/blog/2012/08/22/centos-5.8-on-aws-ec2-with-xen-kernel-pvgrub/</guid>
-      <description>At CoreDial we&rsquo;ve been using a lot of AWS EC2 lately for building sandbox infrastructure for testing. Part of the infrastructure is a voice platform utilizing Asterisk 1.4 and 1.8, and those voice platforms are using Zaptel and DAHDI respectively for use with MeetMe(). This hasn&rsquo;t been an issue previously as our testing has either been on bare metal, or in other virtual machine systems where installation of a base image and standard kernel are not an issue.</description>
+      <description>At CoreDial we&amp;rsquo;ve been using a lot of AWS EC2 lately for building sandbox infrastructure for testing. Part of the infrastructure is a voice platform utilizing Asterisk 1.4 and 1.8, and those voice platforms are using Zaptel and DAHDI respectively for use with MeetMe(). This hasn&amp;rsquo;t been an issue previously as our testing has either been on bare metal, or in other virtual machine systems where installation of a base image and standard kernel are not an issue.</description>
     </item>
     
     <item>
@@ -34,7 +34,7 @@ Today ran into an issue with my new Brother MFC-7460DN (which is a really nice l
       
       <guid>http://blog.leifmadsen.com/blog/2011/12/22/.bashrc-trick-for-git-repo-and-branch-information/</guid>
       <description>The other day I was talking to my friend Russell Bryant who pointed me to some .bashrc magic that would show me which branch I was currently working with inside a git repo on my system. I found it incredibly handy and have modified the ANSI colour coding slightly.
-export PS1='[\u@\h \[33[0;36m\]\W$(__git_ps1 &quot;\[33[0m\]\[33[0;33m\](%s)&quot;)\[33[0m\]]\$ '  On Fedora Russell mentioned that you need the bash-completion installed. We&rsquo;re unsure if you need anything on other distributions.</description>
+export PS1=&#39;[\u@\h \[33[0;36m\]\W$(__git_ps1 &amp;quot;\[33[0m\]\[33[0;33m\](%s)&amp;quot;)\[33[0m\]]\$ &#39;  On Fedora Russell mentioned that you need the bash-completion installed. We&amp;rsquo;re unsure if you need anything on other distributions.</description>
     </item>
     
     <item>
@@ -43,7 +43,7 @@ export PS1='[\u@\h \[33[0;36m\]\W$(__git_ps1 &quot;\[33[0m\]\[33[0;33m\](%s)&quo
       <pubDate>Tue, 22 Nov 2011 22:17:18 +0000</pubDate>
       
       <guid>http://blog.leifmadsen.com/blog/2011/11/22/relaying-smtp-via-gmail-or-google-apps-using-postfix/</guid>
-      <description>Today I had the need to start relaying mail through my Google Apps account since Super-Evil-Bastard-ITSPRogers blocks sending email (it&rsquo;s probably a good thing, however it&rsquo;s quite annoying when running some services from home).
+      <description>Today I had the need to start relaying mail through my Google Apps account since Super-Evil-Bastard-ITSPRogers blocks sending email (it&amp;rsquo;s probably a good thing, however it&amp;rsquo;s quite annoying when running some services from home).
 Found this article while Googling, and it worked great first try. I like when things are this easy.
 http://www.zulius.com/how-to/set-up-postfix-with-a-remote-smtp-relay-host/</description>
     </item>
@@ -55,7 +55,7 @@ http://www.zulius.com/how-to/set-up-postfix-with-a-remote-smtp-relay-host/</desc
       
       <guid>http://blog.leifmadsen.com/blog/2011/02/09/initial-impressions-of-qemu-kvm-virtualization-server/</guid>
       <description>The qemu-kvm (http://www.linux-kvm.org/page/Main_Page) package on Ubuntu 10.10 allows you to create virtual machines much like VMware, Xen, etc.
-My initial impressions are generally pretty positive. I like that it lets you install multiple operating systems (including MS Windows, which I haven&rsquo;t tried yet), and doesn&rsquo;t use a web interface like VMware Server 2 (which I&rsquo;ve found to be terribly crash prone, requiring a restart of the web interface at the least, and sometime the entire server needs to be restarted, often abruptly with the kill application).</description>
+My initial impressions are generally pretty positive. I like that it lets you install multiple operating systems (including MS Windows, which I haven&amp;rsquo;t tried yet), and doesn&amp;rsquo;t use a web interface like VMware Server 2 (which I&amp;rsquo;ve found to be terribly crash prone, requiring a restart of the web interface at the least, and sometime the entire server needs to be restarted, often abruptly with the kill application).</description>
     </item>
     
     <item>
@@ -64,8 +64,8 @@ My initial impressions are generally pretty positive. I like that it lets you in
       <pubDate>Thu, 27 Jan 2011 14:33:00 +0000</pubDate>
       
       <guid>http://blog.leifmadsen.com/blog/2011/01/27/asterisk-cookbook-is-on-we-think-/</guid>
-      <description>After finishing the first draft of Asterisk: The Definitive Guide (3rd Edition), I&rsquo;ve been a bit antsy with wanting to do some more writing. After about a week of a break (i.e. sleeping in past 7am for the first time in nearly a year), Russell Bryant and I have decided to team up on delivering the long awaited Asterisk Cookbook.
-To start off with, we&rsquo;ll be writing a short, 80-100 page eBook that will be distributed by O&rsquo;Reilly in all the formats they support (http://oreilly.</description>
+      <description>After finishing the first draft of Asterisk: The Definitive Guide (3rd Edition), I&amp;rsquo;ve been a bit antsy with wanting to do some more writing. After about a week of a break (i.e. sleeping in past 7am for the first time in nearly a year), Russell Bryant and I have decided to team up on delivering the long awaited Asterisk Cookbook.
+To start off with, we&amp;rsquo;ll be writing a short, 80-100 page eBook that will be distributed by O&amp;rsquo;Reilly in all the formats they support (http://oreilly.</description>
     </item>
     
     <item>
@@ -84,9 +84,9 @@ So after letting the guys at e4VoIP know what happened, they just drop shipped a
       <pubDate>Tue, 09 Feb 2010 22:10:44 +0000</pubDate>
       
       <guid>http://blog.leifmadsen.com/blog/2010/02/09/interview-from-wind-mobile-launch/</guid>
-      <description>I was interviewed at the Wind Mobile launch a couple of months ago, and was interviewed by an online publication. I didn&rsquo;t remember which online publication it was, so had forgotten all about it until I noticed someone had posted a link to it in the on-asterisk mailing list. Enjoy!
+      <description>I was interviewed at the Wind Mobile launch a couple of months ago, and was interviewed by an online publication. I didn&amp;rsquo;t remember which online publication it was, so had forgotten all about it until I noticed someone had posted a link to it in the on-asterisk mailing list. Enjoy!
 Wind Mobile launches with contract-free, unlimited plans
-Globalive&rsquo;s Wind Mobile brand is officially live in Toronto and will soon be opening its doors in Calgary and other Canadian cities.</description>
+Globalive&amp;rsquo;s Wind Mobile brand is officially live in Toronto and will soon be opening its doors in Calgary and other Canadian cities.</description>
     </item>
     
     <item>
@@ -95,7 +95,7 @@ Globalive&rsquo;s Wind Mobile brand is officially live in Toronto and will soon 
       <pubDate>Wed, 09 Dec 2009 23:01:04 +0000</pubDate>
       
       <guid>http://blog.leifmadsen.com/blog/2009/12/09/why-ndas-are-useless/</guid>
-      <description>Here is a post I came across from my twitter feed discussing why NDAs are essentially useless and unenforceable in the digital age. Many good points are made, and for the most part I agree with them. I&rsquo;m not quite so vehemently opposed to them as the author is as I know they aren&rsquo;t enforceable. The reason I sign them is a good faith gesture to my clients. I think we both know they aren&rsquo;t useful, but it gives the client a nice litmus test to determine whether I&rsquo;m just looking to steal ideas, or at least to say, &ldquo;Hey, it&rsquo;d be great if you didn&rsquo;t twitter or blog about anything you learn while looking at our system.</description>
+      <description>Here is a post I came across from my twitter feed discussing why NDAs are essentially useless and unenforceable in the digital age. Many good points are made, and for the most part I agree with them. I&amp;rsquo;m not quite so vehemently opposed to them as the author is as I know they aren&amp;rsquo;t enforceable. The reason I sign them is a good faith gesture to my clients. I think we both know they aren&amp;rsquo;t useful, but it gives the client a nice litmus test to determine whether I&amp;rsquo;m just looking to steal ideas, or at least to say, &amp;ldquo;Hey, it&amp;rsquo;d be great if you didn&amp;rsquo;t twitter or blog about anything you learn while looking at our system.</description>
     </item>
     
     <item>
@@ -104,7 +104,7 @@ Globalive&rsquo;s Wind Mobile brand is officially live in Toronto and will soon 
       <pubDate>Fri, 27 Nov 2009 13:19:44 +0000</pubDate>
       
       <guid>http://blog.leifmadsen.com/blog/2009/11/27/cisco-vpn-client-on-ubuntu-karmic-9.10/</guid>
-      <description>I have a client who I need to connect to via a Cisco VPN, and since I use Ubuntu as my primary OS on my MacBook Pro, I&rsquo;ve often needed to find some information about how to get the client working.
+      <description>I have a client who I need to connect to via a Cisco VPN, and since I use Ubuntu as my primary OS on my MacBook Pro, I&amp;rsquo;ve often needed to find some information about how to get the client working.
 I had previously found some information about patching on Ubuntu 9.04 and it worked great, but since updating to 9.10 I had the same compile time issues I had before, which makes sense since the kernel is different now.</description>
     </item>
     
@@ -114,7 +114,7 @@ I had previously found some information about patching on Ubuntu 9.04 and it wor
       <pubDate>Thu, 27 Aug 2009 14:02:24 +0000</pubDate>
       
       <guid>http://blog.leifmadsen.com/blog/2009/08/27/creating-vcards-with-qr-codes/</guid>
-      <description>Recently I&rsquo;ve been noticing a lot more use of QR codes around the internet. A QR code is those 2D matrices that look like a bar code, but aren&rsquo;t just the ordinary vertical lines that you would see on your box of cereal. These are a box that contain pixels that have been coded to contain information about pretty much anything. I&rsquo;ve been seeing some people using them for contact information, web links, and pretty much anything you can think of to distribute information.</description>
+      <description>Recently I&amp;rsquo;ve been noticing a lot more use of QR codes around the internet. A QR code is those 2D matrices that look like a bar code, but aren&amp;rsquo;t just the ordinary vertical lines that you would see on your box of cereal. These are a box that contain pixels that have been coded to contain information about pretty much anything. I&amp;rsquo;ve been seeing some people using them for contact information, web links, and pretty much anything you can think of to distribute information.</description>
     </item>
     
     <item>
@@ -124,10 +124,10 @@ I had previously found some information about patching on Ubuntu 9.04 and it wor
       
       <guid>http://blog.leifmadsen.com/blog/2009/07/30/suzanne-bowen-interviews-leif-madsen-asterisk-rockstar/</guid>
       <description>Today I had the privilege to be interviewed by Suzanne Bowen of DIDX.
-You can find the interview at http://www.didx.net/podcast/?p=episode&amp;name=2009-07-30_leifmadsenjul312009.mp3
+You can find the interview at http://www.didx.net/podcast/?p=episode&amp;amp;name=2009-07-30_leifmadsenjul312009.mp3
 Hope you enjoy!
 Here is a description of the interview:
-&ldquo;Truth is that I &ldquo;met&rdquo; the authors of the book &ldquo;Asterisk, the Future of Telephony&rdquo; when I was an English teacher and had volunteered over email to help edit the documentation. It was a joy to interview Leif Madsen. The Asterisk rockstar* shares with us the history of how he became interested in voice, telephony, Asterisk and open source.</description>
+&amp;ldquo;Truth is that I &amp;ldquo;met&amp;rdquo; the authors of the book &amp;ldquo;Asterisk, the Future of Telephony&amp;rdquo; when I was an English teacher and had volunteered over email to help edit the documentation. It was a joy to interview Leif Madsen. The Asterisk rockstar* shares with us the history of how he became interested in voice, telephony, Asterisk and open source.</description>
     </item>
     
   </channel>

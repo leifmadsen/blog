@@ -14,7 +14,7 @@
       <pubDate>Wed, 29 Sep 2010 14:25:50 +0000</pubDate>
       
       <guid>http://blog.leifmadsen.com/blog/2010/09/29/scheduling-automated-calls-between-two-participants-with-res_calendar/</guid>
-      <description>Here is a little dialplan snippet I wrote this morning for the next edition of the Asterisk book. While I&rsquo;m not going to delve into all the aspects of setting up res_calendar like we do in the book, I thought for those of you who might already have this working might enjoy it.
+      <description>Here is a little dialplan snippet I wrote this morning for the next edition of the Asterisk book. While I&amp;rsquo;m not going to delve into all the aspects of setting up res_calendar like we do in the book, I thought for those of you who might already have this working might enjoy it.
 (The calendaring modules are available in Asterisk 1.8, which is currently in release candidate status. Check out http://www.</description>
     </item>
     
@@ -24,8 +24,8 @@
       <pubDate>Mon, 23 Nov 2009 14:03:35 +0000</pubDate>
       
       <guid>http://blog.leifmadsen.com/blog/2009/11/23/starting-work-on-asterisk-tfot-3rd-edition/</guid>
-      <description>As many of you know, I&rsquo;m a co-author of Asterisk: The Future of Telephony. While my girlfriend is away in Mexico for a week with the girls, I&rsquo;m going to try and focus a bunch of attention on getting A:TFoT 3rd edition started (which is much overdue).
-If you have any ideas for topics you would like covered in the new edition, or something that wasn&rsquo;t covered as heavily as you wanted in the 1st and 2nd editions, feel free to let me know, and your ideas will be considered!</description>
+      <description>As many of you know, I&amp;rsquo;m a co-author of Asterisk: The Future of Telephony. While my girlfriend is away in Mexico for a week with the girls, I&amp;rsquo;m going to try and focus a bunch of attention on getting A:TFoT 3rd edition started (which is much overdue).
+If you have any ideas for topics you would like covered in the new edition, or something that wasn&amp;rsquo;t covered as heavily as you wanted in the 1st and 2nd editions, feel free to let me know, and your ideas will be considered!</description>
     </item>
     
     <item>
@@ -34,8 +34,8 @@ If you have any ideas for topics you would like covered in the new edition, or s
       <pubDate>Sat, 14 Nov 2009 15:07:19 +0000</pubDate>
       
       <guid>http://blog.leifmadsen.com/blog/2009/11/14/building-queues-with-asterisk/</guid>
-      <description>Wow it&rsquo;s been a long time since I&rsquo;ve update my blog. Well, lets do that! :)
-I&rsquo;ve just posted some documentation to the Asterisk issue tracker for review. It&rsquo;s about building queues with Asterisk. It is the start of probably 2 or 3 sets of documentation on building queues with Asterisk that I&rsquo;ll be submitting. You can find the documentation here for now:
+      <description>Wow it&amp;rsquo;s been a long time since I&amp;rsquo;ve update my blog. Well, lets do that! :)
+I&amp;rsquo;ve just posted some documentation to the Asterisk issue tracker for review. It&amp;rsquo;s about building queues with Asterisk. It is the start of probably 2 or 3 sets of documentation on building queues with Asterisk that I&amp;rsquo;ll be submitting. You can find the documentation here for now:
 https://issues.asterisk.org/view.php?id=16237
 This documentation will likely be merged into core Asterisk at some point in the near future (doc/ subdirectory of your Asterisk source) and likely posted on http://blogs.</description>
     </item>

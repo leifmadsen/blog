@@ -14,7 +14,7 @@
       <pubDate>Mon, 23 Jul 2012 19:14:45 +0000</pubDate>
       
       <guid>http://blog.leifmadsen.com/blog/2012/07/23/assign-unique-hostname-to-dhcp-client-with-dnsmasq/</guid>
-      <description>Today I&rsquo;ve been getting our lab environment setup with vagrant to auto-provision our lab servers with chef server in order to allow the development team to quickly and easily turn up and tear down web application servers.
+      <description>Today I&amp;rsquo;ve been getting our lab environment setup with vagrant to auto-provision our lab servers with chef server in order to allow the development team to quickly and easily turn up and tear down web application servers.
 Because when the server gets spun up with vagrant, it registers itself as a new node to the chef server using its hostname. Since using localhost for every node pretty much makes the chef server useless for more than 1 virtual machine at a time, I needed to figure out how to get dnsmasq to assign a unique hostname based on the IP address being provided by dnsmasq to the dhcp client.</description>
     </item>
     

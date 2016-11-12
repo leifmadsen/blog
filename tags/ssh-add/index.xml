@@ -16,7 +16,7 @@
       <guid>http://blog.leifmadsen.com/blog/2012/07/19/bash-creating-files-named-1-everywhere/</guid>
       <description>So I ran into something kind of stupid today :) Adding a little note for anyone who might run into a similar instance.
 I have some ssh-add stuff that gets run in my .bashrc file, but when I was outputting it, I was doing:
-ssh-add ~/.ssh/some_key &gt; /dev/null 2&amp;&gt;1  Note the 2&amp;&gt;1 at the end. That means to redirect output to a file named 1. You need to flip the &amp;&gt; into &gt;&amp;, so the fixed version looks like:</description>
+ssh-add ~/.ssh/some_key &amp;gt; /dev/null 2&amp;amp;&amp;gt;1  Note the 2&amp;amp;&amp;gt;1 at the end. That means to redirect output to a file named 1. You need to flip the &amp;amp;&amp;gt; into &amp;gt;&amp;amp;, so the fixed version looks like:</description>
     </item>
     
   </channel>

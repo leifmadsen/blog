@@ -14,8 +14,8 @@
       <pubDate>Thu, 15 Sep 2011 12:34:35 +0000</pubDate>
       
       <guid>http://blog.leifmadsen.com/blog/2011/09/15/return-just-pid-of-script-with-ps-and-awk/</guid>
-      <description>Today I ran into an issue where I am running a python script that I needed to get the process ID (PID) of, but that the process was being output with a space between &lsquo;python&rsquo; and the actual script name (in this case, jiraircbot.py).
-I&rsquo;m sure it&rsquo;s totally overkill and there is a much easier way I didn&rsquo;t find to do this, but after some scouring of The Google, I found something that works!</description>
+      <description>Today I ran into an issue where I am running a python script that I needed to get the process ID (PID) of, but that the process was being output with a space between &amp;lsquo;python&amp;rsquo; and the actual script name (in this case, jiraircbot.py).
+I&amp;rsquo;m sure it&amp;rsquo;s totally overkill and there is a much easier way I didn&amp;rsquo;t find to do this, but after some scouring of The Google, I found something that works!</description>
     </item>
     
   </channel>

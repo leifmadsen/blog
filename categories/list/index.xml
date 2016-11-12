@@ -14,7 +14,7 @@
       <pubDate>Thu, 19 Nov 2015 10:21:26 -0500</pubDate>
       
       <guid>http://blog.leifmadsen.com/blog/2015/11/19/rules-for-the-greater-goodness-a-product-development-guide/</guid>
-      <description>Overview This page documents and provides bullets about the way to approach (or avoid) building products. These are lessons we&rsquo;ve learned from previous encounters and which we wish to avoid in the future. By sticking firmly to these development rules, we avoid getting bogged down in complete system rearchitectures in the future. The means to a scaled end is to approach the first customer as all your customers.
+      <description>Overview This page documents and provides bullets about the way to approach (or avoid) building products. These are lessons we&amp;rsquo;ve learned from previous encounters and which we wish to avoid in the future. By sticking firmly to these development rules, we avoid getting bogged down in complete system rearchitectures in the future. The means to a scaled end is to approach the first customer as all your customers.
 Rules For The Greater Goodness A Product Development Guide  Java is strictly forbidden from any client or server side applications being built or interacted with.</description>
     </item>
     
