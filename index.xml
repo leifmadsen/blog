@@ -6,8 +6,18 @@
     <description>Recent content on Asterisk, and other worldly endeavours</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 11 Nov 2016 17:00:00 -0500</lastBuildDate>
+    <lastBuildDate>Thu, 01 Dec 2016 14:51:52 -0500</lastBuildDate>
     <atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Create network bridge with nmcli for libvirt</title>
+      <link>http://blog.leifmadsen.com/blog/2016/12/01/create-network-bridge-with-nmcli-for-libvirt/</link>
+      <pubDate>Thu, 01 Dec 2016 14:51:52 -0500</pubDate>
+      
+      <guid>http://blog.leifmadsen.com/blog/2016/12/01/create-network-bridge-with-nmcli-for-libvirt/</guid>
+      <description>In order to get libvirt working properly with bridged networking, we first need to configure our local network to have network bridge slaved to our wired ethernet adapter. I don&amp;rsquo;t have to set this up too often (as once I do, it just sits there running happily). Here are some basic steps I did to get this going locally.
+Add a bridge interface via Network Manager Before we get to adding a new network interface to libvirt, we&amp;rsquo;ll add our bridge interface to our host system via Network Manager.</description>
+    </item>
     
     <item>
       <title>TripleO: Using the fake_pxe driver with Ironic</title>
@@ -160,15 +170,6 @@ Phones arrived in some nice looking boxes.</description>
       
       <guid>http://blog.leifmadsen.com/blog/2012/08/22/selecting-chef-servers-with-environment-variables/</guid>
       <description>Today I got playing around with dynamically selecting different chef servers in preparation for migrating some of our nodes away from our chef-dev server to our chef-live server (which I&amp;rsquo;m currently in the process of building and populating with data). I had been talking in the #chef IRC channel a few weeks back about making things dynamic, or at least easily switchable, when using multiple chef servers for different groups of servers in an environment.</description>
-    </item>
-    
-    <item>
-      <title>CentOS 5.8 On AWS EC2 With Xen Kernel (PVGRUB)</title>
-      <link>http://blog.leifmadsen.com/blog/2012/08/22/centos-5.8-on-aws-ec2-with-xen-kernel-pvgrub/</link>
-      <pubDate>Wed, 22 Aug 2012 14:10:46 +0000</pubDate>
-      
-      <guid>http://blog.leifmadsen.com/blog/2012/08/22/centos-5.8-on-aws-ec2-with-xen-kernel-pvgrub/</guid>
-      <description>At CoreDial we&amp;rsquo;ve been using a lot of AWS EC2 lately for building sandbox infrastructure for testing. Part of the infrastructure is a voice platform utilizing Asterisk 1.4 and 1.8, and those voice platforms are using Zaptel and DAHDI respectively for use with MeetMe(). This hasn&amp;rsquo;t been an issue previously as our testing has either been on bare metal, or in other virtual machine systems where installation of a base image and standard kernel are not an issue.</description>
     </item>
     
   </channel>
