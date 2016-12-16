@@ -72,7 +72,7 @@
 <div class="content container">
   <div class="post">
     <h1 class="post-title">Creating virtual machines in libvirt with virt-install</h1>
-    <span class="post-date">Dec 16, 2016 &middot; 1 minute read &middot; <a href="http://blog.leifmadsen.com/blog/2016/12/16/creating-virtual-machines-in-libvirt-with-virt-install/#disqus_thread">Comments</a>
+    <span class="post-date">Dec 16, 2016 &middot; 4 minute read &middot; <a href="http://blog.leifmadsen.com/blog/2016/12/16/creating-virtual-machines-in-libvirt-with-virt-install/#disqus_thread">Comments</a>
     
     <br/>
     <a class="label" href="http://blog.leifmadsen.com/categories/libvirt">libvirt</a><a class="label" href="http://blog.leifmadsen.com/categories/linux">linux</a><a class="label" href="http://blog.leifmadsen.com/categories/virtualization">virtualization</a><a class="label" href="http://blog.leifmadsen.com/categories/console">console</a>
@@ -85,7 +85,141 @@ virtual machine instantitation without having to resort to anything outside of
 localhost.
 </p>
 
+<h1 id="preface">Preface</h1>
+
+<p>I have an LVM logical volume that hosts my virtual machines my M.2 disk drive,
+and everything else on the host running from the SSD. This means that I have
+<code>/var/lib/libvirt/images/</code> mounted to my M.2 drive, and everything else on the
+SSD (except for swap as well).</p>
+
+<p>Originally I was trying to get all this working with the user session, but the
+user doesn&rsquo;t have permission to make networking changes and to attach to the
+bridged network. A few things on the internet seemed to indicate running as a
+user wasn&rsquo;t possible because of this. I suspect there are some permissions
+things and SElinux tweaks I could do to make it work, but path of least
+resistence for now is how it&rsquo;ll be.</p>
+
+<p>That just means the following commands are going to be run with <code>sudo</code>. Of
+course if you are just going to use the <code>default</code> network then you might be
+able to get away with doing some of this in a user session.</p>
+
 <h1 id="using-virt-install">Using <code>virt-install</code></h1>
+
+<p>Using the <code>virt-install</code> application we can instantitate a virtual machine from
+the console. I got this all working by running the following command:</p>
+
+<pre><code>sudo virt-install --name testing --memory 1024 \
+    --disk /var/lib/libvirt/images/testing.qcow2,size=20,bus=virtio \
+    --cdrom /var/lib/libvirt/isos/centos7.iso \
+    --boot cdrom \
+    --network bridge=br0 \
+    --noautoconsole --vnc
+</code></pre>
+
+<p>If we look at this command, it defines the following things:</p>
+
+<ul>
+<li>virtual machine is named <code>testing</code></li>
+<li>we define 1024 MB of memory (RAM) to this VM</li>
+<li>the VM will use a qcow2 backing disk with a size of 20GB, over the virtio bus</li>
+<li>we&rsquo;ll mount the <code>centos7.iso</code> into the CDROM (boot media)</li>
+<li>tell the system to boot from the CDROM</li>
+<li>assign the network to bridge to interface <code>br0</code></li>
+<li>don&rsquo;t start a console, and enable VNC</li>
+</ul>
+
+<p>I originally did this so that 1) I could validate that everything was going to
+work :) and 2) so that I could perform a minimal install to generate my initial
+anaconda-ks.cfg file (kickstart file).</p>
+
+<p>After installation, I <code>scp</code>&rsquo;d the file down to my host and moved onto the next
+step. Automation ftw!</p>
+
+<h1 id="automating-our-virtual-machine-instantiation">Automating our virtual machine instantiation</h1>
+
+<p>Next up we just need to make a couple changes to our <code>virt-install</code> command so
+that we use the new kickstart file for our deployment. First though, we need to
+add a <code>reboot</code> value to the default <code>anaconda-ks.cfg</code> file.</p>
+
+<h2 id="kickstart-file">Kickstart file</h2>
+
+<p>The following is the default generated kickstart file from a CentOS 7 minimal
+install.</p>
+
+<p>You&rsquo;ll see that I&rsquo;ve added <code>reboot</code> right after the <code>clearpart</code> command, and
+just before the <code>%packages</code> command.</p>
+
+<pre><code>#version=DEVEL
+# System authorization information
+auth --enableshadow --passalgo=sha512
+# Use CDROM installation media
+cdrom
+# Use graphical install
+graphical
+# Run the Setup Agent on first boot
+firstboot --enable
+ignoredisk --only-use=vda
+# Keyboard layouts
+keyboard --vckeymap=us --xlayouts='us'
+# System language
+lang en_US.UTF-8
+
+# Network information
+network  --bootproto=dhcp --device=eth0 --ipv6=auto --activate
+network  --hostname=localhost.localdomain
+
+# Root password
+rootpw --iscrypted &lt;ENCRYPTED_PASSWORD&gt;
+# System services
+services --enabled=&quot;chronyd&quot;
+# System timezone
+timezone America/New_York --isUtc
+user --groups=wheel --name=stack --password=&lt;ENCRYPTED_PASSWORD&gt; --iscrypted --gecos=&quot;stack&quot;
+# System bootloader configuration
+bootloader --append=&quot; crashkernel=auto&quot; --location=mbr --boot-drive=vda
+autopart --type=lvm
+# Partition clearing information
+clearpart --none --initlabel
+
+reboot
+
+%packages
+@^minimal
+@core
+chrony
+kexec-tools
+
+%end
+
+%addon com_redhat_kdump --enable --reserve-mb='auto'
+
+%end
+
+%anaconda
+pwpolicy root --minlen=6 --minquality=50 --notstrict --nochanges --notempty
+pwpolicy user --minlen=6 --minquality=50 --notstrict --nochanges --notempty
+pwpolicy luks --minlen=6 --minquality=50 --notstrict --nochanges --notempty
+%end
+</code></pre>
+
+<h1 id="kickstart-based-virtual-machine-instantiation">Kickstart-based virtual machine instantiation</h1>
+
+<p>And here is our modified <code>virt-install</code> line which will get you a CentOS 7
+virtual machine created. Once the installation completes, the VM will shut
+down, and you can start it back up with <code>sudo virsh start &lt;machine_name&gt;</code>.</p>
+
+<p>Here is the command that will install your VM for you using the local kickstart
+file.</p>
+
+<pre><code>sudo virt-install --name testing --memory 1024 \
+    --disk /var/lib/libvirt/images/testing.qcow2,size=20,bus=virtio \
+    --location /var/lib/libvirt/isos/centos7.iso \
+    --boot cdrom \
+    --network bridge=br0 \
+    --noautoconsole --vnc \
+    --initrd-inject anaconda-ks.cfg \
+    --extra-args &quot;inst.ks=file:/anaconda-ks.cfg&quot;
+</code></pre>
   </div>
   <div id="disqus_thread"></div>
 </div>
