@@ -9,13 +9,31 @@
     <atom:link href="/categories/linux/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>Creating virtual machines in libvirt with virt-install</title>
+      <link>http://blog.leifmadsen.com/blog/2016/12/16/creating-virtual-machines-in-libvirt-with-virt-install/</link>
+      <pubDate>Fri, 16 Dec 2016 14:36:23 -0500</pubDate>
+      
+      <guid>http://blog.leifmadsen.com/blog/2016/12/16/creating-virtual-machines-in-libvirt-with-virt-install/</guid>
+      <description>&lt;p&gt;I&amp;rsquo;ve been wanting to automate my virtual machine instantiation for a while now,
+but I&amp;rsquo;ve always hated the idea of having to spin up multiple bits of
+infrastruction to deal with PXE booting, web server to host a kickstart file,
+etc. Luckily, I ran into some stuff today, and figured out how to automate
+virtual machine instantitation without having to resort to anything outside of
+localhost.
+&lt;/p&gt;</description>
+    </item>
+    
+    <item>
       <title>Initial Fedora libvirt Setup</title>
       <link>http://blog.leifmadsen.com/blog/2016/12/16/initial-fedora-libvirt-setup/</link>
       <pubDate>Fri, 16 Dec 2016 10:30:35 -0500</pubDate>
       
       <guid>http://blog.leifmadsen.com/blog/2016/12/16/initial-fedora-libvirt-setup/</guid>
-      <description>There are always a few things I need to do to get libvirt working with a non-root user on Fedora that I need to do, and typically results in some Google researching. Here are some notes of what I recently did to get my libvirt setup going on a new Fedora 25 installation and working with a non-root user.
-NOTE I found this tuxfixer blog post while doing some other research for this blog post, which basically does everything I&amp;rsquo;m about to say, but he does some other network setup and things I&amp;rsquo;d have done via nmcli and the console.</description>
+      <description>&lt;p&gt;There are always a few things I need to do to get libvirt working with a
+non-root user on Fedora that I need to do, and typically results in some Google
+researching. Here are some notes of what I recently did to get my libvirt setup
+going on a new Fedora 25 installation and working with a non-root user.
+&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -24,8 +42,12 @@ NOTE I found this tuxfixer blog post while doing some other research for this bl
       <pubDate>Thu, 01 Dec 2016 14:51:52 -0500</pubDate>
       
       <guid>http://blog.leifmadsen.com/blog/2016/12/01/create-network-bridge-with-nmcli-for-libvirt/</guid>
-      <description>In order to get libvirt working properly with bridged networking, we first need to configure our local network to have network bridge slaved to our wired ethernet adapter. I don&amp;rsquo;t have to set this up too often (as once I do, it just sits there running happily). Here are some basic steps I did to get this going locally.
-Add a bridge interface via Network Manager Before we get to adding a new network interface to libvirt, we&amp;rsquo;ll add our bridge interface to our host system via Network Manager.</description>
+      <description>&lt;p&gt;In order to get libvirt working properly with bridged networking, we first need
+to configure our local network to have network bridge slaved to our wired
+ethernet adapter. I don&amp;rsquo;t have to set this up too often (as once I do, it just
+sits there running happily). Here are some basic steps I did to get this going
+locally.
+&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -52,10 +74,10 @@ Additionally, it&amp;rsquo;s assumed you know what a TripleO is :)&lt;/p&gt;</de
       <pubDate>Tue, 27 Sep 2016 16:11:17 -0400</pubDate>
       
       <guid>http://blog.leifmadsen.com/blog/2016/09/27/a-console-obsession/</guid>
-      <description>It&amp;rsquo;s A Console Thing Recently I&amp;rsquo;ve gotten into running as many of my day-to-day applications in a Linux console. Thought I&amp;rsquo;d briefly share the applications I&amp;rsquo;ve been playing with.
- GerTTY (http://gertty.readthedocs.io/en/master/): Synchronize and follow Gerrit-hosted projects, and perform code reviews. It&amp;rsquo;s a bit slow, but generally works pretty well once you get over the initial sync.
-More Info: https://major.io/2016/05/11/getting-started-gertty/
- Weechat (https://weechat.org/): IRC client with tiling-window manager like options.</description>
+      <description>&lt;p&gt;Recently I&amp;rsquo;ve gotten into running as many of my day-to-day applications in a
+Linux console. Thought I&amp;rsquo;d briefly share the applications I&amp;rsquo;ve been playing
+with.
+&lt;/p&gt;</description>
     </item>
     
   </channel>

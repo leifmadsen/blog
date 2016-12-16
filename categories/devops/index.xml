@@ -14,8 +14,15 @@
       <pubDate>Fri, 30 Oct 2015 20:30:27 +0000</pubDate>
       
       <guid>http://blog.leifmadsen.com/blog/2015/10/30/docker-container-results-in-x509-failed-to-load-system-roots-and-no-roots-provided/</guid>
-      <description>We have a small system running in AWS as a CentOS 7 image. It has a few containers that we&amp;rsquo;re using to host a few Golang API proxies. We migrated a customers API proxy that was running on the local VM into a container, and spun it up. Upon testing, we ran into the following error:
-x509: failed to load system roots and no roots provided  We get that failure when trying to connect to an HTTPS endpoint (remote API that we&amp;rsquo;re proxying to Asterisk).</description>
+      <description>&lt;p&gt;We have a small system running in AWS as a CentOS 7 image. It has a few
+containers that we&amp;rsquo;re using to host a few Golang API proxies. We migrated a
+customers API proxy that was running on the local VM into a container, and spun
+it up. Upon testing, we ran into the following error:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;x509: failed to load system roots and no roots provided
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -24,8 +31,15 @@ x509: failed to load system roots and no roots provided  We get that failure whe
       <pubDate>Wed, 09 Sep 2015 21:20:40 +0000</pubDate>
       
       <guid>http://blog.leifmadsen.com/blog/2015/09/09/configuring-powerline-to-show-working-git-branch/</guid>
-      <description>So the documentation for Powerline kind of sucks. I followed this pretty good article on getting started with it. First thing I noticed however is that the if statement on the article doesn&amp;rsquo;t work if you don&amp;rsquo;t have powerline installed (which kind of defeats the purpose of having the if statement there at all).
-# if powerline is installed, then use it command -v powerline-daemon &amp;amp;&amp;gt;/dev/null if [ $? -eq 0 ]; then powerline-daemon -q POWERLINE_BASH_CONTINUATION=1 POWERLINE_BASH_SELECT=1 .</description>
+      <description>&lt;p&gt;So the documentation for
+&lt;a href=&#34;http://powerline.readthedocs.org/en/latest/index.html&#34;&gt;Powerline&lt;/a&gt; kind of
+sucks. I followed
+&lt;a href=&#34;http://fedoramagazine.org/add-power-terminal-powerline&#34;&gt;this&lt;/a&gt; pretty good
+article on getting started with it. First thing I noticed however is that the
+&lt;code&gt;if&lt;/code&gt; statement on the article doesn&amp;rsquo;t work if you don&amp;rsquo;t have powerline
+installed (which kind of defeats the purpose of having the &lt;code&gt;if&lt;/code&gt; statement there
+at all).
+&lt;/p&gt;</description>
     </item>
     
     <item>
