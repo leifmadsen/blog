@@ -179,13 +179,13 @@ interface we just created above.
 As before, we'll review what our networking configuration starting point is.
 
 ```bash
-virsh list --all
- Id    Name                           State
- ----------------------------------------------------
-
+virsh net-list --all
+ Name                 State      Autostart     Persistent
+ ----------------------------------------------------------
+  default              active     yes           yes
 ```
 
-In this case we don't have any networks.
+In this case we only have the default NAT networks.
 
 ## Create network interface
 
