@@ -76,6 +76,23 @@
     
     <div class="post">
       <h1 class="post-title">
+        <a href="http://blog.leifmadsen.com/blog/2014/07/25/rumors-of-my-death-have-been-greatly-exaggerated/">Rumors of my death have been greatly exaggerated</a>
+      </h1>
+      <span class="post-date">Jul 25, 2014 &middot; 2 minute read &middot; <a href="http://blog.leifmadsen.com/blog/2014/07/25/rumors-of-my-death-have-been-greatly-exaggerated/#disqus_thread">Comments</a>
+      
+      <br/>
+      <a class="label" href="http://blog.leifmadsen.com/categories/life">Life</a><a class="label" href="http://blog.leifmadsen.com/categories/musings">Musings</a>
+      </span>
+      
+      It&rsquo;s been way too long since I&rsquo;ve blogged. And this post isn&rsquo;t going to be all the impressive unfortunately. However, I recently have been running a BBS and some friends and I have been playing LORD.
+We&rsquo;ve been playing this for the last few months, and I think I&rsquo;m going to run a tournament. Perhaps with some sort of buy in like $10 or something, winner takes all.
+Going to build it out in such a way that first person to beat the dragon 3 times will win the game, and at that point that person will win the pot.
+      <a href="http://blog.leifmadsen.com/blog/2014/07/25/rumors-of-my-death-have-been-greatly-exaggerated/">Read On &rarr;</a>
+      
+    </div>
+    
+    <div class="post">
+      <h1 class="post-title">
         <a href="http://blog.leifmadsen.com/blog/2013/05/16/asterisk-the-definitive-guide-4th-edition-goes-to-print/">Asterisk: The Definitive Guide 4th Edition goes to print</a>
       </h1>
       <span class="post-date">May 16, 2013 &middot; 1 minute read &middot; <a href="http://blog.leifmadsen.com/blog/2013/05/16/asterisk-the-definitive-guide-4th-edition-goes-to-print/#disqus_thread">Comments</a>
@@ -215,23 +232,6 @@ I&rsquo;ll come back later with another article on my installation issues with j
 myfile.spec: E: non-utf8-spec-file myfile.spec  After Googling, I ran into a way of finding the non-compliant characters.
 $ iconv -f ISO-8859-8 -t UTF-8 myfile.spec &gt; converted.spec $ diff -u myfile.spec converted.spec  (Answer thanks to Dominique Leuenberger @ http://lists.opensuse.org/opensuse-packaging/2011-04/msg00005.html)
       
-      
-    </div>
-    
-    <div class="post">
-      <h1 class="post-title">
-        <a href="http://blog.leifmadsen.com/blog/2012/01/16/converting-multiple-exten--lines-to-using-same--in-asterisk-dialplan/">Converting multiple exten =&gt; lines to using same =&gt; in Asterisk dialplan</a>
-      </h1>
-      <span class="post-date">Jan 16, 2012 &middot; 1 minute read &middot; <a href="http://blog.leifmadsen.com/blog/2012/01/16/converting-multiple-exten--lines-to-using-same--in-asterisk-dialplan/#disqus_thread">Comments</a>
-      
-      <br/>
-      <a class="label" href="http://blog.leifmadsen.com/categories/asterisk">Asterisk</a><a class="label" href="http://blog.leifmadsen.com/categories/programming">Programming</a>
-      </span>
-      
-      Last week I wanted to start changing some 1.4 based Asterisk dialplan to a 1.8 based Asterisk system, and in that process wanted to convert lines like:
-exten =&gt; _NXXNXXXXXX,1,NoOp() exten =&gt; _NXXNXXXXXX,2,GotoIf($[...]?reject,1) exten =&gt; _NXXNXXXXXX,3,Dial(SIP/foo/${EXTEN}) ...  into using the same =&gt; prefix:
-exten =&gt; _NXXNXXXXXX,1,NoOp() same =&gt; n,GotoIf($[...]?reject,1) same =&gt; n,Dial(SIP/foo/${EXTEN})  In order to do that, Mike King helped me out with the following regular expressing which I used in vim:
-      <a href="http://blog.leifmadsen.com/blog/2012/01/16/converting-multiple-exten--lines-to-using-same--in-asterisk-dialplan/">Read On &rarr;</a>
       
     </div>
     
