@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Openstack on Asterisk, and other worldly endeavours</title>
+    <link>http://blog.leifmadsen.com/categories/openstack/index.xml</link>
+    <description>Recent content in Openstack on Asterisk, and other worldly endeavours</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <atom:link href="/categories/openstack/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>TripleO: Consuming Composable Roles</title>
+      <link>http://blog.leifmadsen.com/blog/2016/10/03/tripleo-consuming-composable-roles/</link>
+      <pubDate>Mon, 03 Oct 2016 15:34:08 -0400</pubDate>
+      
+      <guid>http://blog.leifmadsen.com/blog/2016/10/03/tripleo-consuming-composable-roles/</guid>
+      <description>&lt;p&gt;So last week I started to look into learning the new &lt;a href=&#34;http://hardysteven.blogspot.ca/2016/08/tripleo-composable-services-101.html&#34;&gt;composable services and
+roles&lt;/a&gt;
+that was added to Newton. I previously learned a little bit about deploying
+OpenStack clouds when I did training after joining Red Hat, but that was based
+on Liberty, and a lot has changed in TripleO since that time.
+
+The first thing was learning what composable services and roles are, and
+generally what they are intended to solve. I don&amp;rsquo;t want to get into that
+here, so I&amp;rsquo;d encourage you to go read some links first and then come back here.
+Additionally, it&amp;rsquo;s assumed you know what a TripleO is :)&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

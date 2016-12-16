@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Xen on Asterisk, and other worldly endeavours</title>
+    <link>http://blog.leifmadsen.com/tags/xen/index.xml</link>
+    <description>Recent content in Xen on Asterisk, and other worldly endeavours</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <atom:link href="/tags/xen/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>CentOS 5.8 On AWS EC2 With Xen Kernel (PVGRUB)</title>
+      <link>http://blog.leifmadsen.com/blog/2012/08/22/centos-5.8-on-aws-ec2-with-xen-kernel-pvgrub/</link>
+      <pubDate>Wed, 22 Aug 2012 14:10:46 +0000</pubDate>
+      
+      <guid>http://blog.leifmadsen.com/blog/2012/08/22/centos-5.8-on-aws-ec2-with-xen-kernel-pvgrub/</guid>
+      <description>At CoreDial we&amp;rsquo;ve been using a lot of AWS EC2 lately for building sandbox infrastructure for testing. Part of the infrastructure is a voice platform utilizing Asterisk 1.4 and 1.8, and those voice platforms are using Zaptel and DAHDI respectively for use with MeetMe(). This hasn&amp;rsquo;t been an issue previously as our testing has either been on bare metal, or in other virtual machine systems where installation of a base image and standard kernel are not an issue.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Technology on Asterisk, and other worldly endeavours</title>
+    <link>http://blog.leifmadsen.com/tags/technology/index.xml</link>
+    <description>Recent content in Technology on Asterisk, and other worldly endeavours</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <atom:link href="/tags/technology/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Commodore 64 Turns 30 This Year</title>
+      <link>http://blog.leifmadsen.com/blog/2012/01/09/commodore-64-turns-30-this-year/</link>
+      <pubDate>Mon, 09 Jan 2012 13:05:51 +0000</pubDate>
+      
+      <guid>http://blog.leifmadsen.com/blog/2012/01/09/commodore-64-turns-30-this-year/</guid>
+      <description>Having found an article about the Commodore 64 turning 30 this year, I reflected back in a comment on that page about what it is like to be only 1 year older than the Commodore 64, a computer which spiked my interest in technology away from a games system to something much more. The original article is available at http://www.linuxjournal.com/content/commodor-64-30-year
+&amp;ldquo;I just turned 31 a couple of days ago on January 7th, and when I was in grade 2 (about 8-9 years old I guess) I started getting interested in the Commodore 64s we had at our school that were plentiful, but rarely used.</description>
+    </item>
+    
+    <item>
+      <title>Why NDAs are Useless</title>
+      <link>http://blog.leifmadsen.com/blog/2009/12/09/why-ndas-are-useless/</link>
+      <pubDate>Wed, 09 Dec 2009 23:01:04 +0000</pubDate>
+      
+      <guid>http://blog.leifmadsen.com/blog/2009/12/09/why-ndas-are-useless/</guid>
+      <description>Here is a post I came across from my twitter feed discussing why NDAs are essentially useless and unenforceable in the digital age. Many good points are made, and for the most part I agree with them. I&amp;rsquo;m not quite so vehemently opposed to them as the author is as I know they aren&amp;rsquo;t enforceable. The reason I sign them is a good faith gesture to my clients. I think we both know they aren&amp;rsquo;t useful, but it gives the client a nice litmus test to determine whether I&amp;rsquo;m just looking to steal ideas, or at least to say, &amp;ldquo;Hey, it&amp;rsquo;d be great if you didn&amp;rsquo;t twitter or blog about anything you learn while looking at our system.</description>
+    </item>
+    
+  </channel>
+</rss>

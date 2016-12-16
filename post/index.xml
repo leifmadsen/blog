@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on Asterisk, and other worldly endeavours</title>
+    <link>http://blog.leifmadsen.com/post/index.xml</link>
+    <description>Recent content in Posts on Asterisk, and other worldly endeavours</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 16 Dec 2016 10:30:35 -0500</lastBuildDate>
+    <atom:link href="/post/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Initial Fedora libvirt Setup</title>
+      <link>http://blog.leifmadsen.com/blog/2016/12/16/initial-fedora-libvirt-setup/</link>
+      <pubDate>Fri, 16 Dec 2016 10:30:35 -0500</pubDate>
+      
+      <guid>http://blog.leifmadsen.com/blog/2016/12/16/initial-fedora-libvirt-setup/</guid>
+      <description>There are always a few things I need to do to get libvirt working with a non-root user on Fedora that I need to do, and typically results in some Google researching. Here are some notes of what I recently did to get my libvirt setup going on a new Fedora 25 installation and working with a non-root user.
+NOTE I found this tuxfixer blog post while doing some other research for this blog post, which basically does everything I&amp;rsquo;m about to say, but he does some other network setup and things I&amp;rsquo;d have done via nmcli and the console.</description>
+    </item>
+    
+    <item>
+      <title>Create network bridge with nmcli for libvirt</title>
+      <link>http://blog.leifmadsen.com/blog/2016/12/01/create-network-bridge-with-nmcli-for-libvirt/</link>
+      <pubDate>Thu, 01 Dec 2016 14:51:52 -0500</pubDate>
+      
+      <guid>http://blog.leifmadsen.com/blog/2016/12/01/create-network-bridge-with-nmcli-for-libvirt/</guid>
+      <description>In order to get libvirt working properly with bridged networking, we first need to configure our local network to have network bridge slaved to our wired ethernet adapter. I don&amp;rsquo;t have to set this up too often (as once I do, it just sits there running happily). Here are some basic steps I did to get this going locally.
+Add a bridge interface via Network Manager Before we get to adding a new network interface to libvirt, we&amp;rsquo;ll add our bridge interface to our host system via Network Manager.</description>
+    </item>
+    
+    <item>
+      <title>TripleO: Using the fake_pxe driver with Ironic</title>
+      <link>http://blog.leifmadsen.com/blog/2016/11/11/tripleo-using-the-fake_pxe-driver-with-ironic/</link>
+      <pubDate>Fri, 11 Nov 2016 17:00:00 -0500</pubDate>
+      
+      <guid>http://blog.leifmadsen.com/blog/2016/11/11/tripleo-using-the-fake_pxe-driver-with-ironic/</guid>
+      <description>I&amp;rsquo;ve been working on testing things with TripleO and normally I use TripleO Quickstart to spin things up in a virtual environment.
+Often when doing NFV work though, you need things that can&amp;rsquo;t be used in a virtual environment (such as DPDK, SR-IOV, etc) so you need some baremetal nodes.
+In my home lab environment though, I don&amp;rsquo;t have the luxury of IPMI, so I need to make use of the fake_pxe driver in Ironic, which allows for standard PXE control, but requires you to deal with powering on and off the machines manually.</description>
+    </item>
+    
+    <item>
+      <title>TripleO: Consuming Composable Roles</title>
+      <link>http://blog.leifmadsen.com/blog/2016/10/03/tripleo-consuming-composable-roles/</link>
+      <pubDate>Mon, 03 Oct 2016 15:34:08 -0400</pubDate>
+      
+      <guid>http://blog.leifmadsen.com/blog/2016/10/03/tripleo-consuming-composable-roles/</guid>
+      <description>&lt;p&gt;So last week I started to look into learning the new &lt;a href=&#34;http://hardysteven.blogspot.ca/2016/08/tripleo-composable-services-101.html&#34;&gt;composable services and
+roles&lt;/a&gt;
+that was added to Newton. I previously learned a little bit about deploying
+OpenStack clouds when I did training after joining Red Hat, but that was based
+on Liberty, and a lot has changed in TripleO since that time.
+
+The first thing was learning what composable services and roles are, and
+generally what they are intended to solve. I don&amp;rsquo;t want to get into that
+here, so I&amp;rsquo;d encourage you to go read some links first and then come back here.
+Additionally, it&amp;rsquo;s assumed you know what a TripleO is :)&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>A Console Obsession</title>
+      <link>http://blog.leifmadsen.com/blog/2016/09/27/a-console-obsession/</link>
+      <pubDate>Tue, 27 Sep 2016 16:11:17 -0400</pubDate>
+      
+      <guid>http://blog.leifmadsen.com/blog/2016/09/27/a-console-obsession/</guid>
+      <description>It&amp;rsquo;s A Console Thing Recently I&amp;rsquo;ve gotten into running as many of my day-to-day applications in a Linux console. Thought I&amp;rsquo;d briefly share the applications I&amp;rsquo;ve been playing with.
+ GerTTY (http://gertty.readthedocs.io/en/master/): Synchronize and follow Gerrit-hosted projects, and perform code reviews. It&amp;rsquo;s a bit slow, but generally works pretty well once you get over the initial sync.
+More Info: https://major.io/2016/05/11/getting-started-gertty/
+ Weechat (https://weechat.org/): IRC client with tiling-window manager like options.</description>
+    </item>
+    
+    <item>
+      <title>Yes I&#39;m still alive...</title>
+      <link>http://blog.leifmadsen.com/blog/2016/07/08/yes-im-still-alive.../</link>
+      <pubDate>Fri, 08 Jul 2016 16:41:52 -0400</pubDate>
+      
+      <guid>http://blog.leifmadsen.com/blog/2016/07/08/yes-im-still-alive.../</guid>
+      <description>It&amp;rsquo;s been a while since I&amp;rsquo;ve posted, and I&amp;rsquo;ll update this blog post soon. I just needed to get my blog set back up so I could post via Hugo :)</description>
+    </item>
+    
+    <item>
+      <title>Rules For The Greater Goodness; A Product Development Guide</title>
+      <link>http://blog.leifmadsen.com/blog/2015/11/19/rules-for-the-greater-goodness-a-product-development-guide/</link>
+      <pubDate>Thu, 19 Nov 2015 10:21:26 -0500</pubDate>
+      
+      <guid>http://blog.leifmadsen.com/blog/2015/11/19/rules-for-the-greater-goodness-a-product-development-guide/</guid>
+      <description>Overview This page documents and provides bullets about the way to approach (or avoid) building products. These are lessons we&amp;rsquo;ve learned from previous encounters and which we wish to avoid in the future. By sticking firmly to these development rules, we avoid getting bogged down in complete system rearchitectures in the future. The means to a scaled end is to approach the first customer as all your customers.
+Rules For The Greater Goodness A Product Development Guide  Java is strictly forbidden from any client or server side applications being built or interacted with.</description>
+    </item>
+    
+    <item>
+      <title>Asterisk Docker Container: Phase 1</title>
+      <link>http://blog.leifmadsen.com/blog/2015/11/10/asterisk-docker-container-phase-1/</link>
+      <pubDate>Tue, 10 Nov 2015 19:41:55 -0500</pubDate>
+      
+      <guid>http://blog.leifmadsen.com/blog/2015/11/10/asterisk-docker-container-phase-1/</guid>
+      <description>AstriCon At AstriCon 2015 this year, there was a lot (and I mean a lot) of discussion around microservices (Docker), and what effort is required over the next year by the development community in order to make Asterisk better suited to running in that environment.
+One of the first things is, clearly, to have a container image that Asterisk runs in. I&amp;rsquo;ve done this a few times now, but having something that can be passed over to the official Asterisk Git repository, and which everyone can contribute to, utilize and play with would be the goal here.</description>
+    </item>
+    
+    <item>
+      <title>Docker container results in x509: failed to load system roots and no roots provided</title>
+      <link>http://blog.leifmadsen.com/blog/2015/10/30/docker-container-results-in-x509-failed-to-load-system-roots-and-no-roots-provided/</link>
+      <pubDate>Fri, 30 Oct 2015 20:30:27 +0000</pubDate>
+      
+      <guid>http://blog.leifmadsen.com/blog/2015/10/30/docker-container-results-in-x509-failed-to-load-system-roots-and-no-roots-provided/</guid>
+      <description>We have a small system running in AWS as a CentOS 7 image. It has a few containers that we&amp;rsquo;re using to host a few Golang API proxies. We migrated a customers API proxy that was running on the local VM into a container, and spun it up. Upon testing, we ran into the following error:
+x509: failed to load system roots and no roots provided  We get that failure when trying to connect to an HTTPS endpoint (remote API that we&amp;rsquo;re proxying to Asterisk).</description>
+    </item>
+    
+    <item>
+      <title>Configuring powerline to show working Git branch</title>
+      <link>http://blog.leifmadsen.com/blog/2015/09/09/configuring-powerline-to-show-working-git-branch/</link>
+      <pubDate>Wed, 09 Sep 2015 21:20:40 +0000</pubDate>
+      
+      <guid>http://blog.leifmadsen.com/blog/2015/09/09/configuring-powerline-to-show-working-git-branch/</guid>
+      <description>So the documentation for Powerline kind of sucks. I followed this pretty good article on getting started with it. First thing I noticed however is that the if statement on the article doesn&amp;rsquo;t work if you don&amp;rsquo;t have powerline installed (which kind of defeats the purpose of having the if statement there at all).
+# if powerline is installed, then use it command -v powerline-daemon &amp;amp;&amp;gt;/dev/null if [ $? -eq 0 ]; then powerline-daemon -q POWERLINE_BASH_CONTINUATION=1 POWERLINE_BASH_SELECT=1 .</description>
+    </item>
+    
+    <item>
+      <title>Rumors of my death have been greatly exaggerated</title>
+      <link>http://blog.leifmadsen.com/blog/2014/07/25/rumors-of-my-death-have-been-greatly-exaggerated/</link>
+      <pubDate>Fri, 25 Jul 2014 02:49:12 +0000</pubDate>
+      
+      <guid>http://blog.leifmadsen.com/blog/2014/07/25/rumors-of-my-death-have-been-greatly-exaggerated/</guid>
+      <description>It&amp;rsquo;s been way too long since I&amp;rsquo;ve blogged. And this post isn&amp;rsquo;t going to be all the impressive unfortunately. However, I recently have been running a BBS and some friends and I have been playing LORD.
+We&amp;rsquo;ve been playing this for the last few months, and I think I&amp;rsquo;m going to run a tournament. Perhaps with some sort of buy in like $10 or something, winner takes all.
+Going to build it out in such a way that first person to beat the dragon 3 times will win the game, and at that point that person will win the pot.</description>
+    </item>
+    
+    <item>
+      <title>Asterisk: The Definitive Guide 4th Edition goes to print</title>
+      <link>http://blog.leifmadsen.com/blog/2013/05/16/asterisk-the-definitive-guide-4th-edition-goes-to-print/</link>
+      <pubDate>Thu, 16 May 2013 13:31:46 +0000</pubDate>
+      
+      <guid>http://blog.leifmadsen.com/blog/2013/05/16/asterisk-the-definitive-guide-4th-edition-goes-to-print/</guid>
+      <description>Howdy folks,
+Sorry for the lack of updates lately. I&amp;rsquo;ve recently (December 2012) started at Thinking Phone Networks as the Lead UC Systems Engineer, and we&amp;rsquo;ve been incredibly busy there. In addition, the authors and I had been working on the final touches to the 4th edition of Asterisk: The Definitive Guide, which documents Asterisk 11 LTS.
+Late last week, the book went to print, and should start to appear on store shelves and start shipping from Amazon and other locations within the next 6-8 weeks I believe.</description>
+    </item>
+    
+    <item>
+      <title>Brother printer doesn&#39;t print in Fedora 17</title>
+      <link>http://blog.leifmadsen.com/blog/2012/11/24/brother-printer-doesnt-print-in-fedora-17/</link>
+      <pubDate>Sat, 24 Nov 2012 22:06:03 +0000</pubDate>
+      
+      <guid>http://blog.leifmadsen.com/blog/2012/11/24/brother-printer-doesnt-print-in-fedora-17/</guid>
+      <description>Tip: If your Brother printer won&amp;rsquo;t print after installing the drivers, install glibc.i686
+Today ran into an issue with my new Brother MFC-7460DN (which is a really nice laser printer with auto-feed scanner, Scan-to-FTP which creates a PDF file, and other things). I had just recently done a clean install of Fedora 17, and I could install the RPMs (which are i386 files on my x86_64 based system), add the printer to CUPS and all sorts of things that looked fine.</description>
+    </item>
+    
+    <item>
+      <title>Digium D40 and D70 Phone Unboxing</title>
+      <link>http://blog.leifmadsen.com/blog/2012/10/11/digium-d40-and-d70-phone-unboxing/</link>
+      <pubDate>Thu, 11 Oct 2012 20:43:35 +0000</pubDate>
+      
+      <guid>http://blog.leifmadsen.com/blog/2012/10/11/digium-d40-and-d70-phone-unboxing/</guid>
+      <description>Today I received a couple of phones from Digium; the D40 and D70. I&amp;rsquo;ll be using these phones for testing and documentation in the 4th edition of Asterisk: The Definitive Guide (which Jim Van Meggelen, Russell Bryant and myself are working on right now).
+Here is my unboxing of the phones and some commentary about my initial impressions of the hardware itself.
+[caption id=&amp;ldquo;attachment_484&amp;rdquo; align=&amp;ldquo;aligncenter&amp;rdquo; width=&amp;ldquo;300&amp;rdquo;] Pretty boxes![/caption]
+Phones arrived in some nice looking boxes.</description>
+    </item>
+    
+    <item>
+      <title>Selecting Chef Servers With Environment Variables</title>
+      <link>http://blog.leifmadsen.com/blog/2012/08/22/selecting-chef-servers-with-environment-variables/</link>
+      <pubDate>Wed, 22 Aug 2012 18:49:43 +0000</pubDate>
+      
+      <guid>http://blog.leifmadsen.com/blog/2012/08/22/selecting-chef-servers-with-environment-variables/</guid>
+      <description>Today I got playing around with dynamically selecting different chef servers in preparation for migrating some of our nodes away from our chef-dev server to our chef-live server (which I&amp;rsquo;m currently in the process of building and populating with data). I had been talking in the #chef IRC channel a few weeks back about making things dynamic, or at least easily switchable, when using multiple chef servers for different groups of servers in an environment.</description>
+    </item>
+    
+  </channel>
+</rss>

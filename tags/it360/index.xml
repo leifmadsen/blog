@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>It360 on Asterisk, and other worldly endeavours</title>
+    <link>http://blog.leifmadsen.com/tags/it360/index.xml</link>
+    <description>Recent content in It360 on Asterisk, and other worldly endeavours</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <atom:link href="/tags/it360/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Speaking @ IT360, April 7th, 2010</title>
+      <link>http://blog.leifmadsen.com/blog/2010/03/17/speaking--it360-april-7th-2010/</link>
+      <pubDate>Wed, 17 Mar 2010 15:27:15 +0000</pubDate>
+      
+      <guid>http://blog.leifmadsen.com/blog/2010/03/17/speaking--it360-april-7th-2010/</guid>
+      <description>I will be speaking again at the IT360 conference in Toronto, ON, Canada in the Asterisk &amp;amp; Open Telephony portion of the conference. IT360 is on April 7 this year (2010) being held at the Metro Toronto Convention Centre. I will be speaking on the Super Panel – Enterprise Use, Security, Virtual Hosting, Mobility &amp;amp; More along with John Todd, Kevin Fleming, Steve Sokol, and others.
+My primary focus will likely be on the large scale call centre implementations I&amp;rsquo;ve done, along with clustering, database integration, and distributed information.</description>
+    </item>
+    
+  </channel>
+</rss>

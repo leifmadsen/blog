@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Unixporn on Asterisk, and other worldly endeavours</title>
+    <link>http://blog.leifmadsen.com/categories/unixporn/index.xml</link>
+    <description>Recent content in Unixporn on Asterisk, and other worldly endeavours</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <atom:link href="/categories/unixporn/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>A Console Obsession</title>
+      <link>http://blog.leifmadsen.com/blog/2016/09/27/a-console-obsession/</link>
+      <pubDate>Tue, 27 Sep 2016 16:11:17 -0400</pubDate>
+      
+      <guid>http://blog.leifmadsen.com/blog/2016/09/27/a-console-obsession/</guid>
+      <description>It&amp;rsquo;s A Console Thing Recently I&amp;rsquo;ve gotten into running as many of my day-to-day applications in a Linux console. Thought I&amp;rsquo;d briefly share the applications I&amp;rsquo;ve been playing with.
+ GerTTY (http://gertty.readthedocs.io/en/master/): Synchronize and follow Gerrit-hosted projects, and perform code reviews. It&amp;rsquo;s a bit slow, but generally works pretty well once you get over the initial sync.
+More Info: https://major.io/2016/05/11/getting-started-gertty/
+ Weechat (https://weechat.org/): IRC client with tiling-window manager like options.</description>
+    </item>
+    
+  </channel>
+</rss>

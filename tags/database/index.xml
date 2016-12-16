@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Database on Asterisk, and other worldly endeavours</title>
+    <link>http://blog.leifmadsen.com/tags/database/index.xml</link>
+    <description>Recent content in Database on Asterisk, and other worldly endeavours</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <atom:link href="/tags/database/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Ask the Expert!</title>
+      <link>http://blog.leifmadsen.com/blog/2009/09/08/ask-the-expert/</link>
+      <pubDate>Tue, 08 Sep 2009 13:12:20 +0000</pubDate>
+      
+      <guid>http://blog.leifmadsen.com/blog/2009/09/08/ask-the-expert/</guid>
+      <description>_UPDATE (October 7, 2009):
+This post didn&amp;rsquo;t quite generate the type of questions I was hoping for, and because of that I&amp;rsquo;m not able to generate a knowledgeable and informed response that would be overtly useful. However, I will leave this topic open for the next little while in the hopes some more questions can be generated. It is entirely possible I haven&amp;rsquo;t been specific enough in my request for the type of questions I&amp;rsquo;d like to answer, so here goes.</description>
+    </item>
+    
+    <item>
+      <title>Importing Master.csv into MySQL CDR table</title>
+      <link>http://blog.leifmadsen.com/blog/2009/07/29/importing-master.csv-into-mysql-cdr-table/</link>
+      <pubDate>Wed, 29 Jul 2009 12:49:51 +0000</pubDate>
+      
+      <guid>http://blog.leifmadsen.com/blog/2009/07/29/importing-master.csv-into-mysql-cdr-table/</guid>
+      <description>Edit: I have updated the original post, which contained &amp;lsquo;custom&amp;rsquo; field name in the database instead of &amp;lsquo;userfield&amp;rsquo; which is a field Asterisk-Stat uses. Edit2: Updated the field from &amp;lsquo;amaflag&amp;rsquo; to &amp;lsquo;amaflags&amp;rsquo; thanks to Justin. Edit3: Updated the script based on feedback from Mads Peter Nielsen and Gabriel. Thanks!
+ Today I had a client that had a need to run some statistical analysis on their data, but since they didn&amp;rsquo;t have anything like that developed, I had to go on a search to find them something.</description>
+    </item>
+    
+  </channel>
+</rss>

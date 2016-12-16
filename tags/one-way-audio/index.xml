@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>One Way Audio on Asterisk, and other worldly endeavours</title>
+    <link>http://blog.leifmadsen.com/tags/one-way-audio/index.xml</link>
+    <description>Recent content in One Way Audio on Asterisk, and other worldly endeavours</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <atom:link href="/tags/one-way-audio/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Issues: ast_rtp_senddigit_begin: Don&#39;t know how to represent &#39;f&#39; (one way audio)</title>
+      <link>http://blog.leifmadsen.com/blog/2009/07/18/issues-ast_rtp_senddigit_begin-dont-know-how-to-represent-f-one-way-audio/</link>
+      <pubDate>Sat, 18 Jul 2009 15:18:28 +0000</pubDate>
+      
+      <guid>http://blog.leifmadsen.com/blog/2009/07/18/issues-ast_rtp_senddigit_begin-dont-know-how-to-represent-f-one-way-audio/</guid>
+      <description>I keep seeing questions like this recently on the mailing list and in the #asterisk IRC channel.
+&amp;ldquo;ast_rtp_senddigit_begin: Don&amp;rsquo;t know how to represent &amp;lsquo;f&amp;rsquo; shows up on the console then I get one way audio&amp;hellip; * 1.4.25.1, wanpipe 3.3.15.20, zaptel 1.4.12.1, libpri 1.4.7&amp;hellip;. any suggestions?&amp;rdquo;
+I forget who originally said how to fix it (it was in a mailing list thread that I can&amp;rsquo;t find right now&amp;hellip;), but basically the answer to resolve it was to disable the DTMF detection in the wanpipe driver.</description>
+    </item>
+    
+  </channel>
+</rss>

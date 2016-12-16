@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Aes_decrypt on Asterisk, and other worldly endeavours</title>
+    <link>http://blog.leifmadsen.com/tags/aes_decrypt/index.xml</link>
+    <description>Recent content in Aes_decrypt on Asterisk, and other worldly endeavours</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <atom:link href="/tags/aes_decrypt/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Using Dialplan Functions: AES_DECRYPT() and AES_ENCRYPT()</title>
+      <link>http://blog.leifmadsen.com/blog/2011/09/09/using-dialplan-functions-aes_decrypt-and-aes_encrypt/</link>
+      <pubDate>Fri, 09 Sep 2011 13:28:47 +0000</pubDate>
+      
+      <guid>http://blog.leifmadsen.com/blog/2011/09/09/using-dialplan-functions-aes_decrypt-and-aes_encrypt/</guid>
+      <description>I recently asked on twitter how many people would be interested in a set of blog posts that focused on how to use the various dialplan functions in Asterisk, and I got quite a positive response. I posted that shortly before getting married, and now that I&amp;rsquo;m back into the groove of things, I&amp;rsquo;m going to take a shot at posting a bunch of content focused around Asterisk dialplan functions. If you don&amp;rsquo;t know what Asterisk dialplan functions are, head on over to the online version of Asterisk: The Definitive Guide (3rd edition) (or buy it) and read the section on dialplan functions.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Life on Asterisk, and other worldly endeavours</title>
+    <link>http://blog.leifmadsen.com/categories/life/index.xml</link>
+    <description>Recent content in Life on Asterisk, and other worldly endeavours</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <atom:link href="/categories/life/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Rumors of my death have been greatly exaggerated</title>
+      <link>http://blog.leifmadsen.com/blog/2014/07/25/rumors-of-my-death-have-been-greatly-exaggerated/</link>
+      <pubDate>Fri, 25 Jul 2014 02:49:12 +0000</pubDate>
+      
+      <guid>http://blog.leifmadsen.com/blog/2014/07/25/rumors-of-my-death-have-been-greatly-exaggerated/</guid>
+      <description>It&amp;rsquo;s been way too long since I&amp;rsquo;ve blogged. And this post isn&amp;rsquo;t going to be all the impressive unfortunately. However, I recently have been running a BBS and some friends and I have been playing LORD.
+We&amp;rsquo;ve been playing this for the last few months, and I think I&amp;rsquo;m going to run a tournament. Perhaps with some sort of buy in like $10 or something, winner takes all.
+Going to build it out in such a way that first person to beat the dragon 3 times will win the game, and at that point that person will win the pot.</description>
+    </item>
+    
+    <item>
+      <title>Commodore 64 Turns 30 This Year</title>
+      <link>http://blog.leifmadsen.com/blog/2012/01/09/commodore-64-turns-30-this-year/</link>
+      <pubDate>Mon, 09 Jan 2012 13:05:51 +0000</pubDate>
+      
+      <guid>http://blog.leifmadsen.com/blog/2012/01/09/commodore-64-turns-30-this-year/</guid>
+      <description>Having found an article about the Commodore 64 turning 30 this year, I reflected back in a comment on that page about what it is like to be only 1 year older than the Commodore 64, a computer which spiked my interest in technology away from a games system to something much more. The original article is available at http://www.linuxjournal.com/content/commodor-64-30-year
+&amp;ldquo;I just turned 31 a couple of days ago on January 7th, and when I was in grade 2 (about 8-9 years old I guess) I started getting interested in the Commodore 64s we had at our school that were plentiful, but rarely used.</description>
+    </item>
+    
+    <item>
+      <title>Now working with CoreDial</title>
+      <link>http://blog.leifmadsen.com/blog/2012/01/04/now-working-with-coredial/</link>
+      <pubDate>Wed, 04 Jan 2012 20:22:08 +0000</pubDate>
+      
+      <guid>http://blog.leifmadsen.com/blog/2012/01/04/now-working-with-coredial/</guid>
+      <description>As of January 3rd, I&amp;rsquo;m now working with the CoreDial team full time. I&amp;rsquo;ve worked with them as a consultant on their infrastructure over the last few years but now will be spending significantly more time working with the engineering team :)
+From the announcement,
+“_CoreDial is pleased to announce the addition of Leif Madsen to the CoreDial team,” said Alan Rihm, CEO at CoreDial. “Leif is a well known Asterisk consultant who specializes in distributed telephony deployments and database integration.</description>
+    </item>
+    
+    <item>
+      <title>AstriCon 2010 and my talks!</title>
+      <link>http://blog.leifmadsen.com/blog/2010/10/27/astricon-2010-and-my-talks/</link>
+      <pubDate>Wed, 27 Oct 2010 12:08:06 +0000</pubDate>
+      
+      <guid>http://blog.leifmadsen.com/blog/2010/10/27/astricon-2010-and-my-talks/</guid>
+      <description>NOTE: My presentations are available on my website at http://leifmadsen.com under the Presentations tab.
+Hey all! I&amp;rsquo;m at AstriCon 2010 in Maryland and it&amp;rsquo;s going great so far! Russell Bryant and I spoke with several keen users and developers last night in the Code Zone at a fairly late hour, which shows just how dedicated Asterisk users are. There was pretty much no one else around and we had a room of about 20-30 people just having a great discussion about Asterisk development.</description>
+    </item>
+    
+    <item>
+      <title>Interesting article about *not* tracking holidays at Netflix</title>
+      <link>http://blog.leifmadsen.com/blog/2010/08/25/interesting-article-about-not-tracking-holidays-at-netflix/</link>
+      <pubDate>Wed, 25 Aug 2010 20:07:17 +0000</pubDate>
+      
+      <guid>http://blog.leifmadsen.com/blog/2010/08/25/interesting-article-about-not-tracking-holidays-at-netflix/</guid>
+      <description>The following is an interesting article about not tracking workers time spent at work, or on vacation, but rather tracking their productivity. As a consultant who doesn&amp;rsquo;t have a fixed set of hours in the day that I work, I tend to judge my productivity by the number of hours I get to bill each week (i.e. how productive was I working for customers, rather than playing Flight Simulator :)).</description>
+    </item>
+    
+    <item>
+      <title>Long-term &#39;shopping list&#39; helps couple furnish Caledon townhouse</title>
+      <link>http://blog.leifmadsen.com/blog/2010/04/15/long-term-shopping-list-helps-couple-furnish-caledon-townhouse/</link>
+      <pubDate>Thu, 15 Apr 2010 21:30:21 +0000</pubDate>
+      
+      <guid>http://blog.leifmadsen.com/blog/2010/04/15/long-term-shopping-list-helps-couple-furnish-caledon-townhouse/</guid>
+      <description>Recently, @jenspeedy of http://www.yourhome.ca interviewed my fiancée and I about our recently purchased townhouse in Caledon after our designer @melissadavis of http://www.melissadavis.ca and http://www.designerfriend.ca recommended she speak to us. Danielle (my fiancée) and I had a pretty good idea about the items we wanted for our new townhouse build, but were looking for a designer to make sure we didn&amp;rsquo;t get too far off track, and to steer us into the direction we ultimately wanted to achieve, while not breaking the bank (i.</description>
+    </item>
+    
+  </channel>
+</rss>

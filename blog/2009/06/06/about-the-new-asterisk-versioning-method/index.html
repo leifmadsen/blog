@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
+<head>
+  <link href="http://gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+  <title>About the new Asterisk versioning method &middot; Leif Madsen</title>
+
+  
+  <link rel="stylesheet" href="http://blog.leifmadsen.com/css/poole.css">
+  <link rel="stylesheet" href="http://blog.leifmadsen.com/css/hyde.css">
+  <link rel="stylesheet" href="http://blog.leifmadsen.com/css/poole-overrides.css">
+  <link rel="stylesheet" href="http://blog.leifmadsen.com/css/hyde-overrides.css">
+  <link rel="stylesheet" href="http://blog.leifmadsen.com/css/hyde-x.css">
+  <link rel="stylesheet" href="http://blog.leifmadsen.com/css/highlight/monokai.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700|Abril+Fatface">
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  
+
+  
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="http://blog.leifmadsen.com/touch-icon-144-precomposed.png">
+  <link href="http://blog.leifmadsen.com/favicon.png" rel="icon">
+
+  
+  
+  
+  
+
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+  
+</head>
+<body>
+<div class="sidebar">
+  <div class="container sidebar-sticky">
+    <div class="sidebar-about">
+      
+      <h1>Leif Madsen</h1>
+      <p class="lead">Asterisk, and other worldly endeavours</p>
+    </div>
+
+    <ul class="sidebar-nav">
+      <li class="sidebar-nav-item"><a href="http://blog.leifmadsen.com/">Blog</a></li>
+      
+    </ul>
+
+    <ul class="sidebar-nav">
+      <li class="sidebar-nav-item">
+      <a href="http://github.com/leifmadsen"><i class="fa fa-github-square fa-3x"></i></a>
+      
+      
+      <a href="http://linkedin.com/in/leifmadsen"><i class="fa fa-linkedin-square fa-3x"></i></a>
+      
+      
+      <a href="http://twitter.com/leifmadsen"><i class="fa fa-twitter-square fa-3x"></i></a>
+      
+      <a href="http://blog.leifmadsen.com/index.xml" type="application/rss+xml"><i class="fa fa-rss-square fa-3x"></i></a>
+      </li>
+    </ul>
+
+    
+
+    <p>Copyright &copy; 2016 <a href="http://blog.leifmadsen.com/license/">License</a><br/>
+       Powered by <a href="http://gohugo.io">Hugo</a> and <a href="https://github.com/zyro/hyde-x">Hyde-X</a></p>
+  </div>
+</div>
+
+
+<div class="content container">
+  <div class="post">
+    <h1 class="post-title">About the new Asterisk versioning method</h1>
+    
+
+<p>Recently I have been seeing more and more questions about how Asterisk is being released now, and what the 1.6.x versions really mean. I&rsquo;ll try and clear up some of your questions and make it more clear as to how Asterisk versions work. First, lets talk about the Asterisk 1.2 and 1.4 branches.</p>
+
+<h4 id="previous-release-methodology">Previous release methodology</h4>
+
+<p>When we just had Asterisk 1.2 and 1.4, all new development was carried out in trunk (it still is) and only bug fixes went into the 1.2 and 1.4 branches. Currently, the 1.2 branch has been marked as EOL (End of Life), and is currently only receiving security updates. Bug fixes are reserved for the 1.4 branch. This means that until 1.6 came along, all new development was done in trunk, without the ability for people to get access to new features and functionality until the 1.6 branch was created. It&rsquo;s not to say the new functionality wasn&rsquo;t available, but with all the changes that can happen in trunk, running a production server based on it would require a very Asterisk savvy (and C code savvy) administrator.</p>
+
+<p>Before we talk about 1.6, lets make sure we understand what trunk, branches, and tags mean.</p>
+
+<h4 id="branches-and-tags-and-trunk-oh-my">Branches, and Tags, and Trunk; oh my!</h4>
+
+<p>Asterisk development is basically a linear process. All changes happen one after the other, and new features are always put on the end. This is referred to as <em>trunk</em>. All the latest changes to core Asterisk code, new features, and major changes take place here. This is why running trunk in production is not recommended, because the developers essentially have free reign as to what goes in here.</p>
+
+<p><em>Note: with the advent of <a href="http://www.review-board.org/">review board</a>, the larger commits that go into trunk are of much higher quality, as large changes are not put into trunk without any sort of peer review. The review board application allows these larger changes (such as new features, major core restructuring changes, etc.) to be reviewed by other developers to find common coding issues that would otherwise have had to be found in the wild.</em></p>
+
+<p>Like a tree, the <em>branches</em> grow from the trunk. These branches are referred to as 1.2, 1.4, etc. A branch is a snapshot of the trunk at the time of creation, and from there, has its own timeline. When a bug is found, fixed, and resolved, the resulting commit is then placed into trunk, and any branches that it effects. When a new feature is created, it is only put into trunk, thereby leaving the branches in a relatively known state that is safe for production use.</p>
+
+<p>From a branch, we create snapshots in time called <em>tags</em>. These tags are the version numbers and tar ball files you can download from the <a href="http://www.asterisk.org">Asterisk.org</a> website. These tags are numbered releases that never change, such as 1.4.18, 1.4.22, etc. In image 1.1, you can see a visual representation of the Asterisk branching and tagging process where the x-axis represents time.</p>
+
+<p>[caption id=&ldquo;attachment_17&rdquo; align=&ldquo;aligncenter&rdquo; width=&ldquo;449&rdquo; caption=&ldquo;Image 1.1 - Visual representation of Asterisk release branching and tagging.&rdquo;]<img src="http://leifmadsen.files.wordpress.com/2009/06/asterisk_release_tree.jpg" alt="Image 1.1" />[/caption]</p>
+
+<h4 id="understanding-the-asterisk-1-6-release-process">Understanding the Asterisk 1.6 release process</h4>
+
+<p>With the advent of Asterisk 1.6, the release process has differed slightly, in that there are multiple 1.6 branches supported at any given time. The reason for this is because the time frame between the creation of the 1.0 &amp; 1.2 branches, and the 1.2 &amp; 1.4 branches was so great (approximately 1 year in the former, and 2 years in the latter!) that new features would sit in trunk, and many changes would take place over that period of time. Due to the rapid development of Asterisk, these changes were grandiose and thus the user experience between these releases were such that major changes had taken place. Backwards compatibility was difficult to maintain, and simply, who wants to wait 3 years to get the next great feature?</p>
+
+<p>So with Asterisk 1.6, a new release process that allows branches to be created in a more regular fashion (approximately 6-8 months) was developed. Whenever a branch is created, we now update the 3rd most significant digit, which represents a new branch with new features, and the 4th most significant digit is now the tag number in that release. So for example, we have the branch Asterisk 1.6.0, which is a branch created from trunk at a period in time, and within that branch, bug fixes are performed, but no new features are added. The tags from this branch will be version numbers such as 1.6.0.0, 1.6.0.1, 1.6.0.2, etc. Then some period in time, a new branch will be created from trunk such as 1.6.1 (note that the 3rd significant number has increased by one). Within this branch will be new features and changes — that different of the 1.6.0 branch. Within the 1.6.1 branch, we&rsquo;ll have tags just like all our other branches, such as: 1.6.1.0, 1.6.1.1, 1.6.1.2, etc.</p>
+
+<p>This process continues throughout the lifetime of the 1.6 series of Asterisk. The trunk continues to have development, new features merged and potential core changes to make Asterisk more efficient (which would otherwise be deemed too invasive for a release branch) are committed. The regular release nature of this process allows less drastic changes between major versions (and note that the difference between a 1.6.0 and a 1.6.1 <em>is</em> considered a major version upgrade, similar in nature to an upgrade between 1.2 and 1.4, but not quite so drastic), and access to new features on a more regular basis. Because these are considered a major change between versions, it is in your interest to read the UPGRADE-1.6.txt files in your Asterisk source, and to test thoroughly before deploying in a production environment.</p>
+
+<p>It should be noted that at any given time, there will be at least 3 branches of the 1.6 nature maintained. That means bug fixes and maintenance will be performed on your preferred branch for an extended period of time. For example, because there can be code refactoring, and core changes between 1.6.x versions (where x is the major version number), you may wish to maintain your production system on the 1.6.0 branch while your development system is running the 1.6.1 series. This way you don&rsquo;t have to worry about moving your 1.6.0 system immediately to a 1.6.1 based branch as soon as it is created. Image 1.2 shows a visual representation of the 1.6 release process, which should look similar to the release process between 1.2 and 1.4. The x-axis still represents time, but in this case, time is not over quite so long a period.</p>
+
+<p>[caption id=&ldquo;attachment_18&rdquo; align=&ldquo;aligncenter&rdquo; width=&ldquo;449&rdquo; caption=&ldquo;Image 1.2 - Visual representation of the Asterisk 1.6 release process&rdquo;]<img src="http://leifmadsen.files.wordpress.com/2009/06/asterisk_1-6_release_tree.jpg" alt="Image 1.1 - Visual representation of the Asterisk 1.6 release process" />[/caption]</p>
+
+<h4 id="so-which-version-do-i-use">So which version do I use?</h4>
+
+<p>It always comes down to the question of, &ldquo;so which version do I use?&rdquo; and this can be a tricky one to answer. It probably boils down to what features you need to utilize. By checking the CHANGES file in your Asterisk source tree, you can see what changes have happened between each of the various branches (i.e. the differences between 1.6.0 and 1.6.1). While writing this article, I was asked by someone on IRC the question, &ldquo;What version do you recommend?&rdquo;, and the answer I gave was, &ldquo;I recommend the version that has the features you require, and that passes the testing you have done prior to rolling it out&rdquo;. He followed up with, &ldquo;But they all have the feature I require!&rdquo;, to which I responded, &ldquo;Do some forward planning, and try to determine that the version you pick has the features you may possibly require in the future so that you don&rsquo;t have to re-architect your system sooner than you want&rdquo;. This can save you a lot of time and effort. Do some testing, and play with all the various branches on a development server. See what dialplan applications and functions exist, and how they work. Try to determine what kinds of things you need your phone system to do, and make sure the version you pick can do it. You can also make use of the various mailing lists and IRC chat rooms (asterisk-users mailing list, and #asterisk IRC channel) to ask specific questions if you&rsquo;re not able to find an answer.</p>
+
+<p>Hopefully this has made the release process a bit more clear. If you have any questions or comments, please feel free to leave a comment, and I&rsquo;ll try to address all your issues as best I can.</p>
+
+  </div>
+</div>
+<script src="http://blog.leifmadsen.com/js/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+</body>
+</html>
+

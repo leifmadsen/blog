@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Exten Gt on Asterisk, and other worldly endeavours</title>
+    <link>http://blog.leifmadsen.com/tags/exten-gt/index.xml</link>
+    <description>Recent content in Exten Gt on Asterisk, and other worldly endeavours</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <atom:link href="/tags/exten-gt/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Converting multiple exten =&gt; lines to using same =&gt; in Asterisk dialplan</title>
+      <link>http://blog.leifmadsen.com/blog/2012/01/16/converting-multiple-exten--lines-to-using-same--in-asterisk-dialplan/</link>
+      <pubDate>Mon, 16 Jan 2012 13:28:10 +0000</pubDate>
+      
+      <guid>http://blog.leifmadsen.com/blog/2012/01/16/converting-multiple-exten--lines-to-using-same--in-asterisk-dialplan/</guid>
+      <description>Last week I wanted to start changing some 1.4 based Asterisk dialplan to a 1.8 based Asterisk system, and in that process wanted to convert lines like:
+exten =&amp;gt; _NXXNXXXXXX,1,NoOp() exten =&amp;gt; _NXXNXXXXXX,2,GotoIf($[...]?reject,1) exten =&amp;gt; _NXXNXXXXXX,3,Dial(SIP/foo/${EXTEN}) ...  into using the same =&amp;gt; prefix:
+exten =&amp;gt; _NXXNXXXXXX,1,NoOp() same =&amp;gt; n,GotoIf($[...]?reject,1) same =&amp;gt; n,Dial(SIP/foo/${EXTEN})  In order to do that, Mike King helped me out with the following regular expressing which I used in vim:</description>
+    </item>
+    
+  </channel>
+</rss>

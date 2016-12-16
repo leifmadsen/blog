@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Review on Asterisk, and other worldly endeavours</title>
+    <link>http://blog.leifmadsen.com/tags/review/index.xml</link>
+    <description>Recent content in Review on Asterisk, and other worldly endeavours</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <atom:link href="/tags/review/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Asterisk: The Definitive Guide -- Call For Reviewers!</title>
+      <link>http://blog.leifmadsen.com/blog/2011/01/06/asterisk-the-definitive-guide----call-for-reviewers/</link>
+      <pubDate>Thu, 06 Jan 2011 15:22:55 +0000</pubDate>
+      
+      <guid>http://blog.leifmadsen.com/blog/2011/01/06/asterisk-the-definitive-guide----call-for-reviewers/</guid>
+      <description>Here is the text I posted to the asterisk-doc mailing list this morning. You can sign up for asterisk-doc at http://lists.digium.com and get involved! We&amp;rsquo;d love to make this the best book on Asterisk ever, and your input can make that true! Our goal is to build a book for, and by, the Asterisk community.
+&amp;ldquo;_Hey all! _
+_We&amp;rsquo;re getting VERY close to having the first draft of the next Asterisk book, Asterisk: The Definitive Guide ready to be sent off to production.</description>
+    </item>
+    
+    <item>
+      <title>Update for Asterisk: The Definitive Guide (3rd Edition)</title>
+      <link>http://blog.leifmadsen.com/blog/2010/12/21/update-for-asterisk-the-definitive-guide-3rd-edition/</link>
+      <pubDate>Tue, 21 Dec 2010 15:54:09 +0000</pubDate>
+      
+      <guid>http://blog.leifmadsen.com/blog/2010/12/21/update-for-asterisk-the-definitive-guide-3rd-edition/</guid>
+      <description>It&amp;rsquo;s been a while since I&amp;rsquo;ve done an update on my blog, but that&amp;rsquo;s just because we&amp;rsquo;ve been so busy at work on the next edition of the O&amp;rsquo;Reilly published Asterisk book! Asterisk: The Definitive Guide is the next update to the Asterisk: The Future Of Telephony books and is thus the 3rd edition. We&amp;rsquo;ve changed the name for two reasons: 1) This is pretty much a complete re-write of the book based on Asterisk 1.</description>
+    </item>
+    
+  </channel>
+</rss>

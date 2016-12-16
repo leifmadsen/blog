@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Digium on Asterisk, and other worldly endeavours</title>
+    <link>http://blog.leifmadsen.com/tags/digium/index.xml</link>
+    <description>Recent content in Digium on Asterisk, and other worldly endeavours</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <atom:link href="/tags/digium/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Digium D40 and D70 Phone Unboxing</title>
+      <link>http://blog.leifmadsen.com/blog/2012/10/11/digium-d40-and-d70-phone-unboxing/</link>
+      <pubDate>Thu, 11 Oct 2012 20:43:35 +0000</pubDate>
+      
+      <guid>http://blog.leifmadsen.com/blog/2012/10/11/digium-d40-and-d70-phone-unboxing/</guid>
+      <description>Today I received a couple of phones from Digium; the D40 and D70. I&amp;rsquo;ll be using these phones for testing and documentation in the 4th edition of Asterisk: The Definitive Guide (which Jim Van Meggelen, Russell Bryant and myself are working on right now).
+Here is my unboxing of the phones and some commentary about my initial impressions of the hardware itself.
+[caption id=&amp;ldquo;attachment_484&amp;rdquo; align=&amp;ldquo;aligncenter&amp;rdquo; width=&amp;ldquo;300&amp;rdquo;] Pretty boxes![/caption]
+Phones arrived in some nice looking boxes.</description>
+    </item>
+    
+  </channel>
+</rss>

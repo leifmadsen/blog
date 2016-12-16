@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Cups on Asterisk, and other worldly endeavours</title>
+    <link>http://blog.leifmadsen.com/tags/cups/index.xml</link>
+    <description>Recent content in Cups on Asterisk, and other worldly endeavours</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <atom:link href="/tags/cups/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Brother printer doesn&#39;t print in Fedora 17</title>
+      <link>http://blog.leifmadsen.com/blog/2012/11/24/brother-printer-doesnt-print-in-fedora-17/</link>
+      <pubDate>Sat, 24 Nov 2012 22:06:03 +0000</pubDate>
+      
+      <guid>http://blog.leifmadsen.com/blog/2012/11/24/brother-printer-doesnt-print-in-fedora-17/</guid>
+      <description>Tip: If your Brother printer won&amp;rsquo;t print after installing the drivers, install glibc.i686
+Today ran into an issue with my new Brother MFC-7460DN (which is a really nice laser printer with auto-feed scanner, Scan-to-FTP which creates a PDF file, and other things). I had just recently done a clean install of Fedora 17, and I could install the RPMs (which are i386 files on my x86_64 based system), add the printer to CUPS and all sorts of things that looked fine.</description>
+    </item>
+    
+  </channel>
+</rss>

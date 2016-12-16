@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Author on Asterisk, and other worldly endeavours</title>
+    <link>http://blog.leifmadsen.com/tags/author/index.xml</link>
+    <description>Recent content in Author on Asterisk, and other worldly endeavours</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <atom:link href="/tags/author/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Asterisk: The Definitive Guide -- Call For Reviewers!</title>
+      <link>http://blog.leifmadsen.com/blog/2011/01/06/asterisk-the-definitive-guide----call-for-reviewers/</link>
+      <pubDate>Thu, 06 Jan 2011 15:22:55 +0000</pubDate>
+      
+      <guid>http://blog.leifmadsen.com/blog/2011/01/06/asterisk-the-definitive-guide----call-for-reviewers/</guid>
+      <description>Here is the text I posted to the asterisk-doc mailing list this morning. You can sign up for asterisk-doc at http://lists.digium.com and get involved! We&amp;rsquo;d love to make this the best book on Asterisk ever, and your input can make that true! Our goal is to build a book for, and by, the Asterisk community.
+&amp;ldquo;_Hey all! _
+_We&amp;rsquo;re getting VERY close to having the first draft of the next Asterisk book, Asterisk: The Definitive Guide ready to be sent off to production.</description>
+    </item>
+    
+    <item>
+      <title>Suzanne Bowen Interviews Leif Madsen, Asterisk Rockstar</title>
+      <link>http://blog.leifmadsen.com/blog/2009/07/30/suzanne-bowen-interviews-leif-madsen-asterisk-rockstar/</link>
+      <pubDate>Thu, 30 Jul 2009 22:11:17 +0000</pubDate>
+      
+      <guid>http://blog.leifmadsen.com/blog/2009/07/30/suzanne-bowen-interviews-leif-madsen-asterisk-rockstar/</guid>
+      <description>Today I had the privilege to be interviewed by Suzanne Bowen of DIDX.
+You can find the interview at http://www.didx.net/podcast/?p=episode&amp;amp;name=2009-07-30_leifmadsenjul312009.mp3
+Hope you enjoy!
+Here is a description of the interview:
+&amp;ldquo;Truth is that I &amp;ldquo;met&amp;rdquo; the authors of the book &amp;ldquo;Asterisk, the Future of Telephony&amp;rdquo; when I was an English teacher and had volunteered over email to help edit the documentation. It was a joy to interview Leif Madsen. The Asterisk rockstar* shares with us the history of how he became interested in voice, telephony, Asterisk and open source.</description>
+    </item>
+    
+  </channel>
+</rss>

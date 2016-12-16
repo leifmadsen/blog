@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Vcard on Asterisk, and other worldly endeavours</title>
+    <link>http://blog.leifmadsen.com/tags/vcard/index.xml</link>
+    <description>Recent content in Vcard on Asterisk, and other worldly endeavours</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <atom:link href="/tags/vcard/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Creating vCards with QR Codes</title>
+      <link>http://blog.leifmadsen.com/blog/2009/08/27/creating-vcards-with-qr-codes/</link>
+      <pubDate>Thu, 27 Aug 2009 14:02:24 +0000</pubDate>
+      
+      <guid>http://blog.leifmadsen.com/blog/2009/08/27/creating-vcards-with-qr-codes/</guid>
+      <description>Recently I&amp;rsquo;ve been noticing a lot more use of QR codes around the internet. A QR code is those 2D matrices that look like a bar code, but aren&amp;rsquo;t just the ordinary vertical lines that you would see on your box of cereal. These are a box that contain pixels that have been coded to contain information about pretty much anything. I&amp;rsquo;ve been seeing some people using them for contact information, web links, and pretty much anything you can think of to distribute information.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
+<head>
+  <link href="http://gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+  <title>Musings about ENUMplus and ISNs &middot; Leif Madsen</title>
+
+  
+  <link rel="stylesheet" href="http://blog.leifmadsen.com/css/poole.css">
+  <link rel="stylesheet" href="http://blog.leifmadsen.com/css/hyde.css">
+  <link rel="stylesheet" href="http://blog.leifmadsen.com/css/poole-overrides.css">
+  <link rel="stylesheet" href="http://blog.leifmadsen.com/css/hyde-overrides.css">
+  <link rel="stylesheet" href="http://blog.leifmadsen.com/css/hyde-x.css">
+  <link rel="stylesheet" href="http://blog.leifmadsen.com/css/highlight/monokai.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700|Abril+Fatface">
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  
+
+  
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="http://blog.leifmadsen.com/touch-icon-144-precomposed.png">
+  <link href="http://blog.leifmadsen.com/favicon.png" rel="icon">
+
+  
+  
+  
+  
+
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+  
+</head>
+<body>
+<div class="sidebar">
+  <div class="container sidebar-sticky">
+    <div class="sidebar-about">
+      
+      <h1>Leif Madsen</h1>
+      <p class="lead">Asterisk, and other worldly endeavours</p>
+    </div>
+
+    <ul class="sidebar-nav">
+      <li class="sidebar-nav-item"><a href="http://blog.leifmadsen.com/">Blog</a></li>
+      
+    </ul>
+
+    <ul class="sidebar-nav">
+      <li class="sidebar-nav-item">
+      <a href="http://github.com/leifmadsen"><i class="fa fa-github-square fa-3x"></i></a>
+      
+      
+      <a href="http://linkedin.com/in/leifmadsen"><i class="fa fa-linkedin-square fa-3x"></i></a>
+      
+      
+      <a href="http://twitter.com/leifmadsen"><i class="fa fa-twitter-square fa-3x"></i></a>
+      
+      <a href="http://blog.leifmadsen.com/index.xml" type="application/rss+xml"><i class="fa fa-rss-square fa-3x"></i></a>
+      </li>
+    </ul>
+
+    
+
+    <p>Copyright &copy; 2016 <a href="http://blog.leifmadsen.com/license/">License</a><br/>
+       Powered by <a href="http://gohugo.io">Hugo</a> and <a href="https://github.com/zyro/hyde-x">Hyde-X</a></p>
+  </div>
+</div>
+
+
+<div class="content container">
+  <div class="post">
+    <h1 class="post-title">Musings about ENUMplus and ISNs</h1>
+    
+
+<p>Recently I&rsquo;ve been playing around with a couple of technologies that I haven&rsquo;t used in quite a while; ENUM and ISN. First, a little information on what these technologies are about.</p>
+
+<h2 id="isns-and-itads">ISNs and ITADs</h2>
+
+<p>First, lets talk about ISN (ITAD Subscriber Number) and ITAD (Internet Telephony Administrative Domain). I think the <a href="http://www.freenum.org">http://www.freenum.org</a> website does a good job of succinctly describing the problem attempting to be addressed:</p>
+
+<p>&ldquo;The Freenum/ISN system is 12-digit-keypad (telephone handset) friendly method of providing mapping between users. While the eventual use of email-style URI pointers is the eventual goal for communications identifiers, it is still the case that the majority of the world&rsquo;s telephony users are trapped using a 12-digit keypad for extended numeric entry, and it is for the purposes of these devices that the Freenum system and ISN dialing was designed as a &ldquo;stopgap&rdquo; which may last many years. Using ENUM-like methods and IETF standards but not using telephone numbers, the Freenum/ISN dialing system is designed to initially allow SIP-capable proxies and iPBX systems to connect to each other in a free, open, and protocol agnostic manner over the Internet. Initially focused on SIP voice communications, the platform is hoped to eventually extend to other communications methods as those protocols become more widespread.&rdquo; &ndash; freenum.org</p>
+
+<p>An ISN is a number that looks like:  100*460</p>
+
+<p>The ITAD part of that ISN is the number 460 where you can think of the 460 as the domain. If we used an email address (or SIP URI for that matter) as an example, we&rsquo;d have something like leif@leifmadsen.com where leifmadsen.com would be the domain, and the number 460 would be the equivalent of that. The number 100 would be the unique identifier within that domain, which would represent &lsquo;leif&rsquo; prior to the email &lsquo;at&rsquo; symbol. And finally, you can think of the asterisk in the ISN as the &lsquo;at&rsquo; symbol (@) in the ISN. We could then read 100*460 as &ldquo;extension 100 at ITAD 460&rdquo;. And the 100*460 would then map to the SIP URI of sip:leif@leifmadsen.com (for example).</p>
+
+<p>This allows a stopgap measure of permitting traditional telephony devices to dial VoIP addresses from their keypad. Because of the nature of VoIP and how a simple URI can actually ring multiple devices, enter into a queue, or an auto-attendant, it doesn&rsquo;t always make sense to utilize a telephone number to represent a SIP URI (see more information about this below in the ENUM section). Perhaps you are a small company with approximately 20 devices, but only 2-3 phone numbers. It doesn&rsquo;t make sense to obtain multiple phone numbers for your company just as a method of dialing a SIP URI from a traditional keypad. In this way, you can assign numbers any which way it makes sense in your company with ISNs.</p>
+
+<p>The company with 20 extensions could then assign ISNs to each device such as:  201*460, 202*460 &hellip; 220*460. The operator could be 0*460, and perhaps the auto-attendant could be 1*460. There are no set mechanisms or best practices (yet), but as time evolves, perhaps these will come to fruition.</p>
+
+<p>I&rsquo;m not sure if ISNs will catch on with the general public, as historically things like ENUM and other services of this nature haven&rsquo;t progressed as much as they likely should, but the idea is sound, and certainly makes more sense to me than having to remember several phone numbers for each extension or location.</p>
+
+<p>As this is simply an overview about ISNs, I&rsquo;ll stop here. Future articles will delve into the configurations and testing for outbound and inbound calls with Asterisk, setting up DNS, etc. For now, see the <a href="http://freenum.org">http://freenum.org</a> website for more information about configuring these aspects. Unfortunately the Asterisk information is out of date (in terms of utilizing the best features of the dialplan). I&rsquo;d be happy to update the information if enough requests and interest is generated.</p>
+
+<h2 id="enumplus">ENUMplus</h2>
+
+<p>ENUMplus (<a href="http://www.enumplus.org">http://www.enumplus.org</a>) is a site which takes the information from several ENUM databases and allows you to perform a single lookup using cURL. Since there is a lot of technology going on in that sentence, lets step back and define each of these aspects.</p>
+
+<p>I think the wikipedia entry about ENUM does more justice about what it is than what I could do, so lets quote a resource :)</p>
+
+<p>&ldquo;<strong>Telephone number mapping</strong> is the process of unifying the <a href="http://blog.leifmadsen.com/wiki/Telephone">telephone</a> number system of the <a href="http://blog.leifmadsen.com/wiki/Public_switched_telephone_network">public switched telephone network</a> with the <a href="http://blog.leifmadsen.com/wiki/Internet">Internet</a> addressing and identification <a href="http://blog.leifmadsen.com/wiki/Name_space">name spaces</a>. Telephone numbers are systematically organized in the <a href="http://blog.leifmadsen.com/wiki/E.164">E.164</a> standard, while the Internet uses the <a href="http://blog.leifmadsen.com/wiki/Domain_Name_System">Domain Name System</a> for linking <a href="http://blog.leifmadsen.com/wiki/Domain_name">domain names</a> to <a href="http://blog.leifmadsen.com/wiki/IP_address">IP addresses</a> and other resource information. Telephone number mapping systems provide facilities to determine applicable Internet communications servers responsible for servicing a given telephone number by simple lookups in the Domain Name System.</p>
+
+<p>The most prominent facility for telephone number mapping is the E.164 NUmber Mapping (ENUM) standard. It uses special <a href="http://blog.leifmadsen.com/wiki/DNS_record">DNS record</a> types to translate a telephone number into a <a href="http://blog.leifmadsen.com/wiki/Uniform_Resource_Identifier">Uniform Resource Identifier</a> or IP address that can be used in Internet communications.&rdquo; &ndash; wikipedia entry at <a href="http://en.wikipedia.org/wiki/Telephone_Number_Mapping">http://en.wikipedia.org/wiki/Telephone_Number_Mapping</a></p>
+
+<p>And cURL is a technology that allows you place a request via a website, and have information returned. It is most typically used by programmers to get information from a website without having to parse through the entire site.</p>
+
+<p>So by marrying these two technologies, ENUM and cURL together, ENUMplus has created a one-stop-shop for performing ENUM lookups. By performing an ENUM lookup prior to placing a call from your Asterisk system, is that if a telephone number has been registered with one of the ENUM organizations and has a SIP URI to point to, then we can utilize that SIP URI instead of calling over the PSTN, which can save toll costs, and free up a circuit for other calls.</p>
+
+<p>I originally wrote a section of dialplan while testing out the service (which is very quick!) and added it to the ENUMplus wiki page for the configuration of Asterisk 1.6 systems. Originally I had this done as a separate path for dialing that would utilize a prefix of 7 prior to dialing out in order to do an ENUM lookup, and then you could dial without the prefix if you didn&rsquo;t want the lookup (or if the lookup failed). I&rsquo;ve since realized that this method is the wrong approach for obvious reasons (who wants to dial the number twice?), so I have since modified my dialplan to always utilize ENUM lookups prior to placing a call via the PSTN.</p>
+
+<p>I want to show you the following example from my dialplan, which I&rsquo;ll eventually clean up and add to the ENUMplus wiki.</p>
+
+<pre><code>exten =&gt; _+1NXXNXXXXXX,1,Set(X=${EXTEN:1})
+exten =&gt; _+1NXXNXXXXXX,n,Goto(setCID,1)
+exten =&gt; _+NXXNXXXXXX,1,Set(X=1${EXTEN:1})
+exten =&gt; _+NXXNXXXXXX,n,Goto(setCID,1)
+exten =&gt; _1NXXNXXXXXX,1,Set(X=${EXTEN})
+exten =&gt; _1NXXNXXXXXX,n,Goto(setCID,1)
+exten =&gt; _NXXNXXXXXX,1,Goto(1${EXTEN},1)
+
+exten =&gt; setCID,1,NoOp()
+exten =&gt; setCID,n,Set(CALLERID(name)=LM Enterprises)
+exten =&gt; setCID,n,Set(CALLERID(num)=4164790259)
+exten =&gt; setCID,n,Goto(lookup,1)
+
+exten =&gt; lookup,1,Verbose(2,Looking up direct dial via ENUM from ENUMPlus: ${X:1})
+exten =&gt; lookup,n,Playback(silence/1&amp;doing-enum-lookup)
+exten =&gt; lookup,n,Set(CURL_RESULT=${CURL(${GLOBAL(G_ENUMPLUS_API)}/${X:1},key=${GLOBAL(G_ENUMPLUS_KEY)})})
+exten =&gt; lookup,n,GotoIf($[${ISNULL(${CURL_RESULT})}]?no_result,1)
+exten =&gt; lookup,n,Goto(dial,1)
+
+exten =&gt; dial,1,Verbose(2,Lookup returned:  ${CURL_RESULT})
+exten =&gt; dial,n,Playback(enum-lookup-successful)
+exten =&gt; dial,n,Dial(${CUT(CURL_RESULT,|,1)},30)
+exten =&gt; dial,n,Hangup()
+
+exten =&gt; no_result,1,Verbose(2,ENUMPlus returned no data.)
+exten =&gt; no_result,n,Playback(silence/1&amp;enum-lookup-failed)
+exten =&gt; no_result,n,Set(OUTBOUND_ROUTE=SIP/${DEFAULT_ITSP_ROUTE})
+exten =&gt; no_result,n,Dial(${OUTBOUND_ROUTE}/${X})
+exten =&gt; no_result,n,Hangup()
+</code></pre>
+
+  </div>
+</div>
+<script src="http://blog.leifmadsen.com/js/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+</body>
+</html>
+

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Voicemail on Asterisk, and other worldly endeavours</title>
+    <link>http://blog.leifmadsen.com/tags/voicemail/index.xml</link>
+    <description>Recent content in Voicemail on Asterisk, and other worldly endeavours</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <atom:link href="/tags/voicemail/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Asterisk IMAP and Gmail</title>
+      <link>http://blog.leifmadsen.com/blog/2010/09/20/asterisk-imap-and-gmail/</link>
+      <pubDate>Mon, 20 Sep 2010 15:37:44 +0000</pubDate>
+      
+      <guid>http://blog.leifmadsen.com/blog/2010/09/20/asterisk-imap-and-gmail/</guid>
+      <description>Today I was working on the next edition of the Asterisk book and wanted to see if I could get Asterisk IMAP voicemail support to work with Gmail. I had tried doing this a few times in the past without success, but since I had spent some time documenting and testing against Dovecot last week for another client and gotten everything working, I figured I had a good base to start trying to connect to the Gmail IMAP servers.</description>
+    </item>
+    
+  </channel>
+</rss>
