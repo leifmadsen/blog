@@ -1,11 +1,9 @@
 +++
-keywords = [
-]
-categories = ["libvirt", "linux", "virtualization"
-]
+keywords = []
+categories = ["libvirt", "linux", "virtualization"]
 title = "Initial Fedora libvirt Setup"
 description = ""
-date = "2016-12-16T09:36:35-05:00"
+date = "2016-12-16T10:30:35-05:00"
 
 +++
 

@@ -6,13 +6,13 @@
     <description>Recent content in Posts on Asterisk, and other worldly endeavours</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 16 Dec 2016 09:36:35 -0500</lastBuildDate>
+    <lastBuildDate>Fri, 16 Dec 2016 10:30:35 -0500</lastBuildDate>
     <atom:link href="/post/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Initial Fedora libvirt Setup</title>
       <link>http://blog.leifmadsen.com/blog/2016/12/16/initial-fedora-libvirt-setup/</link>
-      <pubDate>Fri, 16 Dec 2016 09:36:35 -0500</pubDate>
+      <pubDate>Fri, 16 Dec 2016 10:30:35 -0500</pubDate>
       
       <guid>http://blog.leifmadsen.com/blog/2016/12/16/initial-fedora-libvirt-setup/</guid>
       <description>There are always a few things I need to do to get libvirt working with a non-root user on Fedora that I need to do, and typically results in some Google researching. Here are some notes of what I recently did to get my libvirt setup going on a new Fedora 25 installation and working with a non-root user.
