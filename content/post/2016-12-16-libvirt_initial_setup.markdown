@@ -1,7 +1,7 @@
 +++
 keywords = [
 ]
-categories = [
+categories = ["libvirt", "linux", "virtualization"
 ]
 title = "Initial Fedora libvirt Setup"
 description = ""
