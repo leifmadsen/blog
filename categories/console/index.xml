@@ -9,21 +9,6 @@
     <atom:link href="/categories/console/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
-      <title>Creating virtual machines in libvirt with virt-install</title>
-      <link>http://blog.leifmadsen.com/blog/2016/12/16/creating-virtual-machines-in-libvirt-with-virt-install/</link>
-      <pubDate>Fri, 16 Dec 2016 14:36:23 -0500</pubDate>
-      
-      <guid>http://blog.leifmadsen.com/blog/2016/12/16/creating-virtual-machines-in-libvirt-with-virt-install/</guid>
-      <description>&lt;p&gt;I&amp;rsquo;ve been wanting to automate my virtual machine instantiation for a while now,
-but I&amp;rsquo;ve always hated the idea of having to spin up multiple bits of
-infrastruction to deal with PXE booting, web server to host a kickstart file,
-etc. Luckily, I ran into some stuff today, and figured out how to automate
-virtual machine instantitation without having to resort to anything outside of
-localhost.
-&lt;/p&gt;</description>
-    </item>
-    
-    <item>
       <title>Create network bridge with nmcli for libvirt</title>
       <link>http://blog.leifmadsen.com/blog/2016/12/01/create-network-bridge-with-nmcli-for-libvirt/</link>
       <pubDate>Thu, 01 Dec 2016 14:51:52 -0500</pubDate>
