@@ -3,7 +3,7 @@
 echo -e "\033[0;32mDeploying updates to GitHub...\033[0m"
 
 # Makde sure everything is sane
-git subtree pull --prefix=public git@github.com:leifmadsen/blog.git gh-pages
+git subtree pull --squash --prefix=public git@github.com:leifmadsen/blog.git gh-pages
 git pull
 
 # Build the project.
