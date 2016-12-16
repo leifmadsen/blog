@@ -6,23 +6,8 @@
     <description>Recent content in Posts on Asterisk, and other worldly endeavours</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 16 Dec 2016 14:36:23 -0500</lastBuildDate>
+    <lastBuildDate>Fri, 16 Dec 2016 10:30:35 -0500</lastBuildDate>
     <atom:link href="/post/index.xml" rel="self" type="application/rss+xml" />
-    
-    <item>
-      <title>Creating virtual machines in libvirt with virt-install</title>
-      <link>http://blog.leifmadsen.com/blog/2016/12/16/creating-virtual-machines-in-libvirt-with-virt-install/</link>
-      <pubDate>Fri, 16 Dec 2016 14:36:23 -0500</pubDate>
-      
-      <guid>http://blog.leifmadsen.com/blog/2016/12/16/creating-virtual-machines-in-libvirt-with-virt-install/</guid>
-      <description>&lt;p&gt;I&amp;rsquo;ve been wanting to automate my virtual machine instantiation for a while now,
-but I&amp;rsquo;ve always hated the idea of having to spin up multiple bits of
-infrastruction to deal with PXE booting, web server to host a kickstart file,
-etc. Luckily, I ran into some stuff today, and figured out how to automate
-virtual machine instantitation without having to resort to anything outside of
-localhost.
-&lt;/p&gt;</description>
-    </item>
     
     <item>
       <title>Initial Fedora libvirt Setup</title>
@@ -212,6 +197,15 @@ Phones arrived in some nice looking boxes.</description>
       
       <guid>http://blog.leifmadsen.com/blog/2012/08/22/selecting-chef-servers-with-environment-variables/</guid>
       <description>Today I got playing around with dynamically selecting different chef servers in preparation for migrating some of our nodes away from our chef-dev server to our chef-live server (which I&amp;rsquo;m currently in the process of building and populating with data). I had been talking in the #chef IRC channel a few weeks back about making things dynamic, or at least easily switchable, when using multiple chef servers for different groups of servers in an environment.</description>
+    </item>
+    
+    <item>
+      <title>CentOS 5.8 On AWS EC2 With Xen Kernel (PVGRUB)</title>
+      <link>http://blog.leifmadsen.com/blog/2012/08/22/centos-5.8-on-aws-ec2-with-xen-kernel-pvgrub/</link>
+      <pubDate>Wed, 22 Aug 2012 14:10:46 +0000</pubDate>
+      
+      <guid>http://blog.leifmadsen.com/blog/2012/08/22/centos-5.8-on-aws-ec2-with-xen-kernel-pvgrub/</guid>
+      <description>At CoreDial we&amp;rsquo;ve been using a lot of AWS EC2 lately for building sandbox infrastructure for testing. Part of the infrastructure is a voice platform utilizing Asterisk 1.4 and 1.8, and those voice platforms are using Zaptel and DAHDI respectively for use with MeetMe(). This hasn&amp;rsquo;t been an issue previously as our testing has either been on bare metal, or in other virtual machine systems where installation of a base image and standard kernel are not an issue.</description>
     </item>
     
   </channel>
