@@ -240,13 +240,13 @@ interface we just created above.</p>
 
 <p>As before, we&rsquo;ll review what our networking configuration starting point is.</p>
 
-<pre><code class="language-bash">virsh list --all
- Id    Name                           State
- ----------------------------------------------------
-
+<pre><code class="language-bash">virsh net-list --all
+ Name                 State      Autostart     Persistent
+ ----------------------------------------------------------
+  default              active     yes           yes
 </code></pre>
 
-<p>In this case we don&rsquo;t have any networks.</p>
+<p>In this case we only have the default NAT networks.</p>
 
 <h2 id="create-network-interface">Create network interface</h2>
 
