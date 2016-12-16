@@ -77,12 +77,11 @@
     <br/>
     <a class="label" href="http://blog.leifmadsen.com/categories/libvirt">libvirt</a><a class="label" href="http://blog.leifmadsen.com/categories/linux">linux</a><a class="label" href="http://blog.leifmadsen.com/categories/virtualization">virtualization</a>
     </span>
-    
-
-<p>There are always a few things I need to do to get libvirt working with a
+    <p>There are always a few things I need to do to get libvirt working with a
 non-root user on Fedora that I need to do, and typically results in some Google
 researching. Here are some notes of what I recently did to get my libvirt setup
-going on a new Fedora 25 installation and working with a non-root user.</p>
+going on a new Fedora 25 installation and working with a non-root user.
+</p>
 
 <p><strong>NOTE</strong> I found <a href="http://www.tuxfixer.com/install-and-configure-kvm-qemu-on-centos-7-rhel-7-bridge-vhost-network-interface/">this tuxfixer blog
 post</a>
@@ -132,7 +131,6 @@ sudo sysetmctl status polkit.service
 <p>That should be about it really! Try running <code>virt-manager</code> or using
 <code>virt-install</code> to instantiate your first virtual machine to validate everything
 is setup as it should be.</p>
-
   </div>
   <div id="disqus_thread"></div>
 </div>

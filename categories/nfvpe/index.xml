@@ -14,8 +14,12 @@
       <pubDate>Thu, 01 Dec 2016 14:51:52 -0500</pubDate>
       
       <guid>http://blog.leifmadsen.com/blog/2016/12/01/create-network-bridge-with-nmcli-for-libvirt/</guid>
-      <description>In order to get libvirt working properly with bridged networking, we first need to configure our local network to have network bridge slaved to our wired ethernet adapter. I don&amp;rsquo;t have to set this up too often (as once I do, it just sits there running happily). Here are some basic steps I did to get this going locally.
-Add a bridge interface via Network Manager Before we get to adding a new network interface to libvirt, we&amp;rsquo;ll add our bridge interface to our host system via Network Manager.</description>
+      <description>&lt;p&gt;In order to get libvirt working properly with bridged networking, we first need
+to configure our local network to have network bridge slaved to our wired
+ethernet adapter. I don&amp;rsquo;t have to set this up too often (as once I do, it just
+sits there running happily). Here are some basic steps I did to get this going
+locally.
+&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -24,9 +28,19 @@ Add a bridge interface via Network Manager Before we get to adding a new network
       <pubDate>Fri, 11 Nov 2016 17:00:00 -0500</pubDate>
       
       <guid>http://blog.leifmadsen.com/blog/2016/11/11/tripleo-using-the-fake_pxe-driver-with-ironic/</guid>
-      <description>I&amp;rsquo;ve been working on testing things with TripleO and normally I use TripleO Quickstart to spin things up in a virtual environment.
-Often when doing NFV work though, you need things that can&amp;rsquo;t be used in a virtual environment (such as DPDK, SR-IOV, etc) so you need some baremetal nodes.
-In my home lab environment though, I don&amp;rsquo;t have the luxury of IPMI, so I need to make use of the fake_pxe driver in Ironic, which allows for standard PXE control, but requires you to deal with powering on and off the machines manually.</description>
+      <description>&lt;p&gt;I&amp;rsquo;ve been working on testing things with TripleO and normally I use &lt;a href=&#34;https://github.com/openstack/tripleo-quickstart/&#34;&gt;TripleO
+Quickstart&lt;/a&gt; to spin things up
+in a virtual environment.&lt;/p&gt;
+
+&lt;p&gt;Often when doing NFV work though, you need things that can&amp;rsquo;t be used in a
+virtual environment (such as DPDK, SR-IOV, etc) so you need some baremetal
+nodes.&lt;/p&gt;
+
+&lt;p&gt;In my home lab environment though, I don&amp;rsquo;t have the luxury of IPMI, so I need
+to make use of the &lt;code&gt;fake_pxe&lt;/code&gt; driver in Ironic, which allows for standard PXE
+control, but requires you to deal with powering on and off the machines
+manually. Let me show you how I make use of that.
+&lt;/p&gt;</description>
     </item>
     
     <item>

@@ -72,7 +72,15 @@
 <div class="content container">
   <div class="post">
     <h1 class="post-title">Configuring powerline to show working Git branch</h1>
-    <p>So the documentation for <a href="http://powerline.readthedocs.org/en/latest/index.html">Powerline</a> kind of sucks. I followed <a href="http://fedoramagazine.org/add-power-terminal-powerline">this</a> pretty good article on getting started with it. First thing I noticed however is that the <code>if</code> statement on the article doesn&rsquo;t work if you don&rsquo;t have powerline installed (which kind of defeats the purpose of having the <code>if</code> statement there at all).</p>
+    <p>So the documentation for
+<a href="http://powerline.readthedocs.org/en/latest/index.html">Powerline</a> kind of
+sucks. I followed
+<a href="http://fedoramagazine.org/add-power-terminal-powerline">this</a> pretty good
+article on getting started with it. First thing I noticed however is that the
+<code>if</code> statement on the article doesn&rsquo;t work if you don&rsquo;t have powerline
+installed (which kind of defeats the purpose of having the <code>if</code> statement there
+at all).
+</p>
 
 <pre><code class="language-bash"># if powerline is installed, then use it
 command -v powerline-daemon &amp;&gt;/dev/null
@@ -84,20 +92,30 @@ POWERLINE_BASH_SELECT=1
 fi
 </code></pre>
 
-<p>Next up is the configuration. I primarily use my bash prompt as a way to indicate which branch I&rsquo;m working in within a Git repository. You need to point at the <code>default_leftonly</code> theme which is pretty easy to find when you web search for it. The issue is everything seems to just point you at the powerline docs, which aren&rsquo;t the most clear.</p>
+<p>Next up is the configuration. I primarily use my bash prompt as a way to
+indicate which branch I&rsquo;m working in within a Git repository. You need to point
+at the <code>default_leftonly</code> theme which is pretty easy to find when you web
+search for it. The issue is everything seems to just point you at the powerline
+docs, which aren&rsquo;t the most clear.</p>
 
-<p>First, start by creating a local configuration directory that will override the configuration for powerline for your user.</p>
+<p>First, start by creating a local configuration directory that will override the
+configuration for powerline for your user.</p>
 
 <pre><code class="language-bash">$ mkdir -p ~/.config/powerline
 </code></pre>
 
-<p>Then the next thing is to copy over the <code>config.json</code> from the main powerline configuration directory where you can find the available color schemes and other shell, i3, vim, etc themes.</p>
+<p>Then the next thing is to copy over the <code>config.json</code> from the main powerline
+configuration directory where you can find the available color schemes and
+other shell, i3, vim, etc themes.</p>
 
-<p>(Again, the documentation kind of sucks on where the root of these configurations live&hellip;)</p>
+<p>(Again, the documentation kind of sucks on where the root of these
+configurations live&hellip;)</p>
 
-<p>On my Fedora 22 system they live in <code>/etc/xdg/powerline/</code>. I then copy the <code>config.json</code> from that directory to <code>~/.config/powerline</code></p>
+<p>On my Fedora 22 system they live in <code>/etc/xdg/powerline/</code>. I then copy the
+<code>config.json</code> from that directory to <code>~/.config/powerline</code></p>
 
-<p>To get the Git branch stuff going, I modified the configuration file in the following way:</p>
+<p>To get the Git branch stuff going, I modified the configuration file in the
+following way:</p>
 
 <pre><code class="language-javascript">--- /etc/xdg/powerline/config.json 2015-02-18 18:56:51.000000000 -0500
 +++ /home/lmadsen/.config/powerline/config.json 2015-09-09 17:11:43.937522571 -0400
@@ -112,8 +130,10 @@ fi
 &quot;select&quot;: &quot;select&quot;
 </code></pre>
 
-<p>To make it active you can run <code>powerline-config --reload</code>. If you have any errors in your configuration (I actually ran into this when playing with the colorscheme setting and used &ldquo;solorized&rdquo; instead of &ldquo;solarized&rdquo;), you can check it with <code>powerline-lint</code>.</p>
-
+<p>To make it active you can run <code>powerline-config --reload</code>. If you have any
+errors in your configuration (I actually ran into this when playing with the
+colorscheme setting and used &ldquo;solorized&rdquo; instead of &ldquo;solarized&rdquo;), you can check
+it with <code>powerline-lint</code>.</p>
   </div>
 </div>
 <script src="http://blog.leifmadsen.com/js/highlight.pack.js"></script>

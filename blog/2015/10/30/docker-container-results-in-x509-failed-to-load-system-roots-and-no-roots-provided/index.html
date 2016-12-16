@@ -77,16 +77,28 @@
     <br/>
     <a class="label" href="http://blog.leifmadsen.com/categories/asterisk">Asterisk</a><a class="label" href="http://blog.leifmadsen.com/categories/devops">DevOps</a><a class="label" href="http://blog.leifmadsen.com/categories/docker">Docker</a>
     </span>
-    <p>We have a small system running in AWS as a CentOS 7 image. It has a few containers that we&rsquo;re using to host a few Golang API proxies. We migrated a customers API proxy that was running on the local VM into a container, and spun it up. Upon testing, we ran into the following error:</p>
+    <p>We have a small system running in AWS as a CentOS 7 image. It has a few
+containers that we&rsquo;re using to host a few Golang API proxies. We migrated a
+customers API proxy that was running on the local VM into a container, and spun
+it up. Upon testing, we ran into the following error:</p>
 
 <pre><code>x509: failed to load system roots and no roots provided
 </code></pre>
 
-<p>We get that failure when trying to connect to an HTTPS endpoint (remote API that we&rsquo;re proxying to Asterisk).</p>
+<p></p>
 
-<p>Figured it had to do with the fact we were using a scratch disk to build the container image, and that there were no certs loaded. Did some Googling and found some people with similar problems, but their solutions didn&rsquo;t work for us on our CentOS 7 host system.</p>
+<p>We get that failure when trying to connect to an HTTPS endpoint (remote API
+that we&rsquo;re proxying to Asterisk).</p>
 
-<p>Then I thought maybe there was some issue with following a symlink as the source since we were loading in the <code>ca-bundle.crt</code> file as a volume. I didn&rsquo;t test enough to determine if that was the issue (it probably wasn&rsquo;t), but this post gave me a hint:</p>
+<p>Figured it had to do with the fact we were using a scratch disk to build the
+container image, and that there were no certs loaded. Did some Googling and
+found some people with similar problems, but their solutions didn&rsquo;t work for us
+on our CentOS 7 host system.</p>
+
+<p>Then I thought maybe there was some issue with following a symlink as the
+source since we were loading in the <code>ca-bundle.crt</code> file as a volume. I didn&rsquo;t
+test enough to determine if that was the issue (it probably wasn&rsquo;t), but this
+post gave me a hint:</p>
 
 <p><a href="https://github.com/docker/docker/issues/5157#issuecomment-69325677">https://github.com/docker/docker/issues/5157#issuecomment-69325677</a></p>
 
@@ -95,8 +107,8 @@
 <pre><code>docker run -d -p 8085:8085 -v /etc/pki/ca-trust/extracted/pem/tls-ca-bundle.pem:/etc/ssl/certs/ca-certificates.crt [etc...]
 </code></pre>
 
-<p>After linking that file and mounting it in the container, all was well. I suspect it&rsquo;s the path to the <code>ca-certificates.crt</code> that was the real trick.</p>
-
+<p>After linking that file and mounting it in the container, all was well. I
+suspect it&rsquo;s the path to the <code>ca-certificates.crt</code> that was the real trick.</p>
   </div>
   <div id="disqus_thread"></div>
 </div>
