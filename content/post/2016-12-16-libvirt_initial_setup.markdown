@@ -19,8 +19,8 @@ post](http://www.tuxfixer.com/install-and-configure-kvm-qemu-on-centos-7-rhel-7-
 while doing some other research for this blog post, which basically does
 everything I'm about to say, but he does some other network setup and things
 I'd have done via `nmcli` and the console. See my other blog post about
-[creating a network bridge with nmcli for libvirt]({{< relref
-"blog/2016/12/01/create-network-bridge-with-nmcli-for-libvirt/" >}}).
+[creating a network bridge with nmcli for libvirt]({{< ref
+"post/2016-12-01-create-bridge-with-nmcli.markdown" >}}).
 
 # Installing packages
 
