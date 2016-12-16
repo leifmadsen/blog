@@ -11,6 +11,7 @@ There are always a few things I need to do to get libvirt working with a
 non-root user on Fedora that I need to do, and typically results in some Google
 researching. Here are some notes of what I recently did to get my libvirt setup
 going on a new Fedora 25 installation and working with a non-root user.
+<!--more-->
 
 **NOTE** I found [this tuxfixer blog
 post](http://www.tuxfixer.com/install-and-configure-kvm-qemu-on-centos-7-rhel-7-bridge-vhost-network-interface/)

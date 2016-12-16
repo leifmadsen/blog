@@ -12,7 +12,7 @@ to configure our local network to have network bridge slaved to our wired
 ethernet adapter. I don't have to set this up too often (as once I do, it just
 sits there running happily). Here are some basic steps I did to get this going
 locally.
-
+<!--more-->
 # Add a bridge interface via Network Manager
 
 Before we get to adding a new network interface to libvirt, we'll add our

@@ -7,10 +7,10 @@ title = "A Console Obsession"
 
 +++
 
-# It's A Console Thing
 Recently I've gotten into running as many of my day-to-day applications in a
 Linux console. Thought I'd briefly share the applications I've been playing
 with.
+<!--more-->
 
 * **GerTTY** (http://gertty.readthedocs.io/en/master/): Synchronize and follow
   Gerrit-hosted projects, and perform code reviews. It's a bit slow, but

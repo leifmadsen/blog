@@ -17,7 +17,15 @@ tags:
 - shell
 ---
 
-So the documentation for [Powerline](http://powerline.readthedocs.org/en/latest/index.html) kind of sucks. I followed [this](http://fedoramagazine.org/add-power-terminal-powerline) pretty good article on getting started with it. First thing I noticed however is that the `if` statement on the article doesn't work if you don't have powerline installed (which kind of defeats the purpose of having the `if` statement there at all).
+So the documentation for
+[Powerline](http://powerline.readthedocs.org/en/latest/index.html) kind of
+sucks. I followed
+[this](http://fedoramagazine.org/add-power-terminal-powerline) pretty good
+article on getting started with it. First thing I noticed however is that the
+`if` statement on the article doesn't work if you don't have powerline
+installed (which kind of defeats the purpose of having the `if` statement there
+at all).
+<!--more-->
 
 ```bash
 # if powerline is installed, then use it
@@ -30,21 +38,31 @@ POWERLINE_BASH_SELECT=1
 fi
 ```
 
-Next up is the configuration. I primarily use my bash prompt as a way to indicate which branch I'm working in within a Git repository. You need to point at the `default_leftonly` theme which is pretty easy to find when you web search for it. The issue is everything seems to just point you at the powerline docs, which aren't the most clear.
+Next up is the configuration. I primarily use my bash prompt as a way to
+indicate which branch I'm working in within a Git repository. You need to point
+at the `default_leftonly` theme which is pretty easy to find when you web
+search for it. The issue is everything seems to just point you at the powerline
+docs, which aren't the most clear.
 
-First, start by creating a local configuration directory that will override the configuration for powerline for your user.
+First, start by creating a local configuration directory that will override the
+configuration for powerline for your user.
 
 ```bash
 $ mkdir -p ~/.config/powerline
 ```
 
-Then the next thing is to copy over the `config.json` from the main powerline configuration directory where you can find the available color schemes and other shell, i3, vim, etc themes.
+Then the next thing is to copy over the `config.json` from the main powerline
+configuration directory where you can find the available color schemes and
+other shell, i3, vim, etc themes.
 
-(Again, the documentation kind of sucks on where the root of these configurations live...)
+(Again, the documentation kind of sucks on where the root of these
+configurations live...)
 
-On my Fedora 22 system they live in `/etc/xdg/powerline/`. I then copy the `config.json` from that directory to `~/.config/powerline`
+On my Fedora 22 system they live in `/etc/xdg/powerline/`. I then copy the
+`config.json` from that directory to `~/.config/powerline`
 
-To get the Git branch stuff going, I modified the configuration file in the following way:
+To get the Git branch stuff going, I modified the configuration file in the
+following way:
 
 ```javascript
 --- /etc/xdg/powerline/config.json 2015-02-18 18:56:51.000000000 -0500
@@ -60,4 +78,7 @@ To get the Git branch stuff going, I modified the configuration file in the foll
 "select": "select"
 ```
 
-To make it active you can run `powerline-config --reload`. If you have any errors in your configuration (I actually ran into this when playing with the colorscheme setting and used "solorized" instead of "solarized"), you can check it with `powerline-lint`.
+To make it active you can run `powerline-config --reload`. If you have any
+errors in your configuration (I actually ran into this when playing with the
+colorscheme setting and used "solorized" instead of "solarized"), you can check
+it with `powerline-lint`.

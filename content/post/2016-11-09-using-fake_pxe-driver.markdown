@@ -19,7 +19,7 @@ In my home lab environment though, I don't have the luxury of IPMI, so I need
 to make use of the `fake_pxe` driver in Ironic, which allows for standard PXE
 control, but requires you to deal with powering on and off the machines
 manually. Let me show you how I make use of that.
-
+<!--more-->
 # tl;dr
 
 * power off machines
