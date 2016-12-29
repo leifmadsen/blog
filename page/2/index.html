@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
 <head>
-	<meta name="generator" content="Hugo 0.18-DEV" />
+	<meta name="generator" content="Hugo 0.19-DEV" />
   <link href="http://gmpg.org/xfn/11" rel="profile">
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
 
@@ -30,8 +30,8 @@
   
   <link href="http://blog.leifmadsen.com/index.xml" rel="alternate" type="application/rss+xml" title="Asterisk, and other worldly endeavours &middot; Leif Madsen" />
 
-  <meta name="description" content="">
-  <meta name="keywords" content="">
+  <meta name="description" content="Leif Madsen Blog Entry">
+  <meta name="keywords" content="blog,asterisk,leif,madsen,canada">
   
 </head>
 <body>
@@ -73,6 +73,29 @@
 <div class="content container">
   <div class="posts">
     
+    
+    <div class="post">
+      <h1 class="post-title">
+        <a href="http://blog.leifmadsen.com/blog/2015/09/09/configuring-powerline-to-show-working-git-branch/">Configuring powerline to show working Git branch</a>
+      </h1>
+      <span class="post-date">Sep 9, 2015 &middot; 2 minute read &middot; <a href="http://blog.leifmadsen.com/blog/2015/09/09/configuring-powerline-to-show-working-git-branch/#disqus_thread">Comments</a>
+      
+      <br/>
+      <a class="label" href="http://blog.leifmadsen.com/categories/being-productive">Being Productive</a><a class="label" href="http://blog.leifmadsen.com/categories/devops">DevOps</a><a class="label" href="http://blog.leifmadsen.com/categories/programming">Programming</a>
+      </span>
+      
+      <p>So the documentation for
+<a href="http://powerline.readthedocs.org/en/latest/index.html">Powerline</a> kind of
+sucks. I followed
+<a href="http://fedoramagazine.org/add-power-terminal-powerline">this</a> pretty good
+article on getting started with it. First thing I noticed however is that the
+<code>if</code> statement on the article doesn&rsquo;t work if you don&rsquo;t have powerline
+installed (which kind of defeats the purpose of having the <code>if</code> statement there
+at all).
+</p>
+      <a href="http://blog.leifmadsen.com/blog/2015/09/09/configuring-powerline-to-show-working-git-branch/">Read On &rarr;</a>
+      
+    </div>
     
     <div class="post">
       <h1 class="post-title">
@@ -215,23 +238,6 @@ ssh-add ~/.ssh/some_key &gt; /dev/null 2&amp;&gt;1  Note the 2&amp;&gt;1 at the 
       So for the last week or so, I&rsquo;ve been tasked at CoreDial with adding our own set of integration testing now that we&rsquo;re moving to a more formal deployment method using chef. After much pestering of questions to thehar of Lookout Mobile Security and with help of Google, #chef and jhansche in #jenkins I&rsquo;ve finally got a nice clean proof of concept that we can evaluate and likely deploy.
 I&rsquo;ll come back later with another article on my installation issues with jenkins and the solutions that I solved (nothing too terribly complicated), but what I wanted to blog about was the two types of tests that I&rsquo;ve been focusing on and was able to finally solve.
       <a href="http://blog.leifmadsen.com/blog/2012/06/26/integration-testing-using-jenkins-part-1/">Read On &rarr;</a>
-      
-    </div>
-    
-    <div class="post">
-      <h1 class="post-title">
-        <a href="http://blog.leifmadsen.com/blog/2012/02/23/rpmlint-non-utf8-spec-file-error/">rpmlint non-utf8-spec-file error</a>
-      </h1>
-      <span class="post-date">Feb 23, 2012 &middot; 1 minute read &middot; <a href="http://blog.leifmadsen.com/blog/2012/02/23/rpmlint-non-utf8-spec-file-error/#disqus_thread">Comments</a>
-      
-      <br/>
-      <a class="label" href="http://blog.leifmadsen.com/categories/useful-tools">Useful Tools</a>
-      </span>
-      
-      I&rsquo;ve been doing a bunch of work with RPMs lately, and while running rpmlint against a spec file I was modifying, I received this error:
-myfile.spec: E: non-utf8-spec-file myfile.spec  After Googling, I ran into a way of finding the non-compliant characters.
-$ iconv -f ISO-8859-8 -t UTF-8 myfile.spec &gt; converted.spec $ diff -u myfile.spec converted.spec  (Answer thanks to Dominique Leuenberger @ http://lists.opensuse.org/opensuse-packaging/2011-04/msg00005.html)
-      
       
     </div>
     

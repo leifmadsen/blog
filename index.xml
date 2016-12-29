@@ -1,13 +1,24 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Asterisk, and other worldly endeavours</title>
+    <title>Asterisk, and other worldly endeavours on Asterisk, and other worldly endeavours</title>
     <link>http://blog.leifmadsen.com/index.xml</link>
-    <description>Recent content on Asterisk, and other worldly endeavours</description>
+    <description>Recent content in Asterisk, and other worldly endeavours on Asterisk, and other worldly endeavours</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 16 Dec 2016 14:36:23 -0500</lastBuildDate>
+    <lastBuildDate>Wed, 28 Dec 2016 13:01:21 -0500</lastBuildDate>
     <atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Create a virtual undercloud with TripleO Quickstart</title>
+      <link>http://blog.leifmadsen.com/blog/2016/12/28/create-a-virtual-undercloud-with-tripleo-quickstart/</link>
+      <pubDate>Wed, 28 Dec 2016 13:01:21 -0500</pubDate>
+      
+      <guid>http://blog.leifmadsen.com/blog/2016/12/28/create-a-virtual-undercloud-with-tripleo-quickstart/</guid>
+      <description>In this blog post I&amp;rsquo;ll discuss how I&amp;rsquo;m currently using TripleO Quickstart to instantiate a virtual machine on a remote virtual machine host from my workstation. In follow up blog posts I&amp;rsquo;ll discuss how to utilize the virtual machine to provision both virtual and baremetal overclouds from the virtual machine.
+Topology The topology for our lab environment is shown in image 1-1.
+ Image 1-1: TripleO Quickstart Physical Layout   We have a laptop acting as the workstation (where we&amp;rsquo;ll do our work from), a virtual host (with lots of memory to run virtual machines), and 3 small physical hosts (Atom based) which will simulate nodes for a baremetal deployment.</description>
+    </item>
     
     <item>
       <title>Creating virtual machines in libvirt with virt-install</title>
@@ -201,18 +212,6 @@ Late last week, the book went to print, and should start to appear on store shel
       <guid>http://blog.leifmadsen.com/blog/2012/11/24/brother-printer-doesnt-print-in-fedora-17/</guid>
       <description>Tip: If your Brother printer won&amp;rsquo;t print after installing the drivers, install glibc.i686
 Today ran into an issue with my new Brother MFC-7460DN (which is a really nice laser printer with auto-feed scanner, Scan-to-FTP which creates a PDF file, and other things). I had just recently done a clean install of Fedora 17, and I could install the RPMs (which are i386 files on my x86_64 based system), add the printer to CUPS and all sorts of things that looked fine.</description>
-    </item>
-    
-    <item>
-      <title>Digium D40 and D70 Phone Unboxing</title>
-      <link>http://blog.leifmadsen.com/blog/2012/10/11/digium-d40-and-d70-phone-unboxing/</link>
-      <pubDate>Thu, 11 Oct 2012 20:43:35 +0000</pubDate>
-      
-      <guid>http://blog.leifmadsen.com/blog/2012/10/11/digium-d40-and-d70-phone-unboxing/</guid>
-      <description>Today I received a couple of phones from Digium; the D40 and D70. I&amp;rsquo;ll be using these phones for testing and documentation in the 4th edition of Asterisk: The Definitive Guide (which Jim Van Meggelen, Russell Bryant and myself are working on right now).
-Here is my unboxing of the phones and some commentary about my initial impressions of the hardware itself.
-[caption id=&amp;ldquo;attachment_484&amp;rdquo; align=&amp;ldquo;aligncenter&amp;rdquo; width=&amp;ldquo;300&amp;rdquo;] Pretty boxes![/caption]
-Phones arrived in some nice looking boxes.</description>
     </item>
     
   </channel>

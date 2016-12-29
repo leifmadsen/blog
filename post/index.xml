@@ -6,8 +6,19 @@
     <description>Recent content in Posts on Asterisk, and other worldly endeavours</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 16 Dec 2016 14:36:23 -0500</lastBuildDate>
+    <lastBuildDate>Wed, 28 Dec 2016 13:01:21 -0500</lastBuildDate>
     <atom:link href="/post/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Create a virtual undercloud with TripleO Quickstart</title>
+      <link>http://blog.leifmadsen.com/blog/2016/12/28/create-a-virtual-undercloud-with-tripleo-quickstart/</link>
+      <pubDate>Wed, 28 Dec 2016 13:01:21 -0500</pubDate>
+      
+      <guid>http://blog.leifmadsen.com/blog/2016/12/28/create-a-virtual-undercloud-with-tripleo-quickstart/</guid>
+      <description>In this blog post I&amp;rsquo;ll discuss how I&amp;rsquo;m currently using TripleO Quickstart to instantiate a virtual machine on a remote virtual machine host from my workstation. In follow up blog posts I&amp;rsquo;ll discuss how to utilize the virtual machine to provision both virtual and baremetal overclouds from the virtual machine.
+Topology The topology for our lab environment is shown in image 1-1.
+ Image 1-1: TripleO Quickstart Physical Layout   We have a laptop acting as the workstation (where we&amp;rsquo;ll do our work from), a virtual host (with lots of memory to run virtual machines), and 3 small physical hosts (Atom based) which will simulate nodes for a baremetal deployment.</description>
+    </item>
     
     <item>
       <title>Creating virtual machines in libvirt with virt-install</title>
@@ -203,15 +214,6 @@ Today ran into an issue with my new Brother MFC-7460DN (which is a really nice l
 Here is my unboxing of the phones and some commentary about my initial impressions of the hardware itself.
 [caption id=&amp;ldquo;attachment_484&amp;rdquo; align=&amp;ldquo;aligncenter&amp;rdquo; width=&amp;ldquo;300&amp;rdquo;] Pretty boxes![/caption]
 Phones arrived in some nice looking boxes.</description>
-    </item>
-    
-    <item>
-      <title>Selecting Chef Servers With Environment Variables</title>
-      <link>http://blog.leifmadsen.com/blog/2012/08/22/selecting-chef-servers-with-environment-variables/</link>
-      <pubDate>Wed, 22 Aug 2012 18:49:43 +0000</pubDate>
-      
-      <guid>http://blog.leifmadsen.com/blog/2012/08/22/selecting-chef-servers-with-environment-variables/</guid>
-      <description>Today I got playing around with dynamically selecting different chef servers in preparation for migrating some of our nodes away from our chef-dev server to our chef-live server (which I&amp;rsquo;m currently in the process of building and populating with data). I had been talking in the #chef IRC channel a few weeks back about making things dynamic, or at least easily switchable, when using multiple chef servers for different groups of servers in an environment.</description>
     </item>
     
   </channel>
