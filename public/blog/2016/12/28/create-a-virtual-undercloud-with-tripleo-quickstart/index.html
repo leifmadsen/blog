@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
+<head>
+  <link href="http://gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+  <title>Create a virtual undercloud with TripleO Quickstart &middot; Leif Madsen</title>
+
+  
+  <link rel="stylesheet" href="http://blog.leifmadsen.com/css/poole.css">
+  <link rel="stylesheet" href="http://blog.leifmadsen.com/css/hyde.css">
+  <link rel="stylesheet" href="http://blog.leifmadsen.com/css/poole-overrides.css">
+  <link rel="stylesheet" href="http://blog.leifmadsen.com/css/hyde-overrides.css">
+  <link rel="stylesheet" href="http://blog.leifmadsen.com/css/hyde-x.css">
+  <link rel="stylesheet" href="http://blog.leifmadsen.com/css/highlight/monokai.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700|Abril+Fatface">
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  
+
+  
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="http://blog.leifmadsen.com/touch-icon-144-precomposed.png">
+  <link href="http://blog.leifmadsen.com/favicon.png" rel="icon">
+
+  
+  
+  
+  
+
+  <meta name="description" content="Leif Madsen Blog Entry">
+  <meta name="keywords" content="blog,asterisk,leif,madsen,canada">
+  
+</head>
+<body>
+<div class="sidebar">
+  <div class="container sidebar-sticky">
+    <div class="sidebar-about">
+      
+      <h1>Leif Madsen</h1>
+      <p class="lead">Asterisk, and other worldly endeavours</p>
+    </div>
+
+    <ul class="sidebar-nav">
+      <li class="sidebar-nav-item"><a href="http://blog.leifmadsen.com/">Blog</a></li>
+      
+    </ul>
+
+    <ul class="sidebar-nav">
+      <li class="sidebar-nav-item">
+      <a href="http://github.com/leifmadsen"><i class="fa fa-github-square fa-3x"></i></a>
+      
+      
+      <a href="http://linkedin.com/in/leifmadsen"><i class="fa fa-linkedin-square fa-3x"></i></a>
+      
+      
+      <a href="http://twitter.com/leifmadsen"><i class="fa fa-twitter-square fa-3x"></i></a>
+      
+      <a href="http://blog.leifmadsen.com/index.xml" type="application/rss+xml"><i class="fa fa-rss-square fa-3x"></i></a>
+      </li>
+    </ul>
+
+    
+
+    <p>Copyright &copy; 2016 <a href="http://blog.leifmadsen.com/license/">License</a><br/>
+       Powered by <a href="http://gohugo.io">Hugo</a> and <a href="https://github.com/zyro/hyde-x">Hyde-X</a></p>
+  </div>
+</div>
+
+
+<div class="content container">
+  <div class="post">
+    <h1 class="post-title">Create a virtual undercloud with TripleO Quickstart</h1>
+    <span class="post-date">Dec 28, 2016 &middot; 5 minute read &middot; <a href="http://blog.leifmadsen.com/blog/2016/12/28/create-a-virtual-undercloud-with-tripleo-quickstart/#disqus_thread">Comments</a>
+    
+    <br/>
+    <a class="label" href="http://blog.leifmadsen.com/categories/nfvpe">nfvpe</a><a class="label" href="http://blog.leifmadsen.com/categories/tripleo">tripleo</a><a class="label" href="http://blog.leifmadsen.com/categories/oooq">oooq</a><a class="label" href="http://blog.leifmadsen.com/categories/virtualization">virtualization</a><a class="label" href="http://blog.leifmadsen.com/categories/openstack">openstack</a>
+    </span>
+    
+
+<p>In this blog post I&rsquo;ll discuss how I&rsquo;m currently using <a href="https://github.com/openstack/tripleo-quickstart">TripleO
+Quickstart</a> to instantiate a virtual machine on a remote virtual machine
+host from my workstation. In follow up blog posts I&rsquo;ll discuss how to utilize
+the virtual machine to provision both virtual and baremetal overclouds from the
+virtual machine.</p>
+
+<!-- MORE -->
+
+<h1 id="topology">Topology</h1>
+
+<p>The topology for our lab environment is shown in image 1-1.</p>
+
+
+<figure >
+    
+        <img src="http://blog.leifmadsen.com/media/oooq-phys-layout.png" />
+    
+    
+    <figcaption>
+        <h4>Image 1-1: TripleO Quickstart Physical Layout</h4>
+        
+    </figcaption>
+    
+</figure>
+
+
+<p>We have a laptop acting as the workstation (where we&rsquo;ll do our work from), a
+virtual host (with lots of memory to run virtual machines), and 3 small
+physical hosts (Atom based) which will simulate nodes for a baremetal
+deployment.</p>
+
+<h1 id="pre-requisites">Pre-requisites</h1>
+
+<p>We&rsquo;ll be using TripleO Quickstart (referenced as <strong>oooq</strong>, or simply
+<strong>quickstart</strong> going forward) as our deployment mechanism. We&rsquo;ll be doing this
+from our workstation to a headless virtual host on our network. In this blog
+post we&rsquo;ll simply be deploying the undercloud and getting it ready for future
+blog posts where we&rsquo;ll start to do some more elaborate deployments.</p>
+
+<p>First, clone the oooq repository from
+<a href="https://github.com/openstack/tripleo-quickstart.git">https://github.com/openstack/tripleo-quickstart.git</a>.</p>
+
+<pre><code>cd ~/src/github/
+git clone https://github.com/openstack/tripleo-quickstart.git
+cd tripleo-quickstart
+</code></pre>
+
+<p>Next we&rsquo;ll need to validate a few things on the headless virtual host. Here are
+a couple things you need to validate:</p>
+
+<ul class="task-list">
+<li><input type="checkbox" checked disabled class="task-list-item"> ssh into the virtual host without password (ssh keys)</li>
+<li><input type="checkbox" checked disabled class="task-list-item"> install dependencies</li>
+</ul>
+
+<p>First make sure you&rsquo;ve copied your public SSH key into the remote host. In this
+case, our remote host is <code>192.168.3.180</code> (and our workstation is some other IP
+address in the same subnet, such as <code>192.168.3.160</code>).</p>
+
+<pre><code>ssh-copy-id -i ~/.ssh/id_rsa.pub root@192.168.3.180
+</code></pre>
+
+<p>Once you&rsquo;ve done that validate that you can ssh into the remote host without a
+password.</p>
+
+<p>Next up is making sure our dependencies are installed on the remote virtual
+host. We can redirect the contents of our local <code>quickstart.sh</code> file to the
+remote host, and use the <code>--install-deps</code> flag.</p>
+
+<pre><code>ssh root@192.168.3.180 &quot;bash -s -- --install-deps&quot; &lt; ./quickstart.sh
+</code></pre>
+
+<p>Now we should be mostly ready to get started on deploying our undercloud.</p>
+
+<h1 id="initial-deployment">Initial Deployment</h1>
+
+<p>In our initial deployment I&rsquo;m going to just deploy an undercloud using a NAT
+interface on libvirt which is the default method for oooq. When deploying an
+overcloud with physical machines, it may be desirable to have the virtual
+machine bridged to the network with a native IP on the subnet. I&rsquo;ll delve into
+that in another post though.</p>
+
+
+<figure >
+    
+        <img src="http://blog.leifmadsen.com/media/virtual-undercloud-topology.png" />
+    
+    
+    <figcaption>
+        <h4>Image 1-2: Virtual Undercloud Topology</h4>
+        
+    </figcaption>
+    
+</figure>
+
+
+<blockquote>
+<p><strong>NOTE</strong>
+If it hasn&rsquo;t merged yet, and you&rsquo;re using Fedora as your workstation and/or
+your virtual host, then you may need to cherry pick a patch I opened upstream
+which will tweak a couple of things that aren&rsquo;t working by default on a
+Fedora based deployment. If you&rsquo;re using RHEL or CentOS, then nothing should
+need changing:</p>
+
+<pre><code>git fetch https://git.openstack.org/openstack/tripleo-quickstart refs/changes/42/411442/7 &amp;&amp; git cherry-pick FETCH_HEAD
+</code></pre>
+</blockquote>
+
+<h2 id="overrides-file">Overrides file</h2>
+
+<p>In order to only deploy an undercloud, we&rsquo;ll need to create an override file
+that will clear out the default Ansible variables that would otherwise create
+virtual machines for a single controller and single compute node. We&rsquo;ll pass
+this overrides file into <code>quickstart.sh</code> to avoid the build out of the
+additional virtual nodes.</p>
+
+<pre><code>cat &gt; overrides.yaml &lt;&lt;EOF
+overcloud_nodes: []
+EOF
+</code></pre>
+
+<h2 id="deploying-the-virtual-undercloud">Deploying the virtual undercloud</h2>
+
+<p>Now we&rsquo;re ready to deploy our virtual undercloud. The purpose of this is really
+to see what happens with a minimal configuration set, and build out a more
+elaborate environment from there.</p>
+
+<pre><code>./quickstart.sh --release newton \
+  --no-clone \
+  --clean \
+  --tags untagged,provision,environment,undercloud-scripts \
+  -e supported_distro_check=false \
+  -e @overrides.yaml \
+  --teardown all 192.168.3.180
+</code></pre>
+
+<p>We can step through this configuration to understand exactly what we&rsquo;re doing
+here. We&rsquo;re slightly more advanced than a full default deployment on localhost,
+but since our goal is to get a virtual undercloud operational, we&rsquo;re beyond the
+default setup.</p>
+
+<p>Let&rsquo;s step through the various sections. In the first line it&rsquo;s straight
+forward. Run the quickstart deployment, using the upstream Newton release (from
+<a href="http://rdoproject.org">RDO</a>).</p>
+
+<pre><code>./quickstart.sh --release newton \
+</code></pre>
+
+<p>Next up, we have <code>--no-clone</code>, meaning to avoid cloning a new copy of the
+upstream quickstart repository, and instead use our working copy (including any
+local changes).</p>
+
+<p>We also apply the <code>--clean</code> flag to clean out our working
+directory during each run. The default working directory is <code>~/.quickstart/</code>.
+(You can override this with the <code>--working-dir</code> flag.)</p>
+
+<pre><code>--no-clone \
+--clean \
+</code></pre>
+
+<p>I also want to avoid running the undercloud installation, as we haven&rsquo;t created
+any configuration files yet, or provided the undercloud our deployment
+topology. At this point, we&rsquo;re basically building a vanilla, pre-configuration
+undercloud with a copy of the deployment scripts.</p>
+
+<p>Controlling the steps being run by quickstart can be done with the <code>--tags</code>
+flag. In this case, run the environment and provisioning tags (the untagged
+stuff as well), and deploy the undercloud scripts.</p>
+
+<pre><code>--tags untagged,provision,environment,undercloud-scripts \
+</code></pre>
+
+<p>You can find the default list of tags in the <code>quickstart.sh</code> file in the
+<code>DEFAULT_OPT_TAGS</code> variable, whose current tag list is:</p>
+
+<pre><code>DEFAULT_OPT_TAGS=&quot;untagged,provision,environment,undercloud-scripts,overcloud-scripts,undercloud-install,undercloud-post-install&quot;
+</code></pre>
+
+<p>Since I&rsquo;m running from the Fedora (25) distribution, I have to override the
+distribution check. We&rsquo;re also going to pass the <code>overrides.yaml</code> file that we
+created earlier to avoid any overcloud virtual machine instantation.</p>
+
+<pre><code>-e supported_distro_check=false \
+-e @overrides.yaml \
+</code></pre>
+
+<p>Last step is to pass the <code>--teardown all</code> setting so that we create new virtual
+machines each time we run this. If this isn&rsquo;t what you&rsquo;re instending to do,
+just remove the <code>--teardown</code> flag. The final argument is the hostname (or in
+this case, IP address) of the virtual host where we want to deploy.</p>
+
+<pre><code>--teardown all 192.168.3.180
+</code></pre>
+
+<h1 id="conclusion">Conclusion</h1>
+
+<p>After about 10 minutes (perhaps longer on initial deployment since overcloud
+images will need to be downloaded from the RDO project), you should have a
+shiny new undercloud machine in the pre-provisioned state.</p>
+
+<p>You can validate this by SSH&rsquo;ing into the virtual host, and running the <code>virsh</code>
+command as the <code>stack</code> user.</p>
+
+<pre><code>ssh root@192.168.3.180
+sudo su - stack
+virsh list --all
+Id    Name                           State
+----------------------------------------------------
+1     undercloud                     running
+</code></pre>
+
+<p>At the end of the quickstart run, you&rsquo;ll see the ssh command that will allow
+you to proxy to the undercloud.</p>
+
+<p>In subsequent posts, we&rsquo;ll look at how to pass custom configurations to the
+undercloud, setup the undercloud for bridged networking, and how to use it to
+deploy a baremetal lab environment using composable services and roles.</p>
+
+  </div>
+  <div id="disqus_thread"></div>
+</div>
+
+<script type="text/javascript">
+(function() {
+    if (window.location.hostname == "localhost")
+        return;
+
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+    var disqus_shortname = 'leifmadsen';
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+
+
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-84933598-1', 'auto');
+ga('send', 'pageview');
+</script>
+
+<script src="http://blog.leifmadsen.com/js/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+</body>
+</html>
+
