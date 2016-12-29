@@ -14,7 +14,7 @@ the virtual machine to provision both virtual and baremetal overclouds from the
 virtual machine.
 
 [oooq]: https://github.com/openstack/tripleo-quickstart
-<!-- MORE -->
+<!--more-->
 
 # Topology
 
