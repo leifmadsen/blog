@@ -2,8 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://blog.leifmadsen.com/</loc>
-    <lastmod>2016-12-16T10:30:35-05:00</lastmod>
+    <loc>http://blog.leifmadsen.com/blog/2016/12/28/create-a-virtual-undercloud-with-tripleo-quickstart/</loc>
+    <lastmod>2016-12-28T13:01:21-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://blog.leifmadsen.com/blog/2016/12/16/creating-virtual-machines-in-libvirt-with-virt-install/</loc>
+    <lastmod>2016-12-16T14:36:23-05:00</lastmod>
   </url>
   
   <url>
@@ -519,6 +524,1978 @@
   <url>
     <loc>http://blog.leifmadsen.com/blog/2009/05/22/the-end-of-the-beginning/</loc>
     <lastmod>2009-05-22T13:40:48+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://blog.leifmadsen.com/tags/</loc>
+    <lastmod>2011-02-27T21:57:41+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.leifmadsen.com/tags/etc/hosts/</loc>
+    <lastmod>2012-07-23T19:14:45+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.leifmadsen.com/tags/1/index.8/</loc>
+    <lastmod>2011-05-17T20:40:55+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.leifmadsen.com/tags/3g/</loc>
+    <lastmod>2010-03-19T16:28:28+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.leifmadsen.com/tags/4th-edition/</loc>
+    <lastmod>2013-05-16T13:31:46+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.leifmadsen.com/categories/about/</loc>
+    <lastmod>2015-11-10T19:28:26-05:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.leifmadsen.com/tags/acd/</loc>
+    <lastmod>2009-11-18T20:40:15+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.leifmadsen.com/tags/addqueuemember/</loc>
+    <lastmod>2009-07-16T02:59:34+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.leifmadsen.com/tags/aes_decrypt/</loc>
+    <lastmod>2011-09-09T13:28:47+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.leifmadsen.com/tags/aes_encrypt/</loc>
+    <lastmod>2011-09-09T13:28:47+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.leifmadsen.com/tags/agentcallbacklogin/</loc>
+    <lastmod>2009-07-16T02:59:34+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.leifmadsen.com/tags/agents/</loc>
+    <lastmod>2009-06-17T01:24:07+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.leifmadsen.com/tags/aki/</loc>
+    <lastmod>2012-08-22T14:10:46+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.leifmadsen.com/tags/amazon/</loc>
+    <lastmod>2012-08-22T14:10:46+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.leifmadsen.com/tags/announcement/</loc>
+    <lastmod>2012-01-04T20:22:08+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.leifmadsen.com/tags/apostrophes/</loc>
+    <lastmod>2010-02-10T20:35:27+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.leifmadsen.com/tags/article/</loc>
+    <lastmod>2010-04-15T21:30:21+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.leifmadsen.com/tags/ask-the-expert/</loc>
+    <lastmod>2009-09-08T13:12:20+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.leifmadsen.com/categories/asterisk/</loc>
+    <lastmod>2015-11-10T19:41:55-05:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.leifmadsen.com/tags/asterisk/</loc>
+    <lastmod>2013-05-16T13:31:46+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.leifmadsen.com/tags/asterisk-10/</loc>
+    <lastmod>2011-08-29T20:27:03+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.leifmadsen.com/tags/asterisk-book/</loc>
+    <lastmod>2011-01-06T15:22:55+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.leifmadsen.com/tags/asterisk-cookbook/</loc>
+    <lastmod>2011-12-23T16:17:57+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.leifmadsen.com/</loc>
+    <lastmod>2016-12-28T13:01:21-05:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.leifmadsen.com/tags/asterisk/index.distributed-device-state/</loc>
+    <lastmod>2011-10-26T16:36:49+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.leifmadsen.com/tags/astricon/</loc>
+    <lastmod>2011-12-23T16:17:57+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.leifmadsen.com/tags/astricon-2010/</loc>
+    <lastmod>2010-11-01T12:04:08+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.leifmadsen.com/tags/astricon-2011/</loc>
+    <lastmod>2011-12-23T16:17:57+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.leifmadsen.com/tags/astridevcon/</loc>
+    <lastmod>2011-10-30T15:46:23+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.leifmadsen.com/tags/author/</loc>
+    <lastmod>2011-01-06T15:22:55+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.leifmadsen.com/categories/automation/</loc>
+    <lastmod>2015-11-10T19:41:55-05:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.leifmadsen.com/tags/awk/</loc>
+    <lastmod>2011-09-15T12:34:35+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.leifmadsen.com/tags/aws/</loc>
+    <lastmod>2012-08-22T14:10:46+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.leifmadsen.com/tags/bash/</loc>
+    <lastmod>2015-09-09T21:20:40+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.leifmadsen.com/tags/bashrc/</loc>
+    <lastmod>2012-07-19T15:03:05+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.leifmadsen.com/tags/bbs/</loc>
+    <lastmod>2012-01-09T13:05:51+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.leifmadsen.com/categories/being-productive/</loc>
+    <lastmod>2015-09-09T21:20:40+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.leifmadsen.com/tags/birthday/</loc>
+    <lastmod>2012-01-09T13:05:51+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.leifmadsen.com/tags/blog/</loc>
+    <lastmod>2010-05-03T15:17:57+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.leifmadsen.com/tags/blogging/</loc>
+    <lastmod>2010-05-03T15:17:57+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.leifmadsen.com/tags/book/</loc>
+    <lastmod>2013-05-16T13:31:46+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.leifmadsen.com/tags/books/</loc>
+    <lastmod>2011-03-25T13:40:31+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.leifmadsen.com/tags/brother/</loc>
+    <lastmod>2012-11-24T22:06:03+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.leifmadsen.com/tags/brute-force-attacks/</loc>
+    <lastmod>2010-04-13T00:28:38+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.leifmadsen.com/categories/business/</loc>
+    <lastmod>2012-01-04T20:22:08+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.leifmadsen.com/tags/business/</loc>
+    <lastmod>2011-08-02T18:26:57+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.leifmadsen.com/tags/business-practices/</loc>
+    <lastmod>2010-08-25T20:07:17+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.leifmadsen.com/tags/c64/</loc>
+    <lastmod>2012-01-09T13:05:51+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.leifmadsen.com/tags/calendar/</loc>
+    <lastmod>2010-12-21T15:26:43+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.leifmadsen.com/tags/calendar-integration/</loc>
+    <lastmod>2010-12-21T15:26:43+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.leifmadsen.com/tags/calendar_event/</loc>
+    <lastmod>2010-09-29T14:25:50+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.leifmadsen.com/tags/call-center/</loc>
+    <lastmod>2009-11-18T20:40:15+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.leifmadsen.com/tags/call-centres/</loc>
+    <lastmod>2011-12-23T15:31:22+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.leifmadsen.com/categories/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.leifmadsen.com/tags/cdr/</loc>
+    <lastmod>2009-07-29T12:49:51+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.leifmadsen.com/tags/celebration/</loc>
+    <lastmod>2011-08-02T18:26:57+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.leifmadsen.com/tags/cellular/</loc>
+    <lastmod>2010-02-09T22:10:44+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.leifmadsen.com/tags/chef/</loc>
+    <lastmod>2012-08-22T18:49:43+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.leifmadsen.com/tags/cisco/</loc>
+    <lastmod>2009-11-27T13:19:44+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.leifmadsen.com/tags/cloud/</loc>
+    <lastmod>2012-08-22T14:10:46+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.leifmadsen.com/categories/cloud-computing/</loc>
+    <lastmod>2016-10-03T15:34:08-04:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.leifmadsen.com/tags/clustering/</loc>
+    <lastmod>2012-01-04T20:22:08+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.leifmadsen.com/tags/code/</loc>
+    <lastmod>2009-08-04T17:57:11+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.leifmadsen.com/tags/commas/</loc>
+    <lastmod>2010-02-10T20:35:27+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.leifmadsen.com/tags/commodore/</loc>
+    <lastmod>2012-01-09T13:05:51+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.leifmadsen.com/tags/community/</loc>
+    <lastmod>2011-05-17T20:40:55+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.leifmadsen.com/tags/complextype/</loc>
+    <lastmod>2009-08-04T17:57:11+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.leifmadsen.com/tags/confbridge/</loc>
+    <lastmod>2011-02-18T17:08:50+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.leifmadsen.com/tags/conference/</loc>
+    <lastmod>2010-03-17T15:27:15+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.leifmadsen.com/tags/conferences/</loc>
+    <lastmod>2010-10-27T12:08:06+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.leifmadsen.com/tags/conferencing/</loc>
+    <lastmod>2011-02-18T17:08:50+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.leifmadsen.com/tags/configuration/</loc>
+    <lastmod>2010-03-19T16:28:28+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.leifmadsen.com/categories/console/</loc>
+    <lastmod>2016-12-16T14:36:23-05:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.leifmadsen.com/tags/cookbook/</loc>
+    <lastmod>2011-12-23T16:17:57+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.leifmadsen.com/tags/cooking-with-asterisk/</loc>
+    <lastmod>2011-12-23T16:17:57+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.leifmadsen.com/tags/coredial/</loc>
+    <lastmod>2012-01-04T20:22:08+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.leifmadsen.com/tags/cups/</loc>
+    <lastmod>2012-11-24T22:06:03+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.leifmadsen.com/tags/curl/</loc>
+    <lastmod>2011-02-27T21:57:41+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.leifmadsen.com/tags/custom/</loc>
+    <lastmod>2011-12-22T14:39:07+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.leifmadsen.com/tags/database/</loc>
+    <lastmod>2009-09-08T13:12:20+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.leifmadsen.com/tags/datamatrix/</loc>
+    <lastmod>2009-08-27T14:02:24+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.leifmadsen.com/tags/debugging/</loc>
+    <lastmod>2011-03-04T14:16:16+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.leifmadsen.com/tags/definitive-guide/</loc>
+    <lastmod>2013-05-16T13:31:46+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.leifmadsen.com/categories/development/</loc>
+    <lastmod>2015-11-19T10:21:26-05:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.leifmadsen.com/tags/development/</loc>
+    <lastmod>2011-05-17T20:40:55+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.leifmadsen.com/tags/device-state/</loc>
+    <lastmod>2010-12-21T15:26:43+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.leifmadsen.com/categories/devops/</loc>
+    <lastmod>2015-10-30T20:30:27+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.leifmadsen.com/tags/devops/</loc>
+    <lastmod>2012-08-22T18:49:43+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.leifmadsen.com/tags/dhcp/</loc>
+    <lastmod>2012-07-23T19:14:45+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.leifmadsen.com/tags/dialplan/</loc>
+    <lastmod>2012-01-16T13:28:10+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.leifmadsen.com/tags/digium/</loc>
+    <lastmod>2012-10-11T20:43:35+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.leifmadsen.com/tags/distributed-call-centre/</loc>
+    <lastmod>2011-12-23T15:31:22+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.leifmadsen.com/tags/distributed-device-state/</loc>
+    <lastmod>2011-12-23T15:31:22+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.leifmadsen.com/tags/distributed-systems/</loc>
+    <lastmod>2011-12-23T15:31:22+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.leifmadsen.com/tags/distribution/</loc>
+    <lastmod>2010-12-21T15:26:43+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.leifmadsen.com/tags/distribyted-device-state/</loc>
+    <lastmod>2011-10-26T19:15:41+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.leifmadsen.com/tags/dnsmasq/</loc>
+    <lastmod>2012-07-23T19:14:45+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.leifmadsen.com/categories/docker/</loc>
+    <lastmod>2015-11-10T19:41:55-05:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.leifmadsen.com/tags/documentation/</loc>
+    <lastmod>2010-09-29T14:25:50+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.leifmadsen.com/tags/e4voip/</loc>
+    <lastmod>2010-02-22T19:04:21+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.leifmadsen.com/tags/e71/</loc>
+    <lastmod>2010-03-19T16:28:28+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.leifmadsen.com/tags/ec2/</loc>
+    <lastmod>2012-08-22T14:10:46+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.leifmadsen.com/tags/email/</loc>
+    <lastmod>2010-09-20T15:37:44+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.leifmadsen.com/tags/employment/</loc>
+    <lastmod>2012-01-04T20:22:08+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.leifmadsen.com/tags/entrepeneur/</loc>
+    <lastmod>2009-07-30T22:11:17+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.leifmadsen.com/tags/enum/</loc>
+    <lastmod>2010-02-19T15:38:07+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.leifmadsen.com/tags/environment-variables/</loc>
+    <lastmod>2012-08-22T18:49:43+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.leifmadsen.com/tags/exten-gt/</loc>
+    <lastmod>2012-01-16T13:28:10+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.leifmadsen.com/tags/fedora/</loc>
+    <lastmod>2015-09-09T21:20:40+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.leifmadsen.com/tags/foodcritic/</loc>
+    <lastmod>2012-06-26T12:51:30+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.leifmadsen.com/tags/freemind/</loc>
+    <lastmod>2010-08-10T14:03:13+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.leifmadsen.com/tags/func_odbc/</loc>
+    <lastmod>2009-07-17T17:21:15+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.leifmadsen.com/tags/functions/</loc>
+    <lastmod>2011-09-09T13:28:47+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.leifmadsen.com/tags/furniture/</loc>
+    <lastmod>2010-04-15T21:30:21+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.leifmadsen.com/tags/g722/</loc>
+    <lastmod>2011-02-18T17:08:50+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.leifmadsen.com/tags/git/</loc>
+    <lastmod>2012-06-26T12:51:30+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.leifmadsen.com/tags/gmail/</loc>
+    <lastmod>2011-11-22T22:17:18+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.leifmadsen.com/tags/google/</loc>
+    <lastmod>2010-09-20T15:37:44+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.leifmadsen.com/tags/google-apps/</loc>
+    <lastmod>2011-11-22T22:17:18+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.leifmadsen.com/tags/google-talk/</loc>
+    <lastmod>2010-12-21T15:26:43+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.leifmadsen.com/tags/grammar/</loc>
+    <lastmod>2010-02-10T20:35:27+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.leifmadsen.com/tags/grep/</loc>
+    <lastmod>2011-09-15T12:34:35+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.leifmadsen.com/tags/grub/</loc>
+    <lastmod>2012-08-22T14:10:46+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.leifmadsen.com/tags/hack/</loc>
+    <lastmod>2011-09-15T12:34:35+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.leifmadsen.com/tags/hardware/</loc>
+    <lastmod>2012-10-11T20:43:35+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.leifmadsen.com/tags/hd/</loc>
+    <lastmod>2011-02-18T17:08:50+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.leifmadsen.com/tags/headset/</loc>
+    <lastmod>2010-02-22T19:04:21+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.leifmadsen.com/tags/helpful/</loc>
+    <lastmod>2010-08-10T14:03:13+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.leifmadsen.com/tags/holidays/</loc>
+    <lastmod>2010-08-25T20:07:17+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.leifmadsen.com/tags/hostname/</loc>
+    <lastmod>2012-07-23T19:14:45+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.leifmadsen.com/tags/housing/</loc>
+    <lastmod>2010-04-15T21:30:21+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.leifmadsen.com/tags/howto/</loc>
+    <lastmod>2011-09-09T13:28:47+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.leifmadsen.com/tags/htb/</loc>
+    <lastmod>2011-11-02T16:08:40+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.leifmadsen.com/tags/iconv/</loc>
+    <lastmod>2012-02-23T18:43:54+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.leifmadsen.com/tags/imap/</loc>
+    <lastmod>2010-09-20T15:37:44+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.leifmadsen.com/tags/import/</loc>
+    <lastmod>2009-07-29T12:49:51+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.leifmadsen.com/categories/info/</loc>
+    <lastmod>2015-11-10T19:28:26-05:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.leifmadsen.com/tags/information/</loc>
+    <lastmod>2011-08-29T20:27:03+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.leifmadsen.com/tags/infrastructure/</loc>
+    <lastmod>2012-01-04T20:22:08+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.leifmadsen.com/tags/installation/</loc>
+    <lastmod>2011-01-06T15:22:55+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.leifmadsen.com/tags/installing/</loc>
+    <lastmod>2011-01-06T15:22:55+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.leifmadsen.com/tags/interview/</loc>
+    <lastmod>2010-04-15T21:30:21+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.leifmadsen.com/tags/invite/</loc>
+    <lastmod>2010-03-19T16:28:28+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.leifmadsen.com/tags/iptables/</loc>
+    <lastmod>2011-11-02T16:08:40+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.leifmadsen.com/tags/isn/</loc>
+    <lastmod>2010-02-19T15:38:07+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.leifmadsen.com/tags/issues/</loc>
+    <lastmod>2009-07-18T15:18:28+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.leifmadsen.com/tags/it360/</loc>
+    <lastmod>2010-03-17T15:27:15+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.leifmadsen.com/tags/jabber/</loc>
+    <lastmod>2009-07-18T03:47:57+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.leifmadsen.com/tags/jabbersend/</loc>
+    <lastmod>2009-07-18T03:47:57+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.leifmadsen.com/tags/jenkins/</loc>
+    <lastmod>2012-06-26T12:51:30+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.leifmadsen.com/tags/jenspeedy/</loc>
+    <lastmod>2010-04-15T21:30:21+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.leifmadsen.com/tags/jim-van-meggelen/</loc>
+    <lastmod>2009-11-21T15:04:26+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.leifmadsen.com/tags/job/</loc>
+    <lastmod>2012-01-04T20:22:08+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.leifmadsen.com/tags/kernel/</loc>
+    <lastmod>2012-08-22T14:10:46+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.leifmadsen.com/tags/keynote/</loc>
+    <lastmod>2010-10-27T12:08:06+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.leifmadsen.com/tags/knife/</loc>
+    <lastmod>2012-08-22T18:49:43+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.leifmadsen.com/tags/kvm/</loc>
+    <lastmod>2011-02-09T01:18:22+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.leifmadsen.com/tags/ldap/</loc>
+    <lastmod>2010-12-21T15:26:43+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.leifmadsen.com/tags/legal/</loc>
+    <lastmod>2009-12-09T23:01:04+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.leifmadsen.com/tags/leif-madsen/</loc>
+    <lastmod>2009-07-30T22:11:17+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.leifmadsen.com/categories/libvirt/</loc>
+    <lastmod>2016-12-16T14:36:23-05:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.leifmadsen.com/categories/life/</loc>
+    <lastmod>2014-07-25T02:49:12+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.leifmadsen.com/tags/life-story/</loc>
+    <lastmod>2012-01-09T13:05:51+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.leifmadsen.com/categories/linux/</loc>
+    <lastmod>2016-12-16T14:36:23-05:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.leifmadsen.com/tags/linux/</loc>
+    <lastmod>2012-11-24T22:06:03+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.leifmadsen.com/categories/list/</loc>
+    <lastmod>2015-11-19T10:21:26-05:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.leifmadsen.com/tags/load-testing/</loc>
+    <lastmod>2009-07-29T16:34:49+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.leifmadsen.com/tags/lts/</loc>
+    <lastmod>2011-05-17T20:40:55+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.leifmadsen.com/tags/maintenance/</loc>
+    <lastmod>2011-05-17T20:40:55+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.leifmadsen.com/tags/mangle/</loc>
+    <lastmod>2011-11-02T16:08:40+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.leifmadsen.com/tags/marketing/</loc>
+    <lastmod>2009-07-18T01:41:53+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.leifmadsen.com/tags/meet-in-person/</loc>
+    <lastmod>2010-03-17T15:27:15+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.leifmadsen.com/tags/meetings/</loc>
+    <lastmod>2010-09-29T14:25:50+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.leifmadsen.com/tags/melissadavis/</loc>
+    <lastmod>2010-04-15T21:30:21+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.leifmadsen.com/tags/migration/</loc>
+    <lastmod>2009-07-16T02:59:34+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.leifmadsen.com/tags/mindmap/</loc>
+    <lastmod>2010-08-10T14:03:13+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.leifmadsen.com/tags/minitest/</loc>
+    <lastmod>2012-06-26T12:51:30+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.leifmadsen.com/tags/mixmonitor-sox-mixing-asterisk-script/</loc>
+    <lastmod>2009-06-30T18:19:40+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.leifmadsen.com/tags/mkinitrd/</loc>
+    <lastmod>2012-08-22T14:10:46+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.leifmadsen.com/categories/musings/</loc>
+    <lastmod>2014-07-25T02:49:12+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.leifmadsen.com/tags/musings/</loc>
+    <lastmod>2012-01-09T13:05:51+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.leifmadsen.com/tags/mysql/</loc>
+    <lastmod>2009-07-29T12:49:51+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.leifmadsen.com/tags/nda/</loc>
+    <lastmod>2009-12-09T23:01:04+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.leifmadsen.com/categories/networking/</loc>
+    <lastmod>2016-12-01T14:51:52-05:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.leifmadsen.com/tags/networking/</loc>
+    <lastmod>2011-11-02T16:08:40+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.leifmadsen.com/tags/news/</loc>
+    <lastmod>2009-07-15T17:36:51+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.leifmadsen.com/categories/nfvpe/</loc>
+    <lastmod>2016-12-28T13:01:21-05:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.leifmadsen.com/tags/nokia/</loc>
+    <lastmod>2010-03-19T16:28:28+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.leifmadsen.com/tags/non-disclosure-agreeement/</loc>
+    <lastmod>2009-12-09T23:01:04+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.leifmadsen.com/tags/ofps/</loc>
+    <lastmod>2011-03-04T14:16:16+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.leifmadsen.com/tags/on-the-web/</loc>
+    <lastmod>2009-05-22T13:40:48+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.leifmadsen.com/tags/one-way-audio/</loc>
+    <lastmod>2009-07-18T15:18:28+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.leifmadsen.com/tags/online/</loc>
+    <lastmod>2010-08-10T14:03:13+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.leifmadsen.com/categories/oooq/</loc>
+    <lastmod>2016-12-28T13:01:21-05:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.leifmadsen.com/tags/open-source/</loc>
+    <lastmod>2009-07-30T22:11:17+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.leifmadsen.com/categories/openstack/</loc>
+    <lastmod>2016-12-28T13:01:21-05:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.leifmadsen.com/tags/oreilly/</loc>
+    <lastmod>2013-05-16T13:31:46+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.leifmadsen.com/tags/page/</loc>
+    <lastmod>2009-07-15T18:29:02+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.leifmadsen.com/tags/patch/</loc>
+    <lastmod>2009-11-27T13:19:44+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.leifmadsen.com/tags/pattern-match/</loc>
+    <lastmod>2012-01-16T13:28:10+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.leifmadsen.com/tags/pbx/</loc>
+    <lastmod>2009-07-16T02:59:34+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.leifmadsen.com/tags/pdf/</loc>
+    <lastmod>2010-11-01T12:04:08+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.leifmadsen.com/tags/pfifo/</loc>
+    <lastmod>2011-11-02T16:08:40+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.leifmadsen.com/tags/phones/</loc>
+    <lastmod>2012-10-11T20:43:35+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.leifmadsen.com/tags/php/</loc>
+    <lastmod>2011-02-27T21:57:41+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.leifmadsen.com/tags/pitch_shift/</loc>
+    <lastmod>2010-12-21T15:26:43+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.leifmadsen.com/tags/podcast/</loc>
+    <lastmod>2009-11-21T15:04:26+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.leifmadsen.com/tags/possession/</loc>
+    <lastmod>2010-02-10T20:35:27+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.leifmadsen.com/tags/postfix/</loc>
+    <lastmod>2011-11-22T22:17:18+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.leifmadsen.com/post/</loc>
+    <lastmod>2016-12-28T13:01:21-05:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.leifmadsen.com/tags/powerline/</loc>
+    <lastmod>2015-09-09T21:20:40+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.leifmadsen.com/tags/presentation/</loc>
+    <lastmod>2011-10-26T19:15:41+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.leifmadsen.com/tags/presentations/</loc>
+    <lastmod>2011-12-23T16:17:57+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.leifmadsen.com/tags/printer/</loc>
+    <lastmod>2012-11-24T22:06:03+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.leifmadsen.com/categories/product/</loc>
+    <lastmod>2015-11-19T10:21:26-05:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.leifmadsen.com/tags/productivity/</loc>
+    <lastmod>2010-08-25T20:07:17+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.leifmadsen.com/categories/programming/</loc>
+    <lastmod>2015-09-09T21:20:40+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.leifmadsen.com/tags/prompt/</loc>
+    <lastmod>2011-12-22T14:39:07+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.leifmadsen.com/tags/ps/</loc>
+    <lastmod>2011-09-15T12:34:35+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.leifmadsen.com/tags/ps1/</loc>
+    <lastmod>2012-08-22T18:49:43+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.leifmadsen.com/tags/public-service-announcement/</loc>
+    <lastmod>2011-08-29T20:27:03+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.leifmadsen.com/tags/pvgrub/</loc>
+    <lastmod>2012-08-22T14:10:46+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.leifmadsen.com/tags/qdisc/</loc>
+    <lastmod>2011-11-02T16:08:40+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.leifmadsen.com/tags/qemu/</loc>
+    <lastmod>2011-02-09T01:18:22+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.leifmadsen.com/tags/qemu-kvm/</loc>
+    <lastmod>2011-02-09T01:18:22+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.leifmadsen.com/tags/qr-code/</loc>
+    <lastmod>2009-08-27T14:02:24+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.leifmadsen.com/tags/questions/</loc>
+    <lastmod>2009-09-08T13:12:20+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.leifmadsen.com/tags/queue/</loc>
+    <lastmod>2009-09-08T13:12:20+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.leifmadsen.com/tags/queue-members/</loc>
+    <lastmod>2009-11-14T15:07:19+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.leifmadsen.com/tags/queues/</loc>
+    <lastmod>2011-12-23T15:31:22+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.leifmadsen.com/tags/quote/</loc>
+    <lastmod>2009-07-19T03:35:56+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.leifmadsen.com/tags/quotes/</loc>
+    <lastmod>2011-10-30T15:46:23+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.leifmadsen.com/tags/randomness/</loc>
+    <lastmod>2009-07-19T03:35:56+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.leifmadsen.com/tags/rate-limiting/</loc>
+    <lastmod>2011-11-02T16:08:40+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.leifmadsen.com/tags/rbot/</loc>
+    <lastmod>2009-07-19T03:35:56+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.leifmadsen.com/tags/recipe/</loc>
+    <lastmod>2011-02-27T21:57:41+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.leifmadsen.com/tags/recipes/</loc>
+    <lastmod>2011-03-25T13:40:31+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.leifmadsen.com/tags/redirects/</loc>
+    <lastmod>2012-07-19T15:03:05+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.leifmadsen.com/tags/reference/</loc>
+    <lastmod>2009-11-27T13:19:44+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.leifmadsen.com/tags/regex/</loc>
+    <lastmod>2012-01-16T13:28:10+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.leifmadsen.com/tags/registration/</loc>
+    <lastmod>2009-07-29T16:34:49+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.leifmadsen.com/tags/regular-expressions/</loc>
+    <lastmod>2012-01-16T13:28:10+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.leifmadsen.com/tags/relay/</loc>
+    <lastmod>2011-11-22T22:17:18+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.leifmadsen.com/tags/releases/</loc>
+    <lastmod>2011-05-17T20:40:55+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.leifmadsen.com/tags/res_calendar/</loc>
+    <lastmod>2010-09-29T14:25:50+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.leifmadsen.com/tags/review/</loc>
+    <lastmod>2011-01-06T15:22:55+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.leifmadsen.com/tags/reviews/</loc>
+    <lastmod>2011-04-26T17:34:43+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.leifmadsen.com/tags/rogers/</loc>
+    <lastmod>2010-02-09T22:10:44+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.leifmadsen.com/categories/rpm/</loc>
+    <lastmod>2015-11-10T19:41:55-05:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.leifmadsen.com/tags/rpm/</loc>
+    <lastmod>2012-02-23T18:43:54+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.leifmadsen.com/tags/rpmlint/</loc>
+    <lastmod>2012-02-23T18:43:54+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.leifmadsen.com/tags/ruby/</loc>
+    <lastmod>2012-08-22T18:49:43+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.leifmadsen.com/categories/rules/</loc>
+    <lastmod>2015-11-19T10:21:26-05:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.leifmadsen.com/tags/rvm/</loc>
+    <lastmod>2012-06-26T12:51:30+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.leifmadsen.com/tags/same-gt/</loc>
+    <lastmod>2012-01-16T13:28:10+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.leifmadsen.com/tags/scanner/</loc>
+    <lastmod>2010-04-13T00:28:38+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.leifmadsen.com/tags/scripting/</loc>
+    <lastmod>2011-09-15T12:34:35+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.leifmadsen.com/tags/scripts/</loc>
+    <lastmod>2011-02-27T21:57:41+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.leifmadsen.com/tags/self-discipline/</loc>
+    <lastmod>2010-08-25T20:07:17+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.leifmadsen.com/tags/semacode/</loc>
+    <lastmod>2009-08-27T14:02:24+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.leifmadsen.com/tags/services/</loc>
+    <lastmod>2010-02-19T15:38:07+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.leifmadsen.com/tags/shell/</loc>
+    <lastmod>2015-09-09T21:20:40+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.leifmadsen.com/tags/sip/</loc>
+    <lastmod>2012-10-11T20:43:35+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.leifmadsen.com/tags/sip-uri/</loc>
+    <lastmod>2010-02-19T15:38:07+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.leifmadsen.com/tags/sip/index.conf/</loc>
+    <lastmod>2011-02-27T21:57:41+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.leifmadsen.com/tags/sipp/</loc>
+    <lastmod>2009-07-29T16:34:49+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.leifmadsen.com/tags/slides/</loc>
+    <lastmod>2010-11-01T12:04:08+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.leifmadsen.com/tags/smtp/</loc>
+    <lastmod>2011-11-22T22:17:18+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.leifmadsen.com/tags/soap/</loc>
+    <lastmod>2009-08-04T17:57:11+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.leifmadsen.com/tags/solutions/</loc>
+    <lastmod>2009-09-08T13:12:20+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.leifmadsen.com/tags/speaking/</loc>
+    <lastmod>2010-10-27T12:08:06+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.leifmadsen.com/tags/ssh-add/</loc>
+    <lastmod>2012-07-19T15:03:05+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.leifmadsen.com/tags/ssl/</loc>
+    <lastmod>2010-09-20T15:37:44+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.leifmadsen.com/tags/suzanne-bowen/</loc>
+    <lastmod>2009-11-21T15:04:26+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.leifmadsen.com/tags/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.leifmadsen.com/tags/tc/</loc>
+    <lastmod>2011-11-02T16:08:40+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.leifmadsen.com/categories/technology/</loc>
+    <lastmod>2012-11-24T22:06:03+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.leifmadsen.com/tags/technology/</loc>
+    <lastmod>2012-01-09T13:05:51+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.leifmadsen.com/tags/test-suite/</loc>
+    <lastmod>2010-05-03T15:17:57+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.leifmadsen.com/tags/testing/</loc>
+    <lastmod>2011-03-04T14:16:16+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.leifmadsen.com/tags/testing-framework/</loc>
+    <lastmod>2011-05-17T20:40:55+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.leifmadsen.com/tags/tfot/</loc>
+    <lastmod>2010-02-19T14:39:35+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.leifmadsen.com/tags/the-definitive-guide/</loc>
+    <lastmod>2011-04-26T17:34:43+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.leifmadsen.com/tags/the-future-of-telephony/</loc>
+    <lastmod>2009-07-30T22:11:17+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.leifmadsen.com/tags/thoughts/</loc>
+    <lastmod>2011-08-02T18:26:57+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.leifmadsen.com/tags/time-tracking/</loc>
+    <lastmod>2010-08-25T20:07:17+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.leifmadsen.com/tags/tips/</loc>
+    <lastmod>2011-08-13T02:14:55+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.leifmadsen.com/tags/tools/</loc>
+    <lastmod>2010-08-10T14:03:13+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.leifmadsen.com/tags/torture/</loc>
+    <lastmod>2009-07-18T01:41:53+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.leifmadsen.com/tags/townhouse/</loc>
+    <lastmod>2010-04-15T21:30:21+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.leifmadsen.com/tags/traffic-control/</loc>
+    <lastmod>2011-11-02T16:08:40+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.leifmadsen.com/tags/traffic-shaping/</loc>
+    <lastmod>2011-11-02T16:08:40+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.leifmadsen.com/tags/tricks/</loc>
+    <lastmod>2011-12-22T14:39:07+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.leifmadsen.com/categories/tripleo/</loc>
+    <lastmod>2016-12-28T13:01:21-05:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.leifmadsen.com/tags/tutorial/</loc>
+    <lastmod>2011-09-09T13:28:47+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.leifmadsen.com/tags/twitter/</loc>
+    <lastmod>2009-07-30T22:11:17+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.leifmadsen.com/tags/ubuntu/</loc>
+    <lastmod>2009-11-27T13:19:44+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.leifmadsen.com/tags/unboxing/</loc>
+    <lastmod>2012-10-11T20:43:35+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.leifmadsen.com/categories/unixporn/</loc>
+    <lastmod>2016-09-27T16:11:17-04:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.leifmadsen.com/tags/update/</loc>
+    <lastmod>2011-08-02T18:26:57+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.leifmadsen.com/tags/uri/</loc>
+    <lastmod>2010-02-19T15:38:07+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.leifmadsen.com/categories/useful-tools/</loc>
+    <lastmod>2012-07-23T19:14:45+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.leifmadsen.com/tags/using-dialplan-functions/</loc>
+    <lastmod>2011-09-09T13:28:47+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.leifmadsen.com/tags/utf8/</loc>
+    <lastmod>2012-02-23T18:43:54+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.leifmadsen.com/tags/vagrant/</loc>
+    <lastmod>2012-07-23T19:14:45+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.leifmadsen.com/tags/vcard/</loc>
+    <lastmod>2009-08-27T14:02:24+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.leifmadsen.com/tags/verbose/</loc>
+    <lastmod>2011-03-04T14:16:16+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.leifmadsen.com/tags/versioning/</loc>
+    <lastmod>2011-08-29T20:27:03+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.leifmadsen.com/tags/virtual-machines/</loc>
+    <lastmod>2011-02-09T01:18:22+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.leifmadsen.com/categories/virtualization/</loc>
+    <lastmod>2016-12-28T13:01:21-05:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.leifmadsen.com/tags/virtualization/</loc>
+    <lastmod>2012-08-22T14:10:46+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.leifmadsen.com/tags/vm/</loc>
+    <lastmod>2011-02-09T01:18:22+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.leifmadsen.com/tags/vmware/</loc>
+    <lastmod>2011-02-09T01:18:22+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.leifmadsen.com/tags/vmware-server/</loc>
+    <lastmod>2011-02-09T01:18:22+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.leifmadsen.com/tags/voicemail/</loc>
+    <lastmod>2010-09-20T15:37:44+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.leifmadsen.com/tags/voip/</loc>
+    <lastmod>2010-03-19T16:28:28+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.leifmadsen.com/tags/vpn/</loc>
+    <lastmod>2009-11-27T13:19:44+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.leifmadsen.com/tags/waitforsilence/</loc>
+    <lastmod>2009-07-18T01:41:53+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.leifmadsen.com/tags/wanpipe/</loc>
+    <lastmod>2009-07-18T15:18:28+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.leifmadsen.com/tags/weblogs/</loc>
+    <lastmod>2009-05-22T13:40:48+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.leifmadsen.com/tags/webservice/</loc>
+    <lastmod>2009-08-04T17:57:11+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.leifmadsen.com/tags/wideband/</loc>
+    <lastmod>2011-02-18T17:08:50+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.leifmadsen.com/tags/wifi/</loc>
+    <lastmod>2010-03-19T16:28:28+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.leifmadsen.com/tags/wind-mobile/</loc>
+    <lastmod>2010-02-09T22:10:44+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.leifmadsen.com/tags/writing/</loc>
+    <lastmod>2011-04-26T17:34:43+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.leifmadsen.com/tags/xen/</loc>
+    <lastmod>2012-08-22T14:10:46+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.leifmadsen.com/tags/xml/</loc>
+    <lastmod>2009-08-04T17:57:11+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.leifmadsen.com/tags/xmpp/</loc>
+    <lastmod>2009-07-18T03:47:57+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.leifmadsen.com/tags/your-vs/index.-youre/</loc>
+    <lastmod>2010-02-10T20:35:27+00:00</lastmod>
+    <priority>0</priority>
   </url>
   
 </urlset>

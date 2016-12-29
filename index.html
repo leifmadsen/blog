@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
 <head>
-	<meta name="generator" content="Hugo 0.18-DEV" />
+	<meta name="generator" content="Hugo 0.19-DEV" />
   <link href="http://gmpg.org/xfn/11" rel="profile">
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
 
@@ -30,8 +30,8 @@
   
   <link href="http://blog.leifmadsen.com/index.xml" rel="alternate" type="application/rss+xml" title="Asterisk, and other worldly endeavours &middot; Leif Madsen" />
 
-  <meta name="description" content="">
-  <meta name="keywords" content="">
+  <meta name="description" content="Leif Madsen Blog Entry">
+  <meta name="keywords" content="blog,asterisk,leif,madsen,canada">
   
 </head>
 <body>
@@ -73,6 +73,44 @@
 <div class="content container">
   <div class="posts">
     
+    
+    <div class="post">
+      <h1 class="post-title">
+        <a href="http://blog.leifmadsen.com/blog/2016/12/28/create-a-virtual-undercloud-with-tripleo-quickstart/">Create a virtual undercloud with TripleO Quickstart</a>
+      </h1>
+      <span class="post-date">Dec 28, 2016 &middot; 5 minute read &middot; <a href="http://blog.leifmadsen.com/blog/2016/12/28/create-a-virtual-undercloud-with-tripleo-quickstart/#disqus_thread">Comments</a>
+      
+      <br/>
+      <a class="label" href="http://blog.leifmadsen.com/categories/nfvpe">nfvpe</a><a class="label" href="http://blog.leifmadsen.com/categories/tripleo">tripleo</a><a class="label" href="http://blog.leifmadsen.com/categories/oooq">oooq</a><a class="label" href="http://blog.leifmadsen.com/categories/virtualization">virtualization</a><a class="label" href="http://blog.leifmadsen.com/categories/openstack">openstack</a>
+      </span>
+      
+      In this blog post I&rsquo;ll discuss how I&rsquo;m currently using TripleO Quickstart to instantiate a virtual machine on a remote virtual machine host from my workstation. In follow up blog posts I&rsquo;ll discuss how to utilize the virtual machine to provision both virtual and baremetal overclouds from the virtual machine.
+Topology The topology for our lab environment is shown in image 1-1.
+ Image 1-1: TripleO Quickstart Physical Layout   We have a laptop acting as the workstation (where we&rsquo;ll do our work from), a virtual host (with lots of memory to run virtual machines), and 3 small physical hosts (Atom based) which will simulate nodes for a baremetal deployment.
+      <a href="http://blog.leifmadsen.com/blog/2016/12/28/create-a-virtual-undercloud-with-tripleo-quickstart/">Read On &rarr;</a>
+      
+    </div>
+    
+    <div class="post">
+      <h1 class="post-title">
+        <a href="http://blog.leifmadsen.com/blog/2016/12/16/creating-virtual-machines-in-libvirt-with-virt-install/">Creating virtual machines in libvirt with virt-install</a>
+      </h1>
+      <span class="post-date">Dec 16, 2016 &middot; 4 minute read &middot; <a href="http://blog.leifmadsen.com/blog/2016/12/16/creating-virtual-machines-in-libvirt-with-virt-install/#disqus_thread">Comments</a>
+      
+      <br/>
+      <a class="label" href="http://blog.leifmadsen.com/categories/libvirt">libvirt</a><a class="label" href="http://blog.leifmadsen.com/categories/linux">linux</a><a class="label" href="http://blog.leifmadsen.com/categories/virtualization">virtualization</a><a class="label" href="http://blog.leifmadsen.com/categories/console">console</a>
+      </span>
+      
+      <p>I&rsquo;ve been wanting to automate my virtual machine instantiation for a while now,
+but I&rsquo;ve always hated the idea of having to spin up multiple bits of
+infrastruction to deal with PXE booting, web server to host a kickstart file,
+etc. Luckily, I ran into some stuff today, and figured out how to automate
+virtual machine instantitation without having to resort to anything outside of
+localhost.
+</p>
+      <a href="http://blog.leifmadsen.com/blog/2016/12/16/creating-virtual-machines-in-libvirt-with-virt-install/">Read On &rarr;</a>
+      
+    </div>
     
     <div class="post">
       <h1 class="post-title">
@@ -239,46 +277,6 @@ it up. Upon testing, we ran into the following error:</p>
 
 <p></p>
       <a href="http://blog.leifmadsen.com/blog/2015/10/30/docker-container-results-in-x509-failed-to-load-system-roots-and-no-roots-provided/">Read On &rarr;</a>
-      
-    </div>
-    
-    <div class="post">
-      <h1 class="post-title">
-        <a href="http://blog.leifmadsen.com/blog/2015/09/09/configuring-powerline-to-show-working-git-branch/">Configuring powerline to show working Git branch</a>
-      </h1>
-      <span class="post-date">Sep 9, 2015 &middot; 2 minute read &middot; <a href="http://blog.leifmadsen.com/blog/2015/09/09/configuring-powerline-to-show-working-git-branch/#disqus_thread">Comments</a>
-      
-      <br/>
-      <a class="label" href="http://blog.leifmadsen.com/categories/being-productive">Being Productive</a><a class="label" href="http://blog.leifmadsen.com/categories/devops">DevOps</a><a class="label" href="http://blog.leifmadsen.com/categories/programming">Programming</a>
-      </span>
-      
-      <p>So the documentation for
-<a href="http://powerline.readthedocs.org/en/latest/index.html">Powerline</a> kind of
-sucks. I followed
-<a href="http://fedoramagazine.org/add-power-terminal-powerline">this</a> pretty good
-article on getting started with it. First thing I noticed however is that the
-<code>if</code> statement on the article doesn&rsquo;t work if you don&rsquo;t have powerline
-installed (which kind of defeats the purpose of having the <code>if</code> statement there
-at all).
-</p>
-      <a href="http://blog.leifmadsen.com/blog/2015/09/09/configuring-powerline-to-show-working-git-branch/">Read On &rarr;</a>
-      
-    </div>
-    
-    <div class="post">
-      <h1 class="post-title">
-        <a href="http://blog.leifmadsen.com/blog/2014/07/25/rumors-of-my-death-have-been-greatly-exaggerated/">Rumors of my death have been greatly exaggerated</a>
-      </h1>
-      <span class="post-date">Jul 25, 2014 &middot; 2 minute read &middot; <a href="http://blog.leifmadsen.com/blog/2014/07/25/rumors-of-my-death-have-been-greatly-exaggerated/#disqus_thread">Comments</a>
-      
-      <br/>
-      <a class="label" href="http://blog.leifmadsen.com/categories/life">Life</a><a class="label" href="http://blog.leifmadsen.com/categories/musings">Musings</a>
-      </span>
-      
-      It&rsquo;s been way too long since I&rsquo;ve blogged. And this post isn&rsquo;t going to be all the impressive unfortunately. However, I recently have been running a BBS and some friends and I have been playing LORD.
-We&rsquo;ve been playing this for the last few months, and I think I&rsquo;m going to run a tournament. Perhaps with some sort of buy in like $10 or something, winner takes all.
-Going to build it out in such a way that first person to beat the dragon 3 times will win the game, and at that point that person will win the pot.
-      <a href="http://blog.leifmadsen.com/blog/2014/07/25/rumors-of-my-death-have-been-greatly-exaggerated/">Read On &rarr;</a>
       
     </div>
     

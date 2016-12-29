@@ -6,7 +6,7 @@
     <description>Recent content in #Exec on Asterisk, and other worldly endeavours</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <atom:link href="/tags#exec/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="/tags" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Using #exec to set externaddr in sip.conf</title>

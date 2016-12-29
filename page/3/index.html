@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
 <head>
-	<meta name="generator" content="Hugo 0.18-DEV" />
+	<meta name="generator" content="Hugo 0.19-DEV" />
   <link href="http://gmpg.org/xfn/11" rel="profile">
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
 
@@ -30,8 +30,8 @@
   
   <link href="http://blog.leifmadsen.com/index.xml" rel="alternate" type="application/rss+xml" title="Asterisk, and other worldly endeavours &middot; Leif Madsen" />
 
-  <meta name="description" content="">
-  <meta name="keywords" content="">
+  <meta name="description" content="Leif Madsen Blog Entry">
+  <meta name="keywords" content="blog,asterisk,leif,madsen,canada">
   
 </head>
 <body>
@@ -73,6 +73,40 @@
 <div class="content container">
   <div class="posts">
     
+    
+    <div class="post">
+      <h1 class="post-title">
+        <a href="http://blog.leifmadsen.com/blog/2012/02/23/rpmlint-non-utf8-spec-file-error/">rpmlint non-utf8-spec-file error</a>
+      </h1>
+      <span class="post-date">Feb 23, 2012 &middot; 1 minute read &middot; <a href="http://blog.leifmadsen.com/blog/2012/02/23/rpmlint-non-utf8-spec-file-error/#disqus_thread">Comments</a>
+      
+      <br/>
+      <a class="label" href="http://blog.leifmadsen.com/categories/useful-tools">Useful Tools</a>
+      </span>
+      
+      I&rsquo;ve been doing a bunch of work with RPMs lately, and while running rpmlint against a spec file I was modifying, I received this error:
+myfile.spec: E: non-utf8-spec-file myfile.spec  After Googling, I ran into a way of finding the non-compliant characters.
+$ iconv -f ISO-8859-8 -t UTF-8 myfile.spec &gt; converted.spec $ diff -u myfile.spec converted.spec  (Answer thanks to Dominique Leuenberger @ http://lists.opensuse.org/opensuse-packaging/2011-04/msg00005.html)
+      
+      
+    </div>
+    
+    <div class="post">
+      <h1 class="post-title">
+        <a href="http://blog.leifmadsen.com/blog/2012/01/16/converting-multiple-exten--lines-to-using-same--in-asterisk-dialplan/">Converting multiple exten =&gt; lines to using same =&gt; in Asterisk dialplan</a>
+      </h1>
+      <span class="post-date">Jan 16, 2012 &middot; 1 minute read &middot; <a href="http://blog.leifmadsen.com/blog/2012/01/16/converting-multiple-exten--lines-to-using-same--in-asterisk-dialplan/#disqus_thread">Comments</a>
+      
+      <br/>
+      <a class="label" href="http://blog.leifmadsen.com/categories/asterisk">Asterisk</a><a class="label" href="http://blog.leifmadsen.com/categories/programming">Programming</a>
+      </span>
+      
+      Last week I wanted to start changing some 1.4 based Asterisk dialplan to a 1.8 based Asterisk system, and in that process wanted to convert lines like:
+exten =&gt; _NXXNXXXXXX,1,NoOp() exten =&gt; _NXXNXXXXXX,2,GotoIf($[...]?reject,1) exten =&gt; _NXXNXXXXXX,3,Dial(SIP/foo/${EXTEN}) ...  into using the same =&gt; prefix:
+exten =&gt; _NXXNXXXXXX,1,NoOp() same =&gt; n,GotoIf($[...]?reject,1) same =&gt; n,Dial(SIP/foo/${EXTEN})  In order to do that, Mike King helped me out with the following regular expressing which I used in vim:
+      <a href="http://blog.leifmadsen.com/blog/2012/01/16/converting-multiple-exten--lines-to-using-same--in-asterisk-dialplan/">Read On &rarr;</a>
+      
+    </div>
     
     <div class="post">
       <h1 class="post-title">
@@ -205,38 +239,6 @@ Because my server is colocated in a friends rack, and the bandwidth is shared, I
       I think the best quote I heard the entire time came from @abalashov (Alex Balashov) during the AstriDevCon when we were talking about Asterisk documentation, and how we might better organize it within the source.
 We were discussing perhaps moving some of the existing configuration file examples to a manpage, and Alex piped up to say, &ldquo;Manpages are a vestige of our glorious, prehensile, curly-tailed past.&rdquo;
 There wasn&rsquo;t much left to be said after that :)
-      
-      
-    </div>
-    
-    <div class="post">
-      <h1 class="post-title">
-        <a href="http://blog.leifmadsen.com/blog/2011/10/28/">#AstriCon 2011: Cooking With Asterisk</a>
-      </h1>
-      <span class="post-date">Oct 28, 2011 &middot; 1 minute read &middot; <a href="http://blog.leifmadsen.com/blog/2011/10/28/#disqus_thread">Comments</a>
-      
-      <br/>
-      <a class="label" href="http://blog.leifmadsen.com/categories/asterisk">Asterisk</a>
-      </span>
-      
-      My other presentation at AstriCon 2011 was Cooking With Asterisk, an overview of some dialplan snippets (pulled from the Asterisk Cookbook).
-http://leifmadsen.com/sites/default/files/AstriCon 2011 - Cooking With Asterisk.pdf
-      
-      
-    </div>
-    
-    <div class="post">
-      <h1 class="post-title">
-        <a href="http://blog.leifmadsen.com/blog/2011/10/26/">#AstriCon 2011: Building a Distributed Call Centre</a>
-      </h1>
-      <span class="post-date">Oct 26, 2011 &middot; 1 minute read &middot; <a href="http://blog.leifmadsen.com/blog/2011/10/26/#disqus_thread">Comments</a>
-      
-      <br/>
-      <a class="label" href="http://blog.leifmadsen.com/categories/asterisk">Asterisk</a>
-      </span>
-      
-      The presentation and configuration files from my presentation at AstriCon 2011 today is available at:
-http://leifmadsen.com/sites/default/files/AstriCon 2011 - Building a distributed call centre.zip
       
       
     </div>

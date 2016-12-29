@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
 <head>
-	<meta name="generator" content="Hugo 0.18-DEV" />
+	<meta name="generator" content="Hugo 0.19-DEV" />
   <link href="http://gmpg.org/xfn/11" rel="profile">
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
 
@@ -30,8 +30,8 @@
   
   <link href="http://blog.leifmadsen.com/index.xml" rel="alternate" type="application/rss+xml" title="Asterisk, and other worldly endeavours &middot; Leif Madsen" />
 
-  <meta name="description" content="">
-  <meta name="keywords" content="">
+  <meta name="description" content="Leif Madsen Blog Entry">
+  <meta name="keywords" content="blog,asterisk,leif,madsen,canada">
   
 </head>
 <body>
@@ -73,6 +73,46 @@
 <div class="content container">
   <div class="posts">
     
+    
+    <div class="post">
+      <h1 class="post-title">
+        <a href="http://blog.leifmadsen.com/blog/2015/09/09/configuring-powerline-to-show-working-git-branch/">Configuring powerline to show working Git branch</a>
+      </h1>
+      <span class="post-date">Sep 9, 2015 &middot; 2 minute read &middot; <a href="http://blog.leifmadsen.com/blog/2015/09/09/configuring-powerline-to-show-working-git-branch/#disqus_thread">Comments</a>
+      
+      <br/>
+      <a class="label" href="http://blog.leifmadsen.com/categories/being-productive">Being Productive</a><a class="label" href="http://blog.leifmadsen.com/categories/devops">DevOps</a><a class="label" href="http://blog.leifmadsen.com/categories/programming">Programming</a>
+      </span>
+      
+      <p>So the documentation for
+<a href="http://powerline.readthedocs.org/en/latest/index.html">Powerline</a> kind of
+sucks. I followed
+<a href="http://fedoramagazine.org/add-power-terminal-powerline">this</a> pretty good
+article on getting started with it. First thing I noticed however is that the
+<code>if</code> statement on the article doesn&rsquo;t work if you don&rsquo;t have powerline
+installed (which kind of defeats the purpose of having the <code>if</code> statement there
+at all).
+</p>
+      <a href="http://blog.leifmadsen.com/blog/2015/09/09/configuring-powerline-to-show-working-git-branch/">Read On &rarr;</a>
+      
+    </div>
+    
+    <div class="post">
+      <h1 class="post-title">
+        <a href="http://blog.leifmadsen.com/blog/2014/07/25/rumors-of-my-death-have-been-greatly-exaggerated/">Rumors of my death have been greatly exaggerated</a>
+      </h1>
+      <span class="post-date">Jul 25, 2014 &middot; 2 minute read &middot; <a href="http://blog.leifmadsen.com/blog/2014/07/25/rumors-of-my-death-have-been-greatly-exaggerated/#disqus_thread">Comments</a>
+      
+      <br/>
+      <a class="label" href="http://blog.leifmadsen.com/categories/life">Life</a><a class="label" href="http://blog.leifmadsen.com/categories/musings">Musings</a>
+      </span>
+      
+      It&rsquo;s been way too long since I&rsquo;ve blogged. And this post isn&rsquo;t going to be all the impressive unfortunately. However, I recently have been running a BBS and some friends and I have been playing LORD.
+We&rsquo;ve been playing this for the last few months, and I think I&rsquo;m going to run a tournament. Perhaps with some sort of buy in like $10 or something, winner takes all.
+Going to build it out in such a way that first person to beat the dragon 3 times will win the game, and at that point that person will win the pot.
+      <a href="http://blog.leifmadsen.com/blog/2014/07/25/rumors-of-my-death-have-been-greatly-exaggerated/">Read On &rarr;</a>
+      
+    </div>
     
     <div class="post">
       <h1 class="post-title">
@@ -198,40 +238,6 @@ ssh-add ~/.ssh/some_key &gt; /dev/null 2&amp;&gt;1  Note the 2&amp;&gt;1 at the 
       So for the last week or so, I&rsquo;ve been tasked at CoreDial with adding our own set of integration testing now that we&rsquo;re moving to a more formal deployment method using chef. After much pestering of questions to thehar of Lookout Mobile Security and with help of Google, #chef and jhansche in #jenkins I&rsquo;ve finally got a nice clean proof of concept that we can evaluate and likely deploy.
 I&rsquo;ll come back later with another article on my installation issues with jenkins and the solutions that I solved (nothing too terribly complicated), but what I wanted to blog about was the two types of tests that I&rsquo;ve been focusing on and was able to finally solve.
       <a href="http://blog.leifmadsen.com/blog/2012/06/26/integration-testing-using-jenkins-part-1/">Read On &rarr;</a>
-      
-    </div>
-    
-    <div class="post">
-      <h1 class="post-title">
-        <a href="http://blog.leifmadsen.com/blog/2012/02/23/rpmlint-non-utf8-spec-file-error/">rpmlint non-utf8-spec-file error</a>
-      </h1>
-      <span class="post-date">Feb 23, 2012 &middot; 1 minute read &middot; <a href="http://blog.leifmadsen.com/blog/2012/02/23/rpmlint-non-utf8-spec-file-error/#disqus_thread">Comments</a>
-      
-      <br/>
-      <a class="label" href="http://blog.leifmadsen.com/categories/useful-tools">Useful Tools</a>
-      </span>
-      
-      I&rsquo;ve been doing a bunch of work with RPMs lately, and while running rpmlint against a spec file I was modifying, I received this error:
-myfile.spec: E: non-utf8-spec-file myfile.spec  After Googling, I ran into a way of finding the non-compliant characters.
-$ iconv -f ISO-8859-8 -t UTF-8 myfile.spec &gt; converted.spec $ diff -u myfile.spec converted.spec  (Answer thanks to Dominique Leuenberger @ http://lists.opensuse.org/opensuse-packaging/2011-04/msg00005.html)
-      
-      
-    </div>
-    
-    <div class="post">
-      <h1 class="post-title">
-        <a href="http://blog.leifmadsen.com/blog/2012/01/16/converting-multiple-exten--lines-to-using-same--in-asterisk-dialplan/">Converting multiple exten =&gt; lines to using same =&gt; in Asterisk dialplan</a>
-      </h1>
-      <span class="post-date">Jan 16, 2012 &middot; 1 minute read &middot; <a href="http://blog.leifmadsen.com/blog/2012/01/16/converting-multiple-exten--lines-to-using-same--in-asterisk-dialplan/#disqus_thread">Comments</a>
-      
-      <br/>
-      <a class="label" href="http://blog.leifmadsen.com/categories/asterisk">Asterisk</a><a class="label" href="http://blog.leifmadsen.com/categories/programming">Programming</a>
-      </span>
-      
-      Last week I wanted to start changing some 1.4 based Asterisk dialplan to a 1.8 based Asterisk system, and in that process wanted to convert lines like:
-exten =&gt; _NXXNXXXXXX,1,NoOp() exten =&gt; _NXXNXXXXXX,2,GotoIf($[...]?reject,1) exten =&gt; _NXXNXXXXXX,3,Dial(SIP/foo/${EXTEN}) ...  into using the same =&gt; prefix:
-exten =&gt; _NXXNXXXXXX,1,NoOp() same =&gt; n,GotoIf($[...]?reject,1) same =&gt; n,Dial(SIP/foo/${EXTEN})  In order to do that, Mike King helped me out with the following regular expressing which I used in vim:
-      <a href="http://blog.leifmadsen.com/blog/2012/01/16/converting-multiple-exten--lines-to-using-same--in-asterisk-dialplan/">Read On &rarr;</a>
       
     </div>
     
