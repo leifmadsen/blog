@@ -24,3 +24,4 @@ git pull
 git push origin master
 git subtree push --prefix=public git@github.com:leifmadsen/blog.git gh-pages
 git pull
+git subtree pull --squash --prefix=public git@github.com:leifmadsen/blog.git gh-pages
