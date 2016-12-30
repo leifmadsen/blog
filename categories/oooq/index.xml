@@ -14,9 +14,13 @@
       <pubDate>Wed, 28 Dec 2016 13:01:21 -0500</pubDate>
       
       <guid>http://blog.leifmadsen.com/blog/2016/12/28/create-a-virtual-undercloud-with-tripleo-quickstart/</guid>
-      <description>In this blog post I&amp;rsquo;ll discuss how I&amp;rsquo;m currently using TripleO Quickstart to instantiate a virtual machine on a remote virtual machine host from my workstation. In follow up blog posts I&amp;rsquo;ll discuss how to utilize the virtual machine to provision both virtual and baremetal overclouds from the virtual machine.
-Topology The topology for our lab environment is shown in image 1-1.
- Image 1-1: TripleO Quickstart Physical Layout   We have a laptop acting as the workstation (where we&amp;rsquo;ll do our work from), a virtual host (with lots of memory to run virtual machines), and 3 small physical hosts (Atom based) which will simulate nodes for a baremetal deployment.</description>
+      <description>&lt;p&gt;In this blog post I&amp;rsquo;ll discuss how I&amp;rsquo;m currently using &lt;a href=&#34;https://github.com/openstack/tripleo-quickstart&#34;&gt;TripleO
+Quickstart&lt;/a&gt; to instantiate a virtual machine on a remote virtual machine
+host from my workstation. In follow up blog posts I&amp;rsquo;ll discuss how to utilize
+the virtual machine to provision both virtual and baremetal overclouds from the
+virtual machine.&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
     </item>
     
   </channel>
