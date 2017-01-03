@@ -2,6 +2,11 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://blog.leifmadsen.com/blog/2017/01/03/installing-python-2.7-on-centos-6.x/</loc>
+    <lastmod>2017-01-03T14:34:38-05:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://blog.leifmadsen.com/blog/2016/12/28/create-a-virtual-undercloud-with-tripleo-quickstart/</loc>
     <lastmod>2016-12-28T13:01:21-05:00</lastmod>
   </url>
@@ -666,7 +671,7 @@
   
   <url>
     <loc>http://blog.leifmadsen.com/</loc>
-    <lastmod>2016-12-28T13:01:21-05:00</lastmod>
+    <lastmod>2017-01-03T14:34:38-05:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -864,6 +869,12 @@
   <url>
     <loc>http://blog.leifmadsen.com/tags/cellular/</loc>
     <lastmod>2010-02-09T22:10:44+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.leifmadsen.com/categories/centos/</loc>
+    <lastmod>2017-01-03T14:34:38-05:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -1511,7 +1522,7 @@
   
   <url>
     <loc>http://blog.leifmadsen.com/categories/linux/</loc>
-    <lastmod>2016-12-16T14:36:23-05:00</lastmod>
+    <lastmod>2017-01-03T14:34:38-05:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -1781,7 +1792,7 @@
   
   <url>
     <loc>http://blog.leifmadsen.com/post/</loc>
-    <lastmod>2016-12-28T13:01:21-05:00</lastmod>
+    <lastmod>2017-01-03T14:34:38-05:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -1854,6 +1865,12 @@
   <url>
     <loc>http://blog.leifmadsen.com/tags/pvgrub/</loc>
     <lastmod>2012-08-22T14:10:46+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.leifmadsen.com/categories/python/</loc>
+    <lastmod>2017-01-03T14:34:38-05:00</lastmod>
     <priority>0</priority>
   </url>
   

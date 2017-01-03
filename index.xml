@@ -6,8 +6,21 @@
     <description>Recent content in Asterisk, and other worldly endeavours on Asterisk, and other worldly endeavours</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 28 Dec 2016 13:01:21 -0500</lastBuildDate>
+    <lastBuildDate>Tue, 03 Jan 2017 14:34:38 -0500</lastBuildDate>
     <atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Installing Python 2.7 on CentOS 6.x</title>
+      <link>http://blog.leifmadsen.com/blog/2017/01/03/installing-python-2.7-on-centos-6.x/</link>
+      <pubDate>Tue, 03 Jan 2017 14:34:38 -0500</pubDate>
+      
+      <guid>http://blog.leifmadsen.com/blog/2017/01/03/installing-python-2.7-on-centos-6.x/</guid>
+      <description>&lt;p&gt;I recently had a need to install Python 2.7 on an older CentOS 6 machine since
+I wanted to generate some SSL certificates for my web server. On CentOS 6, then
+default Python installation is 2.6, which doesn&amp;rsquo;t seem to work for Let&amp;rsquo;s
+Encrypt.
+&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>Create a virtual undercloud with TripleO Quickstart</title>
@@ -206,16 +219,6 @@ Going to build it out in such a way that first person to beat the dragon 3 times
       <description>Howdy folks,
 Sorry for the lack of updates lately. I&amp;rsquo;ve recently (December 2012) started at Thinking Phone Networks as the Lead UC Systems Engineer, and we&amp;rsquo;ve been incredibly busy there. In addition, the authors and I had been working on the final touches to the 4th edition of Asterisk: The Definitive Guide, which documents Asterisk 11 LTS.
 Late last week, the book went to print, and should start to appear on store shelves and start shipping from Amazon and other locations within the next 6-8 weeks I believe.</description>
-    </item>
-    
-    <item>
-      <title>Brother printer doesn&#39;t print in Fedora 17</title>
-      <link>http://blog.leifmadsen.com/blog/2012/11/24/brother-printer-doesnt-print-in-fedora-17/</link>
-      <pubDate>Sat, 24 Nov 2012 22:06:03 +0000</pubDate>
-      
-      <guid>http://blog.leifmadsen.com/blog/2012/11/24/brother-printer-doesnt-print-in-fedora-17/</guid>
-      <description>Tip: If your Brother printer won&amp;rsquo;t print after installing the drivers, install glibc.i686
-Today ran into an issue with my new Brother MFC-7460DN (which is a really nice laser printer with auto-feed scanner, Scan-to-FTP which creates a PDF file, and other things). I had just recently done a clean install of Fedora 17, and I could install the RPMs (which are i386 files on my x86_64 based system), add the printer to CUPS and all sorts of things that looked fine.</description>
     </item>
     
   </channel>

@@ -64,7 +64,7 @@
 
     
 
-    <p>Copyright &copy; 2016 <a href="http://blog.leifmadsen.com/license/">License</a><br/>
+    <p>Copyright &copy; 2017 <a href="http://blog.leifmadsen.com/license/">License</a><br/>
        Powered by <a href="http://gohugo.io">Hugo</a> and <a href="https://github.com/zyro/hyde-x">Hyde-X</a></p>
   </div>
 </div>
@@ -73,6 +73,25 @@
 <div class="content container">
   <div class="posts">
     
+    
+    <div class="post">
+      <h1 class="post-title">
+        <a href="http://blog.leifmadsen.com/blog/2017/01/03/installing-python-2.7-on-centos-6.x/">Installing Python 2.7 on CentOS 6.x</a>
+      </h1>
+      <span class="post-date">Jan 3, 2017 &middot; 2 minute read &middot; <a href="http://blog.leifmadsen.com/blog/2017/01/03/installing-python-2.7-on-centos-6.x/#disqus_thread">Comments</a>
+      
+      <br/>
+      <a class="label" href="http://blog.leifmadsen.com/categories/centos">centos</a><a class="label" href="http://blog.leifmadsen.com/categories/linux">linux</a><a class="label" href="http://blog.leifmadsen.com/categories/python">python</a>
+      </span>
+      
+      <p>I recently had a need to install Python 2.7 on an older CentOS 6 machine since
+I wanted to generate some SSL certificates for my web server. On CentOS 6, then
+default Python installation is 2.6, which doesn&rsquo;t seem to work for Let&rsquo;s
+Encrypt.
+</p>
+      <a href="http://blog.leifmadsen.com/blog/2017/01/03/installing-python-2.7-on-centos-6.x/">Read On &rarr;</a>
+      
+    </div>
     
     <div class="post">
       <h1 class="post-title">
@@ -261,29 +280,6 @@ One of the first things is, clearly, to have a container image that Asterisk run
       
     </div>
     
-    <div class="post">
-      <h1 class="post-title">
-        <a href="http://blog.leifmadsen.com/blog/2015/10/30/docker-container-results-in-x509-failed-to-load-system-roots-and-no-roots-provided/">Docker container results in x509: failed to load system roots and no roots provided</a>
-      </h1>
-      <span class="post-date">Oct 30, 2015 &middot; 2 minute read &middot; <a href="http://blog.leifmadsen.com/blog/2015/10/30/docker-container-results-in-x509-failed-to-load-system-roots-and-no-roots-provided/#disqus_thread">Comments</a>
-      
-      <br/>
-      <a class="label" href="http://blog.leifmadsen.com/categories/asterisk">Asterisk</a><a class="label" href="http://blog.leifmadsen.com/categories/devops">DevOps</a><a class="label" href="http://blog.leifmadsen.com/categories/docker">Docker</a>
-      </span>
-      
-      <p>We have a small system running in AWS as a CentOS 7 image. It has a few
-containers that we&rsquo;re using to host a few Golang API proxies. We migrated a
-customers API proxy that was running on the local VM into a container, and spun
-it up. Upon testing, we ran into the following error:</p>
-
-<pre><code>x509: failed to load system roots and no roots provided
-</code></pre>
-
-<p></p>
-      <a href="http://blog.leifmadsen.com/blog/2015/10/30/docker-container-results-in-x509-failed-to-load-system-roots-and-no-roots-provided/">Read On &rarr;</a>
-      
-    </div>
-    
     
     
     <ul class="pagination">
@@ -360,7 +356,7 @@ var disqus_shortname = "leifmadsen";
 (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
 (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
 m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
 
 ga('create', 'UA-84933598-1', 'auto');
 ga('send', 'pageview');
