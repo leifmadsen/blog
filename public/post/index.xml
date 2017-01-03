@@ -6,8 +6,21 @@
     <description>Recent content in Posts on Asterisk, and other worldly endeavours</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 28 Dec 2016 13:01:21 -0500</lastBuildDate>
+    <lastBuildDate>Tue, 03 Jan 2017 14:34:38 -0500</lastBuildDate>
     <atom:link href="/post/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Installing Python 2.7 on CentOS 6.x</title>
+      <link>http://blog.leifmadsen.com/blog/2017/01/03/installing-python-2.7-on-centos-6.x/</link>
+      <pubDate>Tue, 03 Jan 2017 14:34:38 -0500</pubDate>
+      
+      <guid>http://blog.leifmadsen.com/blog/2017/01/03/installing-python-2.7-on-centos-6.x/</guid>
+      <description>&lt;p&gt;I recently had a need to install Python 2.7 on an older CentOS 6 machine since
+I wanted to generate some SSL certificates for my web server. On CentOS 6, then
+default Python installation is 2.6, which doesn&amp;rsquo;t seem to work for Let&amp;rsquo;s
+Encrypt.
+&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>Create a virtual undercloud with TripleO Quickstart</title>
@@ -206,18 +219,6 @@ Late last week, the book went to print, and should start to appear on store shel
       <guid>http://blog.leifmadsen.com/blog/2012/11/24/brother-printer-doesnt-print-in-fedora-17/</guid>
       <description>Tip: If your Brother printer won&amp;rsquo;t print after installing the drivers, install glibc.i686
 Today ran into an issue with my new Brother MFC-7460DN (which is a really nice laser printer with auto-feed scanner, Scan-to-FTP which creates a PDF file, and other things). I had just recently done a clean install of Fedora 17, and I could install the RPMs (which are i386 files on my x86_64 based system), add the printer to CUPS and all sorts of things that looked fine.</description>
-    </item>
-    
-    <item>
-      <title>Digium D40 and D70 Phone Unboxing</title>
-      <link>http://blog.leifmadsen.com/blog/2012/10/11/digium-d40-and-d70-phone-unboxing/</link>
-      <pubDate>Thu, 11 Oct 2012 20:43:35 +0000</pubDate>
-      
-      <guid>http://blog.leifmadsen.com/blog/2012/10/11/digium-d40-and-d70-phone-unboxing/</guid>
-      <description>Today I received a couple of phones from Digium; the D40 and D70. I&amp;rsquo;ll be using these phones for testing and documentation in the 4th edition of Asterisk: The Definitive Guide (which Jim Van Meggelen, Russell Bryant and myself are working on right now).
-Here is my unboxing of the phones and some commentary about my initial impressions of the hardware itself.
-[caption id=&amp;ldquo;attachment_484&amp;rdquo; align=&amp;ldquo;aligncenter&amp;rdquo; width=&amp;ldquo;300&amp;rdquo;] Pretty boxes![/caption]
-Phones arrived in some nice looking boxes.</description>
     </item>
     
   </channel>
