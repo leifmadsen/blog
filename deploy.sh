@@ -40,3 +40,4 @@ push
 subtree_push
 pull
 subtree_pull
+push
