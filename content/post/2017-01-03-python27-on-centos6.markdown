@@ -37,8 +37,9 @@ contents goes away.
 > made this quite painless with their [Software Collections
 > Repository](http://wiki.centos.org/AdditionalResources/Repositories/SCL)
 > 
->     sudo yum update # update yum sudo yum install centos-release-scl #
->     install SCL sudo yum install python27 # install Python 2.7
+>     sudo yum update # update yum 
+>     sudo yum install centos-release-scl # install SCL
+>     sudo yum install python27 # install Python 2.7
 > 
 > To use it, you essentially spawn another shell (or script) while enabling the
 > newer version of Python:
@@ -47,13 +48,13 @@ contents goes away.
 > 
 > To install additional libraries, you will need to install PIP:
 > 
->     cd /opt/rh/python27/root/usr/bin/ # cd to the directory where SCL
->     installs python sudo LD_LIBRARY_PATH=$LD_LIBRARY_PATH ./easy_install-2.7
+>     cd /opt/rh/python27/root/usr/bin/ # cd to the directory where SCL installs python 
+>     sudo LD_LIBRARY_PATH=$LD_LIBRARY_PATH ./easy_install-2.7
 >     pip
 > 
 > once installed, you can install PIP using `pip2.7`, e.g.:
 > 
->     sudo LD_LIBRARY_PATH=$LD_LIBRARY_PATH ./pip2.7 install requests 
+>     sudo LD_LIBRARY_PATH=$LD_LIBRARY_PATH ./pip2.7 install requests
 > 
 > *NOTE*: if your username doesn't require root to install software, then
 > `LD_LIBRARY_PATH` and `PATH` is set up for you automatically by `scl`.  Also
