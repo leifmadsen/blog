@@ -76,6 +76,22 @@
     
     <div class="post">
       <h1 class="post-title">
+        <a href="http://blog.leifmadsen.com/blog/2015/11/10/asterisk-docker-container-phase-1/">Asterisk Docker Container: Phase 1</a>
+      </h1>
+      <span class="post-date">Nov 10, 2015 &middot; 10 minute read &middot; <a href="http://blog.leifmadsen.com/blog/2015/11/10/asterisk-docker-container-phase-1/#disqus_thread">Comments</a>
+      
+      <br/>
+      <a class="label" href="http://blog.leifmadsen.com/categories/asterisk">asterisk</a><a class="label" href="http://blog.leifmadsen.com/categories/docker">docker</a><a class="label" href="http://blog.leifmadsen.com/categories/rpm">rpm</a><a class="label" href="http://blog.leifmadsen.com/categories/automation">automation</a>
+      </span>
+      
+      AstriCon At AstriCon 2015 this year, there was a lot (and I mean a lot) of discussion around microservices (Docker), and what effort is required over the next year by the development community in order to make Asterisk better suited to running in that environment.
+One of the first things is, clearly, to have a container image that Asterisk runs in. I&rsquo;ve done this a few times now, but having something that can be passed over to the official Asterisk Git repository, and which everyone can contribute to, utilize and play with would be the goal here.
+      <a href="http://blog.leifmadsen.com/blog/2015/11/10/asterisk-docker-container-phase-1/">Read On &rarr;</a>
+      
+    </div>
+    
+    <div class="post">
+      <h1 class="post-title">
         <a href="http://blog.leifmadsen.com/blog/2015/10/30/docker-container-results-in-x509-failed-to-load-system-roots-and-no-roots-provided/">Docker container results in x509: failed to load system roots and no roots provided</a>
       </h1>
       <span class="post-date">Oct 30, 2015 &middot; 2 minute read &middot; <a href="http://blog.leifmadsen.com/blog/2015/10/30/docker-container-results-in-x509-failed-to-load-system-roots-and-no-roots-provided/#disqus_thread">Comments</a>
@@ -228,23 +244,6 @@ Phones arrived in some nice looking boxes.
       Today I&rsquo;ve been getting our lab environment setup with vagrant to auto-provision our lab servers with chef server in order to allow the development team to quickly and easily turn up and tear down web application servers.
 Because when the server gets spun up with vagrant, it registers itself as a new node to the chef server using its hostname. Since using localhost for every node pretty much makes the chef server useless for more than 1 virtual machine at a time, I needed to figure out how to get dnsmasq to assign a unique hostname based on the IP address being provided by dnsmasq to the dhcp client.
       <a href="http://blog.leifmadsen.com/blog/2012/07/23/assign-unique-hostname-to-dhcp-client-with-dnsmasq/">Read On &rarr;</a>
-      
-    </div>
-    
-    <div class="post">
-      <h1 class="post-title">
-        <a href="http://blog.leifmadsen.com/blog/2012/07/19/bash-creating-files-named-1-everywhere/">bash creating files named &#39;1&#39; everywhere!</a>
-      </h1>
-      <span class="post-date">Jul 19, 2012 &middot; 1 minute read &middot; <a href="http://blog.leifmadsen.com/blog/2012/07/19/bash-creating-files-named-1-everywhere/#disqus_thread">Comments</a>
-      
-      <br/>
-      <a class="label" href="http://blog.leifmadsen.com/categories/musings">Musings</a><a class="label" href="http://blog.leifmadsen.com/categories/programming">Programming</a>
-      </span>
-      
-      So I ran into something kind of stupid today :) Adding a little note for anyone who might run into a similar instance.
-I have some ssh-add stuff that gets run in my .bashrc file, but when I was outputting it, I was doing:
-ssh-add ~/.ssh/some_key &gt; /dev/null 2&amp;&gt;1  Note the 2&amp;&gt;1 at the end. That means to redirect output to a file named 1. You need to flip the &amp;&gt; into &gt;&amp;, so the fixed version looks like:
-      <a href="http://blog.leifmadsen.com/blog/2012/07/19/bash-creating-files-named-1-everywhere/">Read On &rarr;</a>
       
     </div>
     
