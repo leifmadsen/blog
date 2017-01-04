@@ -6,8 +6,21 @@
     <description>Recent content in Posts on Asterisk, and other worldly endeavours</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 03 Jan 2017 14:34:38 -0500</lastBuildDate>
+    <lastBuildDate>Wed, 04 Jan 2017 15:42:23 -0500</lastBuildDate>
     <atom:link href="/post/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Finding available Ansible tags in playbooks and roles</title>
+      <link>http://blog.leifmadsen.com/blog/2017/01/04/finding-available-ansible-tags-in-playbooks-and-roles/</link>
+      <pubDate>Wed, 04 Jan 2017 15:42:23 -0500</pubDate>
+      
+      <guid>http://blog.leifmadsen.com/blog/2017/01/04/finding-available-ansible-tags-in-playbooks-and-roles/</guid>
+      <description>&lt;p&gt;Today I went down a yak shaving path trying to figure out how to get all the
+available tags in a fairly complicated plethora of Ansible playbooks and roles.
+One of these such situations involves TripleO Quickstart, which is made up of
+several different playbooks and repositories of different roles.
+&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>Installing Python 2.7 on CentOS 6.x</title>
@@ -209,16 +222,6 @@ Going to build it out in such a way that first person to beat the dragon 3 times
       <description>Howdy folks,
 Sorry for the lack of updates lately. I&amp;rsquo;ve recently (December 2012) started at Thinking Phone Networks as the Lead UC Systems Engineer, and we&amp;rsquo;ve been incredibly busy there. In addition, the authors and I had been working on the final touches to the 4th edition of Asterisk: The Definitive Guide, which documents Asterisk 11 LTS.
 Late last week, the book went to print, and should start to appear on store shelves and start shipping from Amazon and other locations within the next 6-8 weeks I believe.</description>
-    </item>
-    
-    <item>
-      <title>Brother printer doesn&#39;t print in Fedora 17</title>
-      <link>http://blog.leifmadsen.com/blog/2012/11/24/brother-printer-doesnt-print-in-fedora-17/</link>
-      <pubDate>Sat, 24 Nov 2012 22:06:03 +0000</pubDate>
-      
-      <guid>http://blog.leifmadsen.com/blog/2012/11/24/brother-printer-doesnt-print-in-fedora-17/</guid>
-      <description>Tip: If your Brother printer won&amp;rsquo;t print after installing the drivers, install glibc.i686
-Today ran into an issue with my new Brother MFC-7460DN (which is a really nice laser printer with auto-feed scanner, Scan-to-FTP which creates a PDF file, and other things). I had just recently done a clean install of Fedora 17, and I could install the RPMs (which are i386 files on my x86_64 based system), add the printer to CUPS and all sorts of things that looked fine.</description>
     </item>
     
   </channel>

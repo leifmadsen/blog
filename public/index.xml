@@ -6,8 +6,21 @@
     <description>Recent content in Asterisk, and other worldly endeavours on Asterisk, and other worldly endeavours</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 03 Jan 2017 14:34:38 -0500</lastBuildDate>
+    <lastBuildDate>Wed, 04 Jan 2017 15:42:23 -0500</lastBuildDate>
     <atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Finding available Ansible tags in playbooks and roles</title>
+      <link>http://blog.leifmadsen.com/blog/2017/01/04/finding-available-ansible-tags-in-playbooks-and-roles/</link>
+      <pubDate>Wed, 04 Jan 2017 15:42:23 -0500</pubDate>
+      
+      <guid>http://blog.leifmadsen.com/blog/2017/01/04/finding-available-ansible-tags-in-playbooks-and-roles/</guid>
+      <description>&lt;p&gt;Today I went down a yak shaving path trying to figure out how to get all the
+available tags in a fairly complicated plethora of Ansible playbooks and roles.
+One of these such situations involves TripleO Quickstart, which is made up of
+several different playbooks and repositories of different roles.
+&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>Installing Python 2.7 on CentOS 6.x</title>
@@ -208,17 +221,6 @@ at all).
       <description>It&amp;rsquo;s been way too long since I&amp;rsquo;ve blogged. And this post isn&amp;rsquo;t going to be all the impressive unfortunately. However, I recently have been running a BBS and some friends and I have been playing LORD.
 We&amp;rsquo;ve been playing this for the last few months, and I think I&amp;rsquo;m going to run a tournament. Perhaps with some sort of buy in like $10 or something, winner takes all.
 Going to build it out in such a way that first person to beat the dragon 3 times will win the game, and at that point that person will win the pot.</description>
-    </item>
-    
-    <item>
-      <title>Asterisk: The Definitive Guide 4th Edition goes to print</title>
-      <link>http://blog.leifmadsen.com/blog/2013/05/16/asterisk-the-definitive-guide-4th-edition-goes-to-print/</link>
-      <pubDate>Thu, 16 May 2013 13:31:46 +0000</pubDate>
-      
-      <guid>http://blog.leifmadsen.com/blog/2013/05/16/asterisk-the-definitive-guide-4th-edition-goes-to-print/</guid>
-      <description>Howdy folks,
-Sorry for the lack of updates lately. I&amp;rsquo;ve recently (December 2012) started at Thinking Phone Networks as the Lead UC Systems Engineer, and we&amp;rsquo;ve been incredibly busy there. In addition, the authors and I had been working on the final touches to the 4th edition of Asterisk: The Definitive Guide, which documents Asterisk 11 LTS.
-Late last week, the book went to print, and should start to appear on store shelves and start shipping from Amazon and other locations within the next 6-8 weeks I believe.</description>
     </item>
     
   </channel>

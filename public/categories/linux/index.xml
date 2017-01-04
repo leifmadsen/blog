@@ -9,6 +9,19 @@
     <atom:link href="/categories/linux/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>Finding available Ansible tags in playbooks and roles</title>
+      <link>http://blog.leifmadsen.com/blog/2017/01/04/finding-available-ansible-tags-in-playbooks-and-roles/</link>
+      <pubDate>Wed, 04 Jan 2017 15:42:23 -0500</pubDate>
+      
+      <guid>http://blog.leifmadsen.com/blog/2017/01/04/finding-available-ansible-tags-in-playbooks-and-roles/</guid>
+      <description>&lt;p&gt;Today I went down a yak shaving path trying to figure out how to get all the
+available tags in a fairly complicated plethora of Ansible playbooks and roles.
+One of these such situations involves TripleO Quickstart, which is made up of
+several different playbooks and repositories of different roles.
+&lt;/p&gt;</description>
+    </item>
+    
+    <item>
       <title>Installing Python 2.7 on CentOS 6.x</title>
       <link>http://blog.leifmadsen.com/blog/2017/01/03/installing-python-2.7-on-centos-6.x/</link>
       <pubDate>Tue, 03 Jan 2017 14:34:38 -0500</pubDate>
