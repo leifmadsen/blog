@@ -146,48 +146,37 @@ done |
 <pre><code>grep &quot;TASK TAGS&quot; |
 </code></pre>
 
-<pre><code>
-Grab just the tags themselves.
+<p>Grab just the tags themselves.</p>
 
+<pre><code>cut -d&quot;:&quot; -f2 |
 </code></pre>
 
-<p>cut -d&rdquo;:&rdquo; -f2 |</p>
+<p>Strip off the opening and closing braces.</p>
 
-<pre><code>
-Strip off the opening and closing braces.
-
+<pre><code>awk '{sub(/\[/, &quot;&quot;)sub(/\]/, &quot;&quot;)}1' |
 </code></pre>
 
-<p>awk &lsquo;{sub(/[/, &ldquo;&rdquo;)sub(/]/, &ldquo;&rdquo;)}1&rsquo; |</p>
+<p>Remove the comma separating lists of tags.</p>
 
-<pre><code>
-Remove the comma separating lists of tags.
-
+<pre><code>sed -e 's/,//g' |
 </code></pre>
 
-<p>sed -e &rsquo;s/,//g&rsquo; |</p>
+<p>Place each of the various tags on their own line.</p>
 
-<pre><code>
-Place each of the various tags on their own line.
-
+<pre><code>xargs -n 1 |
 </code></pre>
 
-<p>xargs -n 1 |</p>
+<p>And sort the tags, returning only the unique values.</p>
 
-<pre><code>
-And sort the tags, returning only the unique values.
-
+<pre><code>sort -u
 </code></pre>
-
-<p>sort -u
-```</p>
 
 <h1 id="conclusion">Conclusion</h1>
 
 <p>The funny thing, is I had an even more complicated solution as I found
-<code>shyaml</code>[1][1] which is pretty damn cool, but really is kind of a pain to work
-with if you&rsquo;re trying to filter on sequences (which is pretty much all my
-Ansible playbooks consist of).</p>
+<code>shyaml</code><a href="https://github.com/0k/shyaml">[1]</a> which is pretty damn cool, but
+really is kind of a pain to work with if you&rsquo;re trying to filter on sequences
+(which is pretty much all my Ansible playbooks consist of).</p>
 
 <p>Additionally, it hates the <code>block</code> statement, and <code>shyaml</code> basically bails at
 that point. The script I had before also only found a subset of the tags.</p>
@@ -195,8 +184,6 @@ that point. The script I had before also only found a subset of the tags.</p>
 <p>I may still be missing some things as even Ansible was bombing on some
 particular syntax in the playbooks, although I&rsquo;m relatively assured that I&rsquo;ve
 gotten all the tags.</p>
-
-<p>[1] <a href="https://github.com/0k/shyaml">https://github.com/0k/shyaml</a></p>
   </div>
   <div id="disqus_thread"></div>
 </div>

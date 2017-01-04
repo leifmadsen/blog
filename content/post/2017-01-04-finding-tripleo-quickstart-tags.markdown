@@ -79,7 +79,6 @@ Then we `grep` out the list of tags.
 ```
 grep "TASK TAGS" |
 ```
-```
 
 Grab just the tags themselves.
 
@@ -114,9 +113,9 @@ sort -u
 # Conclusion
 
 The funny thing, is I had an even more complicated solution as I found
-`shyaml`[1][1] which is pretty damn cool, but really is kind of a pain to work
-with if you're trying to filter on sequences (which is pretty much all my
-Ansible playbooks consist of).
+`shyaml`[[1]](https://github.com/0k/shyaml) which is pretty damn cool, but
+really is kind of a pain to work with if you're trying to filter on sequences
+(which is pretty much all my Ansible playbooks consist of).
 
 Additionally, it hates the `block` statement, and `shyaml` basically bails at
 that point. The script I had before also only found a subset of the tags.
@@ -125,4 +124,4 @@ I may still be missing some things as even Ansible was bombing on some
 particular syntax in the playbooks, although I'm relatively assured that I've
 gotten all the tags.
 
-[1] https://github.com/0k/shyaml
+
