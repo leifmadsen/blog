@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
+<head>
+  <link href="http://gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+  <title>Building the virtual Cobbler deployment &middot; Leif Madsen</title>
+
+  
+  <link rel="stylesheet" href="http://blog.leifmadsen.com/css/poole.css">
+  <link rel="stylesheet" href="http://blog.leifmadsen.com/css/hyde.css">
+  <link rel="stylesheet" href="http://blog.leifmadsen.com/css/poole-overrides.css">
+  <link rel="stylesheet" href="http://blog.leifmadsen.com/css/hyde-overrides.css">
+  <link rel="stylesheet" href="http://blog.leifmadsen.com/css/hyde-x.css">
+  <link rel="stylesheet" href="http://blog.leifmadsen.com/css/highlight/monokai.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700|Abril+Fatface">
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  
+
+  
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="http://blog.leifmadsen.com/touch-icon-144-precomposed.png">
+  <link href="http://blog.leifmadsen.com/favicon.png" rel="icon">
+
+  
+  
+  
+  
+
+  <meta name="description" content="Leif Madsen Blog Entry">
+  <meta name="keywords" content="cobbler,lab,pxe,infrastructure,deploy,devops">
+  
+</head>
+<body>
+<div class="sidebar">
+  <div class="container sidebar-sticky">
+    <div class="sidebar-about">
+      
+      <h1>Leif Madsen</h1>
+      <p class="lead">Asterisk, and other worldly endeavours</p>
+    </div>
+
+    <ul class="sidebar-nav">
+      <li class="sidebar-nav-item"><a href="http://blog.leifmadsen.com/">Blog</a></li>
+      
+    </ul>
+
+    <ul class="sidebar-nav">
+      <li class="sidebar-nav-item">
+      <a href="http://github.com/leifmadsen"><i class="fa fa-github-square fa-3x"></i></a>
+      
+      
+      <a href="http://linkedin.com/in/leifmadsen"><i class="fa fa-linkedin-square fa-3x"></i></a>
+      
+      
+      <a href="http://twitter.com/leifmadsen"><i class="fa fa-twitter-square fa-3x"></i></a>
+      
+      <a href="http://blog.leifmadsen.com/index.xml" type="application/rss+xml"><i class="fa fa-rss-square fa-3x"></i></a>
+      </li>
+    </ul>
+
+    
+
+    <p>Copyright &copy; 2017 <a href="http://blog.leifmadsen.com/license/">License</a><br/>
+       Powered by <a href="http://gohugo.io">Hugo</a> and <a href="https://github.com/zyro/hyde-x">Hyde-X</a></p>
+  </div>
+</div>
+
+
+<div class="content container">
+  <div class="post">
+    <h1 class="post-title">Building the virtual Cobbler deployment</h1>
+    <span class="post-date">Jul 12, 2017 &middot; 9 minute read &middot; <a href="http://blog.leifmadsen.com/blog/2017/07/12/building-the-virtual-cobbler-deployment/#disqus_thread">Comments</a>
+    
+    <br/>
+    <a class="label" href="http://blog.leifmadsen.com/categories/nfvpe">nfvpe</a><a class="label" href="http://blog.leifmadsen.com/categories/howto">howto</a><a class="label" href="http://blog.leifmadsen.com/categories/infrastructure">infrastructure</a>
+    </span>
+    <p>In this scene I&rsquo;ll discuss how I&rsquo;ve built out a local Cobbler deployment into
+my virtual host in order to bootstrap the operating system onto my baremetal
+nodes via kickstart files and PXE booting.
+</p>
+
+<h2 id="what-s-cobbler">What&rsquo;s Cobbler?</h2>
+
+<p>Directly from the Cobbler website:</p>
+
+<blockquote>
+<p>Cobbler is a Linux installation server that allows for rapid setup of network
+installation environments. It glues together and automates many associated
+Linux tasks so you do not have to hop between many various commands and
+applications when deploying new systems, and, in some cases, changing
+existing ones. Cobbler can help with provisioning, managing DNS and DHCP,
+package updates, power management, configuration management orchestration,
+and much more.</p>
+</blockquote>
+
+<h1 id="deploying-the-virtual-machine">Deploying the virtual machine</h1>
+
+<p>To deploy the base virtual machine into my virthost, I used <code>virt-install</code> in
+order to automate the deployment with a kickstart file. I&rsquo;ve documented this
+previously in <a href="http://blog.leifmadsen.com/blog/2016/12/16/creating-virtual-machines-in-libvirt-with-virt-install/">Creating virtual machines in libvirt with virt-install</a>.</p>
+
+<p>Instead of going through the how and why, I&rsquo;m just going to dump out the
+commands I&rsquo;ve been running to get a virtual host up and running on my local
+network:</p>
+
+<pre><code class="language-sh">virt-install --name &quot;Cobbler&quot; \
+--memory 2048 \
+--disk /home/libvirt/images/cobbler.qcow2,size=20,bus=virtio \
+--location /var/lib/libvirt/images/CentOS-7-x86_64-Minimal.iso \
+--boot cdrom \
+--network network=host-bridge \
+--noautoconsole \
+--vnc \
+--initrd-inject kickstart/cobbler.ks \
+--extra &quot;inst.ks=file:/cobbler.ks&quot; \
+--accelerate
+</code></pre>
+
+<p>And there isn&rsquo;t really anything too special in the kickstart file, but here it
+is for posterity and completeness:</p>
+
+<pre><code class="language-sh">#version=DEVEL
+# System authorization information
+auth --enableshadow --passalgo=sha512
+# Use CDROM installation media
+cdrom
+# Use graphical install
+graphical
+# Run the Setup Agent on first boot
+firstboot --enable
+ignoredisk --only-use=vda
+# Keyboard layouts
+keyboard --vckeymap=us --xlayouts='us'
+# System language
+lang en_US.UTF-8
+
+# Network information
+network  --bootproto=dhcp --device=eth0 --noipv6 --activate --onboot yes
+network  --hostname=cobbler.yaklab
+
+# Root password
+rootpw --iscrypted $p$g...0mg1tzcry73d
+# System services
+services --enabled=&quot;chronyd&quot;
+# System timezone
+timezone America/New_York --isUtc
+user --groups=wheel --name=admin --password=$p$g...0mg1tzcryp73d --iscrypted --gecos=&quot;admin&quot;
+# System bootloader configuration
+bootloader --append=&quot; crashkernel=auto&quot; --location=mbr --boot-drive=vda
+autopart --type=lvm
+# Partition clearing information
+clearpart --none --initlabel
+
+reboot
+
+%packages
+@^minimal
+@core
+chrony
+kexec-tools
+
+%end
+
+%addon com_redhat_kdump --enable --reserve-mb='auto'
+
+%end
+
+%anaconda
+pwpolicy root --minlen=6 --minquality=50 --notstrict --nochanges --notempty
+pwpolicy user --minlen=6 --minquality=50 --notstrict --nochanges --notempty
+pwpolicy luks --minlen=6 --minquality=50 --notstrict --nochanges --notempty
+%end
+</code></pre>
+
+<p>(And if you&rsquo;re wondering why I&rsquo;m bothering with a full out <code>virt-install</code> with
+a kickstart file instead of just using a qcow2 image and maybe come cloud-init,
+it&rsquo;s mostly just because I haven&rsquo;t built out my local infrastructure to do that
+yet. You&rsquo;re not wrong though.)</p>
+
+<h1 id="installing-cobbler">Installing Cobbler</h1>
+
+<p>Installing Cobbler is well documented at <a href="http://cobbler.github.io/manuals/2.8.0/2/2/2_-_RHEL_and_CentOS.html">http://cobbler.github.io/manuals/2.8.0/2/2/2_-_RHEL_and_CentOS.html</a>
+but I&rsquo;ll step through the installation here quickly:</p>
+
+<p>First, let&rsquo;s install EPEL since we&rsquo;ll need that for some dependencies (and
+Cobbler itself).</p>
+
+<pre><code class="language-sh">$ sudo yum install epel-release -y
+</code></pre>
+
+<p>Next, let&rsquo;s install Cobbler and some dependencies.</p>
+
+<pre><code class="language-sh">$ sudo yum install cobbler cobbler-web syslinux pykickstart xinetd tftp-server -y
+</code></pre>
+
+<h1 id="configuring-and-starting-tftp-services">Configuring and Starting TFTP Services</h1>
+
+<p>Before we get to the Cobbler part of things, we need to start the TFTP server
+and make sure things are configured correctly.</p>
+
+<p>First, let&rsquo;s make sure we can enable the TFTP server:</p>
+
+<pre><code class="language-sh">$ sudo sh -c &quot;sed -i -e 's/= yes/= no/' /etc/xinetd.d/tftp&quot;
+</code></pre>
+
+<p>Next, we can start and enable our TFTP server and xinetd services.</p>
+
+<pre><code class="language-sh">$ sudo systemctl enable xinetd.service
+$ sudo systemctl start xinetd.service
+$ sudo systemctl enable tftp.service
+$ sudo systemctl start tftp.service
+</code></pre>
+
+<p>Then we&rsquo;ll do some permission setup.</p>
+
+<pre><code class="language-sh">sudo chcon -t tftpdir_rw_t /var/lib/tftpboot
+sudo useradd -s /bin/false -r tftp
+</code></pre>
+
+<h1 id="firewall-rules">Firewall Rules</h1>
+
+<p>We can now open up some ports that we&rsquo;ll need in our firewall so that our
+servers can access the services we&rsquo;re hosting.</p>
+
+<pre><code class="language-sh">$ sudo firewall-cmd --add-port=69/tcp --permanent
+$ sudo firewall-cmd --add-port=69/udp --permanent
+$ sudo firewall-cmd --add-port=4011/udp --permanent
+$ sudo firewall-cmd --add-port=443/tcp --permanent
+$ sudo firewall-cmd --add-port=80/tcp --permanent
+$ sudo firewall-cmd --reload
+</code></pre>
+
+<p>Then we can validate that our firewall rules are in place by running
+<code>iptables</code>.</p>
+
+<pre><code class="language-sh">sudo iptables -L -v -n
+...
+Chain IN_public_allow (1 references)
+ pkts bytes target     prot opt in     out     source               destination
+    0     0 ACCEPT     tcp  --  *      *       0.0.0.0/0            0.0.0.0/0            tcp dpt:22 ctstate NEW
+    0     0 ACCEPT     udp  --  *      *       0.0.0.0/0            0.0.0.0/0            udp dpt:69 ctstate NEW
+    0     0 ACCEPT     tcp  --  *      *       0.0.0.0/0            0.0.0.0/0            tcp dpt:443 ctstate NEW
+    0     0 ACCEPT     tcp  --  *      *       0.0.0.0/0            0.0.0.0/0            tcp dpt:80 ctstate NEW
+    0     0 ACCEPT     tcp  --  *      *       0.0.0.0/0            0.0.0.0/0            tcp dpt:69 ctstate NEW
+    0     0 ACCEPT     udp  --  *      *       0.0.0.0/0            0.0.0.0/0            udp dpt:4011 ctstate NEW
+...
+</code></pre>
+
+<h1 id="setting-up-selinux">Setting up SELinux</h1>
+
+<p>Instead of disabling SELinux, let&rsquo;s run some <code>sesetbool</code> commands.</p>
+
+<pre><code class="language-sh">$ sudo setsebool -P cobbler_can_network_connect 1
+$ sudo setsebool -P httpd_can_network_connect_cobbler 1
+$ sudo setsebool -P httpd_serve_cobbler_files 1
+$ sudo restorecon -R /var/lib/cobbler/
+</code></pre>
+
+<p>If we&rsquo;re still having issues, we can start to debug SELinux by running some of
+the following commands.</p>
+
+<pre><code class="language-sh">$ sudo yum install policycoreutils-python checkpolicy -y
+$ sudo sh -c &quot;grep cobbler /var/log/audit/audit.log | audit2why&quot;
+</code></pre>
+
+<p>Note that nothing will return until we start our Cobbler services, so we might
+as well do that now.</p>
+
+<h1 id="starting-cobbler-and-services">Starting Cobbler and Services</h1>
+
+<p>Now that we have our prerequisites installed, we can get the services started
+that we need running. Before we get to that part, we need to do a bit of
+configuration.</p>
+
+<p>First, we&rsquo;ll want to change the default password that Cobbler sets on hosts
+when the appropriate variable is used in the kickstart configurations. We can
+generate a password with <code>openssl</code> like so:</p>
+
+<pre><code class="language-sh">openssl passwd -1
+</code></pre>
+
+<p>Copy that password and put it into the <code>default_password_crypted</code> field.</p>
+
+<p>Next, we need to tell Cobbler what interface to listen on, and the server IP to
+tell the PXE server to connect to for kickstart and boot loaders. These fields
+are:</p>
+
+<ul>
+<li><code>bind_master</code></li>
+<li><code>next_server</code></li>
+<li><code>server</code></li>
+</ul>
+
+<p>Change the value from <code>127.0.0.1</code> to the IP address your host is on. Mine is
+currently <code>192.168.1.146</code>.</p>
+
+<p>We clearly aren&rsquo;t going to want our machines to keep PXE booting and looping on
+installation, so we&rsquo;ll want to change the <code>pxe_just_once</code> value from <code>0</code> to
+<code>1</code>.</p>
+
+<pre><code class="language-json">pxe_just_once: 1
+</code></pre>
+
+<p>Below is the patch showing our changes:</p>
+
+<pre><code class="language-diff">$ diff -ru settings /etc/cobbler/settings
+--- settings	2017-07-12 19:42:20.512969338 -0400
++++ /etc/cobbler/settings	2017-07-12 19:49:11.440585148 -0400
+@@ -98,7 +98,7 @@
+ # The simplest way to change the password is to run
+ # openssl passwd -1
+ # and put the output between the &quot;&quot; below.
+-default_password_crypted: &quot;$1$mF86/UHC$WvcIcX2t6crBz2onWxyac.&quot;
++default_password_crypted: &quot;$1$QMG/8mMb$gpFBFiDc0S3P/uSDGdpP10&quot;
+
+ # the default template type to use in the absence of any
+ # other detected template. If you do not specify the template
+@@ -251,7 +251,7 @@
+
+ # set to the ip address of the master bind DNS server for creating secondary
+ # bind configuration files
+-bind_master: 127.0.0.1
++bind_master: 192.168.1.146
+
+ # set to 1 to enable Cobbler's TFTP management features.
+ # the choice of TFTP mangement engine is in /etc/cobbler/modules.conf
+@@ -269,7 +269,7 @@
+ # if using cobbler with manage_dhcp, put the IP address
+ # of the cobbler server here so that PXE booting guests can find it
+ # if you do not set this correctly, this will be manifested in TFTP open timeouts.
+-next_server: 127.0.0.1
++next_server: 192.168.1.146
+
+ # settings for power management features.  optional.
+ # see https://github.com/cobbler/cobbler/wiki/Power-management to learn more
+@@ -289,7 +289,7 @@
+ # first in it's BIOS order.  Enable this if PXE is first in your BIOS
+ # boot order, otherwise leave this disabled.   See the manpage
+ # for --netboot-enabled.
+-pxe_just_once: 0
++pxe_just_once: 1
+
+ # the templates used for PXE config generation are sourced
+ # from what directory?
+@@ -381,7 +381,7 @@
+ # if you have a server that appears differently to different subnets
+ # (dual homed, etc), you need to read the --server-override section
+ # of the manpage for how that works.
+-server: 127.0.0.1
++server: 192.168.1.146
+
+ # If set to 1, all commands will be forced to use the localhost address
+ # instead of using the above value which can force commands like
+</code></pre>
+
+<p>And now that we&rsquo;ve made our changes, let&rsquo;s restart the Cobbler service:</p>
+
+<pre><code class="language-sh">$ sudo systemctl restart cobblerd.service
+</code></pre>
+
+<h1 id="checking-our-configuration">Checking Our Configuration</h1>
+
+<p>Now that we&rsquo;ve made several changes and restarted Cobbler, we should check that
+things are ready to go. We can do this by running <code>sudo cobbler check</code>.</p>
+
+<p>In our case, we&rsquo;re still missing a couple of things that are simple to correct.
+The corresponding output is as follows.</p>
+
+<pre><code class="language-sh">$ sudo cobbler check
+The following are potential configuration items that you may want to fix:
+
+1 : SELinux is enabled. Please review the following wiki page for details on ensuring cobbler works correctly in your SELinux environment:
+    https://github.com/cobbler/cobbler/wiki/Selinux
+2 : some network boot-loaders are missing from /var/lib/cobbler/loaders, you may run 'cobbler get-loaders' to download them, or, if you only want to handle x86/x86_64 netbooting, you may ensure that you have installed a *recent* version of the syslinux package installed and can ignore this message entirely.  Files in this directory, should you want to support all architectures, should include pxelinux.0, menu.c32, elilo.efi, and yaboot. The 'cobbler get-loaders' command is the easiest way to resolve these requirements.
+3 : debmirror package is not installed, it will be required to manage debian deployments and repositories
+4 : fencing tools were not found, and are required to use the (optional) power management features. install cman or fence-agents to use them
+</code></pre>
+
+<p>We&rsquo;re missing some boot-loaders, and optionally, we&rsquo;re missing some fencing
+agents which allows us to control some power management functionality (not
+really a thing you need to worry about if you don&rsquo;t have IPMI interfaces).</p>
+
+<p>Let&rsquo;s fix those now with the next couple of commands.</p>
+
+<pre><code class="language-sh">$ sudo cobbler get-loaders
+$ sudo yum install fence-agents -y
+</code></pre>
+
+<p>Then we can restart our Cobbler service again:</p>
+
+<pre><code class="language-sh">$ sudo systemctl restart cobblerd.service
+</code></pre>
+
+<p>Let&rsquo;s see if our check looks a bit better.</p>
+
+<pre><code class="language-sh">$ sudo cobbler check
+The following are potential configuration items that you may want to fix:
+
+1 : SELinux is enabled. Please review the following wiki page for details on ensuring cobbler works correctly in your SELinux environment:
+    https://github.com/cobbler/cobbler/wiki/Selinux
+2 : debmirror package is not installed, it will be required to manage debian deployments and repositories
+</code></pre>
+
+<p>Much better! I&rsquo;m not worried about the SELinux comment because we&rsquo;ve dealt with
+that, and I&rsquo;m not doing anything with Debian packages, so time to move to the
+next steps!</p>
+
+<h1 id="using-an-external-dhcp-server">Using an external DHCP server</h1>
+
+<p>The key to getting your external DHCP server working with Cobbler, is to enable
+option 66 and direct the PXE booting machines to your Cobbler server to pull
+down their configuration and booting information. For my EdgeRouter running
+EdgeOS, I configure the following lines.</p>
+
+<pre><code class="language-sh">configure
+edit service dhcp-server shared-network-name management subnet 192.168.1.0/24
+set bootfile-name pxelinux.0
+set bootfile-server 192.168.1.146
+set subnet-parameters &quot;filename &amp;quot;pxelinux.0&amp;quot;;&quot;
+commit
+save
+</code></pre>
+
+<h1 id="next-steps">Next Steps</h1>
+
+<p>I&rsquo;m not going to document all the next steps since our installation is
+configuration is done. You should be able to import an operating system, build
+out your systems in the web interface (or via console), and start PXE booting
+your machines. In my next post I&rsquo;ll go ahead and build out a Kickstart file for
+the machines showing snippets and how I&rsquo;ve gotten my lab up and running.</p>
+
+<p>You&rsquo;ll probably want to start by importing an operating system, which is
+documented in the manual at
+<a href="http://cobbler.github.io/manuals/2.8.0/3/2/4_-_Import.html">http://cobbler.github.io/manuals/2.8.0/3/2/4_-_Import.html</a></p>
+
+<h1 id="conclusion">Conclusion</h1>
+
+<p>We&rsquo;ve stepped through a critical aspect of the yakLab, which is to make it easy
+to reproduce and deploy baremetal systems in our lab. In future blog posts,
+we&rsquo;ll look at building the kickstart file, running a bootstrap playbook with
+Ansible, deploying GlusterFS for a distributed file system, and layering
+Kubernetes on top. Stay tuned!</p>
+  </div>
+  <div id="disqus_thread"></div>
+</div>
+
+<script type="text/javascript">
+(function() {
+    if (window.location.hostname == "localhost")
+        return;
+
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+    var disqus_shortname = 'leifmadsen';
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+
+
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-84933598-1', 'auto');
+ga('send', 'pageview');
+</script>
+
+<script src="http://blog.leifmadsen.com/js/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+</body>
+</html>
+

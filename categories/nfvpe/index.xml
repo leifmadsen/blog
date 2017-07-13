@@ -9,6 +9,31 @@
     <atom:link href="/categories/nfvpe/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>Building the virtual Cobbler deployment</title>
+      <link>http://blog.leifmadsen.com/blog/2017/07/12/building-the-virtual-cobbler-deployment/</link>
+      <pubDate>Wed, 12 Jul 2017 20:45:01 -0400</pubDate>
+      
+      <guid>http://blog.leifmadsen.com/blog/2017/07/12/building-the-virtual-cobbler-deployment/</guid>
+      <description>&lt;p&gt;In this scene I&amp;rsquo;ll discuss how I&amp;rsquo;ve built out a local Cobbler deployment into
+my virtual host in order to bootstrap the operating system onto my baremetal
+nodes via kickstart files and PXE booting.
+&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>yakLab build out</title>
+      <link>http://blog.leifmadsen.com/blog/2017/07/12/yaklab-build-out/</link>
+      <pubDate>Wed, 12 Jul 2017 15:00:00 -0400</pubDate>
+      
+      <guid>http://blog.leifmadsen.com/blog/2017/07/12/yaklab-build-out/</guid>
+      <description>&lt;p&gt;The yakLab is a place where yaks are electronically instantiated for the
+purpose of learning and documenting. The lab consists of a virtualization host
+(virthost) which has 64GB of memory and hosts all the virtual machines,
+primarily for infrastructure.
+&lt;/p&gt;</description>
+    </item>
+    
+    <item>
       <title>Create a virtual undercloud with TripleO Quickstart</title>
       <link>http://blog.leifmadsen.com/blog/2016/12/28/create-a-virtual-undercloud-with-tripleo-quickstart/</link>
       <pubDate>Wed, 28 Dec 2016 13:01:21 -0500</pubDate>

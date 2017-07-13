@@ -6,8 +6,33 @@
     <description>Recent content in Asterisk, and other worldly endeavours on Asterisk, and other worldly endeavours</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 04 Jan 2017 15:42:23 -0500</lastBuildDate>
+    <lastBuildDate>Wed, 12 Jul 2017 20:45:01 -0400</lastBuildDate>
     <atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Building the virtual Cobbler deployment</title>
+      <link>http://blog.leifmadsen.com/blog/2017/07/12/building-the-virtual-cobbler-deployment/</link>
+      <pubDate>Wed, 12 Jul 2017 20:45:01 -0400</pubDate>
+      
+      <guid>http://blog.leifmadsen.com/blog/2017/07/12/building-the-virtual-cobbler-deployment/</guid>
+      <description>&lt;p&gt;In this scene I&amp;rsquo;ll discuss how I&amp;rsquo;ve built out a local Cobbler deployment into
+my virtual host in order to bootstrap the operating system onto my baremetal
+nodes via kickstart files and PXE booting.
+&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>yakLab build out</title>
+      <link>http://blog.leifmadsen.com/blog/2017/07/12/yaklab-build-out/</link>
+      <pubDate>Wed, 12 Jul 2017 15:00:00 -0400</pubDate>
+      
+      <guid>http://blog.leifmadsen.com/blog/2017/07/12/yaklab-build-out/</guid>
+      <description>&lt;p&gt;The yakLab is a place where yaks are electronically instantiated for the
+purpose of learning and documenting. The lab consists of a virtualization host
+(virthost) which has 64GB of memory and hosts all the virtual machines,
+primarily for infrastructure.
+&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>Finding available Ansible tags in playbooks and roles</title>
@@ -193,34 +218,6 @@ it up. Upon testing, we ran into the following error:&lt;/p&gt;
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>Configuring powerline to show working Git branch</title>
-      <link>http://blog.leifmadsen.com/blog/2015/09/09/configuring-powerline-to-show-working-git-branch/</link>
-      <pubDate>Wed, 09 Sep 2015 21:20:40 +0000</pubDate>
-      
-      <guid>http://blog.leifmadsen.com/blog/2015/09/09/configuring-powerline-to-show-working-git-branch/</guid>
-      <description>&lt;p&gt;So the documentation for
-&lt;a href=&#34;http://powerline.readthedocs.org/en/latest/index.html&#34;&gt;Powerline&lt;/a&gt; kind of
-sucks. I followed
-&lt;a href=&#34;http://fedoramagazine.org/add-power-terminal-powerline&#34;&gt;this&lt;/a&gt; pretty good
-article on getting started with it. First thing I noticed however is that the
-&lt;code&gt;if&lt;/code&gt; statement on the article doesn&amp;rsquo;t work if you don&amp;rsquo;t have powerline
-installed (which kind of defeats the purpose of having the &lt;code&gt;if&lt;/code&gt; statement there
-at all).
-&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>Rumors of my death have been greatly exaggerated</title>
-      <link>http://blog.leifmadsen.com/blog/2014/07/25/rumors-of-my-death-have-been-greatly-exaggerated/</link>
-      <pubDate>Fri, 25 Jul 2014 02:49:12 +0000</pubDate>
-      
-      <guid>http://blog.leifmadsen.com/blog/2014/07/25/rumors-of-my-death-have-been-greatly-exaggerated/</guid>
-      <description>It&amp;rsquo;s been way too long since I&amp;rsquo;ve blogged. And this post isn&amp;rsquo;t going to be all the impressive unfortunately. However, I recently have been running a BBS and some friends and I have been playing LORD.
-We&amp;rsquo;ve been playing this for the last few months, and I think I&amp;rsquo;m going to run a tournament. Perhaps with some sort of buy in like $10 or something, winner takes all.
-Going to build it out in such a way that first person to beat the dragon 3 times will win the game, and at that point that person will win the pot.</description>
     </item>
     
   </channel>
