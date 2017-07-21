@@ -12,6 +12,7 @@ Cobbler deployment]({{< ref "post/2017-07-10-building-cobbler-vm.md" >}}) and
 get a _kickstart_ file loaded into Cobbler. I'm going to be mostly reviewing
 the kickstart file itself, and not really getting into how to manage the
 Cobbler process itself (that's left as an exercise for the reader).
+<!--more-->
 
 The main thing to note is that this is a bit of a work in progress, and I know
 there are a few things that could be enhanced (for example, in the Cobbler

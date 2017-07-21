@@ -53,7 +53,7 @@ out scenes, including:
 available.)
 
 * Scene 1a: [Building the virtual Cobbler deployment]({{< ref "post/2017-07-10-building-cobbler-vm.md" >}})
-* **[Not Complete]** Scene 1b: Kickstart file build out
+* Scene 1b: [Kickstart file build out]({{< ref "post/2017-07-19-kickstart-file-buildout.md" >}})
 * **[Not Complete]** Scene 2: GlusterFS distributed volumes
 * **[Not Complete]** Scene 3: Kubernetes deployment with `kubeadm`
 * **[Not Complete]** Scene 4: Kubernetes persistent volumes with GlusterFS
