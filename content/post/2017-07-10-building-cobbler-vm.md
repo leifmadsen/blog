@@ -2,7 +2,7 @@
 categories = ["nfvpe", "howto", "infrastructure"]
 keywords = ["cobbler", "lab", "pxe", "infrastructure", "deploy", "devops"]
 description = ""
-title = "Building the virtual Cobbler deployment"
+title = "yakLab Part 1a: Building the virtual Cobbler deployment"
 date = "2017-07-12T20:45:01-04:00"
 
 +++

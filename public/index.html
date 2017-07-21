@@ -76,9 +76,25 @@
     
     <div class="post">
       <h1 class="post-title">
-        <a href="http://blog.leifmadsen.com/blog/2017/07/12/building-the-virtual-cobbler-deployment/">Building the virtual Cobbler deployment</a>
+        <a href="http://blog.leifmadsen.com/blog/2017/07/19/yaklab-part-1b-kickstart-file-build-out/">yakLab Part 1b: Kickstart File Build Out</a>
       </h1>
-      <span class="post-date">Jul 12, 2017 &middot; 9 minute read &middot; <a href="http://blog.leifmadsen.com/blog/2017/07/12/building-the-virtual-cobbler-deployment/#disqus_thread">Comments</a>
+      <span class="post-date">Jul 19, 2017 &middot; 3 minute read &middot; <a href="http://blog.leifmadsen.com/blog/2017/07/19/yaklab-part-1b-kickstart-file-build-out/#disqus_thread">Comments</a>
+      
+      <br/>
+      <a class="label" href="http://blog.leifmadsen.com/categories/nfvpe">nfvpe</a><a class="label" href="http://blog.leifmadsen.com/categories/howto">howto</a><a class="label" href="http://blog.leifmadsen.com/categories/infrastructure">infrastructure</a>
+      </span>
+      
+      In scene 1b, we&rsquo;ll continue with our work from the Building the virtual Cobbler deployment and get a kickstart file loaded into Cobbler. I&rsquo;m going to be mostly reviewing the kickstart file itself, and not really getting into how to manage the Cobbler process itself (that&rsquo;s left as an exercise for the reader).
+The main thing to note is that this is a bit of a work in progress, and I know there are a few things that could be enhanced (for example, in the Cobbler configuration file you can set a secret that you can reference as a variable in the kickstart file, but I&rsquo;m not doing that here, and you could also setup partitioning, etc).
+      <a href="http://blog.leifmadsen.com/blog/2017/07/19/yaklab-part-1b-kickstart-file-build-out/">Read On &rarr;</a>
+      
+    </div>
+    
+    <div class="post">
+      <h1 class="post-title">
+        <a href="http://blog.leifmadsen.com/blog/2017/07/12/yaklab-part-1a-building-the-virtual-cobbler-deployment/">yakLab Part 1a: Building the virtual Cobbler deployment</a>
+      </h1>
+      <span class="post-date">Jul 12, 2017 &middot; 9 minute read &middot; <a href="http://blog.leifmadsen.com/blog/2017/07/12/yaklab-part-1a-building-the-virtual-cobbler-deployment/#disqus_thread">Comments</a>
       
       <br/>
       <a class="label" href="http://blog.leifmadsen.com/categories/nfvpe">nfvpe</a><a class="label" href="http://blog.leifmadsen.com/categories/howto">howto</a><a class="label" href="http://blog.leifmadsen.com/categories/infrastructure">infrastructure</a>
@@ -88,7 +104,7 @@
 my virtual host in order to bootstrap the operating system onto my baremetal
 nodes via kickstart files and PXE booting.
 </p>
-      <a href="http://blog.leifmadsen.com/blog/2017/07/12/building-the-virtual-cobbler-deployment/">Read On &rarr;</a>
+      <a href="http://blog.leifmadsen.com/blog/2017/07/12/yaklab-part-1a-building-the-virtual-cobbler-deployment/">Read On &rarr;</a>
       
     </div>
     
@@ -254,30 +270,6 @@ control, but requires you to deal with powering on and off the machines
 manually. Let me show you how I make use of that.
 </p>
       <a href="http://blog.leifmadsen.com/blog/2016/11/11/tripleo-using-the-fake_pxe-driver-with-ironic/">Read On &rarr;</a>
-      
-    </div>
-    
-    <div class="post">
-      <h1 class="post-title">
-        <a href="http://blog.leifmadsen.com/blog/2016/10/03/tripleo-consuming-composable-roles/">TripleO: Consuming Composable Roles</a>
-      </h1>
-      <span class="post-date">Oct 3, 2016 &middot; 6 minute read &middot; <a href="http://blog.leifmadsen.com/blog/2016/10/03/tripleo-consuming-composable-roles/#disqus_thread">Comments</a>
-      
-      <br/>
-      <a class="label" href="http://blog.leifmadsen.com/categories/openstack">OpenStack</a><a class="label" href="http://blog.leifmadsen.com/categories/linux">Linux</a><a class="label" href="http://blog.leifmadsen.com/categories/cloud-computing">Cloud Computing</a><a class="label" href="http://blog.leifmadsen.com/categories/tripleo">TripleO</a><a class="label" href="http://blog.leifmadsen.com/categories/nfvpe">nfvpe</a>
-      </span>
-      
-      <p>So last week I started to look into learning the new <a href="http://hardysteven.blogspot.ca/2016/08/tripleo-composable-services-101.html">composable services and
-roles</a>
-that was added to Newton. I previously learned a little bit about deploying
-OpenStack clouds when I did training after joining Red Hat, but that was based
-on Liberty, and a lot has changed in TripleO since that time.
-
-The first thing was learning what composable services and roles are, and
-generally what they are intended to solve. I don&rsquo;t want to get into that
-here, so I&rsquo;d encourage you to go read some links first and then come back here.
-Additionally, it&rsquo;s assumed you know what a TripleO is :)</p>
-      <a href="http://blog.leifmadsen.com/blog/2016/10/03/tripleo-consuming-composable-roles/">Read On &rarr;</a>
       
     </div>
     
