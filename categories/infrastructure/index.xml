@@ -9,11 +9,21 @@
     <atom:link href="/categories/infrastructure/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
-      <title>Building the virtual Cobbler deployment</title>
-      <link>http://blog.leifmadsen.com/blog/2017/07/12/building-the-virtual-cobbler-deployment/</link>
+      <title>yakLab Part 1b: Kickstart File Build Out</title>
+      <link>http://blog.leifmadsen.com/blog/2017/07/19/yaklab-part-1b-kickstart-file-build-out/</link>
+      <pubDate>Wed, 19 Jul 2017 13:54:42 -0400</pubDate>
+      
+      <guid>http://blog.leifmadsen.com/blog/2017/07/19/yaklab-part-1b-kickstart-file-build-out/</guid>
+      <description>In scene 1b, we&amp;rsquo;ll continue with our work from the Building the virtual Cobbler deployment and get a kickstart file loaded into Cobbler. I&amp;rsquo;m going to be mostly reviewing the kickstart file itself, and not really getting into how to manage the Cobbler process itself (that&amp;rsquo;s left as an exercise for the reader).
+The main thing to note is that this is a bit of a work in progress, and I know there are a few things that could be enhanced (for example, in the Cobbler configuration file you can set a secret that you can reference as a variable in the kickstart file, but I&amp;rsquo;m not doing that here, and you could also setup partitioning, etc).</description>
+    </item>
+    
+    <item>
+      <title>yakLab Part 1a: Building the virtual Cobbler deployment</title>
+      <link>http://blog.leifmadsen.com/blog/2017/07/12/yaklab-part-1a-building-the-virtual-cobbler-deployment/</link>
       <pubDate>Wed, 12 Jul 2017 20:45:01 -0400</pubDate>
       
-      <guid>http://blog.leifmadsen.com/blog/2017/07/12/building-the-virtual-cobbler-deployment/</guid>
+      <guid>http://blog.leifmadsen.com/blog/2017/07/12/yaklab-part-1a-building-the-virtual-cobbler-deployment/</guid>
       <description>&lt;p&gt;In this scene I&amp;rsquo;ll discuss how I&amp;rsquo;ve built out a local Cobbler deployment into
 my virtual host in order to bootstrap the operating system onto my baremetal
 nodes via kickstart files and PXE booting.
