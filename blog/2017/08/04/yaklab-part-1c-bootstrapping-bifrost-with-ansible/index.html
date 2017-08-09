@@ -1,0 +1,676 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
+<head>
+  <link href="http://gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+  <title>yakLab Part 1c: Bootstrapping Bifrost with Ansible &middot; Leif Madsen</title>
+
+  
+  <link rel="stylesheet" href="http://blog.leifmadsen.com/css/poole.css">
+  <link rel="stylesheet" href="http://blog.leifmadsen.com/css/hyde.css">
+  <link rel="stylesheet" href="http://blog.leifmadsen.com/css/poole-overrides.css">
+  <link rel="stylesheet" href="http://blog.leifmadsen.com/css/hyde-overrides.css">
+  <link rel="stylesheet" href="http://blog.leifmadsen.com/css/hyde-x.css">
+  <link rel="stylesheet" href="http://blog.leifmadsen.com/css/highlight/monokai.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700|Abril+Fatface">
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  
+
+  
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="http://blog.leifmadsen.com/touch-icon-144-precomposed.png">
+  <link href="http://blog.leifmadsen.com/favicon.png" rel="icon">
+
+  
+  
+  
+  
+
+  <meta name="description" content="Leif Madsen Blog Entry">
+  <meta name="keywords" content="ansible,automation,devops,baremetal,devops,ironic">
+  
+</head>
+<body>
+<div class="sidebar">
+  <div class="container sidebar-sticky">
+    <div class="sidebar-about">
+      
+      <h1>Leif Madsen</h1>
+      <p class="lead">Asterisk, and other worldly endeavours</p>
+    </div>
+
+    <ul class="sidebar-nav">
+      <li class="sidebar-nav-item"><a href="http://blog.leifmadsen.com/">Blog</a></li>
+      
+    </ul>
+
+    <ul class="sidebar-nav">
+      <li class="sidebar-nav-item">
+      <a href="http://github.com/leifmadsen"><i class="fa fa-github-square fa-3x"></i></a>
+      
+      
+      <a href="http://linkedin.com/in/leifmadsen"><i class="fa fa-linkedin-square fa-3x"></i></a>
+      
+      
+      <a href="http://twitter.com/leifmadsen"><i class="fa fa-twitter-square fa-3x"></i></a>
+      
+      <a href="http://blog.leifmadsen.com/index.xml" type="application/rss+xml"><i class="fa fa-rss-square fa-3x"></i></a>
+      </li>
+    </ul>
+
+    
+
+    <p>Copyright &copy; 2017 <a href="http://blog.leifmadsen.com/license/">License</a><br/>
+       Powered by <a href="http://gohugo.io">Hugo</a> and <a href="https://github.com/zyro/hyde-x">Hyde-X</a></p>
+  </div>
+</div>
+
+
+<div class="content container">
+  <div class="post">
+    <h1 class="post-title">yakLab Part 1c: Bootstrapping Bifrost with Ansible</h1>
+    <span class="post-date">Aug 4, 2017 &middot; 13 minute read &middot; <a href="http://blog.leifmadsen.com/blog/2017/08/04/yaklab-part-1c-bootstrapping-bifrost-with-ansible/#disqus_thread">Comments</a>
+    
+    <br/>
+    <a class="label" href="http://blog.leifmadsen.com/categories/automation">automation</a><a class="label" href="http://blog.leifmadsen.com/categories/bifrost">bifrost</a><a class="label" href="http://blog.leifmadsen.com/categories/baremetal">baremetal</a><a class="label" href="http://blog.leifmadsen.com/categories/yaklab">yaklab</a><a class="label" href="http://blog.leifmadsen.com/categories/ansible">ansible</a><a class="label" href="http://blog.leifmadsen.com/categories/devops">devops</a>
+    </span>
+    <p>In this scene I&rsquo;ll explore some of the bootstrapping I&rsquo;ve been working on for a
+while that will result in a clean, shiny new Bifrost deployment, populated with
+inventory, executed from your laptop to a virtual machine.</p>
+
+<p>Bifrost is an OpenStack project that utilizes OpenStack Ironic to provision
+baremetal nodes. This is related to my previous post on <a href="http://blog.leifmadsen.com/blog/2017/07/12/yaklab-part-1a-building-the-virtual-cobbler-deployment/">Building the virtual
+Cobbler deployment</a>.
+</p>
+
+<blockquote>
+<p><strong>NOTE</strong></p>
+
+<p>Also to note this blog post makes the whole endeavour seem a lot
+more complicated than it really is. I&rsquo;m mostly giving you all the background,
+overview, and lab topology so that things make a lot more sense so that
+you&rsquo;ll be successful in your own local deployment (as not all networks are
+created equally :)).</p>
+</blockquote>
+
+<h2 id="assumptions">Assumptions</h2>
+
+<ul>
+<li>You&rsquo;re running KVM / libvirt on your virtual host</li>
+<li>You&rsquo;ll be deploying a CentOS 7 virtual machine</li>
+<li>Your baremetal nodes can be controlled via IPMI</li>
+<li>Your network is setup the same as mine :)</li>
+</ul>
+
+<h2 id="less-automation-quickstart">Less Automation Quickstart</h2>
+
+<p>This is pretty much what the documentation tells you to do. It works, and it
+doesn&rsquo;t take very long to setup. The issue I have is that it then leaves you
+to your own devices to add your inventory. I&rsquo;d like to automate that part of
+the bootstrapping process as well.</p>
+
+<pre><code>    ssh admin@bifrost.remote
+    sudo yum install git -y
+    git clone https://github.com/openstack/bifrost
+    cd bifrost
+    ./scripts/env-setup.sh
+
+    * edit bifrost/playbooks/inventory/group_vars/*
+
+    ansible-playbook -i playbooks/inventory/target playbooks/install.yml
+</code></pre>
+
+<p>Also, it installs Ansible via <code>pip</code> and the version installed by default is
+Ansible 2.1.6.0 (which is starting to get fairly dated). While use of the
+<code>env-setup.sh</code> is convenient to get all the dependencies bootstrapped, it is a
+pain to use with Ansible to automate the deployment, as you start having to
+much around with virtual environments.</p>
+
+<p>Instead of using <code>env-setup.sh</code> we&rsquo;ll install some dependencies then let
+Bifrost install any other dependencies it needs after the fact.</p>
+
+<h2 id="a-more-automated-bootstrap">A More Automated Bootstrap</h2>
+
+<p>Both @dougbtv and I have been working on some bootstrapping Ansible playbooks
+that will also bring in your inventory, and generally make it a little easier
+to import a set of hardware initially.</p>
+
+<p>Most of the work is just basically what you need to do after you run the
+quickstart, but then if you destroy your Bifrost install, you have to do all
+that data entry again. So we automated your automation.</p>
+
+<p>Yes, that&rsquo;s right folks, we&rsquo;re going to run Ansible with Ansible! (It&rsquo;s not
+Ansible running Chef or Puppet though&hellip; so&hellip; cool?)</p>
+
+<p>All the work is going into the repo at
+<a href="https://github.com/dougbtv/droctogon-bifrost">https://github.com/dougbtv/droctogon-bifrost</a> and my development branches are
+currently located at <a href="https://github.com/leifmadsen/droctogon-bifrost">https://github.com/leifmadsen/droctogon-bifrost</a></p>
+
+<h2 id="the-topology">The Topology</h2>
+
+<p>In my lab, I have multiple low power nodes that I used for deployment testing.
+They are wired up with IPMI so that I can remotely power them on and off, and
+then they are provisioned from a virtual machine running Bifrost.</p>
+
+<p>Here is a diagram of the physical topology of the lab:</p>
+
+
+<figure >
+    
+        <img src="http://blog.leifmadsen.com/media/yakLab-phys-topology.png" />
+    
+    
+    <figcaption>
+        <h4>Image 1-1: yakLab Physical Topology</h4>
+        
+    </figcaption>
+    
+</figure>
+
+
+<p>Bifrost lives on the virthost using a <a href="http://blog.leifmadsen.com/blog/2016/12/01/create-network-bridge-with-nmcli-for-libvirt/">bridged interface</a> to service the IPMI
+and provisioning interface. The IPMI interfaces (green) are statically assigned
+IP addresses on the 192.168.25.0/24 subnet. Bifrost then advertises DHCP for
+the provisioning interfaces in the same subnet, between 192.168.25.64 and
+192.168.25.95 (yellow).</p>
+
+<p>The other network interface (purple) is then provided by my main router via
+DHCP using the 192.168.26.0/24 subnet (which provides internet access via the
+uplink).</p>
+
+<h2 id="the-logical-topology">The Logical Topology</h2>
+
+<p>So that you understand where things are on the network, here is the logical
+topology.</p>
+
+<p><strong>VLANs</strong></p>
+
+<ul>
+<li><code>VLAN 25</code>: IPMI and provisioning</li>
+<li><code>VLAN 26</code>: Uplink / public network (internet)</li>
+<li><code>VLAN 50</code>: Storage (future, for persistant storage with GlusterFS)</li>
+</ul>
+
+<p><strong>Switch Configuration</strong></p>
+
+<ul>
+<li><code>sw3, port 1-5</code>
+
+<ul>
+<li>VLAN 25</li>
+<li>tagged VLAN 50</li>
+<li>First port on yak machine</li>
+</ul></li>
+<li><code>sw3, port 6-10</code>
+
+<ul>
+<li>VLAN 26</li>
+<li>tagged VLAN 50</li>
+<li>Second port on yak machine</li>
+</ul></li>
+<li><code>sw3, port 11-15</code>
+
+<ul>
+<li>VLAN 25</li>
+<li>Third port on yak machine (marked red)</li>
+</ul></li>
+<li><code>sw3, port 16</code>
+
+<ul>
+<li>VLAN 1</li>
+<li>tagged VLAN 25, 26</li>
+<li>uplink to sw2</li>
+</ul></li>
+</ul>
+
+<p><strong>Switch Port Assignments</strong></p>
+
+<ul>
+<li><code>sw3, port 1-5</code>: Provisioning Network (DHCP from Bifrost)</li>
+<li><code>sw3, port 6-10</code>: External Network (DHCP from r1)</li>
+<li><code>sw3, port 11-15</code>: IPMI (static IP addresses)</li>
+</ul>
+
+<h2 id="quick-deploy-the-virtual-machine">Quick Deploy The Virtual Machine</h2>
+
+<p>I&rsquo;ve discussed how to <a href="http://blog.leifmadsen.com/blog/2016/12/16/initial-fedora-libvirt-setup/">build out virtual machines with kickstart files and
+<code>virt-install</code> with libvirt</a>
+previously, but here is a quick refresher on the commands I used.</p>
+
+<p>First we stop (destroy) the existing machine, undefine (delete) it, then
+re-instantiate it using a kickstart file (also below).</p>
+
+<pre><code>virsh destroy yakLab-bifrost
+virsh undefine --remove-all-storage yakLab-bifrost
+virt-install --name &quot;yakLab-bifrost&quot; --memory 2048 \
+--disk /home/libvirt/images/yaklab/bifrost.qcow2,size=20,bus=virtio \
+--location /var/lib/libvirt/images/CentOS-7-x86_64-Minimal.iso --boot cdrom \
+--network network=host-bridge --noautoconsole --vnc \
+--initrd-inject kickstart/bifrost.ks --extra &quot;inst.ks=file:/bifrost.ks&quot; \
+--accelerate &amp;&amp; \
+watch -g -n10 &quot;virsh list --all | grep yakLab&quot; &amp;&amp; \
+virsh start yakLab-bifrost
+</code></pre>
+
+<p>And here is my currentl kickstart file for the Bifrost virtual machine.</p>
+
+<pre><code>cat kickstart/bifrost.ks
+
+
+#version=DEVEL
+# System authorization information
+auth --enableshadow --passalgo=sha512
+# Use CDROM installation media
+cdrom
+# Use graphical install
+graphical
+# Run the Setup Agent on first boot
+firstboot --enable
+ignoredisk --only-use=vda
+# Keyboard layouts
+keyboard --vckeymap=us --xlayouts='us'
+# System language
+lang en_US.UTF-8
+
+# Network information
+network --bootproto=static --ip=192.168.25.251 --netmask=255.255.255.0 --gateway=192.168.25.254 --nodns --nodefroute --onboot=yes --device=eth0 --ipv6=auto --activate
+network --hostname=bifrost.yakmgmt.61will.space
+
+# Root password
+rootpw --iscrypted $1$S7..$up3r$3cr3TstUff/
+# System services
+services --enabled=&quot;chronyd&quot;
+# System timezone
+timezone America/New_York --isUtc
+user --groups=wheel --name=admin --password=$1$S7..$up3r$3cr3TstUff/ --iscrypted --gecos=&quot;admin&quot;
+# System bootloader configuration
+bootloader --append=&quot; crashkernel=auto&quot; --location=mbr --boot-drive=vda
+autopart --type=lvm
+# Partition clearing information
+clearpart --none --initlabel
+
+reboot
+
+%packages
+@^minimal
+@core
+chrony
+kexec-tools
+
+%end
+
+%addon com_redhat_kdump --enable --reserve-mb='auto'
+
+%end
+
+%anaconda
+pwpolicy root --minlen=6 --minquality=50 --notstrict --nochanges --notempty
+pwpolicy user --minlen=6 --minquality=50 --notstrict --nochanges --notempty
+pwpolicy luks --minlen=6 --minquality=50 --notstrict --nochanges --notempty
+%end
+
+</code></pre>
+
+<h2 id="post-install-manual-tweak">Post Install Manual Tweak&hellip;</h2>
+
+<p>For now, I need to add another interface with Network Manager to the virtual
+host on boot. I haven&rsquo;t figured out why when I do it with the kickstart file
+that the tagged VLAN interface doesn&rsquo;t quite work. It&rsquo;s pretty easy to run
+after the fact, and you&rsquo;ll only need to do it once.</p>
+
+<blockquote>
+<p><strong>NOTE</strong></p>
+
+<p>Bifrost will run at static IP <code>192.168.25.251</code> on the provisioning network.
+IPMI of yak machines 1 through 5 will live at static IP addresses
+<code>192.168.25.1</code> through <code>192.168.25.5</code>.</p>
+</blockquote>
+
+<p>Let&rsquo;s add the external network to our virtual machine by logging into it, and
+running <code>nmcli</code>.</p>
+
+<pre><code>ssh admin@192.168.25.251
+sudo nmcli con add type vlan id 26 dev eth0
+</code></pre>
+
+<h2 id="bootstrapping-the-virtual-machine">Bootstrapping The Virtual Machine</h2>
+
+<p>There are always a few things I like to do to a machine once it has been
+instantiated, and instead of running all that manually, I create a little
+Ansible bootstrap playbook.</p>
+
+<p>The primary reason I bootstrap the nodes, is so that the <code>admin</code> user (as
+created by kickstart and <code>virt-install</code>) can <code>sudo</code> to root without a password.
+It makes using Ansible a little easier in the next steps.</p>
+
+<p>On your control machine (laptop, desktop), clone my <code>ansible-bootstrap</code>
+repository.</p>
+
+<pre><code>cd ~/src/github/leifmadsen/
+git clone https://github.com/leifmadsen/ansible-bootstrap
+cd ansible-bootstrap
+</code></pre>
+
+<p>Then you&rsquo;ll want to create a new inventory file. There is an example in
+<code>inventory/example.inventory</code>. You can <code>cat</code> the following file contents into
+the <code>local.inventory</code> file. Don&rsquo;t worry, everything except the example is
+ignored, so you won&rsquo;t clutter up the git repo.</p>
+
+<pre><code>cat &gt; inventory/local.inventory &lt;&lt;EOF
+bifrost ansible_host=192.168.25.251
+
+[nodes]
+bifrost
+
+[nodes:vars]
+ansible_user=admin
+ansible_ssh_pass=your_super_secret_from_kickstart_file
+ansible_become=true
+ansible_become_pass=welcome
+ansible_become_user=root
+</code></pre>
+
+<p>And now we can bootstrap the node by running <code>ansible-playbook</code>.</p>
+
+<pre><code>ansible-playbook -i inventory/local.inventory site.yml
+</code></pre>
+
+<p>Feel free to clone this bootstrap and add anything you want. If there are other
+cool bootstrap things you think all machines should have, feel free to open a
+pull request. Of course, the bootstrapping is biased towards my preferred
+machine deployment, and your bootstrapping needs may differ.</p>
+
+<h2 id="clone-the-dr-octogon-bifrost-repository">Clone The Dr. Octogon Bifrost Repository</h2>
+
+<p>On your control machine, clone the Dr. Octogon Bifrost repository, which
+contains the Ansible playbooks we&rsquo;ll run in a few minutes.</p>
+
+<pre><code>cd ~/src/github/dougbtv/
+git clone https://github.com/dougbtv/droctogon-bifrost
+cd droctogon-bifrost
+</code></pre>
+
+<h2 id="building-our-inventory">Building Our Inventory</h2>
+
+<p>One of the most time consuming parts of deploying Bifrost is really just
+gathering up the information about your hardware, setting the IP addresses for
+your IPMI interfaces, documenting the MAC addresses for the provisioning
+network interfaces, and putting all that data into JSON (or in our case, YAML
+because we&rsquo;re going to generate the JSON inventory with our Ansible playbook).</p>
+
+<p>In order to make it easier to generate the inventory and keep a bunch of your
+data in a single file, we&rsquo;ve created a template that will generate the
+inventory for you. However, you&rsquo;ll still need to enter the aforementioned data
+into a YAML file.</p>
+
+<p>We&rsquo;ve provided an example inventory for you in the <code>inventory/example/</code>
+directory. You can start with this by copying it, or building out your own from
+scratch.</p>
+
+<p>I copied the <code>example</code> inventory directory to <code>staging</code> with <code>cp -r
+inventory/example/ inventory/staging/</code> and then put in the contents of my
+hardware into the <code>inventory/staging/group_vars/bifrost.yaml</code>. Here is my local
+example for the yakLab.</p>
+
+<pre><code>---
+bifrost_version: &quot;master&quot;
+pxe_boot_nic: &quot;eth0&quot;
+pxe_boot_server_ip: &quot;192.168.25.251&quot;
+pxe_dhcp_start: 192.168.25.64
+pxe_dhcp_end: 192.168.25.95
+bifrost_inventory:
+  - pm_addr: 192.168.25.1
+    nickname: &quot;yak1&quot;
+    mac: &quot;D0:50:99:79:78:5D&quot;
+    cpu: 4
+    memory: 16384
+    disk: 110
+    arch: x86_64
+    pm_user: admin
+    pm_password: admin
+    uuid: &quot;{{ 1001 | random | to_uuid }}&quot;
+
+  - pm_addr: 192.168.25.2
+    nickname: &quot;yak2&quot;
+    mac: &quot;D0:50:99:79:77:A9&quot;
+    cpu: 4
+    memory: 16384
+    disk: 110
+    arch: x86_64
+    pm_user: admin
+    pm_password: admin
+    uuid: &quot;{{ 1002 | random | to_uuid }}&quot;
+
+  - pm_addr: 192.168.25.4
+    nickname: &quot;yak4&quot;
+    mac: &quot;D0:50:99:79:76:F7&quot;
+    cpu: 4
+    memory: 16384
+    disk: 110
+    arch: x86_64
+    pm_user: admin
+    pm_password: admin
+    uuid: &quot;{{ 1004 | random | to_uuid }}&quot;
+
+  - pm_addr: 192.168.25.5
+    nickname: &quot;yak5&quot;
+    mac: &quot;D0:50:99:79:77:77&quot;
+    cpu: 4
+    memory: 16384
+    disk: 110
+    arch: x86_64
+    pm_user: admin
+    pm_password: admin
+    uuid: &quot;{{ 1005 | random | to_uuid }}&quot;
+</code></pre>
+
+<blockquote>
+<p><strong>WARNING</strong></p>
+
+<p>Using the <code>random | to_uuid</code> filter does result in a known bug currently. I
+probably just need to drop the <code>random</code> filter, since if you run this again,
+you&rsquo;ll get conflicts from Bifrost when it tries to enroll the hardware, since
+the UUID will have changed in the template.</p>
+</blockquote>
+
+<p>Stepping through this file, we&rsquo;ve got a few things to note. First, the Bifrost
+version we&rsquo;re going to clone. In this case I&rsquo;m using <code>master</code>, but you could
+also use a branch name, or version tag.</p>
+
+<p>The <code>pxe_boot_server_ip</code> is our static provisioning IP address we set up when
+we instantiated our virtual machine. It&rsquo;ll be the IP address that Bifrost will
+advertise DHCP on with dnsmasq.</p>
+
+<p>The <code>pm_addr</code> is the IP address of the IPMI interface you would have previously
+configured. In my case I went through and statically assigned an IP address for
+the nodes. You could of course have created another network and assigned them
+via DHCP (if the machines you&rsquo;re using provide it). In that case you&rsquo;d probably
+want to make sure you could communicate with them via a DNS name, but I haven&rsquo;t
+tried that (or set that up locally).</p>
+
+<p>The <code>mac</code> value is the MAC address that Bifrost will look for when the nodes
+boot up, then over the provisioning interface, request an IP address via DHCP
+during the PXE boot process. The idea is that once the node has successfully
+been provisioned, Bifrost will no longer server the required files to boot via
+PXE on subsequent boots for that MAC address.</p>
+
+<p>The <code>pm_user</code> and <code>pm_password</code> are the values for logging into the IPMI
+management interface on your baremetal nodes.</p>
+
+<p>We&rsquo;re almost there!</p>
+
+<h2 id="deploying-bifrost">Deploying Bifrost</h2>
+
+<p>OK, we&rsquo;ve done all the hard work now. If things are setup properly on your
+network, then you&rsquo;ll be able to deploy Bifrost to your virtual machine, and
+service the baremetal nodes over your bridged interface.</p>
+
+<p>Moment of truth, time to run the Bifrost deployment.</p>
+
+<p>From your <code>droctogon-bifrost</code> directory, run the following command.</p>
+
+<pre><code>ansible-playbook -i inventory/staging/ site.yml
+</code></pre>
+
+<p>Now be patient and let things progress. Hopefully it all finishes correctly,
+and that you&rsquo;ve automated your deployment. At this point, you&rsquo;re pretty much
+done, other than the actual deployment. So far, we&rsquo;ve only brought the playbook
+as far as the enrollment process, so deploying the nodes is left as a separate,
+non-automated step.</p>
+
+<p>Primarily, when I see a failure, it&rsquo;s because&hellip;</p>
+
+<ul>
+<li>I don&rsquo;t have the network setup quite correctly (can&rsquo;t download packages from
+the external network),</li>
+<li>I&rsquo;ve misconfigured something in the <code>bifrost.yaml</code> (incorrect syntax, missing
+data, invalid data, etc)</li>
+<li>Issue with Bifrost itself from upstream (not all that common actually)</li>
+<li>I&rsquo;ve deployed it twice with the known <code>random</code> filter bug I introduced</li>
+</ul>
+
+<p>Next, let&rsquo;s see how we can deploy our hardware.</p>
+
+<h2 id="preparing-to-deploy-our-baremetal-nodes">Preparing To Deploy Our Baremetal Nodes</h2>
+
+<p>Now the fun part. Deploying an operating system and powering on the nodes
+remotely from the comfort of our virtual console. As part of our bootstrapping
+of Bifrost, we&rsquo;ve resulted in a built CentOS image, and are now ready to deploy
+it to our baremetal nodes.</p>
+
+<p>First, we need to SSH into our virtual host and run the commands there.</p>
+
+<pre><code>ssh admin@bifrost.yakdata.61will.space
+</code></pre>
+
+<p>(I&rsquo;m setup with local DNS resolution for the 192.168.26.0/24 network that we
+added as a tagged VLAN interface, but you could just as easily login to the
+192.168.25.251 static IP as well.)</p>
+
+<p>OK, now that we&rsquo;re logged into the Bifrost server, we need to do a couple of
+preparatory steps. We&rsquo;ll source the <code>env-vars</code> and export the
+<code>BIFROST_INVENTORY_SOURCE</code> environment variable.</p>
+
+<pre><code>sudo su -
+source /opt/bifrost/env-vars
+export BIFROST_INVENTORY_SOURCE=/opt/inventory
+</code></pre>
+
+<p>(It&rsquo;s highly likely in the future that I&rsquo;ll add this to the <code>.bash_profile</code> on
+the root user via the playbooks we ran earlier, but if you&rsquo;re here early
+enough, this isn&rsquo;t done yet.)</p>
+
+<p>Now let&rsquo;s do a quick check that we&rsquo;re ready to execute some commands. We can
+show our current inventory and it&rsquo;s status.</p>
+
+<pre><code>ironic node-list
+
++--------------------------------------+------+---------------+-------------+--------------------+-------------+
+| UUID                                 | Name | Instance UUID | Power State | Provisioning State | Maintenance |
++--------------------------------------+------+---------------+-------------+--------------------+-------------+
+| 8d89f223-5514-50c9-a4a1-7537f2792cf6 | yak5 | None          | power on    | active             | False       |
+| 5f99af1f-2cdb-5fa6-8c2f-85966a947a2e | yak1 | None          | power on    | active             | False       |
+| fab35824-70e5-50db-9139-6baa099ed5a6 | yak2 | None          | power on    | active             | False       |
+| ce499d7c-e16d-5740-a598-9985bfa11d00 | yak4 | None          | power on    | active             | False       |
++--------------------------------------+------+---------------+-------------+--------------------+-------------+
+</code></pre>
+
+<p>In this case, you can see that I&rsquo;ve lazily shown you a post-deployment output
+(you can tell because the <code>Provisioning State</code> is set to <code>active</code> meaning that
+our nodes are fully provisioned and active). If you&rsquo;ve just run the commands,
+you&rsquo;ll see that the <code>Provisioning State</code> should be set to <code>available</code>. If you
+see anything else, likely something has gone wrong. (It&rsquo;s possible <code>enroll</code> is
+also a valid state to be in as well, so you could still proceed and see if it
+works, but I&rsquo;ve not tried deploying from that state.)</p>
+
+<p>You may also see the <code>Power State</code> is a value of <code>None</code>. Sometimes the state
+just isn&rsquo;t necessarily readily available, depending how good your nodes IPMI
+implementation is. I find that things will work fine even if initially the
+state isn&rsquo;t known. Your kilometerage may vary.</p>
+
+<h2 id="deploying-our-baremetal-nodes">Deploying Our Baremetal Nodes</h2>
+
+<p>OK, we&rsquo;ve done all the preparatory work, and we can finally try deploying our
+nodes.</p>
+
+<p>First, change into the <code>bifrost/playbooks/</code> directory on the Bifrost virtual
+machine.</p>
+
+<pre><code>cd /opt/bifrost/playbooks/
+</code></pre>
+
+<p>And then we can run the following command to deploy our nodes dynamically (if
+you get an immediate error, make sure you&rsquo;ve sourced the <code>env-vars</code> file and
+exported the <code>BIFROST_INVENTORY_SOURCE</code> to your path.)</p>
+
+<pre><code>ansible-playbook -i inventory/bifrost_inventory.py deploy-dynamic.yaml
+</code></pre>
+
+<p>I then <code>watch</code> the output of <code>ironic node-list</code> to see if the nodes are
+deploying.</p>
+
+<pre><code>watch -n10 &quot;ironic node-list&quot;
+</code></pre>
+
+<p>We should see things in the <code>wait call-back</code> state, but those should eventually
+change into <code>active</code>. Nodes that sit in <code>wait call-back</code> for a very long time
+are likely to eventually time out and fail.</p>
+
+<p>The main reason for this in my experience is that the nodes are not connecting
+to the Bifrost server over the provisioning network. It could either be failing
+to get an IP address from dnsmasq during PXE boot, or the MAC address being
+used on the provisioning network isn&rsquo;t the correct network interface that was
+provided.</p>
+
+<p>You can check some of this via <code>journalctl -fu dnsmasq.service</code> and via
+<code>journalctl -fu ironic*</code>.</p>
+
+<h1 id="conclusion">Conclusion</h1>
+
+<p>Hopefully this post gets you on your way to deploying Bifrost and managing the
+deployments of your baremetal hardware. I actually had quite a bit of a rocky
+road getting this far, but after trying several times, I finally understood how
+best to deploy Bifrost, and to automate the bootstrapping of the virtual
+machines. Now I can move onto more exciting things, and know that I can at
+least get my provisioning system going without too much trouble if I need to
+recreate it.</p>
+
+<p>Additional documentation for Bifrost and using it is available at
+<a href="https://docs.openstack.org/bifrost/latest/">https://docs.openstack.org/bifrost/latest/</a></p>
+  </div>
+  <div id="disqus_thread"></div>
+</div>
+
+<script type="text/javascript">
+(function() {
+    if (window.location.hostname == "localhost")
+        return;
+
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+    var disqus_shortname = 'leifmadsen';
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+
+
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-84933598-1', 'auto');
+ga('send', 'pageview');
+</script>
+
+<script src="http://blog.leifmadsen.com/js/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+</body>
+</html>
+

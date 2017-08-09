@@ -76,6 +76,33 @@
     
     <div class="post">
       <h1 class="post-title">
+        <a href="http://blog.leifmadsen.com/blog/2016/11/11/tripleo-using-the-fake_pxe-driver-with-ironic/">TripleO: Using the fake_pxe driver with Ironic</a>
+      </h1>
+      <span class="post-date">Nov 11, 2016 &middot; 7 minute read &middot; <a href="http://blog.leifmadsen.com/blog/2016/11/11/tripleo-using-the-fake_pxe-driver-with-ironic/#disqus_thread">Comments</a>
+      
+      <br/>
+      <a class="label" href="http://blog.leifmadsen.com/categories/tripleo">TripleO</a><a class="label" href="http://blog.leifmadsen.com/categories/nfvpe">nfvpe</a>
+      </span>
+      
+      <p>I&rsquo;ve been working on testing things with TripleO and normally I use <a href="https://github.com/openstack/tripleo-quickstart/">TripleO
+Quickstart</a> to spin things up
+in a virtual environment.</p>
+
+<p>Often when doing NFV work though, you need things that can&rsquo;t be used in a
+virtual environment (such as DPDK, SR-IOV, etc) so you need some baremetal
+nodes.</p>
+
+<p>In my home lab environment though, I don&rsquo;t have the luxury of IPMI, so I need
+to make use of the <code>fake_pxe</code> driver in Ironic, which allows for standard PXE
+control, but requires you to deal with powering on and off the machines
+manually. Let me show you how I make use of that.
+</p>
+      <a href="http://blog.leifmadsen.com/blog/2016/11/11/tripleo-using-the-fake_pxe-driver-with-ironic/">Read On &rarr;</a>
+      
+    </div>
+    
+    <div class="post">
+      <h1 class="post-title">
         <a href="http://blog.leifmadsen.com/blog/2016/10/03/tripleo-consuming-composable-roles/">TripleO: Consuming Composable Roles</a>
       </h1>
       <span class="post-date">Oct 3, 2016 &middot; 6 minute read &middot; <a href="http://blog.leifmadsen.com/blog/2016/10/03/tripleo-consuming-composable-roles/#disqus_thread">Comments</a>
@@ -243,24 +270,6 @@ Late last week, the book went to print, and should start to appear on store shel
       Tip: If your Brother printer won&rsquo;t print after installing the drivers, install glibc.i686
 Today ran into an issue with my new Brother MFC-7460DN (which is a really nice laser printer with auto-feed scanner, Scan-to-FTP which creates a PDF file, and other things). I had just recently done a clean install of Fedora 17, and I could install the RPMs (which are i386 files on my x86_64 based system), add the printer to CUPS and all sorts of things that looked fine.
       <a href="http://blog.leifmadsen.com/blog/2012/11/24/brother-printer-doesnt-print-in-fedora-17/">Read On &rarr;</a>
-      
-    </div>
-    
-    <div class="post">
-      <h1 class="post-title">
-        <a href="http://blog.leifmadsen.com/blog/2012/10/11/digium-d40-and-d70-phone-unboxing/">Digium D40 and D70 Phone Unboxing</a>
-      </h1>
-      <span class="post-date">Oct 11, 2012 &middot; 3 minute read &middot; <a href="http://blog.leifmadsen.com/blog/2012/10/11/digium-d40-and-d70-phone-unboxing/#disqus_thread">Comments</a>
-      
-      <br/>
-      <a class="label" href="http://blog.leifmadsen.com/categories/asterisk">Asterisk</a><a class="label" href="http://blog.leifmadsen.com/categories/musings">Musings</a>
-      </span>
-      
-      Today I received a couple of phones from Digium; the D40 and D70. I&rsquo;ll be using these phones for testing and documentation in the 4th edition of Asterisk: The Definitive Guide (which Jim Van Meggelen, Russell Bryant and myself are working on right now).
-Here is my unboxing of the phones and some commentary about my initial impressions of the hardware itself.
-[caption id=&ldquo;attachment_484&rdquo; align=&ldquo;aligncenter&rdquo; width=&ldquo;300&rdquo;] Pretty boxes![/caption]
-Phones arrived in some nice looking boxes.
-      <a href="http://blog.leifmadsen.com/blog/2012/10/11/digium-d40-and-d70-phone-unboxing/">Read On &rarr;</a>
       
     </div>
     

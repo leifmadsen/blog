@@ -6,8 +6,24 @@
     <description>Recent content in Asterisk, and other worldly endeavours on Asterisk, and other worldly endeavours</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 19 Jul 2017 13:54:42 -0400</lastBuildDate>
+    <lastBuildDate>Fri, 04 Aug 2017 15:02:00 -0400</lastBuildDate>
     <atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>yakLab Part 1c: Bootstrapping Bifrost with Ansible</title>
+      <link>http://blog.leifmadsen.com/blog/2017/08/04/yaklab-part-1c-bootstrapping-bifrost-with-ansible/</link>
+      <pubDate>Fri, 04 Aug 2017 15:02:00 -0400</pubDate>
+      
+      <guid>http://blog.leifmadsen.com/blog/2017/08/04/yaklab-part-1c-bootstrapping-bifrost-with-ansible/</guid>
+      <description>&lt;p&gt;In this scene I&amp;rsquo;ll explore some of the bootstrapping I&amp;rsquo;ve been working on for a
+while that will result in a clean, shiny new Bifrost deployment, populated with
+inventory, executed from your laptop to a virtual machine.&lt;/p&gt;
+
+&lt;p&gt;Bifrost is an OpenStack project that utilizes OpenStack Ironic to provision
+baremetal nodes. This is related to my previous post on &lt;a href=&#34;http://blog.leifmadsen.com/blog/2017/07/12/yaklab-part-1a-building-the-virtual-cobbler-deployment/&#34;&gt;Building the virtual
+Cobbler deployment&lt;/a&gt;.
+&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>yakLab Part 1b: Kickstart File Build Out</title>
@@ -41,7 +57,10 @@ nodes via kickstart files and PXE booting.
       <pubDate>Wed, 12 Jul 2017 15:00:00 -0400</pubDate>
       
       <guid>http://blog.leifmadsen.com/blog/2017/07/12/yaklab-build-out/</guid>
-      <description>&lt;p&gt;The yakLab is a place where yaks are electronically instantiated for the
+      <description>&lt;p&gt;&lt;em&gt;Edit 2017-08-09: Updated diagram 1-1 to a graphic showing the entire lab
+physical topology&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;The yakLab is a place where yaks are electronically instantiated for the
 purpose of learning and documenting. The lab consists of a virtualization host
 (virthost) which has 64GB of memory and hosts all the virtual machines,
 primarily for infrastructure.
@@ -205,16 +224,6 @@ customers.
       <guid>http://blog.leifmadsen.com/blog/2015/11/10/asterisk-docker-container-phase-1/</guid>
       <description>AstriCon At AstriCon 2015 this year, there was a lot (and I mean a lot) of discussion around microservices (Docker), and what effort is required over the next year by the development community in order to make Asterisk better suited to running in that environment.
 One of the first things is, clearly, to have a container image that Asterisk runs in. I&amp;rsquo;ve done this a few times now, but having something that can be passed over to the official Asterisk Git repository, and which everyone can contribute to, utilize and play with would be the goal here.</description>
-    </item>
-    
-    <item>
-      <title>about</title>
-      <link>http://blog.leifmadsen.com/about/</link>
-      <pubDate>Tue, 10 Nov 2015 19:28:26 -0500</pubDate>
-      
-      <guid>http://blog.leifmadsen.com/about/</guid>
-      <description>I currently work at Red Hat on the NFV (Network Functions Virtualization) partner engineering team as the DevOps lead. In this role I work with telecommunication partners to automate and test their NFV platforms.
-In a previous life, I was an Asterisk consultant, starting professionally in 2004 (learning Asterisk in September 2002). I&amp;rsquo;m co-author of the O&amp;rsquo;Reilly Media published books, Asterisk: The Future of Telephony 1st and 2nd editions (along with Jared Smith and Jim van Meggelen), Asterisk: The Definitive Guide (3rd and 4th editions) with Jim van Meggelen and Russell Bryant, and the Asterisk Cookbook with Russell Bryant.</description>
     </item>
     
   </channel>
