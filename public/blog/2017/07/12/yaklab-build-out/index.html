@@ -72,12 +72,15 @@
 <div class="content container">
   <div class="post">
     <h1 class="post-title">yakLab build out</h1>
-    <span class="post-date">Jul 12, 2017 &middot; 2 minute read &middot; <a href="http://blog.leifmadsen.com/blog/2017/07/12/yaklab-build-out/#disqus_thread">Comments</a>
+    <span class="post-date">Jul 12, 2017 &middot; 1 minute read &middot; <a href="http://blog.leifmadsen.com/blog/2017/07/12/yaklab-build-out/#disqus_thread">Comments</a>
     
     <br/>
     <a class="label" href="http://blog.leifmadsen.com/categories/nfvpe">nfvpe</a><a class="label" href="http://blog.leifmadsen.com/categories/yaklab">yakLab</a><a class="label" href="http://blog.leifmadsen.com/categories/virtualization">virtualization</a><a class="label" href="http://blog.leifmadsen.com/categories/howto">howto</a>
     </span>
-    <p>The yakLab is a place where yaks are electronically instantiated for the
+    <p><em>Edit 2017-08-09: Updated diagram 1-1 to a graphic showing the entire lab
+physical topology</em></p>
+
+<p>The yakLab is a place where yaks are electronically instantiated for the
 purpose of learning and documenting. The lab consists of a virtualization host
 (virthost) which has 64GB of memory and hosts all the virtual machines,
 primarily for infrastructure.
@@ -89,28 +92,22 @@ machines is quite low compared to modern day machines, but they consume a
 relatively small amount of electricity, and don&rsquo;t make a lot of noise (the CPU
 is fanless).</p>
 
-<p>Here is a physical overview of the lab. Note that secondary and tertiary
-network interfaces are not shown here, but might get documented in future
-episodes.</p>
+<p>Here is a physical overview of the lab.</p>
 
-<pre><code>                      +--------------------------+
-         +------------|      managed switch      |
-         |            +------+------+-----+------+
-         |                   |      |     |
-         |                   |      |     |
-         |             +-----+      |     +---------+
-    +----|---+         |            |               |
-    |        |         |            |               |
-    |        |         |            |               |
-    |virthost|         |            |               |
-    |        |     +---+-----+   +--+------+   +----+----+
-    |        |     |         |   |         |   |         |
-    |        |     | BM node |   | BM node |   | BM node |
-    |        |     |         |   |         |   |         |
-    +--------+     +---------+   +---------+   +---------+
-</code></pre>
-
-<p><em>Diagram 1-1: Physical infrastructure</em></p>
+<p>
+<figure >
+    
+        <img src="http://blog.leifmadsen.com/media/yakLab-phys-topology.png" />
+    
+    
+    <figcaption>
+        <h4>Image 1-1: yakLab Physical Topology</h4>
+        
+    </figcaption>
+    
+</figure>
+<code>
+</code></p>
 
 <h2 id="infrastructure-build-out-episodes">Infrastructure build out episodes</h2>
 
@@ -123,6 +120,7 @@ available.)</p>
 <ul>
 <li>Scene 1a: <a href="http://blog.leifmadsen.com/blog/2017/07/12/yaklab-part-1a-building-the-virtual-cobbler-deployment/">Building the virtual Cobbler deployment</a></li>
 <li>Scene 1b: <a href="http://blog.leifmadsen.com/blog/2017/07/19/yaklab-part-1b-kickstart-file-build-out/">Kickstart file build out</a></li>
+<li>Scene 1c: <a href="http://blog.leifmadsen.com/blog/2017/08/04/yaklab-part-1c-bootstrapping-bifrost-with-ansible/">Bootstrapping Bifrost with Ansible</a></li>
 <li><strong>[Not Complete]</strong> Scene 2: GlusterFS distributed volumes</li>
 <li><strong>[Not Complete]</strong> Scene 3: Kubernetes deployment with <code>kubeadm</code></li>
 <li><strong>[Not Complete]</strong> Scene 4: Kubernetes persistent volumes with GlusterFS</li>

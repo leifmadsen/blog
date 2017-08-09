@@ -76,6 +76,28 @@
     
     <div class="post">
       <h1 class="post-title">
+        <a href="http://blog.leifmadsen.com/blog/2017/08/04/yaklab-part-1c-bootstrapping-bifrost-with-ansible/">yakLab Part 1c: Bootstrapping Bifrost with Ansible</a>
+      </h1>
+      <span class="post-date">Aug 4, 2017 &middot; 13 minute read &middot; <a href="http://blog.leifmadsen.com/blog/2017/08/04/yaklab-part-1c-bootstrapping-bifrost-with-ansible/#disqus_thread">Comments</a>
+      
+      <br/>
+      <a class="label" href="http://blog.leifmadsen.com/categories/automation">automation</a><a class="label" href="http://blog.leifmadsen.com/categories/bifrost">bifrost</a><a class="label" href="http://blog.leifmadsen.com/categories/baremetal">baremetal</a><a class="label" href="http://blog.leifmadsen.com/categories/yaklab">yaklab</a><a class="label" href="http://blog.leifmadsen.com/categories/ansible">ansible</a><a class="label" href="http://blog.leifmadsen.com/categories/devops">devops</a>
+      </span>
+      
+      <p>In this scene I&rsquo;ll explore some of the bootstrapping I&rsquo;ve been working on for a
+while that will result in a clean, shiny new Bifrost deployment, populated with
+inventory, executed from your laptop to a virtual machine.</p>
+
+<p>Bifrost is an OpenStack project that utilizes OpenStack Ironic to provision
+baremetal nodes. This is related to my previous post on <a href="http://blog.leifmadsen.com/blog/2017/07/12/yaklab-part-1a-building-the-virtual-cobbler-deployment/">Building the virtual
+Cobbler deployment</a>.
+</p>
+      <a href="http://blog.leifmadsen.com/blog/2017/08/04/yaklab-part-1c-bootstrapping-bifrost-with-ansible/">Read On &rarr;</a>
+      
+    </div>
+    
+    <div class="post">
+      <h1 class="post-title">
         <a href="http://blog.leifmadsen.com/blog/2017/07/19/yaklab-part-1b-kickstart-file-build-out/">yakLab Part 1b: Kickstart File Build Out</a>
       </h1>
       <span class="post-date">Jul 19, 2017 &middot; 3 minute read &middot; <a href="http://blog.leifmadsen.com/blog/2017/07/19/yaklab-part-1b-kickstart-file-build-out/#disqus_thread">Comments</a>
@@ -116,13 +138,16 @@ nodes via kickstart files and PXE booting.
       <h1 class="post-title">
         <a href="http://blog.leifmadsen.com/blog/2017/07/12/yaklab-build-out/">yakLab build out</a>
       </h1>
-      <span class="post-date">Jul 12, 2017 &middot; 2 minute read &middot; <a href="http://blog.leifmadsen.com/blog/2017/07/12/yaklab-build-out/#disqus_thread">Comments</a>
+      <span class="post-date">Jul 12, 2017 &middot; 1 minute read &middot; <a href="http://blog.leifmadsen.com/blog/2017/07/12/yaklab-build-out/#disqus_thread">Comments</a>
       
       <br/>
       <a class="label" href="http://blog.leifmadsen.com/categories/nfvpe">nfvpe</a><a class="label" href="http://blog.leifmadsen.com/categories/yaklab">yakLab</a><a class="label" href="http://blog.leifmadsen.com/categories/virtualization">virtualization</a><a class="label" href="http://blog.leifmadsen.com/categories/howto">howto</a>
       </span>
       
-      <p>The yakLab is a place where yaks are electronically instantiated for the
+      <p><em>Edit 2017-08-09: Updated diagram 1-1 to a graphic showing the entire lab
+physical topology</em></p>
+
+<p>The yakLab is a place where yaks are electronically instantiated for the
 purpose of learning and documenting. The lab consists of a virtualization host
 (virthost) which has 64GB of memory and hosts all the virtual machines,
 primarily for infrastructure.
@@ -247,33 +272,6 @@ sits there running happily). Here are some basic steps I did to get this going
 locally.
 </p>
       <a href="http://blog.leifmadsen.com/blog/2016/12/01/create-network-bridge-with-nmcli-for-libvirt/">Read On &rarr;</a>
-      
-    </div>
-    
-    <div class="post">
-      <h1 class="post-title">
-        <a href="http://blog.leifmadsen.com/blog/2016/11/11/tripleo-using-the-fake_pxe-driver-with-ironic/">TripleO: Using the fake_pxe driver with Ironic</a>
-      </h1>
-      <span class="post-date">Nov 11, 2016 &middot; 7 minute read &middot; <a href="http://blog.leifmadsen.com/blog/2016/11/11/tripleo-using-the-fake_pxe-driver-with-ironic/#disqus_thread">Comments</a>
-      
-      <br/>
-      <a class="label" href="http://blog.leifmadsen.com/categories/tripleo">TripleO</a><a class="label" href="http://blog.leifmadsen.com/categories/nfvpe">nfvpe</a>
-      </span>
-      
-      <p>I&rsquo;ve been working on testing things with TripleO and normally I use <a href="https://github.com/openstack/tripleo-quickstart/">TripleO
-Quickstart</a> to spin things up
-in a virtual environment.</p>
-
-<p>Often when doing NFV work though, you need things that can&rsquo;t be used in a
-virtual environment (such as DPDK, SR-IOV, etc) so you need some baremetal
-nodes.</p>
-
-<p>In my home lab environment though, I don&rsquo;t have the luxury of IPMI, so I need
-to make use of the <code>fake_pxe</code> driver in Ironic, which allows for standard PXE
-control, but requires you to deal with powering on and off the machines
-manually. Let me show you how I make use of that.
-</p>
-      <a href="http://blog.leifmadsen.com/blog/2016/11/11/tripleo-using-the-fake_pxe-driver-with-ironic/">Read On &rarr;</a>
       
     </div>
     

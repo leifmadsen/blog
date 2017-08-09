@@ -9,6 +9,22 @@
     <atom:link href="/categories/ansible/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>yakLab Part 1c: Bootstrapping Bifrost with Ansible</title>
+      <link>http://blog.leifmadsen.com/blog/2017/08/04/yaklab-part-1c-bootstrapping-bifrost-with-ansible/</link>
+      <pubDate>Fri, 04 Aug 2017 15:02:00 -0400</pubDate>
+      
+      <guid>http://blog.leifmadsen.com/blog/2017/08/04/yaklab-part-1c-bootstrapping-bifrost-with-ansible/</guid>
+      <description>&lt;p&gt;In this scene I&amp;rsquo;ll explore some of the bootstrapping I&amp;rsquo;ve been working on for a
+while that will result in a clean, shiny new Bifrost deployment, populated with
+inventory, executed from your laptop to a virtual machine.&lt;/p&gt;
+
+&lt;p&gt;Bifrost is an OpenStack project that utilizes OpenStack Ironic to provision
+baremetal nodes. This is related to my previous post on &lt;a href=&#34;http://blog.leifmadsen.com/blog/2017/07/12/yaklab-part-1a-building-the-virtual-cobbler-deployment/&#34;&gt;Building the virtual
+Cobbler deployment&lt;/a&gt;.
+&lt;/p&gt;</description>
+    </item>
+    
+    <item>
       <title>Finding available Ansible tags in playbooks and roles</title>
       <link>http://blog.leifmadsen.com/blog/2017/01/04/finding-available-ansible-tags-in-playbooks-and-roles/</link>
       <pubDate>Wed, 04 Jan 2017 15:42:23 -0500</pubDate>

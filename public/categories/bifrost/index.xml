@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Yaklab on Asterisk, and other worldly endeavours</title>
-    <link>http://blog.leifmadsen.com/categories/yaklab/index.xml</link>
-    <description>Recent content in Yaklab on Asterisk, and other worldly endeavours</description>
+    <title>Bifrost on Asterisk, and other worldly endeavours</title>
+    <link>http://blog.leifmadsen.com/categories/bifrost/index.xml</link>
+    <description>Recent content in Bifrost on Asterisk, and other worldly endeavours</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <atom:link href="/categories/yaklab/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="/categories/bifrost/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>yakLab Part 1c: Bootstrapping Bifrost with Ansible</title>
@@ -21,22 +21,6 @@ inventory, executed from your laptop to a virtual machine.&lt;/p&gt;
 &lt;p&gt;Bifrost is an OpenStack project that utilizes OpenStack Ironic to provision
 baremetal nodes. This is related to my previous post on &lt;a href=&#34;http://blog.leifmadsen.com/blog/2017/07/12/yaklab-part-1a-building-the-virtual-cobbler-deployment/&#34;&gt;Building the virtual
 Cobbler deployment&lt;/a&gt;.
-&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>yakLab build out</title>
-      <link>http://blog.leifmadsen.com/blog/2017/07/12/yaklab-build-out/</link>
-      <pubDate>Wed, 12 Jul 2017 15:00:00 -0400</pubDate>
-      
-      <guid>http://blog.leifmadsen.com/blog/2017/07/12/yaklab-build-out/</guid>
-      <description>&lt;p&gt;&lt;em&gt;Edit 2017-08-09: Updated diagram 1-1 to a graphic showing the entire lab
-physical topology&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;The yakLab is a place where yaks are electronically instantiated for the
-purpose of learning and documenting. The lab consists of a virtualization host
-(virthost) which has 64GB of memory and hosts all the virtual machines,
-primarily for infrastructure.
 &lt;/p&gt;</description>
     </item>
     
