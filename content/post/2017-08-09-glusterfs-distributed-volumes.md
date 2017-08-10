@@ -4,6 +4,7 @@ keywords = ["volumes","distributed","persistant storage","storage","ansible","de
 description = ""
 title = "yakLab Part 2: GlusterFS distributed volumes"
 date = "2017-08-09T19:18:17-04:00"
+draft = True
 
 +++
 
