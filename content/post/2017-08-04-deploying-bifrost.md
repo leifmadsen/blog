@@ -72,8 +72,8 @@ Yes, that's right folks, we're going to run Ansible with Ansible! (It's not
 Ansible running Chef or Puppet though... so... cool?)
 
 All the work is going into the repo at
-https://github.com/dougbtv/droctogon-bifrost and my development branches are
-currently located at https://github.com/leifmadsen/droctogon-bifrost
+https://github.com/dougbtv/droctagon-bifrost and my development branches are
+currently located at https://github.com/leifmadsen/droctagon-bifrost
 
 ## The Topology
 
@@ -284,15 +284,15 @@ cool bootstrap things you think all machines should have, feel free to open a
 pull request. Of course, the bootstrapping is biased towards my preferred
 machine deployment, and your bootstrapping needs may differ.
 
-## Clone The Dr. Octogon Bifrost Repository
+## Clone The Dr. Octagon Bifrost Repository
 
-On your control machine, clone the Dr. Octogon Bifrost repository, which
+On your control machine, clone the Dr. Octagon Bifrost repository, which
 contains the Ansible playbooks we'll run in a few minutes.
 
 ```
 cd ~/src/github/dougbtv/
-git clone https://github.com/dougbtv/droctogon-bifrost
-cd droctogon-bifrost
+git clone https://github.com/dougbtv/droctagon-bifrost
+cd droctagon-bifrost
 ```
 
 ## Building Our Inventory
@@ -411,7 +411,7 @@ service the baremetal nodes over your bridged interface.
 
 Moment of truth, time to run the Bifrost deployment.
 
-From your `droctogon-bifrost` directory, run the following command.
+From your `droctagon-bifrost` directory, run the following command.
 
 ```
 ansible-playbook -i inventory/staging/ site.yml
