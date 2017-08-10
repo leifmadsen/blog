@@ -60,9 +60,9 @@ Bifrost install any other dependencies it needs after the fact.
 
 ## A More Automated Bootstrap
 
-Both @dougbtv and I have been working on some bootstrapping Ansible playbooks
-that will also bring in your inventory, and generally make it a little easier
-to import a set of hardware initially.
+Both [@dougbtv](https://twitter.com/dougbtv) and I have been working on some
+bootstrapping Ansible playbooks that will also bring in your inventory, and
+generally make it a little easier to import a set of hardware initially.
 
 Most of the work is just basically what you need to do after you run the
 quickstart, but then if you destroy your Bifrost install, you have to do all
