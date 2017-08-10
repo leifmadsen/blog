@@ -146,8 +146,8 @@ that data entry again. So we automated your automation.</p>
 Ansible running Chef or Puppet though&hellip; so&hellip; cool?)</p>
 
 <p>All the work is going into the repo at
-<a href="https://github.com/dougbtv/droctogon-bifrost">https://github.com/dougbtv/droctogon-bifrost</a> and my development branches are
-currently located at <a href="https://github.com/leifmadsen/droctogon-bifrost">https://github.com/leifmadsen/droctogon-bifrost</a></p>
+<a href="https://github.com/dougbtv/droctagon-bifrost">https://github.com/dougbtv/droctagon-bifrost</a> and my development branches are
+currently located at <a href="https://github.com/leifmadsen/droctagon-bifrost">https://github.com/leifmadsen/droctagon-bifrost</a></p>
 
 <h2 id="the-topology">The Topology</h2>
 
@@ -383,14 +383,14 @@ cool bootstrap things you think all machines should have, feel free to open a
 pull request. Of course, the bootstrapping is biased towards my preferred
 machine deployment, and your bootstrapping needs may differ.</p>
 
-<h2 id="clone-the-dr-octogon-bifrost-repository">Clone The Dr. Octogon Bifrost Repository</h2>
+<h2 id="clone-the-dr-octagon-bifrost-repository">Clone The Dr. Octagon Bifrost Repository</h2>
 
-<p>On your control machine, clone the Dr. Octogon Bifrost repository, which
+<p>On your control machine, clone the Dr. Octagon Bifrost repository, which
 contains the Ansible playbooks we&rsquo;ll run in a few minutes.</p>
 
 <pre><code>cd ~/src/github/dougbtv/
-git clone https://github.com/dougbtv/droctogon-bifrost
-cd droctogon-bifrost
+git clone https://github.com/dougbtv/droctagon-bifrost
+cd droctagon-bifrost
 </code></pre>
 
 <h2 id="building-our-inventory">Building Our Inventory</h2>
@@ -510,7 +510,7 @@ service the baremetal nodes over your bridged interface.</p>
 
 <p>Moment of truth, time to run the Bifrost deployment.</p>
 
-<p>From your <code>droctogon-bifrost</code> directory, run the following command.</p>
+<p>From your <code>droctagon-bifrost</code> directory, run the following command.</p>
 
 <pre><code>ansible-playbook -i inventory/staging/ site.yml
 </code></pre>
