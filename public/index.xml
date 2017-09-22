@@ -6,8 +6,23 @@
     <description>Recent content in Asterisk, and other worldly endeavours on Asterisk, and other worldly endeavours</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 04 Aug 2017 15:02:00 -0400</lastBuildDate>
+    <lastBuildDate>Tue, 19 Sep 2017 13:28:56 -0400</lastBuildDate>
     <atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Persistent volumes with GlusterFS</title>
+      <link>http://blog.leifmadsen.com/blog/2017/09/19/persistent-volumes-with-glusterfs/</link>
+      <pubDate>Tue, 19 Sep 2017 13:28:56 -0400</pubDate>
+      
+      <guid>http://blog.leifmadsen.com/blog/2017/09/19/persistent-volumes-with-glusterfs/</guid>
+      <description>&lt;p&gt;It&amp;rsquo;s been a while since I had the original vision of how storage might work
+with Kubernetes. I had seen a project called Heketi that helped to make
+GlusterFS live inside the Kubernetes infrastructure itself. I wasn&amp;rsquo;t entirely
+convinced on this approach because I wasn&amp;rsquo;t necessarily comfortable with
+Kubernetes managing its own storage infrastructure. This is the story about how
+wrong I was.
+&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>yakLab Part 1c: Bootstrapping Bifrost with Ansible</title>
@@ -214,16 +229,6 @@ rules, we avoid getting bogged down in complete system rearchitectures in the
 future. The means to a scaled end is to approach the first customer as all your
 customers.
 &lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>Asterisk Docker Container: Phase 1</title>
-      <link>http://blog.leifmadsen.com/blog/2015/11/10/asterisk-docker-container-phase-1/</link>
-      <pubDate>Tue, 10 Nov 2015 19:41:55 -0500</pubDate>
-      
-      <guid>http://blog.leifmadsen.com/blog/2015/11/10/asterisk-docker-container-phase-1/</guid>
-      <description>AstriCon At AstriCon 2015 this year, there was a lot (and I mean a lot) of discussion around microservices (Docker), and what effort is required over the next year by the development community in order to make Asterisk better suited to running in that environment.
-One of the first things is, clearly, to have a container image that Asterisk runs in. I&amp;rsquo;ve done this a few times now, but having something that can be passed over to the official Asterisk Git repository, and which everyone can contribute to, utilize and play with would be the goal here.</description>
     </item>
     
   </channel>

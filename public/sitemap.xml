@@ -2,6 +2,11 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://blog.leifmadsen.com/blog/2017/09/19/persistent-volumes-with-glusterfs/</loc>
+    <lastmod>2017-09-19T13:28:56-04:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://blog.leifmadsen.com/blog/2017/08/04/yaklab-part-1c-bootstrapping-bifrost-with-ansible/</loc>
     <lastmod>2017-08-04T15:02:00-04:00</lastmod>
   </url>
@@ -702,7 +707,7 @@
   
   <url>
     <loc>http://blog.leifmadsen.com/</loc>
-    <lastmod>2017-08-04T15:02:00-04:00</lastmod>
+    <lastmod>2017-09-19T13:28:56-04:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -1282,6 +1287,12 @@
   </url>
   
   <url>
+    <loc>http://blog.leifmadsen.com/categories/glusterfs/</loc>
+    <lastmod>2017-09-19T13:28:56-04:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>http://blog.leifmadsen.com/tags/gmail/</loc>
     <lastmod>2011-11-22T22:17:18+00:00</lastmod>
     <priority>0</priority>
@@ -1534,6 +1545,12 @@
   </url>
   
   <url>
+    <loc>http://blog.leifmadsen.com/categories/kubernetes/</loc>
+    <lastmod>2017-09-19T13:28:56-04:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>http://blog.leifmadsen.com/tags/kvm/</loc>
     <lastmod>2011-02-09T01:18:22+00:00</lastmod>
     <priority>0</priority>
@@ -1715,7 +1732,7 @@
   
   <url>
     <loc>http://blog.leifmadsen.com/categories/nfvpe/</loc>
-    <lastmod>2017-07-19T13:54:42-04:00</lastmod>
+    <lastmod>2017-09-19T13:28:56-04:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -1810,6 +1827,12 @@
   </url>
   
   <url>
+    <loc>http://blog.leifmadsen.com/categories/persistentvolumes/</loc>
+    <lastmod>2017-09-19T13:28:56-04:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>http://blog.leifmadsen.com/tags/pfifo/</loc>
     <lastmod>2011-11-02T16:08:40+00:00</lastmod>
     <priority>0</priority>
@@ -1853,7 +1876,7 @@
   
   <url>
     <loc>http://blog.leifmadsen.com/post/</loc>
-    <lastmod>2017-08-04T15:02:00-04:00</lastmod>
+    <lastmod>2017-09-19T13:28:56-04:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -2238,6 +2261,12 @@
   <url>
     <loc>http://blog.leifmadsen.com/tags/ssl/</loc>
     <lastmod>2010-09-20T15:37:44+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.leifmadsen.com/categories/storage/</loc>
+    <lastmod>2017-09-19T13:28:56-04:00</lastmod>
     <priority>0</priority>
   </url>
   

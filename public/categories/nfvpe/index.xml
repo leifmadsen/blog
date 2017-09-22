@@ -9,6 +9,21 @@
     <atom:link href="/categories/nfvpe/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>Persistent volumes with GlusterFS</title>
+      <link>http://blog.leifmadsen.com/blog/2017/09/19/persistent-volumes-with-glusterfs/</link>
+      <pubDate>Tue, 19 Sep 2017 13:28:56 -0400</pubDate>
+      
+      <guid>http://blog.leifmadsen.com/blog/2017/09/19/persistent-volumes-with-glusterfs/</guid>
+      <description>&lt;p&gt;It&amp;rsquo;s been a while since I had the original vision of how storage might work
+with Kubernetes. I had seen a project called Heketi that helped to make
+GlusterFS live inside the Kubernetes infrastructure itself. I wasn&amp;rsquo;t entirely
+convinced on this approach because I wasn&amp;rsquo;t necessarily comfortable with
+Kubernetes managing its own storage infrastructure. This is the story about how
+wrong I was.
+&lt;/p&gt;</description>
+    </item>
+    
+    <item>
       <title>yakLab Part 1b: Kickstart File Build Out</title>
       <link>http://blog.leifmadsen.com/blog/2017/07/19/yaklab-part-1b-kickstart-file-build-out/</link>
       <pubDate>Wed, 19 Jul 2017 13:54:42 -0400</pubDate>
