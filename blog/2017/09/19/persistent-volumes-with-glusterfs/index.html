@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
+<head>
+  <link href="http://gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+  <title>Persistent volumes with GlusterFS &middot; Leif Madsen</title>
+
+  
+  <link rel="stylesheet" href="http://blog.leifmadsen.com/css/poole.css">
+  <link rel="stylesheet" href="http://blog.leifmadsen.com/css/hyde.css">
+  <link rel="stylesheet" href="http://blog.leifmadsen.com/css/poole-overrides.css">
+  <link rel="stylesheet" href="http://blog.leifmadsen.com/css/hyde-overrides.css">
+  <link rel="stylesheet" href="http://blog.leifmadsen.com/css/hyde-x.css">
+  <link rel="stylesheet" href="http://blog.leifmadsen.com/css/highlight/monokai.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700|Abril+Fatface">
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  
+
+  
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="http://blog.leifmadsen.com/touch-icon-144-precomposed.png">
+  <link href="http://blog.leifmadsen.com/favicon.png" rel="icon">
+
+  
+  
+  
+  
+
+  <meta name="description" content="Leif Madsen Blog Entry">
+  <meta name="keywords" content="blog,asterisk,leif,madsen,canada">
+  
+</head>
+<body>
+<div class="sidebar">
+  <div class="container sidebar-sticky">
+    <div class="sidebar-about">
+      
+      <h1>Leif Madsen</h1>
+      <p class="lead">Asterisk, and other worldly endeavours</p>
+    </div>
+
+    <ul class="sidebar-nav">
+      <li class="sidebar-nav-item"><a href="http://blog.leifmadsen.com/">Blog</a></li>
+      
+    </ul>
+
+    <ul class="sidebar-nav">
+      <li class="sidebar-nav-item">
+      <a href="http://github.com/leifmadsen"><i class="fa fa-github-square fa-3x"></i></a>
+      
+      
+      <a href="http://linkedin.com/in/leifmadsen"><i class="fa fa-linkedin-square fa-3x"></i></a>
+      
+      
+      <a href="http://twitter.com/leifmadsen"><i class="fa fa-twitter-square fa-3x"></i></a>
+      
+      <a href="http://blog.leifmadsen.com/index.xml" type="application/rss+xml"><i class="fa fa-rss-square fa-3x"></i></a>
+      </li>
+    </ul>
+
+    
+
+    <p>Copyright &copy; 2017 <a href="http://blog.leifmadsen.com/license/">License</a><br/>
+       Powered by <a href="http://gohugo.io">Hugo</a> and <a href="https://github.com/zyro/hyde-x">Hyde-X</a></p>
+  </div>
+</div>
+
+
+<div class="content container">
+  <div class="post">
+    <h1 class="post-title">Persistent volumes with GlusterFS</h1>
+    <span class="post-date">Sep 19, 2017 &middot; 18 minute read &middot; <a href="http://blog.leifmadsen.com/blog/2017/09/19/persistent-volumes-with-glusterfs/#disqus_thread">Comments</a>
+    
+    <br/>
+    <a class="label" href="http://blog.leifmadsen.com/categories/glusterfs">glusterFS</a><a class="label" href="http://blog.leifmadsen.com/categories/nfvpe">nfvpe</a><a class="label" href="http://blog.leifmadsen.com/categories/storage">storage</a><a class="label" href="http://blog.leifmadsen.com/categories/kubernetes">kubernetes</a><a class="label" href="http://blog.leifmadsen.com/categories/persistentvolumes">persistentvolumes</a>
+    </span>
+    <p>It&rsquo;s been a while since I had the original vision of how storage might work
+with Kubernetes. I had seen a project called Heketi that helped to make
+GlusterFS live inside the Kubernetes infrastructure itself. I wasn&rsquo;t entirely
+convinced on this approach because I wasn&rsquo;t necessarily comfortable with
+Kubernetes managing its own storage infrastructure. This is the story about how
+wrong I was.
+</p>
+
+<blockquote>
+<p><strong>NOTE</strong>
+It should be noted that my experience so far is around the use of Heketi to
+manage a GlusterFS dynamic persistent storage system for Kubernetes. While
+writing this blog post, I learned a lot of things, and thus some of the
+information here is slightly fluid. I&rsquo;ll likely circle back and write another
+blog post with more information about how storage works, since it&rsquo;s likely
+there are some concepts here that are not pedantically correct.</p>
+</blockquote>
+
+<h1 id="where-i-thought-i-should-drive-towards">Where I thought I should drive towards</h1>
+
+<p>When I started first looking into storage with Kubernetes, I noticed the Heketi
+project, but I didn&rsquo;t have enough background with storage in Kubernetes to
+really understand why it was a thing. I thought deploying GlusterFS under
+Kubernetes made more sense. The following text and diagrams are part of my
+journey to understanding storage in Kubernetes.</p>
+
+<p>Not all of these concepts apply equally across all of the various dynamic
+persistent storage mechanisms, but the use of Heketi and GlusterFS is an
+interesting one, and what I&rsquo;ll be focusing on here.</p>
+
+<h2 id="crossing-the-chasm-from-monolithic-to-microservices">Crossing the chasm from monolithic to microservices</h2>
+
+<p>First some background on my thinking in this area as a storage luddite, and my
+general assumptions when I approach a problem in a containerized environment.</p>
+
+<p>There are a few things that I find tend to confuse people around
+containerization and virtual machines, and why containers aren&rsquo;t just a &ldquo;light
+virtual machine&rdquo;. You really need to get your head wrapped around what a
+microservices architecture looks like, and the ramifications to approaching
+your infrastructure deployment in this way.</p>
+
+<p>The separation of application and application life cycle management from the
+storage and data generated by those applications gets pretty confusing. In a
+virtual machine environment, you have a single blob (or namespace) that
+contains both your application and the storage associated with it. When you
+instantiate a virtual machine, you typically have a virtual hard drive (or more
+than one) directly linked with the virtual machine. In your mind&rsquo;s eye, you
+have the same vision as if you were deploying a physical baremetal machine.
+There is a CPU, some memory, and a storage unit that you put your operating
+system, your applications (plural), and all the data that the application
+generates.</p>
+
+<p>In a deployment like that, you likely have some tools that you&rsquo;ve employed that
+would perform periodic backups to a central storage location, and you could
+recover your data and applications from that.</p>
+
+<p>Going further, as you move into a cloud environment, you might start to
+separate your storage and your operating system. You might create LUNs in a
+network and use networking storage to centralize your data, or you might create
+data volumes in your cloud environment, and store data from there. These tend
+to represent additional storage disks (hard drives) in your environment. These
+are likely mounted somewhere like <code>/var/</code>, or <code>/mnt</code>, etc. They are smaller
+units, but tend to contain data across multiple applications (for example,
+<code>/var/</code> might contain the data generated by a database, along with logging, and
+your web application).</p>
+
+<p>But what happens when you start working with microservices?</p>
+
+<p>When you start working with microservices, the big emphasis is on the
+volatility of the container. You can instantiate a container and access a small
+component. You start breaking things into single components, like in a web
+application where you separate your Apache (or Nginx) application from the
+database (MariaDB, PostgreSQL). Then it&rsquo;s about interconnecting these disparate
+blocks together in order to recoagulate your application into the same function
+you had in the virtual environment.</p>
+
+<p>You start playing around with this and one of the first things to pop up is,
+&ldquo;so where does my data go if the database can just &lsquo;go away&rsquo; whenever it
+wants?&ldquo;. That&rsquo;s where we&rsquo;ll start discussing the separation of data through the
+use of volume mounts. These volumes can be created and then mounted inside an
+application container so that what gets written by the database is stored in
+another container (or volume) from the application container. By doing this,
+your application can be deprovisioned and then reinstantiated, and then would
+mount the existing storage volume, and all the data would be available again.</p>
+
+<h2 id="understanding-storage-in-a-container-world">Understanding storage in a container world</h2>
+
+<p>When I first started learning about containers (and I still have a <em>lot</em> to
+learn), the examples would typically show a host mount. That&rsquo;s because the
+container platform (Docker in this case) was running either on a laptop, a
+virtual machine, or a remote server in a rack. Trying to get someone up and
+running and teaching them about containers is already a bit of an endeavour,
+and having them configure a fancy storage backend, driver, and all the things
+that goes along with that tends to be pretty heavy handed for an introduction
+to containers.</p>
+
+<p>So what happens is we use what we have. We create a directory on the host, and
+mount that location inside one or more containers. It helps to get the concept
+across that your data is separate from the container, but it still keeps things
+a little bound to physical devices. When starting out, we typically just have
+the one machine that we&rsquo;re learning on (most people don&rsquo;t start out with a
+bunch of distributed nodes and all the other things you need to consider in
+this type of environment).</p>
+
+<p>Where does this get us? Something logically like this:</p>
+
+
+<figure >
+    <a href="https://i.imgur.com/EFT1v3n.png">
+        <img src="http://blog.leifmadsen.com/media/storage_bindmount.png" />
+    </a>
+    
+    <figcaption>
+        <h4>Image 1-1: Storage bind mount</h4>
+        
+    </figcaption>
+    
+</figure>
+
+
+<p>Maybe going further, we might use a loopback device to store the data. Again,
+this is a way to start understanding the separation of data and workloads, but
+doesn&rsquo;t truly get your head wrapped around the complexities of storage in a
+distributed environment. Until you start doing distributed workloads, it&rsquo;s
+difficult to understand the implications.</p>
+
+<p>Enter Kubernetes.</p>
+
+<h1 id="what-i-learned-about-kubernetes-storage">What I learned about Kubernetes storage</h1>
+
+<p>So let&rsquo;s get back to where I went wrong in my thinking. When you start
+distributing workloads across multiple systems and having another application
+orchestrating it for you, it turns out, things get a little more complicated.</p>
+
+<h2 id="persistent-volumes">Persistent Volumes</h2>
+
+<p>In Kubnernetes, a lot more things are automated. Through this automation
+though, things are much less manual when you instantiate something, so you need
+to change your thinking around a little bit again. When you ask Kubernetes to
+start a pod that runs your application, it uses metadata to determine where to
+schedule that pod. That&rsquo;s a pretty straight forward concept, but the scheduling
+of pods &ldquo;somewhere&rdquo; in the cluster makes things like storage a bit trickier.</p>
+
+<p>For example, since not all nodes are not necessarily homogenous, that means
+when we specify the storage information for our pod that we can&rsquo;t assume that
+our host binding will contain the data we need, or even exist.</p>
+
+<p>To handle this situation, Kubnernetes employs something called a <a href="https://kubernetes.io/docs/concepts/storage/persistent-volumes/">persistent
+volume</a>. A
+persistent volume is a logical block of storage space that a pod can use. When
+a pod is instantiated, it can use this persistent volume through the use of a
+<a href="https://kubernetes.io/docs/concepts/storage/persistent-volumes/#persistentvolumeclaims">persistent volume
+claim</a>,
+which allows the pod to claim that logical block of storage for its own
+purposes.</p>
+
+<p>During the persistent volume claim, some metadata is specified, such as the
+size required. If a persistent volume is available that matches the metadata
+specified, then one of the matching persistent volumes is assigned to the pod.</p>
+
+<p>These persistent volumes can still be host bound, but you can also use
+different backing stores. The one we&rsquo;re going to focus on here is GlusterFS,
+and that&rsquo;s where I wanted to explain where my original thinking went wrong.</p>
+
+<h2 id="glusterfs-as-an-underlay">GlusterFS as an underlay</h2>
+
+<p>When I first started approaching this problem, I didn&rsquo;t really understand
+persistent volumes in Kubernetes. I had mostly been approaching it from a
+Docker volume viewpoint, with GlusterFS being distributed across several nodes.
+I thought I had a sound plan; use GlusterFS as a distributed storage platform,
+and just mount whatever the hell I want into my pods, and the data would
+magically replicate across the nodes, and all would make sense in the world.</p>
+
+<p>Well, my naive viewpoint was certainly flawed in a few ways.</p>
+
+<p>First, I didn&rsquo;t understand persistent volumes and storage in Kubernetes. Sure,
+the idea seemed to make sense, except I didn&rsquo;t realize that you need to manage
+the persistent volumes. Kubernetes doesn&rsquo;t just perform magic and handle all of
+that for you. It&rsquo;s expected that you, as an operator of your platform, will
+pre-create the persistent volumes (whatever those random sizes might be), and
+then the pods could claim them.</p>
+
+<p>Not so bad if you&rsquo;re the only person of the platform, or your applications
+always want the same size of storage, or you don&rsquo;t have a lot of pods going up
+and down too often, but as soon as you want to start and scale this thing up,
+you&rsquo;re going to run into a real problem with resource management.</p>
+
+<blockquote>
+<p>Most of what I had learned up to <em>this</em> point was from @dougbtv and his
+awesome blog posts. He originally scratched the itch of persistent volumes,
+and I learned from his thoughts, which is what lead me down this original
+road of a GlusterFS underlay. More information about where we started can be
+found here:</p>
+
+<p><a href="http://dougbtv.com//nfvpe/2017/04/05/glusterfs-persistent/">http://dougbtv.com//nfvpe/2017/04/05/glusterfs-persistent/</a></p>
+</blockquote>
+
+<p>You can see it all working, and it seems to make a lot of sense, but now that
+you know what I know, you see the flaw in this logic. Doug was creating the
+persistent volumes ahead of time. We were originally consuming at least one of
+them right away, and that was all well in good to prove that we could
+distribute our data, but it&rsquo;s clearly not ready for prime time. We&rsquo;ve learned a
+lot, but now we know that approach doesn&rsquo;t scale. (&ldquo;&hellip;that approach doesn&rsquo;t
+scale.&rdquo; &ndash; drink!).</p>
+
+<p>It&rsquo;s probably a good idea to take a quick look at where we&rsquo;re at in this
+storage management journey. Also, our last picture was way up there and I need
+a picture break.</p>
+
+
+<figure >
+    <a href="https://i.imgur.com/KQDxNHE.png">
+        <img src="http://blog.leifmadsen.com/media/storage_gluster_managed.png" />
+    </a>
+    
+    <figcaption>
+        <h4>Image 1-2: Wow. That&#39;s a lot of self-managed infrastructure for an orchestration system.</h4>
+        
+    </figcaption>
+    
+</figure>
+
+
+<h2 id="why-i-was-wrong-about-kubernetes-managed-storage">Why I was wrong about Kubernetes managed storage</h2>
+
+<p>I originally thought that having Kubernetes manage its own storage
+infrastructure was incorrect. The reason I had come to this conclusion, was,
+what if Kubernetes went away and some other third-party infrastructure needed
+to access the storage cluster. Sure, you can still do that, but there is a
+better way.</p>
+
+<p>The better way is dynamic persistent volume creation. And you only get that if
+Kubernetes manages the persistent volume creation.</p>
+
+<h2 id="dynamically-created-persistent-volumes">Dynamically created persistent volumes</h2>
+
+<p>So between the period of time where <a href="https://twitter.com/dougbtv">@dougbtv</a>
+figured out the original, static deployment of GlusterFS to back persistent
+storage, he also figured out the dynamic methods I&rsquo;m going to describe below.
+He documents this in another excellent blog post at
+<a href="http://dougbtv.com//nfvpe/2017/08/10/gluster-kubernetes/">http://dougbtv.com//nfvpe/2017/08/10/gluster-kubernetes/</a></p>
+
+<p>What I&rsquo;m going to step through is a deep dive of the deployment of dynamic
+persistent volumes, trying to visualize what is happening. For me, if I can&rsquo;t
+envision the building blocks and how they interact, then I don&rsquo;t really
+understand it.</p>
+
+<p>Let&rsquo;s figure out how this dynamic storage system works.</p>
+
+<h1 id="fronting-glusterfs-with-an-api-using-heketi">Fronting GlusterFS with an API using Heketi</h1>
+
+<p>In order to start making some of this operator managed infrastructure dynamic
+and managed from Kubernetes itself, we leverage
+<a href="https://github.com/heketi/heketi">Heketi</a>, a RESTful based volume management
+framework for GlusterFS.</p>
+
+<p>What this gives us, is a controller that Kubernetes can call, requesting a new
+persistent volume (PV), and Heketi can then do all the backend work to create
+the logical volume (LV) on our storage device, add it as a
+<a href="http://docs.gluster.org/en/latest/glossary/">brick</a> to GlusterFS, create the
+volume in GlusterFS, and then expose the new GlusterFS volume as a persistent
+volume.</p>
+
+<p>The creation of these persistent volumes is no longer done ahead of time.
+Instead, when a user of the system instantiates a pod, and that pod executes a
+persistent volume claim, Kubernetes communicates with Heketi to dynamically
+create the persistent volume to satisfy the persistent volume claim request.</p>
+
+<h2 id="where-are-we-going">Where are we going?</h2>
+
+<p>Before I start explaining what is going on, let&rsquo;s take a look at where we&rsquo;re
+going. This diagram is fairly large, but we&rsquo;ll step through it from the bottom
+to the top so that we understand how storage is replicated across the nodes.</p>
+
+
+<figure >
+    <a href="https://i.imgur.com/2vYnSJJ.png">
+        <img src="http://blog.leifmadsen.com/media/glusterfs_heketi_k8s_topology.png" />
+    </a>
+    
+    <figcaption>
+        <h4>Image 1-3: Heketi fronted GlusterFS distributed storage</h4>
+        
+    </figcaption>
+    
+</figure>
+
+
+<h3 id="bare-disk">Bare disk</h3>
+
+<p>At the bottom of your storage pyramid is the most basic foundation; the
+physical disk. This is the device that your operating system reads, and is the
+direct access to the storage medium (spinning disk, SSD, etc).</p>
+
+<p>Because we&rsquo;re going to let Heketi manage the creation of the logical volumes,
+the disk just needs to be bare (no partitions, not mounted, etc). During the
+installation phase, we&rsquo;ll mount the disk into the GlusterFS pod, and then
+execute the commands to build out the logical volume management (LVM) from the
+pod (rather than the operating system ahead of time).</p>
+
+<h3 id="lvm">LVM</h3>
+
+<p>LVM (<a href="https://goo.gl/GcN7KP">Logical Volume Management</a> allows for the creation
+of logical volumes (partitions) inside a volume group, made up of one or more
+physical devices. The use of LVM allows for expanding the size of the volume
+group by adding more physical disks to the volume group, there by extending the
+maximum size of the volume group (and number/size of logical volumes).</p>
+
+<p>Because you can easily create logical volumes of whatever size you need
+(permitting available space in the volume group), this is a great backing store
+for the use of bricks in GlusterFS.</p>
+
+<h3 id="glusterfs">GlusterFS</h3>
+
+<p>GlusterFS is a distributed, networked, block storage system. We leverage the
+distributed nature of GlusterFS and ability to mount and expose different
+volumes to our Kubernetes system, while maintaining a replicated (or
+distributed) system for high availability.</p>
+
+<h3 id="heketi-interface">Heketi interface</h3>
+
+<p>Heketi provides a RESTful interface and middleware that allows you to create
+logical volumes on the LVM system, expose that as a brick to GlusterFS, and
+then configure a GlusterFS volume with those bricks. It then responds back to
+Kubernetes, resulting in a dynamically created persistent volume to satisfy the
+persistent volume claim request.</p>
+
+<p>The big advantage that the Heketi method provides, is that it&rsquo;ll manage your
+GlusterFS infrastructure for you, by creating the logical volume, the bricks,
+and creating volumes from bricks.</p>
+
+<p>If you planned to manage the GlusterFS infrastructure yourself, you could also
+make use of the <a href="https://github.com/kubernetes-incubator/external-storage/tree/master/gluster/glusterfs">simple GlusterFS external
+provisioner</a>.</p>
+
+<h1 id="putting-it-all-together">Putting it all together</h1>
+
+<p>If you&rsquo;ve stayed with me this far, then thanks for following along. I think
+we&rsquo;re nearing the end of the launch of our journey. The more I learn about
+storage systems for containers, the more there is to write, but I&rsquo;d like to try
+and wrap this up. Future blog posts will hopefully delve into different
+aspects.</p>
+
+<h2 id="how-does-it-work">How does it work?</h2>
+
+<p>In Kubernetes 1.6 release, the dynamic persistent storage mechanism was
+promoted to stable (after being implemented in Kubernetes 1.4). An interesting
+blog post about this is on the <a href="http://blog.kubernetes.io/2017/03/dynamic-provisioning-and-storage-classes-kubernetes.html">Kubernetes
+blog</a>.</p>
+
+<p>With a
+<a href="https://kubernetes.io/docs/concepts/storage/persistent-volumes/#storageclasses">StorageClass</a>,
+you can specify a
+<a href="https://kubernetes.io/docs/concepts/storage/persistent-volumes/#provisioner">provisioner</a>,
+which implements the type of storage backend you want to use for that class.
+When someone requests a persistent volume via a claim (PVC), they can also
+specify the StorageClass they want to use for the persistent volume. (Any
+StorageClass can be made the default class as well for storage, making the user
+of the service even less aware of the backing storage methods.)</p>
+
+<p>With the <a href="https://kubernetes.io/docs/concepts/storage/persistent-volumes/#glusterfs">GlusterFS
+provisioner</a>
+you can pass extra parameters (almost all provisioners support their own sets
+of parameters), such as the REST URL that Kubernetes should use for
+provisioning Gluster volumes on demand. In our case, the REST interface is
+implemented through Heketi. If Heketi is fronted by a service (see below) then
+we could specify the DNS hostname of the Heketi service to promote
+auto-discovery in the cluster.</p>
+
+<h3 id="deploying-heketi-and-glusterfs">Deploying Heketi and GlusterFS</h3>
+
+<p>Deploying Heketi is fairly straight forward thanks to a bunch of work from
+@dougbtv (<a href="http://dougbtv.com//nfvpe/2017/08/10/gluster-kubernetes/">hyperconverged GlusterFS
+setup</a>) and Sergey
+Nuzhdin (<a href="http://blog.lwolf.org/post/how-i-deployed-glusterfs-cluster-to-kubernetes/">two days of
+pain</a>).</p>
+
+<p>I then started stepping through the deployment, looking through Kubernetes
+documentation (I&rsquo;ve learned a ton about the various Kubernetes interfaces and
+how they all go together by working through this blog post for storage), and
+eventually developed this image showing a Heketi+GlusterFS deployment.</p>
+
+
+<figure >
+    <a href="https://i.imgur.com/QDv6eeh.png">
+        <img src="http://blog.leifmadsen.com/media/storage_heketi_deployment.png" />
+    </a>
+    
+    <figcaption>
+        <h4>Image 1-4: Heketi and GlusterFS deployment</h4>
+        
+    </figcaption>
+    
+</figure>
+
+
+<h3 id="namespaces">Namespaces</h3>
+
+<p>All of the services and pods for the storage backend run in their own
+<a href="https://kubernetes.io/docs/concepts/overview/working-with-objects/namespaces/">namespace</a>,
+namely the <code>gluster</code> namespace. You can see that represented in the image
+above.</p>
+
+<h3 id="deployments-and-replicasets">Deployments and ReplicaSets</h3>
+
+<p>Heketi is instantiated via a
+<a href="https://kubernetes.io/docs/concepts/workloads/controllers/deployment/">deployment</a>
+which is used to describe a desired state, and then the state is created via
+the Deployment controller, using a <a href="https://kubernetes.io/docs/concepts/workloads/controllers/replicaset/">ReplicaSet</a>
+which then instantiates the pods.</p>
+
+<h3 id="daemonsets">DaemonSets</h3>
+
+<p>A <a href="https://kubernetes.io/docs/concepts/workloads/controllers/daemonset/">DaemonSet</a>
+is used to ensure that the nodes in our cluster are all (generally) running a
+copy of a pod. When you add a new node to the cluster, then the DaemonSet will
+ensure that node has a copy of that pod instantiated on it. Typical use cases
+for DaemonSets would be something like a monitoring or logging application. In
+our case, we make sure all our nodes are running the GlusterFS pod for
+distributed storage.</p>
+
+<h3 id="using-services">Using Services</h3>
+
+<p>Services in Kubernetes is a way of exposing service discovery to the cluster.
+The purpose of this is so that Kubernetes has a service hostname in DNS that
+points at the current IP address of the pod in the cluster. Use of a service is
+important, because it acts like a proxy for the pod(s) so that your
+applications know where to reach the service even if the pods change IP
+addresses (such as when a pod is destroyed and reinstantiated, or if it moves
+to another node in the cluster).</p>
+
+<p>I&rsquo;ve found Kubernetes documentation tends to lack diagrams of how these objects
+are implemented (hence my own large diagrams in this blog), but the <a href="https://kubernetes.io/docs/tutorials/kubernetes-basics/expose-intro/">service
+documentation</a>
+has a good diagram visualizing how it works.</p>
+
+<p>If we take the same visual concept and apply it to our Heketi deployment, we
+can see that the Heketi REST interface is fronted by the <code>heketi</code> service. The
+service is made up by an endpoint (the external IP address advertised for the
+service) and the IP address of the pod application, where Heketi is currently
+running.</p>
+
+<p>We can describe the details of this service by looking at it from the console:</p>
+
+<pre><code>[centos@kube-master ~]$ kubectl -n gluster describe svc/heketi
+Name:               heketi
+Namespace:          gluster
+Labels:             glusterfs=heketi-service
+Annotations:        description=Exposes Heketi Service
+Selector:           glusterfs=heketi-pod
+Type:               ClusterIP
+IP:                 10.96.111.204
+Port:               heketi  8080/TCP
+Endpoints:          10.244.3.2:8080
+Session Affinity:   None
+Events:             &lt;none&gt;
+</code></pre>
+
+<h1 id="workflow">Workflow</h1>
+
+<p>When a pod is created by a user in the Kubernetes environment, they can specify
+a StorageClass to be used for backing their persistent volume, and a persistent
+volume (PV) is requested via a persistent volume claim (PVC).</p>
+
+<p>After a PVC is requested, Kubernetes then looks at the provider for the
+StorageClass that the PVC is being requested on. In our case, the provider is
+GlusterFS. Our StorageClass also specifies the location of the Heketi REST
+interface via a Service. Kubernetes then requests a PV via this Service and
+then into the Heketi pod.</p>
+
+<p>Heketi then leverages its <a href="https://github.com/heketi/heketi/wiki/Architecture">executor and
+allocator</a> to dynamically
+provision the PV for us. It does this by first SSHing into the GlusterFS pod
+and creating a new logical volume for us (see LVM in Image 1-3). This logical
+volume is then loaded into GlusterFS as a brick. Heketi does this for us across
+all 3 nodes, creating 3 logical volumes and 3 bricks. These 3 bricks are then
+loaded into GlusterFS as a volume, and that volume is then exposed to
+Kubernetes for use as a PV.</p>
+
+<p>Our PVC then claims the use of the PV until it is done, at which point the PV
+is deleted, effectively reversing what was just done to create the PV. The
+deletion of the PV is done via the Kubernetes reclaim policy, which by default
+deletes the PV when the claim is no longer valid (thereby deleting the data,
+making it irrecoverable). This policy can be dealt with via the
+<code>persistentVolumeReclaimPolicy</code> field. The default value is nice because it
+results in Kubernetes garbage collecting our unused volumes, saving us from
+wasted space across the cluster.</p>
+
+<h1 id="conclusion">Conclusion</h1>
+
+<p>I learned a lot by deep diving into Kubernetes storage and learned a lot from
+other people, read a lot of documention, and bogarted a lot of time from Doug
+Smith showing him some diagrams and trying to get them &ldquo;just right&rdquo;. The usage
+of provisioners in Kubernetes to dynamically create your persistent volumes is
+really quite interesting, and once you start stepping through everything, it
+all seems quite logical. The ability to expand on the concept with your own
+external provisioners as well is a nice interface point.</p>
+
+<p>As I was writing this, I realized there were a lot of other areas I could have
+better covered and delved into, but trying to fit everything into a single post
+seemed a bit much. For example, we didn&rsquo;t even get to looking at the object
+spec files for StorageClass, namespaces, services, or the deployment. I also
+didn&rsquo;t get a chance to look at the spec file you&rsquo;d use to create a persistent
+volume claim, or looking at the backend systems and understanding what happens
+to LVM when a PVC is requested. All good topics for separate blog posts.</p>
+
+<p>Hopefully this was useful, and now you have a better idea how dynamic
+persistent volumes works, and how to visualize the topology. If I have any
+glaring errors, please reach out to me and I&rsquo;ll get those issues resolved.</p>
+
+<p>Happy storing!</p>
+  </div>
+  <div id="disqus_thread"></div>
+</div>
+
+<script type="text/javascript">
+(function() {
+    if (window.location.hostname == "localhost")
+        return;
+
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+    var disqus_shortname = 'leifmadsen';
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+
+
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-84933598-1', 'auto');
+ga('send', 'pageview');
+</script>
+
+<script src="http://blog.leifmadsen.com/js/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+</body>
+</html>
+
