@@ -1,5 +1,5 @@
 baseurl = "http://blog.leifmadsen.com"
-title = "Asterisk, and other worldly endeavours"
+title = "Leif Madsen."
 canonifyurls = true
 publishdir = "public"
 layoutdir = "layouts"
@@ -19,13 +19,13 @@ googleAnalytics = "UA-84933598-1"
 
 [params]
     truncate = true
-    defaultDescription = "Leif Madsen Blog Entry"
-    defaultKeywords = "blog,asterisk,leif,madsen,canada"
+    defaultDescription = "Leif Madsen's Blog"
+    defaultKeywords = "blog,leif,madsen,canada,containers,asterisk,development,devops,infrastructure,implementation engineer"
 
     #highlight = "solarized_dark"
     highlight = "monokai"
 
-    tagline = "Asterisk, and other worldly endeavours"
+    tagline = "I'm not clever enough for a tagline."
 
     home = "Blog"
 
