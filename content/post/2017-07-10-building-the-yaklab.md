@@ -41,4 +41,4 @@ available.)
 * Scene 1c: [Bootstrapping Bifrost with Ansible]({{< ref "post/2017-08-04-deploying-bifrost.md" >}})
 * **[Not Complete]** Scene 2: GlusterFS distributed volumes
 * **[Not Complete]** Scene 3: Kubernetes deployment with `kubeadm`
-* **[Not Complete]** Scene 4: Kubernetes persistent volumes with GlusterFS
+* Scene 4: [Kubernetes persistent volumes with GlusterFS]({{< ref "post/2017-09-19-glusterfs-persistent-volumes.md" >}})
