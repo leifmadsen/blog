@@ -6,8 +6,24 @@
     <description>Recent content in Asterisk, and other worldly endeavours on Asterisk, and other worldly endeavours</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 19 Sep 2017 13:28:56 -0400</lastBuildDate>
+    <lastBuildDate>Tue, 07 Nov 2017 10:20:24 -0500</lastBuildDate>
     <atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Deploying AWX to OpenStack RDO Cloud</title>
+      <link>http://blog.leifmadsen.com/blog/2017/11/07/deploying-awx-to-openstack-rdo-cloud/</link>
+      <pubDate>Tue, 07 Nov 2017 10:20:24 -0500</pubDate>
+      
+      <guid>http://blog.leifmadsen.com/blog/2017/11/07/deploying-awx-to-openstack-rdo-cloud/</guid>
+      <description>&lt;p&gt;Recently I&amp;rsquo;ve been playing around with AWX (the upstream, open source code base
+of Ansible Tower), and wanted to make it easy to deploy. Standing on the
+shoulders of giants (namely &lt;a href=&#34;https://galaxy.ansible.com/geerlingguy/&#34;&gt;@geerlingguy&lt;/a&gt;)
+I built out a wrapper playbook that would let me easily deploy AWX into a VM on
+an OpenStack cloud (in my case, the RDO Cloud). In this blog post, I&amp;rsquo;ll show
+you the wrapper playbook I built, and how to consume it to deploy a development
+AWX environment.
+&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>Persistent volumes with GlusterFS</title>
@@ -213,21 +229,6 @@ Additionally, it&amp;rsquo;s assumed you know what a TripleO is :)&lt;/p&gt;</de
       <description>&lt;p&gt;Recently I&amp;rsquo;ve gotten into running as many of my day-to-day applications in a
 Linux console. Thought I&amp;rsquo;d briefly share the applications I&amp;rsquo;ve been playing
 with.
-&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>Rules For The Greater Goodness; A Product Development Guide</title>
-      <link>http://blog.leifmadsen.com/blog/2015/11/19/rules-for-the-greater-goodness-a-product-development-guide/</link>
-      <pubDate>Thu, 19 Nov 2015 10:21:26 -0500</pubDate>
-      
-      <guid>http://blog.leifmadsen.com/blog/2015/11/19/rules-for-the-greater-goodness-a-product-development-guide/</guid>
-      <description>&lt;p&gt;This page documents and provides bullets about the way to approach (or avoid)
-building products. These are lessons we&amp;rsquo;ve learned from previous encounters and
-which we wish to avoid in the future. By sticking firmly to these development
-rules, we avoid getting bogged down in complete system rearchitectures in the
-future. The means to a scaled end is to approach the first customer as all your
-customers.
 &lt;/p&gt;</description>
     </item>
     
