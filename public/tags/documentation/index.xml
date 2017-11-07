@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Documentation on Asterisk, and other worldly endeavours</title>
+    <title>Documentation on Leif Madsen.</title>
     <link>http://blog.leifmadsen.com/tags/documentation/index.xml</link>
-    <description>Recent content in Documentation on Asterisk, and other worldly endeavours</description>
+    <description>Recent content in Documentation on Leif Madsen.</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <atom:link href="/tags/documentation/index.xml" rel="self" type="application/rss+xml" />
