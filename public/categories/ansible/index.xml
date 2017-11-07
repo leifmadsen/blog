@@ -9,6 +9,22 @@
     <atom:link href="/categories/ansible/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>Deploying AWX to OpenStack RDO Cloud</title>
+      <link>http://blog.leifmadsen.com/blog/2017/11/07/deploying-awx-to-openstack-rdo-cloud/</link>
+      <pubDate>Tue, 07 Nov 2017 10:20:24 -0500</pubDate>
+      
+      <guid>http://blog.leifmadsen.com/blog/2017/11/07/deploying-awx-to-openstack-rdo-cloud/</guid>
+      <description>&lt;p&gt;Recently I&amp;rsquo;ve been playing around with AWX (the upstream, open source code base
+of Ansible Tower), and wanted to make it easy to deploy. Standing on the
+shoulders of giants (namely &lt;a href=&#34;https://galaxy.ansible.com/geerlingguy/&#34;&gt;@geerlingguy&lt;/a&gt;)
+I built out a wrapper playbook that would let me easily deploy AWX into a VM on
+an OpenStack cloud (in my case, the RDO Cloud). In this blog post, I&amp;rsquo;ll show
+you the wrapper playbook I built, and how to consume it to deploy a development
+AWX environment.
+&lt;/p&gt;</description>
+    </item>
+    
+    <item>
       <title>yakLab Part 1c: Bootstrapping Bifrost with Ansible</title>
       <link>http://blog.leifmadsen.com/blog/2017/08/04/yaklab-part-1c-bootstrapping-bifrost-with-ansible/</link>
       <pubDate>Fri, 04 Aug 2017 15:02:00 -0400</pubDate>
