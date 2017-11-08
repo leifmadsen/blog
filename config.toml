@@ -1,9 +1,11 @@
 baseurl = "http://blog.leifmadsen.com"
 title = "Leif Madsen."
+copyright = "Leif Madsen"
 canonifyurls = true
 publishdir = "public"
 layoutdir = "layouts"
 contentdir = "content"
+DefaultContentLanguage = "en"
 languageCode = "en-us"
 disqusShortname = "leifmadsen"
 MetaDataFormat = "toml"

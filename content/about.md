@@ -3,7 +3,7 @@ categories = ["about","info"]
 date = "2015-11-10T19:28:26-05:00"
 description = "About Leif Madsen"
 keywords = ["about","info","biography","bio"]
-title = "about"
+title = "About Leif Madsen"
 
 +++
 I currently work at Red Hat on the NFV (Network Functions Virtualization)
@@ -37,5 +37,5 @@ training classes and dCAP (Digium Certified Asterisk Professional) training and
 certification, helped to steer the implementation of several features in
 Asterisk, and performed consulting for dozens of clients over the years.
 
-Leif resides in Caledon, Ontario, Canada but has worked remotely for customers
+Leif resides in Alliston, Ontario, Canada but has worked remotely for customers
 all over the world.
