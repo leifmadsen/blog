@@ -4,6 +4,7 @@ categories = ["nfvpe","ansible","continuous integration"]
 keywords = ["ansible","awx","tower","CI","continous integration","DevOps","devops","testing","integation","majik"]
 description = ""
 title = "AWX: The Poor Man's CI?"
+draft = "true"
 
 +++
 {{< load-photoswipe >}}
