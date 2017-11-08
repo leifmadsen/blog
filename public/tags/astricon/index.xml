@@ -2,11 +2,13 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Astricon on Leif Madsen.</title>
-    <link>http://blog.leifmadsen.com/tags/astricon/index.xml</link>
+    <link>http://blog.leifmadsen.com/tags/astricon/</link>
     <description>Recent content in Astricon on Leif Madsen.</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <atom:link href="/tags/astricon/index.xml" rel="self" type="application/rss+xml" />
+    <copyright>Leif Madsen</copyright>
+    <lastBuildDate>Fri, 23 Dec 2011 16:17:57 +0000</lastBuildDate>
+    <atom:link href="/tags/astricon/" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Cooking With Asterisk (Video)</title>
@@ -34,10 +36,10 @@ http://leifmadsen.com/sites/default/files/AstriCon%202011%20-%20Building%20a%20d
     
     <item>
       <title>#AstriCon 2011 Quote of the Conference (@abalashov)</title>
-      <link>http://blog.leifmadsen.com/blog/2011/10/30/</link>
+      <link>http://blog.leifmadsen.com/blog/2011/10/30/#astricon-2011-quote-of-the-conference-abalashov/</link>
       <pubDate>Sun, 30 Oct 2011 15:46:23 +0000</pubDate>
       
-      <guid>http://blog.leifmadsen.com/blog/2011/10/30/</guid>
+      <guid>http://blog.leifmadsen.com/blog/2011/10/30/#astricon-2011-quote-of-the-conference-abalashov/</guid>
       <description>I think the best quote I heard the entire time came from @abalashov (Alex Balashov) during the AstriDevCon when we were talking about Asterisk documentation, and how we might better organize it within the source.
 We were discussing perhaps moving some of the existing configuration file examples to a manpage, and Alex piped up to say, &amp;ldquo;Manpages are a vestige of our glorious, prehensile, curly-tailed past.&amp;rdquo;
 There wasn&amp;rsquo;t much left to be said after that :)</description>
@@ -45,10 +47,10 @@ There wasn&amp;rsquo;t much left to be said after that :)</description>
     
     <item>
       <title>#AstriCon 2011: Building a Distributed Call Centre</title>
-      <link>http://blog.leifmadsen.com/blog/2011/10/26/</link>
+      <link>http://blog.leifmadsen.com/blog/2011/10/26/#astricon-2011-building-a-distributed-call-centre/</link>
       <pubDate>Wed, 26 Oct 2011 19:15:41 +0000</pubDate>
       
-      <guid>http://blog.leifmadsen.com/blog/2011/10/26/</guid>
+      <guid>http://blog.leifmadsen.com/blog/2011/10/26/#astricon-2011-building-a-distributed-call-centre/</guid>
       <description>The presentation and configuration files from my presentation at AstriCon 2011 today is available at:
 http://leifmadsen.com/sites/default/files/AstriCon 2011 - Building a distributed call centre.zip</description>
     </item>

@@ -2,11 +2,13 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Rate Limiting on Leif Madsen.</title>
-    <link>http://blog.leifmadsen.com/tags/rate-limiting/index.xml</link>
+    <link>http://blog.leifmadsen.com/tags/rate-limiting/</link>
     <description>Recent content in Rate Limiting on Leif Madsen.</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <atom:link href="/tags/rate-limiting/index.xml" rel="self" type="application/rss+xml" />
+    <copyright>Leif Madsen</copyright>
+    <lastBuildDate>Wed, 02 Nov 2011 16:08:40 +0000</lastBuildDate>
+    <atom:link href="/tags/rate-limiting/" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Controlling outbound bitrate using tc</title>

@@ -2,11 +2,13 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Rvm on Leif Madsen.</title>
-    <link>http://blog.leifmadsen.com/tags/rvm/index.xml</link>
+    <link>http://blog.leifmadsen.com/tags/rvm/</link>
     <description>Recent content in Rvm on Leif Madsen.</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <atom:link href="/tags/rvm/index.xml" rel="self" type="application/rss+xml" />
+    <copyright>Leif Madsen</copyright>
+    <lastBuildDate>Tue, 26 Jun 2012 12:51:30 +0000</lastBuildDate>
+    <atom:link href="/tags/rvm/" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Integration Testing Using Jenkins (Part 1)</title>

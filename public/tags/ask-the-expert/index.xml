@@ -1,12 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Ask The Expert on Leif Madsen.</title>
-    <link>http://blog.leifmadsen.com/tags/ask-the-expert/index.xml</link>
-    <description>Recent content in Ask The Expert on Leif Madsen.</description>
+    <title>Ask the Expert on Leif Madsen.</title>
+    <link>http://blog.leifmadsen.com/tags/ask-the-expert/</link>
+    <description>Recent content in Ask the Expert on Leif Madsen.</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <atom:link href="/tags/ask-the-expert/index.xml" rel="self" type="application/rss+xml" />
+    <copyright>Leif Madsen</copyright>
+    <lastBuildDate>Tue, 08 Sep 2009 13:12:20 +0000</lastBuildDate>
+    <atom:link href="/tags/ask-the-expert/" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Ask the Expert!</title>

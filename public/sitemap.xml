@@ -1,5 +1,16 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <url>
+    <loc>http://blog.leifmadsen.com/license/</loc>
+    <lastmod>2017-11-08T08:40:26-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://blog.leifmadsen.com/blog/2017/11/07/awx-the-poor-mans-ci/</loc>
+    <lastmod>2017-11-07T13:48:19-05:00</lastmod>
+  </url>
   
   <url>
     <loc>http://blog.leifmadsen.com/blog/2017/11/07/deploying-awx-to-openstack-rdo-cloud/</loc>
@@ -192,17 +203,17 @@
   </url>
   
   <url>
-    <loc>http://blog.leifmadsen.com/blog/2011/10/30/</loc>
+    <loc>http://blog.leifmadsen.com/blog/2011/10/30/#astricon-2011-quote-of-the-conference-abalashov/</loc>
     <lastmod>2011-10-30T15:46:23+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://blog.leifmadsen.com/blog/2011/10/28/</loc>
+    <loc>http://blog.leifmadsen.com/blog/2011/10/28/#astricon-2011-cooking-with-asterisk/</loc>
     <lastmod>2011-10-28T13:19:36+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://blog.leifmadsen.com/blog/2011/10/26/</loc>
+    <loc>http://blog.leifmadsen.com/blog/2011/10/26/#astricon-2011-building-a-distributed-call-centre/</loc>
     <lastmod>2011-10-26T19:15:41+00:00</lastmod>
   </url>
   
@@ -282,7 +293,7 @@
   </url>
   
   <url>
-    <loc>http://blog.leifmadsen.com/blog/2011/02/27/using-</loc>
+    <loc>http://blog.leifmadsen.com/blog/2011/02/27/using-#exec-to-set-externaddr-in-sip.conf/</loc>
     <lastmod>2011-02-27T21:57:41+00:00</lastmod>
   </url>
   
@@ -567,7 +578,7 @@
   </url>
   
   <url>
-    <loc>http://blog.leifmadsen.com/tags/</loc>
+    <loc>http://blog.leifmadsen.com/tags/#exec/</loc>
     <lastmod>2011-02-27T21:57:41+00:00</lastmod>
     <priority>0</priority>
   </url>
@@ -579,7 +590,7 @@
   </url>
   
   <url>
-    <loc>http://blog.leifmadsen.com/tags/1/index.8/</loc>
+    <loc>http://blog.leifmadsen.com/tags/1.8/</loc>
     <lastmod>2011-05-17T20:40:55+00:00</lastmod>
     <priority>0</priority>
   </url>
@@ -658,7 +669,7 @@
   
   <url>
     <loc>http://blog.leifmadsen.com/categories/ansible/</loc>
-    <lastmod>2017-11-07T10:20:24-05:00</lastmod>
+    <lastmod>2017-11-07T13:48:19-05:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -711,7 +722,7 @@
   </url>
   
   <url>
-    <loc>http://blog.leifmadsen.com/tags/asterisk/index.distributed-device-state/</loc>
+    <loc>http://blog.leifmadsen.com/tags/asterisk.distributed-device-state/</loc>
     <lastmod>2011-10-26T16:36:49+00:00</lastmod>
     <priority>0</priority>
   </url>
@@ -904,6 +915,7 @@
   
   <url>
     <loc>http://blog.leifmadsen.com/categories/</loc>
+    <lastmod>2015-11-10T19:28:26-05:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -1024,6 +1036,12 @@
   <url>
     <loc>http://blog.leifmadsen.com/categories/console/</loc>
     <lastmod>2016-12-16T14:36:23-05:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.leifmadsen.com/categories/continuous-integration/</loc>
+    <lastmod>2017-11-07T13:48:19-05:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -1575,13 +1593,19 @@
   
   <url>
     <loc>http://blog.leifmadsen.com/</loc>
-    <lastmod>2017-11-07T10:20:24-05:00</lastmod>
+    <lastmod>2017-11-08T08:40:26-05:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>http://blog.leifmadsen.com/categories/libvirt/</loc>
     <lastmod>2016-12-16T14:36:23-05:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.leifmadsen.com/categories/license/</loc>
+    <lastmod>2017-11-08T08:40:26-05:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -1737,7 +1761,7 @@
   
   <url>
     <loc>http://blog.leifmadsen.com/categories/nfvpe/</loc>
-    <lastmod>2017-11-07T10:20:24-05:00</lastmod>
+    <lastmod>2017-11-07T13:48:19-05:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -1881,7 +1905,7 @@
   
   <url>
     <loc>http://blog.leifmadsen.com/post/</loc>
-    <lastmod>2017-11-07T10:20:24-05:00</lastmod>
+    <lastmod>2017-11-07T13:48:19-05:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -2216,7 +2240,7 @@
   </url>
   
   <url>
-    <loc>http://blog.leifmadsen.com/tags/sip/index.conf/</loc>
+    <loc>http://blog.leifmadsen.com/tags/sip.conf/</loc>
     <lastmod>2011-02-27T21:57:41+00:00</lastmod>
     <priority>0</priority>
   </url>
@@ -2283,6 +2307,7 @@
   
   <url>
     <loc>http://blog.leifmadsen.com/tags/</loc>
+    <lastmod>2011-02-27T21:57:41+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -2611,7 +2636,7 @@
   </url>
   
   <url>
-    <loc>http://blog.leifmadsen.com/tags/your-vs/index.-youre/</loc>
+    <loc>http://blog.leifmadsen.com/tags/your-vs.-youre/</loc>
     <lastmod>2010-02-10T20:35:27+00:00</lastmod>
     <priority>0</priority>
   </url>

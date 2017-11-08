@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Categories on Leif Madsen.</title>
+    <link>http://blog.leifmadsen.com/categories/</link>
+    <description>Recent content in Categories on Leif Madsen.</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Leif Madsen</copyright>
+    <lastBuildDate>Tue, 10 Nov 2015 19:28:26 -0500</lastBuildDate>
+    <atom:link href="/categories/" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>About</title>
+      <link>http://blog.leifmadsen.com/categories/about/</link>
+      <pubDate>Tue, 10 Nov 2015 19:28:26 -0500</pubDate>
+      
+      <guid>http://blog.leifmadsen.com/categories/about/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Ansible</title>
+      <link>http://blog.leifmadsen.com/categories/ansible/</link>
+      <pubDate>Tue, 07 Nov 2017 13:48:19 -0500</pubDate>
+      
+      <guid>http://blog.leifmadsen.com/categories/ansible/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Asterisk</title>
+      <link>http://blog.leifmadsen.com/categories/asterisk/</link>
+      <pubDate>Tue, 10 Nov 2015 19:41:55 -0500</pubDate>
+      
+      <guid>http://blog.leifmadsen.com/categories/asterisk/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Automation</title>
+      <link>http://blog.leifmadsen.com/categories/automation/</link>
+      <pubDate>Fri, 04 Aug 2017 15:02:00 -0400</pubDate>
+      
+      <guid>http://blog.leifmadsen.com/categories/automation/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Baremetal</title>
+      <link>http://blog.leifmadsen.com/categories/baremetal/</link>
+      <pubDate>Fri, 04 Aug 2017 15:02:00 -0400</pubDate>
+      
+      <guid>http://blog.leifmadsen.com/categories/baremetal/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Bash</title>
+      <link>http://blog.leifmadsen.com/categories/bash/</link>
+      <pubDate>Wed, 04 Jan 2017 15:42:23 -0500</pubDate>
+      
+      <guid>http://blog.leifmadsen.com/categories/bash/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Being Productive</title>
+      <link>http://blog.leifmadsen.com/categories/being-productive/</link>
+      <pubDate>Wed, 09 Sep 2015 21:20:40 +0000</pubDate>
+      
+      <guid>http://blog.leifmadsen.com/categories/being-productive/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Bifrost</title>
+      <link>http://blog.leifmadsen.com/categories/bifrost/</link>
+      <pubDate>Fri, 04 Aug 2017 15:02:00 -0400</pubDate>
+      
+      <guid>http://blog.leifmadsen.com/categories/bifrost/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Business</title>
+      <link>http://blog.leifmadsen.com/categories/business/</link>
+      <pubDate>Wed, 04 Jan 2012 20:22:08 +0000</pubDate>
+      
+      <guid>http://blog.leifmadsen.com/categories/business/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Centos</title>
+      <link>http://blog.leifmadsen.com/categories/centos/</link>
+      <pubDate>Tue, 03 Jan 2017 14:34:38 -0500</pubDate>
+      
+      <guid>http://blog.leifmadsen.com/categories/centos/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Cloud Computing</title>
+      <link>http://blog.leifmadsen.com/categories/cloud-computing/</link>
+      <pubDate>Mon, 03 Oct 2016 15:34:08 -0400</pubDate>
+      
+      <guid>http://blog.leifmadsen.com/categories/cloud-computing/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Console</title>
+      <link>http://blog.leifmadsen.com/categories/console/</link>
+      <pubDate>Fri, 16 Dec 2016 14:36:23 -0500</pubDate>
+      
+      <guid>http://blog.leifmadsen.com/categories/console/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Continuous Integration</title>
+      <link>http://blog.leifmadsen.com/categories/continuous-integration/</link>
+      <pubDate>Tue, 07 Nov 2017 13:48:19 -0500</pubDate>
+      
+      <guid>http://blog.leifmadsen.com/categories/continuous-integration/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Development</title>
+      <link>http://blog.leifmadsen.com/categories/development/</link>
+      <pubDate>Thu, 19 Nov 2015 10:21:26 -0500</pubDate>
+      
+      <guid>http://blog.leifmadsen.com/categories/development/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Devops</title>
+      <link>http://blog.leifmadsen.com/categories/devops/</link>
+      <pubDate>Fri, 04 Aug 2017 15:02:00 -0400</pubDate>
+      
+      <guid>http://blog.leifmadsen.com/categories/devops/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

@@ -2,11 +2,13 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Marketing on Leif Madsen.</title>
-    <link>http://blog.leifmadsen.com/tags/marketing/index.xml</link>
+    <link>http://blog.leifmadsen.com/tags/marketing/</link>
     <description>Recent content in Marketing on Leif Madsen.</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <atom:link href="/tags/marketing/index.xml" rel="self" type="application/rss+xml" />
+    <copyright>Leif Madsen</copyright>
+    <lastBuildDate>Sat, 18 Jul 2009 01:41:53 +0000</lastBuildDate>
+    <atom:link href="/tags/marketing/" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Telemarketer Torture</title>

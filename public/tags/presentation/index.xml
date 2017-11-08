@@ -2,18 +2,20 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Presentation on Leif Madsen.</title>
-    <link>http://blog.leifmadsen.com/tags/presentation/index.xml</link>
+    <link>http://blog.leifmadsen.com/tags/presentation/</link>
     <description>Recent content in Presentation on Leif Madsen.</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <atom:link href="/tags/presentation/index.xml" rel="self" type="application/rss+xml" />
+    <copyright>Leif Madsen</copyright>
+    <lastBuildDate>Wed, 26 Oct 2011 19:15:41 +0000</lastBuildDate>
+    <atom:link href="/tags/presentation/" rel="self" type="application/rss+xml" />
     
     <item>
       <title>#AstriCon 2011: Building a Distributed Call Centre</title>
-      <link>http://blog.leifmadsen.com/blog/2011/10/26/</link>
+      <link>http://blog.leifmadsen.com/blog/2011/10/26/#astricon-2011-building-a-distributed-call-centre/</link>
       <pubDate>Wed, 26 Oct 2011 19:15:41 +0000</pubDate>
       
-      <guid>http://blog.leifmadsen.com/blog/2011/10/26/</guid>
+      <guid>http://blog.leifmadsen.com/blog/2011/10/26/#astricon-2011-building-a-distributed-call-centre/</guid>
       <description>The presentation and configuration files from my presentation at AstriCon 2011 today is available at:
 http://leifmadsen.com/sites/default/files/AstriCon 2011 - Building a distributed call centre.zip</description>
     </item>

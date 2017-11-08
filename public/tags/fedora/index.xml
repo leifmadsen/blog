@@ -2,11 +2,13 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Fedora on Leif Madsen.</title>
-    <link>http://blog.leifmadsen.com/tags/fedora/index.xml</link>
+    <link>http://blog.leifmadsen.com/tags/fedora/</link>
     <description>Recent content in Fedora on Leif Madsen.</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <atom:link href="/tags/fedora/index.xml" rel="self" type="application/rss+xml" />
+    <copyright>Leif Madsen</copyright>
+    <lastBuildDate>Wed, 09 Sep 2015 21:20:40 +0000</lastBuildDate>
+    <atom:link href="/tags/fedora/" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Configuring powerline to show working Git branch</title>

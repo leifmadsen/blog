@@ -2,11 +2,13 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Call Center on Leif Madsen.</title>
-    <link>http://blog.leifmadsen.com/tags/call-center/index.xml</link>
+    <link>http://blog.leifmadsen.com/tags/call-center/</link>
     <description>Recent content in Call Center on Leif Madsen.</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <atom:link href="/tags/call-center/index.xml" rel="self" type="application/rss+xml" />
+    <copyright>Leif Madsen</copyright>
+    <lastBuildDate>Wed, 18 Nov 2009 20:40:15 +0000</lastBuildDate>
+    <atom:link href="/tags/call-center/" rel="self" type="application/rss+xml" />
     
     <item>
       <title>AstriCon 2009 Presentation -- Building a Distributed Call Center</title>
