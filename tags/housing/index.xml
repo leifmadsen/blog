@@ -2,11 +2,13 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Housing on Leif Madsen.</title>
-    <link>http://blog.leifmadsen.com/tags/housing/index.xml</link>
+    <link>http://blog.leifmadsen.com/tags/housing/</link>
     <description>Recent content in Housing on Leif Madsen.</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <atom:link href="/tags/housing/index.xml" rel="self" type="application/rss+xml" />
+    <copyright>Leif Madsen</copyright>
+    <lastBuildDate>Thu, 15 Apr 2010 21:30:21 +0000</lastBuildDate>
+    <atom:link href="/tags/housing/" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Long-term &#39;shopping list&#39; helps couple furnish Caledon townhouse</title>

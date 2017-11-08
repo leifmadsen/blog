@@ -2,11 +2,13 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Qemu on Leif Madsen.</title>
-    <link>http://blog.leifmadsen.com/tags/qemu/index.xml</link>
+    <link>http://blog.leifmadsen.com/tags/qemu/</link>
     <description>Recent content in Qemu on Leif Madsen.</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <atom:link href="/tags/qemu/index.xml" rel="self" type="application/rss+xml" />
+    <copyright>Leif Madsen</copyright>
+    <lastBuildDate>Wed, 09 Feb 2011 01:18:22 +0000</lastBuildDate>
+    <atom:link href="/tags/qemu/" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Initial impressions of qemu-kvm (virtualization server)</title>

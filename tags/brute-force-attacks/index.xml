@@ -2,11 +2,13 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Brute Force Attacks on Leif Madsen.</title>
-    <link>http://blog.leifmadsen.com/tags/brute-force-attacks/index.xml</link>
+    <link>http://blog.leifmadsen.com/tags/brute-force-attacks/</link>
     <description>Recent content in Brute Force Attacks on Leif Madsen.</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <atom:link href="/tags/brute-force-attacks/index.xml" rel="self" type="application/rss+xml" />
+    <copyright>Leif Madsen</copyright>
+    <lastBuildDate>Tue, 13 Apr 2010 00:28:38 +0000</lastBuildDate>
+    <atom:link href="/tags/brute-force-attacks/" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Recent SIP Attacks from Amazon EC2</title>

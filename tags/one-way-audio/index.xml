@@ -2,11 +2,13 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>One Way Audio on Leif Madsen.</title>
-    <link>http://blog.leifmadsen.com/tags/one-way-audio/index.xml</link>
+    <link>http://blog.leifmadsen.com/tags/one-way-audio/</link>
     <description>Recent content in One Way Audio on Leif Madsen.</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <atom:link href="/tags/one-way-audio/index.xml" rel="self" type="application/rss+xml" />
+    <copyright>Leif Madsen</copyright>
+    <lastBuildDate>Sat, 18 Jul 2009 15:18:28 +0000</lastBuildDate>
+    <atom:link href="/tags/one-way-audio/" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Issues: ast_rtp_senddigit_begin: Don&#39;t know how to represent &#39;f&#39; (one way audio)</title>

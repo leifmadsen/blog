@@ -2,11 +2,13 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Releases on Leif Madsen.</title>
-    <link>http://blog.leifmadsen.com/tags/releases/index.xml</link>
+    <link>http://blog.leifmadsen.com/tags/releases/</link>
     <description>Recent content in Releases on Leif Madsen.</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <atom:link href="/tags/releases/index.xml" rel="self" type="application/rss+xml" />
+    <copyright>Leif Madsen</copyright>
+    <lastBuildDate>Tue, 17 May 2011 20:40:55 +0000</lastBuildDate>
+    <atom:link href="/tags/releases/" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Asterisk 1.8 And The Importance Of Looking Ahead</title>

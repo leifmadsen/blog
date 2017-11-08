@@ -2,11 +2,13 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Aes_encrypt on Leif Madsen.</title>
-    <link>http://blog.leifmadsen.com/tags/aes_encrypt/index.xml</link>
+    <link>http://blog.leifmadsen.com/tags/aes_encrypt/</link>
     <description>Recent content in Aes_encrypt on Leif Madsen.</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <atom:link href="/tags/aes_encrypt/index.xml" rel="self" type="application/rss+xml" />
+    <copyright>Leif Madsen</copyright>
+    <lastBuildDate>Fri, 09 Sep 2011 13:28:47 +0000</lastBuildDate>
+    <atom:link href="/tags/aes_encrypt/" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Using Dialplan Functions: AES_DECRYPT() and AES_ENCRYPT()</title>

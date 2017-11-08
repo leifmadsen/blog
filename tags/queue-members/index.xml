@@ -2,11 +2,13 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Queue Members on Leif Madsen.</title>
-    <link>http://blog.leifmadsen.com/tags/queue-members/index.xml</link>
+    <link>http://blog.leifmadsen.com/tags/queue-members/</link>
     <description>Recent content in Queue Members on Leif Madsen.</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <atom:link href="/tags/queue-members/index.xml" rel="self" type="application/rss+xml" />
+    <copyright>Leif Madsen</copyright>
+    <lastBuildDate>Sat, 14 Nov 2009 15:07:19 +0000</lastBuildDate>
+    <atom:link href="/tags/queue-members/" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Building Queues with Asterisk</title>

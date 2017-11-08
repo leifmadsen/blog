@@ -2,11 +2,13 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Wind Mobile on Leif Madsen.</title>
-    <link>http://blog.leifmadsen.com/tags/wind-mobile/index.xml</link>
+    <link>http://blog.leifmadsen.com/tags/wind-mobile/</link>
     <description>Recent content in Wind Mobile on Leif Madsen.</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <atom:link href="/tags/wind-mobile/index.xml" rel="self" type="application/rss+xml" />
+    <copyright>Leif Madsen</copyright>
+    <lastBuildDate>Tue, 09 Feb 2010 22:10:44 +0000</lastBuildDate>
+    <atom:link href="/tags/wind-mobile/" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Interview from Wind Mobile launch</title>
