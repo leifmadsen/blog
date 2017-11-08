@@ -22,7 +22,7 @@
     <item>
       <title>Ansible</title>
       <link>http://blog.leifmadsen.com/categories/ansible/</link>
-      <pubDate>Tue, 07 Nov 2017 13:48:19 -0500</pubDate>
+      <pubDate>Tue, 07 Nov 2017 10:20:24 -0500</pubDate>
       
       <guid>http://blog.leifmadsen.com/categories/ansible/</guid>
       <description></description>
@@ -119,15 +119,6 @@
     </item>
     
     <item>
-      <title>Continuous Integration</title>
-      <link>http://blog.leifmadsen.com/categories/continuous-integration/</link>
-      <pubDate>Tue, 07 Nov 2017 13:48:19 -0500</pubDate>
-      
-      <guid>http://blog.leifmadsen.com/categories/continuous-integration/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>Development</title>
       <link>http://blog.leifmadsen.com/categories/development/</link>
       <pubDate>Thu, 19 Nov 2015 10:21:26 -0500</pubDate>
@@ -142,6 +133,15 @@
       <pubDate>Fri, 04 Aug 2017 15:02:00 -0400</pubDate>
       
       <guid>http://blog.leifmadsen.com/categories/devops/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Docker</title>
+      <link>http://blog.leifmadsen.com/categories/docker/</link>
+      <pubDate>Tue, 10 Nov 2015 19:41:55 -0500</pubDate>
+      
+      <guid>http://blog.leifmadsen.com/categories/docker/</guid>
       <description></description>
     </item>
     
