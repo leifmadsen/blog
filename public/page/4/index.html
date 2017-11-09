@@ -76,6 +76,23 @@
     
     <div class="post">
       <h1 class="post-title">
+        <a href="http://blog.leifmadsen.com/blog/2012/01/16/converting-multiple-exten--lines-to-using-same--in-asterisk-dialplan/">Converting multiple exten =&gt; lines to using same =&gt; in Asterisk dialplan</a>
+      </h1>
+      <span class="post-date">Jan 16, 2012 &middot; 1 minute read &middot; <a href="http://blog.leifmadsen.com/blog/2012/01/16/converting-multiple-exten--lines-to-using-same--in-asterisk-dialplan/#disqus_thread">Comments</a>
+      
+      <br/>
+      <a class="label" href="http://blog.leifmadsen.com/categories/asterisk">Asterisk</a><a class="label" href="http://blog.leifmadsen.com/categories/programming">Programming</a>
+      </span>
+      
+      Last week I wanted to start changing some 1.4 based Asterisk dialplan to a 1.8 based Asterisk system, and in that process wanted to convert lines like:
+exten =&gt; _NXXNXXXXXX,1,NoOp() exten =&gt; _NXXNXXXXXX,2,GotoIf($[...]?reject,1) exten =&gt; _NXXNXXXXXX,3,Dial(SIP/foo/${EXTEN}) ...  into using the same =&gt; prefix:
+exten =&gt; _NXXNXXXXXX,1,NoOp() same =&gt; n,GotoIf($[...]?reject,1) same =&gt; n,Dial(SIP/foo/${EXTEN})  In order to do that, Mike King helped me out with the following regular expressing which I used in vim:
+      <a href="http://blog.leifmadsen.com/blog/2012/01/16/converting-multiple-exten--lines-to-using-same--in-asterisk-dialplan/">Read On &rarr;</a>
+      
+    </div>
+    
+    <div class="post">
+      <h1 class="post-title">
         <a href="http://blog.leifmadsen.com/blog/2012/01/09/commodore-64-turns-30-this-year/">Commodore 64 Turns 30 This Year</a>
       </h1>
       <span class="post-date">Jan 9, 2012 &middot; 2 minute read &middot; <a href="http://blog.leifmadsen.com/blog/2012/01/09/commodore-64-turns-30-this-year/#disqus_thread">Comments</a>
@@ -221,22 +238,6 @@ There wasn&rsquo;t much left to be said after that :)
       
       My other presentation at AstriCon 2011 was Cooking With Asterisk, an overview of some dialplan snippets (pulled from the Asterisk Cookbook).
 http://leifmadsen.com/sites/default/files/AstriCon 2011 - Cooking With Asterisk.pdf
-      
-      
-    </div>
-    
-    <div class="post">
-      <h1 class="post-title">
-        <a href="http://blog.leifmadsen.com/blog/2011/10/26/#astricon-2011-building-a-distributed-call-centre/">#AstriCon 2011: Building a Distributed Call Centre</a>
-      </h1>
-      <span class="post-date">Oct 26, 2011 &middot; 1 minute read &middot; <a href="http://blog.leifmadsen.com/blog/2011/10/26/#astricon-2011-building-a-distributed-call-centre/#disqus_thread">Comments</a>
-      
-      <br/>
-      <a class="label" href="http://blog.leifmadsen.com/categories/asterisk">Asterisk</a>
-      </span>
-      
-      The presentation and configuration files from my presentation at AstriCon 2011 today is available at:
-http://leifmadsen.com/sites/default/files/AstriCon 2011 - Building a distributed call centre.zip
       
       
     </div>

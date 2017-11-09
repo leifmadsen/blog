@@ -76,6 +76,97 @@
     
     <div class="post">
       <h1 class="post-title">
+        <a href="http://blog.leifmadsen.com/blog/2017/11/07/awx-the-poor-mans-ci/">AWX: The Poor Man&#39;s CI?</a>
+      </h1>
+      <span class="post-date">Nov 7, 2017 &middot; 18 minute read &middot; <a href="http://blog.leifmadsen.com/blog/2017/11/07/awx-the-poor-mans-ci/#disqus_thread">Comments</a>
+      
+      <br/>
+      <a class="label" href="http://blog.leifmadsen.com/categories/nfvpe">nfvpe</a><a class="label" href="http://blog.leifmadsen.com/categories/ansible">ansible</a><a class="label" href="http://blog.leifmadsen.com/categories/continuous-integration">continuous integration</a>
+      </span>
+      
+      <p>
+
+
+
+  
+
+
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.1/photoswipe.min.css" integrity="sha256-sCl5PUOGMLfFYctzDW3MtRib0ctyUvI9Qsmq2wXOeBY=" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.1/default-skin/default-skin.min.css" integrity="sha256-BFeI1V+Vh1Rk37wswuOYn5lsTcaU96hGaI7OUVCLjPc=" crossorigin="anonymous" />
+
+
+
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+<div class="pswp__bg"></div>
+
+<div class="pswp__scroll-wrap">
+    
+    <div class="pswp__container">
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+    </div>
+    
+    <div class="pswp__ui pswp__ui--hidden">
+    <div class="pswp__top-bar">
+      
+      <div class="pswp__counter"></div>
+      <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+      <button class="pswp__button pswp__button--share" title="Share"></button>
+      <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+      <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+      
+      
+      <div class="pswp__preloader">
+        <div class="pswp__preloader__icn">
+          <div class="pswp__preloader__cut">
+            <div class="pswp__preloader__donut"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+      <div class="pswp__share-tooltip"></div>
+    </div>
+    <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+    </button>
+    <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+    </button>
+    <div class="pswp__caption">
+      <div class="pswp__caption__center"></div>
+    </div>
+    </div>
+    </div>
+</div>
+
+I&rsquo;m just going to go ahead and blame <a href="https://twitter.com/dougbtv">@dougbtv</a>
+for all my awesome and terrible ideas. We&rsquo;ve been working on several
+<a href="https://github.com/ansible/ansible">Ansible</a> playbooks to spin up development
+environments; like
+<a href="https://github.com/redhat-nfvpe/kube-centos-ansible">kucean</a>.</p>
+
+<p>Due to the rapid development nature of things like Kubernetes, Heketi,
+GlusterFS, and other tools, it&rsquo;s both possible and probable that our playbooks
+could become broken at any given time. We&rsquo;ve been wanting to get some continous
+integration spun up to test this with <a href="https://docs.openstack.org/infra/zuul/feature/zuulv3/index.html">Zuul v3</a>
+but the learning curve for that is a bit more than we&rsquo;d prefer to
+tackle for some simple periodic runs. Same goes for <a href="https://jenkins.io/doc/">Jenkins</a>
+or any other number of continous integration software bits.</p>
+
+<p>Enter the brilliantly mad mind of @dougbtv. He wondered if AWX (Ansible Tower)
+could be turned into a sort of &ldquo;Poor Man&rsquo;s CI&rdquo;? Hold my beer. Challenge
+accepted!
+</p>
+      <a href="http://blog.leifmadsen.com/blog/2017/11/07/awx-the-poor-mans-ci/">Read On &rarr;</a>
+      
+    </div>
+    
+    <div class="post">
+      <h1 class="post-title">
         <a href="http://blog.leifmadsen.com/blog/2017/11/07/deploying-awx-to-openstack-rdo-cloud/">Deploying AWX to OpenStack RDO Cloud</a>
       </h1>
       <span class="post-date">Nov 7, 2017 &middot; 5 minute read &middot; <a href="http://blog.leifmadsen.com/blog/2017/11/07/deploying-awx-to-openstack-rdo-cloud/#disqus_thread">Comments</a>
@@ -255,27 +346,6 @@ virtual machine.</p>
 
 <p></p>
       <a href="http://blog.leifmadsen.com/blog/2016/12/28/create-a-virtual-undercloud-with-tripleo-quickstart/">Read On &rarr;</a>
-      
-    </div>
-    
-    <div class="post">
-      <h1 class="post-title">
-        <a href="http://blog.leifmadsen.com/blog/2016/12/16/creating-virtual-machines-in-libvirt-with-virt-install/">Creating virtual machines in libvirt with virt-install</a>
-      </h1>
-      <span class="post-date">Dec 16, 2016 &middot; 4 minute read &middot; <a href="http://blog.leifmadsen.com/blog/2016/12/16/creating-virtual-machines-in-libvirt-with-virt-install/#disqus_thread">Comments</a>
-      
-      <br/>
-      <a class="label" href="http://blog.leifmadsen.com/categories/libvirt">libvirt</a><a class="label" href="http://blog.leifmadsen.com/categories/linux">linux</a><a class="label" href="http://blog.leifmadsen.com/categories/virtualization">virtualization</a><a class="label" href="http://blog.leifmadsen.com/categories/console">console</a>
-      </span>
-      
-      <p>I&rsquo;ve been wanting to automate my virtual machine instantiation for a while now,
-but I&rsquo;ve always hated the idea of having to spin up multiple bits of
-infrastruction to deal with PXE booting, web server to host a kickstart file,
-etc. Luckily, I ran into some stuff today, and figured out how to automate
-virtual machine instantitation without having to resort to anything outside of
-localhost.
-</p>
-      <a href="http://blog.leifmadsen.com/blog/2016/12/16/creating-virtual-machines-in-libvirt-with-virt-install/">Read On &rarr;</a>
       
     </div>
     

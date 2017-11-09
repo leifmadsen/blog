@@ -84,8 +84,8 @@ environments; like
 &lt;p&gt;Due to the rapid development nature of things like Kubernetes, Heketi,
 GlusterFS, and other tools, it&amp;rsquo;s both possible and probable that our playbooks
 could become broken at any given time. We&amp;rsquo;ve been wanting to get some continous
-integration spun up to test this with something like &lt;a href=&#34;https://docs.openstack.org/infra/zuul/feature/zuulv3/index.html&#34;&gt;Zuul v3&lt;/a&gt;
-but the learning curve for something like that is a bit more than we&amp;rsquo;d like to
+integration spun up to test this with &lt;a href=&#34;https://docs.openstack.org/infra/zuul/feature/zuulv3/index.html&#34;&gt;Zuul v3&lt;/a&gt;
+but the learning curve for that is a bit more than we&amp;rsquo;d prefer to
 tackle for some simple periodic runs. Same goes for &lt;a href=&#34;https://jenkins.io/doc/&#34;&gt;Jenkins&lt;/a&gt;
 or any other number of continous integration software bits.&lt;/p&gt;
 

@@ -72,7 +72,7 @@
 <div class="content container">
   <div class="post">
     <h1 class="post-title">AWX: The Poor Man&#39;s CI?</h1>
-    <span class="post-date">Nov 7, 2017 &middot; 4 minute read &middot; <a href="http://blog.leifmadsen.com/blog/2017/11/07/awx-the-poor-mans-ci/#disqus_thread">Comments</a>
+    <span class="post-date">Nov 7, 2017 &middot; 18 minute read &middot; <a href="http://blog.leifmadsen.com/blog/2017/11/07/awx-the-poor-mans-ci/#disqus_thread">Comments</a>
     
     <br/>
     <a class="label" href="http://blog.leifmadsen.com/categories/nfvpe">nfvpe</a><a class="label" href="http://blog.leifmadsen.com/categories/ansible">ansible</a><a class="label" href="http://blog.leifmadsen.com/categories/continuous-integration">continuous integration</a>
@@ -145,8 +145,8 @@ environments; like
 <p>Due to the rapid development nature of things like Kubernetes, Heketi,
 GlusterFS, and other tools, it&rsquo;s both possible and probable that our playbooks
 could become broken at any given time. We&rsquo;ve been wanting to get some continous
-integration spun up to test this with something like <a href="https://docs.openstack.org/infra/zuul/feature/zuulv3/index.html">Zuul v3</a>
-but the learning curve for something like that is a bit more than we&rsquo;d like to
+integration spun up to test this with <a href="https://docs.openstack.org/infra/zuul/feature/zuulv3/index.html">Zuul v3</a>
+but the learning curve for that is a bit more than we&rsquo;d prefer to
 tackle for some simple periodic runs. Same goes for <a href="https://jenkins.io/doc/">Jenkins</a>
 or any other number of continous integration software bits.</p>
 
@@ -204,7 +204,7 @@ when things stopped working.</p>
 <p>I was able to build out just enough Ansible plays to make the whole thing work
 out, and was pretty impressed with how clean some of the separation of
 variables, facts, and other playbook specific data was. Notifications worked
-swimmingly, and the Job Workflow stuff did exactly what I hoped.</p>
+swimmingly, and the Workflow Template stuff did exactly what I hoped.</p>
 
 <p>Now that we know things weren&rsquo;t a complete disaster (much the opposite), you
 know it&rsquo;s worth continuing to read on how we did it!</p>
@@ -216,8 +216,8 @@ where AWX will run, and will also have access to deploying virtual machines in
 the same cloud for our jobs (although it could easily be another cloud
 environment, project, etc).</p>
 
-<p>
-<link rel="stylesheet" href="http://blog.leifmadsen.com/css/hugo-easy-gallery.css" />
+
+
 <div class="box fancy-figure caption-position-bottom" >
   <figure  itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
     <div class="img">
@@ -226,7 +226,7 @@ environment, project, etc).</p>
     <a href="http://blog.leifmadsen.com/media/awx-ci-topology.png" itemprop="contentUrl"></a>
   </figure>
 </div>
-</p>
+
 
 <p>Our AWX environment will make use of my
 <a href="https://github.com/leifmadsen/openstack-inventory-builder">openstack-inventory-builder</a>
@@ -241,7 +241,7 @@ deprovision a set of virtual machine, reinstantiate them, run
 get a Kubernetes environment running, and report back to our Slack channel via
 notifications.</p>
 
-<h3 id="creating-the-projects">Creating the projects</h3>
+<h2 id="creating-the-projects">Creating the projects</h2>
 
 <p>In AWX, a project is an SCM (source control management) object that contains
 the Ansible playbooks you want to use in a job template. For our configuration
@@ -264,17 +264,690 @@ We then need to fill in the fields like in the screenshot below.</p>
 </div>
 
 
-<h3 id="creating-credentials">Creating credentials</h3>
+<ul>
+<li><strong>name</strong>: a unique name for the project</li>
+<li><strong>organization</strong>: just use the default organization for now</li>
+<li><strong>SCM type</strong>: Git</li>
+<li><strong>SCM url</strong>: the GitHub URL for the project (HTTPS connection)</li>
+<li><strong>SCM branch/tag/commit</strong>: using master branch</li>
+<li><strong>SCM update options</strong>
 
-<h3 id="creating-inventories">Creating inventories</h3>
+<ul>
+<li><strong>Clean</strong>: reverts and local changes to the project / repo</li>
+<li><strong>Delete on Update</strong>: delete the entire repo when performing an update</li>
+<li><strong>Update on Launch</strong>: update the project prior to any job run using this
+project</li>
+</ul></li>
+</ul>
 
-<h3 id="creating-inventory-sources">Creating inventory sources</h3>
+<p>We do the same setup for <a href="https://github.com/redhat-nfvpe/kube-centos-ansible">https://github.com/redhat-nfvpe/kube-centos-ansible</a>,
+which will leave us with 2 projects; <code>openstack-inventory-builder</code> and
+<code>kube-centos-ansible</code> (aka <code>kucean</code>). We&rsquo;ll use these 2 projects to instantiate
+some virtual machines in our OpenStack cloud, and deploy a Kubernetes cluster.</p>
 
-<h3 id="creating-job-templates">Creating job templates</h3>
+<h2 id="creating-credentials">Creating credentials</h2>
 
-<h3 id="creating-a-job-workflow">Creating a job workflow</h3>
+<p>With our projects created, we need to build our credentials. We&rsquo;re going to
+build three sets of credentials.</p>
 
-<h3 id="setting-up-a-slack-notification">Setting up a Slack notification</h3>
+
+
+<div class="box" >
+  <figure  itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+    <div class="img">
+      <img itemprop="thumbnail" src="http://blog.leifmadsen.com/media/awx-ci/credentials-list.png" alt="List of credentials we&#39;ll create"/>
+    </div>
+    <a href="http://blog.leifmadsen.com/media/awx-ci/credentials-list.png" itemprop="contentUrl"></a>
+  </figure>
+</div>
+
+
+<ul>
+<li><em>Local</em>: machine connection to locally run the Ansible playbooks on our AWX
+virtual machine</li>
+<li><em>RDO-AWX</em>: machine connection that allows us to SSH into the resulting
+virtual machines in our OpenStack cloud</li>
+<li><em>RDO Cloud</em>: OpenStack connection that allows us to operate against the
+OpenStack API to instantiate virtual machines</li>
+</ul>
+
+<h3 id="local-connection">Local connection</h3>
+
+<p>Click on the <em>Add</em> button and create our Local connection like in our image
+below.</p>
+
+
+<link rel="stylesheet" href="http://blog.leifmadsen.com/css/hugo-easy-gallery.css" />
+<div class="box" >
+  <figure  itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+    <div class="img">
+      <img itemprop="thumbnail" src="http://blog.leifmadsen.com/media/awx-ci/credential-local-create.png" alt="Local machine connection"/>
+    </div>
+    <a href="http://blog.leifmadsen.com/media/awx-ci/credential-local-create.png" itemprop="contentUrl"></a>
+  </figure>
+</div>
+
+
+<p>There shouldn&rsquo;t be a need to populate anything, as we&rsquo;ll later apply this to a
+local Ansible connection in our inventory setup with
+<code>ansible_connection=local</code>.</p>
+
+<h3 id="rdo-awx-connection">RDO-AWX connection</h3>
+
+<p>With this connection we need to generate an SSH key that we can use to connect
+to our virtual machines. If you have a connection setup to your cloud (like we
+setup in my blog post <a href="http://blog.leifmadsen.com/blog/2017/11/07/deploying-awx-to-openstack-rdo-cloud/">Deploying AWX to OpenStack RDO Cloud</a>) then you can just run
+the following command which will result in a new keypair being created in your
+cloud. A private RSA key will be dumped to STDOUT, which you&rsquo;ll then copy into
+the AWX web interface.</p>
+
+<pre><code class="language-sh">$ openstack --os-cloud rdocloud keypair create rdo-awx
+</code></pre>
+
+
+
+<div class="box" >
+  <figure  itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+    <div class="img">
+      <img itemprop="thumbnail" src="http://blog.leifmadsen.com/media/awx-ci/credential-rdo-awx.png" alt="RDO SSH connection for logging into virtual machines"/>
+    </div>
+    <a href="http://blog.leifmadsen.com/media/awx-ci/credential-rdo-awx.png" itemprop="contentUrl"></a>
+  </figure>
+</div>
+
+
+<h3 id="rdo-cloud-connection">RDO Cloud connection</h3>
+
+<p>For our third and final connection, we&rsquo;ll click the <em>Add</em> button and create an
+OpenStack credential. First, select <code>OpenStack</code> under <em>Credential Type</em> and
+populate the fields. You&rsquo;ll need your OpenStack username, password, API URL,
+and project.</p>
+
+
+
+<div class="box" >
+  <figure  itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+    <div class="img">
+      <img itemprop="thumbnail" src="http://blog.leifmadsen.com/media/awx-ci/credential-rdo-cloud.png" alt="RDO Cloud credential configuration"/>
+    </div>
+    <a href="http://blog.leifmadsen.com/media/awx-ci/credential-rdo-cloud.png" itemprop="contentUrl"></a>
+  </figure>
+</div>
+
+
+<h2 id="creating-inventories">Creating inventories</h2>
+
+<p>With our credentials all setup, we can start building our inventories. The
+inventories are where our jobs will be run against. We need to create two
+inventories; Local and RDO Cloud.</p>
+
+<p>The <em>Local</em> inventory will simply be a local Ansible connection where our
+<code>openstack-inventory-builder</code> project will be launched from, resulting in the
+instantitation of virtual machines in our cloud.</p>
+
+<p>The <em>RDO Cloud</em> inventory will contain a list of virtual machines and metadata
+that we can run our Kubernetes jobs against.</p>
+
+<blockquote>
+<p><strong>Dependency requirements</strong></p>
+
+<p>On your AWX host, you&rsquo;ll also need <code>shade</code> installed to allow the Ansible
+playbooks to be run for provisioning and deprovisioning. In the
+<code>openstack-inventory-builder</code> repository (project) there is a
+<code>dependencies.yml</code> playbook you only need to run once on the AWX host.</p>
+
+<p>We&rsquo;ll create the dependency job in one of the upcoming sections.</p>
+</blockquote>
+
+<h3 id="local-inventory">Local inventory</h3>
+
+<p>The <em>Local</em> inventory will contain a single host; <code>localhost</code>. We&rsquo;ll use the
+<em>Local</em> inventory to execute our <code>openstack-inventory-builder</code> playbooks which
+will result in a connection to the OpenStack API to instantiate our virtual
+machines.</p>
+
+<p>In order to allow the <code>openstack-inventory-builder</code> playbooks <code>provision.yml</code>
+and <code>deprovision.yml</code> to operate, we need to feed it several variables. We&rsquo;ll
+configure the values for these variables in the <em>Variables</em> section of
+the inventory.</p>
+
+<p>First, click on the Inventories section of the left-side menu bar and then
+click <em>Add</em>. Select <em>Inventory</em> for a standard inventory object.</p>
+
+<p>Name the inventory anything you want (I used <em>Local</em>) and optionally set a
+<em>Description</em> and <em>Organization</em> (I&rsquo;m using the <em>Default</em> organization).</p>
+
+<p>Next, you need to setup the <em>Variables</em> section, which are values that we&rsquo;ll
+pass to the <code>openstack-inventory-builder</code> job. I&rsquo;ve documented that variables
+and configuration on the <a href="https://github.com/leifmadsen/openstack-inventory-builder">GitHub repo for <code>openstack-inventory-builder</code></a>, so I won&rsquo;t repeat everything here,
+but here is an example set of values you should enter into the <em>Variables</em>
+field under the yaml document top indicator <code>---</code>.</p>
+
+<pre><code>---
+cloud_name_prefix: AWX
+cloud_region_name: regionOne
+cloud_availability_zone: nova
+cloud_image: 42a43956-a445-47e5-89d0-593b9c7b07d0
+cloud_flavor: m1.medium
+cloud_key_name: rdo-awx
+my_auth_url: https://dc.mycloud.tld:13000/v2.0
+my_username: itsme
+my_password: ehrmegherdmyp4$$!
+my_project_name: &quot;itsme&quot;
+</code></pre>
+
+<p>The big things to note here are the <code>cloud_key_name</code> which must match the name
+of the keypair you created in the <em>Credentials</em> section for <em>RDO-AWX</em>. You&rsquo;ll
+also need to configure the authentication to the cloud with the <code>my_*</code>
+variables like we did in the <em>RDO Cloud</em> credentials section. (I couldn&rsquo;t ever
+really figure out how to get AWX to properly read a <code>clouds.yaml</code> file, so this
+was my work around&hellip;)</p>
+
+<p>You&rsquo;ll also need the <code>cloud_image</code> value. You can get a list of valid image IDs
+by running <code>openstack --os-cloud rdocloud image list</code>. For
+<code>kube-centos-ansible</code> I&rsquo;m using the ID the corresponds to the image providing
+me CentOS 7 x86_64 GenericCloud 1706.</p>
+
+
+
+<div class="box" >
+  <figure  itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+    <div class="img">
+      <img itemprop="thumbnail" src="http://blog.leifmadsen.com/media/awx-ci/inventory-local.png" alt="Configuration of the Local inventory"/>
+    </div>
+    <a href="http://blog.leifmadsen.com/media/awx-ci/inventory-local.png" itemprop="contentUrl"></a>
+  </figure>
+</div>
+
+
+<p>Now you can click on the <em>Save</em> button.</p>
+
+<h4 id="create-the-host">Create the host</h4>
+
+<p>For our <em>Local</em> inventory we&rsquo;ll need to add a host; <code>localhost</code>. Once you&rsquo;ve
+saved your <em>Local</em> inventory you should be able to click on the <em>HOSTS</em> tab. In
+the <em>HOSTS</em> tab, click on <em>Add host</em>.</p>
+
+<p>Set the <em>Host name</em> to <code>localhost</code> and put <code>ansible_connection: local</code> in the
+<em>Variables</em> field under the <code>---</code>. Using <code>ansible_connection: local</code> keeps us
+from having to connect to the machine locally via SSH.</p>
+
+
+
+<div class="box" >
+  <figure  itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+    <div class="img">
+      <img itemprop="thumbnail" src="http://blog.leifmadsen.com/media/awx-ci/inventory-host-localhost.png" alt="Inventory localhost connection setup"/>
+    </div>
+    <a href="http://blog.leifmadsen.com/media/awx-ci/inventory-host-localhost.png" itemprop="contentUrl"></a>
+  </figure>
+</div>
+
+
+<h3 id="cloud-inventory">Cloud inventory</h3>
+
+<p>We&rsquo;re making good progress now and nearing the fun stuff shortly. With our
+local inventory sorted, next we need to configure our cloud inventory. The
+cloud inventory will get used after our provisioning and deprovisioning
+happens, and will be the workhorse for the more interesting jobs, like
+deploying Kubernetes into our cloud.</p>
+
+<p>Like before, start by clicking on <em>Inventories</em> and <em>Add</em> a standard inventory
+object.</p>
+
+<p>Name the inventory anything you&rsquo;d like (I used <em>RDO Cloud</em>) and optionally set
+a <em>Description</em> and <em>Organization</em> (again, I used <em>Default</em>).</p>
+
+<p>When you&rsquo;re done setting that up, click on <em>Save</em>.</p>
+
+<p>For our <em>Local</em> inventory we added a static host manually called <code>localhost</code>.
+In this case, our cloud inventory is dynamic, and we want AWX to automatically
+update the inventory for us prior to running our jobs. We need this because our
+inventory is not static in the cloud, since we&rsquo;ll be tearing down the virtual
+machines and spinning up new ones each time we run the Kubernetes deployment
+job with <code>kube-centos-ansible</code>.</p>
+
+<h4 id="creating-inventory-sources">Creating inventory sources</h4>
+
+<p>Obviously a static inventory isn&rsquo;t going to work for this setup, so we&rsquo;ll
+populate the hosts dynamically by using a <em>Source</em>.</p>
+
+<p>Click on the <em>Sources</em> tab in your <em>RDO Cloud</em> inventory, and click on <em>Add
+Source</em>.</p>
+
+<p>First, select the drop down under <em>Source</em> and pick <em>OpenStack</em>.</p>
+
+
+
+<div class="box" >
+  <figure  itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+    <div class="img">
+      <img itemprop="thumbnail" src="http://blog.leifmadsen.com/media/awx-ci/inventory-cloud-source.png" alt="RDO Cloud source configuration"/>
+    </div>
+    <a href="http://blog.leifmadsen.com/media/awx-ci/inventory-cloud-source.png" itemprop="contentUrl"></a>
+  </figure>
+</div>
+
+
+<p>Set your <em>Name</em> and <em>Description</em>, and then use the magnifying glass icon to
+search under the <em>Credential</em> header. We&rsquo;ll use our previously defined <em>RDO
+Cloud</em> credential which will allow AWX to connect to the OpenStack API and pull
+down various amounts of metadata about the state of our virtual machines.</p>
+
+<p>I then setup the various <em>Update Options</em> as well. These include:</p>
+
+<ul>
+<li><strong>Overwrite</strong>: remove old hosts during an update</li>
+<li><strong>Overwrite Variables</strong>: avoids doing a variable merge and prefers the
+external values (<em>NOTE</em> I probably don&rsquo;t need this)</li>
+<li><strong>Update on Launch</strong>: any job that uses this source will result in an
+inventory update before launching the job</li>
+</ul>
+
+<p>When you&rsquo;re all done setting this up, click on <em>Save</em>.</p>
+
+<h2 id="creating-job-templates">Creating job templates</h2>
+
+<p>And we&rsquo;re into the home stretch! We can create our job templates now and start
+launching jobs. The first job we&rsquo;ll setup is the previously mentioned
+<code>dependencies.yml</code> playbook from the <code>openstack-inventory-builder</code> project.</p>
+
+
+
+<div class="box" >
+  <figure  itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+    <div class="img">
+      <img itemprop="thumbnail" src="http://blog.leifmadsen.com/media/awx-ci/job-template-list.png" alt="List of job templates we&#39;ll be building"/>
+    </div>
+    <a href="http://blog.leifmadsen.com/media/awx-ci/job-template-list.png" itemprop="contentUrl"></a>
+  </figure>
+</div>
+
+
+<h3 id="create-the-openstack-setup-job-template">Create the OpenStack Setup job template</h3>
+
+<p>Click on the <em>Templates</em> menu item on the left of the browser window and select
+<em>Add</em>. Now select the <em>Job Template</em> object.</p>
+
+
+
+<div class="box" >
+  <figure  itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+    <div class="img">
+      <img itemprop="thumbnail" src="http://blog.leifmadsen.com/media/awx-ci/job-template-object.png" alt="Job Template object under the Add button"/>
+    </div>
+    <a href="http://blog.leifmadsen.com/media/awx-ci/job-template-object.png" itemprop="contentUrl"></a>
+  </figure>
+</div>
+
+
+<p>Our first job template is going to be <em>OpenStack Setup</em> which we&rsquo;ll just launch
+manually after we create it to get the AWX machine ready for the other job
+templates we&rsquo;ll create next. The following diagram shows the configuration for
+this setup. The main components we&rsquo;re worried about include:</p>
+
+<ul>
+<li><strong>Inventory</strong>: Use the <em>Local</em> inventory</li>
+<li><strong>Project</strong>: Use the <code>openstack-inventory-builder</code> project</li>
+<li><strong>Playbook</strong>: Select the <code>dependencies.yml</code> playbook</li>
+<li><strong>Credential</strong>: Use our <code>Local</code> machine credential</li>
+</ul>
+
+
+
+<div class="box" >
+  <figure  itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+    <div class="img">
+      <img itemprop="thumbnail" src="http://blog.leifmadsen.com/media/awx-ci/job-template-openstack-setup.png" alt="Job template configuration for the OpenStack Setup job"/>
+    </div>
+    <a href="http://blog.leifmadsen.com/media/awx-ci/job-template-openstack-setup.png" itemprop="contentUrl"></a>
+  </figure>
+</div>
+
+
+<p>When you&rsquo;re done configuring your job template, click <em>Save</em>.</p>
+
+<h4 id="run-the-openstack-setup-job-template">Run the OpenStack Setup Job Template</h4>
+
+<p>Before we go and build out all our jobs, now is an excellent time to test our
+setup and make sure everything is working. As long as everything has been done
+correctly, we should result in the <code>git pull</code> of our
+<code>openstack-inventory-builder</code> project, and Ansible running the
+<code>dependencies.yml</code> playbook local to our AWX virtual machine.</p>
+
+<p>In the <em>Templates</em> section, you should have a single entry called <em>OpenStack
+Setup</em>. Under the <em>Actions</em> section on the right side of the browser window you
+should see a rocketship icon. Click on that icon, and your job will launch.</p>
+
+
+
+<div class="box" >
+  <figure  itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+    <div class="img">
+      <img itemprop="thumbnail" src="http://blog.leifmadsen.com/media/awx-ci/job-template-launch-openstack-setup.png" alt="Launch the OpenStack Setup job template"/>
+    </div>
+    <a href="http://blog.leifmadsen.com/media/awx-ci/job-template-launch-openstack-setup.png" itemprop="contentUrl"></a>
+  </figure>
+</div>
+
+
+<p>Once you&rsquo;ve launched the job, you&rsquo;ll be taken to a window showing you the
+progress of the job run. If you forgot to add the <code>ansible_connection: local</code>
+variable to your <code>localhost</code> host configuration, you&rsquo;ll see something like
+this:</p>
+
+
+
+<div class="box" >
+  <figure  itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+    <div class="img">
+      <img itemprop="thumbnail" src="http://blog.leifmadsen.com/media/awx-ci/job-openstack-setup-failed.png" alt="Failed OpenStack Setup job run"/>
+    </div>
+    <a href="http://blog.leifmadsen.com/media/awx-ci/job-openstack-setup-failed.png" itemprop="contentUrl"></a>
+  </figure>
+</div>
+
+
+<p>If all goes well, you&rsquo;ll have a successful job run that installs a couple of
+required depencies for our upcoming job templates.</p>
+
+
+
+<div class="box" >
+  <figure  itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+    <div class="img">
+      <img itemprop="thumbnail" src="http://blog.leifmadsen.com/media/awx-ci/job-openstack-setup-success.png" alt="Succesful OpenStack Setup job run"/>
+    </div>
+    <a href="http://blog.leifmadsen.com/media/awx-ci/job-openstack-setup-success.png" itemprop="contentUrl"></a>
+  </figure>
+</div>
+
+
+<h3 id="create-the-virtual-machine-de-provisioning-jobs">Create the virtual machine (de)provisioning jobs</h3>
+
+<p>Great! We know that we can run a job now. The next step is to build out two
+more jobs; <em>virtual machine provisioning and deprovisioning</em>.</p>
+
+<p>As before, go to <em>Templates</em>, click on <em>Add</em>, and select the <em>Job Template</em>
+object. Name your job <em>OpenStack Provisioner</em> and fill in the following fields:</p>
+
+<ul>
+<li><strong>Inventory</strong>: Local</li>
+<li><strong>Project</strong>: <code>openstack-inventory-builder</code></li>
+<li><strong>Playbook</strong>: <code>provision.yml</code></li>
+<li><strong>Credential</strong>: Machine: Local</li>
+<li><strong>Options</strong>
+
+<ul>
+<li><strong>Use Fact Cache</strong>: <em>enabled</em></li>
+</ul></li>
+</ul>
+
+
+
+<div class="box" >
+  <figure  itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+    <div class="img">
+      <img itemprop="thumbnail" src="http://blog.leifmadsen.com/media/awx-ci/job-openstack-provisioner-config.png" alt="OpenStack Provisioner job configuration"/>
+    </div>
+    <a href="http://blog.leifmadsen.com/media/awx-ci/job-openstack-provisioner-config.png" itemprop="contentUrl"></a>
+  </figure>
+</div>
+
+
+<blockquote>
+<p>Now that you have the <code>provision.yml</code> playbook setup, go back to the
+<em>Templates</em> section and do the same setup, but for the <code>deprovision.yml</code>
+playbook. We&rsquo;re going to make use of these in the next section.</p>
+</blockquote>
+
+<h3 id="creating-a-workflow-template">Creating a workflow template</h3>
+
+<p>With both our <em>OpenStack Provisioner</em> and <em>OpenStack Deprovisioner</em> jobs setup,
+let&rsquo;s make use of them!</p>
+
+<p>You may be wondering, <em>&ldquo;How does the provisioning and deprovisioning jobs know
+what virtual machines to spin up and tear down?&rdquo;</em>. Excellent question!</p>
+
+<p>If you read through the <a href="https://github.com/leifmadsen/openstack-inventory-builder/blob/master/README.md#create-a-job-template"><code>openstack-inventory-builder</code> documentation on
+GitHub</a>
+you may notice a variable called <code>instance_list</code> that defines the virtual
+machines we&rsquo;re going to instantiate. By using this list, we can build different
+topologies using our <em>OpenStack Provisioner</em> and <em>OpenStack Deprovisioner</em> jobs
+and defining the virtual machines we want to bring up independent of those
+jobs.. By separating the <code>instance_list</code> from our (de)provisioning jobs, we can
+re-use them, and build different setups!</p>
+
+<p>We accomplish the different topology setup magic with a <em>Workflow Template</em>.</p>
+
+<h4 id="configuring-our-first-workflow">Configuring our first workflow</h4>
+
+<p>A workflow template is mostly a meta job that allows you to build chains of jobs
+together. We&rsquo;re going to make use of a workflow template to build out our
+environment first (create our virtual machines). Later, we&rsquo;ll enhance this by
+using <code>kube-centos-ansible</code> to create a Kubernetes cluster across 4 virtual
+machines.</p>
+
+<p>To create a workflow, click on <em>Templates</em> in the menu, click on the <em>Add</em>
+button, and select the <em>Workflow Template</em> object.</p>
+
+
+
+<div class="box" >
+  <figure  itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+    <div class="img">
+      <img itemprop="thumbnail" src="http://blog.leifmadsen.com/media/awx-ci/job-template-object.png" alt="Job Template object under the Add button"/>
+    </div>
+    <a href="http://blog.leifmadsen.com/media/awx-ci/job-template-object.png" itemprop="contentUrl"></a>
+  </figure>
+</div>
+
+
+<p>Just like with a regular job template, set a <em>Name</em> (Kubernetes Workflow
+Deploy), <em>Description</em> (Deploy Kubernetes), and <em>Organization</em> (Default).</p>
+
+<p>The next part is what defines the virtual machine objects. In the <em>Extra
+Variables</em> section, create a list of virtual machines we want to spin up within
+the <code>instance_list</code> variable.</p>
+
+<pre><code>---
+instance_list:
+  - { name: kube-master, group: master, security_groups: &quot;default&quot;}
+  - { name: kube-node-1, group: nodes, security_groups: &quot;default&quot; }
+  - { name: kube-node-2, group: nodes, security_groups: &quot;default&quot; }
+  - { name: kube-node-3, group: nodes, security_groups: &quot;default&quot; }
+</code></pre>
+
+<p>Defining our <code>instance_list</code> as above will create 4 virtual machines; one
+Kubernetes master, and 3 Kubernetes nodes. We&rsquo;ll assign the <code>kube-master</code> VM to
+the <code>master</code> group, and the remaining VMs to the <code>nodes</code> group. These group
+names will be used by Ansible when we run <code>kube-centos-ansible</code> to determine
+how to setup the virtual machines. Additionally, we assign the <code>default</code>
+security group (in OpenStack) to the virtual machines.</p>
+
+
+
+<div class="box" >
+  <figure  itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+    <div class="img">
+      <img itemprop="thumbnail" src="http://blog.leifmadsen.com/media/awx-ci/workflow-kube-setup.png" alt="Kubernetes workflow template configuration"/>
+    </div>
+    <a href="http://blog.leifmadsen.com/media/awx-ci/workflow-kube-setup.png" itemprop="contentUrl"></a>
+  </figure>
+</div>
+
+
+<blockquote>
+<p><strong>OpenStack Default Security Group</strong></p>
+
+<p>In my OpenStack project, I&rsquo;ve defined two networks; <em>public</em> and <em>internal</em>.
+The <em>public</em> network is the subnet that allows me to get a floating IP for
+the virtual machine, allowing it to be accessed from the internet. The
+<em>internal</em> network is where the virtual machines connect through a virtual
+switch, and allows all virtual machines on that broadcast domain (LAN) to speak
+with each other.</p>
+
+<p>For this project, I&rsquo;ve setup my <code>default</code> security group to allow all
+connections between virtual machines on the same LAN via an Ingress rule,
+i.e. TCP/UDP, port 1-65535, 192.168.1.0/24. You may want to setup your
+security groups more restrictive. By default, the <code>default</code> configuration in
+most clouds will not be sufficient, so you&rsquo;ll need to adjust the security
+groups to suit your topology.</p>
+</blockquote>
+
+<p>To start, you may wish to just test with a single line in the <code>instance_list</code>
+instead of all four items, but suffice it to say, once you get your list the
+way you want it, click the <em>Save</em> button!</p>
+
+<h4 id="building-the-workflow">Building the workflow</h4>
+
+<p>With our workflow template initially setup, we need to load the <em>Workflow
+Editor</em> to create the actual job workflow. Click on the <em>Workflow Editor</em> tab
+and it&rsquo;ll open a new screen showing you a <em>Start</em> icon in the middle of the
+screen.</p>
+
+
+
+<div class="box" >
+  <figure  itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+    <div class="img">
+      <img itemprop="thumbnail" src="http://blog.leifmadsen.com/media/awx-ci/workflow-editor-start.png" alt="Blank workflow template configuration"/>
+    </div>
+    <a href="http://blog.leifmadsen.com/media/awx-ci/workflow-editor-start.png" itemprop="contentUrl"></a>
+  </figure>
+</div>
+
+
+<p>On the right side, we can select from one of three object types:</p>
+
+<ul>
+<li>Jobs</li>
+<li>Project Sync</li>
+<li>Inventory Sync</li>
+</ul>
+
+<p>During our inventory and project configuration, we selected all the extra
+options so that those objects would update when they were called by a job. If
+we didn&rsquo;t set that up, we could have either created a period schedule to update
+the projects and inventory from the cloud, or added a separate workflow step
+here to perform an inventory and/or project update prior to running any jobs.</p>
+
+<p>That&rsquo;s the great thing about workflows; they are incredibly flexible. You can
+pick where in the workflow an inventory or project needs updating, run several
+jobs in parallel, and control branching based on a job executing successfully
+or as a failure.</p>
+
+<p>For now though, we&rsquo;re going to keep things simple. We want to first make sure
+we can create our virtual machine(s). To do this, select the <em>OpenStack
+Provisioner</em> job on the right, and click on <em>Select</em>.</p>
+
+
+
+<div class="box" >
+  <figure  itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+    <div class="img">
+      <img itemprop="thumbnail" src="http://blog.leifmadsen.com/media/awx-ci/workflow-openstack-added.png" alt="OpenStack provisioner added to the workflow"/>
+    </div>
+    <a href="http://blog.leifmadsen.com/media/awx-ci/workflow-openstack-added.png" itemprop="contentUrl"></a>
+  </figure>
+</div>
+
+
+<p>If you hover over the <em>OpenStack Provisioner</em> box, you&rsquo;ll see a <code>+</code> and an <code>x</code>
+which allows you to add to the workflow, or remove a workflow item. We&rsquo;ll use
+that when we start to build out a more elaborate setup, but for now, let&rsquo;s save
+this and test it out.</p>
+
+<h4 id="testing-the-workflow">Testing the workflow</h4>
+
+<p>Before we get too crazy and build out elaborate workflows with grace and
+panache, we&rsquo;re going to test and make sure things are working as they should.
+With our workflow template saved, naviate back to the <em>Templates</em> page.</p>
+
+<p>Like we did earlier when we tested the <em>OpenStack Setup</em> job, click on the
+rocketship icon to launch the job. Once you click on that, you&rsquo;ll be taken to
+the following screen.</p>
+
+
+
+<div class="box" >
+  <figure  itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+    <div class="img">
+      <img itemprop="thumbnail" src="http://blog.leifmadsen.com/media/awx-ci/workflow-openstack-launch.png" alt="Launching our first workflow"/>
+    </div>
+    <a href="http://blog.leifmadsen.com/media/awx-ci/workflow-openstack-launch.png" itemprop="contentUrl"></a>
+  </figure>
+</div>
+
+
+<p>If you click on the <em>Details</em> link inside the workflow item box, you&rsquo;ll be
+taken to the Ansible run console output where you can monitor the progression
+of the job.</p>
+
+
+
+<div class="box" >
+  <figure  itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+    <div class="img">
+      <img itemprop="thumbnail" src="http://blog.leifmadsen.com/media/awx-ci/workflow-deploy.png" alt="Ansible console output of our initial workflow deployment"/>
+    </div>
+    <a href="http://blog.leifmadsen.com/media/awx-ci/workflow-deploy.png" itemprop="contentUrl"></a>
+  </figure>
+</div>
+
+
+<p>Ideally everything will go well for you, and we&rsquo;ll result in one or more
+virtual machines being spun up!</p>
+
+<h1 id="what-s-next">What&rsquo;s Next?</h1>
+
+<p>At this point, you could probably experiment and start building out workflows
+and launching jobs. In another blog post I&rsquo;ll show how I chain jobs together in
+workflows to build out a Kubernetes environment, schedule those for periodic
+runs, and report the status of those jobs to a Slack channel.</p>
+
+<p>So far, I&rsquo;ve been pretty impressed with AWX and all the things that it does.
+In an environment that requires more elaborate CI infrastructure, including a
+more fluid and automated job configuration setup, AWX might not be the proper
+tool. But in my simple use case of &ldquo;spin up some basic CI and get back on with
+it&rdquo;, AWX really appears to be a pretty nice little tool that can be brought up
+and configured quickly so that I can get back to what I was doing.</p>
+
+<p>After I got all of this configured and working as a proof of concept, I
+started looking at the <code>tower_...</code> Ansible modules, which (in theory) allow me
+to automate the configuration of my AWX deployment itself, which would
+certainly be a win in configuration management department.</p>
+
+<p>Unfortunately, the state of the <code>tower_...</code> modules does not really permit that
+reality. The <code>tower_...</code> modules in the current release of Ansible only work
+with <code>tower-cli</code> version <code>&lt; 3.2.0</code> (which is used as a library to communicate
+with AWX / Tower). In <code>tower-cli 3.2.0</code>, they changed from Tower API version 1
+to version 2, and that broke the <code>tower_...</code> modules. Additionally, <code>tower-cli
+3.1.8</code> doesn&rsquo;t have all of the configuration abilities that <code>3.2.0</code> has,
+including ability to add an inventory source.</p>
+
+<p>I&rsquo;m hopeful that as more people start consuming AWX, that the Ansible modules
+will catch up and things will stabilize. When that time happens, the
+configuration management of AWX will be incredibly powerful, allowing for even
+more elaborate scenario configurations, centrally managed. You could even
+potentially run an AWX instance that managed multiple AWX instances&hellip; (insert
+yo dawg joke here).</p>
+
+<p>It should also be noted that the deployment of AWX I&rsquo;m building on right now
+isn&rsquo;t production ready or scalable, as it instantiates a handful of containers
+on a single virtual host using Docker. Persistent storage isn&rsquo;t done correctly,
+and a lot of things seem to be glued together in a way that isn&rsquo;t all that
+flexible. If I was going to be using this in a long-life deployment, I&rsquo;d likely
+look at deploying the components into something like OpenShift, allowing
+Kubernetes to manage the lifecycle of the containers, along with proper
+persistent storage via GlusterFS and Heketi.</p>
+
+<p>What I set out to do was to see just how crazy sauce Doug&rsquo;s initial idea was.
+Personally, I think it looks like AWX has a role in a CI environment going
+forward, but I&rsquo;m more interested in what the community thinks. Leave comments
+here, or reach out to me on <a href="https://twitter.com/leifmadsen">twitter</a>.</p>
+
+<p>Happy AWXing!</p>
   </div>
   <div id="disqus_thread"></div>
 </div>
